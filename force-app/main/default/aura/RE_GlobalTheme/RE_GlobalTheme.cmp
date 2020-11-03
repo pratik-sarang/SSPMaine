@@ -1,0 +1,278 @@
+<!--
+ * Component Name    : RE_GlobalTheme
+ * Owner             : DELOITTE CONSULTING
+ * Created Date      : 05/21/2019
+ * Description       : Global Theme
+ *
+ *                            M O D I F I C A T I O N   L O G                                          
+ *
+ *  Date        Developer       Description                                                         
+ *  **************************************************************************
+ *  05/21/2019  PRIYANKA        	Initial UI Development
+-->
+
+<aura:component controller="RE_GlobalThemeCtrl" implements="forceCommunity:themeLayout" access="global" description="Custom Theme Layout">
+    <aura:attribute name="hasSearchBar" type="Boolean" default="true"/>
+    <aura:attribute name="hasSideNavBar" type="Boolean" default="true"/>  
+    <aura:attribute name="profileMenu" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="showheader" type="Boolean" default="false"/>
+    <aura:attribute name="isPartner" type="Boolean" default="false"/>
+    <aura:attribute name="isAgency" type="Boolean" default="false"/> <!--RE_Release 1.1 - Agency user capture- Mohan-->
+    <aura:attribute name="isAssister" type="Boolean" default="true"/>
+    <aura:attribute name="isResident" type="Boolean" default="false"/>
+    <aura:attribute name="isCPOnboardingTrainingDone" type="Boolean" default="false"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="isUserFirstLogin" type="Boolean" default="false"/>
+    <aura:attribute name="bisMobileMenuVisible" type="Boolean" default="false"/>
+    <!-- added Attribute by [CHFS Developer Mohan-03/02/20] for GA -->
+    <aura:attribute name="sfUserType" type="String" description= "Contains user details profile/role. This is used in Google Analytics"/>
+    <!-- added by pankaj for LMS redirection -->
+    <aura:attribute name="bFirstLoad" type="Boolean" default="false"/>
+    <aura:attribute name="vPlanID" type="String"/>
+    <aura:attribute name="isSpinnerActive" type="Boolean" description= "this attribute is used to store the state of the spinner"/>
+    <aura:attribute name="options" type="List" />
+    <aura:attribute name="selectedValue" type="String" default="abc"/>
+    <aura:attribute name="isAvailableRoleSizeOne" type="Boolean" default="false" />
+    <c:RE_UtilityServerCallerCmp aura:id="bSuper" isSpinnerActive="{!v.isSpinnerActive}"/> 
+    <aura:if isTrue="{!v.bFirstLoad}">
+        <div role="main" class="reCommunityTheme wrapper"> 
+            <aura:if isTrue="{!$Browser.isPhone}">
+                <div class="mobile-header slds-grid slds-wrap slds-p-around_small">
+                    <div class="slds-small-size_3-of-12 slds-x-small-size_3-of-12">
+                        <aura:if isTrue="{!v.showheader}">
+                            <lightning:icon iconName="utility:rows" onclick="{!c.openSideNav}" alternativeText="Side Nav" />
+                        </aura:if>
+                    </div> 
+                    <div class="logo slds-small-size_6-of-12 slds-x-small-size_6-of-12 slds-text-align_center">
+                        <a href="javascript:void(0)" onclick="{!c.goToLandingPage}" tabindex="0"><img src="{!$Resource.BackYard_Logo_Color}" alt="{!$Label.c.Kentucky_Resources}" title="{!$Label.c.Kentucky_Resources}"/></a>
+                    </div>
+                    <div class="slds-small-size_3-of-12 slds-x-small-size_3-of-12 header-links-section slds-text-align_right">
+                        <aura:if isTrue="{!v.showheader}">
+                            <aura:if isTrue="{!v.isAnonymous}">
+                                <lightning:buttonMenu class="header-avator-icon" menuAlignment="right" iconName="utility:user" alternativeText="user" onselect="{! c.handleSelect }">
+                                    <lightning:menuItem label="{!$Label.c.Login}" value="Login"/>  
+                                    <!--<lightning:menuItem label="{!$Label.c.Help}" value="Help" />-->
+                                </lightning:buttonMenu>
+                            </aura:if>
+                            <aura:if isTrue="{!v.isResident}">
+                                <lightning:button variant="base" class="body2 slds-m-right_xx-small header-cart-btn" title="{!$Label.c.cart}" onclick="{!c.navigateToSuggested}"><div class="slds-show_inline-block header-cart-count">{!v.draftReferralCount}</div><lightning:icon iconName="utility:cart" class="slds-m-right_xx-small" size="small" alternativeText="{!$Label.c.cart}" /></lightning:button>
+                                <lightning:buttonMenu class="header-avator-icon" menuAlignment="right" iconName="utility:user" alternativeText="user" onselect="{! c.handleSelect }">
+                                    <lightning:menuItem label="{!$Label.c.Log_out}" value="Logout"/>
+                                    <lightning:menuItem label="{!$Label.c.Account}" value="Account"/>
+                                    <lightning:menuItem label="{!$Label.c.User_Agreement}" value="UserAgreement"/> 
+                                    <lightning:menuItem label="{!$Label.c.Help}" value="Help"/> 
+                                </lightning:buttonMenu>
+                            </aura:if>
+                            <aura:if isTrue="{!v.isPartner}">
+                                <lightning:buttonMenu class="header-avator-icon" menuAlignment="right" iconName="utility:user" alternativeText="user" onselect="{! c.handleSelect }">
+                                    <lightning:menuItem label="{!$Label.c.Log_out}" value="Logout"/>
+                                    <aura:if isTrue="{!and(v.isCPOnboardingTrainingDone,v.isPartner)}"> 
+                                        <lightning:menuItem label="{!$Label.c.Account}" value="Account"/>
+                                        <lightning:menuItem label="{!$Label.c.Help}" value="Help"/> 
+                                    </aura:if> 
+                                    <lightning:menuItem label="{!$Label.c.User_Agreement}" value="UserAgreement"/>
+                                </lightning:buttonMenu>
+                            </aura:if>
+                            <aura:if isTrue="{!v.isAgency}">
+                                <lightning:buttonMenu class="header-avator-icon" menuAlignment="right" iconName="utility:user" alternativeText="user" onselect="{! c.handleSelect }">
+                                    <lightning:menuItem label="{!$Label.c.Log_out}" value="Logout"/>
+                                        <lightning:menuItem label="{!$Label.c.Account}" value="Account"/>
+                                        <lightning:menuItem label="{!$Label.c.Help}" value="Help"/> 
+                                </lightning:buttonMenu>
+                            </aura:if>
+                            <aura:if isTrue="{!v.isAssister}">
+                                <lightning:buttonMenu class="header-avator-icon" menuAlignment="right" iconName="utility:user" alternativeText="user" onselect="{! c.handleSelect }">
+                                    <lightning:menuItem label="{!$Label.c.Log_out}" value="Logout"/>
+                                        <lightning:menuItem label="{!$Label.c.Account}" value="Account"/>   
+                                        <lightning:menuItem label="{!$Label.c.Help}" value="Help"/>
+                                    <lightning:menuItem label="{!$Label.c.User_Agreement}" value="UserAgreement"/>
+                                </lightning:buttonMenu>
+                            </aura:if>
+                        </aura:if>
+                    </div>
+                </div>
+                <div id="mobileSidenav" class="mobile-sidenav">
+                    <div class="mobile-sidenav-item slds-p-left_small slds-p-vertical_small">
+                        <lightning:icon iconName="utility:rows" onclick="{!c.closeSideNav}" alternativeText="Side Nav" />
+                    </div>
+                    <aura:if isTrue="{!v.bisMobileMenuVisible}">
+                        <span id="mobile-search-category" tabindex="0" class="mobile-sidenav-back slds-m-left_small" onclick="{!c.searchByCatMobile}"><lightning:icon iconName="utility:chevronleft" class="slds-m-left_xx-small" alternativeText="Back" size="x-small" />{!$Label.c.search_by_category}</span>
+                        <c:RE_SearchByCategory />
+                        <aura:set attribute="else">
+                            <div class="slds-p-bottom_large slds-p-left_small slds-p-right_large">
+                                <div class="mobile-sidenav-item slds-p-vertical_x-small" onkeypress="{!c.search}">
+                                    <aura:if isTrue="{!or(not(or(v.isPartner,v.isAssister)), and(v.isPartner, v.isCPOnboardingTrainingDone))}">
+                                        <lightning:input class="header-search-input slds-m-bottom_none" aura:id = "search-box" placeholder="Search" label="{!$Label.c.Search}" variant="label-hidden" type="search" />
+                                    </aura:if>
+                                </div>
+                                <div class="mobile-sidenav-item slds-p-vertical_x-small" onclick="{!c.goToLandingPage}">{!$Label.c.home}</div>
+                                <div class="mobile-sidenav-item slds-p-vertical_x-small mobile-searchby-category" onclick="{!c.searchByCatMobile}">
+                                    <aura:if isTrue="{!or(not(or(v.isPartner,v.isAssister)), and(v.isPartner, v.isCPOnboardingTrainingDone))}">
+                                        <span>{!$Label.c.search_by_category}</span>
+                                        <lightning:icon iconName="utility:chevronright" size="x-small" alternativeText="{!$Label.c.search_by_category}"/>
+                                    </aura:if>
+                                </div>
+                                <aura:if isTrue="{!v.isAnonymous}">
+                                    <!--<lightning:button variant="base" class="slds-p-vertical_x-small mobile-sidenav-item" label="Help" title="Help" onclick="{!c.handleMobileSideNavHelp}"/>-->
+                                </aura:if>
+                                <aura:if isTrue="{!v.isResident}">
+                                    <lightning:button variant="base" class="slds-p-vertical_x-small mobile-sidenav-item" label="{!$Label.c.myplan}" title="{!$Label.c.myplan}" onclick="{!c.navigateToMyPlan}"/>
+                                    <lightning:button variant="base" class="slds-p-vertical_x-small mobile-sidenav-item slds-m-left_none" label="{!$Label.c.Help}" title="{!$Label.c.Help}" onclick="{!c.handleMobileSideNavHelp}"/>
+                                </aura:if>
+                                <aura:if isTrue="{!v.isPartner}">
+                                    <aura:if isTrue="{!and(v.isCPOnboardingTrainingDone,v.isPartner)}"> 
+                                        <lightning:button variant="base" class="slds-p-vertical_x-small mobile-sidenav-item" label="{!$Label.c.referralinbox}" title="{!$Label.c.referralinbox}" onclick="{! c.navigateReferralInbox}"/>
+                                        <lightning:button variant="base" class="slds-p-vertical_x-small mobile-sidenav-item slds-m-left_none" label="{!$Label.c.Help}" title="{!$Label.c.Help}" onclick="{!c.handleMobileSideNavHelp}"/>
+                                    </aura:if>   
+                                   
+                                </aura:if>
+                               <aura:if isTrue="{!v.isAgency}"> 
+                                        <lightning:button variant="base" class="slds-p-vertical_x-small mobile-sidenav-item" label="{!$Label.c.referralinbox}" title="{!$Label.c.referralinbox}" onclick="{! c.navigateReferralInbox}"/>
+                                        <lightning:button variant="base" class="slds-p-vertical_x-small mobile-sidenav-item slds-m-left_none" label="{!$Label.c.Help}" title="{!$Label.c.Help}" onclick="{!c.handleMobileSideNavHelp}"/>
+                                </aura:if>
+                                <aura:if isTrue="{!v.isAssister}">
+                                    <lightning:button variant="base" class="slds-p-vertical_x-small mobile-sidenav-item" label="{!$Label.c.AllClients}" title="{!$Label.c.AllClients}" onclick="{! c.navigatetoClient}"/>
+                                    <lightning:button variant="base" class="slds-p-vertical_x-small mobile-sidenav-item slds-m-left_none" label="{!$Label.c.Help}" title="{!$Label.c.Help}" onclick="{!c.handleMobileSideNavHelp}"/>
+                                    </aura:if>   
+                            </div>
+                        </aura:set>
+                    </aura:if>
+                </div>
+                <aura:set attribute="else">
+                    <!-- **************************************** Header Section ***************************** -->
+                    <div id="headeroverlay" class="header header-cont slds-container--fluid search-overlay" onclick="{!c.toggleOverlay}">
+                        <div class="header-border"> 
+                            <div class="header-wrapper slds-p-horizontal_large slds-p-vertical_small slds-grid slds-wrap">
+                                <div class="header-logo slds-large-size_2-of-12 slds-medium-size_2-of-12 slds-small-size_1-of-1">
+                                    <div class="{!or((or(v.isAssister, v.isAgency)), and(v.isPartner, v.isCPOnboardingTrainingDone))?'logo_pointer':'logo_auto'}">
+                                        <a href="javascript:void(0)" onclick="{!c.goToLandingPage}" tabindex="0"><img src="{!$Resource.BackYard_Logo_Color}" alt="{!$Label.c.Kentucky_Resources}" title="{!$Label.c.Kentucky_Resources}"/></a>
+                                    </div>
+                                </div> 
+                                <aura:if isTrue="{!v.showheader}">     
+                                    <div class="slds-large-size_3-of-12 slds-medium-size_4-of-12 slds-small-size_1-of-3 slds-p-horizontal_large searchBox">       
+                                        <aura:if isTrue="{!or(not(or(v.isPartner)), and(v.isPartner, v.isCPOnboardingTrainingDone),v.isAssister,v.isAgency)}">
+                                            <span onkeypress="{!c.search}">
+                                                <lightning:input class="header-search-input slds-m-bottom_none" aura:id = "search-box" placeholder="{!$Label.c.search_placeholder}" label="{!$Label.c.Search}" variant="label-hidden" type="search" />
+                                            </span>
+                                        </aura:if>
+                                    </div>
+                                    <div class="slds-large-size_2-of-12 slds-medium-size_3-of-12 slds-small-size_1-of-3">  
+                                        <aura:if isTrue="{!or(not(or(v.isPartner)), and(v.isPartner, v.isCPOnboardingTrainingDone), v.isAssister,v.isAgency)}">
+                                            <a tabindex="0" class="search-dropdown-section" onclick="{!c.handleSearchDropdown}" onblur="{!c.moveFocusToOptions}"><span class="body1 search-dropdown slds-show_inline-block">{!$Label.c.search_by_category}<lightning:icon iconName="utility:down" alternativeText="down" size="xx-small" class="slds-m-left_x-small"/></span></a>   
+                                        </aura:if>
+                                    </div>
+                                    <div class="slds-large-size_3-of-12 slds-medium-size_3-of-12 slds-small-size_1-of-3 slds-size_1-of-1 slds-form_horizontal">  
+                                        <aura:if isTrue ="{!v.isAvailableRoleSizeOne}">
+                                        <aura:if isTrue="{!or(not(or(v.isPartner)), and(v.isPartner, v.isCPOnboardingTrainingDone), v.isAssister,v.isAgency)}">
+                                            <span class="body3 header-dropdown slds-show_inline-block">
+                                                <lightning:select name="Profile" class = "Profile_label profile-dropdown" label="{!$Label.c.SSP_MultipleRoleProfile}" aura:id="Profile" value="{!v.selectedValue}" onchange= "{!c.handleChange}">
+                                                    <aura:iteration items="{!v.options}" var="option">
+                                                       <option text="{!option}" value="{!option}" selected="{!option}"/>
+                                                    </aura:iteration>
+                                                </lightning:select>
+                                            </span> 
+                                    </aura:if>
+                                </aura:if>
+                                    </div>
+                                    <div class="slds-large-size_2-of-12 slds-medium-size_3-of-12 slds-small-size_1-of-3 header-links-section">
+                                        <div class="slds-text-align_right header-links-section  main-referral-link">
+                                            <aura:if isTrue="{!v.isPartner}"> 
+                                                <aura:if isTrue="{!and(v.isCPOnboardingTrainingDone,v.isPartner)}"> 
+                                                    <a href="javascript:void(0)" class="referral-link slds-m-right_x-large" title="{!$Label.c.referralinbox}" onclick="{! c.navigateReferralInbox}">{!$Label.c.referralinbox}</a>
+                                                    <!--<lightning:button variant="base" class="header-link slds-m-right_x-large" label="{!$Label.c.referralinbox}" title="{!$Label.c.referralinbox}" onclick="{! c.navigateReferralInbox}"/>-->
+                                                </aura:if>
+                                                <div class="slds-show_inline-block">
+                                                    <lightning:buttonMenu class="header-avator-icon" menuAlignment="right" iconName="utility:user" alternativeText="user" onselect="{! c.handleSelect }">
+                                                        <aura:if isTrue="{!and(v.isCPOnboardingTrainingDone,v.isPartner)}"> 
+                                                            <lightning:menuItem label="{!$Label.c.Account}" value="Account"/>
+                                                            <lightning:menuItem label="{!$Label.c.Help}" value="Help"/>
+                                                        </aura:if>
+                                                       
+                                                        <lightning:menuItem label="{!$Label.c.User_Agreement}" value="UserAgreement"/>
+                                                        <lightning:menuItem label="{!$Label.c.Log_out}" value="Logout"/>
+                                                    </lightning:buttonMenu>
+                                                </div>
+                                            </aura:if>
+                                            <aura:if isTrue="{!v.isAgency}"> 
+                                               <a href="javascript:void(0)" class="referral-link slds-m-right_x-large" title="{!$Label.c.referralinbox}" onclick="{! c.navigateReferralInbox}">{!$Label.c.referralinbox}</a>
+                                               
+                                               <!-- <lightning:button variant="base" class="header-link slds-m-right_x-large" label="{!$Label.c.referralinbox}" title="{!$Label.c.referralinbox}" onclick="{! c.navigateReferralInbox}"/>-->
+                                                <div class="slds-show_inline-block">
+                                                    <lightning:buttonMenu class="header-avator-icon" menuAlignment="right" iconName="utility:user" alternativeText="user" onselect="{! c.handleSelect }">
+                                                            <lightning:menuItem label="{!$Label.c.Account}" value="Account"/>
+                                                            <lightning:menuItem label="{!$Label.c.Help}" value="Help"/>
+                                                        <lightning:menuItem label="{!$Label.c.Log_out}" value="Logout"/>
+                                                    </lightning:buttonMenu>
+                                                </div>
+                                            </aura:if>
+                                            <aura:if isTrue="{!v.isAssister}">
+                                                 <!--RE 1.3-Bug 364678-Removing Assister LMS training capture: Siri--> 
+                                                    <lightning:button variant="base" class="header-link slds-m-right_x-large" label="{!$Label.c.AllClients}" title="{!$Label.c.AllClients}" onclick="{! c.navigatetoClient}"/>
+                                                <div class="slds-show_inline-block">
+                                                    <lightning:buttonMenu class="header-avator-icon" menuAlignment="right" iconName="utility:user" alternativeText="user" onselect="{! c.handleSelect }">
+                                                        <!--RE 1.3-Bug 364678-Removing Assister LMS training capture: Siri-->
+                                                            <lightning:menuItem label="{!$Label.c.Account}" value="Account"/>
+                                                            <lightning:menuItem label="{!$Label.c.Help}" value="Help"/>
+                                                        <lightning:menuItem label="{!$Label.c.User_Agreement}" value="UserAgreement"/>
+                                                        <lightning:menuItem label="{!$Label.c.Log_out}" value="Logout"/>
+                                                    </lightning:buttonMenu>
+                                                </div>
+                                            </aura:if>
+                                            <aura:if isTrue="{!v.isResident}">
+                                                <lightning:button variant="base" class="body1 slds-m-right_large header-cart-btn" title="{!$Label.c.cart}" onclick="{!c.navigateToSuggested}"><div class="slds-show_inline-block header-cart-count"></div><lightning:icon iconName="utility:cart" class="slds-m-right_x-small" size="small" alternativeText="{!$Label.c.cart}" />{!$Label.c.cart}</lightning:button>
+                                                <div class="slds-show_inline-block">
+                                                    <lightning:buttonMenu class="header-avator-icon" menuAlignment="right" iconName="utility:user" alternativeText="user" onselect="{! c.handleSelect }">
+                                                        <lightning:menuItem label="{!$Label.c.Login1}" value="Login"/>
+                                                    </lightning:buttonMenu>
+                                                </div>
+                                            </aura:if>
+                                            <aura:if isTrue="{!v.isAnonymous}">
+                                                <!--<lightning:button variant="base" class="header-link slds-m-right_large" label="Help" title="Help" onclick="{!c.handleHelp}"/>-->
+                                                <lightning:buttonMenu aura:id="menu" label="{!$Label.c.Help}" onselect="{!c.handleHelp}" alternativeText="Show menu">
+                                                    <lightning:menuItem value="Add a User" label="{!$Label.c.Add_a_User}"/>
+                                                    <lightning:menuItem value="Claim My Site" label="{!$Label.c.Claim_My_Site}"/>
+                                                </lightning:buttonMenu>
+                                                <lightning:button variant="neutral" label="Login" title="Login" onclick="{!c.handleLogin}"/>
+                                            </aura:if>
+                                            <!--{!v.profileMenu}-->
+                                        </div>
+                                    </div>
+                                </aura:if>
+                            </div>
+                        </div>
+                        <div id="category-search-container" class="category-search-container">
+                            <c:RE_SearchByCategory />
+                        </div>
+                    </div>
+                </aura:set>
+            </aura:if>
+            <!-- **************************************** Main Container Section ***************************** -->  
+            <div class="content-body">
+                <div class="slds-grid slds-wrap content-innerBody">
+                    <aura:if isTrue="{!v.hasSideNavBar}">
+                        <c:RE_LeftHandTab/>
+                    </aura:if>
+                    <!-- {!v.body}-->
+                    <div class="slds-p-right_large slds-size_4-of-5">
+                        <div class="slds-p-left_medium slds-p-around_medium slds-m-left_none slds-size_full slds-is-relative body-container">
+                            <div class="tabContent">
+                                {!v.body}
+                            </div>  
+                            <!-- Siri:  added a lightining button to go to next page once training done -->
+                            <aura:if isTrue="{!and(not(v.isCPOnboardingTrainingDone),v.isPartner)}">      
+                                <lightning:button variant="brand" class="slds-align_absolute-center slds-m-top_x-small slds-m-right_large" label="{!$Label.c.RE_Next}" title="{!$Label.c.complete}" onclick="{!c.handleTrainingComplete}"  />
+                            </aura:if>   
+                        </div>
+                    </div>
+                </div>
+            </div>  
+            <!-- **************************************** Footer Section ***************************** -->
+            <div class="footer slds-container--fluid">
+                <c:RE_Footer/>  
+            </div>
+         <!-- added Container class by [CHFS Developer Mohan-03/02/20] passing user details profile/role for GA -->
+        <span class="slds-hidden dd-ga-sf-usertype" data-sf-usertype="{!v.sfUserType}"> 
+        </span>
+        </div>
+    </aura:if>
+</aura:component>

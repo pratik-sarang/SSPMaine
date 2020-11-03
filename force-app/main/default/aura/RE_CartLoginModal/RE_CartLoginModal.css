@@ -1,0 +1,8 @@
+.THIS .cart-login-modal{
+    width:35%;
+}
+@media only screen and (max-device-width:842px){
+    .THIS .cart-login-modal{
+        width:85%;
+    }
+}

@@ -1,0 +1,68 @@
+<aura:component controller="RE_GoogleMapsController" implements="flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes" access="global" >
+	<aura:attribute name="selectedOption" type="String"/>
+    <aura:attribute name="filteredOptions" type="String[]"/>
+    <aura:attribute name="searchKey" type="String"/>
+    <aura:attribute name="bselectedaddress" type="Boolean"/>
+    <aura:attribute name="placeholder" type="String" default="{!$Label.c.RE_TypeYourAddress}"/>
+    <aura:attribute name="label" type="String"/>
+
+    <div class="slds-form-element">
+        <div class="slds-form-element__control">
+            <div class="slds-combobox_container">
+                <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-combobox-lookup"
+                     aria-expanded="false"
+                     aria-haspopup="listbox"
+                     aura:id="searchLookup">
+                    <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_left"
+                         aura:id="iconDirection">
+                        <ui:inputText updateOn="keyup"
+                                      keyup="{!c.keyPressController}"
+                                      class="slds-input slds-combobox__input"
+                                      value="{!v.searchKey}"
+                                      placeholder="{!v.placeholder}"
+                                      label="{!v.label != null ? v.label : ' '}"/>
+                        <div id="listbox-unique-id" role="listbox">
+                        <ul class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid" tabindex="0"
+                            >
+							<aura:iteration items="{!v.filteredOptions}" var="option">
+                                <li role="button"
+                                    tabindex="0"
+                                    aria-haspopup="true"
+                                    class="slds-listbox__item"
+                                    onclick="{!c.selectOption}"
+                                    onkeypress="{!c.selectOption}"
+                                    data-value="{!option.value}"
+                                    data-record="{!option.label}">
+                                    <span id="listbox-option-unique-id-01"
+                                          class="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
+                                          role="option">
+                                        <span class="slds-media__body">
+                                            <span class="slds-listbox__option-text slds-listbox__option-text_entity">{!option.label}</span>
+                                        </span>
+                                    </span>
+                                </li>
+                            </aura:iteration>
+
+                        </ul>
+                    </div>
+                        <aura:if isTrue="{!empty(v.selectedOption)}">
+                                <span class="slds-icon_container slds-input__icon">
+                                        <lightning:icon iconName="utility:checkin" alternativeText="Checkin" />
+                                        <span class="slds-assistive-text">Description of icon</span>
+                                </span>
+                            <aura:set attribute="else">
+                                <button aria-label="close" class="slds-button slds-button_icon slds-input__icon slds-input__icon_right"
+                                        onclick="{!c.clear}" tabindex="0" onkeydown="{!c.clear}">
+                                    <lightning:icon iconName="utility:close" alternativeText="close" />
+                                    <span class="slds-assistive-text">Remove selected option</span>
+                                </button>
+                            </aura:set>
+                        </aura:if>
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</aura:component>

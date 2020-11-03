@@ -1,0 +1,115 @@
+<!--
+ * Component Name    : RE_Footer
+ * Owner             : DELOITTE CONSULTING
+ * Created Date      : 05/08/2019
+ * Description       : Theme Footer
+ *
+ *                            M O D I F I C A T I O N   L O G                                          
+ *
+ *  Date        Developer       Description                                                         
+ *  **************************************************************************
+ *  05/02/2019  PRIYANKA        	Initial UI Development
+-->
+
+<aura:component >
+    <!--internal use-->
+    <aura:attribute name="currentLang" type="String"/>
+    <aura:attribute name="currentUser" type="User" />
+     
+   <force:recordData aura:id="userRec"
+    fields="LanguageLocaleKey, LocaleSidKey"
+    recordId="{!$SObjectType.CurrentUser.Id}"
+    targetFields="{!v.currentUser}"
+    mode="EDIT"
+   />
+   <aura:if isTrue="{!$Browser.isPhone}">
+       <div class="mobile-footer-wrapper slds-is-relative">
+           <div class="mobile-footer-menu slds-text-align_center slds-grid slds-wrap slds-p-horizontal_medium slds-p-top_x-small  slds-p-bottom_large">
+                <div class="slds-col mobileFooter">{!$Label.c.RE_Footer_Text}</div>
+                <div class="slds-col mobileFooterKynectLink">
+                    {!$Label.c.RE_Footer_Link_goto}&nbsp;
+                    <a class ="hyperlinkCls" onclick ="{!c.openKynect}">{!$Label.c.Kynectdotcom}</a>
+                    &nbsp;{!$Label.c.Goto_Link_text}
+                </div>
+           </div>
+        </div>
+        <div class="mobile-footer-wrapper slds-is-relative">
+            <div class="mobile-footer-menu slds-text-align_center slds-grid slds-wrap slds-p-horizontal_medium slds-p-top_x-small  slds-p-bottom_large">
+               <div class="slds-col">
+                   <!--<a href="{!$Label.c.Terms_of_Use_Link}" target="_blank">Terms of Use</a>-->
+                   <a onclick="{!c.openTerms}">{!$Label.c.terms_of_use}</a>          
+               </div>
+               <div class="slds-col">
+                   <!--<a href="{!$Label.c.Privacy_Policy_Link}" target="_blank">Privacy Policy</a>-->
+                   <a onclick="{!c.openPrivacyPolicy}">{!$Label.c.privacy_policy}</a>
+               </div>
+               <div class="slds-col">
+                    <a onclick="{!c.navigateToGetStarted}">{!$Label.c.Join_as_a_Community_Partner}</a>
+               </div>  
+               <div class="slds-col">
+                   <!--<a href="{!$Label.c.Privacy_Policy_Link}" target="_blank">Privacy Policy</a>-->
+                   <a id="{!$Label.c.English}" onclick="{!c.changeToLanguage}">{!$Label.c.English}</a>
+               </div>
+               <div class="slds-col">
+                   <!--<a href="{!$Label.c.Privacy_Policy_Link}" target="_blank">Privacy Policy</a>-->
+                   <a id="{!$Label.c.Spanish}" onclick="{!c.changeToLanguage}">{!$Label.c.Spanish}</a>
+               </div>
+               <!-- <a href="javascript:void(0)">Sitemap</a>-->
+                <div class="slds-col slds-size_1-of-1 slds-large-size_4-of-12 slds-text-align_right">
+                            <div class="footerLogoSection">
+                                <div class="socialMediaLogo"> 
+                                    <img src="{!$Resource.FacebookLogo}" alt="" title="" class="logoWidth" onclick="{!c.openFaceBook}"/>
+                                    <img src="{!$Resource.TwitterLogo}" alt="" title="" class="logoWidth" onclick="{!c.openTwitter}"/>
+                                </div>
+                            </div>
+                        </div>
+            </div>
+        </div>
+
+        <aura:set attribute="else">
+            <div class="footer-wrapper slds-is-relative " >
+                <div class ="footerKynectText">
+                    <div><center>{!$Label.c.RE_Footer_Text}</center></div>
+                    <div class="gotoText">
+                        <center>
+                            {!$Label.c.RE_Footer_Link_goto}&nbsp;<a class ="hyperlinkCls" onclick ="{!c.openKynect}">{!$Label.c.Kynectdotcom}</a>&nbsp;{!$Label.c.Goto_Link_text}
+                        </center>
+                    </div>
+               </div>
+           </div>
+    
+            <div class="footer-wrapper slds-is-relative">
+                <div class="footerMenu">
+                    <div class="slds-grid slds-wrap slds-grid_vertical-align-center">                
+                        <div class="slds-col slds-size_1-of-1 slds-large-size_8-of-12 contact-container">
+                            <ul class="slds-list_horizontal">
+                                <!--<li class="slds-m-horizontal_medium"><a href="{!$Label.c.Terms_of_Use_Link}" target="_blank">Terms of Use</a></li>-->
+                                <li class="slds-m-right_medium" onclick="{!c.openTerms}"><a aria-label="{!$Label.c.RE_TermsOfUseLabel}">{!$Label.c.terms_of_use}</a></li>
+                                <!--<li class="slds-m-horizontal_medium"><a href="{!$Label.c.Privacy_Policy_Link}" target="_blank">Privacy Policy</a></li>-->
+                                <li class="slds-m-right_medium" onclick="{!c.openPrivacyPolicy}"> <a>{!$Label.c.privacy_policy}</a></li>
+                                <li class="slds-m-right_medium" onclick="{!c.navigateToGetStarted}"><a>{!$Label.c.Join_as_a_Community_Partner}</a></li>
+                                <li class="slds-m-right_medium">{!$Label.c.Languages}</li>
+                          		<li class="slds-m-right_small" id="{!$Label.c.English}" onclick="{!c.changeToLanguage}"><a>{!$Label.c.English}</a></li>
+                                <li class="slds-m-horizontal_medium pipe_divider" id="{!$Label.c.Spanish}" onclick="{!c.changeToLanguage}"><a>{!$Label.c.Spanish}</a></li>
+                             </ul>
+ 
+                        </div>
+                        <div class="slds-col slds-size_1-of-1 slds-large-size_4-of-12 slds-text-align_right">
+                            <div class="footerLogoSection">
+                                <div class="socialMediaLogo"> 
+                                    <img src="{!$Resource.FacebookLogo}" alt="" title="" class="logoWidth" onclick="{!c.openFaceBook}"/>
+                                    <img src="{!$Resource.TwitterLogo}" alt="" title="" class="logoWidth" onclick="{!c.openTwitter}"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aura:set>
+    </aura:if>
+   <!-- added Container class for passing cookie consent label for GA [CHFS Developer Mohan-1/28/2020]  -->
+     <span class="slds-hidden dd-ga-cookie-message" data-gacustom-label="{!$Label.c.GACookieConsent}" data-ga-cookie-accept="{!$Label.c.RE_Cookie_Accept}"> 
+         
+        </span>
+    
+</aura:component>

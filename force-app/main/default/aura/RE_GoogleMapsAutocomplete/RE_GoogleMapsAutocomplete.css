@@ -1,0 +1,7 @@
+.THIS .icn {
+    fill: #203C60;
+}
+.THIS .slds-icon_container.slds-input__icon svg, .THIS .slds-button_icon .slds-icon-utility-close svg{
+    width: 1rem;
+    height: 1rem;
+}

@@ -1,0 +1,147 @@
+.THIS .slds-checkbox_toggle [type=checkbox]:checked+.slds-checkbox_faux_container .slds-checkbox_faux{
+    border-color: t(REPrimary);
+    background-color: t(REPrimary);
+}
+.THIS .toggle-button .slds-form-element .slds-checkbox_toggle .slds-checkbox_faux_container .slds-checkbox_on,
+.THIS .toggle-button .slds-form-element .slds-checkbox_toggle .slds-checkbox_faux_container .slds-checkbox_off{
+     display:none;
+}
+.THIS .toggle-button .slds-form-element__label{
+    padding-right:3px;
+}
+.THIS .toggle-button .slds-checkbox_toggle{
+    justify-content: space-evenly;
+    align-items: center;
+}
+.THIS .file-upload{
+    width: 12.1875rem;
+    height: 12.1875rem;
+}
+.THIS .fieldTaxonomy .slds-listbox__option-text_entity{
+    white-space: normal;
+}
+
+.THIS .uploaded-docs{
+    font-size:t(RESize16);
+    color:t(REResourceDarkBlue);
+}
+.THIS .lang-pills-sec .slds-lookup__search-input{
+    margin-top:0.625rem;
+}
+.THIS .lang-pills-sec .addlang-button{
+   margin-left:0px;
+   padding: 0px;
+   width: 1.5rem;
+}
+.THIS .lang-pills-sec ul li{
+    background-color:t(REWhite);
+    padding: 0.3125rem;
+}
+.THIS .lang-pills-sec ul li:hover{
+    background-color:t(RECmpBackground);
+}
+.THIS .lang-pills-sec ul li:last-child{
+    border-bottom:1px solid t(REGreyFieldBorder);
+}
+.THIS .lang-pills-sec ul{
+    border-style: solid;
+    border-width: 0px 1px 0px 1px;
+    border-color:t(REGreyFieldBorder);
+    box-shadow: 0px 0.1875rem 0.5625rem 0.125rem t(REGreyFieldBorder);
+}
+.THIS .lang-pills-sec .slds-button svg{
+    height:0.9375rem;
+    width:0.8125rem;
+}
+.THIS .announcment .slds-form-element__label{
+    display: none;
+}
+.THIS .displayann-label{
+    margin-right:0.3125rem;
+}
+.THIS .announcement .slds-checkbox .slds-checkbox__label .slds-checkbox_faux{
+    margin-right:0px;
+}
+/* Location Link */
+.THIS a.locdetail-address{
+    font-size: t(RESize16);
+    line-height: t(RESize20);
+    text-decoration: underline;
+}
+.THIS .hours-of-operation-table {
+    overflow-x: auto;
+}
+
+.THIS .table-caption {
+    display: none;
+}
+/*.THIS .slds-textarea[readonly],.THIS .slds-select[disabled],.THIS [role=combobox] input[readonly]{*/
+.THIS .slds-textarea[readonly],.THIS .slds-select[disabled]{
+    padding-left: 0;
+    border-color: transparent;
+    background-color: transparent;
+    box-shadow:none;
+}
+.THIS .slds-textarea[readonly]{
+    resize: none;
+}
+.THIS .select-disabled .slds-select_container:after{
+    border:none;
+}
+.THIS .disable-typeahead .slds-pill__remove{
+  pointer-events:none;
+}
+.THIS .location-typeahead .slds-form-element__label:before{
+    content:'*';
+    color: rgb(194, 57, 52);
+    margin: 0 .125rem;
+}
+.THIS .errormsg{
+    height : 0;
+    position : relative;
+    top : -5px;
+}
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation:portrait) {
+    .THIS .header-btn-section{
+        margin-bottom:.25rem;
+    }
+    .THIS .slds-checkbox_faux{
+        width:2rem;
+    }
+    .THIS .toggle-button .slds-form-element__label{
+        font-size: 0.75rem;
+    }
+}
+@media only screen and (min-device-width: 834px) and (max-device-width: 1194px) and (orientation:landscape) {
+    .THIS .header-btn-section{
+        margin-bottom:.25rem;
+    }
+    .THIS .slds-checkbox_faux{
+        width:2rem;
+    }
+    .THIS .toggle-button .slds-form-element__label{
+        font-size: 0.75rem;
+    }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation:landscape) {
+    .THIS .header-btn-section{
+        margin-bottom:.25rem;
+    }
+    .THIS .slds-checkbox_faux{
+        width:2rem;
+    }
+    .THIS .toggle-button .slds-form-element__label{
+        font-size: 0.75rem;
+    }
+}
+@media only screen and (max-width : 896px){
+   .THIS .header-btn-section{
+        margin-bottom:.25rem;
+    }
+   .THIS .locdetails-first-col {
+    	padding-right: 0;
+	} 
+    .THIS .locdetails-second-col{
+        padding-left:0;
+    }
+}

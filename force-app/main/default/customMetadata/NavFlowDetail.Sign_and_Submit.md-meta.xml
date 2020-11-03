@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Sign and Submit</label>
+    <protected>false</protected>
+    <values>
+        <field>Community_Page_URL__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>FlowDisplayName__c</field>
+        <value xsi:type="xsd:string">Sign and Submit</value>
+    </values>
+    <values>
+        <field>FlowName__c</field>
+        <value xsi:type="xsd:string">SignAndSubmit</value>
+    </values>
+    <values>
+        <field>NextActionGoToPage__c</field>
+        <value xsi:type="xsd:string">Required</value>
+    </values>
+</CustomMetadata>

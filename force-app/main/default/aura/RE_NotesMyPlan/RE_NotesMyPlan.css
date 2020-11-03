@@ -1,0 +1,49 @@
+.THIS .NotesHead{
+    font-size: t(RESize18);
+}
+.THIS .slds-popover{
+    width: 100%;
+    background: #fff;
+    /*box-shadow: 0 1px 3px 0 rgba(0,0,0,0.2);*/
+    box-shadow: 0 -22px 0px 0 t(REMyPlanRBG);
+    border: 0;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    z-index: 1;
+}
+.THIS .slds-nubbin_top-left:after,
+.THIS .slds-nubbin--top-left:after,
+.THIS .slds-nubbin_top-left-corner:after{
+    box-shadow: -1px -1px 0 0 rgba(0, 0, 0, 0.05);
+}
+.THIS .notesTextBtn{
+    /*border: 1px solid t(RENeutralBeta);*/
+    border-radius: 0 0 4px 4px;
+}
+/*.THIS .saveBtnSection{
+    background: t(RENeutralBeta);    
+}*/
+.THIS .saveBtnSection .slds-button{
+    width: 100%;
+    position: relative;
+    left: -0.125rem;
+}
+.THIS .saveField .slds-form-element{
+    margin: 0;
+}
+.THIS .saveField .slds-input{
+    border-radius: 0 0 0 4px;
+} 
+.THIS .note-created-section{
+    display: flex;
+    justify-content: space-between;
+}
+@media all and (max-width : 768px) {
+    .THIS .notesInputSection{
+        height: 1.875rem;
+    }
+    .THIS .notesInput{
+        height: 2.125rem;
+        min-height: 2.125rem;
+    }
+}

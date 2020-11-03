@@ -1,0 +1,67 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name="methodRef" type="Aura.action"/>
+    <aura:attribute name="assessmentResourceData" type="Object" />
+    <div class="headingContainer"> 
+        <div class="backButton slds-m-bottom_x-small">
+            <lightning:icon iconName="utility:back" alternativeText="back" />
+            <a href="javascript:void(0)" onclick="{!c.backResults}">{!$Label.c.RE_BackToResults}</a>
+        </div>      
+        <div class="headingButton slds-grid slds-wrap">
+            <h1 tabindex="0" class="headingL1">{!v.assessmentResourceData.sAssessTemplateName}&nbsp;{!$Label.c.RE_Responses}</h1>    
+        </div>
+    </div>
+    <div class="user-details-section slds-grid slds-wrap slds-p-vertical_medium">    
+        <div class="slds-grid slds-wrap slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 details-mediaFigure">
+            <div class="slds-large-size_1-of-3 slds-medium-size_1-of-3 slds-small-size_1-of-1 slds-p-right_medium slds-m-bottom_medium fieldWidth">                   
+                <div class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-is-selected">
+                    <span class="slds-media__figure slds-listbox__option-icon">
+                        <span class="slds-icon_container slds-icon-utility-check slds-current-color">
+                            <lightning:icon iconName="utility:user" alternativeText="user" variant="user" size="small"/>
+                        </span>
+                    </span>
+                    <span class="slds-media__body">
+                        <span class="slds-truncate resMediaName" title="Accounts">{!$Label.c.For}</span>
+                        <p class="resMediaContent"><a href="javascript:void(0)" onclick="{!c.backToOneView}" target="_blank" aria-label="{!$Label.c.resident}" class="slds-show--inline-block resident-name">{!v.assessmentResourceData.sResidentName}</a></p>
+                    </span>
+                </div>
+            </div>
+            <div class="slds-large-size_1-of-3 slds-medium-size_1-of-3 slds-small-size_1-of-1 slds-p-horizontal_medium slds-m-bottom_medium fieldWidth">                   
+                <div class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-is-selected">
+                    <span class="slds-media__figure slds-listbox__option-icon">
+                        <span class="slds-icon_container slds-icon-utility-check slds-current-color">
+                            <lightning:icon iconName="utility:user" alternativeText="user" variant="user" size="small"/>
+                        </span>
+                    </span>
+                    <span class="slds-media__body">
+                        <span class="slds-truncate resMediaName" title="Accounts">{!$Label.c.Taken_by}</span>
+                        <p class="resMediaContent">{!v.assessmentResourceData.sPartnerName}</p>
+                    </span>
+                </div>
+            </div>
+            <div class="slds-large-size_1-of-3 slds-medium-size_1-of-3 slds-small-size_1-of-1 slds-p-right_medium slds-m-bottom_medium fieldWidth">                    
+                <div class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-is-selected date-taken">
+                    <span class="slds-media__figure slds-listbox__option-icon">
+                        <span class="slds-icon_container slds-icon-utility-check slds-current-color">
+                            <lightning:icon iconName="utility:date_input" alternativeText="Date" variant="Date" size="small"/>
+                        </span>
+                    </span>
+                    <span class="slds-media__body">
+                        <span class="slds-truncate resMediaName" title="Accounts">{!$Label.c.Date_Taken}</span>
+                        <p class="resMediaContent"><span>{!v.assessmentResourceData.sDateTaken}</span></p>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="responses-section">
+        <aura:iteration items="{!v.assessmentResourceData.lstQuestionAnswer}" var="item" indexVar="index">
+            <div class="slds-m-bottom_medium">
+                <div class="slds-grid">
+                    <span class="response-number">{! index+1}.</span>
+                    <h2 tabindex="0" class="question">{!item.sQuestion}</h2>
+                </div>
+                <div tabindex="0" class="response">{!item.sAnswer}</div>
+            </div>
+        </aura:iteration>
+    </div>
+</aura:component>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>SF_TOD_001</label>
+    <protected>false</protected>
+    <values>
+        <field>Applicable_Role__c</field>
+        <value xsi:type="xsd:string">Primary Applicant</value>
+    </values>
+    <values>
+        <field>Body_Spanish__c</field>
+        <value xsi:type="xsd:string">Usted tiene una solicitud no enviada para {0}. Complétela antes de {1}.</value>
+    </values>
+    <values>
+        <field>Body__c</field>
+        <value xsi:type="xsd:string">You have an unsubmitted application for {0}. Complete your benefits application by {1}.</value>
+    </values>
+    <values>
+        <field>Button_Alt_Text__c</field>
+        <value xsi:type="xsd:string">Click to continue the application</value>
+    </values>
+    <values>
+        <field>Button_Name__c</field>
+        <value xsi:type="xsd:string">Continue Application</value>
+    </values>
+    <values>
+        <field>Code__c</field>
+        <value xsi:type="xsd:string">SF-TOD-001</value>
+    </values>
+    <values>
+        <field>Communication_Body_Spanish__c</field>
+        <value xsi:type="xsd:string">Usted tiene una solicitud no enviada para {0}. Complete su solicitud de beneficios antes de {1} en kynect.ky.gov/benefits.</value>
+    </values>
+    <values>
+        <field>Communication_Body__c</field>
+        <value xsi:type="xsd:string">You have an unsubmitted application for {0}. Complete your benefits application by {1} at kynect.ky.gov/benefits.</value>
+    </values>
+    <values>
+        <field>Due_Date_criterion__c</field>
+        <value xsi:type="xsd:string">8</value>
+    </values>
+    <values>
+        <field>Expiry_Date_Criterion__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Mobile_Button_Action__c</field>
+        <value xsi:type="xsd:string">navigate user to Application Summary</value>
+    </values>
+    <values>
+        <field>Mobile_Button_Alt_Text__c</field>
+        <value xsi:type="xsd:string">Click to continue the application</value>
+    </values>
+    <values>
+        <field>Mobile_Button_Name__c</field>
+        <value xsi:type="xsd:string">Continue Application</value>
+    </values>
+    <values>
+        <field>Send_Reminder_Criteria__c</field>
+        <value xsi:type="xsd:string">-2</value>
+    </values>
+    <values>
+        <field>Severity__c</field>
+        <value xsi:type="xsd:string">Critical</value>
+    </values>
+    <values>
+        <field>Title_Spanish__c</field>
+        <value xsi:type="xsd:string">Continuar solicitud de beneficios</value>
+    </values>
+    <values>
+        <field>Title__c</field>
+        <value xsi:type="xsd:string">Continue Benefits Application</value>
+    </values>
+    <values>
+        <field>Trash_Action__c</field>
+        <value xsi:type="xsd:string">open Delete Application modal</value>
+    </values>
+    <values>
+        <field>button_Action__c</field>
+        <value xsi:type="xsd:string">navigate user to Application Summary</value>
+    </values>
+</CustomMetadata>

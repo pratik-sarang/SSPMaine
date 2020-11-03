@@ -1,0 +1,344 @@
+.THIS.empty-div{
+    width:auto;
+    /* height: 28rem;
+    max-height: 28rem; */
+    height: 24rem;
+    max-height: 28rem;
+}
+.THIS .slds-carousel__stage{
+    width: -webkit-fill-available;
+    max-width: 90rem;
+    max-height: 28rem;
+    position: fixed;
+    left: 0;
+    right: 0;
+}
+.THIS .slds-carousel__indicator{
+    margin: 0 0.75rem;
+}
+
+.THIS .slds-carousel__indicators{
+    position: relative;
+    bottom: 3.5rem;
+}
+
+.THIS .slds-carousel__indicator-action{
+    width: 1rem;
+    height: 1rem;
+    background-color: t(REWhite);
+    opacity:0.31;
+    border:0;
+}
+
+.THIS .slds-carousel__indicator-action .slds-input{
+    cursor: pointer;
+}
+
+.THIS .slds-carousel__indicator-action .slds-input:focus,
+.THIS .slds-carousel__indicator-action .slds-input:active{
+	border:0;    
+}
+
+.THIS .slds-carousel__indicator-action.slds-is-active{
+    top: -0.25rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: t(REWhite);
+    border: 0;
+    opacity: unset;
+}
+.THIS .slds-carousel__image{
+    border-radius: 0;
+}
+
+.THIS .slds-carousel__image img{
+    width: 100%;
+    /* height: 28rem; */
+}
+
+.THIS .overlaySlider{
+    display: block;
+    color: t(REWhite);
+    position: relative;
+    width: 55rem;
+    height: 12rem;
+    top: -4rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: t(RECarouselOverlay);
+    z-index: 2;
+    cursor: pointer;
+}
+.THIS .align-right{
+    position: absolute;
+    right: 2%;
+    bottom: 6%;
+}
+
+.THIS .re-titleSize{
+    line-height: 1;
+    font-size : 58px;
+}
+
+.THIS .slideText{
+    font-weight: 600;
+    width: 80%;
+    font-size: 1.1rem;
+    height:3rem;
+}
+
+.THIS .re-transform{
+    transform : var(--box-change);
+}
+.THIS.mobile-bannerheader{
+    background: t(RESecondaryBeta);
+    text-align: center;
+    padding: 1.5rem 0;
+    color: t(REWhite);
+}
+.THIS .mb-heading{
+    font-weight: bold;
+}
+@media only screen and (min-device-width : 375px) and (max-device-width : 767px) {
+            .THIS .slds-carousel__image img{
+                    width: 100%;
+                    height: 200px;
+                    object-fit: cover;
+            }
+            .THIS .overlaySlider{
+                    background: t(RESecondaryBeta);
+                    height: 60px;
+                    top: 0rem;
+                    padding: 8px;
+    				width: 100%;
+                	text-align: center;
+            }
+            .THIS .slideText{
+                    width: 100%;
+            }
+            .THIS, .THIS .slds-carousel__stage{
+                /*top: 11.1rem;*/
+                height: 260px;
+            }
+            .THIS .slds-carousel__indicators {
+                max-height: 20px;
+                position: absolute;
+            }
+            .THIS.empty-div {
+                display: none;
+            }
+            .THIS .align-right {
+                bottom: unset;
+                top: -105%;
+                font-size: 12px;
+    			padding: 0 8px;
+            }
+            .THIS .re-titleSize{
+                 font-size: 22px;
+    			 padding: 0.5rem;
+            }
+            .THIS .slideText{
+                 font-size: 16px;
+                 padding: 0.3rem;
+            }
+}
+@media only screen and (min-device-width:375px) and (max-device-width:736px) and (orientation: landscape) { 
+	.THIS.empty-div{
+		height: 11.7rem;
+	}
+            .THIS .slds-carousel__stage{
+                top: 7.3rem;
+                height: 231px;
+            }
+            .THIS .re-titleSize{
+                font-size: 25px;
+            }
+            .THIS .slideText{
+                height: 1rem;
+            }
+            .THIS .slds-carousel__indicators{
+    			bottom: 4.9rem;
+			}
+            /*.THIS, .THIS .slds-carousel__stage{
+                top: 7.3rem;
+            } */.THIS .slds-carousel__image img{
+                    height: 175px;
+            }
+            .THIS .overlaySlider{
+                    height: 94px;
+            }
+            .THIS .align-right{
+                    top: -61%;
+            }
+}
+
+@media only screen and (min-device-width:375px) and (max-device-width:736px) and (orientation: portrait) { 
+
+	.THIS.empty-div{
+		height: 3.8rem;
+	}
+
+	.THIS .re-titleSize{
+		font-size: 18px;
+		line-height:0;	
+	}
+	.THIS .slideText{
+		font-size: 0.7rem;
+		height: 1rem;
+	}
+	.THIS .slds-carousel__stage{
+		top: 11rem;
+	}
+	.THIS .slds-carousel__indicators{
+    		bottom: 3.5rem;
+	}
+	.THIS .slds-carousel__indicator-action{
+		width: 0.8rem;
+		height: 0.8rem;
+	}
+	.THIS .slds-carousel__indicator-action.slds-is-active{
+		height:1.2rem;
+		width: 1.2rem;
+	}
+    .THIS, .THIS .slds-carousel__stage{
+        top: 11.1rem;
+    }
+}
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+  /* For portrait layouts only */
+            .THIS .overlaySlider{
+                width: 100%;
+            }
+            .cRE_Carousel .slds-carousel__stage{
+                height: 265px;
+            }
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+  /* For landscape layouts only */
+}
+@media only screen and (min-width:769px) and (max-width:1024px) and (orientation: landscape){
+	.THIS.empty-div{
+		height: 15.5rem;
+	}
+	.THIS .overlaySlider{
+		top: -8.5rem;
+        width: 100%;
+	}
+	.THIS .slds-carousel__indicators{
+		bottom: 8.5rem;
+	}
+	.THIS.empty-div{
+		height:18.5rem;
+	}
+}
+
+@media only screen and (min-width: 668px) and (max-width:768px){
+	.THIS .slds-carousel__stage{
+		top: 6rem;
+	}
+	
+
+	.THIS.empty-div{
+		height: 12.5rem;
+
+
+	}
+	.THIS .slds-carousel__indicator-action{
+		width: 0.8rem;
+		height: 0.8rem;
+	}
+	.THIS .slds-carousel__indicator-action.slds-is-active{
+		height:1.2rem;
+		width: 1.2rem;
+	}
+}
+
+
+@media only screen and (min-width:769px) and (max-width:1024px) and (orientation: portrait){
+	/*.THIS .slds-carousel__indicators{
+    		bottom: 7.5rem;
+
+	} */
+}
+
+@media only screen and (min-width:1025px) and (max-width:1280px){
+	.THIS .slds-carousel__indicators{
+    		bottom: 3rem;
+	}
+
+	.THIS .overlaySlider{
+		top:-3.5rem
+	}
+}
+
+@media only screen and (min-width:1281px) and (max-width:1366px){
+	.THIS.empty-div{
+		height: 24rem;
+	}
+
+	.THIS .slds-carousel__indicators{
+    		bottom: 3rem;
+	}
+
+	.THIS .overlaySlider{
+		top:-2.5rem
+	}
+}
+
+@media only screen and (min-width:1367px) and (max-width:1440px){
+	.THIS.empty-div{
+		height: 26rem;
+	}
+
+	.THIS .slds-carousel__indicators{
+    		bottom: 0;
+	}
+
+	.THIS .overlaySlider{
+		top:-0.5rem
+	}
+}
+@media only screen and (min-width:1367px){
+            .THIS .slds-carousel__stage{
+                max-height: 26rem;
+	}
+}
+
+@media only screen and (min-width:1441px){
+	.THIS.empty-div{
+		height: 26.5rem;
+	}
+
+	.THIS .slds-carousel__indicators{
+    		bottom: -0.5rem;
+	}
+
+	.THIS .overlaySlider{
+		top:0;
+	}
+}
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+            .THIS.empty-div{
+                height:18.5rem;
+            }
+}
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+	/*.THIS .slds-carousel__indicators{
+                bottom: 5.5rem;
+            } */
+           	/*.THIS .slds-carousel__stage{
+                top: 8.4rem;
+            }*/
+            .THIS.empty-div{
+                height:1.9rem;
+            }
+}

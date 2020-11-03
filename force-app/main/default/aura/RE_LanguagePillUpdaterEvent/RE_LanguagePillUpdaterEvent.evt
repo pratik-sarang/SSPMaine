@@ -1,0 +1,5 @@
+<aura:event type="Component" description="Event Fired when User selects Languages from Language Pill selector Component" >
+    
+     <aura:attribute name="listSelectedLangs" type="List" default ="[]"/> 
+
+</aura:event>

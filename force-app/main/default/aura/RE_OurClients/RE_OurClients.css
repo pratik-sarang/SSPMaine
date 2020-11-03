@@ -1,0 +1,31 @@
+.THIS .search-btn{
+	margin-top: 1.6rem;
+}
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : portrait) {
+    .THIS .search-btn{
+        margin-top: 1rem;
+    }
+}
+/*.THIS .display-tabs .slds-tabs_default__nav, .THIS .display-tabs .clients-input-section, .THIS .display-tabs .clients-input-section + .locationtable-cont:nth-child(1){
+    display:none;
+}*/
+.THIS .mainTabs span{
+    padding:1rem 1rem 0.4rem 1rem;
+    cursor:pointer;
+}
+.THIS .active-tab{
+    box-shadow: 0px -3px 0 0 t(REPrimary) inset;
+    font-family:'ProductSans-Medium';
+    color:t(REPrimary);
+}
+.THIS .mainTabs span:hover{
+    box-shadow: 0px -0.1rem 0 0 t(REPrimary) inset;
+}
+@media only screen and (max-width : 896px){
+    .THIS .mainTabs span{
+        padding:1rem 0.2rem .4rem 0.2rem;
+    } 
+}
+.THIS .all-clients .locationtable-cont tr th:last-child .slds-cell-fixed, .THIS .all-clients .locationtable-cont tr td:last-child .slds-cell-fixed{
+    right: 0.233rem!important;
+}

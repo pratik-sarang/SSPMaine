@@ -1,0 +1,46 @@
+<aura:component  controller = "RE_BasicSearchCtrl" implements="forceCommunity:availableForAllPageTypes" access="global" >    
+    <aura:attribute name="lstSDOHCategory" type="List"/>
+    <aura:attribute name="lstCategory" type="List"/>
+    <aura:attribute name="lstCategoryByLabel" type="Map"/>
+    <aura:attribute name="allConfigData" type="List"/>
+    <aura:attribute name="isMenuVisible" type="Boolean" default="false"/>
+    <aura:attribute name="isSpinnerActive" type="Boolean"/>
+    <aura:attribute name="categoryName" type="String"/>
+    <aura:attribute name="displayCategories" type="Boolean" default = "false"/>
+    
+    <c:RE_UtilityServerCallerCmp aura:id="bSuper" isSpinnerActive="{!v.isSpinnerActive}"/> 
+    <aura:handler name="init" value="{!this}" action="{!c.init }"/>
+    <aura:if isTrue="{!$Browser.isPhone}">
+        <div id="sidenav-level_0" class="dropdown-categories mobile-dropdown-categories slds-p-top_xx-small">
+            <div class="categories-list slds-p-horizontal_medium">
+                <aura:iteration items="{!v.allConfigData}" indexVar="key" var="item">
+                    <div class="category slds-p-vertical_x-small" id="{!'category-'+key}" data-category = "{!item.Domain__c}" onclick="{!c.handleCategoryClick}">
+                        <div>
+                            <lightning:formattedRichText value="{!item.DomainImage__c}" />
+                            <span class="body1 domain-name slds-m-left_small" >{!item.domainName}</span>
+                        </div>
+                        <lightning:icon iconName="utility:right" size="x-small" alternativeText="right"/>
+                    </div>
+                </aura:iteration>
+            </div>
+        </div>
+        <aura:if isTrue="{!v.displayCategories}">
+            <c:RE_SearchMenu category="{!v.categoryName}" categories = "{!v.lstCategory}" categoriesByLabel="{!v.lstCategoryByLabel}"/>
+        </aura:if>
+        <aura:set attribute="else">
+            <div class="dropdown-categories slds-p-top_large display-none">
+                <div class="slds-grid slds-wrap categories-list slds-p-left_large">
+                    <aura:iteration items="{!v.allConfigData}" indexVar="key" var="item">
+                        <div tabindex="0" class="category slds-p-horizontal_xx-small slds-large-size_1-of-12 slds-medium-size_2-of-12 slds-small-size_3-of-12 slds-x-small-size_3-of-12 slds-text-align_center" id="{!'category-'+key}" data-category = "{!item.Domain__c}" onkeydown="{!c.handleCategoryClick}" onmouseover="{!c.handleCategoryClick}">
+                            <lightning:formattedRichText value="{!item.DomainImage__c}" />
+                            <div class="body1 domain-name slds-m-bottom_x-small" >{!item.domainName}</div>
+                        </div>
+                    </aura:iteration>
+                </div>
+                <aura:if isTrue="{!v.displayCategories}">
+                    <c:RE_SearchMenu category="{!v.categoryName}" categories = "{!v.lstCategory}" categoriesByLabel="{!v.lstCategoryByLabel}"/>
+                </aura:if>
+            </div>
+        </aura:set>
+    </aura:if>
+</aura:component>

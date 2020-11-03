@@ -1,0 +1,95 @@
+.THIS.consent-page {
+    width: 80%;
+    padding: 0rem 1rem 0 2rem;
+    background: t(REWhite);
+}
+
+
+.THIS.consent-page .flowruntimeBody .body div.flowruntimeInputWrapper .bBody .inputHeader{
+    width: 0.5rem;
+}
+
+.THIS.consent-page .flowruntimeBody .body div.flowruntimeInputWrapper .bBody{
+    display: inline-flex;
+
+}
+
+.THIS.consent-page .flowruntimeBody .body .flowruntime-input{
+    padding: 0;
+}
+.THIS.consent-page .flowruntimeBody .body .flowruntimeRadioButtonInput div.flowruntimeInputWrapper .bBody .inputHeader{
+    width: calc(100% - 0.75rem - 1.5rem);;
+}
+
+.THIS.consent-page .flowruntimeBody .body .flowruntimeRadioButtonInput div.flowruntimeInputWrapper .bBody{
+    display:block;
+}
+.THIS.errorText.errorText.flowruntimeRichTextWrapper.flowruntimeErrorText, .THIS.consent-page .flowruntimeInputWrapper .flowruntimeRichTextWrapper.errorText{
+    display: none;
+}
+.THIS.logo img{
+    width: 15rem;
+}
+.THIS.logo{
+    margin-top: -2.5rem;
+}
+.THIS.consent-page{
+    background-color: t(REWhite);
+    max-width: 720px;
+    margin: 1rem auto 0;
+    border: 0.05rem solid t(RElightGrey);
+    border-radius: .25rem .25rem 0 0;
+}
+
+.THIS.consent-page .flowruntimeBody .body .flowruntimeRadioButtonInput .bBody .slds-form-element__control .slds-radio .slds-radio__label{
+    padding: .625rem 0 .625rem 1.025rem;
+    text-decoration: none;
+    position: relative;
+    height: 100%;
+    display: block;
+    transition: all .2s ease;
+    cursor: pointer;
+    font-size: .875rem;
+    border-radius: .25rem;
+    border: 1px solid rgb(217, 219, 221);
+    margin: 1rem 0 1rem 0;
+    width: 75%;
+}
+
+.THIS.consent-page .slds-button.slds-button_brand{
+    background-color: rgb(0, 112, 210);
+    border-color: rgb(0, 112, 210);
+    color: rgb(255, 255, 255);
+}
+
+.THIS.consent-page .slds-button{
+    width: 6rem;
+    margin: 0 0.5rem 0 0.5rem;
+}
+
+.THIS .slds-card__footer{
+    justify-content: center;
+}
+
+.THIS.consent-page .flowruntimeBody .flowruntimeRichTextWrapper .uiOutputRichText ol{
+    list-style-type: decimal;
+    margin-left: 1rem;
+}
+.THIS .uiOutputRichText, .THIS .slds-form-element__label.slds-rich-text-editor__output, .THIS select{
+    font-family: sans-serif;
+    font-weight: normal;
+    color: t(REBlack);
+    font-size: 0.85rem;
+}
+
+@media only screen and (max-width: 896px){
+    .THIS.consent-page {
+        width: 100%;
+        padding: 0;
+    }
+}
+/*
+ 
+.THIS.consent-page .flowruntimeInputWrapper .flowruntimeRichTextWrapper.errorText .uiOutputRichText, .THIS.consent-page .flowruntime-input-error .slds-rich-text-editor__output{
+    display: none;
+}*/

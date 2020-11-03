@@ -1,0 +1,21 @@
+<aura:component controller="RE_LineChartCtrl" implements="forceCommunity:availableForAllPageTypes" access="global" >
+    <ltng:require scripts="{!$Resource.Chart}" afterScriptsLoaded="{!c.refsent}"/>
+    
+    <aura:attribute name="id" type="String" />
+    <aura:attribute name="legend" type="String" />
+    <aura:attribute name="graphData" type="List"/>
+     <aura:attribute name="graphLabel" type="String"/>
+    
+    <div>
+        <div id="{!v.id}" class="chart-container">
+            <span class="chart-legend slds-m-left_large slds-m-bottom_medium">{!v.legend}</span>
+            <span onclick="{!c.toggleExpanCollapse}" id="{!'expand_'+v.id}">
+                <lightning:icon class="expand-icon" size="x-small" iconName="utility:expand" alternativeText="Expand" />
+            </span>
+            <span onclick="{!c.toggleExpanCollapse}" id="{!'collapse_'+v.id}">
+                <lightning:icon class="collapse-icon" size="x-small" iconName="utility:contract" alternativeText="Expand" />
+            </span>
+            <canvas class="linechart-canvas" aura:id="lineChart"/>
+        </div>
+    </div>
+</aura:component>

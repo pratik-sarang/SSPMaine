@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AuraDefinitionBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>45.0</apiVersion>
+    <description>Getting started page will be available to all users (public, anonymous) and will include some high level information about the resource engine as well as provide the ability for community partners to start a workflow to connect.</description>
+</AuraDefinitionBundle>

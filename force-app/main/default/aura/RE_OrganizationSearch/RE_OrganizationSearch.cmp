@@ -1,0 +1,175 @@
+<!--
+ * Component Name    : RE_OrganizationSearch
+ * Owner             : DELOITTE
+ * Created Date      : 05/02/2019
+ * Description       : Fetches the information from the external system to the salesforce
+ *
+ *                            M O D I F I C A T I O N   L O G                                          
+ *
+ *  Date        Developer       Description                                                         
+ *  **************************************************************************
+ *  05/02/2019  TARUN        	Initial UI Development
+ *  05/02/2019  SRIKANTH        Initial Component Development
+-->
+
+<aura:component controller="RE_OrganizationSearchCtrl" implements="forceCommunity:availableForAllPageTypes" access="global" >
+    
+    <!-- Component attributes -->
+    <aura:attribute name="organizationName" type="String" description="organization name" />
+    <aura:attribute name="organizationCity" type="String" description="organization city" /> 
+    <aura:attribute name="isOpen" type="boolean" default="false" description="this is to populate the image show and hide" /> 
+    <aura:attribute name="dataResults" type="List" description="search data to capture from the server call" />
+    <aura:attribute name="isOpenOrgSearch" type="boolean" default="true" description="this is to populate the organization search show and hide" /> 
+    <aura:attribute name="isOpenClaimRequest" type="boolean" default="false" description="this is to populate the claim site request component show and hide" /> 
+    <aura:attribute name="showNoResults" type="Boolean" default="false" description="Attribute used to show/hide the no results text."/>
+    
+    <!-- Pagination attributes -->
+    <aura:attribute name="allData" type="List" description="this is retreve data from the server and used for pagination"/>
+    <aura:attribute name="currentPageNumber" type="Integer" default="1" description="to capture the page number"/>
+    <!--RE_Release 1.2.1 – Bug 368634 - Payal Dubela(05/19/2020)-->
+    <aura:attribute name="pageSize" type="Integer" default="5" description="to capture the page size"/> 
+    <aura:attribute name="totalPages" type="Integer" default="0" description="to capture the totalpages size"/> 
+    <aura:attribute name="pageList" type="List" description="to capture the page list"/> 
+    <aura:attribute name="disableScroll" type="Boolean" default="true" description="to disable the infinite scroll on and off"/> 
+    
+    <!--Claimsite request attributes -->
+    <aura:attribute name="orgId" type="Id" description="attribute to pass the organization Id to the claim component parameter"/>
+    <aura:attribute name="orgName" type="String" description="attribute to pass the organization name to the claim component parameter"/>
+    <aura:attribute name="orgType" type="String" description="attribute to pass the organization type to the claim component parameter"/>
+    <aura:attribute name="orgStreet" type="String" description="attribute to pass the organization street to the claim component parameter"/> 
+    <aura:attribute name="orgState" type="String" description="attribute to pass the organization state to the claim component parameter"/> 
+    <aura:attribute name="orgCity" type="String" description="attribute to pass the organization city to the claim component parameter"/> 
+    <aura:attribute name="orgZipcode" type="String" description="attribute to pass the organization zipcode to the claim component parameter"/> 
+    <aura:attribute name="orgUniqueId" type="String" description="attribute to pass the organization uniqueid to the claim component parameter"/> 
+    <aura:attribute name="orgWebsite" type="String" description="attribute to pass the organization website to the claim component parameter"/> 
+    
+    
+    <!--[06/25/2019:Anuj] - Changes done for server call from a common place-->
+    <aura:attribute name="isSpinnerActive" type="Boolean" description= "this attribute is used to store the state of the spinner"/>
+    <c:RE_UtilityServerCallerCmp aura:id="bSuper" isSpinnerActive="{!v.isSpinnerActive}"/> 
+    <!-- -->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    
+    <aura:if isTrue="{!v.isOpenOrgSearch}">
+        <article class="slds-p-top_large slds-m-horizontal_xx-large"> 
+            <div class="slds-m-top_xx-large slds-m-bottom_x-large" id="results-heading">
+                <div class="blue-sm-heading">
+                    {!$Label.c.add_Organization}
+                </div>
+                <div>
+                    <h1 class="headingL1">
+                        {!$Label.c.Selectyourorganizationbelow}
+                    </h1>
+                </div>
+            </div>
+            <div class="slds-media__body slds-size_12-of-12 slds-m-top_xx-large slds-m-bottom_x-large" id="headings">
+                <!--<h1 class="headingL1">{!$Label.c.Time_to_do_some_searching}</h1>-->
+                <div class="heading2-search-your-org">{!$Label.c.Search_your_organization_by_name_above}</div>
+            </div>
+            <div class="slds-wrap slds-grid">
+                <div class="slds-text-heading_medium slds-m-right_x-large slds-large-size_3-of-12 slds-size_12-of-12">
+                    <strong> <lightning:input aura:id="OrganizationName" type="search" id="form-element-id-06" label="{!$Label.c.OrganizationName}" alt="{!$Label.c.OrganizationName}" placeholder="{!$Label.c.Search_by_organization}" value="{!v.organizationName}" autocomplete="off"/> </strong>
+                </div>
+                
+                <div class="slds-text-heading_medium slds-large-size_3-of-12 slds-size_12-of-12">
+                    <strong> <lightning:input type="search" id="form-element-id-07" label="{!$Label.c.City}" alt="{!$Label.c.City}" placeholder="{!$Label.c.Search_by_city}" value="{!v.organizationCity}" autocomplete="off"/></strong>
+                </div>
+                <div class="slds-large-size_5-of-12 slds-size_12-of-12 slds-grid slds-wrap actionBtns">
+                    <lightning:button onclick="{!c.searchAction}" class="search-button" variant="brand"> {!$Label.c.Search} </lightning:button>
+                    <lightning:button variant="neutral" class="help-btn slds-hide cantFindBtn" aura:id="help-btn" label="{!$Label.c.cant_find_my_organization}" onclick="{! c.handleButtonClick }"/>
+                </div>
+            </div>
+        </article>
+        <div class="slds-m-vertical_xx-large search-results">
+            <aura:iteration items="{!v.dataResults}" var="cus" indexVar="key">
+                <article class="slds-m-top_large slds-m-horizontal_xx-large slds-grid slds-wrap search-details-div"> 
+                    <div class="slds-size_3-of-12 slds-max-medium-size_12-of-12">
+                        <div class="slds-media__body">
+                            <h2 tabindex="0" id="{!'orgname-'+key}" class="headingL3 address-detail-heading"> 
+                                <lightning:formattedText title="{!'Organization Name : '+cus.value.Name}" value="{!cus.value.Name}" />
+                            </h2>
+                            <div tabindex="0" class="body1Grey">
+                                <lightning:formattedText value="{!cus.value.Type}" /> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-size_3-of-12 slds-max-medium-size_12-of-12">
+                        <div class="slds-media__body">
+                            <div tabindex="0" class="body1Grey"> 
+                                <lightning:formattedText title="{!'Organization Name : '+cus.value.Name}" value="{!cus.value.ShippingStreet}" />, 
+                            </div>
+                            <div tabindex="0" class="body1Grey">
+                                <lightning:formattedText value="{!cus.value.ShippingCity}" />, <lightning:formattedText value="{!cus.value.ShippingState}" />, <lightning:formattedText value="{!cus.value.ShippingPostalCode}" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-size_3-of-12 slds-max-medium-size_12-of-12">                   
+                        <div class="slds-media__body">
+                            <div class="web-link body1Grey slds-truncate" title="{!cus.value.Website}">
+                                <aura:if isTrue="{!cus.value.Website}">
+                                    <a onclick="{!c.openWebsite}" href="javascript:void(0)" title="{!cus.value.Website}">{!cus.value.Website}</a>
+                                </aura:if>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="slds-size_3-of-12 slds-max-medium-size_12-of-12">
+                        <div class="slds-media__body">
+                            <lightning:button class="slds-button btn-new btn-claim-my-site" ariaLabel = "{!cus.key=='claimed' ? cus.value.Name + 'Claimed' : cus.value.Name + $Label.c.Select}" label="{!cus.key=='claimed' ? 'Claimed' : $Label.c.Select}" variant="brand" name="{!cus.value}" disabled="{!cus.key == 'claimed'}" onclick="{!c.handleClaimButton}" />
+                        </div>
+                    </div>
+                </article>
+            </aura:iteration> 
+            <aura:if isTrue="{!v.showNoResults}">
+                <p class="slds-text-align_center"><strong>{!$Label.c.RE_NoResultsFound}</strong></p>
+                <aura:set attribute="else">
+                    <div class="slds-grid slds-grid_align-center slds-col slds-m-top_medium">
+                        <aura:if isTrue="{!!v.disableScroll}">
+                            <lightning:button variant="Neutral" aura:id="Loadmorebutton" label="{!$Label.c.Load_More}" title="{!$Label.c.Load_More}" onclick="{! c.onNext }"/>
+                        </aura:if>  
+                    </div>
+                </aura:set>
+            </aura:if>
+        </div>
+        <aura:if isTrue="{!v.isOpen}">
+            <section role="dialog" aria-modal="true" class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container">
+                    <div class="slds-modal__content slds-p-horizontal_medium slds-p-bottom_medium slds-p-top_x-small" id="modal-content-id-1">
+                        <div class="modal-lg-headingcontainer">
+                            <div class="modal-lg-heading-button">
+                                <div class="modal-lg-heading" tabindex="0">{!$Label.c.Can_t_find_your_organization}</div>
+                                <lightning:buttonIcon iconName="utility:close" class="modal-close" onclick="{! c.closeModel }" alternativeText="close" size="small" />
+                            </div>
+                        </div>
+                        <p class="body1">{!$Label.c.organization_to_Kentucky_211}</p>
+                        <!--<div class="body1 slds-m-around_x-large">
+                            <div><span class="slds-m-right_xx-small">{!$Label.c.RE_CentralKY}</span><a>https://www.centralky.org</a></div>
+                            <div><span class="slds-m-right_xx-small">{!$Label.c.RE_Eastern_KY}</span><a>https://www.easternky.org</a></div>
+                            <div><span class="slds-m-right_xx-small">{!$Label.c.RE_OtherKY}</span><a>https://www.otherky.org</a></div>
+                        </div>-->
+                        <p class="body1">
+                            {!$Label.c.X211}
+                        </p>
+                        <div class="modal-lg-footer-button slds-m-top_medium">
+                            <lightning:button variant="brand" label="{!$Label.c.close}" class="slds-p-horizontal_x-large close-focus" onblur="{!c.moveFocusToTop}" onclick="{! c.closeModel }"/>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open" tabindex="-1"></div>
+        </aura:if>
+    </aura:if>
+    
+    <aura:if isTrue="{!v.isOpenClaimRequest}">
+        <c:RE_ClaimSiteRequest organizationId="{!v.orgId}"
+                               organizationName="{!v.orgName}"
+                               organizationType="{!v.orgType}"
+                               organizationStreet="{!v.orgStreet}"
+                               organizationState="{!v.orgState}"
+                               organizationCity="{!v.orgCity}"
+                               organizationZipcode="{!v.orgZipcode}"
+                               organizationUniqueId="{!v.orgUniqueId}"
+                               organizationWebsite="{!v.orgWebsite}"/>
+    </aura:if>
+    
+</aura:component>

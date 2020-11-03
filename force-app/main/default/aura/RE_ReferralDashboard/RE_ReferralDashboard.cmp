@@ -1,0 +1,88 @@
+<!--
+ * Component Name    : RE_ReferralDashboard
+ * Owner             : Sai Kiran Velpula
+ * Created Date      : 09/11/2019
+ * Description       : Referral Dashboard
+ *
+ *                            M O D I F I C A T I O N   L O G                                          
+ *
+ *  Date        Developer       Description                                                         
+ *  ***********************************************************
+ *  09/11/2019  Sai	            Backend Field Integration
+-->
+<aura:component implements="forceCommunity:availableForAllPageTypes,flexipage:availableForAllPageTypes" controller = "RE_ReferralDashboardCtrl">
+    <aura:attribute name="referredByAndToHeaders" type="List"/>
+    <!--
+    <aura:attribute name="referredByAndToHeaders" type="List" default = "[
+                                                                     { label: 'Organization',fieldName: 'Name', type: 'text'},
+                                                                   	 { label: '# of Referrals',fieldName: 'expr0', type: 'number'},
+                                                                     ]"/>
+	--> 
+    <aura:attribute name="mostReferredByOrg" type="List" description= "This attribute is used to store the report data"/>
+    <aura:attribute name="mostReferredToOrg" type="List" description= "This attribute is used to store the report data"/>
+    
+    <aura:attribute name="orgRating" type="Integer" description= "This attribute is used to store the Org Rating"/>
+    <aura:attribute name="totalClientsServed" type="Integer" description= "This attribute is used to store the Total Clients"/>
+    <aura:attribute name="avgDaysToClose" type="Integer" description= "This attribute is used to store the Avg Days To Close"/>
+    <aura:attribute name="referralsOpen" type="Integer" description= "This attribute is used to store the Referrals Open"/>
+    <aura:attribute name="referralsReceived" type="Integer" description= "This attribute is used to store the Referrals Received"/>
+    <aura:attribute name="referralsClosed" type="Integer" description= "This attribute is used to store the Referrals Closed"/>
+    <aura:attribute name="referralsMade" type="Integer" description= "This attribute is used to store the Referrals Made"/>
+    
+    <!--[06/28/2019] - Changes done for server call from a common place-->
+	    <aura:attribute name="isSpinnerActive" type="Boolean"/>
+	    <c:RE_UtilityServerCallerCmp aura:id="bSuper" isSpinnerActive="{!v.isSpinnerActive}"/> 
+	<!-- -->
+    <aura:handler name="init" value="{!this}" action="{! c.onLoadController }"/>
+    <p>
+        <div class="slds-grid slds-wrap slds-p-horizontal_medium">
+            <div class="slds-large-size_6-of-12 slds-medium-size_6-of-12 slds-small-size_12-of-12 slds-x-small-size_12-of-12 slds-p-top_medium most-referred-table slds-card slds-p-around_small">
+                <div class="statistics-header slds-p-around_x-small">{!$Label.c.MostReferredByOrg}</div>
+                <c:RE_GenericLightningTable myData="{!v.mostReferredByOrg}"  mycolumns= "{!v.referredByAndToHeaders}" />
+            </div>
+            <div class="slds-large-size_6-of-12 slds-medium-size_6-of-12 slds-small-size_12-of-12 slds-x-small-size_12-of-12 slds-p-top_medium slds-card slds-p-around_small">
+                <div class="statistics-header slds-p-around_x-small">{!$Label.c.MostReferredToOrg}</div>
+                <c:RE_GenericLightningTable myData="{!v.mostReferredToOrg}"  mycolumns= "{!v.referredByAndToHeaders}" />
+            </div>
+        </div>
+    </p> 
+    <div class="statistics slds-m-around_medium">
+        <div tabindex="0" class="statistics-header slds-p-around_x-small">{!$Label.c.OrganizationStatistics}</div>
+        <div class="slds-grid slds-wrap slds-p-horizontal_medium">
+            <div class="slds-large-size_3-of-12 slds-p-top_medium">
+                <div tabindex="0" class="body1">{!$Label.c.OrganizationRating}</div>
+                <div tabindex="0" class="orgn-rating slds-p-vertical_x-small">{!v.orgRating == 'NA' ? 'NA' : v.orgRating+'%'}</div>
+            </div>
+            <div class="slds-large-size_3-of-12 slds-p-top_medium">
+                <div tabindex="0" class="body1">{!$Label.c.TotalClientsServed}</div>
+                <div tabindex="0" class="orgn-rating slds-p-vertical_x-small">{!v.totalClientsServed}</div>
+            </div>
+            <div class="slds-large-size_3-of-12 slds-p-top_medium">
+                <div tabindex="0" class="body1">{!$Label.c.AvgDaystoclose}</div>
+                <div tabindex="0" class="orgn-rating slds-p-vertical_x-small">{!v.avgDaysToClose}</div>
+            </div>
+        </div>
+    </div>
+    <div class="statistics slds-m-around_medium">
+        <div tabindex="0" class="statistics-header slds-p-around_x-small">{!$Label.c.ReferralStatistics}</div>
+        <div class="slds-grid slds-wrap slds-p-horizontal_medium">
+            <div class="slds-large-size_3-of-12 slds-p-top_medium">
+                <div tabindex="0" class="body1">{!$Label.c.ReferralsOpen}</div>
+                <div tabindex="0" class="orgn-rating slds-p-vertical_x-small">{!v.referralsOpen}</div>
+            </div>
+            <div class="slds-large-size_3-of-12 slds-p-top_medium">
+                <div tabindex="0" class="body1">{!$Label.c.ReferralsReceived}</div>
+                <div tabindex="0" class="orgn-rating slds-p-vertical_x-small">{!v.referralsReceived}</div>
+            </div>
+            <div class="slds-large-size_3-of-12 slds-p-top_medium">
+                <div tabindex="0" class="body1">{!$Label.c.ReferralsClosed}</div>
+                <div tabindex="0" class="orgn-rating slds-p-vertical_x-small">{!v.referralsClosed}</div>
+            </div>
+            <div class="slds-large-size_3-of-12 slds-p-top_medium">
+                <div tabindex="0" class="body1">{!$Label.c.ReferralsMade}</div>
+                <div tabindex="0" class="orgn-rating slds-p-vertical_x-small">{!v.referralsMade}</div>
+            </div>
+        </div>
+    </div>
+
+</aura:component>

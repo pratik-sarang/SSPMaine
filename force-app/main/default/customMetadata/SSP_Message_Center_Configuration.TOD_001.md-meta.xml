@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>TOD_001</label>
+    <protected>false</protected>
+    <values>
+        <field>Applicable_Role__c</field>
+        <value xsi:type="xsd:string">Primary Applicant</value>
+    </values>
+    <values>
+        <field>Body_Spanish__c</field>
+        <value xsi:type="xsd:string">Your application for [programs on application submitted which requires an interview] benefits requires you to complete an interview.</value>
+    </values>
+    <values>
+        <field>Body__c</field>
+        <value xsi:type="xsd:string">Your application for [programs on application submitted which requires an interview] benefits requires you to complete an interview.</value>
+    </values>
+    <values>
+        <field>Button_Alt_Text__c</field>
+        <value xsi:type="xsd:string">Click to call DCBS</value>
+    </values>
+    <values>
+        <field>Button_Name__c</field>
+        <value xsi:type="xsd:string">Call DCBS at 855-306-8959</value>
+    </values>
+    <values>
+        <field>Code__c</field>
+        <value xsi:type="xsd:string">TOD-001</value>
+    </values>
+    <values>
+        <field>Communication_Body_Spanish__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Communication_Body__c</field>
+        <value xsi:type="xsd:string">Your application requires an interview in person or on the phone - complete one by calling DCBS at 855-306-8959 by &lt;interview due date&gt;.</value>
+    </values>
+    <values>
+        <field>Due_Date_criterion__c</field>
+        <value xsi:type="xsd:string">application submission date + 30 days</value>
+    </values>
+    <values>
+        <field>Expiry_Date_Criterion__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Mobile_Button_Action__c</field>
+        <value xsi:type="xsd:string">call</value>
+    </values>
+    <values>
+        <field>Mobile_Button_Alt_Text__c</field>
+        <value xsi:type="xsd:string">Click to Call DCBS</value>
+    </values>
+    <values>
+        <field>Mobile_Button_Name__c</field>
+        <value xsi:type="xsd:string">Call DCBS</value>
+    </values>
+    <values>
+        <field>Send_Reminder_Criteria__c</field>
+        <value xsi:type="xsd:string">10 days after notification creation.</value>
+    </values>
+    <values>
+        <field>Severity__c</field>
+        <value xsi:type="xsd:string">Critical</value>
+    </values>
+    <values>
+        <field>Title_Spanish__c</field>
+        <value xsi:type="xsd:string">Complete Interview</value>
+    </values>
+    <values>
+        <field>Title__c</field>
+        <value xsi:type="xsd:string">Complete Interview</value>
+    </values>
+    <values>
+        <field>Trash_Action__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>button_Action__c</field>
+        <value xsi:type="xsd:string">navigate user to Find a DCBS Office page</value>
+    </values>
+</CustomMetadata>

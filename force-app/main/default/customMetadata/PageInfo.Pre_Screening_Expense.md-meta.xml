@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Pre-Screening-Expense</label>
+    <protected>false</protected>
+    <values>
+        <field>IsJSONBasedPage__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>JsonLayoutSchema__c</field>
+        <value xsi:type="xsd:string">{
+&quot;uniqName&quot;: &quot;PS_Application&quot;,
+&quot;title&quot;: &quot;PS_Application&quot;,
+&quot;profiles&quot;: &quot;all&quot;,
+&quot;pageType&quot;: &quot;detail&quot;,
+&quot;pageTitle&quot;: &quot;sspExpenseDetails&quot;,
+&quot;pageSubtitle&quot;: &quot;sspCompleteExpenseQuestion&quot;,
+&quot;isSubmitPage&quot; : true,
+&quot;exitBtnTitle&quot;:&quot;sspExitDashboardTitle&quot;,
+&quot;fields&quot;: [
+{
+&quot;uniqName&quot;: &quot;combinedShelterExpense&quot;,
+&quot;name&quot;: &quot;combinedShelterExpense&quot;,
+&quot;label&quot;: &quot;sspCombinedShelterExpense&quot;,
+&quot;required&quot;: true,
+&quot;missValueMsg&quot;: &quot;sspRequiredValidator&quot;,
+&quot;formatter&quot;: &quot;currency&quot;,
+&quot;rangeUnderflowMsg&quot;: &quot;sspPsToolInputRangeFlowMsg&quot;,
+&quot;rangeOverflowMsg&quot;:&quot;sspPsToolInputRangeFlowMsg&quot;,
+&quot;minValue&quot;: &quot;0&quot;,
+&quot;maxValue&quot;: &quot;9999999999.99&quot;,
+&quot;step&quot;: 0.01,
+&quot;stepMismatchMsg&quot;: &quot;sspPsToolInputRangeFlowMsg&quot;,
+&quot;badTypeMsg&quot;: &quot;sspPsToolInputRangeFlowMsg&quot;,
+&quot;fieldCol&quot;: &quot;6-of-12&quot;
+},
+{
+&quot;uniqName&quot;: &quot;anyheatingOrCoolingExpense&quot;,
+&quot;name&quot;: &quot;anyheatingOrCoolingExpense&quot;,
+&quot;label&quot;: &quot;sspAnyheatingOrCoolingExpense&quot;,
+&quot;required&quot;: true,
+&quot;dependFields&quot;: &quot;isHhBilledMoreThanOneExpense&quot;,
+&quot;missValueMsg&quot;: &quot;sspRequiredValidator&quot;
+},
+{
+&quot;uniqName&quot;: &quot;isHhBilledMoreThanOneExpense&quot;,
+&quot;name&quot;: &quot;isHhBilledMoreThanOneExpense&quot;,
+&quot;label&quot;: &quot;sspisHhBilledMoreThanOneExpense&quot;,
+&quot;required&quot;: true,
+&quot;missValueMsg&quot;: &quot;sspRequiredValidator&quot;,
+&quot;dynaprops&quot; : {
+&quot;display&quot;: [
+{
+&quot;field&quot;: &quot;anyheatingOrCoolingExpense&quot;,
+&quot;op&quot;: &quot;EQ&quot;,
+&quot;value&quot;: &quot;N&quot;
+}
+]
+}
+},
+{
+&quot;uniqName&quot;: &quot;monthlyChildCareExpense&quot;,
+&quot;name&quot;: &quot;monthlyChildCareExpense&quot;,
+&quot;label&quot;: &quot;sspMonthlyChildCareExpense&quot;,
+&quot;required&quot;: true,
+&quot;missValueMsg&quot;: &quot;sspRequiredValidator&quot;,
+&quot;formatter&quot;: &quot;currency&quot;,
+&quot;rangeUnderflowMsg&quot;: &quot;sspPsToolInputRangeFlowMsg&quot;,
+&quot;rangeOverflowMsg&quot;:&quot;sspPsToolInputRangeFlowMsg&quot;,
+&quot;minValue&quot;: &quot;0&quot;,
+&quot;maxValue&quot;: &quot;9999999999.99&quot;,
+&quot;step&quot;: 0.01,
+&quot;stepMismatchMsg&quot;: &quot;sspPsToolInputRangeFlowMsg&quot;,
+&quot;badTypeMsg&quot;: &quot;sspPsToolInputRangeFlowMsg&quot;,
+&quot;fieldCol&quot;: &quot;6-of-12&quot;
+},
+{
+&quot;uniqName&quot;: &quot;childSupportExpense&quot;,
+&quot;name&quot;: &quot;childSupportExpense&quot;,
+&quot;label&quot;: &quot;sspChildSupportExpense&quot;,
+&quot;required&quot;: true,
+&quot;missValueMsg&quot;: &quot;sspRequiredValidator&quot;,
+&quot;formatter&quot;: &quot;currency&quot;,
+&quot;rangeUnderflowMsg&quot;: &quot;sspPsToolInputRangeFlowMsg&quot;,
+&quot;rangeOverflowMsg&quot;:&quot;sspPsToolInputRangeFlowMsg&quot;,
+&quot;minValue&quot;: &quot;0&quot;,
+&quot;maxValue&quot;: &quot;9999999999.99&quot;,
+&quot;step&quot;: 0.01,
+&quot;stepMismatchMsg&quot;: &quot;sspPsToolInputRangeFlowMsg&quot;,
+&quot;badTypeMsg&quot;: &quot;sspPsToolInputRangeFlowMsg&quot;,
+&quot;fieldCol&quot;: &quot;6-of-12&quot;
+}
+]
+}</value>
+    </values>
+    <values>
+        <field>LightningComponentName__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>PageDisplayName__c</field>
+        <value xsi:type="xsd:string">Expense Details</value>
+    </values>
+    <values>
+        <field>PageName__c</field>
+        <value xsi:type="xsd:string">Expense Details</value>
+    </values>
+    <values>
+        <field>Page_Display_Name_View__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>URL__c</field>
+        <value xsi:nil="true"/>
+    </values>
+</CustomMetadata>

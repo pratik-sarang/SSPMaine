@@ -1,0 +1,5 @@
+<aura:event type="Component" description="Event Listner for Successful file Upload" >
+    
+    <aura:attribute name="isSuccess" type="Boolean" default ="false"/> 
+
+</aura:event>

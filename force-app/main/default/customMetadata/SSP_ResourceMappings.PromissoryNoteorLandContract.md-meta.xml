@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>PromissoryNoteorLandContract</label>
+    <protected>false</protected>
+    <values>
+        <field>ApplicablePrograms__c</field>
+        <value xsi:type="xsd:string">Non-MAGI,SS</value>
+    </values>
+    <values>
+        <field>DetailsRequired__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>ResourceTileFields__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>ResourceType__c</field>
+        <value xsi:type="xsd:string">PN</value>
+    </values>
+    <values>
+        <field>SobjectField__c</field>
+        <value xsi:type="xsd:string">HasPromissoryNoteOrLandContractToggle__c</value>
+    </values>
+</CustomMetadata>

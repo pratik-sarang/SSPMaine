@@ -1,0 +1,18 @@
+.THIS .create-referral-feedback-modal{
+  width: 35%;
+}
+.THIS .slds-form-element__legend{
+ font-weight:normal;
+ position:relative;
+}
+.THIS .recommend-txt{
+   font-size:t(RESize14);
+   color:t(REPageHeading);
+}
+@media all and (max-width : 768px) {
+ .THIS .create-referral-feedback-modal{
+     width: 45%;
+     position: absolute;
+     transform: translate(50%, 5%);
+ }
+}

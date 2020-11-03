@@ -1,0 +1,34 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" >
+    <div class="slds-grid slds-wrap">
+        <div class="slds-large-size_5-of-12 slds-medium-size_1-of-1 slds-small-size_1-of-1 slds-m-top_large slds-p-horizontal_large">
+            <div class="slds-grid slds-wrap slds-align_absolute-center slds-m-vertical_medium">
+                <h1 class="slds-size_1-of-1 headingL1">
+                    {!$Label.c.whyJoinKY}
+                </h1>
+                <p class="slds-size_1-of-1 body1 slds-m-top_medium ">
+                    {!$Label.c.whyJoinKYDescription}
+                </p>
+
+                <p class="slds-size_1-of-1 body1 slds-m-top_x-large ">
+                    <span class="font-bold slds-p-right_xx-small">{!$Label.c.WatchThisVideo}</span>{!$Label.c.howToRegister}
+                </p>
+
+                <div class="slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-x-small-size_12-of-12 slds-small-size_12-of-12 slds-p-bottom_x-small slds-is-relative slds-m-top_large">
+                    <div id="iframe-container">
+                        <lightning:icon aura:id="modal-close" class="slds-hide video-modal-close" iconName="utility:close" alternativeText="close"  onclick="{!c.hidePopup}" size="small" /> 
+                        <iframe class="iframClass" title="video" src="{!$Label.c.ClaimMySiteYoutubeLink}"></iframe>
+                    </div>
+                    <lightning:icon class="expand-icon" iconName="utility:expand_alt" onclick="{!c.openPopup}" alternativeText="Utility image" />
+                </div>
+
+                <div class="getStartedButton slds-align_absolute-center slds-m-top_medium slds-p-horizontal_large">
+                    <lightning:button variant="brand" label="{!$Label.c.RE_GetStarted}" title="{!$Label.c.RE_GetStarted}" onclick="{! c.handleClick }" />
+                </div>
+            </div>
+            
+        </div>
+        <div class="slds-large-size_7-of-12 slds-medium-size_1-of-1 slds-small-size_1-of-1">
+            <img src="{!$Resource.RE_Resources + '/RE_Resources/GetStaredClipped.PNG'}" class="getstarted-image" alt="{!$Label.c.ConnectHelpMakeADifference}" title="{!$Label.c.ConnectHelpMakeADifference}"/>
+        </div>
+    </div>
+</aura:component>

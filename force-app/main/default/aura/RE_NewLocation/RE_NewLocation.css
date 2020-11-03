@@ -1,0 +1,26 @@
+.THIS .available-lang-sec{
+    padding-top: 6px;
+    margin-top:3rem;
+}
+.THIS .doc-upload-title{
+    margin-top: 2.3rem;
+}
+.THIS .hours-of-operation-table {
+   overflow-x: auto;
+}
+.THIS .table-caption {
+    display: none;
+}
+@media all and (max-width : 896px) {
+    .THIS .available-lang-sec{
+        padding-top:0;
+        margin-top:0;
+    }
+    .THIS .locdetails-first-col {
+    	padding-right: 0;
+	} 
+   .THIS .locdetails-second-col {
+    	padding-left: 0;
+        padding-top: 0;
+	} 
+}

@@ -1,0 +1,5 @@
+<aura:event type="Component" description="Event Fired when User selects new values from  Pill selector Component" >
+    
+     <aura:attribute name="listSelectedfieldValues" type="List" default ="[]"/> 
+
+</aura:event>

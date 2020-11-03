@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Emergency Medical Condition and Disabi</label>
+    <protected>false</protected>
+    <values>
+        <field>Based_On_Individual__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>Member_Filter__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Order__c</field>
+        <value xsi:type="xsd:double">5.0</value>
+    </values>
+    <values>
+        <field>RAC_Help_Text__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>RAC_Menu_Selection__c</field>
+        <value xsi:type="xsd:string">Emergency Medical Condition and Disability</value>
+    </values>
+    <values>
+        <field>RAC_Menu_Subheader__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>RAC_Screen_Ids__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Review_Required_Screens_for_RAC__c</field>
+        <value xsi:type="xsd:string">SSP_APP_Details_Disability;SSP_APP_Details_Blindness;SSP_APP_Details_HealthCondition</value>
+    </values>
+    <values>
+        <field>disabled_RAC_Help_Text__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>disabled_RAC_Menu_Selection__c</field>
+        <value xsi:type="xsd:string">Emergency Medical Condition and Disability</value>
+    </values>
+    <values>
+        <field>disabled_RAC_Menu_Subheader__c</field>
+        <value xsi:nil="true"/>
+    </values>
+</CustomMetadata>

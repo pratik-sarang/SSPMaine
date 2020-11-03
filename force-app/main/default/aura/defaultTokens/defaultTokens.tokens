@@ -1,0 +1,147 @@
+<aura:tokens extends="force:base">
+    
+    <!-- /*Color Codes*/ -->
+    <aura:token name="REWhite" value="#fff"/> 
+    <aura:token name="REBlack" value="#000"/> 
+    <aura:token name="REResourceBlue" value="#005fb2"/>
+    <aura:token name="REResourceDarkBlue" value="#16325c"/>
+    <aura:token name="RElightGrey" value="#E6E6E6"/>    
+    <aura:token name="RECmpBackground" value="#F8F8F8"/>
+    <aura:token name="REBtnDisabled" value="#F1F1F1"/>
+    <aura:token name="REPageHeading" value="#080707"/>
+    <aura:token name="RENavActiveBG" value="#F0F8FC"/>
+    <aura:token name="REMediaBorder" value="#979797"/>
+    <aura:token name="REDetailsText" value="#B0ADAB"/>
+    <aura:token name="REPillsText" value="#1589EE"/>
+    <aura:token name="REMyPlanRBG" value="rgba(228,228,228,0.18)"/>
+    <aura:token name="RECarouselOverlay" value="rgba(0,0,0,0.4)"/>
+    <aura:token name="RElightGreyOpacity" value="rgba(230, 230, 230, 0.6)"/>
+    <aura:token name="REBasic" value="#DAE3EE"/>
+    <aura:token name="RESustaining" value="#E7EFE4"/>
+    <aura:token name="REStabilizing" value="#CCCCCC"/>
+    <aura:token name="RECardResourceTypeGrey" value="#8D8E91"/>
+    <aura:token name="REContentBg" value="#f1efef"/>
+    <aura:token name="RECardShadow" value="#ececec"/>
+    <aura:token name="RECardChevron" value="#d8dde6"/>
+    <aura:token name="RESliderTrack" value="#DCE0F4"/>
+    <aura:token name="RESliderThumb" value="#0091FF"/>
+    <aura:token name="RESliderLabel" value="#2C3849"/>
+    <aura:token name="REDarkGreen" value="#1D7230"/>
+    <aura:token name="REDarkRed" value="#D0021B"/>
+    <aura:token name="RENavyBlue" value="#0065BD"/>
+    <aura:token name="REGrey" value="#5E5E5E"/>
+    <aura:token name="REDimGrey" value="#696969"/>
+    <aura:token name="REShadeGrey" value="#636363"/>
+    <aura:token name="REDove" value="#757575"/>
+        
+	<!-- /* Primary Color Codes */ -->
+    <aura:token name="REPrimary" value="#005FB3"/> 
+    
+    <!-- /* Secondary Color Codes */ -->
+    <aura:token name="RESecondaryAlpha" value="#005FB2"/>
+    <aura:token name="RESecondaryBeta" value="#00396B"/>
+    <aura:token name="RESecondaryGamma" value="#061C3F"/>
+    
+    <!-- /* Semantic Color Codes */ -->
+    <aura:token name="RESemanticBlue" value="#4A90E2"/> 
+    <aura:token name="RESemanticGreen" value="#00956E"/>
+    <aura:token name="RESemanticYellow" value="#FFCF5C"/>
+    <aura:token name="RESemanticOrange" value="#F8B656"/>
+    <aura:token name="RESemanticRed" value="#A61A14"/>
+    <aura:token name="RESemanticBrown" value="#8E5806"/>
+    
+    <!-- /* Neutral Color Codes */ -->
+    <aura:token name="RENeutral" value="#616161"/>
+    <aura:token name="RENeutralAlpha" value="#3E3E3C"/>
+    <aura:token name="RENeutralBeta" value="#656561"/> 
+    <aura:token name="RENeutralGamma" value="#969492"/>
+    <aura:token name="REResourceGrey" value="#616161"/>
+    <aura:token name="REGreyFieldBorder" value="#DDDBDA"/>
+    <aura:token name="REDarkGrey" value="#56564E"/>
+    
+    <!-- /*Header Color*/ -->
+    <aura:token name="REHeaderBg" value="#fff"/>
+    <aura:token name="REHeaderText" value="#3E3E3C"/> 
+    
+    <!-- /*Footer Color*/ -->
+    <aura:token name="REFooterBg" value="#e6e4e3"/>
+    <aura:token name="REFooterText" value="#fff"/>
+    
+    <!-- /* Font Weights */ -->
+	<aura:token name="REWeightNormal" value="normal"/>
+    <aura:token name="REWeightBold" value="bold"/>
+    <aura:token name="REWeightlighter" value="light"/>
+    <aura:token name="REWeight400" value="400"/>
+    
+    <!-- /* Font Size */ -->
+    <aura:token name="RESize34" value="2.125rem"/>   <!-- 34px -->
+    <aura:token name="RESize24" value="1.5rem"/>     <!-- 24px -->
+    <aura:token name="RESize22" value="1.375rem"/>   <!-- 22px -->
+    <aura:token name="RESize20" value="1.25rem"/>    <!-- 20px -->
+    <aura:token name="RESize18" value="1.125rem"/>   <!-- 18px -->
+    <aura:token name="RESize16" value="1rem"/>   	 <!-- 16px -->
+    <aura:token name="RESize14" value="0.875rem"/>   <!-- 14px -->
+    <aura:token name="RESize13" value="0.813rem"/>   <!-- 13px -->
+    <aura:token name="RESize10" value="0.625rem"/>   <!-- 10px -->
+    <aura:token name="RESizept8" value="0.8rem"/>    <!-- 12.8px -->
+    <aura:token name="RESizept1" value="0.063rem"/>  <!-- 1px -->
+    
+     <!-- /***************************** SSP Tokens ***********************/ -->
+      <!-- Blue Color Codes-->
+    <aura:token name="sspBlueAlpha" value="#0044BE"/>
+    <aura:token name="sspBlueBeta" value="#003087"/>
+    <aura:token name="sspBlueGamma" value="#002362"/>
+    <aura:token name="sspBlueOmega" value="#E7F3FF"/>
+    <aura:token name="sspBlueDelta" value="#97a1b6"/>
+    <aura:token name="sspBlueSigma" value="#C4D9FF"/>
+    <aura:token name="sspBlueZeta" value="#141414"/>
+    <aura:token name="sspBlueTheta" value="#e0efff"/>
+    <aura:token name="sspBlueEpsilon" value="#003fc6"/>
+    <aura:token name="sspBlueUpsilon" value="#135f90"/>
+    
+    <!-- Magenta Color Codes-->    
+    <aura:token name="sspMagentaAlpha" value="#BA398F"/>
+    <aura:token name="sspMagentaBeta" value="#9D347A"/>
+    <aura:token name="sspMagentaGamma" value="#802562"/>
+    <!-- Mono Color Codes-->
+    <aura:token name="sspMonoAlpha" value="#EEEFF2"/>
+    <aura:token name="sspMonoBeta" value="#DADEE4"/>
+    <aura:token name="sspMonoGamma" value="#97A1B6"/>
+    <aura:token name="sspMonoOmega" value="#66686D"/> 
+    <aura:token name="sspMonoDelta" value="#F8F9FA"/>
+    <aura:token name="sspMonoSigma" value="#EDEEF1"/>
+    <aura:token name="sspMonoZeta" value="#c3c6ca"/>
+    <aura:token name="sspMonoTheta" value="#efefef"/>
+    
+    <!-- Mono Body Black Color Code-->
+    <aura:token name="sspMonoBody" value="#262729"/>
+    <aura:token name="sspMonoBlackBeta" value="#2f3238"/>
+    <aura:token name="sspMonoBlackGamma" value="#27292a"/>
+    <aura:token name="sspMonoBlackOmega" value="#28292b"/>
+    <aura:token name="sspMonoBodyShadow" value="rgba(0,35,98,0.1)"/>
+    <aura:token name="sspMonoBlackTheta" value="#26272A"/>
+    <aura:token name="sspMonoBlackZeta" value="#646679"/>
+    
+    <!-- White Color Code-->
+    <aura:token name="sspWhiteAlpha" value="#FFFFFF"/>
+    <aura:token name="sspWhiteBeta" value="#F6F9FF"/>
+    <!-- Red color code-->
+    <aura:token name="sspRedAlpha" value="#BA3953"/>
+    <aura:token name="sspRedBeta" value="#B00000"/>
+    <aura:token name="sspRedGamma" value="#F9EBEB"/>
+    <aura:token name="sspRedOmega" value="#C23934"/>
+    <aura:token name="sspRedDelta" value="#e02020"/>
+    <!-- Green color code-->
+    <aura:token name="sspGreenAlpha" value="#00A563"/>
+    <aura:token name="sspGreenBeta" value="#02A664"/>
+    <aura:token name="sspGreenGamma" value="#39ba64"/>
+    <aura:token name="sspGreenOmega" value="#00A563"/>
+    <!-- Orange color code-->
+    <aura:token name="sspOrangeAlpha" value="#F8B656"/>
+    <!--Grey color code-->
+    <aura:token name="sspGreyAlpha" value="#66686E"/>
+    <aura:token name="sspGreyBeta" value="#f8f9fb"/>
+    <aura:token name="sspGreyGamma" value="#6F749B"/>
+
+    <aura:token name="sspAppHeaderGradient" value="linear-gradient(309.89deg, #E8EAEE 0%, #F5F6F8 100%)"/>
+</aura:tokens>

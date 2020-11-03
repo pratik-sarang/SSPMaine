@@ -1,0 +1,113 @@
+.THIS.slds-card>.slds-card__header{
+    border-radius: 0.3rem;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.1);
+    border: 1px solid t(REGreyFieldBorder);
+    min-height:150px;
+}
+.THIS .locationCardEdit{
+    font-size: t(RESize13);
+}
+.THIS.slds-card{
+    border:none;
+    background:none;
+}
+.THIS .status{
+    margin-top: 4.7rem;
+}
+.THIS .addlang-button{
+    padding: 0.365rem .2rem;
+    line-height: 0rem;
+    margin-bottom: 0.1rem;
+}
+
+.THIS .locationTitle{
+    background: t(REPrimary);
+    color: t(REWhite);
+    border-radius: 9.5px;
+    text-align: center;
+}
+.THIS .locationTitleName{
+    font-size: t(RESize14);
+    line-height: 18px;
+}
+.THIS .slds-col{
+    flex: 1 1 auto;
+    justify-content: space-between;
+    min-height: 16.5rem;
+    flex-direction: column;
+    display: flex;
+    width: 33.33%;
+}
+.THIS .countiesSection .slds-col{
+    min-height: 8.25rem;
+}
+
+.THIS .sclMdaBox{
+    width:100%;
+}
+
+.THIS .addCol{
+    padding: 0 55px 0 0;
+    width: 33.33%;
+}
+.THIS .countiesSection{
+    margin: 1.36rem 0 1.36rem 0;
+    width: 28.6%;
+}
+
+.THIS .select-status .slds-form-element{
+    margin: 0;
+}
+
+.THIS button.save-btn:disabled{
+    display:none;
+}
+
+.THIS .stateField{
+    width:50%;
+}
+
+.THIS .zipField{
+    width: 25%;
+}
+.THIS .social-media .slds-col{
+    min-height:auto;
+}
+.THIS .social-media{
+    width:33.3%;
+}
+.THIS .slds-form-element__help{
+    width: 7rem;
+}
+.THIS .slds-select[disabled]{
+    padding-left: 0;
+    border-color: transparent;
+    background-color: transparent;
+    box-shadow:none;
+}
+.THIS .select-disabled .slds-select_container:after{
+    border:none;
+}
+@media only screen and (max-width:64em){
+    
+    .THIS .slds-m-around_medium{
+        margin:0;
+    }
+    .THIS .save-btn{
+        margin-bottom:1rem;
+    }
+    .THIS .slds-col{
+        width: 100%;
+        padding: 0;
+    }
+    .THIS .countiesSection{
+        width: 100%;
+    }
+    .THIS .counties-section.slds-m-top_xx-large{
+        margin-top:1rem;
+    }
+    .THIS .social-media{
+        width:100%;
+    }
+
+}

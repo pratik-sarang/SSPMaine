@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>SSP_APP_Healthcare_IndivEnrollDetails</label>
+    <protected>false</protected>
+    <values>
+        <field>DependentScreen__c</field>
+        <value xsi:type="xsd:string">SSP_APP_HealthCare_AccessDetails,SSP_APP_HealthCare_EnrollDetails</value>
+    </values>
+    <values>
+        <field>Screen__c</field>
+        <value xsi:type="xsd:string">SSP_APP_Healthcare_IndivEnrollDetails</value>
+    </values>
+</CustomMetadata>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>CollateralContact</label>
+    <protected>false</protected>
+    <values>
+        <field>IsJSONBasedPage__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>JsonLayoutSchema__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>LightningComponentName__c</field>
+        <value xsi:type="xsd:string">sspCollateralContact</value>
+    </values>
+    <values>
+        <field>PageDisplayName__c</field>
+        <value xsi:type="xsd:string">Collateral Contact</value>
+    </values>
+    <values>
+        <field>PageName__c</field>
+        <value xsi:type="xsd:string">SSP_APP_CollateralContact</value>
+    </values>
+    <values>
+        <field>Page_Display_Name_View__c</field>
+        <value xsi:type="xsd:string">Collateral Contact</value>
+    </values>
+    <values>
+        <field>URL__c</field>
+        <value xsi:nil="true"/>
+    </values>
+</CustomMetadata>

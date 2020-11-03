@@ -1,0 +1,49 @@
+.THIS.mapIframe{
+	border: none;
+}
+/********Mobile**********/
+@media screen and (max-device-width: 767px) {
+    .THIS.map-back-btn{
+        position: relative;
+        top: 3.5rem;
+        left: 68%;
+    }
+}
+/*Media Query for iPhone 6+/7+/8+ (Portrait)*/ 
+@media screen and (min-device-width : 414px) and (-webkit-device-pixel-ratio: 3){
+    .THIS.map-back-btn{
+        left: 70%;
+    }
+}
+/*Media Query for iPhone XR */
+@media only screen and (min-device-width: 414px) and (min-device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait){
+    .THIS.map-back-btn{
+        left: 70%;
+    }
+}
+/*Media Query for iPhone 6/7/8 (Landscape)*/ 
+@media only screen and (max-device-width: 667px)  and (-webkit-device-pixel-ratio: 2) and (orientation : landscape){
+    .THIS.map-back-btn{
+        left: 82%;
+    }
+}
+/*Media Query for iPhone 6+/7+/8+ (Landscape)*/ 
+@media screen and (min-device-width : 414px) and (-webkit-device-pixel-ratio: 3) and (orientation : landscape){
+    .THIS.map-back-btn{
+        left: 84%; 
+    }
+}
+/*Media Query for iPhone X (Landscape)*/ 
+@media only screen and (min-width: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape){
+    .THIS.map-back-btn{
+        top:3.5rem;
+        left:85%;
+    }
+}
+/*Media Query for iPhone XR (Landscape)*/ 
+@media only screen and (min-width: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape){
+    .THIS.map-back-btn{
+        top: 3.4rem;
+        left: 86.5%; 
+    }
+}

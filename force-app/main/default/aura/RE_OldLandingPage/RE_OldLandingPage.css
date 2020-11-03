@@ -1,0 +1,66 @@
+.THIS{
+    background-color: t(REWhite);
+    position: relative;
+    z-index: 100;
+}
+.THIS .landingContent{
+    background: t(REWhite);
+    line-height: 2.375rem;
+    color: t(RESecondaryBeta);
+    box-shadow: 0 0.125rem 0.25rem 0 t(REGreyFieldBorder);
+}
+.THIS .partnerContent{
+    background: t(REWhite);
+    line-height: 2.375rem;
+    color: t(REPrimary);
+}
+.THIS .partnerSection .partnerHeader{
+    background-color: t(REGreyFieldBorder);
+    margin: 44px 0 0 0;
+}
+.THIS .resourceGutterSpace{
+    padding:0 4.5rem;
+}
+.THIS .socialIcons div{
+    display: inline-block;
+    cursor: pointer;	
+}
+.THIS .display-flex{
+    display:flex;
+    justify-content:flex-end;
+    padding: 0 10rem 0 0;
+}
+.THIS .landingContentPadding{
+    background: t(REContentBg);
+}
+@media screen and (max-device-width : 1024px) and (orientation:portrait) {
+    .THIS .display-flex{
+        padding:0;
+    }
+}
+@media only screen and (min-device-width : 375px) and (max-device-width : 767px) {
+    .THIS .display-flex{
+        padding: 1rem;
+        justify-content: center;
+    }
+    .THIS .resourceGutterSpace{
+        padding:0 1.5rem;
+    }
+    .THIS .headingL2{
+        font-size: 1rem;
+    }
+    .THIS h1, .THIS h2{
+        font-size: 1.5rem;
+    }
+    .THIS .partnerButton{
+        margin: 1.5rem 0;
+    }
+    .THIS .partnerHeader .headingL1{
+        font-size: 26px;
+    }
+    .THIS .partnerContent .headingL3{
+        font-size: 18px;
+        line-height: 1.5;
+        padding: 16px 1.3em;
+    }
+}

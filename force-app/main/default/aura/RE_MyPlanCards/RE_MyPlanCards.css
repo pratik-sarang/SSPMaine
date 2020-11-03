@@ -1,0 +1,222 @@
+.THIS .display-none{
+    display:none; 
+}
+.THIS.my-plan-card{
+    position:relative;
+}
+.THIS .card-opened .rate-button{
+    visibility:hidden;
+}
+.THIS.my-plan-card .myPlanCard-hover:hover {
+    background-color: t(RENavActiveBG);
+}
+.THIS .hideelement{
+    visibility:hidden;
+}
+.THIS .card-opened .notesCount{
+    display:inline;
+}
+.THIS .partner-name{
+    border-radius: 0.25rem;	
+    background-color:t(RESecondaryBeta);
+    color:t(REWhite);
+    font-size: 0.75rem;
+}
+.THIS .card-info-section{
+    border-radius: 0.25rem;
+}
+.THIS .card-description:focus{
+    outline:none;
+}
+.THIS .card-opened .accordion-arrow{
+    transform:rotate(180deg);
+}
+.THIS .card-opened .suggested-resource{
+    display: none;
+}
+.THIS .category-type-icon{
+    transform:translate(0,-2px);
+}
+.THIS .accordion-arrow svg{
+    height:1rem;
+    cursor:pointer;
+}
+.THIS .accordion-arrow-container:focus{
+    outline:none;
+}
+.THIS .rotate-arrow{
+    transform:rotate(180deg);
+}
+.THIS .card-more-info-section > div{
+    border-top:0.0625rem solid t(RElightGrey);
+}
+.THIS .notesCount{
+    color: t(REPrimary);
+    font-size: 0.75rem;
+    background:t(RENavActiveBG);
+    margin:0 .2rem;
+    padding: 0 0.5rem;
+    border-radius: 0.469rem;
+}
+.THIS .resource-link,
+.THIS .resource-link:focus{
+    border: 0;
+    box-shadow: none;
+}
+.THIS .resource-link:hover{
+    text-decoration:underline;
+}
+.THIS .resource-link{
+    line-height:unset;
+}
+.THIS .card-miles-category{
+    display:flex;
+    align-items:center;
+}
+.THIS .connect-btn-collapsed{
+    margin-left:0.5rem;
+}
+.THIS .card-opened .card-btn-section .dd-ga-btn-resource-no-thanks,.THIS .card-opened .card-btn-section .dd-ga-btn-resource-mycart-connect{
+    display:none;
+}
+@media only screen and (max-width:767px){
+    .THIS .card-btn-section.draft-referral, .THIS .card-footer-btn-section{
+        display: block;
+        text-align: right;
+    }
+}
+
+.THIS .card-opened .fav-icon-display-mobile{
+    display: none; 
+}
+/* Mobile Design */
+.THIS .info-btn {
+    border: 1px solid t(REPrimary);
+    border-radius: 50%;
+    padding: 0.5rem;
+}
+@media only screen and (min-device-width : 414px) and (max-device-width : 896px) and (-webkit-device-pixel-ratio : 2) and (orientation : landscape) {
+    /*Iphone XR*/
+    .THIS .card-more-info-section-mobile > div{
+        border-top: none;
+    }
+    .THIS .card-more-info-section-mobile {
+        padding-left: 8rem;
+        padding-right: 8rem;
+    }
+    .THIS .card-toggle-section .toggle-box-shadow {
+        box-shadow: none;
+    }
+    .THIS .fav-icon-display-mobile .favorite-container{
+        margin-right: 0.3rem;
+    }
+    .THIS .rate-button{
+        width: 60.1%;
+    }
+}
+@media only screen and (min-device-width : 375px) and (max-device-width : 812px) and (-webkit-device-pixel-ratio : 3) and (orientation : landscape) { 
+    /* iPhone X */
+    .THIS .card-more-info-section-mobile > div{
+        border-top: none;
+    }
+    .THIS .card-more-info-section-mobile {
+        padding-left: 8rem;
+        padding-right: 8rem;
+    }
+    .THIS .card-toggle-section .toggle-box-shadow {
+        box-shadow: none;
+    }
+    .THIS .fav-icon-display-mobile .favorite-container{
+        margin-right: 0.3rem;
+    }
+    .THIS .rate-button{
+        width: 60.1%;
+    }
+}
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) {
+    /*Iphone 6,7,8*/
+    .THIS .card-more-info-section-mobile > div{
+        border-top: none;
+    }
+    .THIS .card-opened .rate-button{
+        visibility: visible;
+        width: 60.1%;
+    }
+    .THIS .rate-button{
+        width: 60.1%;
+    }
+    .THIS .card-toggle-section .toggle-box-shadow {
+        box-shadow: none;
+    }
+    .THIS.feed-back-modal .create-referral-feedback-modal {
+        width: 62%;
+        transform: translate(32%, 5%);
+        margin: 0;
+    }
+    .THIS .card-btn-section.fav-icon-display-mobile {
+        display: flex;
+    }
+    .THIS .fav-icon-display-mobile .favorite-container{
+        margin-right: 0.3rem;
+    }
+}
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : landscape) {
+    .THIS .card-more-info-section-mobile {
+        padding-left: 8rem;
+        padding-right: 8rem;
+    }
+}
+.THIS #favorite-selected-img{
+    width: 1rem;
+}  
+.THIS .favorite-container{
+    border: 1px t(RElightGreyOpacity) solid;
+    border-radius: 0.3rem;
+    background: t(REMyPlanRBG);
+    padding: 0.35rem;
+    margin-right: 1rem;
+}
+.THIS .favorite-container img{
+    width: 1.5rem;
+}
+.THIS .notes-desc{
+    border-top:1px solid t(REGreyFieldBorder);
+}
+@media only screen and (max-device-width : 896px){
+    .THIS .connect-btn-collapsed{
+        padding: 0 1.26rem 0 1.26rem;
+    }
+    .THIS .no-thanks-btn,.THIS .connect-button{
+        margin-bottom:.5rem;
+    }
+    
+    .THIS .btn-expanded .no-thanks-btn, .THIS .btn-expanded .connect-button{
+        margin-bottom:0;
+    }
+    .THIS .btn-expanded{
+        padding-right: 1.7rem;
+    }
+}
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation:landscape){
+    .THIS .no-thanks-btn,.THIS .connect-button{
+        margin-bottom:.5rem;
+    }
+    .THIS .connect-btn-collapsed{
+        padding: 0 1.26rem 0 1.26rem;
+    }
+}
+@media only screen and (min-device-width : 834px) and (max-device-width : 1194px) and (orientation:landscape){
+    .THIS .no-thanks-btn,.THIS .connect-button{
+        margin-bottom:.5rem;
+    }
+    .THIS .connect-btn-collapsed{
+        padding: 0 1.26rem 0 1.26rem;
+    }
+}
+@media only screen and (max-width : 1367px){
+    .THIS .suggest-cart{
+        font-size: .95rem!important;
+        font-weight: normal;
+        margin: 0 -1.5rem 1rem -1.5rem;
+    }
+}

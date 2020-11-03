@@ -1,0 +1,1077 @@
+/*-------------------------------------------*\
+    - Html body
+    - Container Area
+    - Header
+        - Search
+        - Mobile Side Navigation
+    - Form Fields
+        - Input Labels
+        - Input Fields
+        - ComboBox
+        - Pills
+    - Buttons
+    - Headings and Typography
+    - Cards
+    - Table
+    - Vertical Navigation
+    - Modal
+        - Modal Large
+        - Modal Small
+        - Feedback Modal
+    - Main Container
+    - Media Figure
+    - Media Queries - Responsive
+\*-------------------------------------------*/ 
+.THIS .slds-form-element.profile-dropdown {
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+.THIS .profile-dropdown .slds-select {
+    border: none;
+}
+.THIS .profile-dropdown .slds-form-element__control.slds-grow {
+    padding-left: 0;
+}
+.THIS .profile-dropdown .slds-form-element__control .slds-select {
+    font-size: 1rem;
+    font-weight: normal;
+    cursor: pointer;
+    border: 1px solid #d4d4d4;
+}
+.THIS .profile-dropdown .slds-form-element__label {
+    padding-right: 0;
+    max-width: 60px;
+}
+.THIS .body3.header-dropdown {
+    padding-top: 0;
+}
+.THIS .profile-dropdown .slds-select_container {
+    width: fit-content;
+}
+.THIS {
+    background: t(REWhite);
+    position: relative;
+    z-index: 1;
+}
+.THIS .word-spacing{
+    padding: 10px;
+} 
+/****** Container Area ******/
+.THIS .siteforceContentArea{
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    background: t(REWhite);
+} 
+.THIS .content-body{
+    position: relative;
+    top: 4rem;
+    background: t(REContentBg);
+}
+.THIS .display-none{
+    display:none;
+}
+.THIS .comm-layout-column .ui-widget:not(:last-child){
+    margin: 0;
+}
+/****** Header ******/
+.THIS.first-login-modal .slds-modal__container{
+    width:35%;
+}
+.THIS .mobile-header .header-cart-count{
+    padding: 0 .35rem 0 .35rem;
+    left: -.3rem;
+}
+.THIS .mobile-header .header-avator-icon .slds-button_icon-more{
+    border:none;
+    padding: 0 0 0 .25rem;
+}
+.THIS .mobile-header .header-avator-icon .slds-button_icon-more svg{
+    width: 1.2rem;
+    height: 1.2rem;
+}
+.THIS .header{
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    background: t(REWhite);
+}
+.THIS .main-referral-link{
+    display: flex;
+    align-items: center;
+}
+.THIS .referral-link {
+  font-size: t(RESize16);
+  width: 100px;
+  overflow: hidden;
+  white-space: nowrap;
+  display:  inline-block;
+  text-overflow: ellipsis;
+  color: t(REPrimary);
+  background-color: t(REWhite);
+}
+.THIS .mobile-header{
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width:100%;
+    z-index: 102;
+    top: 0;
+    background: t(REWhite);
+}
+.THIS .logo img{
+    height: 2.5rem;
+    cursor:pointer;
+}
+.THIS .header-dropdown {
+    cursor:pointer;
+}
+.THIS .header-dropdown .slds-select_container{
+    border-color: none;
+    font-weight: bold;
+    font-family: ProductSans-Regular;
+    font-size: t(RESize20);
+}
+.THIS .header-dropdown .Profile_label .slds-form-element__label{
+    font-size: 1.02rem;
+    color:t(REPageHeading);
+    padding-top: -15%;
+}
+.THIS .header-dropdown .slds-form-element__control{
+    padding-left: 20%;
+} 
+.THIS .body3{
+    color: t(REPageHeading);
+    padding-top: 2%;
+    font-size: t(RESize16);
+    width: 100%;
+}
+@media only screen and (max-width: 846px){
+    .THIS .logo img{
+        height: 2rem;
+    }
+}
+.THIS .logo .no-cursor-pointer{
+    cursor:default;
+}
+.THIS .header-logo img{
+    position: relative;
+}
+.THIS .header-link{
+    font-size:t(RESize16);
+    color:t(REPrimary);
+    background-color: t(REWhite);
+}
+.THIS .header-links-section .slds-button:focus{
+    box-shadow:unset;
+    color:t(REResourceBlue);
+    background-color: t(REWhite);
+}
+.THIS .header-avator-icon .slds-button_icon-more{
+    border-color:t(RENeutralGamma);
+    border-radius:100%;
+}
+.THIS .header-avator-icon .slds-button_icon-more svg{
+    position: relative;
+    top: -2px;
+}
+.THIS .header-avator-icon .slds-dropdown{
+    padding:0;
+}
+.THIS .header-avator-icon .slds-button_icon-more lightning-primitive-icon:nth-child(2){
+    display:none;
+}
+.THIS .header-avator-icon a{
+  color:t(RENeutralBeta);
+}
+.THIS .header-avator-icon li:hover a{
+  color:t(REPrimary);
+}
+.THIS .header-avator-icon .slds-dropdown{
+    width:9.375rem;
+    margin:0.3125rem 0 0 0;
+}
+.THIS .header-cart-count{
+    position: absolute;
+    top: 0.75rem;
+    left: -0.5rem;
+    color:t(REWhite);
+    background-color:t(REPrimary);
+    font-size: .5rem;
+    border-radius: 100%;
+    line-height: 1rem;
+    padding: 0 0.4rem 0 0.4rem;
+}
+.THIS .header-cart-btn{
+    position:relative;
+}
+.THIS .header-search-input svg{
+    fill:t(REPageHeading);
+    height:1rem;
+}
+.THIS .header-border{
+    border-bottom: 0.3rem solid t(REPrimary);
+}
+.THIS .header-wrapper{
+    background: t(REHeaderBg);
+    color: t(REHeaderText);
+    padding: 0.73rem 2rem;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    min-height: 3.5rem;
+}
+.THIS .siteforceContentArea .comm-layout-column{    
+    padding: 0;
+}
+/****** Header - Search ******/
+.THIS .search-dropdown {
+    cursor:pointer;
+}
+.THIS .search-dropdown-section:focus{
+    outline:none;
+}
+.THIS .dropdown-open .dropdown-categories{
+    display:block;
+}
+.THIS .category-search-container{
+    background-color:t(REWhite);
+    box-shadow: 0 0.125rem 0.0625rem 0 t(REFooterBg);
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.THIS .search-overlay.slds-backdrop_open .search-dropdown{
+    color:t(REPrimary);
+}
+.THIS .search-overlay.slds-backdrop_open .search-dropdown svg{
+    fill:t(REPrimary);
+}
+/*************************Header - Mobile Side Navigation************************/
+.THIS .mobile-sidenav{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 103; 
+    top:0;
+    left:0;
+    background-color: t(REWhite);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+.THIS .mobile-sidenav .mobile-searchby-category svg{
+    fill:t(REPageHeading);
+}
+.THIS .mobile-sidenav .slds-select_container:after{
+    bottom:0.9rem;
+}
+.THIS .mobile-sidenav .slds-form-element .slds-form-element__label{
+    font-size:1rem;
+}
+.THIS .mobile-sidenav .slds-form-element .slds-select{
+    font-size:1rem;
+}
+.THIS .mobile-sidenav .slds-input__icon_left{
+    height:1.2rem;
+    width:1.2rem;
+    fill:t(RENeutralBeta);
+}
+.THIS .mobile-sidenav-item .slds-form-element__control input{
+    border-radius:1.25rem;
+    font-size: 1rem;
+}
+.THIS .mobile-sidenav-item .slds-input__icon_right{
+    top: 29%;
+    right: 1rem;
+    padding-bottom:1.5rem;
+}
+.THIS .mobile-sidenav .mobile-sidenav-item{
+    font-size: t(RESize18);
+    color: t(REPageHeading);
+    display:block;
+    transition: 0.3s;
+    font-weight:t(REWeightNormal);
+}
+.THIS .mobile-sidenav .mobile-searchby-category{
+    display:flex;
+    justify-content:space-between;
+}
+.THIS .mobile-sidenav-back{
+    font-family:'ProductSans-Medium';
+    font-size:t(RESize18);
+    font-weight:t(REWeightBold);
+}
+.THIS .mobile-sidenav-back svg{
+    fill:t(REPrimary);
+}
+/****** Form Fields ******/
+.THIS .slds-form-element{
+    margin: 0 0 0.5rem 0;
+}
+/* Input Labels */
+.THIS .slds-form-element .slds-form-element__label,
+.THIS .slds-form-element .uiLabel{
+    color: t(REPageHeading);
+    font-size: t(RESize14);
+}
+/* Input Fields */
+.THIS .slds-form-element .slds-input,
+.THIS .slds-form-element .slds-textarea,
+.THIS .slds-form-element .slds-select{
+    font-size: t(RESizept8);
+}
+.THIS .slds-form-element .slds-input:active,
+.THIS .slds-form-element .slds-input:focus,
+.THIS .slds-form-element .slds-textarea:active,
+.THIS .slds-form-element .slds-textarea:focus,
+.THIS .slds-form-element .slds-select:active,
+.THIS .slds-form-element .slds-select:focus{
+    border-color: t(REPrimary);
+    box-shadow: none;
+}
+.THIS .slds-checkbox [type="checkbox"]:focus:checked + .slds-checkbox__label .slds-checkbox_faux{
+    border-color: t(REPrimary);
+    box-shadow: none;
+}
+.THIS .slds-form-element__control .slds-checkbox_faux::after{
+    border-color: t(REPrimary);
+}
+.THIS .slds-checkbox [type="checkbox"]:focus + .slds-checkbox__label .slds-checkbox_faux{
+    box-shadow: none;
+    border-color: t(REPrimary);
+}
+.THIS .slds-checkbox [type="checkbox"]:focus{
+    border: none;
+}
+.THIS .slds-datepicker.slds-dropdown{
+    color: t(REResourceGrey); 
+}
+.THIS .slds-dropdown-trigger.slds-dropdown-trigger_click{
+    padding: 0;
+}
+/* ComboBox*/
+.THIS .slds-combobox_container.slds-size_small{
+    width: 100%;
+}
+/* Pills */
+.THIS .slds-pill__action {
+    border: 1px solid t(REGreyFieldBorder);
+    color: t(REPillsText);
+    padding: 0.25rem calc(1rem + 0.25rem + 2px) 0.25rem 0.25rem;
+}
+.THIS .slds-pill__label {
+    text-decoration: underline;
+}
+.THIS .pillCon .slds-button_neutral:hover .slds-icon,
+.THIS .pillCon .slds-button_neutral:focus .slds-icon,
+.THIS .pillCon .slds-button_brand:hover .slds-icon,
+.THIS .pillCon .slds-button_brand:focus .slds-icon{
+    fill: t(REWhite);
+}
+.THIS .slds-pill{
+    margin: 0 .625rem .625rem 0;
+}
+/****** Buttons ******/
+.THIS .slds-button_neutral{
+    border-color: t(REPrimary);
+    color: t(REPrimary);
+}
+.THIS .slds-button_brand{
+    background: t(REPrimary);
+    color: t(REWhite);
+    border-color: t(REPrimary);
+}
+.THIS .slds-button_neutral:hover,
+.THIS .slds-button_neutral:focus,
+.THIS .slds-button_brand:hover,
+.THIS .slds-button_brand:focus{
+    background: t(RESecondaryAlpha);
+    color: t(REWhite);
+    border-color: t(RESecondaryAlpha);
+}
+
+.THIS .slds-button_brand[disabled],
+.THIS .slds-button_brand:disabled,
+.THIS .slds-button--brand[disabled],
+.THIS .slds-button--brand:disabled {
+    border: 1px solid t(REGreyFieldBorder);
+    color: t(REGrey);
+    background:t(REGreyFieldBorder);
+}
+
+/****** Headings and Typography ******/
+/* Heading Level 1 */
+.THIS .headingContainer{
+    border-bottom: 1px solid t(REGreyFieldBorder);
+    margin-bottom: 1rem;
+}
+.THIS .headingL1{
+    color: t(REPageHeading);
+    font-size: t(RESize34);
+    margin-bottom: 6px;
+    line-height: 48px;
+}
+.THIS .headingButton{
+    justify-content: space-between;
+    align-items: center;
+}
+.THIS .backButton{
+    color: t(REPrimary);
+    font-size: 12px;
+    line-height: 15px;
+    text-decoration: underline;
+}
+.THIS .backButton .slds-icon-utility-back svg{
+    fill: t(REPrimary);
+    width: 0.625rem;
+    height: 0.625rem;
+    margin: 0 5px 0 0;
+}
+
+/* Heading Level 2 - Blue color as per invision */
+.THIS .headingBlueL2{  /* Not as per SG */
+    color: t(REPrimary);
+    font-size: t(RESize18);
+    border-bottom: 1px solid t(RENeutralGamma);
+    font-weight: t(REWeight400);
+    padding-bottom: .25rem;
+    line-height: 1.25;
+    margin: 1.5rem 0;
+}
+
+/* Heading Level 2 */
+.THIS .headingL2{ 
+    color: t(REPageHeading);
+    font-size: t(RESize22);
+    font-weight: 600;
+    line-height: 24px;
+}
+/* Heading Level 3 */
+.THIS .headingL3{
+    color: t(REPageHeading);
+    font-size: t(RESize18);
+    font-weight: 600;
+    line-height: 21px;
+}
+/* Heading Level 4 */
+.THIS .headingL4{  
+    color: t(REPageHeading);
+    font-size: t(RESize16);
+    font-weight: 600;
+    line-height: 21px;
+}
+/* Public blue small heading */
+.THIS .blue-sm-heading{  /* Heading used for claim site pages */
+    font-size: t(RESize18);
+    color: t(REPrimary);
+}
+/* Sub-Heading */
+.THIS .resinfo-Subhead{   /* Heading used for CP user pages */
+    color: t(RENeutralBeta);
+    font-size: 1.17em;
+    font-family: 'ProductSans-Medium';
+    line-height: 30px;
+    border-bottom: 1px solid t(RENeutralBeta);
+}
+/* Body 1*/
+.THIS .body1{ 
+    color: t(REPageHeading);
+    font-size: t(RESize16);
+}
+/* Body 1 Grey*/
+.THIS .body1Grey{
+    color: t(RENeutralBeta);
+    font-size: t(RESize16);
+}
+/* Body 2*/
+.THIS .body2{ 
+    color: t(REPageHeading);
+    font-size: t(RESize14);
+}
+/* Caption1*/
+.THIS .caption1{ 
+    font-size: t(RESize16);
+}
+/* Caption2*/
+.THIS .caption2{ 
+    font-size: t(RESize14);
+}
+/* Caption2 - Grey Color */
+.THIS .caption2Grey{ 
+    color: t(RENeutralBeta);
+    font-size: t(RESize14);
+}
+/*Blue Body*/
+.THIS .blueBody{   /*Used for blue headings */
+    color:t(REPrimary);
+}
+/* Links */
+.THIS a{
+    color: t(REPrimary);
+}
+/* Location Link */
+.THIS a.locdetail-adress{
+    font-size: t(RESize16);
+    line-height: t(RESize20);
+    text-decoration: underline;
+}
+/*Heading with size 20px */
+.THIS .headingSize20{  /* Used in resident view */
+    font-size: t(RESize20);
+}
+/*Heading with size 24px*/
+.THIS .headingSize22{  /* Used in resident view, reference material and related resources */
+    font-size: t(RESize22);
+}
+
+/****** Cards ******/
+.THIS .resource-link:focus{
+    color:t(REResourceBlue);
+}
+.THIS .card-footer-btn-section .slds-button_neutral:hover svg,.THIS .card-footer-btn-section .slds-button_neutral:focus svg{
+    fill:t(REWhite);
+}
+.THIS .card-footer-btn-section .slds-button_neutral svg{
+    fill:t(REPrimary);
+}
+.THIS .card-footer-btn-section svg{
+    height:0.625rem;
+    width:0.625rem;
+    margin:0px 0px 0.1875rem 0.3125rem;
+}
+.THIS .card-footer-btn-section{
+    display:flex;
+    justify-content:flex-end;
+}
+.THIS .box-shadow {
+    background-color: t(REWhite);
+    border-radius: .25rem;
+    box-shadow: 0 0.125rem 0.25rem 0 t(REGreyFieldBorder);
+}
+.THIS .card-btn-section{
+    display:flex;
+    justify-content:flex-end;
+    align-items: center;
+}
+.THIS .accordion-arrow svg{
+    cursor:pointer;
+}
+.THIS .toggle-box-shadow{
+    position: relative;
+    top: -0.1rem;
+    background-color:t(REWhite);
+    border-radius: 0 0 0.25rem 0.25rem;
+    box-shadow: 0 0.125rem 0.125rem 0 t(REGreyFieldBorder);
+}
+.THIS .card-more-info-section .slds-icon_container svg{
+    height: 1.375rem;
+    width: 1.375rem;
+    fill:t(REPrimary);
+}
+.THIS .card-footer-btn-section .slds-button_brand svg{
+    fill:t(REWhite);
+}
+.THIS .more-details{
+    box-sizing: border-box;
+    border: 0.0625rem solid t(REPrimary);
+    border-radius: 0.6875rem;
+    color:t(REPrimary);
+    line-height:unset;
+}
+.THIS .more-details:hover svg{
+    fill:t(REWhite);
+}
+.THIS .more-details-arrow svg{
+    height:0.625rem;
+    width:0.625rem;
+    fill:t(REPrimary);
+}
+/****** Table ******/
+/*Generic Table Custom*/
+.THIS .generic-table-custom thead tr th{
+    background-color:t(REResourceDarkBlue);
+    color:t(REWhite);
+    font-weight:t(REWeightNormal);
+}
+.THIS .generic-table-custom tbody tr td{
+    border-right:0.5px solid t(RElightGrey);
+}
+.THIS .generic-table-custom tbody tr td:first-child{
+    border-left:0.5px solid t(RElightGrey);
+}
+.THIS .generic-table-custom tbody tr:last-child td{
+    border-bottom:0.5px solid t(RElightGrey);
+}
+.THIS .generic-table-custom svg{
+    height:t(RESize16);
+    cursor: pointer;
+}
+.THIS .generic-table-custom .slds-table--striped tbody tr:nth-of-type(even)>td{
+    background-color:t(RECmpBackground);
+}
+.THIS .generic-table-custom .slds-table .slds-cell-fixed a.slds-th__action{
+    border-right: 0.08rem solid t(REGreyFieldBorder);
+}
+.THIS .generic-table-custom .slds-dropdown-trigger_click svg.slds-button__icon{
+    fill:t(REResourceBlue);
+}
+.THIS .generic-table-custom .slds-table th{
+    border-width: 0 0.5px 0 0.5px;
+    border-style: solid;
+    border-color: t(RElightGrey);
+}
+.THIS .generic-table-custom .slds-table tr th:last-child{
+    border-left: none;
+}
+.THIS .generic-table-custom .slds-table tbody tr td:last-child {
+    border-right: 0.5px solid t(RElightGrey);
+}
+/* Lightning Datatable */
+
+.THIS lightning-primitive-header-actions {
+    display: none;
+}
+.THIS .locationsel-cont .slds-form-element{
+    position: absolute;
+    top: 0.5rem;
+    left: 16.8125rem;
+    width: 20rem;
+}
+.THIS .inviteNewTeam{
+    position: absolute;
+    top: 0.79rem;
+    right: 0;
+}
+.THIS .locationtable-cont thead th:not(:last-child) svg{
+    height: 11px;
+    vertical-align: baseline;
+}
+.THIS .locationtable-cont thead th:last-child svg{
+    fill:t(REWhite);
+}
+.THIS .locationtable-cont .slds-dropdown-trigger_click{
+    border-radius: 0.1875rem;
+    background-color: t(REWhite);
+}
+.THIS .locationsel-cont .slds-select_container .slds-select{
+    background-color:t(REWhite);
+    font-size:t(RESize13);
+    color:t(REPageHeading);
+}
+.THIS .locationsel-cont .slds-select option{
+    background-color: t(REWhite);
+}
+.THIS .locationtable-cont .slds-scrollable_x{
+    overflow-x:hidden;
+}
+.THIS .slds-select_container:before{
+    border-bottom: 0px;
+}
+.THIS .slds-select_container:after{
+    border-top: 0.4rem solid t(RENeutralBeta);
+    border-left: 0.379rem solid transparent;
+    border-right: 0.379rem solid transparent;
+    bottom: calc((1.75rem / 2) - 0.125rem);
+}
+.THIS .locationtable-cont .slds-table .slds-th__action,
+.THIS .slds-has-focus.slds-is-resizable .slds-th__action,
+.THIS .slds-has-focus.slds-is-resizable .slds-th__action:focus,
+.THIS .slds-has-focus.slds-is-resizable .slds-th__action:hover,
+.THIS .slds-has-focus.slds-is-resizable .slds-th__action:focus:hover,
+.THIS .slds-is-resizable .slds-th__action:focus,
+.THIS .slds-is-resizable .slds-th__action:focus:hover{
+    background-color:t(REResourceDarkBlue);
+    color:t(REWhite);
+    font-size:t(RESize14);
+    box-shadow: none;
+}
+.THIS .locationtable-cont .slds-table td{
+    border-right:0.5px solid t(RENeutralGamma); 
+    border-top: none;
+}
+.THIS .locationtable-cont .slds-table .slds-dropdown__item > a:hover{
+    background-color:t(REWhite);
+}
+.THIS .locationtable-cont .slds-table .slds-dropdown__item > a:active{
+    background-color:t(REWhite);
+}
+.THIS .locationtable-cont .slds-table .slds-dropdown__item > a:focus{
+    background-color:t(REWhite);
+}
+.THIS .locationtable-cont .slds-table .slds-dropdown__item > a{
+    color:t(REPageHeading);
+}
+.THIS .locationtable-cont .slds-table th{
+    border-width: 0 0.5px 0 0.5px;
+    border-style: solid;
+    border-color: t(RENeutralGamma);
+}
+.THIS .locationtable-cont .slds-table tr th:last-child{
+    border-left: none;
+}
+.THIS .locationtable-cont .slds-table tr td:last-child {
+    border-right: 0.5px solid t(RENeutralGamma); 
+}
+.THIS .table-icon{
+    display:inline-block;
+    height:1.25rem;
+    width:1.25rem;
+}
+.THIS tbody tr:nth-child(even){
+    background-color:t(RECmpBackground);
+}
+
+/****** Vertical Navigation ******/
+.THIS .slds-nav-vertical__item.slds-is-active .slds-nav-vertical__action{
+    color: t(REWhite);
+    background: t(REPrimary);
+    font-weight: normal;
+}
+.THIS .slds-nav-vertical__action:hover{
+    color: t(REWhite);
+    background: t(REPrimary);
+}
+.THIS a.slds-nav-vertical__action,
+.THIS .slds-nav-vertical__title{
+    color: t(REPageHeading);
+}
+.THIS .closebtn{
+    display: none;
+}
+.THIS .hamburger{
+    display: none;
+}
+.THIS .verticalNavOverlay{
+    box-shadow: t(RElightGrey) 1px 0 0 0;
+}
+.THIS .body-container, .THIS .verticalNavOverlay{
+    border: .05rem t(RElightGrey) solid;
+    margin: t(RESize16);
+    background:t(REWhite);
+}
+.THIS .slds-nav-vertical__section.lightningVerticalNavigationSection{
+    box-shadow: t(RESizept1) 0 0 0 t(REGreyFieldBorder);
+    min-height: 40rem; 
+}
+.THIS a.slds-nav-vertical__action {
+    padding: .5rem 0 0.5rem 1rem;
+    font-size:t(RESize16);
+}
+.THIS .slds-card{
+    min-height: 10rem;
+}
+.THIS .body-container{
+    border-radius: 0.2rem;    
+}
+.THIS .slds-nav-vertical__action:focus{
+    text-decoration: none;
+    color: t(REWhite); 
+    background: t(REPrimary);
+}
+.THIS .lightningVerticalNavigation .slds-nav-vertical__item{
+    border-bottom: 1px solid t(REGreyFieldBorder); 
+}
+
+/****** Modal ******/
+/******Login Modal****/
+.THIS .login-btn{
+    color: t(REPrimary);
+    border:1px solid t(REPrimary);
+    border-radius: .25rem;
+    line-height: 1.874rem;
+    display: inline-block;
+}
+.THIS .login-btn:hover{
+    text-decoration:none;
+    color: t(REWhite);
+    border:1px solid t(REPrimary);
+    background-color:t(REPrimary);
+}
+/* Modal Large */
+.THIS .modal-lg-headingcontainer{
+    border-bottom: t(RESizept1) solid t(RENeutralGamma);
+    margin-bottom: 1rem;
+}
+.THIS .modal-lg-heading{
+    font-size: 1.5em;
+    font-family:'ProductSans-Medium';
+    line-height: 2rem;
+}
+.THIS .modal-lg-footer-button{
+    display: flex;
+    justify-content: flex-end;
+}
+.THIS .modal-close svg{
+    height:1rem;
+    cursor:pointer;
+}
+.THIS .modal-close{
+    border:none
+}
+.THIS .modal-lg-heading-button{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* Modal Small */
+.THIS .modal-sm-button{
+    display: flex;
+    justify-content: center;
+}
+.THIS .modal-sm-text{
+    font-size: t(RESize16);
+    margin-bottom: t(RESize20);
+}
+.THIS .modal-sm-heading{
+    color: t(REPageHeading);        
+    font-size: t(RESize22); 
+    font-weight: t(REWeightBold);   
+    line-height: 1.8125rem;
+}
+.THIS .slds-modal__content{
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.1);
+    border: 1px solid t(REGreyFieldBorder);
+    border-radius: 4px;
+}
+.THIS .slds-backdrop{
+    background: rgba(255, 255, 255, 0.8);
+}
+/* Feedback Modal (modal buttons with icon) */
+.THIS .feedback-btn-section .slds-button_neutral{
+    color:t(RENeutralBeta);
+}
+.THIS .feedback-btn-section .slds-button_brand,.THIS .feedback-btn-section .slds-button_brand .slds-button_icon-bare{
+    color:t(REWhite);
+}
+.THIS .feedback-btn-section div > .slds-button{
+    width:100%;
+}
+.THIS .feedback-btn-section div > .slds-button:hover,.THIS .feedback-btn-section div > .slds-button:hover .slds-button_icon-bare{
+    color:t(REWhite);
+}
+
+/****** Media Figure ******/
+/* Used where there is one icon and two row text next to it */
+.THIS .details-mediaFigure .resMediaName{
+    color: t(REBlack);
+    font-size: t(RESize14);
+}
+.THIS .details-mediaFigure .slds-media{
+    border-bottom: 1px solid t(REMediaBorder);
+}
+.THIS .details-mediaFigure .availableLocation .slds-media.slds-listbox__option{
+    border: 0;
+}
+.THIS .details-mediaFigure .availableLocation .slds-media__figure .slds-icon{
+    fill: t(REPrimary); 
+}
+.THIS .details-mediaFigure .availableLocation .slds-media__figure{
+    margin: 0 0.5rem 0 0;
+}
+.THIS .details-mediaFigure .slds-icon{
+    color: t(RENeutralBeta);
+}
+.THIS .slds-listbox__option-icon {
+    margin: .6rem;
+}
+.THIS .resMediaContent{
+    font-size: t(RESize14);
+    color: t(RENeutralBeta);
+}
+/*ADA*/
+.THIS select[disabled] > option {
+    color: t(REBlack);
+    background-color: t(REWhite);
+}
+/* Media Queries Portrait and Landscape */
+@media all and (min-width: 1024px){
+    .THIS .content-body{
+        min-height:calc(100vh - 9rem);
+    }
+}
+@media all and (max-width : 1024px) { 
+    .THIS .login-btn{
+        height:2rem;
+    }
+    .THIS.first-login-modal .slds-modal__container{
+        width:85%;
+    }
+    .THIS .slds-nav-vertical__title.slds-text-title_caps{
+        font-size: 0.875rem;
+        padding: .8rem 0 .5rem 0.5rem;
+    }    
+    .THIS .header-buttonCon{
+        margin: auto;
+        padding: 1rem 0;
+    }
+    .THIS .locationsel-cont .slds-form-element,
+    .THIS .inviteNewTeam{   
+        position: inherit;  
+        width: 100%;
+        margin: 0 0 1rem 0;
+    }
+    .THIS .yes-btn-section{
+        padding:0.3125rem 0.3125rem 0 0;
+    }
+    .THIS .modal-lg-heading{
+        font-size: 1.3em; 
+    } 
+}
+@media all and (max-width : 768px) {
+    .THIS .header-logo .logo .slds-button{
+        padding: 0 .4rem;
+    }
+    .THIS .closebtn{
+        display: block;
+    }
+    .THIS .hamburger{
+        display: block;
+    }
+    .THIS .verticalNavOverlay {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: t(REWhite);
+        overflow-x: hidden;
+        transition: 0.5s;
+    }
+    .THIS .nav-overlay-content {
+        position: relative;
+        top: 10%;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .THIS .verticalNavOverlay a {
+        padding: 8px;
+        text-decoration: none;
+        display: block;
+        transition: 0.3s;
+    }
+    
+    .THIS .verticalNavOverlay a:hover, .THIS .verticalNavOverlay a:focus {
+        text-decoration: underline;
+    }
+    
+    .THIS .verticalNavOverlay .closebtn {
+        position: absolute;
+        top: 0;
+        right: 1rem;
+    }
+    .THIS .toggleopen{
+        width: 50%;
+    }
+    .THIS .toggleclose{
+        width: 0;
+    }
+    .THIS .slds-nav-vertical__section.lightningVerticalNavigationSection{
+        padding: 0;
+    }
+    .THIS .lightningVerticalNavigationSection div[role=list]{
+        width: 100%;
+        margin: 0;
+    }
+    .THIS .lightningVerticalNavigation .slds-nav-vertical__item{
+        width: 100%;        
+    }
+    .THIS .slds-nav-vertical__title.slds-text-title_caps{
+        width: 100%;
+    }
+    .THIS .cRE_LeftHandTab .verticalNavOverlay{
+        border: 0;
+        box-shadow: none;
+        margin: 0;
+        z-index: 9999;
+    }
+    
+    /** Table Responsive**/
+    .THIS .locationtable-cont .slds-scrollable_x{
+        overflow-x:auto;
+    } 
+    .THIS .pagination-title{
+        font-size:0.75rem;  
+    } 
+    .THIS .locationsel-cont{
+        margin:0px;
+    }
+    .THIS .pagination-buttons{
+        margin-top:5px;
+    }
+    .THIS .datatable-pagination{
+        justify-content: center;
+    }
+    
+    /* Input Field width */
+    .THIS .fieldWidth{
+        width: 100%
+    }
+    .THIS .rowSize1.fieldWidth, .THIS .rowSize2.fieldWidth{
+        padding: 0;
+    }
+        /*Modal*/
+    .THIS .modal-lg-footer-button .slds-button{
+        margin-bottom:0.3125rem;
+    }
+    .THIS .modal-lg-footer-button{
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+@media screen and (min-height: 450px) {
+    .THIS .verticalNavOverlay .closebtn {
+        font-size: 20px;
+        top: 0;
+        right: 1rem;
+    }
+}
+
+@media only screen and (min-aspect-ratio: 4/3) and (min-width: 48em), only screen and (min-width: 64.0625em){
+    .THIS .selfServiceUserProfileMenu .uiMenuList.visible {
+        left: 22rem;
+    }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation:portrait) {
+  /* For Ipad portrait layouts only */
+    .THIS .header-wrapper .header-logo{
+            margin: 0 0 1rem 0;
+    }
+    .THIS .header-wrapper .searchBox {
+        padding-left: 0;
+    }
+    .THIS .content-body {
+        top: 4rem;
+    }
+}
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : landscape) {
+    /* For Ihone6 landscape layouts only */
+    .THIS .header-wrapper .header-logo{
+        margin: 0 0 1rem 0;
+    }
+    .THIS .header-wrapper .searchBox {
+        padding-left: 0;
+    }
+    .THIS .content-body {
+        top: 3.5rem;
+    }
+}
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : portrait) {
+    /* For Ihone6 portrait layouts only */
+    .THIS .header-wrapper > div {
+        margin-bottom: 1rem;
+    }
+    .THIS .header-wrapper .searchBox {
+        padding-left: 0;
+    }
+    .THIS .content-body {
+        top: 3.5rem;
+    }
+}
+.THIS ~ div .toastContainer .slds-theme--info{
+    background-color: t(REPrimary);
+}

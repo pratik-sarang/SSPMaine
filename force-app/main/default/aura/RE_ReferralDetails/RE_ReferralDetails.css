@@ -1,0 +1,40 @@
+.THIS.fdbk-modal .slds-modal__container{
+    width:25%;
+    height: auto;
+}
+.THIS.opted-out-modal .slds-modal__container{
+    width:35%;
+}
+.THIS .fdbk-notgood-btn{
+    background-color:t(REBtnDisabled);
+    border-color:t(REBtnDisabled);
+}
+.THIS .fdbk-notgood-btn:hover{
+    background-color:t(REBtnDisabled);
+    border-color:t(REBtnDisabled); 
+}
+.THIS .referal-no{
+    color:t(RENeutralGamma);
+    font-size:t(RESize34);
+}
+.THIS .slds-media{
+	cursor: default; 
+}
+.THIS .nopointer-events{
+    pointer-events: none;
+}
+.THIS .resName{
+    font-size:0.875rem;
+}
+@media all and (max-width: 768px){
+    .THIS .assignedto-dropdown{
+        padding:0 .75rem 0 0;
+    }  
+}
+.THIS .slds-assistive-text{
+    margin: -0.063em!important;
+    border: 0.000em!important;
+    padding: 0.000em!important;
+    width: 0.063em!important;
+    height: 0.063em!important;
+}

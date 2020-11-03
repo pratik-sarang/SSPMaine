@@ -1,0 +1,173 @@
+.THIS .checksBorder{
+    border-bottom: 0.0625rem solid t(REMediaBorder);
+}
+.THIS .slds-checkbox_toggle [type=checkbox]:checked+.slds-checkbox_faux_container .slds-checkbox_faux{
+    border-color: t(REPrimary);
+    background-color: t(REPrimary);
+}
+.THIS .toggle-button .slds-form-element .slds-checkbox_toggle .slds-checkbox_faux_container .slds-checkbox_on,
+.THIS .toggle-button .slds-form-element .slds-checkbox_toggle .slds-checkbox_faux_container .slds-checkbox_off{
+     display:none;
+}
+.THIS .locationSection .slds-combobox.slds-dropdown-trigger.slds-dropdown-trigger_click.slds-is-open .slds-icon-text-default{
+    fill: t(REPrimary);
+}
+.THIS .eligibility-checks .slds-form-element{
+    padding-left:0;
+}
+.THIS .slds-dropdown-trigger.slds-is-open .slds-combobox__form-element .slds-icon {
+    transform: rotate(180deg);
+}
+.THIS button.save-btn:disabled{
+    display:none;
+}
+.THIS .poc-section .slds-form-element__help{
+    height:0;
+    margin-top:0;
+}
+.THIS .slds-select[disabled],.THIS .slds-textarea[disabled],.THIS .slds-input[disabled],.THIS [role=combobox] input[readonly][disabled]{
+    padding-left: 0;
+    border-color: transparent;
+    background-color: transparent;
+    box-shadow:none;
+}
+.THIS .slds-textarea[disabled]{
+    resize: none;
+}
+.THIS .select-disabled .slds-select_container:after{
+    border:none;
+}
+.THIS [role=combobox] input[readonly][disabled] + .slds-icon_container{
+    display:none;
+}
+.THIS .locationTitle{
+    background:t(REPrimary);
+    color:t(REWhite);
+    border-radius: 9.5px;
+    text-align: center;
+}
+.THIS .locationCardEdit {
+    font-size: .813rem;
+}
+@media only screen and (max-width: 64.0625em){
+    .THIS .eligibility-checks .fieldWidth.margin-right{
+        padding-right:1.6rem;
+    }
+    .THIS .fieldWidth.locationSection{
+        width:95%;
+    }
+    .THIS .refdetails-save-btn{
+        margin-bottom: 1rem;
+    }
+}
+.THIS .body1 p{
+    overflow-wrap: break-word;
+}
+.THIS.resorceInfo-wrapper .slds-media {
+    border-bottom: none;
+}
+
+.THIS .textArea {
+    padding-left: 0;
+}
+
+.THIS .requiredField {
+    color: t(RESemanticRed);
+}
+.THIS .alignItems {
+    align-items: flex-start;
+}
+
+.THIS .locationDropdown {
+    width: 100%;
+}
+.THIS .locationDropdown .slds-form-element {
+    padding-left: 0;
+    margin: 0;
+}
+.THIS .fieldAvailableLocation .slds-required {
+    margin: 0;
+}
+.THIS .fieldTaxonomy{
+    max-width: 100%;
+}
+.THIS .fieldTaxonomy .slds-form-element {
+    margin: 0;
+}
+.THIS .fieldWebsite .resMediaContent {
+    word-break: break-all;
+}
+.THIS .helpfulInfo .helpfulInfoField {
+    width: 24%;
+}
+.THIS .fieldTaxonomy .slds-listbox__option-text_entity{
+    white-space: normal;
+}
+.THIS .fieldTaxonomy .slds-form-element__label::before {
+    content: "*";
+    color: t(RESemanticRed);
+}
+.THIS .heading-style{
+    max-width: 80%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.THIS .slds-card > .slds-card__header{
+    border-radius: 0.3rem;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.1);
+    border: 1px solid t(REGreyFieldBorder);
+    min-height: 150px;
+}
+.THIS .slds-card{
+    border:none;
+    background:none;
+}
+.THIS .slds-media .resMediaName{
+    cursor:auto;
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation:landscape) {
+  /* For Ipad landscape layouts only */
+    .THIS .fieldWidth.locationSection{
+        width:50%;
+    }
+    .THIS .helpfulInfo .slds-float_right {
+        float: unset;
+    }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation:portrait) {
+  /* For Ipad portrait layouts only */
+    .THIS .fieldWidth.locationSection{
+        width:100%;
+    }
+}
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : portrait) {
+    /* For Iphone portrait layouts only */
+    .THIS .helpfulInfo .slds-float_right {
+        float: unset;
+    }
+    .THIS .helpfulInfo .helpfulInfoField {
+        width: 100%;
+    }
+}
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : landscape) {
+    /* For Iphone landscape layouts only */
+    .THIS .fieldWidth.locationSection{
+        width:100%;
+    }
+}
+.THIS .toastMessage.forceActionsText{
+	white-space : pre-line !important;
+}
+@media all and (max-width : 896px) {
+    .THIS .header-btn-section{
+        margin-bottom:.25rem;
+    }
+    .THIS .locdetails-first-col {
+    	padding-right: 0;
+	} 
+   .THIS .locdetails-second-col {
+    	padding-left: 0;
+        padding-top: 0;
+	} 
+}

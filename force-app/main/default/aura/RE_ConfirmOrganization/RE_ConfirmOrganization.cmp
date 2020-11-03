@@ -1,0 +1,55 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" >
+    <aura:attribute name="isRegistered" type="Boolean" />
+    <aura:attribute name="options" type="List"/>
+    <aura:attribute name="value" type="String" default="Yes"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <div class="slds-grid slds-wrap">
+        <div class="slds-large-size_5-of-12 slds-medium-size_1-of-1 slds-small-size_1-of-1 slds-m-top_xx-large slds-p-horizontal_large">
+            <div class="slds-grid slds-wrap slds-align_absolute-center slds-m-vertical_medium">
+                <p class="slds-size_1-of-1 blue-sm-heading">
+                    {!$Label.c.add_Organization}
+                </p>
+                <h1 class="slds-size_1-of-1 headingL1">
+                    {!$Label.c.Confirm_211_Status}
+                </h1>
+            </div>
+            <div class="slds-size_1-of-1 radioGroups slds-p-left_large">
+                <lightning:helptext class="radioHelpText" content="{!$Label.c.RE_ConfirmStatusTooltip}"/>
+                <lightning:radioGroup 
+                                      class="body1"
+                                      options="{! v.options }"
+                                      value="{! v.value }"
+                                      type="radio"
+                                      onchange="{!c.handleChange}"
+                                      />
+            </div>
+            
+            <aura:if isTrue="{!v.isRegistered}">
+                <div class="slds-large-size_1-of-1 slds-small-size_1-of-1 slds-m-vertical_xx-large">
+                    <lightning:button class="slds-p-top_xx-small slds-p-bottom_xx-small slds-p-left_medium slds-p-right_medium slds-m-right_small" label="{!$Label.c.Previous_Screen}" title="{!$Label.c.Previous_Screen}" onclick="{! c.handlePrevious }" />
+                    <lightning:button class="slds-p-top_xx-small slds-p-bottom_xx-small slds-p-left_x-large slds-p-right_x-large" variant="brand" label="{!$Label.c.Continue}" title="{!$Label.c.Continue}" onclick="{! c.handleContinue }" />
+                </div>
+                <aura:set attribute="else">
+                    <div class="slds-grid slds-wrap slds-size_1-of-1 slds-m-top_xx-large confirmHeadCon">
+                        
+                        <p class= "headingL2 slds-size_1-of-1">{!$Label.c.RE_communityMustBeListed}</p>
+                        <p class= "body1 slds-m-top_x-large slds-size_1-of-1">{!$Label.c.RE_stepsToFollow}</p>
+                        <div class="slds-p-horizontal_large body1">
+                            <p class="slds-m-top_medium">{!$Label.c.RE_CentralKY} <lightning:formattedUrl value="{!$Label.c.RE_CentralKYURL}" tooltip="!$Label.c.RE_CentralKYHT}" target="_blank" /></p>
+                            <p>{!$Label.c.RE_Eastern_KY} <lightning:formattedUrl value="{!$Label.c.RE_Eastern_KYURL}" tooltip="!$Label.c.RE_Eastern_KYHT}" target="_blank" /></p>
+                            <p>{!$Label.c.RE_OtherKY} <lightning:formattedUrl value="{!$Label.c.RE_OtherKYURL}" tooltip="!$Label.c.RE_OtherKYHT}" target="_blank" /></p>
+                        </div>
+                        <p class="headingL3 slds-size_1-of-1 slds-m-top_large">{!$Label.c.RE_proceedWithCreatingAccount}</p>
+                        <div class="slds-m-top_large">
+                            <lightning:button class="slds-float_left slds-p-top_xx-small slds-p-bottom_xx-small slds-p-left_medium slds-p-right_medium slds-m-bottom_xx-large" label="{!$Label.c.RE_previousScreen}" title="{!$Label.c.RE_previousScreen}" onclick="{! c.handlePrevious }" />
+                        </div>
+                    </div>
+                </aura:set>
+            </aura:if>
+        </div>
+        <div class="slds-large-size_7-of-12 slds-medium-size_1-of-1 slds-small-size_1-of-1">
+            <img src="{!$Resource.confirm211status}" class="confirmorg-image" alt="{!$Label.c.Confirm_211_Status}"/>
+        </div>
+    </div>
+</aura:component>

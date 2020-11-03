@@ -1,0 +1,138 @@
+<!--********************************************************************************************************************
+ * NAME         :  RE_UtilityServerCallerCmp
+ * DESCRIPTION  :  Service Component for general functions
+ *
+ * @AUTHOR Anuj Vashishtha
+ * @DATE 06/24/2019
+ *
+ * MODIFICATION LOG:
+ * DEVELOPER                   DATE                        DESCRIPTION
+ * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 										
+  
+************************************************************************************************************************ -->
+<aura:component implements="forceCommunity:availableForAllPageTypes">
+    <!-- [Wesly 24-Feb-2017] Show error messages as banner-->
+    <aura:attribute name="REErrorMessage" type="String"/>
+    <aura:attribute name="REShowMessage" type="Boolean" default="false" access="Public"/>
+    <aura:attribute name="REMessageType" type="String" default="error" access="Public"/>
+    <!-- <aura:attribute name="showExitReportchangePopover" type="Boolean" default="false" access="Public"/>
+    <aura:attribute name="surveyPopup" type="Boolean" default="false"/>
+    <aura:attribute name="messageArr" type="String[]" description="show array of error messages"/>
+    <c:ISD_Notification message="{!v.REErrorMessage}" messageArr="{!v.messageArr}" 
+                        type="{!v.ISDMessageType}" showMessage="{!v.ISDShowMessage}"/> -->
+    
+    <!-- Show spinner-->
+    <aura:attribute name="isSpinnerActive" type="Boolean" default="false" access="Public" />
+    <aura:if isTrue="{!v.isSpinnerActive}">
+        <div class="spinnercls">
+           <c:RE_Spinner />
+        </div>  
+    </aura:if>
+    
+    <!-- [Srivatsan 01-Feb-2017] Function for making server calls from a central place. -->
+    <aura:method name="callServer" action="{!c.callServer}" access="PUBLIC">
+        <aura:attribute name="cmp" type="Object" />
+        <aura:attribute name="method" type="String" />
+        <aura:attribute name="callback" type="Function" />
+        <aura:attribute name="params" type="Object" /><!-- TODO: Confirm with Vatsan -->
+        <aura:attribute name="cacheable" type="Boolean" />
+        <aura:attribute name="background" type="Boolean" />        
+    </aura:method>
+    
+    <!-- [Srivatsan 17-Feb-2017] Function to navigate to a new page -->
+    <aura:method name="navigateToPage" action="{!c.navigateToPage}" access="PUBLIC">
+        <aura:attribute name="page" type="String" />
+        <aura:attribute name="redirect" type="Boolean" />
+        <aura:attribute name="newTab" type="Boolean" />
+        <aura:attribute name="useEvent" type="Boolean" />        
+    </aura:method>  
+    
+    <!-- [Wesly 15-Feb-2017] Function to display message in browser console -->
+    <aura:method name="consoleLog" action="{!c.consoleLog}" access="PUBLIC">
+        <aura:attribute name="message" type="String" />
+        <aura:attribute name="error" type="Boolean" />
+    </aura:method>
+    
+    <!-- [Anuj 25-June-2019] Function to display message in browser console -->
+    <aura:method name="showToast" action="{!c.showToast}" access="PUBLIC">
+        <aura:attribute name="title" type="String" />
+        <aura:attribute name="type" type="String" />
+        <aura:attribute name="message" type="String" />
+    </aura:method>
+	
+	<!-- [Anuj 03-July-2019] Function to display message in browser console -->
+    <aura:method name="errorLogger" action="{!c.errorLogger}" access="PUBLIC">
+        <aura:attribute name="source" type="String" />
+        <aura:attribute name="cmp" type="Object" />
+        <aura:attribute name="method" type="String" />
+        <aura:attribute name="method" type="String" />
+        <aura:attribute name="lResponse" type="String" />
+    </aura:method>
+	
+        
+    <!--[WeslyJ 15-Feb-2017] Function to create single/multiple components-->
+    <aura:method name="generateComponent" action="{!c.generateComponent}" access="PUBLIC">
+        <aura:attribute name="containerComponent" type="Object" />
+        <aura:attribute name="placeholder" type="String" />
+        <aura:attribute name="noOfComponents" type="String" />
+        <aura:attribute name="componentType" type="String" />
+        <aura:attribute name="componentAttributes" type="Object" />
+        <aura:attribute name="componentArray" type="Object[]" />   
+        <aura:attribute name="callback" type="Function" />
+    </aura:method>
+
+    <!--[Chirag - 22nd Aug] - Wrapper for getting localStorage-->
+    <aura:method name="localStorageGetItem" action="{!c.localStorageGetItem}" access="PUBLIC">
+        <aura:attribute name="key" type="String" />
+    </aura:method>
+    
+    <!--[Chirag - 22nd Aug] - Wrapper for setting localStorage-->
+    <aura:method name="localStorageSetItem" action="{!c.localStorageSetItem}" access="PUBLIC">
+        <aura:attribute name="key" type="String" />
+        <aura:attribute name="value" type="String" />
+    </aura:method>
+    
+    <!--[Chirag - 29th Aug] - Wrapper for removing item from localStorage-->
+    <aura:method name="localStorageRemoveItem" action="{!c.localStorageRemoveItem}" access="PUBLIC">
+        <aura:attribute name="key" type="String" />
+    </aura:method>
+    
+    <!--[Chirag - 22nd Aug] - Wrapper for clearing localStorage-->
+    <aura:method name="localStorageClear" action="{!c.localStorageClear}" access="PUBLIC" />
+    
+    <!--[Chirag - 22nd Aug] - Wrapper for clearing sessionStorage-->
+    <aura:method name="sessionStorageClear" action="{!c.sessionStorageClear}" access="PUBLIC" />
+    
+    <!--[Chirag - 22nd Aug] - Wrapper for getting sessionStorage-->
+    <aura:method name="sessionStorageGetItem" action="{!c.sessionStorageGetItem}" access="PUBLIC">
+        <aura:attribute name="key" type="String" />
+    </aura:method>
+    
+    <!--[Chirag - 22nd Aug] - Wrapper for setting sessionStorage-->
+    <aura:method name="sessionStorageSetItem" action="{!c.sessionStorageSetItem}" access="PUBLIC">
+        <aura:attribute name="key" type="String" />
+        <aura:attribute name="value" type="String" />
+    </aura:method>
+    
+    <!--[Chirag - 29th Aug] - Wrapper for removing item from sessionStorage-->
+    <aura:method name="sessionStorageRemoveItem" action="{!c.sessionStorageRemoveItem}" access="PUBLIC">
+        <aura:attribute name="key" type="String" />
+    </aura:method>
+    
+    <!--[Chirag - 22nd Aug] - Wrapper for getting cookie value-->
+    <aura:method name="getCookie" action="{!c.getCookie}" access="PUBLIC">
+        <aura:attribute name="key" type="String" />
+    </aura:method>
+    
+    <!--[Chirag - 22nd Aug] - Wrapper for setting cookie value-->
+    <aura:method name="setCookie" action="{!c.setCookie}" access="PUBLIC">
+        <aura:attribute name="key" type="String" />
+        <aura:attribute name="value" type="String" />
+    </aura:method>
+    
+    <!--[Chirag - 22nd Aug] - Clearing all custom cookies made by our application-->
+    <aura:method name="clearCookie" action="{!c.clearCookie}" access="PUBLIC" />
+    
+    <!-- [Devashree 17-Oct-2018] RD: for fixing late destroy -->
+    <aura:method name="commonDestroyUtils" action="{!c.commonDestroyUtils}" access="PUBLIC" />
+</aura:component>

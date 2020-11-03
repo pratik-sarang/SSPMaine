@@ -1,0 +1,17 @@
+<aura:component controller="RE_GetReportsCtrl" implements="forceCommunity:availableForAllPageTypes" access="global" >
+	<aura:handler name="init" value="{!this}" action="{! c.doInit }"/>
+    <aura:attribute name="listReport" type="List" description= "This attribute is used to store the report data"/>
+    <aura:attribute name="isSpinnerActive" type="Boolean" description= "This attribute is used to store the state of the spinner"/>
+    <c:RE_UtilityServerCallerCmp aura:id="bSuper" isSpinnerActive="{!v.isSpinnerActive}"/> 
+    <article>
+        <div class="headingContainer">
+            <h1 class="headingL1">{!$Label.c.Reports}</h1>
+        </div>
+    </article>
+    <lightning:select name="select1" aura:id="selectReport" label="{!$Label.c.Select_Report}" required="false" onchange="{!c.onSelectReport}" class="report">
+        <option value="">{!$Label.c.ChooseOne}</option>
+         <aura:iteration items="{!v.listReport}" var="report">
+             <option value="{!report.Id}">{!report.Name}</option>
+         </aura:iteration>
+    </lightning:select>
+</aura:component>

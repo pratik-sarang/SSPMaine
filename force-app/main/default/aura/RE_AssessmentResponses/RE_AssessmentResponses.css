@@ -1,0 +1,85 @@
+/*.THIS.user-details-section .date-taken{
+    width: 70%; 
+}*/
+.THIS.responses-section .display-flex {
+    display: flex;
+    /*align-items: flex-start;*/
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.THIS.responses-section .response-number {
+    font-size:1rem;
+}
+/*.THIS.responses-section .response-number {
+    border-radius: 50%;
+    width: 1.875rem;
+    height: 1.875rem;
+    padding: 0.5rem;
+    border: 0.25rem solid t(REGreyFieldBorder);
+    color: t(RENeutralBeta);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}*/
+.THIS.responses-section .question {
+    color: t(REBlack);
+    font-size: 1rem;
+    /*font-weight: bold;*/
+     margin-left: .3rem;
+    display:inline-block;
+}
+.THIS.responses-section .response {
+    color: t(RESliderLabel);
+    font-size: 1rem;
+    display:block;
+    margin-left: 1rem;
+}
+/*@media screen and (min-device-width: 1024px) {
+    .THIS.responses-section .question {
+        width: 70%
+    }
+}*/
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+  /* For Ipad landscape layouts only */
+    .THIS.user-details-section > div{
+        width: 100%;
+    }
+}
+@media screen and (max-device-width: 768px) {
+    .THIS.user-details-section .date-taken{
+        width: 100%;
+    }
+    .THIS.user-details-section .fieldWidth {
+        padding: 0;
+    }
+    .THIS.responses-section .question {
+        width: 75%;
+    }
+    .THIS.responses-section .display-flex {
+        align-items: flex-start;
+    }
+}
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) {
+    .THIS.user-details-section .date-taken{
+        width: 100%;
+    }
+    .THIS.user-details-section .fieldWidth {
+        padding: 0;
+    }
+    .THIS.headingContainer .headingL1{
+        font-size: 1.3rem;
+    }
+    .THIS.responses-section .question {
+        width: 80%;
+    }
+    .THIS.responses-section .display-flex {
+        align-items: flex-start;
+    }
+    .THIS.responses-section .question {
+        font-size: 1rem;
+    }
+    .THIS.responses-section .response {
+        font-size: 1rem;
+        /*margin-left: 2.625rem;*/
+    }
+}

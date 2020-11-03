@@ -1,0 +1,29 @@
+@isTest
+public class SSP_HearingSummary_HttpMockTest implements HttpCalloutMock{
+    public string testSenario;
+        public SSP_HearingSummary_HttpMockTest(String testSenario) {
+            this.testSenario=testSenario;
+            
+        }
+    public HTTPResponse respond(HTTPRequest req) {
+        // Create a test response
+        HttpResponse res = new HttpResponse();
+        res.setHeader('Content-Type', 'application/json');
+        String body='';
+        System.debug('@CS testSenario '+testSenario);
+        if(testSenario=='Positive'){
+            System.debug('@CS testSenario positive');
+            //body='{"waiverDetailsPayload":null,"viewName":"HearingsSummaryInformation","taxForms1095AInfoPayload":null,"role":"Citizen_Individual","RFIInformationPayload":null,"racSelectionWrapper":null,"primaryApplicationIndividualId":null,"payload":null,"PastApplicationsPayload":null,"nonCitizenSearchExportPayload":null,"nonCitizenSearchCasePayload":null,"nonCitizenClientInfoPayload":null,"mode":"","miscelleanousParameters":null,"medicaidMCOInformation":null,"KIHIPPPreferredPaymentPayload":null,"KHIPPPaymentSummaryPayload":null,"individualIds":"","hearingsSummaryInfoPayload":{"PreferredDetails":[{"ZipCode5":"40602","ZipCode4":"4312","StateCode":"KY","PrimaryPhoneTypeCode":null,"PrimaryPhoneNumber":null,"PrimaryPhoneExtension":null,"MiddleInitial":null,"LastName":"UMNBVC","GenderCode":"M","FirstName":"KKSMSAM","Email":null,"CountyCode":"100","City":"KALISPELL","AddressLine2":"MAIN STREET","AddressLine1":"GLACIER PINES RV"}],"HearingSummary":[{"RequestId":"1000872","IndividualId":"920056103","HearingType":null,"HearingStatus":"HO","HearingReason":"INCR","HearingProgram":"MEDCD","HearingId":"FC1000872","HearingDate":"2020-01-03","CaseNumber":"100373492"},{"RequestId":"1000892","IndividualId":"920056103","HearingType":null,"HearingStatus":"HO","HearingReason":"DNMER","HearingProgram":"KC","HearingId":"FC1000892","HearingDate":"2020-02-05","CaseNumber":"100373492"},{"RequestId":"1000972","IndividualId":"920056103","HearingType":null,"HearingStatus":"HO","HearingReason":"RESR","HearingProgram":"KTAP","HearingId":"FC1000972","HearingDate":"2020-04-13","CaseNumber":"100373492"},{"RequestId":"1000973","IndividualId":"920056103","HearingType":null,"HearingStatus":"FOISS","HearingReason":"OTH","HearingProgram":"KC","HearingId":"FC1000973","HearingDate":"2020-04-13","CaseNumber":"100373492"},{"RequestId":"1000981","IndividualId":"920056103","HearingType":null,"HearingStatus":"HO","HearingReason":"INCR","HearingProgram":"KTAP","HearingId":"FC1000981","HearingDate":"2020-04-30","CaseNumber":"100373492"}]},"EligibilitySummaryPayload":null,"DisqualificationPayload":null,"dashboardInformation":null,"dashboardCaseInfo":null,"claimsOverviewPayload":null,"caseNumber":0,"benefitInformations":null,"assisterAuthRepDetailsPayload":null,"applicationID":"","ACKRESPONSE":{"AckResponseDescription":null,"AckResponseCode":null}}';
+            body='{"AckResponse":null,"Payload":{"PreferredDetails":[{"ZipCode5":"40602","ZipCode4":"4312","PrimaryPhoneTypeCode":null,"PrimaryPhoneNumber":null,"PrimaryPhoneExtension":null,"GenderCode":"M","Email":null,"CountyCode":"100","AddressLine2":"MAIN STREET","AddressLine1":"GLACIER PINES RV","StateCode":"KY","City":"KALISPELL              ","MiddleInitial":null,"LastName":"UMNBVC","FirstName":"KKSMSAM"}],"HearingSummary":[{"IndividualId":"920056103","HearingStatus":"HO","HearingDate":"2020-01-03","HearingProgram":"MEDCD","HearingType":null,"HearingReason":"INCR","RequestId":"1000872","HearingId":"FC1000872","CaseNumber":"100067144"},{"IndividualId":"920056103","HearingStatus":"HO","HearingDate":"2020-02-05","HearingProgram":"KC","HearingType":null,"HearingReason":"DNMER","RequestId":"1000892","HearingId":"FC1000892","CaseNumber":"100067144"},{"IndividualId":"920056103","HearingStatus":"HO","HearingDate":"2020-04-13","HearingProgram":"KTAP","HearingType":null,"HearingReason":"RESR","RequestId":"1000972","HearingId":"FC1000972","CaseNumber":"100067144"},{"IndividualId":"920056103","HearingStatus":"FOISS","HearingDate":"2020-04-13","HearingProgram":"KC","HearingType":null,"HearingReason":"OTH","RequestId":"1000973","HearingId":"FC1000973","CaseNumber":"100067144"},{"IndividualId":"920056103","HearingStatus":"HO","HearingDate":"2020-04-30","HearingProgram":"KTAP","HearingType":null,"HearingReason":"INCR","RequestId":"1000981","HearingId":"FC1000981","CaseNumber":"100067144"}]},"role":"Citizen_Individual","miscelleanousParameter":"","applicationID":"","mode":"","programCode":"","individualIds":"","primaryApplicantIndividualId":"920056103","caseNumber":"0","viewName":"HearingsSummaryInformation"}';
+        }else if(testSenario=='Negative'){
+            System.debug('@CS testSenario '+testSenario);
+            body='{"waiverDetailsPayload":null,"viewName":HearingsSummaryInformation,"taxForms1095AInfoPayload":null,"role":Citizen_Individual,"RFIInformationPayload":null,"racSelectionWrapper":null,"primaryApplicationIndividualId":null,"payload":null,"PastApplicationsPayload":null,"nonCitizenSearchExportPayload":null,"nonCitizenSearchCasePayload":null,"nonCitizenClientInfoPayload":null,"mode":"","miscelleanousParameters":null,"medicaidMCOInformation":null,"KIHIPPPreferredPaymentPayload":null,"KHIPPPaymentSummaryPayload":null,"individualIds":null,"hearingsSummaryInfoPayload":null,"EligibilitySummaryPayload":null,"DisqualificationPayload":null,"dashboardInformation":null,"dashboardCaseInfo":null,"claimsOverviewPayload":null,"caseNumber":null,"benefitInformations":null,"assisterAuthRepDetailsPayload":null,"applicationID":null,"ACKRESPONSE":{"AckResponseDescription":"Error","AckResponseCode":"1001"}}';
+        }
+         System.debug('@CS body '+body);
+        res.setBody(body);
+        res.setStatusCode(200);
+        system.debug('## mock getting called');
+        return res;
+    }
+    
+}

@@ -1,0 +1,120 @@
+.THIS .display-none{
+    display:none; 
+}
+.THIS.my-plan-card{
+    position:relative;
+}
+.THIS.card-opened .rate-button{
+    visibility:hidden;
+}
+.THIS .card-opened .accordion-arrow{
+    transform: rotate(180deg);
+}
+.THIS .card-description:focus{
+    outline:none;
+}
+.THIS.my-plan-card .myPlanCard-hover:hover {
+    background-color: t(RENavActiveBG);
+}
+.THIS .hideelement{
+    visibility:hidden;
+}
+.THIS.card-opened .nextStep{
+    display:inline-block;
+}
+.THIS.card-opened .notesCount{
+    display:inline;
+}
+.THIS .partner-name{
+    border-radius: 0.25rem;	
+    background-color:t(RESecondaryBeta);
+    color:t(REWhite);
+    font-size: 0.75rem;
+}
+.THIS .partner-name-blank{
+    min-height: 22px;
+}
+.THIS .resource-email{
+    word-break: break-all;
+}
+.THIS .card-info-section{
+    border-radius: 0.25rem;
+}
+.THIS .category-type-icon{
+    transform:translate(0,-2px);
+}
+.THIS .accordion-arrow svg{
+    height:1rem;
+    cursor:pointer;
+}
+.THIS .rotate-arrow{
+    transform:rotate(180deg);
+}
+.THIS .card-more-info-section > div{
+    border-top:0.0625rem solid t(RElightGrey);
+}
+
+.THIS .actionBtns .slds-icon{
+    height: 1.25rem;
+}
+.THIS .card-toggle-section .card-footer-btn-section {
+    align-items: center;
+}
+.THIS .card-toggle-section .toggle-box-shadow{
+    box-shadow: none;
+}
+.THIS .card-info-section .card-btn-section .slds-icon-text-default {
+    fill: t(REWhite);
+}
+.THIS .card-btn-section .slds-button {
+    display: flex;
+    align-items: center;
+}
+.THIS .display-flex {
+    display: flex;
+    align-items: center;
+}
+.THIS .resource-link,
+.THIS .resource-link:focus{
+    border: 0;
+    box-shadow: none;
+    line-height: unset;
+}
+.THIS .resource-link:hover{
+    text-decoration:underline;
+}
+.THIS .toggle-arrow:focus{
+    outline:none;
+}
+.THIS .search-spinner{
+    position: fixed;
+}
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : landscape) {
+    .THIS .info-padding {
+        padding-left: 0;
+    }
+}
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : portrait) {
+    .THIS .info-padding {
+        padding-left: 2rem;
+        word-break: break-all;
+    }
+}
+.THIS #favorite-selected-img{
+    width: 1rem;
+}  
+.THIS .favorite-container{
+    border: 1px t(RElightGreyOpacity) solid;
+    border-radius: 0.3rem;
+    background: t(REMyPlanRBG);
+    padding: 0.35rem;
+    margin-right: 1rem;
+}
+.THIS .favorite-container img{
+    width: 1rem;
+}
+@media only screen and (max-device-width : 1024px){
+    .THIS .account-name{
+        min-height: 1.2rem;
+    }
+}

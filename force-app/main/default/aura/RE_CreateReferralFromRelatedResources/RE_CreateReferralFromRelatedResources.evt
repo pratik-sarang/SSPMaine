@@ -1,0 +1,10 @@
+<aura:event type="COMPONENT" description="Event Fired when user Clicks Refer from Related Resources on Resource Details" >
+
+	<aura:attribute name="createReferralScreen" type="Boolean" />
+    <aura:attribute name="resourceId" type="String" /> 
+    <aura:attribute name="AccountId" type="String" /> 
+    <aura:attribute name="LocationId" type="String" /> 
+    <aura:attribute name="isFrequentlyPaired" type="Boolean" />
+    <aura:attribute name="isRelatedServices" type="Boolean" /> 
+
+</aura:event>

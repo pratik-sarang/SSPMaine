@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Healthcare Coverage</label>
+    <protected>false</protected>
+    <values>
+        <field>Applicable_Program_Code__c</field>
+        <value xsi:type="xsd:string">MA;KP</value>
+    </values>
+    <values>
+        <field>Based_On_Individual__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>FlowName__c</field>
+        <value xsi:type="xsd:string">HealthcareCoverage</value>
+    </values>
+    <values>
+        <field>IsFlow__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>Member_Filter__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Order__c</field>
+        <value xsi:type="xsd:double">13.0</value>
+    </values>
+    <values>
+        <field>PageName__c</field>
+        <value xsi:type="xsd:string">Healthcare_Coverage__c</value>
+    </values>
+    <values>
+        <field>Section_Key__c</field>
+        <value xsi:type="xsd:string">Healthcare_Coverage</value>
+    </values>
+    <values>
+        <field>Section__c</field>
+        <value xsi:type="xsd:string">SSP_HealthCoverage</value>
+    </values>
+    <values>
+        <field>Subsection__c</field>
+        <value xsi:nil="true"/>
+    </values>
+</CustomMetadata>

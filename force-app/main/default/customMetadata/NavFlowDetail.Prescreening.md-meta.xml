@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Pre-screening</label>
+    <protected>false</protected>
+    <values>
+        <field>Community_Page_URL__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>FlowDisplayName__c</field>
+        <value xsi:type="xsd:string">sspPreSTool</value>
+    </values>
+    <values>
+        <field>FlowName__c</field>
+        <value xsi:type="xsd:string">Pre-Screening</value>
+    </values>
+    <values>
+        <field>IsJsonBasedFlow__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>JsonObjectSchema__c</field>
+        <value xsi:type="xsd:string">{
+&quot;uniqName&quot;: &quot;sspPsApplication&quot;,
+&quot;typ&quot;: &quot;object&quot;,
+&quot;name&quot;: &quot;sspPsApplication&quot;,
+&quot;label&quot;: &quot;sspPrescreeningTool&quot;,
+&quot;controller&quot;:&quot;SspPrescreeningController&quot;,
+&quot;isSaveOnSubmit&quot;:true,
+&quot;sobjectInfo&quot;: {
+				&quot;objectName&quot;:&quot;LOG_LogMessage__c&quot;,
+				&quot;fieldName&quot; :&quot;jsonData__c&quot;,
+				&quot;recordTypeName&quot;:&quot;SSPPrescreening&quot;
+},
+&quot;fields&quot;: [
+{
+&quot;uniqName&quot;: &quot;noOfPeopleInHh&quot;,
+&quot;typ&quot;: &quot;number&quot;,
+&quot;name&quot;: &quot;noOfPeopleInHh&quot;
+},
+{
+&quot;uniqName&quot;: &quot;isAnyoneChild&quot;,
+&quot;typ&quot;: &quot;toggle&quot;,
+&quot;name&quot;: &quot;isAnyoneChild&quot;
+},
+{
+&quot;uniqName&quot;: &quot;isAnyonePregnant&quot;,
+&quot;typ&quot;: &quot;toggle&quot;,
+&quot;name&quot;: &quot;isAnyonePregnant&quot;
+},
+{
+&quot;uniqName&quot;: &quot;isAnyoneMigrant&quot;,
+&quot;typ&quot;: &quot;toggle&quot;,
+&quot;name&quot;: &quot;isAnyoneMigrant&quot;
+},
+{
+&quot;uniqName&quot;: &quot;isAnyoneBlind&quot;,
+&quot;typ&quot;: &quot;toggle&quot;,
+&quot;name&quot;: &quot;isAnyoneBlind&quot;
+},
+{
+&quot;uniqName&quot;: &quot;anySSIncome&quot;,
+&quot;typ&quot;: &quot;toggle&quot;,
+&quot;name&quot;: &quot;anySSIncome&quot;
+},
+{
+&quot;uniqName&quot;: &quot;isReceivingLTC&quot;,
+&quot;typ&quot;: &quot;toggle&quot;,
+&quot;name&quot;: &quot;isReceivingLTC&quot;
+},
+{
+&quot;uniqName&quot;: &quot;isReceivingMedicare&quot;,
+&quot;typ&quot;: &quot;toggle&quot;,
+&quot;name&quot;: &quot;isReceivingMedicare&quot;
+},
+{
+&quot;uniqName&quot;: &quot;grossIncome&quot;,
+&quot;typ&quot;: &quot;number&quot;,
+&quot;name&quot;: &quot;grossIncome&quot;
+},
+{
+&quot;uniqName&quot;: &quot;checkingSavingIncome&quot;,
+&quot;typ&quot;: &quot;number&quot;,
+&quot;name&quot;: &quot;checkingSavingIncome&quot;
+},
+{
+&quot;uniqName&quot;: &quot;combinedShelterExpense&quot;,
+&quot;typ&quot;: &quot;number&quot;,
+&quot;name&quot;: &quot;combinedShelterExpense&quot;
+},
+{
+&quot;uniqName&quot;: &quot;anyheatingOrCoolingExpense&quot;,
+&quot;typ&quot;: &quot;toggle&quot;,
+&quot;name&quot;: &quot;anyheatingOrCoolingExpense&quot;
+},
+{
+&quot;uniqName&quot;: &quot;isHhBilledMoreThanOneExpense&quot;,
+&quot;typ&quot;: &quot;toggle&quot;,
+&quot;name&quot;: &quot;isHhBilledMoreThanOneExpense&quot;
+},
+{
+&quot;uniqName&quot;: &quot;monthlyChildCareExpense&quot;,
+&quot;typ&quot;: &quot;number&quot;,
+&quot;name&quot;: &quot;monthlyChildCareExpense&quot;
+},
+{
+&quot;uniqName&quot;: &quot;childSupportExpense&quot;,
+&quot;typ&quot;: &quot;number&quot;,
+&quot;name&quot;: &quot;childSupportExpense&quot;
+},
+{
+&quot;uniqName&quot;: &quot;maResult&quot;,
+&quot;typ&quot;: &quot;string&quot;,
+&quot;name&quot;: &quot;maResult&quot;
+},
+{
+&quot;uniqName&quot;: &quot;snapResult&quot;,
+&quot;typ&quot;: &quot;string&quot;,
+&quot;name&quot;: &quot;snapResult&quot;
+},
+{
+&quot;uniqName&quot;: &quot;ccResult&quot;,
+&quot;typ&quot;: &quot;string&quot;,
+&quot;name&quot;: &quot;ccResult&quot;
+},
+{
+&quot;uniqName&quot;: &quot;ktapResult&quot;,
+&quot;typ&quot;: &quot;string&quot;,
+&quot;name&quot;: &quot;ktapResult&quot;
+}
+]
+}</value>
+    </values>
+    <values>
+        <field>NextActionGoToPage__c</field>
+        <value xsi:type="xsd:string">Required</value>
+    </values>
+</CustomMetadata>

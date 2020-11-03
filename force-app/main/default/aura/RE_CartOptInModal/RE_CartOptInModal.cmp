@@ -1,0 +1,35 @@
+<aura:component >
+    <aura:attribute name="showModal" type="Boolean"/>
+    <aura:handler name="init" value="{!this}"  action="{!c.doInit}" /> 
+	<aura:registerEvent name="Modal_ParametersEvent" type="c:RE_ModalParameters"/>
+    <aura:if isTrue="{!v.showModal}">
+        <div>
+            <section role="dialog" aria-modal="true" class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container cart-opt-in-modal">
+                    <div class="slds-modal__content slds-p-horizontal_medium slds-p-bottom_medium slds-p-top_x-small">
+                        <div class="modal-lg-headingcontainer">
+                            <div class="modal-lg-heading-button">
+                                <div class="modal-lg-heading" tabindex="0">{!$Label.c.RE_CartOptInModalHeader}</div>
+                                <lightning:buttonIcon class="modal-close" iconName="utility:close" alternativeText="close" onclick="{!c.closeCartOptIn}" size="small" tabindex="0"/> 
+                            </div>
+                        </div>
+                        <p class="body1 body-text">{!$Label.c.RE_CartOptInModalBody}</p>
+                        <div class="slds-m-top_small body1">
+                            <div>{!$Label.c.firstname}</div>
+                            <div>{!$Label.c.lastname}</div>
+                            <div>{!$Label.c.email}</div>
+                            <div>{!$Label.c.RE_MobilePhoneNumber}</div>
+                            <div>{!$Label.c.PreferredContactMethod}</div>
+                        </div>
+                        <p class="slds-m-top_small body1 body-text">{!$Label.c.RE_CartOptInModalBodyQuestion}</p>
+                        <div class="modal-lg-footer-button slds-m-top_medium">
+                            <lightning:button class="slds-p-horizontal_x-large slds-button slds-button_neutral slds-m-right_xx-small" onclick="{!c.closeCartOptIn}">{!$Label.c.no}</lightning:button>
+                            <lightning:button class="slds-p-horizontal_x-large slds-button slds-button_brand btn-yes" onclick="{!c.cartOptIn}" onblur="{!c.moveFocusToTop}">{!$Label.c.yes}</lightning:button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open" tabindex="-1"></div>
+        </div>
+    </aura:if>
+</aura:component>

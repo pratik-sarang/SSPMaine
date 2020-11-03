@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Investment</label>
+    <protected>false</protected>
+    <values>
+        <field>ApplicablePrograms__c</field>
+        <value xsi:type="xsd:string">Non-MAGI,KT,SN,SS</value>
+    </values>
+    <values>
+        <field>DetailsRequired__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>ResourceTileFields__c</field>
+        <value xsi:type="xsd:string">{&quot;line1&quot;:&quot;RSubtype&quot;,&quot;line2&quot;:&quot;AccountBalance__c&quot;}</value>
+    </values>
+    <values>
+        <field>ResourceType__c</field>
+        <value xsi:type="xsd:string">IN</value>
+    </values>
+    <values>
+        <field>SobjectField__c</field>
+        <value xsi:type="xsd:string">HasInvestmentsToggle__c</value>
+    </values>
+</CustomMetadata>

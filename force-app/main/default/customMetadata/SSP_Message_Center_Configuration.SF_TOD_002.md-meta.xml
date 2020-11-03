@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>SF_TOD_002</label>
+    <protected>false</protected>
+    <values>
+        <field>Applicable_Role__c</field>
+        <value xsi:type="xsd:string">Citizen</value>
+    </values>
+    <values>
+        <field>Body_Spanish__c</field>
+        <value xsi:type="xsd:string">{0} quiere ser su representante autorizado para sus beneficios de {1}.</value>
+    </values>
+    <values>
+        <field>Body__c</field>
+        <value xsi:type="xsd:string">{0} wants to be your Authorized Representative for your {1} benefits.</value>
+    </values>
+    <values>
+        <field>Button_Alt_Text__c</field>
+        <value xsi:type="xsd:string">Click to Review and Consent</value>
+    </values>
+    <values>
+        <field>Button_Name__c</field>
+        <value xsi:type="xsd:string">Review &amp; Consent</value>
+    </values>
+    <values>
+        <field>Code__c</field>
+        <value xsi:type="xsd:string">SF-TOD-002</value>
+    </values>
+    <values>
+        <field>Communication_Body_Spanish__c</field>
+        <value xsi:type="xsd:string">{0} quiere ser su representante autorizado para sus beneficios de {1}.&lt;br/&gt;&lt;br/&gt;Detalles del permiso&lt;br/&gt;
+{1}
+{2}&lt;br/&gt;
+Al aceptar este pedido, se da permiso a este representante autorizado para realizar las acciones elegidas. Esto también confirma que usted le dará información verdadera a su mejor saber y entender. 
+&lt;br/&gt;
+Esto confirma que usted comprende lo siguiente:&lt;br/&gt;
+Usted no debe dar información falsa y debe informar cambios de manera oportuna. Si usted no lo hace, puede enfrentar consecuencias. Eso incluye procesamiento por fraude, pérdida de beneficios y devolver beneficios.&lt;br/&gt;
+Inicie sesión en el portal de autoservicio para confirmar su respuesta. {3}</value>
+    </values>
+    <values>
+        <field>Communication_Body__c</field>
+        <value xsi:type="xsd:string">{0} wants to be your Authorized Representative for your {1} benefits.&lt;br/&gt;&lt;br/&gt;Permission Details&lt;br/&gt;
+{1}&lt;br/&gt;
+{2}&lt;br/&gt;
+By accepting this request, permission is given to this authorized representative to perform the chosen actions. This also confirms that you will give them information that is true to the best of your knowledge.
+&lt;br/&gt;
+This confirms that you understand the following:&lt;br/&gt;
+You must not give false information and must report changes in a timely manner. If you fail to do so, you may face consequences. This includes prosecution for fraud, losing benefits, and paying back benefits.&lt;br/&gt;
+Please log in to SSP to confirm your response. {3}</value>
+    </values>
+    <values>
+        <field>Due_Date_criterion__c</field>
+        <value xsi:type="xsd:string">29</value>
+    </values>
+    <values>
+        <field>Expiry_Date_Criterion__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Mobile_Button_Action__c</field>
+        <value xsi:type="xsd:string">opens Authorized Representative Access Request modal</value>
+    </values>
+    <values>
+        <field>Mobile_Button_Alt_Text__c</field>
+        <value xsi:type="xsd:string">Click to Review and Consent</value>
+    </values>
+    <values>
+        <field>Mobile_Button_Name__c</field>
+        <value xsi:type="xsd:string">Review &amp; Consent</value>
+    </values>
+    <values>
+        <field>Send_Reminder_Criteria__c</field>
+        <value xsi:type="xsd:string">-11</value>
+    </values>
+    <values>
+        <field>Severity__c</field>
+        <value xsi:type="xsd:string">Critical</value>
+    </values>
+    <values>
+        <field>Title_Spanish__c</field>
+        <value xsi:type="xsd:string">Pedido de acceso de representante autorizado</value>
+    </values>
+    <values>
+        <field>Title__c</field>
+        <value xsi:type="xsd:string">Authorized Representative Access Request</value>
+    </values>
+    <values>
+        <field>Trash_Action__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>button_Action__c</field>
+        <value xsi:type="xsd:string">opens Authorized Representative Access Request modal</value>
+    </values>
+</CustomMetadata>

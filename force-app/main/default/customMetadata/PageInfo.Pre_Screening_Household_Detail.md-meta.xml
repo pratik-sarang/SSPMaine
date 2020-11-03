@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Pre-Screening-Household Detail</label>
+    <protected>false</protected>
+    <values>
+        <field>IsJSONBasedPage__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>JsonLayoutSchema__c</field>
+        <value xsi:type="xsd:string">{
+&quot;uniqName&quot;: &quot;PS_Application&quot;,
+&quot;title&quot;: &quot;PS_Application&quot;,
+&quot;profiles&quot;: &quot;all&quot;,
+&quot;pageType&quot;: &quot;detail&quot;,
+&quot;pageTitle&quot;: &quot;sspHhDetails&quot;,
+&quot;pageSubtitle&quot;: &quot;sspCompleteHhQuestion&quot;,
+&quot;exitBtnTitle&quot;:&quot;sspExitDashboardTitle&quot;,
+&quot;fields&quot;: [
+{
+&quot;uniqName&quot;: &quot;noOfPeopleInHh&quot;,
+&quot;name&quot;: &quot;noOfPeopleInHh&quot;,
+&quot;label&quot;: &quot;sspNoOfPeopleInHh&quot;,
+&quot;required&quot;: true,
+&quot;missValueMsg&quot;: &quot;sspRequiredValidator&quot;,
+&quot;badInputMsg&quot;: &quot;sspHHRangeValidationMessage&quot;,
+&quot;rangeUnderflowMsg&quot;: &quot;sspHHRangeValidationMessage&quot;,
+&quot;rangeOverflowMsg&quot;:&quot;sspHHRangeValidationMessage&quot;,
+&quot;maxLength&quot;:&quot;2&quot;,
+&quot;minValue&quot;: 1,
+&quot;maxValue&quot;:&quot;99&quot;,
+&quot;step&quot;:1,
+&quot;stepMismatchMsg&quot;: &quot;sspHHRangeValidationMessage&quot;,
+&quot;badTypeMsg&quot;: &quot;sspHHRangeValidationMessage&quot;,
+&quot;pattern&quot;:&quot;^[0-9]+$&quot;,
+&quot;patternMismatchMsg&quot;:&quot;sspHHRangeValidationMessage&quot;,
+&quot;fieldCol&quot;: &quot;6-of-12&quot;
+},
+{
+&quot;uniqName&quot;: &quot;isAnyoneChild&quot;,
+&quot;name&quot;: &quot;isAnyoneChild&quot;,
+&quot;label&quot;: &quot;sspIsAnyoneChild&quot;,
+&quot;required&quot;: true,
+&quot;missValueMsg&quot;: &quot;sspRequiredValidator&quot;
+},
+{
+&quot;uniqName&quot;: &quot;isAnyonePregnant&quot;,
+&quot;name&quot;: &quot;isAnyonePregnant&quot;,
+&quot;label&quot;: &quot;sspIsAnyonePregnant&quot;,
+&quot;required&quot;: true,
+&quot;missValueMsg&quot;: &quot;sspRequiredValidator&quot;
+},
+{
+&quot;uniqName&quot;: &quot;isAnyoneMigrant&quot;,
+&quot;name&quot;: &quot;isAnyoneMigrant&quot;,
+&quot;label&quot;:&quot;sspIsAnyoneMigrant&quot;,
+&quot;required&quot;: true,
+&quot;missValueMsg&quot;: &quot;sspRequiredValidator&quot;
+},
+{
+&quot;uniqName&quot;: &quot;isAnyoneBlind&quot;,
+&quot;name&quot;: &quot;isAnyoneBlind&quot;,
+&quot;label&quot;: &quot;sspIsAnyoneBlind&quot;,
+&quot;required&quot;: true,
+&quot;dependFields&quot;: &quot;anySSIncome, isReceivingLTC, isReceivingMedicare&quot;,
+&quot;missValueMsg&quot;: &quot;sspRequiredValidator&quot;
+},
+{
+&quot;uniqName&quot;: &quot;anySSIncome&quot;,
+&quot;name&quot;: &quot;anySSIncome&quot;,
+&quot;label&quot;: &quot;sspAnySSIncome&quot;,
+&quot;required&quot;: true,
+&quot;missValueMsg&quot;: &quot;sspRequiredValidator&quot;,
+&quot;dynaprops&quot; : {
+&quot;display&quot;: [
+{
+&quot;field&quot;: &quot;isAnyoneBlind&quot;,
+&quot;op&quot;: &quot;EQ&quot;,
+&quot;value&quot;: &quot;Y&quot;
+}
+]
+}
+},
+{
+&quot;uniqName&quot;: &quot;isReceivingLTC&quot;,
+&quot;name&quot;: &quot;isReceivingLTC&quot;,
+&quot;label&quot;: &quot;sspIsReceivingLTC&quot;,
+&quot;required&quot;: true,
+&quot;missValueMsg&quot;: &quot;sspRequiredValidator&quot;,
+&quot;dynaprops&quot; : {
+&quot;display&quot;: [
+{
+&quot;field&quot;: &quot;isAnyoneBlind&quot;,
+&quot;op&quot;: &quot;EQ&quot;,
+&quot;value&quot;: &quot;Y&quot;
+}
+]
+}
+},
+{
+&quot;uniqName&quot;: &quot;isReceivingMedicare&quot;,
+&quot;name&quot;: &quot;isReceivingMedicare&quot;,
+&quot;label&quot;: &quot;sspIsReceivingMedicare&quot;,
+&quot;required&quot;: true,
+&quot;missValueMsg&quot;: &quot;sspRequiredValidator&quot;,
+&quot;dynaprops&quot; : {
+&quot;display&quot;: [
+{
+&quot;field&quot;: &quot;isAnyoneBlind&quot;,
+&quot;op&quot;: &quot;EQ&quot;,
+&quot;value&quot;: &quot;Y&quot;
+}
+]
+}
+}
+]
+}</value>
+    </values>
+    <values>
+        <field>LightningComponentName__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>PageDisplayName__c</field>
+        <value xsi:type="xsd:string">Household Detail</value>
+    </values>
+    <values>
+        <field>PageName__c</field>
+        <value xsi:type="xsd:string">Household Detail</value>
+    </values>
+    <values>
+        <field>Page_Display_Name_View__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>URL__c</field>
+        <value xsi:nil="true"/>
+    </values>
+</CustomMetadata>

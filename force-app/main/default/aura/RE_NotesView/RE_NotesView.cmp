@@ -1,0 +1,88 @@
+<!--
+ * Component Name    : RE_NotesView
+ * Owner             : Payal Dubela
+ * Created Date      : 12/06/2019
+ * Description       : Notes Details
+ *
+ *                            M O D I F I C A T I O N   L O G                                          
+ *
+ *  Date        Developer       Description                                                         
+ *  **************************************************************************
+ 
+ *  12/06/2019  Payal	        Initial Development
+-->
+<aura:component  access="global" controller="RE_ClientDetailsCtrl">
+    <aura:attribute name="noteDetails" type="Object"/>
+    <aura:attribute name="showEditModal" type="boolean" default="true"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:attribute name="isEditable" type="boolean" default="false"/>
+    <aura:registerEvent name="refreshevt" type="c:RE_RefreshNotes"/>
+    <c:RE_UtilityServerCallerCmp aura:id="bSuper" isSpinnerActive="{!v.isSpinnerActive}"/> 
+    <!-- displays a toast notification -->
+    <lightning:notificationsLibrary aura:id="notifLib" />
+    
+    <aura:if isTrue="{!v.showEditModal}">
+    <div class="notes-modal">
+        <section role="dialog" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <div class="slds-modal__content slds-p-horizontal_medium slds-p-bottom_medium slds-p-top_x-small">
+                    <div class="modal-lg-headingcontainer">
+                        <div class="modal-lg-heading-button">
+                            <div class="modal-lg-heading" tabindex="0">{!$Label.c.notedetails}</div>
+                            <lightning:buttonIcon tabindex="0" class="modal-close" iconName="utility:close" alternativeText="close"  onclick="{!c.hideNote}" size="small" />                            
+                        </div>
+                    </div>
+                    <fieldset class="slds-form-element slds-form-element_compound">
+                        <lightning:input aura:id="title" type="text" label="{!$Label.c.Subject}" name="Note Details" value="{!v.noteDetails.Title}" required = "true" disabled="{!!v.isEditable}" autocomplete="off" maxlength="255"/>
+                        <lightning:textarea aura:id="desc" name="NotesDescription" value="{!v.noteDetails.Description}" label="{!$Label.c.description}" maxlength="32768" required = "true" disabled="{!!v.isEditable}" autocomplete="off"/>
+                        <div class="slds-grid slds-wrap slds-m-vertical_x-small">
+                            <section class="slds-size_1-of-2 slds-max-medium-size_1-of-1">
+                                <div class="caption2Grey slds-m-vertical_xx-small">
+                                   {!$Label.c.Created_Date}
+                                </div>
+                                <div class="caption2 slds-m-vertical_xx-small">
+                                    <lightning:formattedDateTime value="{!v.noteDetails.CreatedDate}" year="2-digit" month="2-digit" day="numeric"/> 
+                                </div>
+                            </section>
+                            <section class="slds-size_1-of-2 slds-max-medium-size_1-of-1">
+                                <div class="caption2Grey slds-m-vertical_xx-small">
+                                    {!$Label.c.Created_By}
+                                </div>
+                                <div class="caption2 slds-m-vertical_xx-small">
+                                    {!v.noteDetails.CreatedBy}
+                                </div>
+                            </section>
+                        </div>
+                        <div class="slds-grid slds-wrap slds-m-vertical_x-small">
+                            <section class="slds-size_1-of-2 slds-max-medium-size_1-of-1">
+                                <div class="caption2Grey slds-m-vertical_xx-small">
+                                    {!$Label.c.Last_modified_date}
+                                </div>
+                                <div class="caption2 slds-m-vertical_xx-small">
+                                    <lightning:formattedDateTime value="{!v.noteDetails.ModifiedDate}" year="2-digit" month="2-digit" day="numeric"/> 
+                                </div>
+                            </section>
+                            <section class="slds-size_1-of-2 slds-max-medium-size_1-of-1">
+                                <div class="caption2Grey slds-m-vertical_xx-small">
+                                    {!$Label.c.Last_modified_by}
+                                </div>
+                                <div class="caption2 slds-m-vertical_xx-small">
+                                    {!v.noteDetails.ModifiedBy}
+                                </div>
+                            </section>
+                        </div>
+                    </fieldset>
+                    <div class="modal-lg-footer-button">
+                        <lightning:button class="slds-m-right_xx-small slds-p-horizontal_x-large" variant="neutral" label="{!$Label.c.cancel}" onclick="{!c.hideNote}"/>  
+                        <div onkeydown="{!c.moveFocusToTop}">
+                        	<lightning:button aura:id="saveNote" class="slds-p-horizontal_x-large" variant="brand" label="{!$Label.c.save}" onclick="{!c.saveNote}" disabled="{!!v.isEditable}"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </div>
+ </aura:if>
+    
+</aura:component>

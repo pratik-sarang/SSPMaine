@@ -1,0 +1,11 @@
+.THIS .sc-pagination{
+    color: t(RENavyBlue);
+}
+
+.THIS .prev-arrow + .main-carousel-body{
+    padding: 0;
+}
+
+.THIS .main-carousel-body{
+    padding: 1.5rem;
+}

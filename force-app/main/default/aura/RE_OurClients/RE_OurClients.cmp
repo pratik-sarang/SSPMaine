@@ -1,0 +1,202 @@
+<!--
+ * Component Name    : RE_OurClients
+ * Owner             : Sai Velpula
+ * Created Date      : 05/08/2019
+ * Description       : Our Clients List View
+ *
+ *                            M O D I F I C A T I O N   L O G                                          
+ *
+ *  Date        Developer       Description                                                         
+ *  **************************************************************************
+ 
+ *  05/08/2019  Sai	            Backend Field Integration
+-->
+<aura:component controller = "RE_OurClientsCtrl" implements="forceCommunity:availableForAllPageTypes,flexipage:availableForAllPageTypes,forceCommunity:searchInterface" >
+    <aura:attribute name="sObject" type="Object" default="Contact"/>
+    <aura:attribute name="sFavObject" type="Object" default="Favorite__c" />
+    <aura:attribute name="onLoadCheck" type="Boolean" default="false"/>
+    <aura:attribute name="showDataClients" type="Boolean" default="false"/>
+    <aura:attribute name="showDataAll" type="Boolean" default="false"/> 
+    <aura:attribute name ="showReferralBarredModal" type="Boolean" default="false"/>
+    <aura:attribute name = "hasConsentToView" type ="Boolean" default="false"/>
+    <!--<aura:attribute name="mycolumns" type="List" default = "[
+            {label: 'First Name', fieldName: 'Name', type: 'text',sortable : true},
+   {label: 'Last Name', fieldName: 'Name', type: 'text',sortable : true},
+            { label: 'Status', fieldName: 'Status__c', type: 'text',sortable:'true'},
+            { label: 'Description', fieldName: 'Description__c', type: 'text',sortable:'true'},
+   { label: '', type:'action', typeAttributes:{rowActions: [{label:'Edit' , name:'edit'}
+            ]}}
+        ]"/>
+    <aura:attribute name="actionListAllClients" type="List" default = "[
+                                                             { label: 'View', type:'action', typeAttributes:{rowActions: [{label:'View' , name:'View'}, {label:'Create Referrral' , name:'Create'}, {label:'Request Consent' , name:'Request'}
+                                                             ]}},
+                                                             ]"/>
+    <aura:attribute name="actionListMyClients" type="List" default = "[
+                                                             { label: 'View', type:'action', typeAttributes:{rowActions: [{label:'View' , name:'View'}, {label:'Create Referrral' , name:'Create'}
+                                                             ]}},
+                                                             ]"/>-->
+    <aura:attribute name="actionListAllClients" type="List"/>
+    <aura:attribute name="actionListMyClients" type="List" />
+    <aura:attribute name="lstcolumns" type="List" default = "[]"/>
+    <aura:attribute name="mycolumnslstAll" type="List" default = "[]"/>
+    <aura:attribute name="mycolumnslstMy" type="List" default = "[]"/>
+    <aura:handler name = "init" value = "this" action = "{!c.doInit}"/>
+    <lightning:notificationsLibrary aura:id="notifLib" />
+    
+    <aura:handler name="OurClientsStopInitEvent" event="c:RE_CheckVewAllClientDetails" action="{!c.allClientDetailsEvent}"/>
+    <aura:attribute name="bStopInit" type="Boolean" default="true"/>
+	<aura:attribute name="showdetail" type="Boolean" default="false"/>
+    <aura:attribute name="clientId" type="String"/>
+    <aura:attribute name="clientName" type="String"/> 
+    <aura:attribute name="clientDetails" type="Object"/>
+    <aura:attribute name="isIEESData" type="Boolean" default="false"/>
+    <aura:attribute name="bshowSelectAssesment" type="Boolean" default="false"/>
+    <aura:attribute name="bIsAgencyUser" type="Boolean" default="false"/>
+   	<!--[06/28/2019:Ashwin] - Changes done for server call from a common place-->
+	    <aura:attribute name="isSpinnerActive" type="Boolean"/>
+	    <c:RE_UtilityServerCallerCmp aura:id="bSuper" isSpinnerActive="{!v.isSpinnerActive}"/> 
+    <aura:handler name="render" value="{!this}" action="{!c.callDataTableMethod}"/>
+    <aura:attribute name="isLinkFromIEES" type="Boolean" default="false" description= "this attribute is set to true if IEES user accessing KYResources"/>
+    <aura:attribute name ="individualID" type="String" default=""/>
+    <aura:attribute name ="caseNumber" type="String" default=""/>
+    <aura:attribute name ="isFromOneView" type="Boolean" default="false" description= "this attribute is set to true if user clicks on back ti clients hyperlink on one view screen"/>
+    <aura:if isTrue="{!!v.isLinkFromIEES}">
+        <article> 
+            <aura:if isTrue ="{!v.bStopInit}">
+                <div class="headingContainer">
+                    <h1 class="headingL1">{!$Label.c.Clients}</h1> 
+                </div>
+                <div class="ourclients-tabs" aura:id="ourclients">
+                    <div class="mainTabs slds-p-bottom_xx-small slds-border_bottom">
+                        <aura:if isTrue ="{!!v.bIsAgencyUser}">
+                            <aura:if isTrue="{!v.isFromOneView}">
+                                <span id="allClients" role="link" class="active-tab caption2" onclick="{!c.showDataAll}" onkeydown="{!c.showDataAll}" tabindex="0">{!$Label.c.Search}</span> <!-- Client Search -->
+                                <span id="myClients" role="link" class="caption2" onclick="{!c.showDataClients}" tabindex="0" onkeydown="{!c.showDataClients}">{!$Label.c.Full_Profile}</span> <!-- Profile Access Clients -->
+                                <aura:set attribute="else">
+                                    <span id="allClients" role="link" class="caption2" onclick="{!c.showDataAll}" onkeydown="{!c.showDataAll}" tabindex="0">{!$Label.c.Search}</span> <!-- Client Search -->
+                                    <span id="myClients" role="link" class="active-tab caption2" onclick="{!c.showDataClients}" tabindex="0" onkeydown="{!c.showDataClients}">{!$Label.c.Full_Profile}</span> <!-- Profile Access Clients -->
+                                </aura:set>
+                            </aura:if>    
+                            <aura:set attribute="else">
+                                <span id="allClients" role="link" class="active-tab caption2" onclick="{!c.showDataAll}" tabindex="0" onkeydown="{!c.showDataAll}">{!$Label.c.Search}</span>
+                            </aura:set>
+                        </aura:if>
+                        <span id="favoriteClients" role="link" class="caption2" onclick="{!c.showDataFavClients}" tabindex="0" onkeydown="{!c.showDataFavClients}">{!$Label.c.My_Clients}</span> <!-- Favorite Clients -->
+                    </div>
+                    <aura:if isTrue="{!v.onLoadCheck =='true'}">
+                        <aura:if isTrue ="{!!v.bIsAgencyUser}">
+                            <aura:if isTrue="{!v.isFromOneView}">
+                                <div class="slds-hide my-clients slds-m-top_medium">
+                                    <c:RE_DataTable sObject="{!v.sObject}" numberOfReords = "{!v.numberOfReords}" mycolumns= "{!v.mycolumnslstMy}" allClientsCheck="false" iconImage="standard:apps"/> 
+                                </div>
+                                <div class="all-clients slds-m-top_medium">
+                                    <c:RE_DataTable sObject="{!v.sObject}" numberOfReords = "{!v.numberOfReords}" mycolumns= "{!v.mycolumnslstAll}" allClientsCheck="true" iconImage="standard:apps"/>
+                                </div>
+                                <aura:set attribute="else">
+                                    <div class="my-clients slds-m-top_medium">
+                                        <c:RE_DataTable sObject="{!v.sObject}" numberOfReords = "{!v.numberOfReords}" mycolumns= "{!v.mycolumnslstMy}" allClientsCheck="false" iconImage="standard:apps"/> 
+                                    </div>
+                                    <div class="slds-hide all-clients slds-m-top_medium">
+                                        <c:RE_DataTable sObject="{!v.sObject}" numberOfReords = "{!v.numberOfReords}" mycolumns= "{!v.mycolumnslstAll}" allClientsCheck="true" iconImage="standard:apps"/>
+                                    </div>
+                                </aura:set>
+                            </aura:if>
+                            <aura:set attribute="else">
+                                <div class="all-clients slds-m-top_medium">
+                                    <c:RE_DataTable aura:id="searchFromIEES" sObject="{!v.sObject}" numberOfReords = "{!v.numberOfReords}" mycolumns= "{!v.mycolumnslstAll}" allClientsCheck="true" iconImage="standard:apps"/>
+                                </div>
+                            </aura:set>
+                        </aura:if>
+                        <!-- END -->
+                        <div class="slds-hide favorite-clients slds-m-top_medium">
+                            <c:RE_DataTable sObject="{!v.sFavObject}" numberOfReords = "{!v.numberOfReords}" mycolumns= "{!v.mycolumnslstMy}" iconImage="standard:apps" isFavoriteClient="true"/>
+                        </div>
+                    </aura:if> 
+                </div>
+                
+                <aura:set attribute="else"> 
+                    <aura:if isTrue ="{!v.showdetail}">      
+                        <c:RE_ClientDetails clientId ="{!v.clientId}" 
+                                            aura:id ="clientDetails"
+                                            bShowClientTable = "{!v.bStopInit}"
+                                            clientDetails="{!v.clientDetails}"
+                                            clientWrapper="{!v.clientDetails}"
+                                            bisAssesmentOpen="{!v.bshowSelectAssesment}"/>
+                    </aura:if>
+                    
+                    <aura:if isTrue ="{!!v.showdetail}">
+                        <c:RE_CreateReferral contactId="{!v.clientId}" aura:id = "createreferral"
+                                             clientName="{!v.clientName}"
+                                             bShowClientTable = "{!v.bStopInit}"
+                                             isIEESData="{!v.isIEESData}"
+                                             clientDetails="{!v.clientDetails}"/>
+                    </aura:if>
+                </aura:set>
+            </aura:if>  
+        </article>
+        <aura:set attribute="else">
+            <article> 
+                <aura:if isTrue ="{!v.bStopInit}">
+                    <div class="headingContainer">
+                        <h1 class="headingL1">{!$Label.c.Clients}</h1> 
+                    </div>
+                    <div class="ourclients-tabs" aura:id="ourclients">
+                        <div class="mainTabs slds-p-bottom_xx-small slds-border_bottom">
+                            <aura:if isTrue ="{!!v.bIsAgencyUser}">
+                                <span id="allClients" role="link" class="caption2" onclick="{!c.showDataAll}" onkeydown="{!c.showDataAll}" tabindex="0">{!$Label.c.Search}</span> <!-- Client Search -->
+                                <span id="myClients" role="link" class="active-tab caption2" onclick="{!c.showDataClients}" tabindex="0" onkeydown="{!c.showDataClients}">{!$Label.c.Full_Profile}</span> <!-- Profile Access Clients -->
+                                <aura:set attribute="else">
+                                    <span id="allClients" role="link" class="active-tab caption2" onclick="{!c.showDataAll}" tabindex="0" onkeydown="{!c.showDataAll}">{!$Label.c.Search}</span>
+                                </aura:set>
+                            </aura:if>
+                            <span id="favoriteClients" role="link" class="caption2" onclick="{!c.showDataFavClients}" tabindex="0" onkeydown="{!c.showDataFavClients}">{!$Label.c.My_Clients}</span> <!-- Favorite Clients -->
+                        </div>  
+                        <aura:if isTrue="{!v.onLoadCheck =='true'}">
+                            <aura:if isTrue ="{!v.bIsAgencyUser}">
+                                <div class="all-clients slds-m-top_medium">
+                                    <c:RE_DataTable aura:id="searchFromIEES" sObject="{!v.sObject}" numberOfReords = "{!v.numberOfReords}" mycolumns= "{!v.mycolumnslstAll}" allClientsCheck="true" iconImage="standard:apps"/>
+                                </div>
+                            </aura:if>
+                        </aura:if>
+                    </div>
+                    <aura:set attribute="else"> 
+                        <aura:if isTrue ="{!v.showdetail}">      
+                            <c:RE_ClientDetails clientId ="{!v.clientId}" 
+                                                aura:id ="clientDetails"
+                                                bShowClientTable = "{!v.bStopInit}"
+                                                clientDetails="{!v.clientDetails}"
+                                                clientWrapper="{!v.clientDetails}"
+                                                bisAssesmentOpen="{!v.bshowSelectAssesment}"/>
+                        </aura:if>
+                    </aura:set>
+                </aura:if>  
+            </article>
+        </aura:set>
+    </aura:if>
+    <!-- Add can't create referral modal -->
+    <aura:if isTrue="{!v.showReferralBarredModal}">
+        <div class="demo-only">
+            <section role="dialog" aria-modal="true" class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container">
+                    <div class="slds-modal__content slds-p-horizontal_medium slds-p-bottom_medium slds-p-top_x-small no-email-listed">
+                        <div class="modal-lg-headingcontainer">
+                            <div class="modal-lg-heading-button">
+                                <div class="modal-lg-heading" tabindex="0">{!$Label.c.Referral_Cant_Be_Processed}</div>
+                                <lightning:buttonIcon class="modal-close" iconName="utility:close" alternativeText="close"  onclick="{!c.closeReferralBarredModal}" size="small" />   
+                            </div>
+                        </div>
+                        <div  id="modal-content-id-1">
+                            <p class="body1">{!$Label.c.Referral_Cant_Be_ProcessedText}</p>
+                            <div class="slds-text-align_right">
+                                <lightning:button variant="brand" class="slds-p-horizontal_x-large slds-m-top_small" label="{!$Label.c.ok}" title="{!$Label.c.ok}" onblur="{!c.moveFocusToTop}" onclick="{!c.closeReferralBarredModal}"/>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+        </div>
+    </aura:if> 
+    <!--End Can't create referral modal -->
+</aura:component>

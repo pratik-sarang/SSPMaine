@@ -1,0 +1,40 @@
+.THIS .categories-list{
+    align-items: unset;
+}
+.THIS .category-active{
+    box-shadow: 0 -0.1875rem 0 0 t(REPrimary) inset;
+}
+.THIS .category-active svg{
+    fill:t(REPrimary);
+}
+.THIS .category{
+    cursor:pointer;
+}
+.THIS .category img{
+    height:2rem;
+    width:2rem;
+    object-fit:contain;
+}
+.THIS .category .domain-name{
+    font-size:t(RESize14);
+}
+/*Mobile Classes*/
+.THIS.mobile-dropdown-categories .category p{
+    display:inline;
+}
+.THIS.mobile-dropdown-categories .category img{
+    height:1rem;
+    width:1rem;
+    margin:0;
+}
+.THIS.mobile-dropdown-categories .category{
+    border-bottom:0.0625rem solid t(REGreyFieldBorder);
+}
+.THIS.mobile-dropdown-categories .category{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.THIS.mobile-dropdown-categories .category .domain-name{
+    font-size:t(RESize16);
+}

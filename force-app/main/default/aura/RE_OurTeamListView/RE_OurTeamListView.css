@@ -1,0 +1,5 @@
+.THIS button[disabled],.THIS button[disabled]:hover{
+    border-color: t(RElightGrey);
+    color: t(RElightGrey);
+    background:t(REWhite);
+}

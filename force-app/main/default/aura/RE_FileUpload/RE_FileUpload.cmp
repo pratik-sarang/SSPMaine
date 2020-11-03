@@ -1,0 +1,104 @@
+<!--
+ * Component Name    : RE_FileUpload
+ * Owner             : DELOITTE
+ * Created Date      : 05/02/2019
+ * Description       : Custom component which will be rendered as Modal box for uploading files.
+ * Author 			 : Suyash Singhal
+ *                            M O D I F I C A T I O N   L O G                                          
+ *
+ *  Date        Developer       Description                                                         
+ *  **************************************************************************
+
+-->
+<aura:component controller="RE_FileUploadCtrl"> 
+    <!-- 'parentId' Aura Attribute for store the Id for Parent Record where we are attach our file --> 
+    <aura:attribute name="parentId" type="Id"  />
+    <!-- 'fileName' attribute for display the selected file name --> 
+    <aura:attribute name="fileName" type="String" default="" />
+    <aura:attribute name="fileNameModified" type="String" default="No File Selected.." />
+    
+    <aura:attribute name="isModal" type="Boolean" default ="false"/>
+    <aura:attribute name="isOpen" type="Boolean" default ="false"/>
+    <aura:attribute name="lstDoctypes" type="list"/>
+    <aura:attribute name="Spinner" type="Boolean" default ="false"/>
+    <aura:attribute name="bShowFileUpload" type="Boolean" default ="true"/>
+    <aura:attribute name="allowedExtensions" type="list"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:registerEvent name="FileUploadSuccess" type="c:SuccessfulFileUploadListner"/> 
+    
+    <!--[06/25/2019:Ashwin] - Changes done for server call from a common place-->
+	    <aura:attribute name="isSpinnerActive" type="Boolean"/>
+	    <c:RE_UtilityServerCallerCmp aura:id="bSuper" isSpinnerActive="{!v.isSpinnerActive}"/> 
+	<!-- -->
+    
+    <aura:if isTrue="{!v.isOpen}">
+        <aura:if isTrue="{!v.isModal}">
+            <div class="demo-only">              
+                <section role="dialog" class="slds-modal slds-fade-in-open">
+                    <div class="slds-modal__container">
+                        <div class="slds-modal__content slds-p-top_x-small slds-p-horizontal_medium slds-p-bottom_medium" id="modal-content-id-1"> 
+                            <div class="modal-lg-headingcontainer">
+                                <div class="modal-lg-heading-button">
+                                    <div class="modal-lg-heading" tabindex="0">{!$Label.c.uploadfile}</div>
+                                    <lightning:buttonIcon class="modal-close" iconName="utility:close" alternativeText="close"  onclick="{!c.HideMe}" size="small" /> 
+                                </div>
+                            </div>
+                            <!-- Lightning Input with file type and on file change call the 'handleFilesChange' controller -->
+                           	<lightning:input aura:id="fuploader" onchange="{!c.handleFilesChange}" type="file" name="file" label="{!$Label.c.uploadfile}" multiple="false"/>
+                        	<!--<div class="slds-text-body_small slds-text-color_error">{!v.fileName} </div>-->
+                            <br/>                   
+                            <!-- <lightning:fileUpload  name="fileUploader"
+                                                   label= "Static Resource Upload"
+                                                   multiple="{!v.multiple}"
+                                                   accept="{!v.accept}"
+                                                   disabled="{!v.bShowFileUpload}"
+                                                   recordId="{!v.recordId}"
+                                                   onuploadfinished="{! c.handleUploadFinished }"/> -->                            
+			    <lightning:input type="text" name="DocumentName" label="{!$Label.c.name}" aura:id="fileName" required="true" value="{!v.fileName}" placeholder= "{!$Label.c.RE_NoFileSelected}" onchange= "{!c.onFillingDocName}"/>  
+                           <!-- Reverted as this was causing deployment error
+			   <lightning:input type="text" name="DocumentName" label="{!$Label.c.name}" aura:id="fileName" required="true" value="{!v.fileName}" placeholder= "{!$Label.c.RE_NoFileSelected}" onchange= "{!c.onFillingDocName}"/>   -->                         
+                            <lightning:select aura:id="fltype" name="select1" label="{!$Label.c.type}" required="true">
+                                <aura:iteration items="{!v.lstDoctypes}" var="Doctype">
+                                    <option text="{!Doctype.label}" value ="{!Doctype.value}"></option>
+                                </aura:iteration>
+                            </lightning:select>
+                            <div class="modal-lg-footer-button slds-m-top_large">
+                                <lightning:button class="slds-m-right_xx-small slds-p-horizontal_x-large" variant="neutral" label="{!$Label.c.cancel}" title="{!$Label.c.cancel}" onclick="{! c.HideMe }"/>
+                                <div onkeydown="{!c.moveFocusToTop}">
+                                <lightning:button class="slds-p-horizontal_x-large" variant="brand" label="{!$Label.c.upload}" title="{!$Label.c.upload}" onclick="{! c.handleSave }"/>
+                            </div>
+                        </div>
+                        </div>
+                         <!--<aura:if isTrue="true">-->
+                         <aura:if isTrue="{!v.Spinner}">
+                            <div class="file-upload-spinner">
+                                <lightning:spinner alternativeText="Loading" size="large" /> 
+                            </div>
+                         </aura:if>
+                    </div>
+                </section>
+                <div class="slds-backdrop slds-backdrop_open">
+                </div>
+            </div>
+            
+            
+            <aura:set attribute="else">
+                
+                <!-- Lightning Input with file type and on file change call the 'handleFilesChange' controller -->
+                <lightning:input aura:id="fuploader" onchange="{!c.handleFilesChange}" type="file" name="file" label="{!$Label.c.uploadfile}" multiple="false"/>
+                <!--<div class="slds-text-body_small slds-text-color_error">{!v.fileName} </div>-->
+                <br/>
+                
+                
+                <lightning:input type="text" name="DocumentName" label="{!$Label.c.documentname}" aura:id="fileName" value ="{!v.fileName}"/> 
+                <lightning:input name="DocumentType" label="{!$Label.c.Document_Type}" aura:id="fltype"/>
+                
+                
+                <lightning:button variant="brand" label="{!$Label.c.cancel}" title="{!$Label.c.cancel}" class="slds-m-left_x-small"/>
+                <lightning:button variant="brand" label="{!$Label.c.upload}" title="{!$Label.c.upload}" class="slds-m-left_x-small"/>
+            </aura:set>
+        </aura:if>
+    </aura:if>	
+    
+</aura:component>

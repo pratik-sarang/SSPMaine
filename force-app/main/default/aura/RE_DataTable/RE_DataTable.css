@@ -1,0 +1,126 @@
+.THIS .data-table{
+    height: 21.875rem;
+}
+.THIS .date-of-birth label{
+    color:t(RESecondaryGamma);
+    font-size: .875rem;
+    display: inline-block;
+    padding-top: .2rem;
+    margin-bottom: .125rem;
+}
+.THIS .date-of-birth input{
+    min-height:2rem;
+}
+.THIS .mobile-table{
+    display: none;
+}
+.THIS .textFieldWidth {
+    width: 95%;
+}
+.THIS .fieldDaysOpen .textFieldWidth {
+    width: 90%;
+}
+.THIS .fieldDaysOpen .daysTextField {
+    padding-top: 0.25rem;
+    margin-top: 0.125rem;
+}
+.THIS .itemsCenterAlign {
+    align-items: center;
+}
+.THIS .fieldCreated .uiInput--input .input, .THIS .fieldCreated .uiInput--input.input {
+    /*min-height: 0.0625rem;*/
+    min-height: 2rem;
+}
+.THIS .fieldCreated .uiInput--default .form-element__label {
+    color: t(RESecondaryGamma);
+    display: inline-block;
+    font-size: .875rem;
+    padding-right: .5rem;
+    padding-top: .25rem;
+    margin-bottom: .125rem;
+}
+.THIS .fieldClientName .cRE_CustomLookup .custom-lookup-results {
+    position: absolute;
+}
+.THIS .searchAction {
+    display: flex;
+}
+.THIS .searchAction .search-btn{
+    margin-left: auto;
+}
+.THIS .locationtable-cont .slds-table_header-fixed_container{
+    position:unset;
+}
+@media only screen and (max-width:768px){
+    .THIS .mobile-table{
+        display: block;
+        overflow:auto;
+    }
+    .THIS .locationtable-cont thead .slds-th__action,.THIS .locationtable-cont thead .slds-has-button-menu {
+        width:unset !important; 
+    }
+    .THIS .locationtable-cont thead .slds-cell-fixed {
+       position: relative; 
+    }
+    .THIS .locationtable-cont thead .slds-th__action-button{
+        top:-1rem;
+    }
+    .THIS .locationtable-cont tr th:not(last-child), .THIS .locationtable-cont tr td:not(last-child){
+        width: 200px!important;
+    }
+    .THIS .locationtable-cont tr th:last-child, .THIS .locationtable-cont tr td:last-child{
+        width: 50px!important;
+    }
+    .THIS .locationtable-cont .slds-scrollable_y > div{
+        overflow:auto;
+    }
+    .THIS .fieldDaysOpen .daysTextField {
+        padding-top: 0.25rem;
+        margin-top: 0;
+    }
+}
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) {
+    /* Iphone 6 */
+    .THIS .textFieldWidth {
+        width: 100%;
+    }
+    .THIS .fieldDaysOpen .textFieldWidth {
+        width: 100%;
+    }
+}
+@media all and (max-width : 1194px) {  
+    .THIS input,.THIS select{
+        line-height:1rem;
+    }
+    .THIS .fieldCreated .uiInput--input .input,.THIS .uiInput .input{
+        padding: .285rem 1rem;
+        font-size:t(RESizept8);
+    }
+    .THIS table[role="grid"] tr:nth-last-child(1) .slds-dropdown-trigger .slds-button + .slds-dropdown{
+        position: -webkit-sticky!important;
+    }
+    .THIS .fieldDaysOpen .daysTextField{
+        padding-top: 0;
+    }
+}
+@media all and (width : 1366px) and (height:1024px) and (orientation: landscape)  and (-webkit-min-device-pixel-ratio: 1.5) {  
+    .THIS .fieldCreated .uiInput--input .input,.THIS .uiInput .input{
+        padding: 0 1rem;
+        font-size:t(RESizept8);
+    }
+    .THIS .fieldDaysOpen .daysTextField{
+        padding-top: 0;
+    }
+}
+.THIS .has-error .form-element__help{
+    margin-top: 0.1rem;
+}
+.THIS .inlineRadio .slds-form-element__control .slds-radio{
+    display: inline-block;
+}
+.THIS .inlineRadio .slds-form-element__control{
+        display: inline-block;
+}
+.THIS .inlineRadio .slds-form-element__label{
+    padding-top: 0rem;
+}

@@ -1,0 +1,16 @@
+.THIS .hamburger svg{
+    cursor: pointer;
+    transform: rotate(90deg);
+}
+.THIS .hamburger{
+   padding: 1rem; 
+}
+.THIS .leftnav-expand{
+    cursor: pointer;
+    padding: 1rem;
+    transform: rotate(90deg);
+}
+.THIS .closebtn{
+    top: 1rem;
+    transform: rotate(-90deg);
+}   

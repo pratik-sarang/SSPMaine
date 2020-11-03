@@ -1,0 +1,49 @@
+<!--
+ * Component Name    : RE_OurTeamListView
+ * Owner             : DELOITTE CONSULTING
+ * Created Date      : 20/05/2019
+ * Description       : Our Team List View
+ *
+ *                            M O D I F I C A T I O N   L O G                                          
+ *
+ *  Date        Developer       Description                                                         
+ *  **************************************************************************
+ *  05/06/2019  PANKAJ M			Initial Development
+-->
+<aura:component controller="RE_DashboardCtrl" implements="forceCommunity:availableForAllPageTypes" access="global" >
+     <aura:attribute name="sObject" type="Object" default="Contact"/>
+    <aura:attribute name = "mycolumns" type="List"/>
+     <aura:attribute name = "agencyColumns" type="List"/>
+    <aura:attribute name="isAdmin" type="Boolean" default = "false"/>
+    <aura:attribute name="isAgencyAdmin" type="Boolean" default = "false"/>
+    <aura:attribute name="isSpinnerActive" type="Boolean"/>
+    <c:RE_UtilityServerCallerCmp aura:id="bSuper" isSpinnerActive="{!v.isSpinnerActive}"/>
+    <!--
+    <aura:attribute name = "mycolumns" type="List" default = "[
+            { label: 'FirstName', fieldName: 'FirstName', type: 'text',sortable : true},
+            { label: 'LastName', fieldName: 'LastName', type: 'text',sortable : true},
+            { label: 'Primary Location', fieldName: 'PrimaryLocation__c', type: 'text',sortable:'true'},
+            { label: 'Role', fieldName: 'PermissionsLevel__c', type: 'text',sortable:'true'},
+            { label: 'Training Complete', fieldName: 'TrainingLevel__c', type: 'text',sortable:'true'},
+			{ label: 'Phone No.', fieldName: 'Phone', type: 'Phone',sortable:'true'},
+            { label: 'Status', fieldName: 'Status__c', type: 'text',sortable:'true'},
+            { label: 'View', type:'action', typeAttributes:{rowActions: [
+                {label:'Edit' , name:'edit'}
+            ]}},
+        ]"/>
+	-->
+	<aura:handler name="init" value="{! this }" action="{! c.init }"/> 
+    <aura:attribute name="numberOfReords" type="Integer" default ="10"/>
+    <article>
+        <div class="headingContainer">
+            <h1 class="headingL1">{!$Label.c.ourteam}</h1>
+        </div>
+        <aura:if isTrue="{!v.isAdmin}">
+        
+        <c:RE_DataTable sObject="{!v.sObject}" numberOfReords = "{!v.numberOfReords}" mycolumns= "{!v.mycolumns}" iconImage="standard:apps"/>
+        </aura:if>
+        <aura:if isTrue="{!v.isAgencyAdmin}">
+        <c:RE_DataTable sObject="{!v.sObject}" numberOfReords = "{!v.numberOfReords}" mycolumns= "{!v.agencyColumns}" iconImage="standard:apps"/>
+             </aura:if>
+    </article>
+</aura:component>

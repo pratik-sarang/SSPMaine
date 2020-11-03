@@ -1,0 +1,162 @@
+/*css related to card expand collapse*/
+.THIS .card-opened .card-toggle-section{
+    display:block;
+}
+.THIS .card-opened .accordion-arrow{
+    transform:rotate(180deg);
+}
+.THIS .card-expand-view{
+    border-top:0.0625rem solid t(RElightGrey);
+}
+/***********************************/
+.THIS .resource-details-location{
+    margin-bottom:1.25rem;
+}
+.THIS .category-type-icon{
+    transform:translate(0,-0.1875rem);
+}
+.THIS .resource-details-heading .headingL1{
+    display: flex;
+    align-items: center;
+}
+.THIS.flash-text {
+    background-color:t(REPrimary);
+    color: t(REWhite);
+    font-size: t(RESize16);
+    display:flex;
+    justify-content:space-between;
+}
+.THIS.flash-text svg{
+    fill:t(REWhite);
+    cursor:pointer;
+}
+.THIS .resource-detail-back{
+    cursor:pointer;
+}
+.THIS .resource-name{
+    font-size:t(RESize16);
+}
+.THIS .card-btn-section .slds-button_brand svg{
+    fill:t(REWhite);
+    transform: translate(0,-0.125rem);
+}
+.THIS .resident-map-section iframe{
+    width:100%;
+}
+.THIS .resident-cards-section{
+    background-color:t(REMyPlanRBG);
+    box-shadow:0 -1rem 0 2rem t(REMyPlanRBG);
+}
+.THIS .other-resources-section{
+    background-color:t(REMyPlanRBG);
+    box-shadow:0 2rem 0 2rem t(REMyPlanRBG);
+}
+.THIS .resource-details-heading{
+    background:t(REWhite);
+    position: relative;
+    box-shadow: -2rem 0 0 0 t(REWhite);
+}
+.THIS .resource-details-location label{
+    display: table-column;
+}
+.THIS .card-more-info-section > div{
+    border-bottom:0.0625rem solid t(RElightGrey);
+    display:flex;
+    align-items:center;
+}
+.THIS .card-more-info-section_mobile > div{
+    border: 0;
+}
+.THIS .card-hours-section{
+    display:flex;
+    justify-content:space-between;
+}
+.THIS .card-day{
+    font-weight:t(REWeightBold);
+}
+/* Hide Back to List button on the Map for Resource Details Page*/
+.THIS .map-back-btn{
+    display:none;
+}
+.THIS .referenceItem{
+    background-color:t(RENavActiveBG);   
+    border-bottom:1px solid t(RElightGrey);
+    cursor:pointer;  
+}
+.THIS .referenceItem a{
+    color:t(REPageHeading);
+    display:inline;
+}
+.THIS .accordion-arrow svg{
+    height:1rem;
+    cursor:pointer;
+}
+.THIS .rotate-arrow{
+    transform:rotate(180deg);
+}
+.THIS .card-specific-info-section .body1:empty{
+    min-height:1rem;
+}
+.THIS.background-color-share{
+    background-color:t(REMyPlanRBG);
+}
+
+/*Icon circular border*/
+.THIS .slds-icon_container.icon-border{
+    border: 2px solid t(REPrimary);
+    padding:0.5rem;
+    border-radius: 1.5rem;
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation:landscape) {
+  /* For Ipad landscape layouts only */
+    .THIS .card-hours-section div:nth-child(2) {
+        padding-left: 0.75rem;
+    }
+    .THIS .card-btn-section .slds-button_brand{
+        padding: 0 0.75rem 0 0.75rem;
+    }
+    .THIS .card-btn-section .slds-button_brand svg{
+        transform: translate(0,-0.0625rem);
+    }
+}
+@media all and (max-width : 1024px) {  
+    .THIS .resource-details-hours{
+        padding-left:0;
+    }
+    .THIS .programinfo-and-language{
+        padding-left:0;
+    }
+    .THIS .resident-map-section{
+        padding-left:3rem;
+    }
+}
+@media all and (max-width : 767px) {
+    .THIS .resident-map-section{
+        padding-left:0;
+    }
+}
+.THIS .slds-icon-action-approval{
+    background-color: t(REResourceGrey);
+}
+.THIS .slds-icon-action-approval.slds-is-selected{
+    background-color: t(REPrimary);
+}
+.THIS #favorite-selected-img{
+    width: 1rem;
+}  
+.THIS .favorite-container{
+    border: 1px t(RElightGreyOpacity) solid;
+    border-radius: 0.3rem;
+    background: t(REMyPlanRBG);
+    padding: 0.35rem;
+    margin-right: 1rem;
+}
+.THIS .favorite-container img{
+    width: 1.5rem;
+}
+.THIS lightning-formatted-text{
+    display:block;
+}
+.THIS .search-spinner{
+    position: fixed;
+}

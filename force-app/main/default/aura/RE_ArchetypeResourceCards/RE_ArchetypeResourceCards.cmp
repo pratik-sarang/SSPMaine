@@ -1,0 +1,402 @@
+<!--
+  @File Name          : RE_ArchetypeResourceCards.cmp
+  @Description        : 
+  @Author             : ChangeMeIn@UserSettingsUnder.SFDoc
+  @Group              : 
+  @Last Modified By   : ChangeMeIn@UserSettingsUnder.SFDoc
+  @Last Modified On   : 6/18/2020, 4:04:26 PM
+  @Modification Log   : 
+  Ver       Date            Author      		    Modification
+  1.0    6/18/2020   ChangeMeIn@UserSettingsUnder.SFDoc     Initial Version
+-->
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" extends ="c:RE_CreateFavorites" controller="RE_ArchetypeCtrl">
+    <aura:attribute name="archetypeId" type="String"/>
+    <aura:attribute name="subArchetype" type="String"/>
+    <aura:attribute name="zipcode" type="String"/>
+    <aura:attribute name="goalDomain" type="String" default="Housing"/>
+    <aura:attribute name="archetypeResource" type="Object"/>
+    <aura:attribute name="domainObj" type="Object"/>
+    <aura:attribute name="archetypeAllResource" type="Object"/>
+    <aura:attribute name="mapOptions" type="Object" default='{"zoom": 10,"mapTypeControl":false}' description="this atrribute is used to display default zoom size on the Map."/>
+    <aura:attribute name="showResourceModal" type="Boolean" default="false" description="this attribute is used to show and hide resource modal."/>
+    <aura:attribute name="wrapdata" type="Object" description="This attribute is is used to store and pass a particular wrapper data out of the list."/>
+    <aura:attribute name="currentUrl" type="String" /> 
+    <aura:attribute name="loadmorelabel" type="String" default = "See All Resources"/>
+    <aura:attribute name="resourcedata" type="Object" description = "storing resource response" />
+    <aura:attribute name="methodRef" type="Aura.action"/>
+    <aura:attribute name="resourceName" type="String"/>
+    <!--For Connect to Resource -->
+    <aura:attribute name="selectedResourceId" type="String" />
+    <aura:attribute name="selectedResourceAccountId" type="String" /> 
+    <aura:attribute name="selectedLocation" type="String" description= "this attribute is used to Location Filter."/>
+    <aura:attribute name="isSelectedResConDisabled" type="boolean" default="false"/>
+    <!-- Permission Checks Boolean -->
+    <aura:attribute name ="isResident" type ="Boolean" />
+    <aura:attribute name ="isGuest" type ="Boolean" />
+    <aura:attribute name ="bShowResourceDetail" type ="boolean" default="true" />
+    <aura:attribute name ="isStatePrgm" type ="boolean" default="false" />
+    <aura:attribute name ="otherResConn" type ="boolean" default="false" />
+    <aura:attribute name="bShowLoginModal" type="Boolean" default="false"/>
+    <aura:attribute name ="userlocation" type ="String" />
+    
+    <!-- display map on show less/show more click -->
+    <aura:attribute name="onloadmapdata" type="Object"  description = "storing map data" />
+    <aura:attribute name="onloadmapoption" type="Object"  description = "storing map data" />
+    <aura:attribute name="onloadmapcenter" type="Object"  description = "storing map data" />
+    <aura:attribute name="mapdata" type="List" description="This attribute stores Resource data use to show in Map" />
+    <!-- added for show less -->
+    <aura:attribute name="showlessmapdata" type="Object"  description = "storing map data" />
+    
+    <!-- Attributes used to display Pop up-->
+    <aura:handler name="Modal_ParametersEvent" event="c:RE_ModalParameters" action="{!c.modalParametersHandler}"/>
+    <aura:attribute name="cartOptIn" type="Boolean" default="false"/>
+    <aura:attribute name="isConsentAgreed" type="Boolean" default="false"/>
+    <aura:attribute name="selectedCardValue" type="String"/>
+    <aura:attribute name="selectedCardName" type="String"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doinIt}"/>
+    <aura:handler name="change" value="{!v.resourcedata}" action="{!c.doinIt}"/>
+    <aura:method name="updateResource" action="{!c.doinIt}" access="PUBLIC">
+        
+    </aura:method>
+    <aura:registerEvent name="mapDataEvent" type="c:RE_ViewMapDataEvent"/>
+    <!--Changes done for server call from a common place-->
+    <aura:attribute name="isSpinnerActive" type="Boolean"/>
+    <aura:attribute name="displayLoader" type = "Boolean" default = "false" 
+                    description="this attribute is used to display loader."/>
+    <aura:attribute name="selectedHour" type="List"/>
+    <c:RE_UtilityServerCallerCmp aura:id="bSuper" isSpinnerActive="{!v.isSpinnerActive}"/>
+    <!-- -->
+    <aura:if isTrue = "{!v.displayLoader}">
+            <div class="backgroundInverse slds-spinner_container">
+            <lightning:spinner alternativeText="Loading" variant="brand" class="search-spinner" />
+            </div>
+    </aura:if>
+    <aura:if isTrue="{!v.bShowResourceDetail}">
+        <aura:if isTrue="{!$Browser.isPhone}">
+            <div class="resource-cards-section slds-hyphenate">
+                <div class="caption2Grey slds-m-bottom_xx-small">Showing {!v.archetypeResource.resourceCount} Resources</div>
+                <aura:iteration items="{!v.archetypeResource.lstCategoryBlock}" indexVar="grandparentkey" var="categoryIndex"> <!-- Domain -->
+                    <div class="{!categoryIndex.collapsed ? 'particular-resource category-closed':'particular-resource'}" id="{!'category_'+grandparentkey}">
+                        <aura:if isTrue="{!categoryIndex.lstGoalBlock.length > 0}">
+                            <div class="slds-m-bottom_small cards-section-heading slds-grid slds-wrap slds-p-horizontal_medium slds-p-vertical_x-small">
+                                <div class="slds-large-size_1-of-12 slds-medium-size_1-of-12 slds-small-size_2-of-12 slds-x-small-size_2-of-12 slds-p-top_x-small">
+                                    <lightning:formattedRichText class="cards-section-heading-icon" value="{!categoryIndex.strDomainImage}" />
+                                </div>
+                                <div class="slds-p-left_small slds-large-size_11-of-12 slds-medium-size_11-of-12 slds-small-size_9-of-12 slds-x-small-size_9-of-12">
+                                    <!--<div class="cards-section-resourcetype">{!categoryIndex.strDomainCategory}</div>-->
+                                    <div class="cards-section-category">{!categoryIndex.strDomain}</div>
+                                </div>
+                                <div class="slds-small-size_1-of-12 slds-x-small-size_1-of-12 category-arrow-section">
+                                    <span id="{!'categoryarrow_'+grandparentkey}" onclick="{!c.handleCategoryClick}" data-category="{!categoryIndex.strDomain}">
+                                        <lightning:icon iconName="utility:chevronup" size="small" alternativeText="arrow" />
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="category-data" id="{!'categorydata_'+grandparentkey}">
+                                <aura:iteration items="{!categoryIndex.lstGoalBlock}" indexVar="parentkey" var="goalItem"> <!-- Goal -->
+                                <div class="cards-goal" id="{!'goal_'+grandparentkey+'-'+parentkey}">
+                                    <div class="slds-p-horizontal_small slds-p-bottom_small">
+                                        <div class="body1 goal-title">{!goalItem.goal}</div>
+                                        <div class="caption2Grey">{!goalItem.goalDescription}</div>
+                                    </div>
+                                    <aura:if isTrue="{!goalItem.lstResourceTile.length > 0}">
+                                        <aura:iteration items="{!goalItem.lstResourceTile}" indexVar="key" var="itemResource"> <!-- Resource -->
+                                            <div id="{!'card_'+grandparentkey+'-'+parentkey+'-'+key}" class="details-card resource-card slds-m-bottom_xxx-small"> <!-- key>1?'display-none -->
+                                                <div class="box-shadow collapsed-section myPlanCard-hover">
+                                                    <aura:if isTrue = "{!itemResource.accountIsClaimed}">
+                                                        <span class="partner-name slds-show_inline-block slds-p-vertical_xxx-small slds-p-horizontal_small">{!$Label.c.kypartner}</span>
+                                                    </aura:if>
+                                                    <!-- added class for get the resource name by [CHFS Developer-Mohan-11/18/19] for GA --> 
+                                                    <div class="card-info-section slds-p-vertical_x-small dd-resource-list-item-container" data-resource-name="{!itemResource.resourceName}" data-resource-id="{!itemResource.resourceId}">
+                                                        <div class="slds-grid slds-wrap slds-p-horizontal_small">
+                                                            <div class="slds-large-size_9-of-12 slds-medium-size_9-of-12 slds-small-size_7-of-12 slds-x-small-size_6-of-12">
+                                                                <div class="caption2Grey">{!itemResource.accountProviderName}</div>
+                                                                <!--<lightning:button value="{!itemResource}" label="{!itemResource.resourceName}" ariaLabel="{!itemResource.resourceName + ' Of ' + itemResource.locationAddress1 + ' location of ' + itemResource.accountProviderName}"
+                                                                                variant="base" class="body1 blueBody slds-truncate slds-m-right_small resource-link dd-ga-btn-resource-link"
+                                                                                onclick="{!c.navigateToUrl}"/> -->
+                                                                <!--RE_Release 1.3 – Bug 367180 - Payal Dubela(06/05/2020)-->
+                                                                <a href="javascript:void(0)" target="_blank" data-cardgrandparent = "{!grandparentkey}" data-cardparent = "{!parentkey}" data-cardkey="{!key}" onclick="{! c.navigateToUrl }" aria-label="{!itemResource.resourceName + ' Of ' + itemResource.locationAddress1 + ' location of ' + itemResource.accountProviderName}" class="body1 blueBody slds-m-right_small resource-link dd-ga-btn-resource-link-archetype">{!itemResource.resourceName}</a> 
+                                                                <aura:if isTrue="{!itemResource.resourceMiles != ''}">
+                                                                    <div class="slds-truncate caption2Grey"><span class="slds-m-right_xx-small">{!itemResource.resourceMiles}</span> <span> {!!empty(itemResource.resourceMiles)?$Label.c.miles:'N/A'}</span></div>
+                                                                </aura:if> 
+                                                            </div>
+                                                            <!-- added class for connect by [CHFS Developer-Mohan-11/18/19] for GA --> 
+                                                            <div class="slds-large-size_3-of-12 slds-medium-size_3-of-12 slds-small-size_5-of-12 slds-x-small-size_6-of-12">
+                                                                <div class="card-btn-section slds-float_right">
+                                                                    <aura:if isTrue ="{!v.isResident}">
+                                                                        <aura:if isTrue ="{!!itemResource.isConnectButtonDisabled}">
+                                                                            <lightning:button variant="brand" name ="othResConn" ariaLabel="{!'Connect to ' + itemResource.resourceName + ' Of ' + itemResource.locationAddress1 + ' location of ' + itemResource.accountProviderName}" class="dd-ga-btn-resource-connect" value="{!itemResource}" onclick="{!c.handleConnect}" disabled = "{!itemResource.isDisabled}">{!$Label.c.connect}</lightning:button>
+                                                                            <aura:set attribute="else">
+                                                                                <aura:if isTrue="{!if(itemResource.objReferral.Status__c == 'Draft', true, false)}">
+                                                                                    <lightning:button variant="brand" ariaLabel="{!'Connect to ' + itemResource.resourceName + ' Of ' + itemResource.locationAddress1 + ' location of ' + itemResource.accountProviderName}" name ="searchResConn" onclick="{!c.handleConnect}" class="dd-ga-btn-resource-connect" value="{!itemResource}" disabled = "{!itemResource.isDisabled}">{!$Label.c.connect}</lightning:button>
+                                                                                    <aura:set attribute="else">
+                                                                                        <lightning:button  variant="brand" label="{!$Label.c.InPlan}" title="{!$Label.c.InPlan}" disabled ="true" />
+                                                                                    </aura:set>
+                                                                                </aura:if>
+                                                                            </aura:set>
+                                                                        </aura:if>
+                                                                    </aura:if>
+                                                                    <aura:if isTrue ="{!v.isGuest}">
+                                                                        <lightning:button  variant="brand" ariaLabel="{!'Connect to ' + itemResource.resourceName + ' Of ' + itemResource.locationAddress1 + ' location of ' + itemResource.accountProviderName}" class="dd-ga-btn-resource-connect" onclick="{!c.handleConnect}" disabled = "{!itemResource.isDisabled}">{!$Label.c.connect}</lightning:button>
+                                                                    </aura:if>
+                                                                    <aura:if isTrue ="{!!or(v.isGuest,v.isResident)}">
+                                                                        <aura:if isTrue ="{!!(empty(itemResource.favoriteId))}">
+                                                                            <div aura:id="favorite-selected" class="favorite-container" data-locresid ="{!itemResource.locationResourceId}" data-orgname ="{!itemResource.accountProviderName}" data-resname="{!itemResource.resourceName}" onclick="{!c.addRemoveFavorites}"><img id="{!'favorite-selected_'+ key}" title="{!card}" src="{!$Resource.RE_MyFavorite + '/heartred.svg'}" alt="{!card}" /></div>
+                                                                            <aura:set attribute="else">
+                                                                                <div aura:id="favorite-selected" class="favorite-container" data-locresid ="{!itemResource.locationResourceId}" data-orgname ="{!itemResource.accountProviderName}" data-resname="{!itemResource.resourceName}" onclick="{!c.addRemoveFavorites}"><img id="{!'favorite-selected_'+ key}" title="{!card}" src="{!$Resource.RE_MyFavorite + '/heartgray.svg'}" alt="{!card}" /></div>
+                                                                            </aura:set>
+                                                                        </aura:if>
+                                                                        <lightning:button  variant="brand" ariaLabel="{!'Refer to ' + itemResource.resourceName + ' Of ' + itemResource.locationAddress1 + ' location of ' + itemResource.accountProviderName}" name="othResRef" value="{!itemResource}" class="dd-ga-btn-resource-refer" onclick="{!c.createReferral}">{!$Label.c.refer}</lightning:button>    
+                                                                    </aura:if>
+                                                                </div>
+                                                            </div>
+                                                        </div> 
+                                                        <div class="card-toggle-section display-none">
+                                                            <div class="slds-p-horizontal_large slds-p-vertical_x-large card-more-info-section card-navigation-section slds-text-align_center">
+                                                                <span class="slds-show_inline-block slds-m-right_medium">
+                                                                    <a href="{! $Label.c.tel+itemResource.locationPhone}" class="slds-p-vertical_small slds-p-horizontal_small"><lightning:icon iconName="utility:call" alternativeText="{!$Label.c.phone}"/></a>
+                                                                    <div class="slds-m-top_small card-navigation-txt">{!$Label.c.call}</div>
+                                                                </span>
+                                                                <span class="slds-show_inline-block slds-m-right_medium">
+                                                                    <a href="{! $Label.c.mailto+itemResource.locationEmail}" class="slds-p-vertical_small slds-p-horizontal_small"><lightning:icon iconName="utility:email" alternativeText="{!$Label.c.email}"/></a>
+                                                                    <div class="slds-m-top_small card-navigation-txt">{!$Label.c.email_txt}</div>
+                                                                </span>
+                                                                <span class="slds-show_inline-block slds-m-right_medium">
+                                                                    <a onclick="{!c.openWebsite}" title="{!itemResource.locationWebsite ? itemResource.locationWebsite : itemResource.accountWebsite}" class="slds-p-vertical_small slds-p-horizontal_small"><lightning:icon iconName="utility:world" alternativeText="{!$Label.c.Website}"/></a>
+                                                                    <div class="slds-m-top_small card-navigation-txt">{!$Label.c.Website}</div>
+                                                                </span>
+                                                                <span class="slds-show_inline-block">
+                                                                    <a href="{! $Label.c.mapsUrl+itemResource.locationAddressFinal}" target="_blank" class="slds-p-vertical_small slds-p-horizontal_small"><lightning:icon iconName="utility:checkin" alternativeText="{!$Label.c.address}"/></a>
+                                                                    <div class="slds-m-top_small card-navigation-txt">{!$Label.c.address}</div>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    <!-- added class for expand by [CHFS Developer-Mohan-11/18/19] for GA -->
+                                                        <div class="dd-ga-btn-resource-expand-resource">
+                                                            <span class="toggle-arrow" role="link" tabindex="0" id="{!'arrow_'+grandparentkey+'-'+parentkey+'-'+key}" aria-label="{!'Accordion arrow of ' + itemResource.resourceName + ' Of ' + itemResource.locationAddress1 + ' location of ' + itemResource.accountProviderName}" onclick="{!c.handleAccordionClick}" onkeydown="{!c.handleAccordionClick}" name="{!itemResource}">
+                                                                <lightning:icon iconName="utility:chevrondown" class="accordion-arrow slds-align_absolute-center slds-col_bump-left" size="x-small"/>
+                                                            </span>
+                                                        </div>   
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </aura:iteration>
+                                        <aura:set attribute="else">
+                                            <div class="details-card slds-m-left_x-large resource-card slds-m-bottom_xxx-small">                                             
+                                                <div class="body1 blueBody slds-truncate slds-m-right_small">
+                                                    {!$Label.c.RE_CallCenter}
+                                                </div>
+                                            </div><br></br>
+                                        </aura:set>
+                                    </aura:if>
+                                    <div class="card-all-resourcelink slds-text-align_right slds-p-vertical_xx-small">
+                                        <lightning:button class="see-all all-resource-icon see-all-resource-btn slds-m-left_xx-small" name = "{!'seeall_'+grandparentkey+'-'+parentkey}"  variant="base" value="{!goalItem}" title="See All Resources" onclick="{! c.loadMoreResource }" /><lightning:icon class="all-resource-icon slds-m-left_xx-small" iconName="utility:left_align_text" alternativeText="All Resource"/>
+                                    </div>
+                                </div>
+                            </aura:iteration>
+                            </div>
+                        </aura:if>
+                    </div>
+                </aura:iteration>
+            </div>
+            <aura:set attribute="else">
+                <div class="resource-cards-section">
+                    <div class="caption2Grey slds-m-bottom_xx-small">{!$Label.c.RE_Showing_Arch}&nbsp;{!v.archetypeResource.resourceCount}&nbsp;{!$Label.c.OurResources}</div>
+                    <aura:iteration items="{!v.archetypeResource.lstCategoryBlock}" indexVar="grandparentkey" var="categoryIndex"> <!-- Domain -->
+                        <div class="{!categoryIndex.collapsed ? 'particular-resource category-closed':'particular-resource'}" id="{!'category_'+grandparentkey}">
+                            <aura:if isTrue="{!categoryIndex.lstGoalBlock.length > 0}">
+                                <div class="{!(categoryIndex.strDomainCategory == 'Basic Resources'?'basic' : (categoryIndex.strDomainCategory == 'Sustaining Resources'?'sustaining':(categoryIndex.strDomainCategory == 'Stabilizing Resources'?'stabilizing':'')))+' slds-m-bottom_small cards-section-heading slds-grid slds-wrap slds-p-horizontal_medium slds-p-vertical_x-small'}">
+                                    <div class="slds-large-size_1-of-12 slds-medium-size_1-of-12 slds-small-size_2-of-12 slds-x-small-size_2-of-12 slds-p-top_x-small">
+                                        <lightning:formattedRichText class="cards-section-heading-icon" value="{!categoryIndex.strDomainImage}" />
+                                    </div>
+                                    <div class="slds-p-left_small slds-large-size_10-of-12 slds-medium-size_10-of-12 slds-small-size_9-of-12 slds-x-small-size_9-of-12">
+                                        <!--<div class="cards-section-resourcetype">{!categoryIndex.strDomainCategory}</div>-->
+                                        <div class="cards-section-category">{!categoryIndex.strDomain}</div>
+                                    </div>
+                                    <div class="slds-large-size_1-of-12 slds-medium-size_1-of-12 category-arrow-section">
+                                        <span id="{!'categoryarrow_'+grandparentkey}" onclick="{!c.handleCategoryClick}" data-category="{!categoryIndex.strDomain}">
+                                            <lightning:icon iconName="utility:chevronup" size="small" alternativeText="arrow" />
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="category-data" id="{!'categorydata_'+grandparentkey}">
+                                     <aura:iteration items="{!categoryIndex.lstGoalBlock}" indexVar="parentkey" var="goalItem"> <!-- Goal -->
+                                    <div class="cards-goal" id="{!'goal_'+grandparentkey+'-'+parentkey}">
+                                        <div class="slds-p-bottom_small">
+                                            <div class="body1 goal-title">{!goalItem.goal}</div>
+                                            <div class="caption2Grey">{!goalItem.goalDescription}</div>
+                                        </div>
+                                        <aura:if isTrue="{!goalItem.lstResourceTile.length > 0}">
+                                            <aura:iteration items="{!goalItem.lstResourceTile}" indexVar="key" var="itemResource"> <!-- Resource -->
+                                                <!-- added class for get the resource name by [CHFS Developer-Mohan-11/18/19] for GA --> 
+                                                <div id="{!'card_'+grandparentkey+'-'+parentkey+'-'+key}" class="details-card slds-m-left_x-large resource-card slds-m-bottom_xxx-small"> <!-- key>1?'display-none -->
+                                                    <div class="box-shadow collapsed-section myPlanCard-hover dd-resource-list-item-container" data-resource-name="{!itemResource.resourceName}" data-resource-id="{!itemResource.resourceId}">
+                                                        <aura:if isTrue = "{!itemResource.accountIsClaimed}">
+                                                            <span class="partner-name slds-show_inline-block slds-p-vertical_xxx-small slds-p-horizontal_small">{!$Label.c.kypartner}</span>
+                                                            <aura:set attribute="else">
+                                                                <span class="partner-name-blank">&nbsp;</span> 
+                                                            </aura:set>
+                                                        </aura:if>
+                                                        <div class="card-info-section slds-p-vertical_x-small">
+                                                            <div class="slds-grid slds-wrap slds-p-horizontal_medium">
+                                                                <div class="slds-large-size_8-of-12 slds-medium-size_9-of-12 slds-small-size_7-of-12 slds-x-small-size_7-of-12">
+                                                                    <div class="caption2Grey">{!itemResource.accountProviderName}</div>
+                                                                    <!--<lightning:button value="{!itemResource}" label="{!itemResource.resourceName}" ariaLabel="{!itemResource.resourceName + ' Of ' + itemResource.locationAddress1 + ' location of ' + itemResource.accountProviderName}"
+                                                                                    variant="base" class="body1 blueBody slds-truncate slds-m-right_small resource-link dd-ga-btn-resource-link"
+                                                                                    onclick="{!c.navigateToUrl}"/>-->
+                                                                    <!--RE_Release 1.3 – Bug 367180 - Payal Dubela(06/05/2020)-->
+                                                                    <a href="javascript:void(0)" target="_blank" data-cardgrandparent = "{!grandparentkey}" data-cardparent = "{!parentkey}" data-cardkey="{!key}" onclick="{! c.navigateToUrl }" aria-label="{!itemResource.resourceName + ' Of ' + itemResource.locationAddress1 + ' location of ' + itemResource.accountProviderName}" class="body1 blueBody slds-m-right_small resource-link dd-ga-btn-resource-link-archetype">{!itemResource.resourceName}</a>
+                                                                    <aura:if isTrue="{!itemResource.resourceMiles != ''}">
+                                                                        <div class="slds-truncate caption2Grey"><span class="slds-m-right_xx-small">{!itemResource.resourceMiles}</span> <span> {!!empty(itemResource.resourceMiles)?$Label.c.miles:'N/A'}</span></div>
+                                                                    </aura:if>  
+                                                                    
+                                                                </div>
+                                                            <!-- added class for connectand Refer  by [CHFS Developer-Mohan-11/18/19] for GA --> 
+                                                                <div class="slds-large-size_4-of-12 slds-medium-size_3-of-12 slds-small-size_5-of-12 slds-x-small-size_5-of-12">
+                                                                    <div class="card-btn-section slds-p-top_xx-small slds-float_right">
+                                                                        <aura:if isTrue ="{!v.isResident}">
+                                                                            <aura:if isTrue ="{!!itemResource.isConnectButtonDisabled}">
+                                                                                <lightning:button variant="brand" name ="othResConn" class="dd-ga-btn-resource-connect" value="{!itemResource}" onclick="{!c.handleConnect}" disabled = "{!itemResource.isDisabled}">{!$Label.c.connect}</lightning:button>
+                                                                                <aura:set attribute="else">
+                                                                                    <aura:if isTrue="{!if(itemResource.objReferral.Status__c == 'Draft', true, false)}">
+                                                                                        <lightning:button variant="brand" ariaLabel="{!'Connect to ' + itemResource.resourceName + ' Of ' + itemResource.locationAddress1 + ' location of ' + itemResource.accountProviderName}" name ="searchResConn" onclick="{!c.handleConnect}" class="dd-ga-btn-resource-connect" value="{!itemResource}" disabled = "{!itemResource.isDisabled}">{!$Label.c.connect}</lightning:button>
+                                                                                        <aura:set attribute="else">
+                                                                                            <lightning:button  variant="brand" label="{!$Label.c.InPlan}" title="{!$Label.c.InPlan}"  disabled ="true" />
+                                                                                        </aura:set>
+                                                                                    </aura:if>
+                                                                                </aura:set>
+                                                                            </aura:if>
+                                                                        </aura:if>
+                                                                        <aura:if isTrue ="{!v.isGuest}">
+                                                                            <lightning:button  variant="brand" ariaLabel="{!'Connect to ' + itemResource.resourceName + ' Of ' + itemResource.locationAddress1 + ' location of ' + itemResource.accountProviderName}" class="dd-ga-btn-resource-connect" onclick="{!c.handleConnect}" disabled = "{!itemResource.isDisabled}">{!$Label.c.connect}</lightning:button>
+                                                                        </aura:if>
+                                                                        <aura:if isTrue ="{!!or(v.isGuest,v.isResident)}">
+                                                                            <aura:if isTrue ="{!!(empty(itemResource.favoriteId))}">
+                                                                                <div aura:id="favorite-selected" class="favorite-container" data-locresid ="{!itemResource.locationResourceId}" data-orgname ="{!itemResource.accountProviderName}" data-resname="{!itemResource.resourceName}" onkeydown="{!c.addRemoveFavorites}" onclick="{!c.addRemoveFavorites}" tabindex="0"><img id="{!'favorite-selected_'+ key}" aria-roledescription="button" title="{!$Label.c.remove_favourite}"  src="{!$Resource.RE_MyFavorite + '/heartred.svg'}" alt="{!$Label.c.remove_favourite}" /></div>
+                                                                                <aura:set attribute="else">
+                                                                                    <div aura:id="favorite-selected" class="favorite-container" data-locresid ="{!itemResource.locationResourceId}" data-orgname ="{!itemResource.accountProviderName}" data-resname="{!itemResource.resourceName}" onkeydown="{!c.addRemoveFavorites}" onclick="{!c.addRemoveFavorites}" tabindex="0"><img id="{!'favorite-selected_'+ key}" aria-roledescription="button" title="{!$Label.c.add_favorite}" src="{!$Resource.RE_MyFavorite + '/heartgray.svg'}" alt="{!$Label.c.add_favorite}" /></div>
+                                                                                </aura:set>
+                                                                            </aura:if>
+                                                                            <lightning:button  variant="brand" ariaLabel="{!'Refer to ' + itemResource.resourceName + ' Of ' + itemResource.locationAddress1 + ' location of ' + itemResource.accountProviderName}" name="othResRef" value="{!itemResource}" class="dd-ga-btn-resource-refer" onclick="{!c.createReferral}">{!$Label.c.refer}</lightning:button>    
+                                                                        </aura:if>
+                                                                        
+                                                                    </div>
+                                                                </div>
+                                                                <!-- <div class="slds-align_absolute-center">
+                                                        <lightning:icon id="{!'arrow_'+grandparentkey+'-'+parentkey+'-'+key}" title="{!itemResource}" iconName="utility:chevrondown" class="accordion-arrow slds-col_bump-left" alternativeText="accordion arrow" size="x-small" onclick="{!c.handleAccordionClick}"/>                 
+                                                    </div> -->
+                                                            </div>
+                                                            
+                                                            <div class="card-toggle-section display-none">
+                                                                <div> 
+                                                                    <div class="slds-p-horizontal_medium slds-p-top_x-small">
+                                                                        <p class="caption2 card-description" id="{!'desc-'+grandparentkey+'-'+parentkey+'-'+key}" role="link" tabindex="0">{!itemResource.resourceDescription}</p>
+                                                                        <div class="slds-grid slds-wrap  slds-p-top_x-small card-footer-btn-section">
+                                                                            <div class="slds-large-size_9-of-12 slds-medium-size_9-of-12 slds-small-size_7-of-12 slds-x-small-size_7-of-12">
+                                                                                <!--<lightning:button class="slds-show_inline-block slds-p-horizontal_small more-details" value="{!itemResource}" title="{!$Label.c.moredetails}" onclick="{! c.viewResourceDetails }">{!$Label.c.moredetails}<lightning:icon iconName="utility:forward_up" class="more-details-arrow slds-m-left_xx-small" alternativeText="accordion arrow"/></lightning:button>-->
+                                                                            </div>
+                                                                            <div class="slds-large-size_3-of-12 slds-medium-size_3-of-12 slds-small-size_5-of-12 slds-x-small-size_5-of-12">
+                                                                                <lightning:button class="slds-p-horizontal_medium slds-float_right dd-ga-btn-resource-share" value="{!itemResource}" onclick="{!c.showResourceModal}">{!$Label.c.RE_Share}<lightning:icon iconName="utility:new_window" class="slds-m-left_xxx-small" alternativeText="share"/></lightning:button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="slds-m-top_medium card-more-info-section">
+                                                                        <aura:if isTrue="{!not(empty(itemResource.locationPhone))}">
+                                                                        <div class="slds-grid slds-wrap slds-p-vertical_x-small">
+                                                                            <div class="slds-large-size_1-of-12 slds-size_1-of-12 slds-p-left_medium"><lightning:icon iconName="utility:call" alternativeText="{!$Label.c.phone}"/></div>
+                                                                            <div class="slds-large-size_11-of-12 slds-size_11-of-12 body1 slds-p-left_x-small info-padding"><a href="{! 'tel:'+itemResource.locationPhone}">{!itemResource.locationPhone}</a></div>
+                                                                        </div>
+                                                                        </aura:if>
+                                                                        <!--<div class="slds-grid slds-wrap slds-p-vertical_x-small">
+                                                                            <div class="slds-large-size_1-of-12 slds-size_1-of-12 slds-p-left_medium"><lightning:icon iconName="utility:email" alternativeText="accordion arrow"/></div>
+                                                                            <div class="slds-large-size_11-of-12 slds-size_11-of-12 body1 slds-p-left_x-small info-padding">{!itemResource.locationEmail}</div>
+                                                                        </div> -->
+                                                                        <aura:if isTrue="{!or(not(empty(itemResource.locationWebsite)),not(empty(itemResource.accountWebsite)))}">
+                                                                        <div class="slds-grid slds-wrap slds-p-vertical_x-small">
+                                                                            <div class="slds-large-size_1-of-12 slds-size_1-of-12 slds-p-left_medium"><lightning:icon iconName="utility:world" alternativeText="{!$Label.c.Website}"/></div>
+                                                                            <div class="slds-large-size_11-of-12 slds-size_11-of-12 body1 slds-p-left_x-small info-padding">
+                                                                                <a onclick="{!c.openWebsite}" href="javascript:void(0)" title="{!itemResource.locationWebsite ? itemResource.locationWebsite : itemResource.accountWebsite}">{!itemResource.locationWebsite ? itemResource.locationWebsite : itemResource.accountWebsite}</a>
+                                                                                <!-- <a onclick="{!c.openWebsite}" href="javascript:void(0)" title="{!itemResource.accountWebsite}">{!itemResource.accountWebsite}</a> -->
+                                                                            </div>
+                                                                        </div>
+                                                                        </aura:if>
+                                                                        <aura:if isTrue="{!not(empty(itemResource.locationAddressFinal))}">
+                                                                        <div class="slds-grid slds-wrap slds-p-vertical_x-small">
+                                                                            <div class="slds-large-size_1-of-12 slds-size_1-of-12 slds-p-left_medium"><lightning:icon iconName="utility:checkin" alternativeText="{!$Label.c.address}"/></div>
+                                                                            <!--<div class="slds-large-size_11-of-12 body1 slds-p-left_x-large">{!itemResource.locationAddress1},{!itemResource.locationAddress2},{!itemResource.locationCity},{!itemResource.locationState},{!itemResource.locationZipcode}</div>-->
+                                                                            <div class="slds-large-size_11-of-12 slds-size_11-of-12 body1 slds-p-left_x-small info-padding"><a onclick="{!c.openDrivingDirectionMap}" name="{!itemResource.locationAddressFinal}">{! itemResource.locationAddressFinal}</a></div>
+                                                                        </div>
+                                                                        </aura:if>
+                                                                        <aura:if isTrue="{!or(not(empty(itemResource.locationOperatingHours)),not(empty(itemResource.locationIsClosedDay)))}">
+                                                                        <div class="slds-grid slds-wrap slds-p-vertical_x-small">
+                                                                            <div class="slds-large-size_1-of-12 slds-size_1-of-12 slds-p-left_medium"><lightning:icon iconName="utility:clock" alternativeText="{!$Label.c.Operating_Hours}"/></div>
+                                                                            <div class="slds-large-size_11-of-12 slds-size_11-of-12 body1 slds-p-left_x-small info-padding">{!empty(itemResource.locationIsClosedDay)?itemResource.locationOperatingHours:itemResource.locationIsClosedDay}</div>
+                                                                        </div>
+                                                                        </aura:if>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- added class for expand by [CHFS Developer-Mohan-11/18/19] for GA -->
+                                                            <div class="dd-ga-btn-resource-expand-resource">
+                                                                <span class="toggle-arrow" role="link" tabindex="0" aria-label="{!'Accordion arrow of ' + itemResource.resourceName + ' Of ' + itemResource.locationAddress1 + ' location of ' + itemResource.accountProviderName}" id="{!'arrow_'+grandparentkey+'-'+parentkey+'-'+key}" onclick="{!c.handleAccordionClick}" onkeydown="{!c.handleAccordionClick}" name="{!itemResource}">
+                                                                    <lightning:icon iconName="utility:chevrondown" class="accordion-arrow slds-align_absolute-center slds-col_bump-left" size="x-small"/>    
+                                                                </span>
+                                                            </div>       
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </aura:iteration>
+                                            <aura:set attribute="else">
+                                                <div class="details-card slds-m-left_x-large resource-card slds-m-bottom_xxx-small">                                             
+                                                    <div class="body1 blueBody slds-truncate slds-m-right_small">
+                                                        {!$Label.c.RE_CallCenter}
+                                                    </div>
+                                                </div><br></br>
+                                            </aura:set>
+                                        </aura:if>
+                                        <div class="card-all-resourcelink slds-text-align_right slds-p-vertical_xx-small">
+                                            <aura:if isTrue="{!goalItem.lstResourceTile.length > 2}">
+                                                <lightning:button tabindex="0" class="see-less all-resource-icon see-all-resource-btn slds-m-left_xx-small" name = "{!'seeall_'+grandparentkey+'-'+parentkey}"  variant="base" value="{!goalItem}" title="See Less Resources" onclick="{! c.loadMoreResource }" /><lightning:icon class="all-resource-icon slds-m-left_xx-small" iconName="utility:left_align_text" alternativeText="Less Resource"/>
+                                            </aura:if>
+                                            <aura:if isTrue="{!and(goalItem.lstResourceTile.length == 2,goalItem.resourceListSize>2)}">
+                                                <lightning:button tabindex="0" class="see-all all-resource-icon see-all-resource-btn slds-m-left_xx-small" name = "{!'seeall_'+grandparentkey+'-'+parentkey}"  variant="base" value="{!goalItem}" title="See All Resources" onclick="{! c.loadMoreResource }" /><lightning:icon class="all-resource-icon slds-m-left_xx-small" iconName="utility:left_align_text" alternativeText="All Resource"/>
+                                            </aura:if>
+                                            <aura:if isTrue="{!goalItem.lstResourceTile.length == 1}">
+                                                <div class="slds-m-bottom_small"></div>
+                                            </aura:if>
+                                        </div>
+                                    </div>
+                                </aura:iteration>
+                                </div>
+                            </aura:if>
+                        </div>
+                    </aura:iteration>
+                </div>
+            </aura:set>
+        </aura:if>
+    </aura:if>
+    <aura:if isTrue="{!!v.bShowResourceDetail}">
+        <div class="slds-m-around_x-large">
+            <c:RE_CreateReferral aura:id = "createreferral"
+                                 methodRef="{!v.methodRef}"
+                                 showClientDetail = "{!v.showreferral}"
+                                 bShowResourceDetail = "{!v.bShowResourceDetail}"
+                                 locationId="{!v.selectedLocation}"
+                                 resourceId="{!v.selectedResourceId}"
+                                 accountId="{!v.selectedResourceAccountId}"
+                                 bshowClientLookup="true"
+                                 archId="{!v.archetypeId}"
+                                 />
+        </div>
+    </aura:if>
+    <aura:if isTrue="{!v.showResourceModal}">
+        <div class="background-color-share">
+            <c:RE_ShareResourceModal resourceDetailsUrl="{!v.currentUrl}" resourceDetailWrapper = "{!v.wrapdata}" showResourceModal="{!v.showResourceModal}" resourceName="{!v.resourceName}"/> 
+        </div>
+    </aura:if>
+    <!-- display log in modal [Change #ONEVIEW-1162]-->
+    <aura:if isTrue="{!v.bShowLoginModal}">
+        <c:RE_CartLoginModal cartLogin = "{!v.bShowLoginModal}"/>
+    </aura:if>
+    <c:RE_CartOptInModal showModal="{!v.cartOptIn}"/>
+</aura:component>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Pre-Screening-Prescreening tool</label>
+    <protected>false</protected>
+    <values>
+        <field>IsJSONBasedPage__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>JsonLayoutSchema__c</field>
+        <value xsi:type="xsd:string">{
+&quot;uniqName&quot;:&quot;PS_Application&quot;,
+&quot;title&quot;:&quot;PS_Application&quot;,
+&quot;profiles&quot;:&quot;all&quot;,
+&quot;pageType&quot;:&quot;detail&quot;,
+&quot;pageTitle&quot;:&quot;sspPreSTool&quot;,
+&quot;fields&quot;:[
+{
+&quot;uniqName&quot;:&quot;ssPsInfoCompletionNotice&quot;,
+&quot;name&quot;:&quot;ssPsInfoCompletionNotice&quot;,
+&quot;typ&quot;:&quot;rich-text&quot;,
+&quot;subType&quot;:&quot;noticeCard&quot;,
+&quot;noticeType&quot;:&quot;warning&quot;,
+&quot;noticeText&quot;:&quot;ssPsInfoCompletionNotice&quot;
+},
+{
+&quot;uniqName&quot;:&quot;sspPsPotentialEligText&quot;,
+&quot;name&quot;:&quot;sspPsPotentialEligText&quot;,
+&quot;typ&quot;:&quot;rich-text&quot;,
+&quot;subType&quot;:&quot;formattedText&quot;,
+&quot;formattedText&quot;:&quot;sspPsPotentialEligText&quot;
+},
+{
+&quot;uniqName&quot;:&quot;sspLearnMore&quot;,
+&quot;name&quot;:&quot;sspLearnMore&quot;,
+&quot;typ&quot;:&quot;button&quot;,
+&quot;subType&quot;:&quot;link&quot;,
+&quot;label&quot;:&quot;sspLearnMore&quot;,
+&quot;btnTitle&quot;:&quot;sspLearnMoreTitle&quot;,
+&quot;modal&quot;:true,
+&quot;modalHeader&quot;:&quot;sspBenefitsProgram&quot;,
+&quot;modalBody&quot;:&quot;sspBenefitsProgramContent&quot;,
+&quot;modalFooter&quot;:&quot;&quot;
+},
+{
+&quot;uniqName&quot;:&quot;sspImgTextOne&quot;,
+&quot;name&quot;:&quot;sspImgTextOne&quot;,
+&quot;typ&quot;:&quot;rich-text&quot;,
+&quot;img&quot;:&quot;file@3x.png&quot;,
+&quot;altImg&quot;:&quot;file&quot;,
+&quot;subType&quot;:&quot;formattedIconText&quot;,
+&quot;formattedText&quot;:&quot;sspPsBasicEligText&quot;
+}
+],
+&quot;navButtons&quot;:[
+{
+&quot;uniqName&quot;:&quot;sspExit&quot;,
+&quot;name&quot;:&quot;sspExit&quot;,
+&quot;typ&quot;:&quot;button&quot;,
+&quot;subType&quot;:&quot;navFlowButton&quot;,
+&quot;label&quot;:&quot;sspExit&quot;,
+&quot;btnTitle&quot;:&quot;sspStartPsToolExitTitle&quot;,
+&quot;action&quot;:&quot;exit&quot;,
+&quot;gridCol&quot;:&quot;2-of-12&quot;,
+&quot;gridOrderM&quot;:&quot;1&quot;
+},
+{
+&quot;uniqName&quot;:&quot;sspPsToolCaptcha&quot;,
+&quot;name&quot;:&quot;sspPsToolCaptcha&quot;,
+&quot;typ&quot;:&quot;button&quot;,
+&quot;subType&quot;:&quot;captchaButton&quot;,
+&quot;dependFields&quot;:&quot;sspStartPsTool&quot;,
+&quot;gridCol&quot;:&quot;5-of-12&quot;,
+&quot;gridOrderM&quot;:&quot;2&quot;
+},
+{
+&quot;uniqName&quot;:&quot;sspStartPsTool&quot;,
+&quot;name&quot;:&quot;sspStartPsTool&quot;,
+&quot;typ&quot;:&quot;button&quot;,
+&quot;subType&quot;:&quot;navFlowButton&quot;,
+&quot;action&quot;:&quot;next&quot;,
+&quot;label&quot;:&quot;sspStartPsTool&quot;,
+&quot;btnTitle&quot;:&quot;sspStartPsToolTitle&quot;,
+&quot;variant&quot;:&quot;neutral&quot;,
+&quot;gridCol&quot;:&quot;5-of-12&quot;,
+&quot;gridOrderM&quot;:&quot;3&quot;,
+&quot;dynaprops&quot;:{
+&quot;enabled&quot;:[
+{
+&quot;field&quot;:&quot;sspPsToolCaptcha&quot;,
+&quot;op&quot;:&quot;EQ&quot;,
+&quot;value&quot;:&quot;unlocked&quot;
+}
+]
+}
+}
+]
+}</value>
+    </values>
+    <values>
+        <field>LightningComponentName__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>PageDisplayName__c</field>
+        <value xsi:type="xsd:string">sspPreSTool</value>
+    </values>
+    <values>
+        <field>PageName__c</field>
+        <value xsi:type="xsd:string">Prescreening Tool</value>
+    </values>
+    <values>
+        <field>Page_Display_Name_View__c</field>
+        <value xsi:type="xsd:string">Absent Parent</value>
+    </values>
+    <values>
+        <field>URL__c</field>
+        <value xsi:nil="true"/>
+    </values>
+</CustomMetadata>

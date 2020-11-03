@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>SR</label>
+    <protected>false</protected>
+    <values>
+        <field>femaleRevCode__c</field>
+        <value xsi:type="xsd:string">Step Grandmother (Including Great)</value>
+    </values>
+    <values>
+        <field>genderCode__c</field>
+        <value xsi:type="xsd:string">M</value>
+    </values>
+    <values>
+        <field>maleRevCode__c</field>
+        <value xsi:type="xsd:string">Step Grandfather (Including Great)</value>
+    </values>
+    <values>
+        <field>relType__c</field>
+        <value xsi:type="xsd:string">Step Grandson (Including Great)</value>
+    </values>
+</CustomMetadata>

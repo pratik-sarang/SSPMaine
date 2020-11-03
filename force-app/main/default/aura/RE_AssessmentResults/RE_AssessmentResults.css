@@ -1,0 +1,459 @@
+.THIS .flex-end{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.THIS .assessment-results-legend.slds-has-dividers_left>.stable.slds-list__item:before, 
+.THIS .assessment-results-legend.slds-has-dividers--left>.stable.slds-list__item:before, 
+.THIS .assessment-results-legend.slds-has-dividers_left>.stable.slds-item:before, 
+.THIS .assessment-results-legend.slds-has-dividers--left>.stable.slds-item:before {
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: t(REDarkGreen);
+}
+.THIS .assessment-results-legend.slds-has-dividers_left>.vulnerable.slds-list__item:before, 
+.THIS .assessment-results-legend.slds-has-dividers--left>.vulnerable.slds-list__item:before, 
+.THIS .assessment-results-legend.slds-has-dividers_left>.vulnerable.slds-item:before, 
+.THIS .assessment-results-legend.slds-has-dividers--left>.vulnerable.slds-item:before {
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: t(RESemanticOrange);
+}
+.THIS .assessment-results-legend.slds-has-dividers_left>.in-crisis.slds-list__item:before, 
+.THIS .assessment-results-legend.slds-has-dividers--left>.in-crisis.slds-list__item:before, 
+.THIS .assessment-results-legend.slds-has-dividers_left>.in-crisis.slds-item:before, 
+.THIS .assessment-results-legend.slds-has-dividers--left>.in-crisis.slds-item:before {
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: t(REDarkRed);
+}
+
+/*.THIS.user-details-section .date-taken{
+    width: 70%;
+}*/
+
+.THIS .score-section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.THIS .score-section .slds-icon {
+    width: 1rem;
+    height: 1rem;
+}
+.THIS .score-section .slds-icon-text-default {
+    fill: t(REWhite);
+}
+.THIS .score-section .score-text {
+    color: t(REWhite);
+    font-size: 1.1rem;
+}
+
+/* Resource Cards*/
+.THIS .display-flex {
+    display: flex;
+    align-items: center;
+}
+.THIS .card-opened .display-flex {
+    display: flex;
+    align-items: unset;
+    margin-top: -0.1rem;
+}
+.THIS .card-opened .check-box {
+    margin-top: 4%;
+}
+.THIS .flex-grow {
+   flex-grow: 1;
+}
+.THIS .check-box .slds-checkbox .slds-checkbox_faux {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+.THIS .results-info {
+    color: t(RENeutralBeta);
+    font-size: 1rem;
+}
+/*css related to card expand collapse*/
+.THIS .card-opened .card-toggle-section{
+    display:block;
+}
+.THIS .card-opened .accordion-arrow{
+    transform:rotate(180deg);
+}
+.THIS .goal-expanded .details-card{
+    display:block;
+}
+.THIS .myPlanCard-hover:hover {
+    background-color: t(RENavActiveBG);
+}
+.THIS .card-opened .myPlanCard-hover:hover{
+    background-color: unset;
+}
+.THIS .category-opened .category-arrow-section svg{
+    transform:rotate(180deg);
+} 
+.THIS .category-opened .category-data{
+    display:none;
+}
+/************************************/
+.THIS .goal-title{
+    line-height:1rem;
+}
+.THIS .resource-link:hover{
+    text-decoration:underline;
+}
+.THIS .see-all-resource-btn:focus{
+    box-shadow:unset;
+}
+.THIS .card-btn-section .slds-button_brand svg{
+    fill:t(REWhite);
+}
+.THIS .card-btn-section .slds-button_brand{
+    display:flex;
+    align-items:center;
+}
+.THIS .cards-section-heading {
+    align-items: center;
+    background-color:t(REBasic);
+    color:t(REWhite);
+}
+.THIS .category-arrow-section svg{
+    fill:t(REBlack);
+    cursor:pointer;
+}
+.THIS .category-arrow-section .slds-assistive-text{
+    color: t(REShadeGrey);
+    background-color:t(REBasic);
+}
+.THIS .cards-section-heading .cards-section-heading-icon img{
+    margin:0;
+    transform:translate(0,-0.1875rem);
+}
+.THIS .cards-section-category{
+    font-size: t(RESize20);	
+    line-height: 1.625rem;
+    font-weight:bold;
+}
+.THIS .cards-section-resourcetype{
+    /*color:t(RECardResourceTypeGrey);*/
+    font-size:t(RESize14);
+    color: t(RENeutralBeta);
+}
+.THIS .card-all-resourcelink .all-resource-icon svg{
+    fill:t(REPrimary);
+    height: 0.5625rem;	
+    width: 0.625rem;
+}
+.THIS .card-more-info-section > div{
+    border-top:0.0625rem solid t(RElightGrey);
+}
+.THIS .card-footer-btn-section{
+    align-items: center;
+}
+.THIS .see-all-resource-btn{
+    color:t(REPrimary);
+    text-decoration: underline;
+}
+.THIS.background-color-share{
+    background:t(REMyPlanRBG);
+}
+.THIS .see-all:after{
+    content:"See All Resources";
+}
+.THIS .see-less:after{
+    content:"See Less Resources";
+}
+
+.THIS .resource-link,
+.THIS .resource-link:focus{
+    border: 0;
+    box-shadow: none;
+    line-height:unset;
+}
+.THIS .cards-section-heading-icon img {
+    height: 2.5rem;
+    object-fit: contain;
+}
+.THIS .partner-name{
+    border-radius: 0.25rem;	
+    background-color:t(RESecondaryBeta); 
+    color:t(REWhite);
+    font-size: 0.75rem;
+}
+.THIS .info-btn {
+    border: 1px solid t(REPrimary);
+    border-radius: 50%;
+    padding: 0.5rem;
+}
+.THIS .Red{
+    background-color:t(REDarkRed);
+}
+.THIS .Red-icon svg{
+    fill:t(REDarkRed);
+}
+.THIS .Red-txt{
+    color:t(REDarkRed);
+}
+.THIS .Yellow-txt{
+    color:t(RESemanticBrown);
+}
+.THIS .Yellow-icon svg{
+    fill:t(RESemanticBrown);
+}
+.THIS .Yellow{
+    background-color:t(RESemanticBrown);
+}
+.THIS .Green-txt{
+    color:t(REDarkGreen);
+}
+.THIS .Green-icon svg{
+    fill:t(REDarkGreen);
+}
+.THIS .Green{
+    background-color:t(REDarkGreen);
+}
+/**************New CSS***********/
+.THIS .results-section h1{
+    border:none;
+    color:t(REWhite);
+}
+.THIS .results-section{
+    background-color:t(REPrimary);
+}
+.THIS.result-section-cont:after{
+    content:'';
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-top: 40px solid t(REPrimary); 
+    left: 47%;
+    position:relative;
+}
+.THIS .result-count{
+    font-size: t(RESize24);
+    font-weight: bold;
+}
+.THIS .Red-border{
+    border: 4px solid t(REDarkRed);
+    color:t(REDarkRed);
+}
+.THIS .Green-border{
+    border: 4px solid t(REDarkGreen);
+    color:t(REDarkGreen);
+}
+.THIS .Yellow-border{
+    border:4px solid  t(RESemanticOrange);
+    color:t(RESemanticOrange);
+}
+.THIS .result-status{
+    font-size: t(RESize18);
+}
+.THIS .bold-txt{
+    font-weight: bold;
+}
+.THIS .action-description{
+    padding: 0 10rem 0 10rem;
+}
+.THIS .category-icon{
+    padding: 6px;
+    border-radius: 50%;
+}
+.THIS .category-icon svg{
+    fill:t(REWhite);
+    position: relative;
+    top: -1px;
+}
+.THIS .category-closed .category-arrow-section svg{
+    transform:rotate(180deg);
+} 
+.THIS .category-closed .category-data{
+    display:none;
+}
+.THIS .icon-title-section{
+    display:flex;
+    align-items: center;
+}
+.THIS .status-card{
+    background-color:t(REWhite);
+    border-radius: 20px;
+    text-align: center;
+    height: 100%;
+    min-height: 9rem;
+}
+.THIS .result-status-section{
+    justify-content:space-between;
+}
+.THIS .item-txt{
+    position: relative;
+    top: -2px;
+}
+.THIS .blue-bottom-border{
+    width: 70px;
+    display: inline-block;
+    border-bottom: 3px solid t(REPrimary);
+}
+.THIS .card-opened .favorite-container{
+    margin-top: 0.5rem;
+}
+.THIS .partner-name-blank{
+    min-height: 22px;
+}
+/********Mobile**********/
+.THIS .card-more-info-section-mobile > div{
+    border-top:none;
+}
+@media screen and (max-device-width: 767px) {
+    .THIS .card-navigation-section a{
+        border: 1px solid t(REPrimary);
+        border-radius: 100%;
+    }
+    .THIS .card-navigation-section .card-navigation-txt{
+        font-family:'ProductSans-Medium';
+    }
+    .THIS.user-takenby-section > div{
+        padding:0;
+        margin-bottom: 10px;
+    }
+    .THIS.results-button-section{
+        text-align:center;
+    }
+    .THIS.results-button-section >.slds-button{
+        margin: 0 2px 10px 2px;
+    }
+    .THIS.result-section-cont:after{
+        left: 39%;
+    }
+}
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+  /* For Ipad landscape layouts only */
+    .THIS.user-details-section > div{
+        width: 100%;
+    }
+    .THIS.user-details-section .flex-end{
+        display: block;
+    }
+}
+/*Media Query for iPhone XR (Landscape)*/ 
+@media only screen and (min-width: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape){
+    .THIS .card-navigation-section a{
+        border: 1px solid t(REPrimary);
+        border-radius: 100%;
+    }
+    .THIS .card-navigation-section .card-navigation-txt{
+        font-family:'ProductSans-Medium';
+    }
+}
+/*Media Query for iPhone X (Landscape)*/ 
+@media only screen and (min-width: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape){
+    .THIS .card-navigation-section a{
+        border: 1px solid t(REPrimary);
+        border-radius: 100%;
+    }
+    .THIS .card-navigation-section .card-navigation-txt{
+        font-family:'ProductSans-Medium';
+    }
+}
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : portrait) {
+    .THIS .infoPadding {
+        padding-left: 2rem;
+        word-break: break-all;
+    }    
+}
+@media screen and (max-device-width: 768px) {
+    .THIS .resource-link{
+        text-align:left;
+        max-width: 8rem;
+    }
+    /*.THIS.user-details-section .date-taken{
+        width: 100%;
+    }*/
+    .THIS .headingL2{
+        text-align:center;
+    }
+    .THIS .action-description{
+        padding: 0;
+        text-align: center;
+    }
+    .THIS .result-status-section > div{
+        padding:0 4px 0 4px;
+        text-align:center;
+    }
+    .THIS.results-section{
+        text-align:unset;
+    }
+    .THIS.user-details-section .fieldWidth {
+        padding-right: 0;
+    }
+    .THIS.user-details-section .flex-end{
+        display: block;
+    }
+}
+.THIS #favorite-selected-img{
+    width: 1rem;
+}  
+.THIS .favorite-container{
+    border: 1px t(RElightGreyOpacity) solid;
+    border-radius: 0.3rem;
+    background: t(REMyPlanRBG);
+    padding: 0.20rem 0.20rem 1.35rem 0.20rem;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+.THIS .favorite-container img{
+    width: 1.5rem;
+}
+.THIS .icon-checkbox{
+    padding: 1rem 0 0 0.25rem; 
+}
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) {
+    /*.THIS.user-details-section .date-taken{
+        width: 100%;
+    }*/
+    .THIS.user-details-section .fieldWidth {
+        padding-right: 0;
+    }
+    .THIS.user-details-section .flex-end{
+        display: block;
+    }
+    .THIS.user-details-section .create-referral-btn {
+        margin: 0.5rem 0 0 0;
+    }
+    .THIS .card-more-info-section > div{
+        border-top: none;
+    }
+    .THIS .score-section {
+        justify-content: unset;
+    }
+    .THIS.headingContainer .headingL1{
+        font-size: 1.2rem;
+    }
+    .THIS.headingContainer .assessment-results-legend .slds-item{
+        font-size: 0.875rem;
+    }
+    .THIS .headingButton .flex-end {
+        display: unset;
+    }
+    .THIS .headingButton .create-referral-btn {
+        margin-left: 0;
+    }
+}
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : landscape){
+    .THIS.user-details-section .create-referral-btn {
+        margin: 0;
+    }
+    .THIS .card-more-info-section {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+}
+.THIS .in-plan{
+    width: 6rem;
+}
+
+.THIS .justify-content{
+    justify-content: flex-end;
+}
+.THIS .slds-spinner_container{
+    position: fixed;
+}

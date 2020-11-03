@@ -1,0 +1,85 @@
+<!--
+ * Component Name    : RE_LanguagePillSelector
+ * Owner             : DELOITTE
+ * Created Date      : 05/02/2019
+ * Description       : Display the Language Pills in the component
+ * Author 			 : Suyash Singhal 
+ *
+ *                            M O D I F I C A T I O N   L O G                                          
+ *
+ *  Date        Developer       Description                                                         
+ *  **************************************************************************
+ *              Abhishek        Initial UI Development
+ *              Suyash			Backend Field Integration
+-->
+
+<aura:component controller ="RE_LanguagePillSelectorCtrl"
+				implements ="force:appHostable,flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes">
+    
+    <aura:attribute type ="List" name="lstLanguages"  />
+    <aura:attribute type ="List" name="lstAllLanguages" default ="[]" />
+    <aura:attribute type ="List" name="lstUnselectedLanguages" default ="[]" />
+    <aura:attribute name="bAddLanguageInput" type="boolean" default="false"/>
+    <aura:attribute name="SearchKeyWord" type="string"/>
+    <aura:attribute name="Message" type="String" />
+    <aura:attribute name="bMakeReadOnly" type="boolean" default="true"/>
+    
+    <aura:registerEvent name="LanguagesUpdateEvent" type="c:RE_LanguagePillUpdaterEvent"/> 
+   
+	<!--[06/25/2019:Ashwin] - Changes done for server call from a common place-->
+    <aura:attribute name="isSpinnerActive" type="Boolean"/>
+    <c:RE_UtilityServerCallerCmp aura:id="bSuper" isSpinnerActive="{!v.isSpinnerActive}"/> 
+	<!-- -->
+   
+    <aura:iteration items="{!v.lstLanguages}" var="Language" >
+        <!-- <span class="locdetail-lang slds-p-around_xx-small slds-m-right_small"><a href="javascript:void(0)">{!Language}</a><a><lightning:icon iconName="utility:close" class="locdetail-close" alternativeText="Remove"/></a></span>  -->
+        <lightning:pill label="{!Language}" onremove="{! c.handleRemove }" />
+    </aura:iteration>
+   
+     <div class="pill-selector-generic">
+
+        <input type="text"
+                    id="search-value"
+                    onfocus="{!c.onfocus}"
+                    onclick="{!c.onfocus}"
+                    onblur="{!c.removeBox}"
+                    onkeyup="{!c.keyPressController}"
+                    class="slds-lookup__search-input slds-input inputSize slds-hide"
+                    value="{!v.SearchKeyWord}"
+                    placeholder="search.." 
+                    autofocus="true"/>
+    
+    <!--    <ui:inputText click="{!c.onfocus}"
+                      updateOn="keyup"
+                      blur="{!c.removeBox}"
+                      keyup="{!c.keyPressController}"
+                      class="slds-lookup__search-input slds-input inputSize"
+                      value="{!v.SearchKeyWord}"
+                      placeholder="search.."
+                      id = "search-value "/> -->
+       
+        <ul id="search-options" class="slds-hide"><!--added -->
+            <!--<lightning:spinner class="slds-hide" variant="brand" size="small" aura:id="mySpinner"/> -->
+            <center> {!v.Message}</center>
+            <aura:iteration items="{!v.lstUnselectedLanguages}" var="UnselectedLang" indexVar="ind">
+                <!--Child Component--> 
+                <!-- <c:reUsableMultiSelectLookupResult oRecord="{!singleRec}" IconName="{!v.IconName}"/> -->
+                <li  onmousedown="{!c.selectRecord}">
+                    <span id="listbox-option-unique-id-01" class="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta" role="option">
+                        <span class="slds-media__figure">
+                        </span>    
+                        <span class="slds-media__body">  
+                            <span data-index="{!ind}" class="slds-listbox__option-text slds-listbox__option-text_entity">{!UnselectedLang}</span>
+                        </span>
+                    </span>
+                </li>
+            </aura:iteration>
+        </ul>
+         <div id="plus-icon"><!--added -->
+       
+            <!-- <lightning:button class="img addlang-button"  onclick="{!c.addLanguage}"  disabled ="{!v.bMakeReadOnly}"><lightning:icon iconName="utility:add" alternativeText="Add" /></lightning:button> -->
+            <lightning:buttonIcon class="pillAdd" iconName="utility:add" variant="border-filled" onclick="{! c.addLanguage }" disabled ="{!v.bMakeReadOnly}" alternativeText="Add" size="medium"/>
+         </div>
+    </div>
+    
+</aura:component>

@@ -1,0 +1,5729 @@
+/*-------------------------------------------*\
+- Container
+- Colors
+- Font Family
+- Font Size
+- Buttons
+- Modal
+- Tabs
+- Cards
+- Toast
+- Input Fields
+- Header
+- Footer
+- Shadow
+- Custom margin
+- Border bottom 
+\*-------------------------------------------*/
+
+/******************************************************** Container ****************************************************/
+
+.THIS .contentRegion.comm-layout-column,
+.THIS .mainContentArea {
+  padding: 0;
+}
+
+.THIS .left-navigation-container {
+  align-items: stretch;
+}
+
+.THIS .ssp-container_width {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.THIS .ssp-bodyContainer {
+  width: 770px;
+  margin: 0 auto;
+}
+
+/******************************************************** Colors ****************************************************/
+
+.THIS .ssp-color_blueAlpha {
+  color: t(sspBlueAlpha);
+}
+
+.THIS .ssp-color_blueBeta {
+  color: t(sspBlueBeta);
+}
+
+.THIS .ssp-color_blueGamma {
+  color: t(sspBlueGamma);
+}
+
+.THIS .ssp-color_blueSigma {
+  color: t(sspBlueSigma);
+}
+
+.THIS .ssp-color_magentaAlpha {
+  color: t(sspMagentaAlpha);
+}
+
+.THIS .ssp-color_magentaBeta {
+  color: t(sspMagentaBeta);
+}
+
+.THIS .ssp-color_magentaGamma {
+  color: t(sspMagentaGamma);
+}
+
+.THIS .ssp-color_monoAlpha {
+  color: t(sspMonoAlpha);
+}
+
+.THIS .ssp-color_monoBeta {
+  color: t(sspMonoBeta);
+}
+
+.THIS .ssp-color_monoGamma {
+  color: t(sspMonoGamma);
+}
+
+.THIS .ssp-color_monoOmega {
+  color: t(sspMonoOmega);
+}
+
+.THIS .ssp-color_monoBody {
+  color: t(sspMonoBody);
+}
+
+.THIS .ssp-color_white {
+  color: t(sspWhiteAlpha);
+}
+
+.THIS .ssp-color_redAlpha {
+  color: t(sspRedAlpha);
+}
+
+.THIS .ssp-color_redBeta {
+  color: t(sspRedBeta);
+}
+
+.THIS .ssp-color_redOmega {
+  color: t(sspRedOmega);
+}
+
+.THIS .ssp-color_greenAlpha {
+  color: t(sspGreenAlpha);
+}
+
+.THIS .ssp-color_greenBeta {
+  color: t(sspGreenBeta);
+}
+
+.THIS .ssp-color_greyAlpha {
+  color: t(sspGreyAlpha);
+}
+
+.THIS .ssp-color_greyGamma {
+  color: t(sspGreyGamma);
+}
+.THIS .ssp-color_greenOmega {
+  color: t(sspGreenOmega);
+}
+.THIS .ssp-color_orangeAlpha {
+  color: t(sspOrangeAlpha);
+}
+/***************************************************** Background Colors *************************************************/
+
+.THIS .ssp-bg_blueAlpha {
+  background: t(sspBlueAlpha);
+}
+
+.THIS .ssp-bg_blueBeta {
+  background: t(sspBlueBeta);
+}
+
+.THIS .ssp-bg_blueDelta {
+  background: t(sspBlueDelta);
+}
+
+.THIS .ssp-bg_blueGamma {
+  background: t(sspBlueGamma);
+}
+
+.THIS .ssp-bg_magentaAlpha {
+  background: t(sspMagentaAlpha);
+}
+
+.THIS .ssp-bg_magentaBeta {
+  background: t(sspMagentaBeta);
+}
+
+.THIS .ssp-bg_magentaGamma {
+  background: t(sspMagentaGamma);
+}
+
+.THIS .ssp-bg_monoAlpha {
+  background: t(sspMonoAlpha);
+}
+
+.THIS .ssp-bg_monoBeta {
+  background: t(sspMonoBeta);
+}
+
+.THIS .ssp-bg_monoGamma {
+  background: t(sspMonoGamma);
+}
+
+.THIS .ssp-bg_monoDelta {
+  background: t(sspMonoDelta);
+}
+
+.THIS .ssp-bg_monoSigma {
+  background: t(sspMonoSigma);
+}
+
+.THIS .ssp-bg_monoBody {
+  background: t(sspMonoBody);
+}
+
+.THIS .ssp-bg_monoZeta {
+  background: t(sspBlueZeta);
+}
+
+.THIS .ssp-bg_whiteAlpha {
+  background: t(sspWhiteAlpha);
+}
+
+.THIS .ssp-bg_whiteBeta {
+  background: t(sspWhiteBeta);
+}
+
+.THIS .ssp-bg_redGamma {
+  background: t(sspRedGamma);
+}
+
+.THIS .ssp-bg_greenAlpha {
+  background: t(sspGreenAlpha);
+}
+
+.THIS .ssp-bg_orangeAlpha {
+  background: t(sspOrangeAlpha);
+}
+
+.THIS .ssp-bg_appHeaderGradient {
+  background: t(sspAppHeaderGradient);
+}
+
+.THIS .ssp-bg_greyBeta {
+  background: t(sspGreyBeta);
+}
+
+.THIS .ssp-bg_redAlpha {
+  background: t(sspRedAlpha);
+}
+
+/******************************************************** Font Family ****************************************************/
+
+.THIS .ssp-fontFamily_popinBold {
+  font-family: "Poppins-Bold";
+}
+
+.THIS .ssp-fontFamily_popinRegular {
+  font-family: "Poppins-Regular";
+}
+
+.THIS .ssp-fontFamily_popinBlack {
+  font-family: "Poppins-Black";
+}
+
+.THIS .ssp-fontFamily_ArvoRegular {
+  font-family: "Arvo-Regular";
+}
+
+/********************************************************* Font Size *****************************************************/
+
+.THIS .ssp-fontWeight_bold {
+  font-weight: bold;
+}
+
+.THIS .ssp-fontSize_16 .slds-button {
+  font-size: 1rem;
+}
+.THIS .ssp-fontSize_16 {
+  font-size: 1rem;
+}
+.THIS .ssp-fontSize_13 {
+  font-size: 0.813rem;
+}
+/*********************************************************Tooltip*********************************************************/
+.THIS .ssp-tooltip .ssp-tooltiptext {
+  background: t(REResourceDarkBlue);
+  color: t(sspWhiteAlpha);
+}
+.THIS .ssp-tooltip .ssp-tooltiptext::after {
+  border-color: t(REResourceDarkBlue) transparent transparent transparent;
+}
+.THIS .ssp-tooltip svg {
+  fill: t(sspBlueUpsilon);
+  width: 17.5px;
+  height: 17.5px;
+}
+.THIS .ssp-tooltip .ssp-tooltiptext a {
+  color: t(sspWhiteAlpha);
+}
+/********************************************************** Buttons ******************************************************/
+
+/**Added for Internet Explorer issue**/
+.THIS .slds-button:after,
+.THIS.slds-button:after {
+  content: "";
+  min-height: inherit;
+  font-size: 0;
+}
+.THIS .ssp-button_neutral.ssp-submit-authrep-info .slds-button {
+  padding: 0 25px;
+}
+@media only screen and (max-width: 768px) {
+  .THIS .ssp-button_neutral.ssp-submit-authrep-info .slds-button {
+    width: 100%;
+  }
+  .THIS .ssp-add-auth-rep-btns .ssp-cancel-btn {
+    width: calc(50% - 10px);
+  }
+}
+.THIS .ssp-footerButtonMargin {
+  margin-top: 6.25rem;
+}
+.THIS .slds-button {
+  font-size: 1.125rem;
+}
+
+.THIS .slds-button:focus {
+  box-shadow: none;
+}
+
+.THIS .ssp-cardButton .slds-button {
+  font-size: 1rem;
+}
+
+.THIS .ssp-button_base .slds-button {
+  border: none;
+  min-height: 45px;
+  background: t(sspBlueOmega);
+  color: t(sspBlueAlpha);
+  font-family: Poppins-bold;
+  padding: 0 30px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.THIS .ssp-button_base .slds-button:hover {
+  background: t(sspBlueSigma);
+}
+
+.THIS .ssp-button_neutral .slds-button_neutral {
+  border: none;
+  min-height: 45px;
+  background: t(sspMagentaBeta);
+  color: t(sspWhiteAlpha);
+  font-family: Poppins-bold;
+  padding: 0 30px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.THIS .ssp-button_neutral .slds-button_neutral:hover {
+  background: t(sspMagentaGamma);
+  color: t(sspWhiteAlpha);
+}
+
+.THIS .ssp-button_neutral .slds-button_neutral:disabled {
+  opacity: 0.3;
+}
+
+.THIS .dd-zindexDisable .slds-button_neutral:disabled {
+  z-index: -1;
+}
+
+.THIS .ssp-button_brand .slds-button_brand {
+  border: none;
+  min-height: 45px;
+  background: t(sspBlueAlpha);
+  color: t(sspWhiteAlpha);
+  font-family: Poppins-bold;
+  padding: 0 30px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.THIS .ssp-button_brand .slds-button_brand:hover {
+  background: t(sspBlueBeta);
+  color: t(sspWhiteAlpha);
+}
+
+.THIS .ssp-button_brand .slds-button_brand:disabled {
+  opacity: 0.3;
+}
+
+.THIS .ssp-button_brand .slds-button_brand:disabled:hover {
+  background: t(sspBlueAlpha);
+}
+
+.THIS .slds-button.slds-button_icon,
+.THIS .ssp-nocolorButton .slds-button {
+  width: auto;
+  background: none;
+  border: 0;
+}
+
+.THIS .ssp-header .slds-button {
+  height: auto;
+}
+
+.THIS .ssp-footerBtnNext .slds-button {
+  min-width: 270px;
+  min-height: 60px;
+  font-size: 1.125rem;
+  line-height: 27px;
+}
+
+.THIS .ssp-footerBtnBackSave .slds-button {
+  min-width: 170px;
+  min-height: 60px;
+  font-size: 1.125rem;
+  line-height: 27px;
+}
+
+.THIS .ssp-income-details .ssp-action-btns .slds-button,
+.THIS .ssp-highest-education .ssp-action-btns .slds-button,
+.THIS .ssp-absent-parent-details .ssp-action-btns .slds-button,
+.THIS .ssp-add-auth-rep-permissions .ssp-action-btns .slds-button {
+  height: 3.75rem;
+}
+
+.THIS .ssp-income-details .ssp-action-btns .ssp-cancelBtn .slds-button,
+.THIS .ssp-highest-education .ssp-action-btns .ssp-cancelBtn .slds-button,
+.THIS .ssp-absent-parent-details .ssp-action-btns .ssp-cancelBtn .slds-button,
+.THIS
+  .ssp-add-auth-rep-permissions
+  .ssp-action-btns
+  .ssp-cancelBtn
+  .slds-button {
+  padding: 0;
+  width: 10.625rem;
+}
+
+.THIS .ssp-income-details .ssp-action-btns .ssp-saveBtn .slds-button,
+.THIS .ssp-highest-education .ssp-action-btns .ssp-saveBtn .slds-button,
+.THIS .ssp-absent-parent-details .ssp-action-btns .ssp-saveBtn .slds-button,
+.THIS .ssp-add-auth-rep-permissions .ssp-action-btns .ssp-saveBtn .slds-button {
+  padding: 0;
+  width: 16.875rem;
+}
+
+.THIS .sspIncomeSubsidiesSection .ssp-learnMore {
+  border-bottom: 0.0625rem solid t(sspMonoBody);
+}
+
+.THIS .sspIncomeSubsidiesSection .sspIcomeSubsidiesForm > div {
+  border-bottom: 0.0625rem solid t(sspMonoBeta);
+}
+.THIS
+  .ssp-caretakersSection
+  .sspCaretakerServicesForm
+  > div.ssp-toggleQuestions {
+  border-bottom: 0.0625rem solid t(sspMonoBeta);
+}
+
+.THIS .sspIncomeSubsidiesSection .ssp-errorMessage {
+  color: t(sspRedOmega);
+}
+
+.THIS .ssp-showError {
+  font-size: 0.75rem;
+  margin-top: 0.125rem;
+}
+
+.THIS .ssp-radioGroup .slds-radio .slds-form-element__label {
+  width: 99%;
+}
+
+/****************************************************** button Styling for custom screens **************************************************/
+.THIS .ssp-manual-address-btn .slds-button {
+  width: 100%;
+}
+.THIS .ssp-exitModalBtn .slds-button {
+  justify-content: center;
+}
+.THIS .ssp-living-arrange-footer .slds-button {
+  width: 100%;
+}
+.THIS
+  .ssp-report-change-modal
+  .ssp-report-change-button
+  .ssp-button_base
+  .slds-button,
+.THIS .ssp-change-member-email .ssp-button_base .slds-button,
+.THIS .ssp-change-member-preferred-written-lang .ssp-button_base .slds-button,
+.THIS .ssp-change-member-preferred-spoken-lang .ssp-button_base .slds-button,
+.THIS .ssp-change-primary-number .ssp-button_base .slds-button,
+.THIS .ssp-remove-income-modal .ssp-button_base .slds-button,
+.THIS .ssp-earlySubmissionButton .ssp-button_base .slds-button {
+  display: block;
+}
+
+.THIS .ssp-add-auth-rep-btns .ssp-cancel-btn .slds-button {
+  width: 170px;
+  height: 60px;
+}
+
+.THIS .ssp-add-auth-rep-btns .ssp-next-btn .slds-button {
+  width: 270px;
+  min-height: 60px;
+}
+.THIS .ssp-add-income-btn .slds-button {
+  width: 270px;
+}
+.THIS
+  .ssp-income-details-form
+  .ssp-action-btn-section
+  .ssp-cancel-btn
+  .slds-button,
+.THIS
+  .ssp-absent-parent-details
+  .ssp-action-btn-section
+  .ssp-cancel-btn
+  .slds-button {
+  width: 170px;
+  height: 60px;
+  font-size: 1.125rem;
+}
+
+.THIS
+  .ssp-income-details-form
+  .ssp-action-btn-section
+  .ssp-next-btn
+  .slds-button,
+.THIS
+  .ssp-absent-parent-details
+  .ssp-action-btn-section
+  .ssp-next-btn
+  .slds-button {
+  width: 270px;
+  min-height: 60px;
+  font-size: 1.125rem;
+}
+
+/*********************************************************** Modal *******************************************************/
+
+.THIS .sspModalButton .slds-button {
+  width: auto;
+}
+
+.THIS .ssp-generalInformationCardCrossIcon .slds-button {
+  width: auto;
+  height: auto;
+  padding: 0;
+  background: none;
+  border: 0;
+}
+
+.THIS .ssp-modalContent {
+  padding: 30px 30px 0 30px;
+}
+
+.THIS .ssp-modal-header {
+  background: t(sspMonoDelta);
+}
+.THIS .ssp-myinfo-modal-footer {
+  font-size: 1rem;
+}
+.THIS
+  .ssp-report-change-modal
+  .ssp-detailedModal
+  .slds-modal__footer
+  div
+  span
+  :first-child {
+  margin-bottom: 1rem;
+}
+.THIS
+  .ssp-report-change-modal
+  .ssp-detailedModal
+  .slds-modal__footer
+  div
+  span
+  :last-child {
+  margin-left: 0;
+}
+
+.THIS .ssp-report-change-modal .ssp-detailedModal .slds-modal__footer button {
+  width: -webkit-fill-available;
+}
+
+/*********************************************************** Tabs *******************************************************/
+
+.THIS .ssp-tabsBody .slds-tabs_default__item.slds-active::after,
+.THIS .ssp-tabsBody .slds-tabs_default__item.slds-is-active::after {
+  background-color: t(sspBlueAlpha);
+  height: 4px;
+}
+
+.THIS .ssp-tabsBody {
+  overflow: auto;
+}
+
+.THIS .ssp-tabsBody li {
+  border-top: 1px solid t(sspMonoBeta);
+  padding: 15px 30px;
+  font-family: Poppins-Bold;
+  font-size: 0.8125rem;
+  line-height: 18px;
+  letter-spacing: -0.3px;
+  text-align: left;
+  color: t(sspMonoOmega);
+  width: 187px;
+}
+
+.THIS .ssp-tabsBody li:hover {
+  cursor: pointer;
+}
+
+.THIS .ssp-tabsBody a {
+  white-space: pre-line;
+  line-height: unset;
+  word-spacing: 187px;
+}
+
+.THIS .ssp-tabsBody .slds-tabs_default__nav {
+  border-bottom: none;
+}
+
+.THIS .ssp-tabsBody .slds-tabs_default__item::after {
+  background-color: t(sspMonoBeta);
+  height: 4px;
+}
+
+.THIS .ssp-tabsBody .slds-tabs_default__item.slds-is-active {
+  color: t(sspMonoBody);
+}
+
+.THIS .ssp-tabsBody .slds-tabs_default__link[tabindex="0"]:focus {
+  text-decoration: none;
+}
+
+.THIS .ssp-tabsBody .slds-tabs_default {
+  background: none;
+}
+
+/*********************************************************** Cards *******************************************************/
+
+.THIS .ssp-dropdownMenu {
+    background-image: url(../resource/sspOverviewIcons/icons/ic_dropdown/ic_dropdown@3x.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+}
+
+.THIS .dropdownExpand {
+    background-image: url(../resource/sspOverviewIcons/icons/ic_collapsedropdown/ic_collapsedropdown@3x.png);
+  background-repeat: no-repeat;
+}
+
+.THIS .ssp-dropdownMenu {
+  border: 1px solid t(sspMonoGamma);
+  color: t(sspMonoBody);
+}
+
+.THIS .ssp-searchCardFooter .slds-button,
+.THIS .ssp-ctaButton .slds-button,
+.THIS .ssp-ctaCardButton .slds-button {
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+  width: 100%;
+  font-size: 1rem;
+  line-height: 25px;
+  min-height: auto;
+    word-break: break-word;
+}
+
+.THIS .ssp-accordion {
+  border: 1px solid t(sspMonoGamma);
+}
+
+.THIS .ssp-dropdownMenu {
+  border-top: 1px solid t(sspMonoGamma);
+  border-bottom: 1px solid t(sspMonoGamma);
+  border-right: 0;
+  border-left: 0;
+  color: t(sspMonoBody);
+}
+
+.THIS .ssp-explicitNoticeCard {
+  border: 1px solid t(sspRedAlpha);
+  border-left: 7px solid t(sspRedBeta);
+}
+
+.THIS .ssp-generalCardFooter > a {
+  border-bottom: 1px solid t(sspBlueAlpha);
+}
+
+.THIS .ssp-menuItemDropdown {
+  border-top: 1px solid t(sspMonoBeta);
+  border-bottom: 1px solid t(sspMonoBeta);
+}
+
+.THIS .ssp-menuItemDropdownContent div:hover {
+  background-color: t(sspMonoAlpha);
+}
+
+.THIS .ssp-warningNoticeCard {
+  border-left: 7px solid t(sspBlueEpsilon);
+}
+
+.THIS .ssp-generalCardBlueFooter a {
+  border-bottom: 1px solid t(sspBlueAlpha);
+}
+
+.THIS .ssp-ReviewCard {
+  border: 1px solid t(sspRedAlpha);
+}
+
+.THIS .ssp-selectionCard {
+  background-color: t(sspWhiteAlpha);
+}
+
+.THIS .ssp-selectionCardAction {
+  background-color: t(sspWhiteAlpha);
+}
+
+.THIS .ssp-selectionCardBlue {
+  background-color: t(sspWhiteAlpha);
+}
+
+.THIS .ssp-selectionCardIcon {
+  background-color: t(sspWhiteAlpha);
+}
+
+.THIS .ssp-selectionCardIconText {
+  color: t(sspMonoBody);
+}
+
+.THIS .ssp-verticalMenuBorder {
+  background-color: t(sspWhiteAlpha);
+}
+
+.THIS .ssp-ReviewCardContainer {
+  border: 1px solid rgb(212, 212, 212);
+}
+
+.THIS .ssp-selectionCardActionCheckbox .slds-checkbox_faux {
+  border-radius: 50%;
+}
+
+.THIS
+  .ssp-selectionCardActionCheckbox
+  .slds-checkbox
+  [type="checkbox"]:checked
+  + .slds-checkbox__label
+  .slds-checkbox_faux {
+  background-color: green;
+}
+
+.THIS
+  .ssp-selectionCardActionCheckbox
+  .slds-checkbox
+  [type="checkbox"]:checked
+  + .slds-checkbox_faux::after,
+.THIS
+  .ssp-selectionCardActionCheckbox
+  .slds-checkbox
+  [type="checkbox"]:checked
+  + .slds-checkbox--faux::after,
+.THIS
+  .ssp-selectionCardActionCheckbox
+  .slds-checkbox
+  [type="checkbox"]:checked
+  ~ .slds-checkbox_faux::after,
+.THIS
+  .ssp-selectionCardActionCheckbox
+  .slds-checkbox
+  [type="checkbox"]:checked
+  ~ .slds-checkbox--faux::after,
+.THIS
+  .ssp-selectionCardActionCheckbox
+  .slds-checkbox
+  [type="checkbox"]:checked
+  + .slds-checkbox__label
+  .slds-checkbox_faux::after,
+.THIS
+  .ssp-selectionCardActionCheckbox
+  .slds-checkbox
+  [type="checkbox"]:checked
+  + .slds-checkbox__label
+  .slds-checkbox--faux::after {
+  border-bottom: 2px solid t(sspWhiteAlpha);
+  border-left: 2px solid t(sspWhiteAlpha);
+}
+
+.THIS .ssp-selectionCardActionIcon .slds-button_icon-border {
+  padding: 0;
+  background: none;
+  border: 0;
+  width: auto;
+}
+
+.THIS .ssp-detailedInformationCardCrossIcon .slds-button {
+  background: none;
+  border: none;
+  padding-right: 0px;
+}
+
+.THIS .slds-modal__header,
+.THIS .slds-modal__footer {
+  border: 0;
+}
+
+.THIS .ssp-generalInformationCardCrossIcon .slds-button {
+  background: none;
+  border: none;
+  padding-right: 0px;
+}
+
+.THIS .ssp-selectionCardIconText .slds-checkbox_faux {
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+}
+
+.THIS .ssp-selectionCardIconText .slds-form-element__label {
+  width: 140px;
+  color: t(sspMonoBody);
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: -0.3px;
+  line-height: 20px;
+}
+
+.THIS
+  .ssp-verticalMenuHeader
+  .slds-nav-vertical__item.slds-is-active
+  .slds-nav-vertical__action {
+  box-shadow: inset -6px 0 0 t(sspMagentaBeta);
+  color: t(sspMagentaBeta);
+}
+
+.THIS .ssp-verticalMenuHeader .slds-nav-vertical__item:hover:before,
+.THIS .slds-nav-vertical__item.slds-is-active:before {
+  background: t(sspWhiteAlpha);
+}
+
+.THIS
+  .ssp-verticalMenuHeader
+  .slds-nav-vertical__item
+  .slds-nav-vertical__action:hover {
+  box-shadow: inset -6px 0 0 t(sspMagentaBeta);
+  color: t(sspMagentaBeta);
+}
+
+.THIS
+  .ssp-verticalMenuBorder
+  .slds-nav-vertical__item
+  .slds-nav-vertical__action {
+  padding: 7px 0 7px 0;
+  color: t(sspMonoBody);
+}
+
+.THIS .ssp-verticalMenuBorder .slds-nav-vertical__item {
+  padding: 10px 0 10px 70px;
+}
+
+.THIS
+  .ssp-verticalMenuBorder
+  .slds-nav-vertical__item
+  .slds-nav-vertical__action:focus {
+  text-decoration: none;
+}
+
+.THIS .ssp-tableAction_button .slds-button {
+  width: 100%;
+  display: initial;
+}
+
+.THIS .ssp-selectionCardIconText .svg .path {
+  fill: red;
+}
+
+.THIS .ssp-searchCardRatingFooter {
+  border-top: 1px solid t(sspMonoBeta);
+}
+/*********************************************************** Toast *******************************************************/
+
+.THIS .ssp-neutralToastContainer {
+  border-bottom-color: t(sspBlueAlpha);
+}
+
+.THIS .ssp-negativeToastContainer {
+  border-bottom-color: t(sspRedAlpha);
+}
+
+.THIS .ssp-positiveToastContainer {
+  border-bottom-color: t(sspGreenAlpha);
+}
+
+/******************************************************** Input Fields ***************************************************/
+.THIS .ssp-inputDate .slds-form-element__help {
+  display: none;
+}
+.THIS .ssp-checkbox-error .ssp-checkboxMultiLineLabel,
+.THIS .ssp-checkbox-error .slds-form-element__control .slds-checkbox,
+.THIS .ssp-checkbox-error .slds-form-element__control .slds-radio {
+  background-color: t(sspRedGamma);
+  border: 1px solid t(sspRedAlpha);
+}
+.THIS .ssp-checkbox-error .slds-form-element__control .slds-checkbox_faux {
+  background-color: t(sspRedGamma);
+}
+.THIS .ssp-checkbox-error .ssp-checkboxMultiLineLabelContent {
+  background-color: t(sspRedGamma);
+  box-shadow: 0 0.5px 0 0 t(sspRedAlpha) inset;
+}
+.THIS
+  .ssp-education-type
+  .ssp-alignHelpText
+  .ssp-picklistLabel.slds-form-element__label {
+  width: 100%;
+}
+.THIS .ssp-dob-disabled .slds-has-error .slds-input {
+  border-color: t(sspBlueDelta);
+  background-color: t(sspMonoDelta);
+}
+.THIS .ssp-dob-disabled .slds-has-error .slds-form-element__help {
+  display: none;
+}
+.THIS .slds-input-has-custom-icon.slds-input-has-icon_right .slds-input__icon {
+  top: 2.6rem;
+  padding-right: 1.5rem;
+}
+
+.THIS .slds-input-has-custom-icon.slds-input-has-icon_left .slds-input__icon {
+  top: 2.6rem;
+}
+
+.THIS .ssp-customInput.slds-form-element .slds-input {
+  padding: 0.3125rem 1rem 0.3125rem 0.75rem;
+}
+.THIS .ssp-basecmp-inputText .slds-form-element .slds-input{
+    text-transform: uppercase;
+}
+.THIS .slds-form-element .slds-input,
+.THIS .slds-form-element .slds-textarea {
+  font-size: 1rem;
+  border: 0.0625rem solid t(sspMonoGamma);
+  height: 45px;
+  background: t(sspMonoDelta);
+}
+.THIS .slds-form-element .slds-input[disabled],
+.THIS .ssp-picklistDropdown[disabled],
+.THIS .slds-form-element .slds-textarea[disabled] {
+  background-color: t(sspMonoBeta);
+  cursor: not-allowed;
+}
+
+.THIS .slds-form-element .slds-textarea {
+  min-height: 85px;
+}
+
+.THIS .slds-input-has-custom-icon.slds-input-has-icon_left .slds-input {
+  padding: 0.3125rem 1rem 0.3125rem 2.75rem;
+}
+
+.THIS
+  .slds-input-has-custom-icon.slds-input-has-icon
+  .slds-input__icon
+  .slds-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.THIS .slds-form-element .slds-form-element__label,
+.THIS .ssp-picklistLabel {
+  font-size: 0.8125rem;
+  font-family: Poppins-Regular;
+  color: t(sspMonoBody);
+  padding: 0;
+}
+
+.THIS .slds-input:focus,
+.THIS .slds-input:required:focus,
+.THIS .slds-textarea:focus {
+  box-shadow: none;
+  border: 0.0625rem solid t(sspBlueAlpha);
+}
+
+.THIS .slds-has-error .slds-input {
+  border: 0.0625rem solid t(sspRedAlpha);
+  background-color: t(sspRedGamma);
+  box-shadow: none;
+}
+
+.THIS .slds-has-error .slds-form-element__help {
+  color: t(sspRedBeta);
+}
+
+.THIS .slds-form-element .label_with_info_icon {
+  position: absolute;
+  right: 0;
+}
+
+.THIS .slds-form-element .label_with_info_icon .slds-icon {
+  width: 1rem;
+  height: 1rem;
+  fill: t(sspBlueAlpha);
+}
+
+.THIS .ssp-lookup-option-container {
+  border-color: t(sspBlueAlpha);
+  background-color: t(sspWhiteAlpha);
+}
+
+.THIS .ssp-look-up-container input {
+  border: 1px solid t(sspMonoZeta);
+}
+
+.THIS .ssp-look-up-container input:disabled {
+  background-color: t(sspMonoTheta);
+}
+
+.THIS .ssp-look-up-container label {
+  color: t(sspMonoBody);
+}
+
+.THIS .ssp-error-label {
+  color: t(sspRedDelta);
+}
+
+.THIS .ssp-look-up-container .ssp-borderChange {
+  border-color: t(sspBlueAlpha);
+}
+
+.THIS .ssp-cbBoxBorder {
+  border: 1px solid t(sspMonoGamma);
+}
+
+.THIS .ssp-searchbox-outer,
+.THIS .ssp-radio-container .ssp-checkmark {
+  border: 1px solid t(sspMonoBeta);
+}
+
+.THIS .ssp-radio-container input:checked ~ .ssp-checkmark {
+  border-color: t(sspGreenAlpha);
+}
+
+.THIS .ssp-radio-container .ssp-checkmark:after {
+  background: t(sspGreenAlpha);
+}
+
+.THIS .ssp-generalCb .slds-checkbox .slds-checkbox_faux,
+.THIS .ssp-generalCb .slds-checkbox__label {
+  width: 2.8125rem;
+  height: 2.8125rem;
+  border-radius: 0.375rem;
+  border-color: t(sspMonoGamma);
+}
+
+.THIS .ssp-generalCb .slds-checkbox .slds-checkbox_faux {
+  background: t(sspGreyBeta);
+}
+
+.THIS .ssp-cbWithCompleteBorder .slds-form-element__control .slds-checkbox {
+  z-index: 1;
+  background: t(sspGreyBeta);
+  border: 1px solid t(sspMonoGamma);
+  border-radius: 0.375rem;
+}
+
+.THIS .ssp-cbWithCompleteBorder .slds-checkbox .slds-checkbox_faux,
+.THIS .ssp-cbWithCompleteBorder .slds-checkbox__label {
+  width: 2.8125rem;
+  height: 2.8125rem;
+  margin: 0.5px;
+  border-color: t(sspMonoGamma);
+  border-width: 0 1px 0 0;
+  border-radius: 0.3rem 0 0 0.375rem;
+}
+
+.THIS
+  .ssp-generalCb
+  .slds-checkbox
+  [type="checkbox"]:checked
+  + .slds-checkbox_faux:after,
+.THIS
+  .ssp-generalCb
+  .slds-checkbox
+  [type="checkbox"]:checked
+  ~ .slds-checkbox_faux:after,
+.THIS
+  .ssp-generalCb
+  .slds-checkbox
+  [type="checkbox"]:checked
+  + .slds-checkbox__label
+  .slds-checkbox_faux:after,
+.THIS
+  .ssp-cbWithCompleteBorder
+  .slds-checkbox
+  [type="checkbox"]:checked
+  + .slds-checkbox_faux:after,
+.THIS
+  .ssp-cbWithCompleteBorder
+  .slds-checkbox
+  [type="checkbox"]:checked
+  ~ .slds-checkbox_faux:after,
+.THIS
+  .ssp-cbWithCompleteBorder
+  .slds-checkbox
+  [type="checkbox"]:checked
+  + .slds-checkbox__label
+  .slds-checkbox_faux:after {
+  width: 1.625rem;
+  height: 0.8125rem;
+  top: 42%;
+  border-width: 0 0 4px 4px;
+  border-style: solid;
+  border-color: t(sspGreenGamma);
+}
+
+.THIS .ssp-checkbox .slds-checkbox .slds-form-element__label {
+  font-size: 1rem;
+  margin-left: 0.5rem;
+}
+
+.THIS
+  .ssp-checkbox
+  .slds-checkbox
+  [type="checkbox"]:focus
+  + .slds-checkbox_faux,
+.THIS
+  .ssp-checkbox
+  .slds-checkbox
+  [type="checkbox"]:focus
+  ~ .slds-checkbox_faux,
+.THIS
+  .ssp-checkbox
+  .slds-checkbox
+  [type="checkbox"]:focus
+  + .slds-checkbox__label
+  .slds-checkbox_faux {
+  border-color: t(sspMonoGamma);
+  box-shadow: none;
+}
+
+.THIS
+  .ssp-checkbox
+  .slds-checkbox
+  [type="checkbox"]:focus:checked
+  > .slds-checkbox_faux,
+.THIS
+  .ssp-checkbox
+  .slds-checkbox
+  [type="checkbox"]:focus:checked
+  ~ .slds-checkbox_faux,
+.THIS
+  .ssp-checkbox
+  .slds-checkbox
+  [type="checkbox"]:focus:checked
+  + .slds-checkbox__label
+  .slds-checkbox_faux {
+  border-color: t(sspMonoGamma);
+}
+
+.THIS .ssp-date .slds-input {
+  border-radius: 6px;
+  border: 1px solid t(sspMonoGamma);
+  line-height: 45px;
+}
+
+.THIS .ssp-checkboxGroup .slds-form-element__legend {
+  font-family: "Poppins-Bold";
+  font-weight: bold;
+  font-size: 16px;
+  color: t(sspMonoBlackOmega);
+  margin-bottom: 0.75rem;
+}
+
+.THIS .ssp-radioGroup .slds-radio {
+  min-height: 2.8125rem;
+  border: 1px solid t(sspMonoGamma);
+  border-radius: 0.375rem;
+  margin-bottom: 0.5rem;
+}
+
+.THIS .ssp-radioGroup .slds-form-element__label {
+  font-size: 1rem;
+  letter-spacing: 0.3px;
+  line-height: 30px;
+}
+
+.THIS .ssp-radioGroup .slds-form-element__legend {
+  font-family: "Poppins-Bold";
+}
+
+.THIS
+  .ssp-radioGroup
+  .slds-form-element
+  .slds-radio
+  [type="radio"]
+  + .slds-radio_faux,
+.THIS
+  .ssp-radioGroup
+  .slds-form-element
+  .slds-radio
+  [type="radio"]
+  ~ .slds-radio_faux,
+.THIS
+  .ssp-radioGroup
+  .slds-radio
+  [type="radio"]
+  + .slds-radio__label
+  .slds-radio_faux {
+  position: relative;
+  left: 0.8125rem;
+  top: 17%;
+}
+
+.THIS .ssp-radioGroup .slds-radio .slds-form-element__label {
+  position: relative;
+  top: 17%;
+  left: 20px;
+  border-left: 1px solid t(sspMonoGamma);
+  padding: 0.7rem;
+  font-size: 1rem;
+}
+
+.THIS .ssp-radioGroup .slds-radio [type="radio"]:checked + .slds-radio_faux,
+.THIS .ssp-radioGroup .slds-radio [type="radio"]:checked ~ .slds-radio_faux,
+.THIS
+  .ssp-radioGroup
+  .slds-radio
+  [type="radio"]:checked
+  + .slds-radio__label
+  .slds-radio_faux {
+  border-color: t(sspGreenAlpha);
+}
+
+.THIS
+  .ssp-radioGroup
+  .slds-radio
+  [type="radio"]:checked
+  + .slds-radio_faux:after,
+.THIS
+  .ssp-radioGroup
+  .slds-radio
+  [type="radio"]:checked
+  ~ .slds-radio_faux:after,
+.THIS
+  .ssp-radioGroup
+  .slds-radio
+  [type="radio"]:checked
+  + .slds-radio__label
+  .slds-radio_faux:after {
+  background: t(sspGreenAlpha);
+}
+
+.THIS .ssp-radioGroup .slds-radio [type="radio"]:focus + .slds-radio_faux,
+.THIS .ssp-radioGroup .slds-radio [type="radio"]:focus ~ .slds-radio_faux,
+.THIS
+  .ssp-radioGroup
+  .slds-radio
+  [type="radio"]:focus
+  + .slds-radio__label
+  .slds-radio_faux {
+  border: 1.5px solid t(sspGreenAlpha);
+  box-shadow: none;
+}
+
+.THIS
+  .ssp-searchbox
+  .slds-input-has-icon.slds-input-has-icon_left-right
+  .slds-input,
+.THIS
+  .ssp-searchbox
+  .slds-input-has-icon.slds-input-has-icon_left-right
+  .slds-input:active,
+.THIS
+  .ssp-searchbox
+  .slds-input-has-icon.slds-input-has-icon_left-right
+  .slds-input:focus {
+  border: none;
+  box-shadow: none;
+}
+
+.THIS .ssp-searchbox .slds-input-has-icon.slds-input-has-icon_left-right {
+  position: relative;
+  bottom: 1rem;
+  left: 2%;
+}
+
+.THIS .ssp-searchbox .slds-input__icon.slds-input__icon_left {
+  left: 0;
+  fill: t(sspMonoBlackGamma);
+  z-index: 0;
+}
+
+.THIS
+  .ssp-searchbox
+  .ssp-hidesearchicon
+  .slds-input__icon.slds-input__icon_left {
+  display: none;
+}
+
+.THIS
+  .ssp-searchbox
+  .ssp-searchbox-child
+  .slds-input__icon.slds-input__icon_right.slds-button_icon {
+  right: 1rem;
+}
+
+.THIS .ssp-income-details .ssp-inputDate,
+.THIS .ssp-income-details .ssp-inputText {
+  width: 100%;
+}
+
+.THIS
+  .ssp-income-details
+  .ssp-income-details-form
+  .ssp-genericInput
+  .ssp-genericRequired {
+  display: none;
+}
+
+.THIS .ssp-boderBottom5X {
+  border-bottom: 5px solid t(sspMonoAlpha);
+}
+
+.THIS .slds-form-element.ssp-input-error .slds-input,
+.THIS select.ssp-input-error,
+.THIS .ssp-collateralContactForm .ssp-input-error .slds-input {
+  background-color: t(sspRedGamma);
+  border: 1px solid t(sspRedAlpha);
+}
+/***************************************************** Dashboard Existing User Spinner Changes ***************************************************/
+
+.THIS .ssp-existDashboard .ssp-positionSpinner{
+    pointer-events: none;
+}
+.THIS .ssp-existDashboard .slds-backdrop{
+    pointer-events: auto;
+    z-index: 1;
+}
+/***************************************************** Input with icon ***************************************************/
+
+.THIS .ssp-inputIconContainer {
+  position: relative;
+  width: 100%;
+}
+
+.THIS .ssp-inputIcon {
+  position: absolute;
+  z-index: 1;
+  left: 3%;
+  top: 37px;
+  color: t(sspBlueAlpha);
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 0.3px;
+  line-height: 24px;
+}
+
+.THIS .ssp-inputIconContainer input {
+  padding: 0 13px 0 30px;
+}
+
+/******************************************************** Header ******************************************************/
+
+.THIS .ssp-back-to-assister-text {
+  border-bottom: 0.0625rem solid t(sspMonoGamma);
+}
+
+.THIS .ssp-horizontal-menu li:hover > a {
+  border-bottom: 0.0625rem solid t(sspMonoGamma);
+}
+
+.THIS .ssp-horizontal-menu li > a,
+.THIS .ssp-profile-dropdown .ssp-first-name {
+  color: t(sspWhiteAlpha);
+}
+
+.THIS .ssp-dropdown-content {
+  background-color: t(sspWhiteAlpha);
+}
+
+.THIS .ssp-dropdown-content a {
+  color: t(sspMonoBody);
+}
+
+.THIS .ssp-dropdown-content a:hover {
+  background-color: t(sspMonoAlpha);
+}
+
+.THIS .ssp-profile-dropdown:hover .ssp-dropdown-content a {
+  color: t(sspMonoBody);
+}
+
+.THIS .ssp-mobile-hamburger svg {
+  fill: t(sspWhiteAlpha);
+}
+
+.THIS .ssp-profile-dropdown:hover .ssp-dropdown-content .ssp-user-name {
+  color: t(sspMonoOmega);
+}
+
+.THIS .ssp-sidenav > a,
+.THIS .ssp-sidenav .ssp-dropdown-container a,
+.THIS .ssp-sidenav .ssp-dropdown-unauth a {
+  color: t(sspWhiteAlpha);
+}
+
+.THIS .ssp-sidenav > .ssp-dropdown-btn-without-options:hover {
+  border-bottom: 0.0625rem solid t(sspMonoGamma);
+}
+
+.THIS .ssp-sidenav .ssp-dropdown-container a:hover,
+.THIS .ssp-sidenav .ssp-dropdown-unauth a:hover,
+.THIS
+  .ssp-sidenav
+  .ssp-dropdown-container
+  .ssp-active-item
+  .THIS
+  .ssp-sidenav
+  .ssp-dropdown-unauth
+  .ssp-active-item {
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+.THIS .ssp-hr-line {
+  border-top: 0.01rem solid t(sspMonoDelta);
+}
+
+.THIS .ssp-sidenav .ssp-dropdown-container a:hover .ssp-white-rect,
+.THIS .ssp-sidenav .ssp-dropdown-unauth a:hover .ssp-white-rect,
+.THIS
+  .ssp-sidenav
+  .ssp-dropdown-container
+  .ssp-active-item
+  .ssp-white-rect
+  .THIS
+  .ssp-sidenav
+  .ssp-dropdown-unauth
+  .ssp-active-item
+  .ssp-white-rect {
+  background: t(sspWhiteAlpha);
+}
+
+.THIS .ssp-horizontal-menu .ssp-mail-icon .slds-icon,
+.THIS .ssp-mail-icon .slds-icon {
+  fill: t(sspBlueAlpha);
+  height: 1rem;
+  width: 1rem;
+}
+
+.THIS .ssp-mail-rectangle {
+  background-color: t(sspBlueTheta);
+}
+
+.THIS .ssp-language-container {
+  background-color: t(sspBlueBeta);
+}
+
+.THIS .ssp-language-container .ssp-language-dropdown > a {
+  color: t(sspWhiteAlpha);
+}
+
+.THIS .ssp-header .ssp-programs-dropdown .slds-icon,
+.THIS .ssp-header .ssp-language-dropdown .slds-icon,
+.THIS .ssp-sidenav .ssp-dropdown-btn .slds-icon {
+  width: 0.625rem;
+  height: 0.625rem;
+  fill: white;
+}
+
+/******************************************************** Footer ******************************************************/
+
+.THIS .ssp-footer {
+  background-color: t(sspMonoBody);
+}
+
+.THIS .ssp-footer-heading {
+  color: t(sspMonoGamma);
+}
+
+.THIS .ssp-footer-heading-large {
+  color: t(sspMonoBlackBeta);
+}
+
+.THIS .ssp-footer-text {
+  color: t(sspWhiteAlpha);
+}
+
+.THIS .ssp-footer-text a {
+  color: t(sspWhiteAlpha);
+}
+
+/********************************************************** Shadow *******************************************************/
+
+.THIS .ssp-boxShadow {
+  box-shadow: 0 15px 25px -7px t(sspMonoBodyShadow),
+    0 0 6px 0 t(sspMonoBodyShadow);
+}
+
+/****************************************************** Border Bottom ****************************************************/
+
+.THIS .sspMonoBetaBorderBottom {
+  border-bottom: 1px solid t(sspMonoBeta);
+}
+
+/************************************************* SSP Application Manager ***********************************************/
+
+.THIS .ssp-appManager_tbl thead th:first-child {
+  border-left: solid 1px t(sspMonoBeta);
+}
+
+.THIS .ssp-appManager_tbl thead th:last-child {
+  border-right: solid 1px t(sspMonoBeta);
+}
+
+/************************************************ SSP Message Center Table **********************************************/
+
+.THIS .ssp-message-table .ssp-message-center-table thead th,
+.THIS .ssp-message-table table.ssp-message-center-table tbody td,
+.THIS .ssp-message-table .ssp-message-center-table-row,
+.THIS .ssp-appTable_borderBottom {
+  border-bottom: solid 1px t(sspMonoBeta);
+}
+
+/*************************************************** Framework changes *************************************************/
+
+.THIS .ssp-genericInputTogglegroup .slds-radio_button + .slds-radio_button {
+  border: 0;
+}
+
+.THIS .ssp-genericInputTogglegroup .slds-radio_button-group {
+  border: 0;
+}
+
+.THIS .ssp-genericInputTogglegroup .slds-radio_button__label {
+  border: 1px solid t(sspMonoGamma);
+  background: t(sspWhiteAlpha);
+  color: t(sspMonoBody);
+  border-radius: 0.25rem;
+  padding: 0.33rem 0;
+  outline: none;
+  padding: 5px 15px;
+  min-width: 170px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.THIS
+  .ssp-genericInputTogglegroup
+  .slds-radio_button:first-child
+  .slds-radio_button__label {
+  margin-right: 30px;
+}
+
+.THIS
+  .ssp-genericInputTogglegroup
+  .slds-radio_button
+  [type="radio"]:checked
+  + .slds-radio_button__label {
+  background: t(sspBlueAlpha);
+  border: 0;
+}
+
+.THIS
+  .ssp-genericInputTogglegroup
+  .slds-radio_button
+  [type="radio"]:focus
+  + .slds-radio_button__label {
+  box-shadow: none;
+}
+
+.THIS .ssp-genericInputTogglegroup .slds-form-element__label,
+.THIS .ssp-checkboxGroup .slds-form-element__label {
+  font-size: 16px;
+  font-family: Poppins-bold;
+  margin: 0 0 15px 0;
+}
+
+.THIS .ssp-checkboxGroup .slds-form-element__control .slds-form-element__label {
+  font-family: Poppins-regular;
+  width: calc(100% - 60px);
+  display: inline-block;
+  border-left: 1px solid t(sspMonoGamma);
+  padding: 0.5rem;
+}
+.THIS .ssp-viewSummary {
+  font-size: 13px;
+  letter-spacing: -0.3px;
+  line-height: 30px;
+  text-decoration: underline;
+  text-underline-position: under;
+}
+
+.THIS .ssp-arrow_left {
+  border: solid t(sspMagentaAlpha);
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 2px;
+  vertical-align: middle;
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+.THIS .ssp-dropdownMenu:focus {
+  outline: none;
+}
+
+.THIS .ssp-checkboxGroup .slds-checkbox {
+  z-index: 1;
+  background: t(sspGreyBeta);
+  border: 1px solid t(sspMonoGamma);
+  border-radius: 0.375rem;
+  margin: 0 0 15px 0;
+}
+
+.THIS .ssp-checkboxGroup .slds-checkbox:last-child {
+  margin: 0;
+}
+
+.THIS .ssp-checkboxGroup .slds-checkbox__label {
+  border-color: t(sspMonoGamma);
+  border-width: 0 1px 0 0;
+  border-radius: 0.3rem 0 0 0.375rem;
+  display: flex;
+}
+
+.THIS .ssp-checkboxGroup .slds-checkbox__label .slds-checkbox_faux {
+  width: 2.8125rem;
+  height: 2.8125rem;
+  background: t(sspGreyBeta);
+  border-radius: 0.3rem 0 0 0.375rem;
+  border: none;
+  margin-right: 0;
+}
+
+.THIS
+  .ssp-checkboxGroup
+  .slds-form-element
+  .slds-checkbox
+  [type="checkbox"]
+  + .slds-checkbox__label
+  .slds-checkbox_faux,
+.THIS
+  .ssp-checkboxGroup
+  .slds-checkbox
+  [type="checkbox"]:focus:checked
+  + .slds-checkbox__label
+  .slds-checkbox_faux {
+  margin-right: 0;
+  border: none;
+  box-shadow: none;
+  background-color: unset;
+}
+
+.THIS .ssp-checkboxGroup .slds-checkbox__label .slds-form-element__label {
+  font-size: 1rem;
+}
+
+.THIS
+  .ssp-checkboxGroup
+  .slds-checkbox
+  [type="checkbox"]:checked
+  + .slds-checkbox__label
+  .slds-checkbox_faux:after,
+.THIS
+  .ssp-singleCheckbox
+  .slds-checkbox
+  [type="checkbox"]:checked
+  + .slds-checkbox__label
+  .slds-checkbox_faux:after {
+  width: 1.625rem;
+  height: 0.8125rem;
+  top: 42%;
+  border-width: 0 0 4px 4px;
+  border-style: solid;
+  border-color: t(sspGreenGamma);
+}
+
+.THIS .ssp-multipleCheckbox_container .slds-checkbox {
+  padding: 0.625rem 0;
+}
+
+.THIS .ssp-multipleCheckbox_container .slds-checkbox .slds-checkbox_faux {
+  position: absolute;
+  height: 98%;
+  top: 0;
+}
+.THIS .ssp-multipleCheckbox_container .slds-checkbox .slds-form-element__label {
+  left: 3.25rem;
+  position: relative;
+  width: 85%;
+  display: inline-block;
+}
+
+.THIS .ssp-picklistDropdown {
+  width: 100%;
+  height: 45px;
+  padding: 0 15px;
+  padding-right: 35px;
+  border-radius: 6px;
+  border: 1px solid t(sspMonoGamma);
+  -webkit-appearance: none;
+  background-position: 98.9%;
+  font-family: Poppins-Regular;
+  font-size: 16px;
+  line-height: 45px;
+  letter-spacing: 0.3px;
+  color: t(sspMonoBody);
+  appearance: none;
+  background-image: url(../resource/sspOverviewIcons/icons/ic_dropdown/ic_dropdown@3x.png);
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+  background-color: t(sspMonoDelta);
+}
+
+/***************************************************** Individual Name ***************************************************/
+
+.THIS .ssp-individualName {
+  color: t(sspBlueAlpha);
+  font-size: 42px;
+  font-weight: 900;
+  line-height: 48px;
+}
+
+.THIS .ssp-singleCheckbox .slds-checkbox_faux {
+  background: t(sspMonoDelta);
+  width: 2.8125rem;
+  height: 2.8125rem;
+  border-radius: 0.375rem;
+  border-color: t(sspMonoGamma);
+}
+
+.THIS .ssp-singleCheckbox .slds-form-element__label {
+  font-size: 1rem;
+}
+
+.THIS .ssp-individualSection {
+  font-size: 13px;
+  letter-spacing: 0.3px;
+  line-height: 18px;
+}
+
+/*************************************************** Resource Summary screen **********************************************/
+
+.THIS
+  .ssp-resourceSummary_container
+  .ssp-notRequiringDetails_section
+  .ssp-progressCardHead {
+  padding-top: 1.813rem;
+  padding-bottom: 1.75rem;
+}
+
+.THIS
+  .ssp-resourceSummary_container
+  .ssp-existingRecords_section
+  .ssp-progressCardHead {
+  padding-top: 1.25rem;
+  padding-bottom: 1.313rem;
+}
+
+/******************************************** Program Selection & Health Selection ****************************************/
+
+.THIS .ssp-healthSelectionMembers .slds-checkbox__label,
+.THIS .ssp-programSelectionOptions .slds-checkbox__label {
+  width: 2.8125rem;
+  height: 2.8125rem;
+  margin: 0.5px;
+  border-color: t(sspMonoGamma);
+  border-width: 0 1px 0 0;
+  border-radius: 0.3rem 0 0 0.375rem;
+}
+
+.THIS .ssp-healthSelectionMembers .slds-checkbox,
+.THIS .ssp-programSelectionOptions .slds-checkbox,
+.THIS .ssp-enrollmentDetailsCheckBox .slds-checkbox {
+  z-index: 1;
+  background: t(sspGreyBeta);
+  border: 1px solid t(sspMonoGamma);
+  border-radius: 0.375rem;
+  margin: 0 0 15px 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.THIS
+  .ssp-healthSelectionMembers
+  .ssp-healthSelectionCheckGroup:last-child
+  .slds-checkbox,
+.THIS
+  .ssp-programSelectionCheckGroup:last-child
+  .ssp-programSelectionOptions
+  .slds-checkbox
+  .THIS
+  .ssp-healthSelectionCheckGroup:last-child
+  .ssp-enrollmentDetailsCheckBox
+  .slds-checkbox {
+  margin: 0;
+}
+
+.THIS .ssp-healthSelectionMembers .ssp-singleCheckbox .slds-checkbox_faux,
+.THIS .ssp-programSelectionOptions .ssp-singleCheckbox .slds-checkbox_faux,
+.THIS .ssp-enrollmentDetailsCheckBox .ssp-singleCheckbox .slds-checkbox_faux {
+  width: 2.8125rem;
+  height: 2.8125rem;
+  margin: 0.5px;
+  border-color: t(sspMonoGamma);
+  border-width: 0 1px 0 0;
+  border-radius: 0.3rem 0 0 0.375rem;
+}
+
+/************************************************* Primary Address Typeahead *********************************************/
+
+.THIS .ssp-search-input-focus .slds-input {
+  border-radius: 0.25rem 0.25rem 0 0;
+  border-bottom: 0;
+  padding-left: 15px;
+}
+
+.THIS .ssp-search-input-focus .slds-input:focus {
+  border: 1px solid t(sspMonoGamma);
+  border-bottom: 0;
+}
+
+/****************************************************** Remove Resource **************************************************/
+
+.THIS
+  .ssp-removeResource_container
+  .slds-form-element
+  .slds-input-has-icon
+  input,
+.THIS
+  .ssp-benefitDetails_container
+  .slds-form-element
+  .slds-input-has-icon
+  input,
+.THIS .ssp-changeResource_container .slds-form-element .slds-input {
+  background-color: t(sspWhiteAlpha);
+}
+
+.THIS .ssp-resourceDetails_container .ssp-picklistDropdown {
+  background-color: t(sspMonoDelta);
+}
+
+.THIS .ssp-resourceDetails_container .ssp-picklistDropdown:disabled,
+.THIS .ssp-income-details-form .ssp-picklistDropdown:disabled,
+.THIS .ssp-household-summary-container select.ssp-picklistDropdown:disabled {
+  background-color: t(sspMonoBeta);
+  cursor: not-allowed;
+}
+
+.THIS .ssp-resourceDetails_container .ssp-genericInput .ssp-inputText {
+  width: 100%;
+}
+
+.THIS
+  .ssp-resourceDetails_container
+  .ssp-fieldsContainer
+  .slds-form-element__label,
+.THIS
+  .ssp-benefitDetails_container
+  .ssp-multipleFieldsContainer
+  .slds-form-element__label {
+  margin-bottom: 0.313rem;
+}
+
+/***************************************************** Primary Applicant ************************************************/
+
+.THIS
+  .ssp-checkBoxPrefferedContactMethod
+  .contactDetails
+  .ssp-checkboxContainer
+  .slds-form-element__control {
+  width: 55%;
+}
+
+/*************************************************** Income and subsidies **********************************************/
+
+.THIS .sspIcomeSubsidiesForm .slds-checkbox__label,
+.THIS .ssp-expensesSelectionForm .slds-checkbox__label,
+.THIS .sspResourceSelection .slds-checkbox__label {
+  width: 2.8125rem;
+  height: 2.8125rem;
+  margin: 0.5px;
+  border-color: t(sspMonoGamma);
+  border-width: 0 1px 0 0;
+  border-radius: 0.3rem 0 0 0.375rem;
+}
+
+.THIS .sspIcomeSubsidiesForm .slds-checkbox,
+.THIS .ssp-expensesSelectionForm .slds-checkbox,
+.THIS .sspResourceSelection .slds-checkbox {
+  z-index: 1;
+  background: t(sspGreyBeta);
+  border: 1px solid t(sspMonoGamma);
+  border-radius: 0.375rem;
+  margin: 0 0 15px 0;
+  padding-right: 1rem;
+}
+
+.THIS .sspIcomeSubsidiesForm .sspMember:last-child .slds-checkbox,
+.THIS .ssp-expensesSelectionForm .sspMember:last-child .slds-checkbox,
+.THIS
+  .sspResourceSelection
+  .ssp-resourceSelectionMembers:last-child
+  .slds-checkbox {
+  margin: 0;
+}
+
+.THIS .sspIcomeSubsidiesForm .ssp-singleCheckbox .slds-checkbox_faux,
+.THIS .ssp-expensesSelectionForm .ssp-singleCheckbox .slds-checkbox_faux,
+.THIS .sspResourceSelection .ssp-singleCheckbox .slds-checkbox_faux {
+  width: 2.8125rem;
+  height: 2.8125rem;
+  margin: 0.5px;
+  border-color: t(sspMonoGamma);
+  border-width: 0 1px 0 0;
+  border-radius: 0.3rem 0 0 0.375rem;
+}
+
+.THIS .ssp-ProgressCardContainer .ssp-progressCardFoot,
+.THIS .ssp-nameApprovedCardFooter {
+  border-top: 1px solid t(sspMonoBeta);
+}
+
+/****************************************************** Venkat's code **************************************************/
+
+.THIS .ssp-income-details-form .ssp-inputIcon {
+  top: 59%;
+}
+
+.THIS
+  .ssp-income-details-form
+  .ssp-expenses-related
+  .slds-form-element
+  .slds-form-element__label {
+  width: 90%;
+}
+
+.THIS .ssp-income-details-form .ssp-helptextIcon .slds-button__icon {
+  fill: t(sspBlueAlpha);
+}
+
+.THIS .ssp-income-details-form .addressLineClass > div:first-child,
+.THIS .ssp-income-details-form .addressLineClass > div:first-child > div {
+  margin: 0;
+}
+
+.THIS .ssp-auth-reps-assisters-agents .ssp-button_brand .slds-button_brand {
+  width: 100%;
+  padding: 0;
+}
+.THIS
+  .ssp-auth-reps-assisters-agents
+  .ssp-footerBtnBackSave
+  .ssp-secondGroupBtn
+  .slds-button {
+  padding: 0 20px;
+}
+.THIS .ssp-reps-app-header .ssp-reps-text {
+  color: t(sspMonoBody);
+}
+
+.THIS .ssp-auth-reps-assisters-agents .ssp-auth-reps {
+  color: t(sspMonoOmega);
+}
+
+.THIS .ssp-auth-reps-assisters-agents .ssp-border-bottom {
+  border-bottom: 1px solid t(sspMonoBeta);
+}
+
+.THIS .ssp-auth-reps-assisters-agents .ssp-auth-reps-heading {
+  color: t(sspMonoBody);
+}
+
+.THIS .ssp-auth-reps-assisters-agents .ssp-dot {
+  background-color: t(sspBlueAlpha);
+}
+
+.THIS .ssp-expensesSelectionForm > div {
+  border-bottom: 1px solid t(sspMonoBeta);
+}
+
+.THIS .ssp-program-check-box .ssp-radioGroup > div,
+.THIS .ssp-report-change-modal .ssp-radioGroup > div {
+  width: 100%;
+}
+
+.THIS
+  .ssp-program-check-box
+  .ssp-radioGroup
+  .slds-radio
+  .slds-radio__label
+  .slds-radio_faux,
+.THIS
+  .ssp-report-change-modal
+  .ssp-radioGroup
+  .slds-radio
+  .slds-radio__label
+  .slds-radio_faux {
+  display: inline-block;
+}
+
+.THIS
+  .ssp-program-check-box
+  .ssp-radioGroup
+  .slds-radio
+  .slds-radio__label
+  .slds-form-element__label,
+.THIS
+  .ssp-report-change-modal
+  .ssp-radioGroup
+  .slds-radio
+  .slds-radio__label
+  .slds-form-element__label {
+  display: inline-block;
+  width: 94%;
+}
+
+.THIS
+  .ssp-report-change-modal
+  .ssp-radioGroup
+  .slds-radio
+  .slds-radio__label
+  .slds-form-element__label {
+  margin-bottom: 0;
+}
+
+.THIS .ssp-program-check-box .ssp-radioGroup .slds-radio,
+.THIS .ssp-report-change-modal .ssp-radioGroup .slds-radio {
+  min-height: 2.8125rem;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.THIS .ssp-program-check-box .ssp-radioGroup .slds-radio:last-child {
+  margin-bottom: 5px;
+}
+
+.THIS .ssp-report-change-modal .ssp-radioGroup .slds-radio {
+  background: t(sspMonoDelta);
+}
+
+.THIS
+  .ssp-add-auth-rep
+  .ssp-case-question
+  .ssp-genericInput
+  .slds-form-element__label {
+  display: none;
+}
+
+.THIS .ssp-dashboard-option-border {
+  border-bottom: 1px solid t(sspMonoGamma);
+}
+
+.THIS .ssp-auth-reps-summary .ssp-add-auth-rep-btn .slds-button {
+  padding: 0;
+  width: 100%;
+}
+
+.THIS
+  .ssp-first-time-user-dashboard
+  .ssp-dashboard-action-section
+  .slds-button {
+  width: 370px;
+  height: 60px;
+  padding: 0;
+}
+
+.THIS .ssp-first-time-user-dashboard .ssp-program-card .ssp-ctaCardBlue {
+  width: 95%;
+}
+
+.THIS
+  .ssp-first-time-user-dashboard
+  .ssp-program-card
+  .ssp-ctaCardBlue
+  .ssp-ctaBody
+  p:first-child {
+  margin-bottom: 1rem;
+}
+
+.THIS
+  .ssp-first-time-user-dashboard
+  .ssp-program-card
+  .ssp-ctaCardBlue
+  .ssp-ctaBody:first-child {
+  margin-bottom: 1rem;
+}
+
+.THIS
+  .ssp-first-time-user-dashboard
+  .ssp-program-card
+  .ssp-ctaCardBlue
+  .ssp-ctaButton {
+  display: none;
+}
+
+.THIS
+  .ssp-first-time-user-dashboard
+  .ssp-program-card
+  .ssp-ctaCardBlue
+  .ssp-ctaBody {
+  margin-bottom: 0;
+}
+
+.THIS .ssp-agent-modal .ssp-underline {
+  text-decoration: underline t(sspMonoOmega);
+}
+
+.THIS .ssp-verical-menu .slds-nav-vertical .slds-nav-vertical__title {
+  padding: 0;
+  display: none;
+}
+
+.THIS .ssp-existing-user-dashboard .ssp-explicitNoticeCard {
+  padding: 18px 30px 18px 24px;
+}
+
+.THIS .ssp-add-auth-rep-permissions .ssp-explicitNoticeCard {
+  padding: 18px 30px 18px 24px;
+}
+
+.THIS .ssp-existing-user-dashboard .ssp-dashboard-header-section .slds-button {
+  padding: 0 10px;
+}
+.THIS
+  .ssp-existing-user-dashboard
+  .ssp-dashboard-header-section
+  .ssp-close-icon
+  .slds-button {
+  width: auto;
+  padding: 0;
+  color: t(sspBlueAlpha);
+}
+
+.THIS .ssp-existing-user-dashboard .ssp-benefits-card .ssp-genericDashboardCard,
+.THIS
+  .ssp-existing-user-dashboard
+  .ssp-message-center-card
+  .ssp-genericDashboardCard {
+  height: 394px;
+  max-height: 394px;
+  overflow-y: auto;
+}
+
+.THIS .ssp-existing-user-dashboard .ssp-medicaid-card .ssp-genericDashboardCard,
+.THIS
+  .ssp-existing-user-dashboard
+  .ssp-reps-assisters-card
+  .ssp-genericDashboardCard {
+  height: 341px;
+  max-height: 341px;
+  overflow-y: auto;
+}
+.THIS .ssp-existing-dashboard-container .ssp-dashboardTab {
+  border-bottom: 4px solid t(sspMonoBeta);
+}
+.THIS .ssp-existing-dashboard-container .ssp-dashboardDropdown,
+.THIS .ssp-existing-dashboard-container .ssp-dashboardDropdownContent,
+.THIS .ssp-existing-dashboard-container .ssp-reps-assistets,
+.THIS .ssp-existing-dashboard-container .ssp-todo-unread,
+.THIS .ssp-existing-dashboard-container .ssp-todo-count,
+.THIS .ssp-existing-dashboard-container .ssp-specific-info {
+  border-bottom: 1px solid t(sspMonoBeta);
+}
+.THIS .ssp-existing-dashboard-container .ssp-dot {
+  background-color: t(sspGreenAlpha);
+}
+.THIS .ssp-existing-dashboard-container .active {
+  border-bottom: 4px solid t(sspBlueAlpha);
+  color: t(sspMonoBody);
+}
+.THIS .ssp-existing-dashboard-container .ssp-vertical-rule {
+  background-color: t(REMediaBorder);
+}
+.THIS .ssp-existing-dashboard-container .ssp-action-links a {
+  border-bottom: 0.5px solid t(sspMonoBody);
+}
+.THIS
+  .ssp-existing-dashboard-container
+  .ssp-waring-card-section
+  .ssp-notice-content {
+  flex: auto;
+}
+
+.THIS .ssp-absent-parents-summary-cards .ssp-ProgressCard {
+  width: 100%;
+}
+.THIS .sspIcomeSubsidiesForm .ssp-alignHelpText {
+  align-items: baseline;
+}
+.THIS .ssp-expensesSelectionForm .ssp-alignHelpText {
+  align-items: baseline;
+}
+.THIS .ssp-word-break-all {
+  word-break: break-all;
+}
+
+.THIS .ssp-agency-management .slds-form-element .slds-input {
+  background: t(sspWhiteAlpha);
+}
+.THIS .ssp-agency-management .slds-form-element .slds-input[disabled] {
+  background: t(sspMonoBeta);
+}
+.THIS .ssp-agency-management .ssp-assignTo .ssp-input-error .slds-input {
+  background-color: t(sspRedGamma);
+  border: 1px solid t(sspRedAlpha);
+}
+.THIS .ssp-agency-management .slds-form-element.ssp-input-error .slds-input {
+  background-color: t(sspRedGamma);
+}
+.THIS
+  .ssp-agency-management
+  .slds-checkbox
+  [type="checkbox"]:checked
+  + .slds-checkbox__label
+  .slds-checkbox_faux:after {
+  border-bottom: 2px solid t(sspGreenGamma);
+  border-left: 2px solid t(sspGreenGamma);
+  width: 12.52px;
+  height: 6.35px;
+  top: 45%;
+}
+.THIS
+  .ssp-agency-management
+  .slds-form-element
+  .slds-checkbox
+  [type="checkbox"]
+  + .slds-checkbox__label
+  .slds-checkbox_faux {
+  box-shadow: none;
+  border-radius: 6px;
+}
+.THIS
+  .ssp-agency-management
+  .slds-checkbox
+  [type="checkbox"]:focus
+  + .slds-checkbox__label
+  .slds-checkbox_faux {
+  border-color: t(sspMonoGamma);
+}
+.THIS .ssp-agency-management .slds-checkbox .slds-checkbox_faux {
+  width: 25px;
+  height: 25px;
+  border: 1px solid t(sspMonoGamma);
+  background: t(sspMonoDelta);
+}
+.THIS .ssp-pagination .ssp-pageSelected {
+  color: t(sspWhiteAlpha);
+  background-color: t(sspBlueAlpha);
+}
+.THIS .ssp-pagination .ssp-paginationNext .slds-button,
+.THIS .ssp-pagination .ssp-paginationPrevious .slds-button {
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+.THIS .ssp-pagination .ssp-paginationNextMobile .slds-button,
+.THIS .ssp-pagination .ssp-paginationPreviousMobile .slds-button {
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+.THIS .ssp-agency-management .ssp-reset-button .slds-button,
+.THIS .ssp-agency-management .ssp-search-button .slds-button,
+.THIS .ssp-agency-management .ssp-change-assignment .slds-button {
+  padding: 0;
+  width: 100%;
+}
+.THIS .ssp-agency-management .slds-table_cell-buffer tr > td:first-child {
+  padding-left: 15px;
+}
+.THIS .ssp-agency-management .ssp-multilineRadioChecked {
+  border: 2px solid t(sspMonoBeta);
+}
+.THIS
+  .ssp-agency-management
+  .ssp-multilineRadioInput:checked
+  ~ .ssp-multilineRadioChecked {
+  border: 2px solid t(sspGreenGamma);
+}
+.THIS .ssp-agency-management .ssp-multilineRadioChecked:after {
+  background: t(sspGreenGamma);
+}
+.THIS .ssp-agency-management .ssp-dashboardDropdownContent a:hover {
+  background-color: t(sspMonoAlpha);
+}
+.THIS .ssp-clientCaseNotes .ssp-dashboardDropdownContent a:hover {
+  background-color: t(sspMonoAlpha);
+}
+.THIS .ssp-clientCaseNotes .ssp-accordionButton {
+  align-items: center;
+  padding: 17px 30px;
+}
+.THIS .ssp-clientCaseNotes .ssp-accordionPanel {
+  align-items: center;
+  padding: 0 30px;
+}
+.THIS .ssp-clientCaseNotes .ssp-discardButton .slds-button,
+.THIS .ssp-clientCaseNotes .ssp-saveNoteButton .slds-button {
+  padding: 0;
+  width: 100%;
+}
+.THIS .ssp-clientCaseNotes .ssp-addNotesButton .slds-button {
+  width: 100%;
+}
+.THIS .ssp-clientCaseNotes .ssp-notes-accordion .ssp-accordion {
+  width: 100%;
+}
+.THIS
+  .ssp-requestTaxForms
+  .ssp-formType
+  .ssp-genericInputToggle
+  .ssp-alignHelpText {
+  margin-bottom: 15px;
+}
+.THIS
+  .ssp-requestTaxForms
+  .ssp-yearToggle
+  .ssp-genericInputToggle
+  .ssp-alignHelpText {
+  margin-bottom: 15px;
+}
+.THIS
+  .ssp-requestTaxForms
+  .ssp-yearToggle
+  .ssp-genericInputTogglegroup
+  .slds-radio_button
+  .slds-radio_button__label {
+  margin-right: 30px;
+}
+.THIS
+  .ssp-requestTaxForms
+  .ssp-yearToggle
+  .ssp-genericInputTogglegroup
+  .slds-radio_button:last-child
+  .slds-radio_button__label {
+  margin-right: 0;
+}
+.THIS .ssp-requestTaxForms .ssp-mailingAddressCard .ssp-reportChangeLink {
+  border-bottom: 1px solid t(sspMonoBody);
+}
+.THIS .ssp-requestTaxForms .ssp-action-btn-section .ssp-cancel-btn .slds-button,
+.THIS .ssp-requestTaxForms .ssp-action-btn-section .ssp-next-btn .slds-button,
+.THIS .ssp-requestTaxForms .ssp-GoToPortalBtn .slds-button {
+  width: 100%;
+  height: 100%;
+}
+
+.THIS .ssp-requestTaxForms .ssp-GoToPortalBtn .slds-button {
+  font-size: 1rem;
+}
+
+.THIS .ssp-claimsAndPayments .ssp-claimProgramStatus .ssp-ctaCardBlue {
+  padding: 0;
+}
+.THIS
+  .ssp-claimsAndPayments
+  .ssp-buttonPayNowSection
+  .ssp-buttonPayNow
+  .slds-button {
+  width: 100%;
+}
+.THIS .ssp-claimsAndPayments .ssp-payInstructions {
+  border-bottom: 1px solid t(sspMonoBeta);
+}
+.THIS .ssp-claimsAndPayments .ssp-claimStatus {
+  border-bottom: 1px solid t(sspMonoBeta);
+}
+.THIS .ssp-claimsAndPayments .ssp-dueDateSection {
+  border-bottom: 1px solid t(sspMonoBeta);
+}
+.THIS .ssp-payNowModal .ssp-amountTypeList {
+  border-bottom: 1px solid t(sspMonoBeta);
+}
+
+@media only screen and (max-width: 768px) {
+  .THIS .ssp-clientCaseNotes .ssp-discardButton .slds-button,
+  .THIS .ssp-clientCaseNotes .ssp-saveNoteButton .slds-button,
+  .THIS .ssp-clientCaseNotes .ssp-addNotesButton .slds-button {
+    font-size: 1.125rem;
+  }
+  .THIS
+    .ssp-requestTaxForms
+    .ssp-yearToggle
+    .ssp-genericInputTogglegroup
+    .slds-radio_button
+    .slds-radio_button__label {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  .THIS
+    .ssp-requestTaxForms
+    .ssp-yearToggle
+    .ssp-genericInputTogglegroup
+    .slds-radio_button:last-child
+    .slds-radio_button__label {
+    margin-right: 0;
+    margin-left: 10px;
+  }
+  .THIS
+    .ssp-requestTaxForms
+    .ssp-yearToggle
+    .ssp-genericInputTogglegroup
+    .slds-radio_button:first-child
+    .slds-radio_button__label {
+    margin-left: 0;
+  }
+  .THIS
+    .ssp-requestTaxForms
+    .ssp-yearToggle
+    .ssp-genericInputTogglegroup
+    .slds-radio_button__label {
+    min-width: 97px;
+  }
+  .THIS
+    .ssp-requestTaxForms
+    .ssp-action-btn-section
+    .ssp-cancel-btn
+    .slds-button,
+  .THIS
+    .ssp-requestTaxForms
+    .ssp-action-btn-section
+    .ssp-next-btn
+    .slds-button {
+    font-size: 18px;
+  }
+  .THIS .ssp-SpanishStartBtn .slds-button,
+  .THIS .ssp-cardItemsButton.ssp-SpanishStartBtn .slds-button {
+    font-size: 13px;
+  }
+}
+/****************************************************** Nikhil's code **************************************************/
+/*********************************************************CD - 2 *********************************************/
+.THIS
+  .ssp-requestCardContainer
+  .ssp-addressToggle
+  .ssp-genericInputTogglegroup
+  .slds-radio_button__label {
+  width: 16.875rem;
+}
+.THIS .ssp-challengeQuestionsContainer .ssp-radio-label {
+  padding: 0.625rem;
+}
+
+.THIS .ssp-challengeQuestionsContainer .ssp-checkmark {
+  top: 33%;
+}
+.THIS .ssp-challengeQuestionsContainer .ssp-radio-container {
+  width: 50%;
+}
+
+.THIS .ssp-resumeRIDP .slds-button_brand {
+  width: 100%;
+}
+
+.THIS
+  .ssp-clientSearchContainer
+  .ssp-clientSearchContent
+  .ssp-clientSearchToggle
+  .ssp-genericInputToggle
+  .ssp-alignHelpText {
+  margin-bottom: 0.313rem;
+}
+.THIS
+  .ssp-clientSearchContainer
+  .ssp-clientSearchContent
+  .ssp-clientSearchToggle
+  .ssp-genericInputToggle
+  .ssp-alignHelpText
+  .ssp-fontFamily_popinBold {
+  font-size: 0.813rem;
+  font-family: "Poppins-Regular";
+}
+.THIS
+  .ssp-clientSearchContainer
+  .ssp-clientSearchContent
+  .ssp-validationHighLight
+  .slds-form-element
+  .slds-input,
+.THIS
+  .ssp-clientSearchContainer
+  .ssp-clientSearchContent
+  .ssp-validationHighLight
+  .slds-form-element
+  .slds-textarea {
+  background-color: t(sspRedGamma);
+  border: solid 1px t(sspRedAlpha);
+}
+.THIS
+  .ssp-clientSearchContainer
+  .ssp-clientSearchContent
+  .ssp-validationHighLight
+  .ssp-picklistDropdown {
+  background-color: t(sspRedGamma);
+  border: solid 1px t(sspRedAlpha);
+}
+.THIS
+  .ssp-clientSearchContainer
+  .ssp-clientSearchContent
+  .slds-form-element
+  .slds-input[disabled],
+.THIS
+  .ssp-clientSearchContainer
+  .ssp-clientSearchContent
+  .ssp-picklistDropdown[disabled],
+.THIS
+  .slds-form-element
+  .ssp-clientSearchContainer
+  .ssp-clientSearchContent
+  .slds-textarea[disabled] {
+  background-color: t(sspMonoBeta);
+  cursor: not-allowed;
+}
+.THIS
+  .ssp-clientSearchContainer
+  .ssp-clientSearchContent
+  .slds-form-element
+  .slds-input,
+.THIS
+  .ssp-clientSearchContainer
+  .ssp-clientSearchContent
+  .slds-form-element
+  .slds-textarea {
+  background-color: t(sspWhiteAlpha);
+}
+.THIS
+  .ssp-clientSearchContainer
+  .ssp-clientSearchContent
+  .ssp-picklistDropdown {
+  background-color: t(sspWhiteAlpha);
+}
+
+.THIS .ssp-clientSearchContent .ssp-multilineRadioChecked {
+  border: 2px solid t(sspMonoBeta);
+}
+.THIS
+  .ssp-clientSearchContent
+  .ssp-multilineRadioInput:checked
+  ~ .ssp-multilineRadioChecked {
+  border: 2px solid t(sspGreenGamma);
+}
+.THIS .ssp-clientSearchContent .ssp-multilineRadioChecked:after {
+  background: t(sspGreenGamma);
+}
+
+.THIS .ssp-clientSearchFooterButton .slds-button {
+  padding: 0 15px;
+
+  border-radius: 6px;
+
+  width: 9.875rem;
+}
+.THIS .ssp-cisDetailsContainer .ssp-genericInput .ssp-inputDate {
+  width: 100%;
+}
+.THIS .ssp-bodyContainer .ssp-cisDetailsContainer > div.ssp-cisToggleQuestions {
+  border-bottom: 0.0625rem solid t(sspMonoBeta);
+}
+
+.THIS
+  .ssp-cisCareCoordinator
+  .ssp-cisComponentWidth
+  .ssp-applicationInputs
+  .ssp-genericInput {
+  width: 100%;
+}
+
+.THIS
+  .ssp-cisCareCoordinator
+  .ssp-cisComponentWidth
+  .contactDetails
+  .ssp-genericInput {
+  width: 100%;
+}
+/*********************************************************CD - 1 *********************************************/
+.THIS .ssp-informationBullet {
+  list-style-type: disc;
+}
+.THIS
+  .ssp-programSelectionContainer
+  .programSelectionLearnMore
+  .ssp-informationBullet {
+  padding-left: 15px;
+}
+.THIS .ssp-ManualAddressModalContainer .ssp-footer-padding {
+  display: none;
+}
+/****************************************************** Siddarth's code **************************************************/
+/*********************************************************CD - 2 *********************************************/
+.THIS
+  .ssp-past-applications-pagination
+  .ssp-pageBtnGrop
+  .ssp-mobilePagination
+  .ssp-button_base
+  .slds-button {
+  z-index: -1;
+}
+.THIS
+  .ssp-past-applications-pagination
+  .ssp-pageBtnGrop
+  .ssp-pageButtonList
+  .ssp-pageButton {
+  z-index: -1;
+}
+.THIS .mainContentArea {
+  min-height: calc(100vh - 357px);
+}
+.THIS
+  .ssp-clientSearchContent
+  .ssp-clientSearchToggle
+  .ssp-genericInputTogglegroup
+  .slds-form-element__control
+  .slds-radio_button-group
+  .slds-button
+  .slds-radio_button__label {
+  margin-right: 0;
+
+  min-width: 100%;
+}
+.THIS
+  .ssp-clientSearchContent
+  .ssp-clientSearchToggle
+  .ssp-genericInputTogglegroup
+  .slds-form-element__control
+  .slds-radio_button-group
+  .slds-button {
+  width: 46.511%;
+}
+.THIS
+  .ssp-clientSearchContent
+  .ssp-clientSearchToggle
+  .ssp-genericInputTogglegroup
+  .slds-form-element__control
+  .slds-radio_button-group {
+  width: 100%;
+  justify-content: space-between;
+}
+.THIS
+  .ssp-checkboxGroup
+  .slds-form-element__legend
+  .slds-form-element__control
+  .slds-checkbox
+  .slds-checkbox__label
+  .slds-checkbox_faux
+  .slds-form-element
+  .slds-checkbox
+  [type="checkbox"]
+  + .slds-checkbox_faux,
+.THIS
+  .slds-form-element
+  .slds-checkbox
+  [type="checkbox"]
+  + .slds-checkbox--faux,
+.THIS .slds-form-element .slds-checkbox [type="checkbox"] ~ .slds-checkbox_faux,
+.THIS
+  .slds-form-element
+  .slds-checkbox
+  [type="checkbox"]
+  ~ .slds-checkbox--faux,
+.THIS
+  .slds-form-element
+  .slds-checkbox
+  [type="checkbox"]
+  + .slds-checkbox__label
+  .slds-checkbox_faux,
+.THIS
+  .slds-form-element
+  .slds-checkbox
+  [type="checkbox"]
+  + .slds-checkbox__label
+  .slds-checkbox--faux {
+  margin-right: 0;
+}
+.THIS
+  .ssp-three-dots
+  .slds-dropdown
+  .slds-dropdown__list
+  .slds-dropdown__item
+  .slds-truncate {
+  text-decoration: underline;
+  color: #0044be;
+}
+.THIS
+  .ssp-past-applications-pagination
+  .ssp-pageBtnGrop
+  .ssp-desktopPagination
+  .ssp-paginationNext
+  .slds-button {
+  z-index: -1;
+}
+.THIS .ssp-TabsRow .ssp-show {
+  display: flex;
+}
+.THIS .ssp-toggleInputRadio .ssp-genericInput .ssp-componentWidth {
+  width: 100%;
+}
+
+.THIS
+  .ssp-toggleInputRadio
+  .ssp-genericInput
+  .ssp-componentWidth
+  .ssp-alignHelpText {
+  color: t(sspMonoBody);
+}
+
+.THIS
+  .ssp-infoText
+  .ssp-genericInput
+  .ssp-inputDate
+  .slds-form-element
+  .slds-dropdown-trigger
+  .slds-form-element__label {
+  display: none;
+}
+.THIS
+  .ssp-toggleQuestion
+  .ssp-genericInputToggle
+  .ssp-componentWidth
+  .ssp-genericInputTogglegroup {
+  display: none;
+}
+.THIS
+  .ssp-checkBoxGroup
+  .ssp-genericInput
+  .slds-form-element
+  .slds-form-element__control {
+  width: 48.1%;
+}
+.THIS .ssp-inputPicklist .genericInput .ssp-picklistDropdown {
+  width: 48.1%;
+}
+.THIS
+  .ssp-DcbsOverlay
+  .slds-modal
+  .slds-modal__container
+  .slds-modal__content
+  .ssp-modalContent {
+  padding: 0;
+}
+.THIS .ssp-SearchCard .ssp-bg_whiteAlpha .ssp-boxShadow {
+  box-shadow: none;
+}
+.THIS .ssp-searchField .slds-form-element .slds-grow .slds-input {
+  padding-left: 35px;
+}
+.THIS .ssp-componetWidth .ssp-searchCard .ssp-searchCardBody {
+  margin-bottom: 0;
+}
+.THIS .ssp-componetWidth .ssp-searchCard {
+  height: auto;
+}
+
+/*********************************************************CD - 1 *********************************************/
+.THIS
+  .ssp-infoText
+  .ssp-bottomMargin
+  .slds-rich-text-editor__output
+  .slds-m-bottom_medium
+  .THIS
+  .slds-rich-text-editor__textarea
+  h1,
+.THIS .slds-rich-text-editor__textarea h2,
+.THIS .slds-rich-text-editor__textarea h3,
+.THIS .slds-rich-text-editor__textarea h4,
+.THIS .slds-rich-text-editor__textarea h5,
+.THIS .slds-rich-text-editor__textarea h6,
+.THIS .slds-rich-text-editor__textarea ul,
+.THIS .slds-rich-text-editor__textarea ol,
+.THIS .slds-rich-text-editor__textarea dl,
+.THIS .slds-rich-text-editor__textarea img,
+.THIS .slds-rich-text-editor__output h1,
+.THIS .slds-rich-text-editor__output h2,
+.THIS .slds-rich-text-editor__output h3,
+.THIS .slds-rich-text-editor__output h4,
+.THIS .slds-rich-text-editor__output h5,
+.THIS .slds-rich-text-editor__output h6,
+.THIS .slds-rich-text-editor__output ul,
+.THIS .slds-rich-text-editor__output ol,
+.THIS .slds-rich-text-editor__output dl,
+.THIS .slds-rich-text-editor__output img {
+  margin-bottom: 0;
+}
+
+.THIS .ssp-program-btn-section .slds-button {
+  height: 100%;
+}
+.THIS .ssp-look-up-container .slds-form-element__control .slds-input {
+  border-radius: 0.375rem 0.375rem 0 0;
+  border-bottom: 0;
+}
+.THIS
+  .ssp-singleCheckbox
+  .sameAsHoh
+  .ssp-checkboxContainer
+  .slds-form-element
+  .slds-form-element__control
+  .slds-checkbox
+  .slds-checkbox__label
+  .slds-form-element__label {
+  width: 85%;
+  display: inline-block;
+}
+
+.THIS .ssp-exitModalBtn .slds-button,
+.THIS .ssp-change-member-email .slds-button,
+.THIS .ssp-change-member-preferred-written-lang .slds-button,
+.THIS .ssp-change-member-preferred-spoken-lang .slds-button,
+.THIS .ssp-change-primary-number .slds-button,
+.THIS .ssp-adding-expense-btns .slds-button,
+.THIS .ssp-adding-income-btns .slds-button,
+.THIS .ssp-remove-income-modal .slds-button,
+.THIS .ssp-income-details .slds-button,
+.THIS .ssp-earlySubmissionButton .slds-button {
+  width: 100%;
+}
+
+.THIS .ssp-stacked-btn-width .slds-button {
+  width: 100%;
+}
+
+.THIS .ssp-home-stacked-btn-width .slds-button {
+  width: 90%;
+}
+
+.THIS
+  .ssp-checkBoxHouseHoldMeal
+  .memberDetails
+  .ssp-checkboxGroup
+  .ssp-checkboxContainer
+  .slds-form-element__control {
+  width: 49%;
+}
+
+.THIS
+  .ssp-checkboxGroup
+  .ssp-checkboxContainer.slds-form-element
+  .slds-checkbox__label
+  .slds-form-element__label {
+  margin-bottom: 0;
+}
+
+.THIS
+  .ssp-inputToggleText
+  .ssp-genericInputToggle
+  .ssp-genericInputTogglegroup
+  .slds-form-element__label {
+  color: t(sspMonoOmega);
+  font-family: "Arvo-Regular";
+  font-size: 16px;
+  letter-spacing: -0.3px;
+  line-height: 24px;
+}
+
+.THIS
+  .ssp-inputToggleText
+  .ssp-genericInputToggle
+  .ssp-genericInputTogglegroup
+  .slds-form-element__legend {
+  font-weight: normal;
+}
+
+.THIS .ssp-inHomeAssistanceDetails .genericInput .ssp-picklistDropdown {
+  width: 53%;
+}
+
+.THIS .ssp-componentWidth .ssp-typeAheadMainContainer .slds-form-element {
+  width: 49%;
+}
+
+.THIS .ssp-componentWidth .ssp-genericInput .slds-form-element__control {
+  width: 49%;
+}
+
+.THIS
+  .ssp-componentWidth
+  .ssp-typeAheadMainContainer
+  .ssp-lookup-option-container {
+  width: 49%;
+}
+
+.THIS .ssp-typeAheadWidth .ssp-typeAheadMainContainer .ssp-alignHelpText label {
+  width: 100%;
+}
+
+/******************************************************* Kyathi's code ***************************************************/
+/*********************************************************CD - 2 *********************************************/
+.THIS .ssp-signatureDateHasError .slds-form-element .slds-input {
+  background-color: t(sspRedGamma);
+  border: 1px solid t(sspRedAlpha);
+}
+.THIS .ssp-agency-management .ssp-application-number .slds-form-element__label {
+    display:none;
+}
+.THIS
+  .ssp-authAccessRequestModal.ssp-medicaidPenaltyWarning.ssp-applicationStatementModalContainer
+  .ssp-singleCheckbox
+  .slds-form-element__label {
+  width: 80%;
+}
+.THIS .ssp-authAccessRequestModal .ssp-authModalInput label {
+  color: t(sspMonoBody);
+}
+.THIS
+  .ssp-authAccessRequestModal
+  .ssp-singleCheckbox
+  .slds-form-element__label {
+  color: t(sspMonoOmega);
+}
+
+.THIS .ssp-authRepAccessRequest .ssp-address-dropdown {
+  z-index: 2;
+}
+.THIS
+  .ssp-authRepAccessRequest
+  .ssp-cbWithCompleteBorder
+  .slds-checkbox
+  .slds-checkbox_faux,
+.THIS
+  .ssp-authRepAccessRequest
+  .ssp-cbWithCompleteBorder
+  .slds-checkbox__label {
+  height: 3.3rem;
+}
+.THIS
+  .ssp-authRepAccessRequest
+  .ssp-cbWithCompleteBorder
+  .ssp-checkbox
+  .slds-checkbox
+  .slds-form-element__label {
+  display: inline-block;
+  width: 78%;
+}
+.THIS .ssp-requestConsentSection .slds-modal__footer .slds-button {
+  line-height: normal;
+}
+
+.THIS
+  .ssp-add-auth-rep-permissions
+  .ssp-genericInputTogglegroup
+  .slds-radio_button:first-child
+  .slds-radio_button__label {
+  margin-right: 0;
+}
+.THIS .ssp-address-dropdown {
+  box-shadow: 0 15px 25px -7px rgba(0, 35, 98, 0.1),
+    0 3px 6px 0 rgba(0, 35, 98, 0.1);
+}
+
+.THIS .ssp-add-auth-rep-permissions .ssp-address-one-container,
+.THIS .ssp-add-auth-rep-permissions .ssp-address-two-container {
+  margin-top: 8px;
+}
+
+.THIS .ssp-documentCenterHome .ssp-genericDashboardCard {
+  box-shadow: none;
+  background: none;
+}
+.THIS .ssp-proofContainer .ssp-proofForms {
+  border-top: solid 5px t(sspMonoAlpha);
+}
+.THIS .ssp-button_base .slds-button:disabled:hover {
+  background: t(sspBlueOmega);
+}
+.THIS .ssp-button_neutral .slds-button_neutral:disabled:hover {
+  background: t(sspMagentaBeta);
+}
+
+.THIS .ssp-fileUploadContainer .slds-file-selector__dropzone label:hover {
+  cursor: pointer;
+}
+.THIS .ssp-documentCenterContainer .ssp-genericDashboardHead {
+  padding-left: 24px;
+}
+
+.THIS .ssp-documentCenterContainer .ssp-genericDashboardBody {
+  box-shadow: 0 15px 25px -7px rgba(0, 35, 98, 0.1),
+    0 0 6px 0 rgba(0, 35, 98, 0.1);
+
+  border-radius: 6px;
+}
+
+.THIS .ssp-documentCenterContainer .ssp-generalNoticeCard {
+  padding: 24px;
+}
+
+.THIS .ssp-documentCenterContainer .ssp-warningNoticeCard {
+  padding: 20px 15px 20px 15px;
+}
+
+.THIS .ssp-documentCenterHome .ssp-noticeCard {
+  font-size: 0.813rem;
+  line-height: 18px;
+}
+.THIS .ssp-input-error .textarea-container .slds-textarea {
+  background-color: t(sspRedGamma);
+  border: 1px solid t(sspRedAlpha);
+}
+.THIS .ssp-ProgressCardContainer .ssp-deleteButton {
+  line-height: 45px;
+}
+.THIS .ssp-genericUploadContainer .ssp-addResourceButton .slds-button {
+  font-size: 1rem;
+}
+.THIS .ssp-fileUploadContainer .slds-file-selector__dropzone {
+  border: none;
+
+  background-image: url(../resource/SSP_CD2_Icons/sspIcons/UploadEnabled@2x.png);
+
+  background-repeat: no-repeat;
+
+  background-position: center;
+
+  background-size: 121px 147px;
+}
+.THIS
+  .ssp-fileUploadContainer
+  .ssp-fileUploadDisabled
+  .slds-file-selector__dropzone {
+  background-image: url(../resource/SSP_CD2_Icons/sspIcons/disabledUploadIcon@2x.png);
+}
+
+.THIS .ssp-documentCard .ssp-progressCardHead {
+  padding: 19px 30px 18px 20px;
+}
+
+.THIS .ssp-uploadProofForms .ssp-actionButtons .slds-button {
+  font-size: 18px;
+}
+.THIS .ssp-fileUploadContainer .slds-form-element__label {
+  display: none;
+}
+
+.THIS .ssp-screenFooterBlueBtn .slds-button {
+  line-height: 60px;
+}
+@supports (-moz-appearance: none) {
+  .THIS .ssp-documentCenterHome .slds-tabs_default__item::after {
+    background-color: t(sspMonoBeta);
+    height: 0.25rem;
+    position: relative;
+    bottom: -15px;
+    width: 110%;
+  }
+  .THIS .ssp-documentCenterHome li.slds-tabs_default__item {
+    width: 48%;
+  }
+}
+
+.THIS .ssp-documentCenterHome .ssp-genericDashboardHead {
+  font-size: 1rem;
+}
+.THIS .ssp-documentCenterHome .ssp-warningCard {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.THIS .ssp-color_monoBlackTheta {
+  color: t(sspMonoBlackTheta);
+}
+.THIS .ssp-color_monoBlackZeta {
+  color: t(sspMonoBlackZeta);
+}
+.THIS .ssp-documentCenterHome .slds-tabs_default__item {
+  width: 50%;
+  padding: 15px 0px;
+  text-align: center;
+}
+
+.THIS .ssp-documentCenterHome .slds-tabs_default__overflow-button {
+  display: none;
+}
+
+.THIS .ssp-genericDashboardCard {
+  box-shadow: none;
+}
+
+.THIS .ssp-documentCenterHome .slds-tabs_default__link[tabindex="0"]:focus {
+  text-decoration: none;
+}
+
+.THIS .ssp-documentCenterHome .ssp-modalButtonAlign {
+  height: 45px;
+}
+.THIS .ssp-documentCenterHome .slds-is-active .slds-tabs_default__link,
+.THIS
+  .ssp-documentCenterHome
+  .slds-tabs_default__item.slds-is-active
+  .slds-tabs_default__link:hover {
+  color: t(sspMonoBody);
+}
+
+.THIS .ssp-documentCenterHome .slds-tabs_default,
+.THIS .ssp-documentCenterHome .slds-tabs_default__content {
+  border-top: solid 1px t(sspMonoAlpha);
+}
+.THIS
+  .ssp-documentCenterHome
+  .slds-tabs_default__nav
+  .slds-tabs_default__item.slds-is-active::after {
+  background-color: t(sspBlueAlpha);
+}
+
+.THIS .ssp-documentCenterHome .slds-tabs_default__item:hover::after,
+.THIS .ssp-documentCenterHome .slds-tabs_default__item::after {
+  background-color: t(sspMonoBeta);
+  height: 0.25rem;
+}
+.THIS .ssp-documentCenterHome .ssp-headerList ul li::before {
+  color: t(sspBlueAlpha);
+}
+
+.THIS .ssp-pendingReview::before {
+  color: t(sspOrangeAlpha);
+}
+
+.THIS .ssp-documentNeeded::before {
+  color: t(sspRedAlpha);
+}
+.THIS .ssp-documentStatusAccepted::before {
+  color: t(sspGreenAlpha);
+}
+.THIS
+  .ssp-documentCenterHome
+  .ssp-submittedTab
+  .ssp-genericDashboardCard.ssp-boxShadow {
+  margin-bottom: 1.875rem;
+}
+.THIS .ssp-documentCenterHome .slds-tabs_default__content {
+  background: t(sspMonoAlpha);
+  padding-top: 30px;
+}
+.THIS .ssp-documentCenterHome .slds-tabs_default__link {
+  font-family: "Poppins-Bold";
+  color: t(sspMonoOmega);
+}
+.THIS .ssp-fileUploadContainer .slds-file-selector__button {
+  visibility: hidden;
+  width: 121px;
+  height: 147px;
+}
+.THIS .ssp-fileUploadContainer .slds-file-selector__text {
+  display: none;
+}
+
+.THIS
+  .ssp-documentCenterModal
+  .ssp-genericInputTogglegroup
+  .slds-radio_button-group {
+  width: 100%;
+}
+
+.THIS .ssp-multipleCheckbox_container .ssp-selectMember .slds-checkbox {
+  padding: 0;
+}
+.THIS
+  .ssp-multipleCheckbox_container
+  .ssp-selectMember
+  .slds-checkbox
+  .slds-form-element__label {
+  left: 2.8rem;
+}
+/***************************************************CD - 1 *********************************************/
+
+.THIS
+  .ssp-household-summary-container
+  .ssp-button-container
+  .ssp-cardButton
+  .slds-button {
+  font-size: 1.125rem;
+}
+
+.THIS .ssp-removeModalFooter .ssp-deleteButton {
+  margin-bottom: 1.25rem;
+}
+
+.THIS
+  .ssp-resourceDetails_container
+  .ssp-toggleYesNoOptions
+  .ssp-anotherOwnerContainer:nth-of-type(2)
+  .ssp-removeIcon {
+  display: none;
+}
+
+.THIS .ssp-multipleCheckbox_container .slds-form-element .slds-input {
+  background: t(sspWhiteAlpha);
+}
+
+.THIS .ssp-multipleCheckbox_container .ssp-picklistDropdown {
+  background-color: t(sspWhiteAlpha);
+}
+
+.THIS
+  .ssp-checkboxMultiLineLabel
+  .ssp-multilineCheckboxInput:checked
+  ~ .ssp-multilineCheckboxChecked:after {
+  border-color: t(sspGreenGamma);
+}
+
+.THIS .ssp-checkboxMultiLineLabelContent {
+  border-left: 1px solid t(sspMonoGamma);
+  border-right: 1px solid t(sspMonoGamma);
+}
+
+.THIS .ssp-checkboxMultiLineLabel {
+  border-left: 1px solid t(sspMonoGamma);
+  border-top: 1.5px solid t(sspMonoGamma);
+  border-bottom: 1.5px solid t(sspMonoGamma);
+}
+
+.THIS .ssp-inputIconContainer .slds-form-element__control.slds-grow:before {
+  content: "$";
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  color: t(sspBlueAlpha);
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.THIS
+  .ssp-medicareDetails_container
+  .ssp-genericInputTogglegroup
+  .slds-radio_button-group
+  .slds-radio_button
+  .slds-radio_button__label {
+  margin-right: 12px;
+}
+
+.THIS .ssp-checkboxMultiLineContainer [data-disabled*="true"] {
+  background-color: t(sspMonoBeta);
+}
+
+.THIS .ssp-medicareDetailsForm .ssp-singleCheckbox .slds-form-element__label {
+  width: 79%;
+  display: inline-block;
+}
+
+.THIS .ssp-button_base .slds-button:disabled {
+  opacity: 0.5;
+}
+
+.THIS .ssp-individualEnrollEmployerRadioGroup .ssp-radioGroup .slds-radio {
+  margin-bottom: 0.938rem;
+}
+
+.THIS
+  .ssp-medicareDetails_container
+  .ssp-genericInputTogglegroup
+  .slds-radio_button-group
+  .slds-button.slds-radio_button
+  label.slds-radio_button__label {
+  min-width: 100%;
+}
+
+.THIS
+  .ssp-medicareDetails_container
+  .ssp-genericInputToggle
+  .slds-radio_button-group
+  .slds-button.slds-radio_button {
+  width: 32%;
+  margin-right: 10px;
+}
+
+.THIS
+  .ssp-medicareDetails_container
+  .ssp-genericInputTogglegroup
+  .slds-radio_button-group
+  .slds-radio_button
+  .slds-radio_button__label {
+  min-width: 100%;
+  padding-right: initial;
+  padding-left: initial;
+}
+
+.THIS
+  .ssp-medicareDetails_container
+  .ssp-genericInputToggle
+  .slds-radio_button-group
+  .slds-radio_button:last-child {
+  margin-right: 0px;
+}
+
+.THIS .ssp-medicareDetails_container .slds-radio_button-group,
+.THIS .ssp-medicareDetails_container .ssp-componentWidth,
+.THIS .ssp-genericInputToggle,
+.THIS .ssp-medicareDetails_container .ssp-toggleOptions .ssp-applicationInputs {
+  width: 100%;
+}
+
+@supports (-webkit-touch-callout: none) {
+  .THIS .ssp-inputDate input[type="date"] {
+    min-width: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding-top: 0.313rem;
+  }
+  .THIS .ssp-datePickerIcon svg {
+    fill: t(sspMonoBody);
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+  .THIS .ssp-genericInput .ssp-inputDate input[type="date"].slds-input {
+    padding-top: 8px;
+  }
+}
+.THIS .ssp-genericInput .ssp-inputDate input[type="date"].slds-input {
+  padding-top: 8px;
+}
+.THIS .ssp-genericInput .ssp-inputDate input[type="date"].slds-input {
+  padding-top: 8px;
+}
+
+/******************************************************* Saurabh's code ***************************************************/
+
+.THIS .ssp-add-household-container h1,
+.THIS .ssp-household-summary-container h1,
+.THIS .ssp-household-summary-container h2,
+.THIS .ssp-education-summary-container h1,
+.THIS .ssp-education-summary-container h2 {
+  border-bottom: 5px solid t(sspMonoAlpha);
+}
+
+.THIS .ssp-add-household-container h2 {
+  border-bottom: 2.5px solid t(sspMonoAlpha);
+}
+
+.THIS .ssp-add-household-container .ssp-member-details-section {
+  border-bottom: 1px solid t(sspMonoBeta);
+}
+
+.THIS .ssp-autocomplete-container .ssp-address-dropdown,
+.THIS .ssp-radio-container {
+  border: 1px solid t(sspBlueDelta);
+}
+
+.THIS .ssp-radio-container .ssp-radio-label {
+  border-left: 1px solid t(sspBlueDelta);
+}
+
+.THIS .ssp-autocomplete-container .ssp-address-dropdown {
+  border: 1px solid t(sspBlueDelta);
+}
+
+.THIS .ssp-searchbox .slds-form-element .slds-input {
+  background: t(sspWhiteAlpha);
+  height: 36px;
+}
+
+.THIS .ssp-searchBox {
+  border: 1px solid t(sspMonoBeta);
+}
+
+.THIS .ssp-searchBoxContainer svg {
+  width: 24px;
+}
+
+.THIS .ssp-scollBox svg {
+  width: 14px;
+  height: 14px;
+  fill: t(sspWhiteAlpha);
+}
+
+.THIS .ssp-nextStepContainer .ssp-button_brand .slds-button,
+.THIS .ssp-nextStepContainer .ssp-applyWaiverButton .slds-button {
+  height: 45px;
+  min-height: 45px;
+}
+.THIS .ssp-nextStepContainer .ssp-visitHealthCareBtn .slds-button {
+  min-width: 315px;
+}
+
+.THIS .slds-radio_button [type="radio"][disabled] + .slds-radio_button__label {
+  cursor: not-allowed;
+}
+
+.THIS .ssp-anchor {
+  text-decoration: underline;
+}
+
+.THIS .ssp-healthSelectionMembers .ssp-disabled-checkbox .slds-checkbox,
+.THIS .ssp-programSelectionOptions .ssp-disabled-checkbox .slds-checkbox,
+.THIS .ssp-enrollmentDetailsCheckBox .ssp-disabled-checkbox .slds-checkbox {
+  background: rgb(233, 234, 236);
+}
+
+.THIS .ssp-change-member-preferred-written-lang .slds-modal__content,
+.THIS .ssp-clientViewModalContainer .slds-modal__content {
+  overflow: unset;
+}
+.THIS
+  .ssp-requestHearingContainer
+  .addressLineClass
+  .ssp-address-one-container {
+  width: 100%;
+  padding-right: 0;
+  margin-top: 0;
+}
+.THIS .ssp-requestHearingContainer .addressLineClass + div {
+  width: 100%;
+  padding-left: 0;
+}
+.THIS .ssp-multipleCheckbox_container.ssp-input-error .slds-checkbox {
+  background-color: t(sspRedGamma);
+  border: 1px solid t(sspRedAlpha);
+}
+.THIS
+  .ssp-multipleCheckbox_container.ssp-input-error
+  .slds-checkbox
+  .slds-checkbox_faux {
+  background-color: t(sspRedGamma);
+}
+.THIS .ssp-case-number .slds-form-element__label {
+  display: none;
+}
+@media only screen and (max-width: 768px) {
+  .THIS .ssp-nextStepContainer .ssp-visitHealthCareBtn .slds-button,
+  .THIS .ssp-eligibilityResultFooter .ssp-screenFooterNextBtn .slds-button {
+    min-width: 100%;
+  }
+  .THIS .ssp-buttonWidth .slds-button {
+    width: 100%;
+  }
+  .THIS .slds-button {
+    font-size: 0.875rem;
+  }
+  .THIS
+    .ssp-requestCardContainer
+    .ssp-addressToggle
+    .ssp-genericInputTogglegroup
+    .slds-radio_button__label {
+    width: 9.125rem;
+  }
+}
+@media only screen and (max-device-width: 768px) {
+  .THIS .ssp-income-details .auto-line2 .ssp-genericInput {
+    margin-top: 1em;
+  }
+  .THIS .ssp-add-income-btn .slds-button {
+    width: 100%;
+  }
+}
+/***************************************************** child care provider Code *************************************************/
+.THIS .ssp-child-care-container .ssp-premium li::after {
+  border-bottom: 1px t(sspMonoOmega) dashed;
+}
+.THIS .ssp-child-care-container .ssp-card {
+  box-shadow: 0 15px 25px -7px t(sspMonoBodyShadow),
+    0 0 6px 0 t(sspMonoBodyShadow);
+}
+.THIS .ssp-child-care-container .ssp-cc-borderBottom {
+  border-bottom: 1px solid t(sspMonoBeta);
+}
+.THIS .ssp-child-care-search-button .slds-button {
+  min-width: 300px;
+}
+.THIS .ssp-child-care-results-text {
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: -0.24px;
+}
+.THIS .ssp-child-care-color_monoBody a {
+  color: t(sspMonoBody);
+}
+
+/***************************************************** Karthik V's Code *************************************************/
+.THIS .ssp-browser-banner img {
+  width: auto;
+}
+.THIS
+  .ssp-getInterpreterModal
+  .ssp-detailedModal
+  .slds-modal__footer
+  div
+  span
+  :first-child {
+  margin-bottom: 0;
+}
+
+.THIS .ssp-otherResourcesBorderBottom {
+  border-bottom: 1px solid t(sspMonoBeta);
+}
+
+.THIS
+  .ssp-earlySubmissionModal
+  .ssp-detailedModal
+  .slds-modal__footer
+  div
+  span
+  :first-child {
+  margin-bottom: 1rem;
+}
+
+.THIS
+  .ssp-earlySubmissionModal
+  .ssp-detailedModal
+  .slds-modal__footer
+  div
+  span
+  :last-child {
+  margin-left: 0;
+}
+
+.THIS .ssp-earlySubmissionModal .ssp-detailedModal .slds-modal__footer button {
+  width: -webkit-fill-available;
+}
+
+.THIS
+  .ssp-medicaidPenaltyWarning
+  .ssp-detailedModal
+  .slds-modal__footer
+  div
+  span
+  :first-child {
+  margin-bottom: 0;
+}
+
+.THIS .ssp-medicaidPenaltyWarning .slds-button {
+  display: flex;
+  padding: 0;
+  width: 100%;
+  justify-content: center;
+}
+
+.THIS .ssp-medicaidPenaltyWarning span.slds-button.slds-radio_button {
+  display: flex;
+}
+
+.THIS .ssp-otherResourcesSelection .slds-button.slds-button_icon {
+  top: 2px;
+}
+
+.THIS .ssp-expeditedSnapBenefitsContainer .slds-button.slds-button_icon {
+  top: 2px;
+}
+
+.THIS .ssp-medicaidPenaltyWarning .ssp-footer-padding {
+  padding: 1.25rem 1.5rem;
+}
+
+.THIS .ssp-medicaidPenaltyWarning .ssp-toastContainer {
+  z-index: 9002;
+}
+
+/***************************************************** Chaitanya's Code *************************************************/
+
+.THIS .ssp-cardItemsButton .slds-button {
+  font-size: 1rem;
+  line-height: 25px;
+  justify-content: center;
+  width: 170px;
+}
+
+.THIS .ssp-healthCareEnrollCovBtn.ssp-screenFooterNextBtn .slds-button {
+  min-height: 45px;
+}
+
+.THIS .ssp-enrollmentDetailsSource .slds-form-element .slds-input {
+  height: 85px;
+}
+
+.THIS .ssp-enrollmentDetailsSaveBtn .slds-button,
+.THIS .ssp-individualEnrollSaveBtn .slds-button {
+  min-height: 60px;
+  min-width: 270px;
+}
+
+.THIS .ssp-helptextInput label {
+  display: none;
+}
+
+.THIS
+  .ssp-enrollmentDetailSingleCheck
+  .ssp-singleCheckbox
+  .slds-form-element__label {
+  font-size: 0.8125rem;
+}
+
+.THIS .ssp-enrollmentDetailsAddress .addressLineClass .ssp-genericInput {
+  width: 370px;
+  padding: 0;
+}
+
+/*.THIS .ssp-enrollmentDetailsAddress .addressLineClass div div:first-of-type {
+    margin-right: 30px;
+}*/
+
+.THIS .ssp-enrollmentDetailsSource .slds-form-element__label {
+  display: unset;
+}
+
+.THIS .ssp-radioGroup .slds-radio {
+  padding-right: 10px;
+  min-height: 2.8125px;
+  background: t(sspMonoDelta);
+}
+
+.THIS .slds-radio__label {
+  display: flex;
+}
+
+.THIS
+  .ssp-radioGroup
+  .slds-radio
+  [type="radio"]
+  + .slds-radio__label
+  .slds-radio_faux {
+  align-self: center;
+}
+.THIS .ssp-inputDate .slds-input[readonly] {
+  padding-left: 0.75rem;
+}
+.THIS
+  .ssp-bg_monoDelta.sspInputElement
+  ~ div
+  .ssp-menuItemDropDown
+  p.ssp-fontFamily_popinBold.ssp-color_monoBody {
+  font-size: 1rem;
+}
+.THIS .ssp-individualEnrollEmployerRadioGroup .ssp-componentWidth {
+  width: 100%;
+}
+/******************************************************* Sharon's Code ***************************************************/
+/*********************************************************CD - 2 *********************************************/
+.THIS .ssp-three-dots svg {
+  fill: t(sspBlueAlpha);
+}
+.THIS .ssp-three-dots-bg .slds-button lightning-primitive-icon:nth-child(2) {
+  display: none;
+}
+.THIS .ssp-three-dots-bg .slds-dropdown__item a:focus,
+.THIS .ssp-three-dots-bg .slds-dropdown__item a:hover {
+  color: t(sspMonoBody);
+  background-color: t(sspWhiteAlpha);
+}
+.THIS .ssp-three-dots-bg .slds-dropdown__item a {
+  padding: 13px 30px;
+}
+.THIS .ssp-three-dots-bg .slds-dropdown {
+  min-width: 237px;
+  left: -10px;
+  top: 135%;
+  border: none;
+  box-shadow: 0 1px 3px 2px t(sspMonoBodyShadow);
+}
+.THIS .ssp-dropdown-cont.ssp-borderWrap {
+  border-top: 1px solid t(sspMonoBeta);
+  border-bottom: 1px solid t(sspMonoBeta);
+}
+.THIS .ssp-dropdown-cont .ssp-menuItemDropDownContent a:hover {
+  background-color: t(sspMonoAlpha);
+}
+.THIS .ssp-dropdown-cont .ssp-menuItemDropDownContent {
+  background: t(sspWhiteAlpha);
+}
+.THIS .ssp-past-applications-table tr {
+  border-color: t(sspMonoBeta);
+}
+.THIS .ssp-disqualificationCardContainer .ssp-noticeCard.ssp-generalNoticeCard {
+  padding: 0;
+}
+.THIS
+  .ssp-disqualificationCardContainer
+  .ssp-noticeCard.ssp-generalNoticeCard
+  .slds-grid.slds-grid_vertical-align-center,
+.THIS
+  .ssp-disqualificationCardContainer
+  .ssp-noticeCard.ssp-generalNoticeCard
+  .slds-grid.slds-grid_vertical-align-center
+  .ssp-explicitNoticeCardBody
+  ~ div {
+  width: 100%;
+}
+.THIS
+  .ssp-nextBannerContainer.ssp-nextSubContainer
+  .ssp-nextStepsDownloadBtn
+  .slds-button {
+  font-size: 1rem;
+}
+.THIS
+  .ssp-nextSubContainer
+  .ssp-nextScheduleBtnContainer
+  .ssp-getBenefitsTelNumber
+  .slds-button.slds-button_neutral {
+  line-height: 1.5rem;
+}
+.THIS
+  .ssp-documentsMainContainer
+  .ssp-nextAccordionContainer
+  .ssp-nextIdentification
+  .ssp-accordion
+  .ssp-accordionButton {
+  padding-top: 1.125rem;
+  padding-bottom: 1.125rem;
+}
+.THIS .ssp-nextCardContainer .ssp-ctaCardGrey .ssp-ctaCardTitle {
+  font-size: 1.125rem;
+}
+.THIS
+  .forceCommunitySection
+  .slds-card__body.slds-card__body_inner.centerWrapper.flowruntimeBody {
+  margin: 0;
+  padding: 0;
+}
+.THIS .forceCommunitySection .forceCommunityFlowCommunity.slds-card {
+  border: 0;
+}
+.THIS .forceCommunitySection .cb-section_row .cb-section_column {
+  padding: 0;
+}
+.THIS .ssp-snapContactMi .ssp-inputText .slds-form-element__control input,
+.THIS .ssp-snapContactSuffix .genericInput,
+.THIS .ssp-snapContactExtension .ssp-genericInput {
+  max-width: 170px;
+}
+.THIS .ssp-snapContactInput .ssp-genericInput.slds-grid.slds-wrap {
+  max-width: 370px;
+  width: 100%;
+}
+
+.THIS
+  .ssp-snapContactInput
+  .ssp-componentWidth
+  .ssp-genericInput
+  .slds-form-element__control {
+  width: 100%;
+}
+/*********************************************************CD - 1 *********************************************/
+.THIS .ssp-application-summary .ssp-button-container button.slds-button,
+.THIS
+  .ssp-household-summary-container
+  .ssp-button-container
+  button.slds-button {
+  font-size: 1.125rem;
+}
+
+.THIS.ssp-enrollmentDetailsAddress .ssp-address-one-container,
+.THIS .ssp-address1 .ssp-address-one-container {
+  width: 370px;
+  padding-right: 0;
+}
+
+.THIS .ssp-address1 .ssp-gutter-left,
+.THIS .ssp-enrollmentDetailsAddress .ssp-gutter-left {
+  padding-left: 0;
+  width: 370px;
+  margin-left: 0.938rem;
+}
+.THIS
+  .ssp-healthConditionDate
+  .slds-form-element
+  label.slds-form-element__label {
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: Poppins-Bold;
+}
+
+.THIS
+  .ssp-resourceSelectionCheckboxLabel
+  .ssp-checkboxGroup
+  .slds-form-element__legend {
+  font-family: Poppins-Regular;
+  font-weight: normal;
+  font-size: 0.8125rem;
+}
+
+.THIS .ssp-remove-coverage-footer .slds-button {
+  width: 100%;
+}
+
+.THIS
+  .ssp-resourceSelectionCheckboxLabel
+  .ssp-checkboxGroup
+  .slds-form-element__legend {
+  font-weight: normal;
+  font-size: 0.8125rem;
+}
+
+.THIS .ssp-removeCoverageButton .slds-button {
+  height: auto;
+  min-height: 45px;
+}
+
+.THIS .ssp-medicaidPenaltyWarning footer.slds-modal__footer.ssp-footer-padding {
+  border-top: 5px solid t(sspMonoAlpha);
+}
+
+.THIS .ssp-healthConditionContainer .slds-form-element__control {
+  margin-top: 0.65rem;
+}
+
+.THIS .ssp-medicalBillsCheckboxLabel .slds-form-element__control {
+  max-width: 340px;
+}
+
+.THIS .ssp-applyFollowCardContainer .ssp-ctaCardBlue {
+  background-color: t(sspWhiteAlpha);
+}
+
+.THIS .ssp-getBenefitsTelNumber a {
+  color: t(sspBlueAlpha);
+  border-radius: 6px;
+  padding: 10px;
+  width: 100%;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  min-height: 2.8125rem;
+  background: t(sspBlueOmega);
+  vertical-align: middle;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.THIS .ssp-getBenefitsTelNumber a:hover {
+  text-decoration: none;
+}
+
+.THIS .ssp-applyFollowCardContainer .ssp-explicitNoticeCardBody + div,
+.THIS .ssp-applyFollowCardContainer .slds-grid.slds-grid_vertical-align-center {
+  width: 100%;
+}
+
+.THIS .ssp-applyFollowCardContainer .ssp-noticeCard.ssp-generalNoticeCard {
+  background: t(sspWhiteAlpha);
+}
+
+.THIS
+  .ssp-getStartedBenefits
+  .ssp-footerBtnBackSave
+  .ssp-getStartBenefitsButton
+  button {
+  max-width: 19.6875rem;
+}
+
+.THIS
+  .ssp-getStartedBenefits
+  .ssp-footerBtnNext
+  .ssp-getStartBenefitsNeutralButton
+  button {
+  max-width: 23.4375rem;
+}
+
+.THIS
+  .ssp-preferredPaymentChecklist
+  label.ssp-picklistLabel.slds-form-element__label {
+  font-family: "Poppins-Bold";
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: -0.3px;
+  text-align: left;
+  margin-bottom: 0.9375rem;
+}
+
+.THIS .ssp-preferredPaymentChecklist .ssp-picklistDropdown,
+.THIS .ssp-preferredPaymentIndividualContainer .slds-input {
+  max-width: 23.125rem;
+}
+
+.THIS .ssp-typeheadLabel .ssp-addClass .slds-form-element__label {
+    display: none;
+}
+
+/******************************************************* Chirag's Code ***************************************************/
+/***********************************************CD - 2 *********************************************/
+.THIS .ssp-filterSearchBox .ssp-lookup-option-container {
+  background: t(sspMonoAlpha);
+}
+
+.THIS .ssp-filterSearchBox .slds-input-has-border_padding {
+  border: 1px solid grey;
+  background: t(sspWhiteAlpha);
+}
+
+.THIS .ssp-message-table .ssp-message-center-table-row-read {
+  box-shadow: inset 6px 0 0 t(sspMonoBeta);
+}
+
+.THIS .ssp-messageCenter .ssp-Tab {
+  border-bottom: 4px solid t(sspMonoGamma);
+  border-top: 1px solid t(sspMonoBeta);
+}
+
+.THIS .ssp-messageCenter .ssp-active {
+  border-bottom: 4px solid t(sspBlueAlpha);
+  color: t(sspMonoBody);
+}
+
+.THIS .ssp-filterSearchBox .ssp-searchBox-child .slds-input__icon_left,
+.THIS
+  .ssp-filterSearchBox
+  .ssp-filterSeachChevron
+  .slds-icon-utility-chevronleft
+  .slds-icon,
+.THIS
+  .ssp-filterSearchBox
+  .ssp-filterSeachClose
+  .slds-icon-utility-close
+  .slds-icon {
+  fill: t(sspMonoBlackOmega);
+}
+
+.THIS
+  .ssp-filterSearchBox
+  .ssp-searchBox-child
+  .slds-input-has-icon
+  .slds-input::placeholder {
+  color: t(sspGreyGamma);
+}
+.THIS .ssp-filterSearchBox .ssp-searchBox-child .slds-assistive-text ~ label {
+  display: none;
+}
+
+.THIS .ssp-filterSearchBox .ssp-searchBox-child input.slds-input {
+  border: 0;
+  background: t(sspWhiteAlpha);
+}
+.THIS
+  .ssp-filterSearchBox
+  .ssp-searchBox-child.ssp-hideSearchIcon
+  .slds-input-has-icon
+  .slds-input__icon {
+  display: none;
+}
+.THIS
+  .ssp-filterSearchBox
+  .ssp-searchBox-child
+  .slds-input-has-icon
+  .slds-input {
+  height: 60px;
+}
+
+.THIS
+  .ssp-message-table
+  .ssp-message-center-table-row
+  .ssp-app-action
+  .ssp-sort-table-btn
+  .slds-button,
+.THIS
+  .ssp-message-table
+  .ssp-message-center-table-row
+  .ssp-sort-table-btn-container
+  .ssp-sort-table-btn
+  .slds-button {
+  font-size: 1rem;
+}
+
+.THIS .ssp-manualAddressButton .ssp-cardButton .slds-button_neutral {
+  width: 100%;
+}
+.THIS
+  .ssp-snapAddressInformationContainer
+  .ssp-address1
+  .ssp-address-one-container
+  .ssp-address-dropdown {
+  width: 100%;
+}
+.THIS .ssp-SnapContactInformationContainer .ssp-radioGroup .ssp-componentWidth {
+  width: 100%;
+}
+.THIS
+  .ssp-getStartSNAPButtonContiner
+  .ssp-getBenefitCaptcha
+  .rc-anchor-center-container,
+.THIS
+  .ssp-getStartSNAPButtonContiner
+  .ssp-getBenefitCaptcha
+  .rc-anchor-container {
+  height: 60px;
+}
+.THIS
+  .ssp-getStartedSnapApp
+  .ssp-footerBtnNext
+  .ssp-button_neutral
+  .slds-button_neutral {
+  line-height: 1.688rem;
+}
+.THIS .ssp-termsAgreementModalContainer .slds-button {
+  padding: 0;
+}
+.THIS
+  .ssp-SnapsignaturePage_Container
+  .ssp-add-auth-rep-btns
+  .ssp-authorize-btn
+  .slds-button_neutral,
+.THIS
+  .ssp-snapAddressInformation
+  .ssp-add-auth-rep-btns
+  .ssp-authorize-btn
+  .slds-button_neutral {
+  line-height: 60px;
+}
+/***********************************************CD - 1 *********************************************/
+
+.THIS .ssp-incomeDetailsHoursWork .slds-form-element__control.slds-grow::after {
+  content: "hours";
+  font-size: 1rem;
+  color: t(sspGreyGamma);
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.THIS
+  .ssp-incomeDetailsHoursWork
+  .slds-form-element__control.slds-grow:lang(es-US):after {
+  content: "horas";
+  font-size: 1rem;
+  color: t(sspGreyGamma);
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.THIS .ssp-expense-modal .ssp-cardButton .slds-button {
+  width: 100%;
+}
+.THIS .ssp-inputDate .slds-input__icon .slds-button {
+  font-size: inherit;
+}
+.THIS .ssp-auth-reps-assisters-and-agents .ssp-button_base .slds-button {
+  display: block;
+  width: 100%;
+}
+
+.THIS .ssp-add-auth-rep-btns .ssp-authorize-btn .slds-button {
+  min-height: 60px;
+}
+
+.THIS .ssp-page-content .ssp-application-notice-card .ssp-noticeCard {
+  padding: 15px;
+}
+.THIS
+  .ssp-page-content
+  .ssp-card-container
+  .ssp-needHelpCardContainer
+  .ssp-ctaCardGrey {
+  background: t(sspWhiteAlpha);
+}
+.THIS .ssp-renewal-app-btns .ssp-continue-btn .slds-button_neutral {
+  width: 270px;
+  height: 60px;
+}
+.THIS .ssp-renewal-app-btns .ssp-cancel-btn .slds-button_neutral {
+  width: 170px;
+  height: 60px;
+}
+.THIS
+  .ssp-main-content-area
+  .ssp-application-notice-card
+  .ssp-noticeCard
+  .ssp-warningNoticeCardIcon {
+  margin-right: 15px;
+}
+
+.THIS
+  .ssp-main-content-area
+  .ssp-application-notice-card
+  .ssp-warningNoticeCard {
+  border-left: 8px solid t(sspBlueEpsilon);
+}
+/*******************************************DCBS OFFICE********************************************/
+.THIS .slds-map:before {
+  padding-top: 26.25%;
+}
+.THIS .ssp-searchCardBorder {
+  border-bottom: 1px solid t(sspMonoBeta);
+}
+.THIS .ssp-dcbsSearch .ssp-searchCardTitle a {
+  width: 200px;
+}
+.THIS .ssp-dcbsSearch .ssp-searchCardFooter {
+  display: none;
+}
+.THIS .ssp-dcbsSearchContainer .slds-input {
+  border: none;
+  background: none;
+}
+.THIS .ssp-dcbsSearchContainer .svg {
+  width: 1rem;
+  height: 1rem;
+}
+.THIS .ssp-find-dcbs-office-address .slds-box {
+  position: unset;
+  width: auto;
+  z-index: 99999;
+  background: t(sspMonoDelta);
+}
+.THIS .ssp-searchCard {
+  height: 322px;
+}
+.THIS .ssp-dcbsSearch .ssp-searchCard {
+  height: 264px;
+  /*height: 328px;*/
+}
+.THIS .ssp-dcbsSearch .ssp-searchCard .ssp-searchCardBody {
+  margin-bottom: 0;
+}
+.THIS .ssp-searchOverlayCard .ssp-searchCardFooter {
+  display: none;
+}
+.THIS .ssp-find-dcbs-office-address .ssp-overlayBox {
+  position: unset;
+  width: auto;
+}
+.THIS .ssp-find-dcbs-office .slds-map {
+  min-width: auto;
+}
+/******************************************************* Soumya's Code ***************************************************/
+
+.THIS .ssp-gutter-right {
+  padding-right: 15px;
+}
+
+.THIS .ssp-gutter-left {
+  padding-left: 15px;
+}
+
+.THIS .ssp-auth-rep-program-form .ssp-warningNoticeCard {
+  padding: 15px;
+}
+
+.THIS .ssp-auth-rep-program-form .addressLineClass > div:first-child,
+.THIS .ssp-auth-rep-program-form .addressLineClass > div:first-child > div {
+  margin: 0;
+}
+
+.THIS .ssp-find-assister-agent .ssp-inputText .ssp-alignHelpText {
+  padding-bottom: 4px;
+}
+
+.THIS .ssp-find-assister-agent-section .ssp-search-btn .slds-button {
+  width: 270px;
+  height: 60px;
+  font-size: 1.125rem;
+}
+
+.THIS .ssp-find-assister-agent-filter .ssp-filter-btn .slds-button {
+  font-size: 1rem;
+}
+
+.THIS .ssp-find-assister-agent-filter .ssp-result-card .ssp-ctaBody {
+  font-size: 0.8125rem;
+}
+
+.THIS .ssp-find-assister-agent-filter .ssp-result-card .ssp-ctaCardBlue {
+  background-color: t(sspWhiteAlpha);
+}
+
+.THIS
+  .ssp-find-assister-agent-filter
+  .ssp-cbWithCompleteBorder
+  .slds-checkbox__label {
+  width: 100%;
+}
+
+.THIS
+  .ssp-find-assister-agent-filter
+  .ssp-checkboxGroup
+  .slds-form-element__control
+  .slds-form-element__label {
+  border-left: none;
+}
+
+.THIS
+  .ssp-find-assister-agent-filter
+  .ssp-checkboxGroup
+  .slds-checkbox__label
+  .slds-checkbox_faux,
+.THIS
+  .ssp-find-assister-agent-filter
+  .ssp-checkboxGroup
+  .slds-checkbox
+  [type="checkbox"]:focus:checked
+  + .slds-checkbox__label
+  .slds-checkbox_faux {
+  border-right: 1px solid t(sspMonoGamma);
+}
+.THIS .ssp-add-auth-rep-program .ssp-search-btn .slds-button {
+  width: 370px;
+  height: 60px;
+}
+.THIS .ssp-add-auth-rep-program .ssp-search-cancel .slds-button {
+  height: 60px;
+  width: 170px;
+}
+.THIS .ssp-add-auth-rep-program select:disabled,
+.THIS .ssp-add-auth-rep-program .slds-input[disabled] {
+  background-color: t(sspMonoTheta);
+  cursor: not-allowed;
+}
+/*************************************************************************************************************************/
+
+/****************************************************More Info Modal******************************************************/
+.THIS .ssp-modalContainer strong {
+  margin-top: 15px;
+  display: inline-block;
+}
+
+.THIS .ssp-more_info_modal .ssp-modalContent {
+  padding: 30px 30px 0 30px;
+}
+.THIS
+  .ssp_expenseDetailsContainer
+  .ssp-inputIconContainer
+  .slds-has-error
+  .slds-form-element__control
+  .slds-input {
+  border: 0.0625rem solid t(sspBlueDelta);
+  background: t(sspMonoDelta);
+}
+.THIS
+  .ssp_expenseDetailsContainer
+  .ssp-inputIconContainer
+  .slds-form-element__help {
+  display: none;
+}
+
+/***Report a change modal removed scroll***/
+.THIS .ssp-report-change-modal .ssp-detailedModal {
+  overflow: auto;
+  display: grid;
+}
+
+.THIS .ssp-report-change-modal .slds-modal__content {
+  overflow: unset;
+}
+/*** Child Care Provider Search screen***/
+.THIS
+  .ssp-child-care-toggle
+  .ssp-genericInputTogglegroup
+  .slds-radio_button:last-child
+  .slds-radio_button__label {
+  margin-left: 30px;
+}
+
+/**Pregnency Overlapping Highlighting Input Error from its parent component**/
+.THIS .has-overlapping-error .slds-form-element .slds-input {
+  background-color: #f9ebeb;
+  border: 1px solid #ba3953;
+}
+
+/*Income and Subsidies help text icon fix*/
+.THIS
+  .sspIcomeSubsidiesForm
+  div
+  [data-id="HasUnearnedIncomeToggle__c"]
+  .ssp-alignHelpText {
+  width: 102%;
+}
+
+/*Household information sub-section list stye*/
+.THIS .sspHouseHoldInfoSubLearnMoreList {
+  margin-left: 0;
+}
+
+.THIS .sspHouseHoldInfoSubLearnMoreList li {
+  list-style-type: none;
+}
+
+.THIS .sspHouseHoldInfoSubLearnMoreList li::before {
+  content: "-";
+  margin-right: 5px;
+}
+
+/*Request Hearing Address Alignment*/
+.THIS .ssp-request_hearing_address_align .ssp-gutter-left {
+  padding-left: 0;
+  width: 100%;
+}
+
+.THIS *:focus {
+  outline: none;
+}
+/*************************************************************************************************************************/
+
+/***************************************************** Media Queries *****************************************************/
+
+/*************************************************************************************************************************/
+
+@media only screen and (max-device-width: 1023px) {
+  .THIS .ssp-find-assister-agent-section .ssp-search-btn .slds-button {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .THIS .ssp-nonCitizenDashboard .ssp-startBenefitApplication .slds-button {
+    width: 100%;
+
+    font-size: 16px;
+
+    line-height: 25px;
+
+    letter-spacing: normal;
+
+    text-align: center;
+  }
+  .THIS
+    .ssp-snapAddressInformationContainer
+    .ssp-address2
+    .ssp-address-one-container {
+    padding-right: 0;
+  }
+  .THIS .ssp-snapAddressInformationContainer .ssp-address2 .ssp-gutter-left {
+    padding-left: 0;
+  }
+}
+
+@media only screen and (min-device-width: 769px) and (max-device-width: 1023px) {
+  .THIS
+    .ssp-first-time-user-dashboard
+    .ssp-dashboard-action-section
+    .slds-button {
+    width: 100%;
+  }
+  .THIS
+    .ssp-auth-rep-program-form
+    .addressLineClass
+    > div:first-child
+    > div:last-child {
+    margin-top: 15px;
+    padding-left: 0;
+  }
+}
+
+@media only screen and (max-device-width: 768px) and (orientation: landscape) {
+  .THIS .ssp-income-details-form .ssp-expenses-related .ssp-helptextIcon {
+    top: 0;
+  }
+}
+
+@media only screen and (min-width: 386px) and (max-width: 1024px) {
+  /****** Input Fields ******/
+  .THIS
+    .ssp-searchbox
+    .ssp-hidesearchicon
+    .slds-input-has-icon.slds-input-has-icon_left-right {
+    bottom: 1.15rem;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .THIS .ssp-current-education .ssp-saveBtn .slds-button {
+    width: 146px;
+  }
+  .THIS .ssp-current-education .ssp-cancelBtn .slds-button {
+    width: 146px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .THIS
+    .ssp-snapAddressInformationContainer
+    .ssp-address1
+    .ssp-address-one-container {
+    margin-right: 15px;
+  }
+  .THIS .ssp-current-education .ssp-saveBtn .slds-button {
+    width: 270px;
+  }
+  .THIS .ssp-current-education .ssp-cancelBtn .slds-button {
+    width: 170px;
+  }
+  .THIS .ssp-first-time-user-dashboard .ssp-program-card .ssp-ctaCardBlue {
+    position: relative;
+    min-height: 236px;
+  }
+  .THIS
+    .ssp-dashboard-wrapper
+    .ssp-first-time-user-dashboard
+    .ssp-program-card
+    .ssp-ctaCardBlue {
+    position: relative;
+    min-height: 289px;
+  }
+  .THIS
+    .ssp-dashboard-wrapper
+    .ssp-first-time-user-dashboard
+    .ssp-mid-row-margin {
+    margin: 15px 0 30px 0;
+  }
+  .THIS
+    .ssp-first-time-user-dashboard
+    .ssp-program-card
+    .ssp-ctaCardBlue
+    .ssp-ctaButton {
+    position: absolute;
+    bottom: 30px;
+    width: calc(100% - 60px);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  /***********************************************CD - 2 *********************************************/
+
+  .THIS
+    .ssp-getStartedSnapAppContentContainer.ssp-getStartedSnapAppWarningContainer
+    .ssp-warningNoticeCard {
+    padding: 15px 15px 15px 16px;
+  }
+  .THIS
+    .ssp-message-table
+    .ssp-message-center-table-row
+    .ssp-app-action
+    .ssp-sort-table-btn
+    .slds-button {
+    width: 100%;
+    display: initial;
+  }
+  /***********************************************CD - 1 *********************************************/
+  .THIS
+    .ssp-healthConditionDate
+    .slds-form-element__control.slds-input-has-icon {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .THIS .ssp-snapContactInput .ssp-genericInput.slds-grid.slds-wrap {
+    max-width: 100%;
+    width: 100%;
+  }
+  /**************************************** Child Care Provider Search screen*********************************/
+  .THIS
+    .ssp-child-care-toggle
+    .ssp-genericInputTogglegroup
+    .slds-radio_button__label {
+    min-width: 97px;
+  }
+
+  .THIS
+    .ssp-child-care-toggle
+    .ssp-genericInputTogglegroup
+    .slds-radio_button__label {
+    padding: 5px 4px;
+  }
+  .THIS
+    .ssp-child-care-toggle
+    .ssp-genericInputTogglegroup
+    .slds-radio_button:last-child
+    .slds-radio_button__label {
+    margin-left: 10px;
+  }
+  .THIS .slds-map_container .slds-map {
+    min-width: 100%;
+  }
+
+  .THIS .ssp-child-care-search-button .slds-button {
+    min-width: 227px;
+  }
+  .THIS .ssp-child-care-results-text {
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: -0.24px;
+  }
+
+  /***********************************************CD - 2 *********************************************/
+  .THIS .ssp-clipTextWithEllipsis {
+    position: relative;
+    line-height: 1.125rem;
+    max-height: 2.25rem;
+    text-align: inherit;
+    margin-right: -0.7em;
+    padding-right: 0.7em;
+    overflow: hidden;
+    padding-left: 0.3rem;
+    word-break: break-all;
+  }
+
+  .THIS .ssp-clipTextWithEllipsis:before {
+    content: "...";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+
+  .THIS .ssp-clipTextWithEllipsis:after {
+    content: "";
+    right: 0;
+    width: 1em;
+    height: 1em;
+    margin-top: 0.2em;
+    background: t(sspWhiteAlpha);
+    position: absolute;
+  }
+
+  .THIS .ssp-add-auth-rep-permissions .ssp-address-two-container {
+    margin-top: 20px;
+  }
+
+  .THIS .ssp-searchFooter .ssp-clientSearchFooterButton .slds-button {
+    width: 100%;
+  }
+  .THIS .ssp-waiverResultsBtn button.slds-button {
+    width: 100%;
+  }
+
+  .THIS
+    .ssp-authModalForm
+    .ssp-medicareDetailsForm
+    .ssp-singleCheckbox
+    .slds-form-element__label {
+    width: 71%;
+  }
+  .THIS
+    .ssp-checkBoxGroup
+    .ssp-genericInput
+    .slds-form-element
+    .slds-form-element__control {
+    width: 100%;
+  }
+  .THIS .ssp-inputPicklist .genericInput .ssp-picklistDropdown {
+    width: 100%;
+  }
+  .THIS .ssp-submittedTab .ssp-dashboardTabsRow .slds-grid.slds-wrap {
+    width: 100%;
+  }
+  .THIS
+    .ssp-SnapContactInformationContainer
+    .ssp-add-auth-rep-btns
+    .ssp-cancel-btn
+    .slds-button_neutral
+    .THIS
+    .ssp-snapAddressInformation
+    .ssp-add-auth-rep-btns
+    .ssp-cancel-btn
+    .slds-button_neutral,
+  .THIS
+    .ssp-SnapsignaturePage_Container
+    .ssp-add-auth-rep-btns
+    .ssp-cancel-btn
+    .slds-button_neutral {
+    width: 100%;
+  }
+  .THIS .ssp-snapAddressInformation .slds-button,
+  .THIS .ssp-SnapsignaturePage_Container .slds-button {
+    font-size: 1.125rem;
+  }
+  .THIS
+    .ssp-getStartedSnapApp
+    .ssp-footerBtnNext
+    .ssp-getStartBenefitsButton
+    .slds-button_neutral {
+    margin-bottom: 30px;
+  }
+  .THIS .ssp-documentCenterHome .slds-tabs_default__item:nth-child(1):after {
+    position: relative;
+    width: 120%;
+    left: -10%;
+    bottom: -15px;
+  }
+  .THIS .ssp-documentCenterHome .slds-tabs_default__item:nth-child(2):after {
+    position: relative;
+    width: 50vw;
+    left: -12%;
+    bottom: -15px;
+  }
+  .THIS .ssp-documentCenterHome .slds-tabs_default__nav,
+  .THIS .ssp-documentCenterHome .ssp-genericDashboardCard {
+    width: 100%;
+    margin: unset;
+    padding: 0 15px;
+  }
+  .THIS .ssp-documentCenterHome .ssp-genericDashboardCard {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .THIS .ssp-documentCenterHome .slds-tabs_default__item {
+    width: 45%;
+  }
+  .THIS .ssp-documentCenterHome .slds-tabs_default__link {
+    height: 45px;
+    white-space: unset;
+    word-break: break-word;
+    width: 100%;
+    text-align: center;
+    line-height: 20px;
+    width: 150px;
+    margin: 0 auto;
+  }
+  .THIS .ssp-documentCenterHome .slds-tabs_default__item a {
+    overflow: visible;
+  }
+  .THIS .ssp-documentCenterHome .slds-tabs_default__item:nth-child(2) {
+    position: relative;
+    left: 10%;
+  }
+
+  .THIS
+    .ssp-SnapsignaturePage_Container
+    .ssp-add-auth-rep-btns
+    .ssp-authorize-btn,
+  .THIS
+    .ssp-SnapContactInformationContainer
+    .ssp-add-auth-rep-btns
+    .ssp-authorize-btn,
+  .THIS .ssp-snapAddressInformation .ssp-add-auth-rep-btns .ssp-authorize-btn {
+    margin-bottom: 30px;
+  }
+
+  .THIS
+    .ssp-getStartedSnapApp
+    .ssp-getStartSNAPButtonContiner
+    .ssp-footerBtnNext
+    .slds-button {
+    min-width: 220px;
+  }
+  .THIS .ssp-snapContactInput .ssp-genericInput .slds-grid .slds-wrap,
+  .THIS .ssp-snapContactMi .ssp-inputText .slds-form-element__control input,
+  .THIS .ssp-snapContactSuffix .genericInput,
+  .THIS .ssp-snapContactExtension .ssp-genericInput {
+    max-width: 100%;
+  }
+  .THIS .ssp-dcbsSearch .ssp-searchCard {
+    height: auto;
+  }
+  /***********************************************CD - 1 *********************************************/
+  .THIS .ssp-address1 .ssp-gutter-left,
+  .THIS .ssp-enrollmentDetailsAddress .ssp-address-one-container,
+  .THIS .ssp-address1 .ssp-address-one-container,
+  .THIS .ssp-preferredPaymentChecklist .ssp-picklistDropdown,
+  .THIS .ssp-preferredPaymentIndividualContainer .slds-input {
+    width: 100%;
+  }
+  .THIS .ssp-address1 .ssp-gutter-left,
+  .THIS .ssp-enrollmentDetailsAddress .ssp-gutter-left {
+    margin-left: 0;
+  }
+  .THIS .ssp-getInterpreterModal .ssp-detailedModal .slds-modal__footer {
+    padding-bottom: 1.5rem;
+  }
+  .THIS .ssp-individualEnrollFooter button.slds-button {
+    min-width: 146px;
+  }
+  .THIS .ssp-otherResourcesSelection .slds-button.slds-button_icon {
+    top: 0;
+  }
+  .THIS
+    .ssp-medicaidPenaltyWarning
+    .ssp-genericInputTogglegroup
+    .slds-radio_button__label {
+    min-width: 0;
+  }
+  .THIS .ssp-expeditedSnapBenefitsContainer .slds-button.slds-button_icon {
+    top: 0;
+  }
+  .THIS
+    .ssp-medicareDetails_container
+    .ssp-genericInputTogglegroup
+    .slds-radio_button:last-child
+    .slds-radio_button__label {
+    margin-left: 0;
+  }
+  .THIS
+    .ssp-medicareDetails_container
+    .ssp-genericInputTogglegroup
+    .slds-radio_button:last-child
+    .slds-radio_button__label {
+    margin-left: 0;
+  }
+  .THIS .ssp-componentWidth .ssp-typeAheadMainContainer .slds-form-element {
+    width: 100%;
+  }
+  .THIS .ssp-componentWidth .ssp-genericInput .slds-form-element__control {
+    width: 100%;
+  }
+  .THIS
+    .ssp-getStartedBenefits
+    .ssp-footerBtnBackSave
+    .ssp-getStartBenefitsButton
+    button,
+  .THIS
+    .ssp-getStartedBenefits
+    .ssp-footerBtnNext
+    .ssp-getStartBenefitsNeutralButton
+    button {
+    max-width: 100%;
+  }
+  .THIS .ssp-applyFollowCardContainer .ssp-noticeCard {
+    padding: 1.5rem;
+  }
+  .THIS .ssp-renewal-app-btns .ssp-continue-btn .slds-button_neutral,
+  .THIS .ssp-renewal-app-btns .ssp-cancel-btn .slds-button_neutral {
+    width: 100%;
+  }
+
+  .THIS .ssp-enrollmentDetailsAddress .addressLineClass .ssp-genericInput {
+    width: 100%;
+  }
+  .THIS
+    .ssp_expenseDetailsContainer
+    .ssp-action-btn-section
+    .ssp-actionButtons
+    .ssp-saveBtn
+    .slds-button_neutral {
+    width: 100%;
+    font-size: 1.125rem;
+  }
+
+  .THIS
+    .ssp_expenseDetailsContainer
+    .ssp-action-btn-section
+    .ssp-actionButtons
+    .ssp-cancelBtn
+    .slds-button_neutral {
+    width: 100%;
+    font-size: 1.125rem;
+  }
+  .THIS .ssp-fullWidthDetailsForm .slds-radio_button-group {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .THIS
+    .ssp-SnapsignaturePage_Container
+    .ssp-add-auth-rep-btns
+    .ssp-authorize-btn,
+  .THIS
+    .ssp-SnapsignaturePage_Container
+    .ssp-add-auth-rep-btns
+    .ssp-authorize-btn
+    .slds-button_neutral,
+  .THIS
+    .ssp-SnapContactInformationContainer
+    .ssp-add-auth-rep-btns
+    .ssp-authorize-btn,
+  .THIS
+    .ssp-SnapContactInformationContainer
+    .ssp-add-auth-rep-btns
+    .ssp-authorize-btn
+    .slds-button_neutral,
+  .THIS .ssp-snapAddressInformation .ssp-add-auth-rep-btns .ssp-authorize-btn,
+  .THIS
+    .ssp-snapAddressInformation
+    .ssp-add-auth-rep-btns
+    .ssp-authorize-btn
+    .slds-button_neutral {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 374px) {
+  .THIS .ssp-individualEnrollFooter.slds-grid button.slds-button {
+    min-width: 120px;
+  }
+}
+
+@media only screen and (max-device-width: 360px) {
+  .THIS
+    .ssp-multipleCheckbox_container
+    .slds-checkbox
+    .slds-form-element__label {
+    width: 72%;
+  }
+}
+
+@media only screen and (max-width: 374px) {
+  .THIS
+    .ssp-vehicleToggleOptions.ssp-toggleOptions
+    .ssp-genericInputTogglegroup
+    .slds-radio_button
+    .slds-radio_button__label {
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-right: 0;
+  }
+  .THIS
+    .ssp-documentCenterModal
+    .ssp-genericInputTogglegroup
+    .slds-radio_button__label {
+    min-width: 90px;
+  }
+}
+@media only screen and (min-width: 769px) {
+  /***********************************************CD - 2 *********************************************/
+  .THIS .ssp-benefitsPageContainer .ssp-buttonAlignment .slds-button {
+    width: 100%;
+    font-size: 16px;
+  }
+  .THIS
+    .ssp-authRepAccessRequest
+    .ssp-add-auth-rep-program
+    .ssp-search-btn
+    .slds-button {
+    width: 285px;
+  }
+  .THIS
+    .ssp-assisterAccessRequest
+    .ssp-add-auth-rep-program
+    .ssp-search-btn
+    .slds-button {
+    width: 285px;
+    padding: 0 10px;
+    line-height: 27px;
+  }
+  .THIS .ssp-documentCenterHome .slds-tabs_default__nav,
+  .THIS .ssp-documentCenterHome .ssp-genericDashboardCard {
+    margin: 0 auto;
+
+    padding: 0 52px;
+  }
+
+  .THIS
+    .ssp-SnapContactInformationContainer
+    .ssp-add-auth-rep-btns
+    .ssp-authorize-btn
+    .slds-button_neutral,
+  .THIS
+    .ssp-snapAddressInformation
+    .ssp-add-auth-rep-btns
+    .ssp-authorize-btn
+    .slds-button_neutral {
+    margin-left: 100px;
+    min-width: 270px;
+  }
+  /***********************************************CD - 1 *********************************************/
+  .THIS
+    .ssp-enrollmentDetails
+    .ssp-enrollmentDetailsAddress
+    .ssp-address-one-container.ssp-noMargin {
+    margin-right: 30px;
+  }
+  .THIS
+    .ssp-enrollmentDetails
+    .ssp-enrollmentDetailsAddress
+    .addressLineClass
+    .ssp-noMargin {
+    margin-left: 0;
+    margin-top: 0;
+  }
+  .THIS
+    .ssp-enrollmentDetails
+    .ssp-enrollmentDetailsAddress
+    .addressLineClass
+    .ssp-noMargin
+    .ssp-genericInput,
+  .THIS
+    .ssp-enrollmentDetails
+    .ssp-enrollmentDetailsAddress
+    .ssp-address-one-container.ssp-noMargin,
+  .THIS
+    .ssp-enrollmentDetails
+    .ssp-enrollmentDetailsAddress
+    .addressLineClass
+    .ssp-gutter-left.ssp-noMargin,
+  .THIS
+    .ssp-enrollmentDetails
+    .ssp-bodyContainer
+    .ssp-enrollmentDetailCompName {
+    width: 340px;
+  }
+  .THIS .ssp-navFlowFooter .ssp-footerBtnNext .slds-button {
+    margin-left: 10px;
+  }
+  .THIS
+    .ssp-documentCenterModal
+    .ssp-genericInputTogglegroup
+    .slds-radio_button__label {
+    min-width: 146px;
+  }
+  .THIS
+    .ssp-documentCenterModal
+    .ssp-genericInputTogglegroup
+    .slds-radio_button:first-child
+    .slds-radio_button__label {
+    margin-right: 20px;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .THIS
+    .ssp-enrollmentDetails
+    .ssp-enrollmentDetailsAddress
+    .addressLineClass
+    .ssp-noMargin
+    .ssp-genericInput,
+  .THIS
+    .ssp-enrollmentDetails
+    .ssp-enrollmentDetailsAddress
+    .ssp-address-one-container.ssp-noMargin,
+  .THIS
+    .ssp-enrollmentDetails
+    .ssp-bodyContainer
+    .ssp-enrollmentDetailCompName {
+    width: 370px;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 800px) {
+  /***********************************************CD - 2 *********************************************/
+  .THIS .ssp-documentCenterHome .slds-tabs_default__nav,
+  .THIS .ssp-documentCenterHome .ssp-genericDashboardCard {
+    padding: 0 30px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+  .THIS .ssp-documentCenterHome .slds-tabs_default__link {
+    width: 300px;
+
+    line-height: 2.5rem;
+  }
+}
+/****************************************************** Footer Buttons ***************************************************/
+@media only screen and (max-width: 800px) {
+  .THIS .ssp-add-household-container .ssp-button-container .slds-button,
+  .THIS .ssp-enrollmentDetailsFooter .slds-button,
+  .THIS .ssp-individualEnrollFooter .slds-button {
+    width: 100%;
+    font-size: 1.125rem;
+  }
+}
+@media only screen and (min-width: 769px) {
+  .THIS .ssp-screenFooterNextBtn .slds-button {
+    min-width: 270px;
+    min-height: 60px;
+  }
+  .THIS .ssp-screenFooterBlueBtn .slds-button {
+    min-width: 170px;
+    min-height: 60px;
+  }
+  .THIS .ssp-screenFooterSaveBtn .slds-button {
+    min-width: 270px;
+    min-height: 60px;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .THIS .ssp-medicareDetailsForm .ssp-singleCheckbox .slds-form-element__label {
+    width: 90%;
+  }
+}
+@media only screen and (max-device-width: 356px) {
+  .THIS .ssp-footerBtnBackSave .slds-button {
+    font-size: 1.063rem;
+  }
+}
+@media only screen and (max-device-width: 345px) {
+  .THIS .ssp-footerBtnBackSave .slds-button {
+    font-size: 0.91rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /****** Container ****/
+  .THIS .ssp-bodyContainer {
+    width: 100%;
+    padding: 0 30px;
+    margin: unset;
+  }
+  /****** Buttons ******/
+  .THIS .ssp-filterModal .slds-modal__footer .slds-button {
+    width: -webkit-fill-available;
+  }
+  .THIS .ssp-add-auth-rep-program .ssp-search-btn .slds-button,
+  .THIS .ssp-add-auth-rep-program .ssp-search-cancel .slds-button {
+    width: 100%;
+  }
+  .THIS .ssp-filterModal .ssp-button_base,
+  .THIS .ssp-filterModal .ssp-button_brand {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .THIS .ssp-income-details .ssp-action-btns .ssp-cancelBtn .slds-button {
+    padding: 0;
+    width: 45%;
+    display: inline-block;
+  }
+  .THIS .ssp-highest-education .ssp-action-btns .ssp-cancelBtn .slds-button,
+  .THIS .ssp-highest-education .ssp-action-btns .ssp-saveBtn .slds-button {
+    padding: 0;
+    width: 146px;
+  }
+  .THIS .ssp-absent-parent-details .ssp-action-btns .ssp-cancelBtn .slds-button,
+  .THIS .ssp-absent-parent-details .ssp-action-btns .ssp-saveBtn .slds-button,
+  .THIS
+    .ssp-add-auth-rep-permissions
+    .ssp-action-btns
+    .ssp-cancelBtn
+    .slds-button,
+  .THIS
+    .ssp-add-auth-rep-permissions
+    .ssp-action-btns
+    .ssp-saveBtn
+    .slds-button {
+    padding: 0;
+    width: 46%;
+  }
+  .THIS .ssp-income-details .ssp-action-btns .ssp-saveBtn .slds-button {
+    padding: 0;
+    width: 45%;
+  }
+  .THIS
+    .ssp-genericInputTogglegroup
+    .slds-radio_button:first-child
+    .slds-radio_button__label {
+    margin-right: 10px;
+  }
+  .THIS
+    .ssp-genericInputTogglegroup
+    .slds-radio_button:last-child
+    .slds-radio_button__label {
+    margin-left: 10px;
+  }
+  .THIS .ssp-add-auth-rep-btns .ssp-cancel-btn .slds-button,
+  .THIS .ssp-add-auth-rep-btns .ssp-next-btn .slds-button {
+    width: 100%;
+  }
+  .THIS
+    .ssp-income-details-form
+    .ssp-action-btn-section
+    .ssp-cancel-btn
+    .slds-button,
+  .THIS
+    .ssp-income-details-form
+    .ssp-action-btn-section
+    .ssp-next-btn
+    .slds-button,
+  .THIS
+    .ssp-absent-parent-details
+    .ssp-action-btn-section
+    .ssp-cancel-btn
+    .slds-button,
+  .THIS
+    .ssp-absent-parent-details
+    .ssp-action-btn-section
+    .ssp-next-btn
+    .slds-button {
+    width: 100%;
+  }
+  /*.THIS .ssp-button_base .slds-button {
+    min-width:unset;
+}*/
+  .THIS .ssp-genericInputTogglegroup .slds-radio_button {
+    width: 100%;
+  }
+  .THIS .ssp-genericInputTogglegroup .slds-radio_button__label {
+    width: 100%;
+  }
+  /**************************************************** Modal ***********************************************/
+  .THIS .ssp-modalContent {
+    padding: 24px 24px 0 24px;
+  }
+  .THIS .ssp-detailedModal .slds-modal__footer button {
+    width: -webkit-fill-available;
+  }
+  .THIS .ssp-detailedModal .slds-modal__footer div span :first-child {
+    margin-bottom: 1rem;
+  }
+  .THIS
+    .ssp-change-primary-number
+    .ssp-detailedModal
+    .slds-modal__footer
+    div
+    span
+    :first-child {
+    margin-bottom: 0;
+  }
+  .THIS .ssp-detailedModal .slds-modal__footer div span :last-child {
+    margin-left: 0;
+  }
+  .THIS .ssp-detailedModal .slds-modal__footer div {
+    float: none;
+  }
+  /****** Tabs ******/
+  .THIS .ssp-tabsBody li {
+    width: 187px;
+    padding: 15px 24px;
+  }
+  /****** Footer ******/
+  .THIS .ssp-privacy-policy {
+    background-color: t(sspBlueZeta);
+  }
+  /*Footer Buttons*/
+  .THIS .ssp-screenFooterNextBtn .slds-button {
+    min-width: 315px;
+    min-height: 60px;
+  }
+  .THIS .ssp-screenFooterBlueBtn .slds-button {
+    min-width: 146px;
+    min-height: 60px;
+  }
+  .THIS .ssp-screenFooterSaveBtn .slds-button {
+    min-width: 146px;
+    min-height: 60px;
+  }
+  .THIS .ssp-individualName {
+    font-size: 24px;
+  }
+  .THIS .ssp-footerBtnBackSave {
+    order: 2;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .THIS .ssp-footerBtnNext {
+    order: 1;
+    width: 100%;
+  }
+  .THIS .ssp-footerBtnNext .slds-button {
+    width: 100%;
+    min-width: 260px;
+  }
+  .THIS .ssp-footerBtnBackSave .slds-button {
+    /*min-width: 146px;*/
+    width: 100%;
+    min-width: unset;
+  }
+  .THIS
+    .ssp-report-change-modal
+    .ssp-filterModal
+    .slds-modal__footer
+    .slds-button {
+    width: -webkit-fill-available;
+  }
+  /*Input Toggle*/
+  .THIS .ssp-genericInputTogglegroup .slds-radio_button__label {
+    min-width: 146px;
+  }
+  /*Single checkbox*/
+  .THIS .ssp-singleCheckbox .slds-form-element__label {
+    font-size: 0.871rem;
+  }
+  /*Primary Applicant*/
+  .THIS
+    .ssp-checkBoxPrefferedContactMethod
+    .contactDetails
+    .ssp-checkboxContainer
+    .slds-form-element__control {
+    width: 100%;
+  }
+  .THIS .ssp-benefitsSummary_container .ssp-addBenefitButton .slds-button,
+  .THIS .ssp-resourceSummary_container .ssp-addResourceButton .slds-button {
+    width: 100%;
+  }
+  .THIS
+    .ssp-program-check-box
+    .ssp-radioGroup
+    .slds-radio
+    .slds-radio__label
+    .slds-form-element__label,
+  .THIS
+    .ssp-report-change-modal
+    .ssp-radioGroup
+    .slds-radio
+    .slds-radio__label
+    .slds-form-element__label {
+    width: 85%;
+  }
+  .THIS .ssp-cardItemsButton .slds-button {
+    width: 80px;
+  }
+  .THIS
+    .ssp-checkBoxHouseHoldMeal
+    .memberDetails
+    .ssp-checkboxGroup
+    .ssp-checkboxContainer
+    .slds-form-element__control {
+    width: 100%;
+  }
+  .THIS .ssp-healthCareEnrollCovBtn.ssp-screenFooterNextBtn .slds-button {
+    min-width: 100%;
+  }
+  .THIS .ssp-genericInputToggle .slds-radio_button .slds-radio_faux {
+    padding: 0;
+  }
+  .THIS .ssp-enrollmentDetailsSaveBtn .slds-button,
+  .THIS .ssp-individualEnrollSaveBtn .slds-button {
+    min-width: 146px;
+  }
+  .THIS .ssp-enrollmentDetailsAddress .addressLineClass div div {
+    width: 100%;
+  }
+  .THIS .ssp-enrollmentDetailsAddress .addressLineClass div div:first-of-type {
+    margin: 0;
+  }
+  .THIS
+    .ssp-enrollmentDetailsAddress
+    .addressLineClass
+    .ssp-address-one-container {
+    margin: 0 0 15px 0;
+  }
+  .THIS .ssp-first-time-user-dashboard .ssp-program-card .ssp-ctaCardBlue {
+    width: 100%;
+  }
+  .THIS
+    .ssp-first-time-user-dashboard
+    .ssp-dashboard-action-section
+    .slds-button {
+    width: 100%;
+  }
+  .THIS .ssp-inHomeAssistanceDetails .genericInput .ssp-picklistDropdown {
+    width: 100%;
+  }
+  .THIS
+    .ssp-auth-rep-program-form
+    .addressLineClass
+    > div:first-child
+    > div:last-child {
+    margin-top: 15px;
+    padding-left: 0;
+  }
+  .THIS
+    .ssp-existing-user-dashboard
+    .ssp-dashboard-header-section
+    .slds-button {
+    width: 100%;
+    padding: 0 10px;
+  }
+  .THIS
+    .ssp-existing-user-dashboard
+    .ssp-dashboard-header-section
+    .ssp-close-icon
+    .slds-button {
+    width: auto;
+    padding: 0;
+  }
+  .THIS
+    .ssp-existing-user-dashboard
+    .ssp-benefits-card
+    .ssp-genericDashboardCard {
+    height: 414px;
+    max-height: 414px;
+    overflow-y: auto;
+  }
+  .THIS
+    .ssp-existing-user-dashboard
+    .ssp-reps-assisters-card
+    .ssp-genericDashboardCard {
+    height: 363px;
+    max-height: 363px;
+    overflow-y: auto;
+  }
+  .THIS .ssp-find-assister-agent-section .ssp-search-btn .slds-button {
+    width: 100%;
+  }
+  .THIS .ssp-absent-parents-summary-cards .ssp-ProgressCard {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-device-width: 344px) {
+  /*Iphone 5E and below*/
+  .THIS
+    .ssp-existing-user-dashboard
+    .ssp-reps-assisters-card
+    .ssp-genericDashboardCard {
+    height: 414px;
+    max-height: 414px;
+    overflow-y: auto;
+  }
+}
+
+/*@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+    .THIS .ssp-first-time-user-dashboard .ssp-program-card .ssp-ctaCardBlue {
+        min-height: 308px;
+    }
+}*/
+
+@media only screen and (min-device-width: 1404px) {
+  .THIS .ssp-dashboard-wrapper .ssp-check-eligibility-mid-row-margin {
+    margin-bottom: 30px;
+  }
+  .THIS
+    .ssp-dashboard-wrapper
+    .ssp-first-time-user-dashboard
+    .ssp-mid-row-margin {
+    margin-bottom: 54px;
+  }
+}
+@media only screen and (min-device-width: 1755px) {
+  .THIS
+    .ssp-dashboard-wrapper
+    .ssp-first-time-user-dashboard
+    .ssp-mid-row-margin {
+    margin-bottom: 30px;
+  }
+}
+@media only screen and (device-width: 1024px) and (device-height: 768px) and (orientation: landscape) {
+  .THIS .ssp-first-time-user-dashboard .ssp-program-card .ssp-ctaCardBlue {
+    min-height: 308px;
+  }
+  .THIS .ssp-dashboard-wrapper .ssp-check-eligibility-mid-row-margin {
+    margin-bottom: 30px;
+  }
+  .THIS
+    .ssp-dashboard-wrapper
+    .ssp-first-time-user-dashboard
+    .ssp-program-card
+    .ssp-ctaCardBlue {
+    min-height: 364px;
+  }
+  .THIS
+    .ssp-dashboard-wrapper
+    .ssp-first-time-user-dashboard
+    .ssp-dashboard-action-section
+    .slds-button {
+    width: 90%;
+  }
+  .THIS
+    .ssp-dashboard-wrapper
+    .ssp-first-time-user-dashboard
+    .ssp-dashboard-action-section
+    .ssp-check-eligibility-section
+    .slds-button {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .THIS .ssp-resourceDetails_container .ssp-actionButtons .slds-button,
+  .THIS .ssp-benefitDetails_container .ssp-actionButtons .slds-button,
+  .THIS .ssp_expenseDetailsContainer .ssp-actionButtons .slds-button {
+    padding: 0;
+    width: 47%;
+    min-width: auto;
+  }
+  .THIS .ssp-coverageSummary_container .ssp-addCoverageButton .slds-button {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .THIS
+    .ssp-detailedModal
+    .slds-modal__footer
+    .ssp-addResourceModalFooter
+    .slds-button {
+    width: 50%;
+  }
+  .THIS .ssp-removeModalFooter .slds-button {
+    width: 100%;
+  }
+  .THIS .ssp-removeModalFooter .ssp-deleteButton {
+    padding-right: 0.938rem;
+  }
+  .THIS .ssp-removeModalFooter .ssp-cancelButton {
+    padding-left: 0.938rem;
+  }
+  .THIS
+    .ssp-notRequiringDetails_section
+    .ssp-card_section
+    .ssp-cardContentLayout {
+    width: 95%;
+  }
+  .THIS .ssp-resourceDetails_container .ssp-screenFooterNextBtn .slds-button,
+  .THIS .ssp-benefitDetails_container .ssp-screenFooterNextBtn .slds-button {
+    width: 270px;
+    font-size: 1.125rem;
+    min-width: 270px;
+  }
+  .THIS .ssp-resourceDetails_container .ssp-screenFooterBlueBtn .slds-button,
+  .THIS .ssp-benefitDetails_container .ssp-screenFooterBlueBtn .slds-button {
+    width: 170px;
+    font-size: 1.125rem;
+    min-width: 170px;
+  }
+  .THIS .ssp-inputIcon {
+    top: 33px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .THIS .ssp-enrollmentDetailsCancelBtn .slds-button,
+  .THIS .ssp-enrollmentDetailsSaveBtn .slds-button {
+    min-width: 100%;
+  }
+
+  .THIS .ssp-screenFooterBlueBtn.ssp-addHouseHoldButtonWrap .slds-button,
+  .THIS .ssp-screenFooterSaveBtn.ssp-addHouseHoldButtonWrap .slds-button {
+    min-height: 60px;
+    width: 100%;
+    min-width: auto;
+  }
+}
+
+@media only screen and (max-width: 405px) {
+  /*.THIS .ssp-footerBtnBackSave .slds-col {
+    width: 100%;
+    margin: 0 0 48px 0;
+}*/
+  .THIS .ssp-footerBtnBackSave .slds-button {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 410px) {
+  .THIS .ssp-change-primary-number .slds-radio_button-group {
+    display: block;
+  }
+  .THIS
+    .ssp-change-primary-number
+    .slds-form-element__control
+    .slds-radio_button-group
+    .slds-radio_button
+    .slds-radio_button__label {
+    width: 100%;
+    margin: 0 0 12px 0;
+  }
+  .THIS .ssp-change-primary-number .ssp-componentWidth {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 385px) {
+  /****** Input Fields ******/
+  .THIS
+    .ssp-searchbox
+    .ssp-hidesearchicon
+    .slds-input-has-icon.slds-input-has-icon_left-right {
+    bottom: 2.5rem;
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 374px) {
+  .THIS
+    .ssp-medicareDetails_container
+    .ssp-genericInputTogglegroup
+    .slds-radio_button-group
+    .slds-radio_button
+    .slds-radio_button__label {
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: 12px;
+    min-width: 85px;
+  }
+  .THIS .ssp-highest-education .ssp-action-btns .ssp-cancelBtn .slds-button,
+  .THIS .ssp-highest-education .ssp-action-btns .ssp-saveBtn .slds-button {
+    padding: 0;
+    width: 122px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  /*Input Toggle*/
+  .THIS .ssp-genericInputTogglegroup .slds-radio_button__label {
+    min-width: 120px;
+  }
+  /*.THIS
+    .ssp-genericInputTogglegroup
+    .slds-radio_button:first-child
+    .slds-radio_button__label {
+        margin-right: 20px;
+    }*/
+  .THIS .ssp-screenFooterSaveBtn .slds-button,
+  .THIS .ssp-screenFooterNextBtn .slds-button,
+  .THIS .ssp-screenFooterBlueBtn .slds-button {
+    min-width: 120px;
+    min-height: 60px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .THIS .ssp-bodyContainer {
+    padding: 0 30px;
+  }
+  .THIS .ssp-dropdownMenu {
+    padding: 0 30px;
+  }
+  .THIS .slds-modal__content {
+    min-height: 100px;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .THIS .ssp-genericInputTogglegroup .slds-radio_button__label {
+    min-width: 120px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .THIS .ssp-current-education .ssp-saveBtn .slds-button {
+    width: 120px;
+  }
+  .THIS .ssp-current-education .ssp-cancelBtn .slds-button {
+    width: 120px;
+  }
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .THIS select.ssp-picklistDropdown {
+    height: 46px;
+  }
+  .THIS select.ssp-picklistDropdown::-ms-expand {
+    display: none;
+  }
+}
+
+/*Margin Classes*/
+
+.THIS .ssp-margin-bottom_small {
+  margin-bottom: 15px;
+}
+
+.THIS .ssp-margin-bottom_medium {
+  margin-bottom: 20px;
+}
+
+.THIS .ssp-margin-bottom_large {
+  margin-bottom: 30px;
+}
+
+.THIS .ssp-margin-top_large {
+  margin-top: 30px;
+}
+.THIS .ssp-margin-bottom_xlarge {
+  margin-bottom: 60px;
+}
+
+/*Trial Container*/
+
+.THIS .ssp-trialContainer {
+  width: 770px;
+  margin: 0 auto;
+}
+
+/*Not A U.S. Citizen Checkbox style update*/
+
+.THIS .ssp-NotUSCheckBox .slds-form-element__label {
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+.THIS .ssp-NotUSCheckBox .slds-checkbox_faux {
+  margin-right: 15px !important;
+}
+
+.THIS .ssp-NotUSCheckBox .slds-checkbox__label {
+  display: flex;
+}
+
+.THIS .ssp-helptextIcon .slds-form-element__icon .slds-button.slds-button_icon {
+  color: t(sspBlueUpsilon);
+}
+
+.THIS
+  .ssp-helptextIcon
+  .slds-form-element__icon
+  .slds-button.slds-button_icon
+  svg {
+  width: 17.5px;
+  height: 17.5px;
+}
+
+@media only screen and (min-width: 375px) and (max-width: 768px) {
+  .THIS
+    .ssp-medicareDetails_container
+    .ssp-genericInputTogglegroup
+    .slds-radio_button-group
+    .slds-radio_button
+    .slds-radio_button__label {
+    min-width: 97px;
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: 12px;
+  }
+  .THIS
+    .ssp-documentCenterModal
+    .ssp-genericInputTogglegroup
+    .slds-radio_button__label {
+    min-width: 120px;
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .THIS .ssp-reportChange_container .ssp-screenFooterNextBtn .slds-button,
+  .THIS .ssp-nextStepContainer .ssp-screenFooterNextBtn .slds-button,
+  .THIS .ssp-reportChange_container .ssp-screenFooterBlueBtn .slds-button {
+    width: 100%;
+  }
+  .THIS .ssp-reportChange_container .ssp-screenFooterNextBtn .slds-button {
+    margin-bottom: 1.875rem;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .THIS .ssp-footerBtnBackSave .slds-button {
+    /*min-width: 146px;*/
+    width: 100%;
+    min-width: unset;
+    padding: 0 20px;
+  }
+  .THIS .ssp-NotUSCheckBox .slds-form-element__label {
+    margin-top: 0;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .THIS .ssp-NotUSCheckBox .slds-form-element__label {
+    width: 80%;
+  }
+}
+
+.THIS .dd-formattedtext-list ol,
+.THIS .dd-formattedtext-list ul {
+  padding-left: 1rem;
+  font-size: 1rem;
+  margin-left: 0;
+}
+
+.THIS .dd-formattedtext-list ol {
+  list-style-type: decimal;
+}
+
+.THIS .dd-formattedtext-list li {
+  padding-bottom: 0.3125rem;
+  padding-left: 0.35rem;
+}
+
+.THIS .dd-formattedtext-p {
+  margin-bottom: 5px;
+}
+
+.THIS .dd-formattedtext-title1 {
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.3px;
+}
+
+.THIS .slds-has-error .slds-form-element__help {
+  font-family: "Poppins-Regular";
+}
+
+.THIS .ssp-prescreeninglinkText .slds-button {
+  text-decoration: underline;
+  letter-spacing: -0.24px;
+  font-size: 0.8125rem;
+  line-height: 18px;
+  color: inherit;
+}
+
+.THIS .ssp-prescreeninglinkText .slds-button .slds-button:active {
+  color: inherit;
+}
+
+/************************Styles added for Help and FAQ Pages******************/
+
+.THIS .ssp-ka-container p {
+  font-family: Poppins-Regular;
+  font-size: 0.8125rem;
+  line-height: 1.25rem;
+  color: #262729;
+  letter-spacing: 0.019rem;
+  margin-bottom: 5px;
+  word-break: break-word;
+}
+
+.THIS .ssp-ka-container ul,
+.THIS .ssp-ka-container ol {
+  padding-left: 0.625rem;
+  font-family: "Poppins-Bold";
+}
+
+.THIS .ssp-ka-container li {
+  color: #0044be;
+  padding-bottom: 0.3125rem;
+  padding-left: 0.35rem;
+}
+
+.THIS .ssp-ka-container table {
+  table-layout: fixed;
+  width: 100%;
+  margin-top: 1.5rem;
+  font-family: Poppins-Regular;
+  font-size: 0.8125rem;
+  line-height: 1.25rem;
+  letter-spacing: 0.019rem;
+}
+
+.THIS .ssp-ka-container table thead tr {
+  border-style: solid;
+  margin-right: 0.75rem;
+  margin-left: 0.75rem;
+  display: flex;
+  border-color: black;
+}
+
+.THIS .ssp-ka-container table thead tr th {
+  background-color: #0044be;
+  width: 50%;
+  color: white;
+  font-weight: 100;
+  word-break: break-word;
+}
+
+.THIS .ssp-ka-container a {
+  text-decoration: underline;
+  letter-spacing: -0.24px;
+  font-size: 0.8125rem;
+  line-height: 1.25rem;
+  font-family: "Poppins-Bold";
+  color: #0044be;
+  margin-top: 1rem;
+}
+
+.THIS .ssp-ka-container p a {
+  text-decoration: underline;
+  letter-spacing: -0.24px;
+  font-size: 0.8125rem;
+  line-height: 1.25rem;
+  font-family: "Poppins-Regular";
+  color: #0044be;
+  margin-top: 1rem;
+}
+
+.THIS .ssp-ka-container table tbody tr {
+  border-left: solid;
+  border-right: solid;
+  border-bottom-style: solid;
+  border-width: thin;
+  margin-right: 0.75rem;
+  margin-left: 0.75rem;
+  display: flex;
+  border-color: black;
+}
+
+.THIS .ssp-ka-container table tbody tr td {
+  width: 50%;
+  word-break: break-word;
+}
+
+.THIS .ssp-kaSearchField .slds-form-element .slds-input {
+  padding-left: 2.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.THIS .ssp-kaSearchField .slds-form-element .slds-form-element__label {
+  display: none;
+}
+
+.THIS
+  .ssp-bg_appHeaderGradient
+  .ssp-bodyContainer
+  .ssp-accordion
+  .ssp-accordionButton
+  .slds-icon {
+  height: 0.75rem;
+}
+
+.THIS
+  .ssp-bg_appHeaderGradient
+  .ssp-bodyContainer
+  .ssp-accordion
+  .ssp-accordionButton
+  .slds-icon-text-default {
+  fill: black;
+}
+
+@media only screen and (max-width: 768px) {
+  .THIS .ssp-ka-container p {
+    padding-left: 0.5rem;
+  }
+}

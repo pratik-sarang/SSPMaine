@@ -1,0 +1,82 @@
+<!--
+ * Component Name    : RE_ArchetypeFilterSection
+ * Owner             : DELOITTE CONSULTING
+ * Created Date      : 06/27/2019
+ * Description       : Filter section component in Archetype detail Page
+ *
+ *                            M O D I F I C A T I O N   L O G                                          
+ *
+ *  Date        Developer       Description                                                         
+ *  **************************************************************************
+ *  07/08/2019  Nupoor          Filter section component in Archetype detail Page
+-->
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name="sZipCode" type="String" description="This attribute is used to get the input of zip code from parent"/>
+    <aura:attribute name="sZipCodeVal" type="String" description="This attribute is used to get the input of zip code"/>
+    <aura:attribute name="fosterCareRoleOptions" type="List" description="Used to specify the sub archetypes available in pop up"/>
+    <aura:attribute name="fosterCareRolevalue" type="String" description="This is used to set the sub archetypes selected"/>
+    <aura:attribute name="selectedSubArchetypeId" type="String" description="This is used to get the selected sub archetype id"/>
+    <aura:attribute name="selectedArchetypeId" type="String" description="Used to get the selected archetype id"/>
+    <aura:attribute name="lstDomains" type="List" description="Used to create a filter list of all domains"/>
+    <aura:attribute name="lstApplicableDomains" type="List" description="Used to enable the domain filters on the basis of resources"/>
+    <aura:attribute name="selectedDomains" type="String" description="Used to store the selected domain filters"/> 
+    <aura:attribute name="allAvailableDomains" type="String" description="Used to store the All domain filters"/> 
+    <aura:attribute name="showAll" type="Boolean" default="false" description="Used to show the show all option"/>
+        <!-- Attribute added for Archetype Title and action by for GA  [CHFS Developer-Mohan-12/17/19]-->
+        <aura:attribute name="subArcheTypeTitle" type="String" description=" attribute used to send value to GA"/>
+    <aura:attribute name="updateResources" type="Boolean" default="false" description="Used to invoke the update method on change of any of the resources"/>
+    <aura:attribute name="onLoad" type="Boolean" default="true" description="This attribute is used to determine if the component is loaded initially"/>
+    <aura:attribute name="onFilterLoad" type="Boolean" default="true" description="Used to update the zip code once when the component is loaded"/>
+    <aura:handler name="change" value="{!v.sZipCode}" action="{!c.updateZipCodeValue}" />   
+    <aura:attribute name="hoursList" type="List"/> 
+    <aura:attribute name="selectedHours" type="List"/>
+    
+    <div class="slds-p-right_small archetypeFilter">
+        <aura:if isTrue="{!$Browser.isPhone}">
+            <div class="slds-p-bottom_large archetype-filter-btn-section slds-m-bottom_small">
+                <lightning:button label="{!$Label.c.done}" title="{!$Label.c.done}" onclick="{! c.handleFilterCancel }"/> 
+            </div>
+        </aura:if>
+                <!-- Added container and class for GA  [CHFS Developer-Mohan-12/17/19]-->
+        <div class="slds-m-bottom_medium">
+            <div class="slds-form-element slds-m-bottom_medium">                
+                <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_right dd-resource-list-item-container" data-sub-arche="{!v.subArcheTypeTitle}" data-zipcode="{!v.sZipCodeVal}" data-selected-domains="{!v.selectedDomains}" id="input-9">
+                    <!--lightning:icon class="slds-icon slds-input__icon slds-input__icon_left slds-icon-text-default" iconName="utility:checkin" size="x-small" alternativeText="checkin"/-->                    
+                    
+                        <!--lightning:input aura:id="zipcode" name="enter-zipcode" label="{!$Label.c.address}" type="text" class="dd-ga-zipcode-arche-type"
+                                     value="{!v.sZipCodeVal}" /-->
+                    	<span onclick="{!c.updateZipCode}" onkeydown="{!c.updateZipCode}">
+                           <!--- <label lightning-input_input="" for="input-9" class="slds-form-element__label slds-no-flex">{!$Label.c.address}</label> -->
+                        	<c:RE_GoogleMapsAutocomplete searchKey="{!v.sZipCodeVal}" placeholder="{!$Label.c.RE_EnterLocationZip}" label = "{!$Label.c.address}"/>
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="slds-m-bottom_medium"> 
+            <div class="slds-m-bottom_x-small"><strong>{!$Label.c.RE_ArchRole}</strong></div>
+            <aura:iteration items="{!v.fosterCareRoleOptions}" var="fosterCareRoleOptions">  
+            	<lightning:input aura:id="assignmentOptions" name="radioButtonGroup"
+                                 label="{!fosterCareRoleOptions.Title__c}" 
+                                 type="radio" options="{!fosterCareRoleOptions.Title__c}" 
+                                 value="{!fosterCareRoleOptions.Id}"
+                                 checked="{!fosterCareRoleOptions.Id == v.selectedSubArchetypeId?true:false}"
+                                 onchange="{!c.updateRole}"/>
+   			</aura:iteration>
+      	</div>
+        <div class="slds-m-bottom_medium">
+            <div class="slds-m-bottom_x-small"><strong>{!$Label.c.Filter_by_Resource_Categories}</strong></div>
+            <lightning:input type="checkbox" label="{!$Label.c.All}" name="All" checked="{!v.showAll}" disabled="{!v.lstApplicableDomains.length == 0}" onchange="{!c.updateAllDomains}"/>
+            <aura:iteration items="{!v.lstDomains}" var="domain" indexVar="key">
+                <lightning:input aura:id="domains" type="checkbox" label="{!domain.name}" name="{!domain.value}"  
+                                 disabled="{!!domain.isPresent}" checked="{!domain.isChecked}" onchange="{!c.handleChange}"/>
+            </aura:iteration>            
+        </div>
+        <div class="slds-m-bottom_medium">
+            <p class="slds-m-bottom_small"><strong>{!$Label.c.RE_Hours}</strong></p>
+            <aura:iteration items="{!v.hoursList}" var="hour" indexVar="key">
+                <lightning:input aura:id="hoursOpen" type="checkbox" label="{!hour.label}" name="{!hour.value}" onchange="{!c.getUpdatedHours}"/>
+            </aura:iteration>            
+        </div>
+    </div>
+</aura:component>

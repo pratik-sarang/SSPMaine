@@ -1,0 +1,392 @@
+<!--
+ * Component Name    : RE_DataTable 
+ * Owner             : DELOITTE CONSULTING
+ * Created Date      : 05/09/2019
+ * Description       : Our Team Edit Modal
+ * 
+ *                            M O D I F I C A T I O N   L O G                                          
+ *
+ *  Date        Developer       Description                                                         
+ *  **************************************************************************
+ *  05/02/2019  Abhishek        	Initial UI Development
+ *  05/06/2019  Prashant			Backend Field Integration
+ *  06/03/2019  Payal			    Pagination Change(Infinite scrolling)
+ *  07/20/2020  Venkat K			Back to Clients hyperlink on Oneview.
+--> 
+<aura:component controller ="RE_DataTableCtrl" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global">
+    <!-- Attribute definitation--> 
+    
+    <!-- Attributes used for Our Clients Cmp--> 
+    <aura:attribute name="getURL" type="String"
+                    description= "this attribute is used to get the current page URL."/>
+    <aura:attribute name="citizenCheck" type="Boolean" default="false"
+                    description= "this attribute is used to check the Citizen."/>
+    <aura:attribute name="isFavoriteClient" type="Boolean" default="false"
+        description="this attribute is used to check the favorite client to bypass search option." />
+    <aura:attribute name="dobCheck" type="Boolean" default="false"
+                    description= "this attribute is used to check the Citizen."/>
+    <aura:attribute name="allClientsCheck" type="Boolean" default="false"
+                    description= "this attribute is used to check the Citizen."/>
+    <aura:attribute name="searchCheck" type="Boolean" default="false"
+                    description= "this attribute is used to check the Citizen."/>
+    <aura:attribute name="FirstName" type="String"
+                    description= "this attribute is used to capture User input Data."/>
+    <aura:attribute name="LastName" type="String"
+                    description= "this attribute is used to capture User input Data."/>
+    <aura:attribute name="dob" type="Date"
+                    description= "this attribute is used to capture User input Data"/>
+
+    <aura:attribute name="referralOutboxTabCheck" type="Boolean" default="false"
+                    description= "this attribute is used to check referall outbox tab is clicked"/>
+    <aura:attribute name="orgName" type="String"
+                    description= "this attribute is used to get organization name"/>
+    <aura:attribute name="resourceName" type="String"
+                    description= "this attribute is used to get resource name"/>   
+    <aura:attribute name="picklistValues" type="String" default = "Status__c"/>
+    <lightning:notificationsLibrary aura:id="notifLib" />
+    <aura:attribute name = "contactRecords" type ="Object"/>
+    
+    <!-- END Attributes used for Our Clients Cmp--> 
+    <aura:attribute name="sortBy" type="String"
+                    description= "this attribute is used to apply sorting."/>
+    <aura:attribute name="sortDirection" type="String" 
+                    description= "this attribute is used to define sorting direction."/>
+    <aura:attribute name="lstLocations" type="List"
+                    description= "this attribute is used to store location list."/>
+    <aura:attribute name="mydata" type="Object"
+                    description= "this attribute is used to store apex response data."/>
+    <aura:attribute name="sObject" type="Object" 
+                    description= "this attribute is used to define sObject type."/>
+    <aura:attribute name="columnNames" type="List"
+                    description= "this attribute is used to define table columns."/>
+    <aura:attribute name="hideCheckbox" type="Boolean" default ="true"
+                    description= "this attribute is used to define wheather to show or hide checkbix on data table."/>
+    <aura:attribute name="iconImage" type="String" 
+                    description= "this attribute is used to define icon on the data table."/>
+    <aura:attribute name="numberOfReords" type="Integer"
+                    description= "this attribute is used to define number of records."/>
+    <aura:attribute name="selectedLocation" type="String" default="All"
+                    description= "this attribute is used to define wheatrher to pull all or partial records."/>
+    <aura:attribute name="mycolumns" type="List"
+                    description= "this attribute is used to define table columns."/>
+    <aura:attribute name="selectedDataArr" type="List"
+                    description= "this attribute is used to capture the selected data row."/>
+    <aura:attribute name="allData" type="List" description="stored all the data of table"/>
+    <aura:attribute name="recid" type="String" 
+                    description= "this attribute is used to define record Id of the record."/>
+    <aura:attribute name="ShowModule" type="boolean" default="false"/>
+    <aura:attribute name="pageNumber" type="Integer" default="1"
+                    description= "this attribute is used to define start page number."/>
+    <aura:attribute name="pageSize" type="Integer" default="10"
+                    description= "this attribute is used to define first pagination number."/>
+    <aura:attribute name="isLastPage" type="Boolean" default="false"
+                    description= "this attribute is used to define if the page is last."/>
+    <aura:attribute name="dataSize" type="Integer" default="0"
+                    description= "this attribute is used to define data size."/> 
+    <aura:attribute name="showModal" type="boolean" default="false"
+                    description= "this attribute is used to define wheather to show modal or not"/>
+    <aura:attribute name="showNotesModal" type="boolean" default="false"
+                    description= "this attribute is used to define wheather to show modal or not"/>
+    
+    <aura:attribute name="isTableFilterVisi" type="Boolean"
+                    description= "this attribute is used to define wheather to show or hide filters."/>
+    <aura:attribute name="isLoading" type="Boolean"
+                    description= "this attribute is used to toggle spinner view/hide"/>
+    <aura:attribute name="isAssister" type="Boolean"
+                    description= "this attribute is used to indicate if the logged in user is Assister"/>
+    <aura:attribute name="showModalConsent" type="boolean" default="false"
+                    description= "this attribute is used to define wheather to show modal or not"/>
+    <!-- aura definitations -->
+    <aura:handler name="init" value="{! this }" action="{! c.init }"/>
+    <aura:handler name="CloseModalEvt" event="c:RE_OurTeamModalEvt" action="{!c.closehandler}" phase="capture" />
+    <aura:attribute name="testing" type="String" default="before change"/>
+    
+    <!--[07/02/2019:Anuj] - Changes done for server call from a common place-->
+    <aura:attribute name="isSpinnerActive" type="Boolean" description= "this attribute is used to store the state of the spinner"/>
+    <c:RE_UtilityServerCallerCmp aura:id="bSuper" isSpinnerActive="{!v.isSpinnerActive}"/> 
+    <!--Filter variables -->
+    <aura:attribute name="selectedlocations" type="List" default="[]"/>
+    <aura:attribute name="unselectedlocations" type="List" default="[]"/>
+    <aura:attribute name="selectedresources" type="List" default="[]"/>
+    <aura:attribute name="unselectedresources" type="List" default="[]"/>
+    <aura:attribute name="selectedstatus" type="List" default="[]"/>
+    <aura:attribute name="unselectedstatus" type="List" default="[]"/>
+    <aura:attribute name="statuslst" type="List" default="[]"/>
+    <aura:attribute name="initialstatuslst" type="List" default="[]"/>
+    <aura:attribute name="initialloc" type="List" default="[]"/>
+    
+    <aura:attribute name="initiallocid" type="String"  description= "this attribute is used to store the primary location of logged in user id"/>
+    <aura:attribute name="initiallocidconst" type="String"  description= "this attribute is used to store the primary location of the logged in user for search functionality"/>
+    
+    
+    
+    <aura:attribute name="createddate" type="Date"
+                    description= "this attribute is used to capture User input Data"/>
+    <aura:attribute name="lessthangreaterthan" type="String" default="None"
+                    description= "this attribute is used to define wheatrher to pull all or partial records."/>
+    <aura:attribute name="days" type="integer" 
+                    description= "this attribute is used to define wheatrher to pull all or partial records."/>
+    <aura:attribute name = "breset" type="boolean" default="false"/>
+    <aura:attribute name="sstatus" type="String" default="Closed"/>
+    <aura:attribute name="sverbalConsentOrigin" type="String" default="client"/>
+    
+    <aura:attribute name="cols" type="Object[]" description="attribute to hold cols" />  
+    <aura:attribute name="rows" type="object[]" description="attribute to hold rows" />
+    
+    <aura:attribute name = "filterrecords" type ="Object" />
+    <aura:attribute name = "bshowfilter" type="boolean" default="false" description="attribute to show filter"/>
+    <aura:attribute name = "bshowlocation" type="boolean" default="true" description="attribute to show location"/>
+    
+    <aura:attribute name="contactId" type="String"  description= "this attribute is used to store the account id"/>
+    <aura:attribute name="selectedLookUpRecordContact" type="sObject" default="{}"/> 
+    <aura:handler name="oSelectedRecordEvent" event="c:RE_LookUpEvent" action="{!c.handleComponentEvent}" />
+    
+    <aura:registerEvent name="OurClientsStopInitEvent" type="c:RE_CheckVewAllClientDetails" />
+    
+    <aura:method name = "reloadtabledata" action = "{!c.init}"/>
+    <aura:attribute name="contactObj" type="Object"/>
+	<aura:attribute name="checkFutureDate" type="boolean" default="false"
+                    description= "this attribute is used to check selected date is future date or not."/>
+
+    <aura:attribute name="agencySearchOptions" type="List"/>
+    <aura:attribute name="value" type="String" default = "Individual ID"/>
+    <aura:attribute name="ssnCheck" type="Boolean" default="false" description= "this attribute is used to check the user selected SSN search."/>
+    <aura:attribute name="caseNumberCheck" type="Boolean" default="false" description= "this attribute is used to check the user selected Case Number search."/>
+    <aura:attribute name="individualIDCheck" type="Boolean" default="false" description= "this attribute is used to check the user selected Individual ID search."/>
+    <aura:attribute name="nameDOBCheck" type="Boolean" default="false" description= "this attribute is used to check the user selected Name/DOB search."/>
+    <aura:attribute name ="ssn" type="String" default=""/>
+    <aura:attribute name ="individualID" type="String" default=""/>
+    <aura:attribute name ="caseNumber" type="String" default=""/>
+    <aura:attribute name="isAgencyUser" type="Boolean" default="false" description= "this attribute is used to indicate if the logged in user is Agency User"/>
+    <!-- Venkat: Redirection Task-->
+    <aura:method name="getURLParams" action="{!c.getURLParams}" access="public">
+        <aura:attribute name="decryptedCaseNumber" type="String" default=""/> <!--default="100069220"-->
+        <aura:attribute name="decryptedIndividualId" type="String" default=""/> <!--default="901018042"-->
+    </aura:method>
+    <aura:attribute name="isLinkFromIEES" type="Boolean" default="false" description= "this attribute is set to true if IEES user accessing KYResources"/>
+    <aura:handler name="render" value="{!this}" action="{!c.backToClientSearch}"/>
+    <aura:attribute name="isCPUser" type="Boolean" default="false" description= "this attribute is used to indicate if the logged in user is CP User"/>
+    <div>       
+        <aura:if isTrue="{!and(v.sObject !='Resource__c', v.sObject !='ContentNote' )}">
+            <aura:if isTrue="{!v.citizenCheck == 'false'}">
+                <aura:if isTrue="{!v.bshowlocation}">
+                    <div class="locationsel-cont slds-m-top_large">
+                        <lightning:select name="location" variant="label-hidden" label="{!$Label.c.Sort_by_Location}" onchange="{!c.handleLocationChange}" aura:id="location" value="{!v.selectedLocation}">
+                            <aura:iteration items="{!v.lstLocations}" var="m">
+                                <option text="{!m.label}" value="{!m.value}" />
+                            </aura:iteration>
+                        </lightning:select>
+                    </div>
+                </aura:if>
+                
+                
+                
+                <!-- Contact lookup -->
+                
+                <!-- For location picklist value starts-->
+                <!-- <c:RE_GenericLocation options="{!v.filterrecords.lstLocationFilter}" resourceLocList="{!v.summaryrecords.resourceLocations}"/> -->
+                <aura:if isTrue="{!v.bshowfilter}">
+                    <div class="slds-grid slds-wrap itemsCenterAlign">
+                        <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-3">
+                          <!--  <div class="textFieldWidth fieldClientName"><c:RE_CustomLookup aura:id="conlookup" objectAPIName="Contact" selectedRecord="{!v.selectedLookUpRecordContact}" contactID="{!v.contactId}" label="Client Name" bfilter="true" /></div> -->
+                             <div class="textFieldWidth fieldClientName"><c:RE_CustomLookup aura:id="conlookup" objectAPIName="Contact" selectedRecord="{!v.selectedLookUpRecordContact}" contactID="{!v.contactId}" label="{!$Label.c.RE_Client}" bfilter="true" /></div>  
+                        </div>
+                        <!-- Start Organization Field For Referral Outbox-->
+                        <aura:if isTrue="{!v.referralOutboxTabCheck}">
+                        	<div class="slds-col slds-size_1-of-1 slds-large-size_1-of-3">
+                                <div class="textFieldWidth">
+                                    <lightning:input aura:id = "orgField" class="textFieldWidth daysTextField" type="text" label="{!$Label.c.organization}" value="{!v.orgName}" />
+                                </div>
+                            </div>
+                        </aura:if>
+                        <!-- End Organization Field For Referral Outbox-->
+
+                        <aura:if isTrue="{!!v.referralOutboxTabCheck}">
+                            <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-3">
+                                <div class="textFieldWidth"><c:RE_GenericLocation aura:id="genericloc" options="{!v.filterrecords.lstLocationFilter}" resourceLocList="{!v.initialloc}" spicklistLabel="{!$Label.c.RE_Location}" selectedRecords="{!v.selectedlocations}" unselectedRecords="{!v.unselectedlocations}"/></div>
+                            </div>
+                        </aura:if>
+
+                        <!-- Start Resource Field For Referral Outbox-->
+                        <aura:if isTrue="{!v.referralOutboxTabCheck}">
+                        	<div class="slds-col slds-size_1-of-1 slds-large-size_1-of-3">
+                                <div class="textFieldWidth">
+                                    <lightning:input aura:id = "resource_fld" class="textFieldWidth daysTextField" type="text" label="{!$Label.c.RE_Resource}" name="days" value="{!v.resourceName}" />
+                                </div>
+                            </div>
+                        </aura:if> 
+                        <!-- End Resource Field For Referral Outbox-->
+                        <aura:if isTrue="{!!v.referralOutboxTabCheck}">
+                            <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-3">
+                                <div class="textFieldWidth"><c:RE_GenericLocation aura:id="genericloc" options="{!v.filterrecords.lstResourceFilter}" spicklistLabel="{!$Label.c.RE_Resource}" selectedRecords="{!v.selectedresources}" unselectedRecords="{!v.unselectedresources}"  /></div>
+                            </div>
+                        </aura:if>
+                          
+                        <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-3">
+                            <div class="textFieldWidth"><c:RE_GenericLocation aura:id="genericloc" options="{!v.statuslst}" resourceLocList="{!v.initialstatuslst}" spicklistLabel="{!$Label.c.RE_Status}" selectedRecords="{!v.selectedstatus}" unselectedRecords="{!v.unselectedstatus}"/></div>
+                        </div>
+                        <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-3 fieldCreated">
+                            <div class="textFieldWidth">
+                                <div class="slds-form-element">
+                                    <ui:inputDate aura:id="dateCreated" label="{!$Label.c.RE_Created}" value="{!v.createddate}" displayDatePicker="true" format="MM/dd/yyyy"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-3 slds-grid slds-wrap fieldDaysOpen">
+                            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2">
+                                <lightning:select name="operator" class="textFieldWidth" title="{!$Label.c.RE_DaysOpen}" label="{!$Label.c.RE_DaysOpen}" onchange="{!c.handleoperatorchange}" aura:id="operator" value="{!v.lessthangreaterthan}">
+                                <option text="{!$Label.c.none}" value="None" />
+                                <option text="{!$Label.c.RE_Lessthan}" value="Less than" />
+                                <option text="{!$Label.c.RE_Greaterthan}" value="Greater than" />   
+                                </lightning:select>
+                            </div>
+                            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2">
+                                <lightning:input aura:id = "required_fld" class="textFieldWidth daysTextField" type="number" alt = "{!$Label.c.RE_DaysOpen}" name="days" maxlength = "3"  pattern = "[0-9]*"
+                                                 disabled="{! (v.lessthangreaterthan == 'None' ? true:false)}" messageWhenPatternMismatch = "Enter valid number" value="{!v.days}" />
+                            </div>
+                        </div>
+                        <!--   <lightning:input type="text" label="Days" aura:id="days" name="days" pattern="[0-9]*" valus="{!v.days}"/> -->
+                        
+                    </div>
+                    <div class="slds-grid slds-wrap slds-m-bottom_small itemsCenterAlign">
+                        
+                        
+                        <div class="slds-col slds-size_1-of-1">
+                            <div class="searchAction">
+                            <div class="slds-p-right_medium slds-m-top_medium search-btn">
+                                <lightning:button onclick="{!c.referralSearchAction}" class="search-button slds-m-right_small" variant="brand"> {!$Label.c.Search} </lightning:button>
+                                <lightning:button onclick="{!c.resetSearchAction}" class="search-button" variant="brand"> {!$Label.c.RE_Reset} </lightning:button>
+                            </div> 
+                            </div>
+                        </div> 
+                    </div>
+                    
+                </aura:if>
+                <!-- For location picklist value ends -->
+                
+                
+                
+                
+                <!-- Contact lookup -->
+                
+                
+                <aura:if isTrue="{!and(v.sObject =='Contact', v.isAgencyUser ==false)}">
+                    <lightning:button label="{!$Label.c.inviteteammember}" title="{!$Label.c.inviteteammember}" variant="brand" class="slds-m-right_large slds-m-top_medium inviteNewTeam" onclick="{! c.openEditModal }"/>
+                </aura:if>
+            </aura:if> 
+        </aura:if> 
+        
+        <!-- RE_Release 1.1 - Agency User Capture - Venkat -->
+        <aura:if isTrue="{!!v.isLinkFromIEES}">
+            <aura:if isTrue="{!and(and(not(v.isFavoriteClient), v.allClientsCheck), and(v.citizenCheck, v.isAgencyUser))}">
+                <div class="slds-wrap slds-grid clients-input-section">
+                    <div class="slds-col slds-p-right_medium inlineRadio">
+                        <lightning:radioGroup class="slds-radio" name="Checkbox Group"
+                                                label="{!$Label.c.RE_SearchOption}"
+                                                options="{! v.agencySearchOptions }"
+                                                value="{! v.value }"
+                                                onchange="{! c.handleChange }"
+                                                type="slds-radio"/>
+                    </div>
+                </div>
+                <div class="slds-wrap slds-grid clients-input-section">
+                    <aura:if isTrue="{!v.individualIDCheck}">
+                        <div class="slds-wrap slds-grid clients-input-section">
+                            <div class="slds-col slds-p-right_medium">
+                                <lightning:input aura:id = "required_fld" type="search" label="{!$Label.c.RE_IndividualID}" alt="{!$Label.c.RE_IndividualID}" value="{!v.individualID}" maxlength="15" autocomplete="off" required="{!v.allClientsCheck}"/>
+                            </div>
+                        </div>
+                    </aura:if>
+                    <aura:if isTrue="{!v.caseNumberCheck}">
+                        <div class="slds-wrap slds-grid clients-input-section">
+                            <div class="slds-col slds-p-right_medium">
+                                <lightning:input aura:id = "required_fld" type="search" label="{!$Label.c.RE_CaseNumber}" alt="{!$Label.c.RE_CaseNumber}" value="{!v.caseNumber}" maxlength="15" autocomplete="off" required="{!v.allClientsCheck}"/>
+                            </div>
+                        </div>
+                    </aura:if>
+                    <aura:if isTrue="{!v.ssnCheck}">
+                        <div class="slds-wrap slds-grid clients-input-section">
+                            <div class="slds-col slds-p-right_medium">
+                                <lightning:input aura:id = "required_fld" type="search" label="{!$Label.c.SSN}" alt="{!$Label.c.SSN}" value="{!v.ssn}" maxlength="9" autocomplete="off" required="{!v.allClientsCheck}"/>
+                            </div>
+                        </div>
+                    </aura:if>
+                    <aura:if isTrue="{!or(or(v.individualIDCheck, v.caseNumberCheck), v.ssnCheck)}">
+                        <div class="slds-col slds-p-right_medium search-btn">
+                            <lightning:button onclick="{!c.agencySearchAction}" class="search-button slds-m-bottom_small slds-p-right_medium" variant="brand"> {!$Label.c.Search} </lightning:button>
+                            <lightning:button onclick="{!c.resetAction}" class="search-button slds-m-bottom_small" variant="brand">{!$Label.c.RE_Reset}</lightning:button>
+                        </div>
+                    </aura:if>
+                </div>
+            </aura:if>
+            <!-- <aura:if isTrue="{!or(and(not(v.isFavoriteClient), v.citizenCheck, v.allClientsCheck, not(v.isAgencyUser)),
+                and(v.isAgencyUser, v.nameDOBCheck))}"> -->
+            <aura:if isTrue="{!not(v.isFavoriteClient)}">
+                <aura:if isTrue="{!v.citizenCheck == 'true'}">
+                    <aura:if isTrue="{!v.allClientsCheck==true}">
+                        <aura:if isTrue="{!or(v.isAgencyUser == false, and(v.isAgencyUser == true, v.nameDOBCheck))}">
+                            <div class="slds-wrap slds-grid clients-input-section">
+                                <div class="slds-col slds-p-right_medium">
+                                    <lightning:input aura:id = "required_fld" type="search" label="{!$Label.c.firstname}" alt="{!$Label.c.firstname}"  value="{!v.FirstName}" autocomplete="off" required="{!v.allClientsCheck}"/>
+                                </div>
+                                <div class="slds-col slds-p-right_medium">
+                                    <lightning:input aura:id = "required_fld" label="{!$Label.c.lastname}" alt="{!$Label.c.lastname}"  value="{!v.LastName}" autocomplete="off" required="{!v.allClientsCheck}"/>
+                                </div>
+                                <div class="slds-col slds-p-right_medium date-of-birth">
+                                    <ui:inputDate aura:id = "DOB_fld" label="DOB" value="{!v.dob}" displayDatePicker="true" format="MM/dd/yyyy" required="{!v.allClientsCheck}" change="{!c.checkFutureDate}"/>
+                                </div>
+                                <div class="slds-col slds-p-right_medium search-btn">
+                                    <lightning:button onclick="{!c.searchAction}" class="search-button slds-m-bottom_small slds-p-right_medium" variant="brand"> {!$Label.c.Search} </lightning:button>
+                                    <lightning:button onclick="{!c.resetAction}" class="search-button slds-m-bottom_small" variant="brand">{!$Label.c.RE_Reset}</lightning:button>
+                                </div>
+                            </div>
+                        </aura:if>
+                    </aura:if>
+                </aura:if>
+            </aura:if>       
+            <!--  END  -->
+            
+            <div class="locationtable-cont" aura:id="data-table">
+                <lightning:datatable data="{! v.mydata }"
+                                     columns="{! v.mycolumns }"
+                                     keyField="Id"
+                                     onrowselection="{! c.getSelectedName }"
+                                     hideCheckboxColumn="{!v.hideCheckbox}"
+                                     sortedBy="{!v.sortBy}"
+                                     onrowaction="{!c.handleRowClick}"
+                                     sortedDirection="{!v.sortDirection}"
+                                     onsort="{!c.handleSort}"
+                                     resizeColumnDisabled="true"/>
+                <aura:if isTrue="{!v.mydata}">
+                    <aura:if isTrue="{!!v.mydata.length}">
+                        <div class="body1 slds-text-align_center slds-p-vertical_medium">
+                            {!$Label.c.no_records}
+                        </div>
+                    </aura:if>
+                </aura:if>
+               <div class="slds-grid slds-grid_align-center slds-col slds-m-top_medium">
+                <aura:if isTrue="{!!v.isLastPage}">
+                  <lightning:button aura:id="Loadmorebutton" label="{!$Label.c.Load_More}" title="{!$Label.c.Load_More}" onclick="{! c.handleNext }" disabled="{!v.isLastPage}"/>
+                </aura:if>
+               </div>
+                <aura:if isTrue="{! v.isLoading }">
+                    <lightning:spinner alternativeText="Loading"/>
+                </aura:if>
+            </div>
+            <aura:if isTrue="{!v.showModal}">            
+                <c:RE_OurTeamEditModal/>
+            </aura:if>
+            <aura:if isTrue="{!v.showModalConsent}">            
+               <c:RE_RequestConsentModal sverbalConsentOrigin="{!v.sverbalConsentOrigin}"/>
+            </aura:if>
+            <aura:set attribute="else">
+                <div class="spinnercls">
+                   <c:RE_Spinner />
+                </div> 
+            </aura:set>
+        </aura:if>
+    </div>
+    <div aura:id="cmpBody" class="locationtable-body">
+        {!v.body}
+    </div> 
+</aura:component>

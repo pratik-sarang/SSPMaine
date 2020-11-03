@@ -1,0 +1,142 @@
+<!--
+ * Component Name    : RE_Location
+ * Owner             : DELOITTE
+ * Created Date      : 10/25/2019
+ * Description       : Verbal consent page
+ * Author 			 : Prashant Singh
+ *
+ *                            M O D I F I C A T I O N   L O G                                          
+ *
+ *  Date        Developer       Description                                                         
+ *  **************************************************************************
+ *  10/25/2019  Prashant Singh      Initial Code development fecthing initial data
+ *  10/28/2019  Lagan Kankane		Added logic for Submit button validation/Input elements validation
+-->
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" controller="RE_RequestConsentModalCtrl">
+    <aura:attribute name="options" type="List" default="[
+                                                        {'label': 'Your information will be accessible to any of the agencies that participate in the network', 'value': 'option1','Description' : 'hello'},
+                                                        ]"/>
+    <aura:attribute name="additionalOptions" type="List" default="[
+                                                        {'label': 'Your information will be accessible to any of the agencies that participate in the network', 'value': 'option1','Description' : 'hello'},
+                                                        ]"/>
+    <aura:attribute name="picklistValues" type="String" default = "PreferredCommunicationMethod__c"/>
+    <aura:attribute name="communmap" type="Map" 
+                    description= "this attribute is used to store the communicationpreference picklist values"/>
+    <aura:attribute name="objwrapper" type="Object" 
+                    description= "this attribute is used for the object wrapper"/>
+    
+    <aura:attribute name="conId" type="String" default= "" 
+                    description= "this attribute is used to store the recordId"/> 
+    <aura:attribute name="consentId" type="String" default= "" 
+                    description= "this attribute is used to store the consent Id"/> 
+    <aura:attribute name="value" type="List"/>
+    <aura:attribute name="valuesOfAdditionalOptions" type="List"/>
+    <aura:attribute name="bisAllChecked" type="Boolean" default="false"/>
+    <aura:attribute name="isOptionsChecked" type="Boolean" default="false"/>
+    <aura:attribute name="isAdditionalOptionsChecked" type="Boolean" default="false"/>
+    <aura:attribute name="bDisableSubmitButton" type="Boolean" default="true"/>
+    <aura:attribute name="LoggedInUserName" type="String" description= "Name of the Logged In User"/>
+    <aura:attribute name="origin" type="String" description= "Origin of the screen"/>
+    <aura:attribute name="consentToText" type="Boolean" default="false"/>
+
+    
+    <!-- Changes done for server call from a common place-->
+    <aura:attribute name="isSpinnerActive" type="Boolean"/>
+    <c:RE_UtilityServerCallerCmp aura:id="bSuper" isSpinnerActive="{!v.isSpinnerActive}"/> 
+    <!-- -->
+    
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doinIt}" />
+    
+    <!-- displays a toast notification -->
+    <lightning:notificationsLibrary aura:id="notifLib" />
+    
+    <div>
+        <div class="headingContainer"> 
+            <div class="backButton slds-m-bottom_x-small">
+                <lightning:icon iconName="utility:back" alternativeText="back" />
+                <aura:if isTrue="{!v.origin == 'clientoneview'}">
+                    <a href="javascript:void(0)" onclick="{!c.backToClients}">{!$Label.c.Back_to_OneView}</a>
+                    <aura:set attribute="else">
+                     <a href="javascript:void(0)" onclick="{!c.backToClients}">{!$Label.c.ClientDetailsBack}</a>
+                    </aura:set>
+                </aura:if> 
+            </div>
+            <div class="headingButton slds-grid slds-wrap">
+                <h1 class="headingL1">{!$Label.c.Verbal_Consent}</h1>
+                <div>
+                    <lightning:button label="{!$Label.c.cancel}" class="slds-p-horizontal_x-large slds-p-vertical_xxx-small" onclick="{!c.backToClients}" />
+                    <lightning:button label="{!$Label.c.submit}" disabled="{!v.bDisableSubmitButton}" onclick="{!c.handleSubmit}" variant="brand" class="slds-p-horizontal_x-large slds-p-vertical_xxx-small"/>
+                </div>
+            </div>
+        </div>
+        <!--<p class="body1 slds-p-vertical_medium">{!format($Label.c.RE_VerbalConsentH1,v.LoggedInUserName)}</p> --><!-- Anuj -->
+        <div class="slds-p-horizontal_large checkbox-section">
+            <aura:if isTrue="{!v.LoggedInUserName}"><!--JAWS Fix-->
+                <lightning:checkboxGroup name="Checkbox Group"
+                                        label="{!format($Label.c.RE_VerbalConsentH1,v.LoggedInUserName)}"
+                                        options="{! v.options }"
+                                        value="{! v.value }"
+                                        checked="false"
+                                        onchange="{! c.handleChange }"/>
+                <lightning:checkboxGroup name = "Additional Checkbox Group"
+                                        label = "{!$Label.c.AdditionalOptionText}"
+                                        options = "{!v.additionalOptions}"
+                                        value = "{!v.valuesOfAdditionalOptions}"
+                                        checked = "false"
+                                        onchange = "{!c.handleChange}"/>
+            </aura:if>
+        </div>
+        <p class="body1 slds-p-top_large">{!$Label.c.RE_VerbalConsentSubH2}</p>
+        
+        <!--<p class="body1 slds-m-vertical_small">{!format($Label.c.RE_VerbalConsentH2, v.LoggedInUserName)}</p>-->
+        
+        <p class="body1 slds-p-vertical_large">{!$Label.c.RE_VerbalConsentH3}</p>
+        <!-- Release 1.1 - Kojashree Defect 357793 -->
+            <div class="slds-m-bottom_x-small">
+                <lightning:input type="checkbox" name="consentToText" aura:id="textConsent"
+                                 class="slds-p-vertical_x-small"
+                                 label="{!$Label.c.ConsentToTextDisclaimer}"
+                                 checked="{!v.consentToText}" onchange="{!c.handleConsentToText}"/>
+                
+            </div>
+                   
+        <div class="slds-grid slds-wrap">
+            <div class="slds-large-size_4-of-12 slds-x-small-size_12-of-12 slds-p-right_x-small client-email">
+                        <lightning:input aura:id="requiredField" 
+                                         pattern = "^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
+                                         name="input1" 
+                                         type="email"
+                                         label="{!$Label.c.Client_Email}" 
+                                         required="true"
+                                         onchange="{!c.checkValidForm }"
+                                         messageWhenPatternMismatch ="Please enter a valid email address"
+                                         value="{!v.objwrapper.Email}" />
+            </div>
+            <div class="slds-large-size_4-of-12 slds-x-small-size_12-of-12">
+                <lightning:input aura:id="requiredField"
+                                 type="text" 
+                                 label="{!$Label.c.Client_Mobile_Phone}" 
+                                 alt = "{!$Label.c.Client_Mobile_Phone}"
+                                 name="phone2" 
+                                 required = "true"
+                                 maxlength = "14"
+                                 pattern = "^(\([0-9]{3}\) |[0-9]{3}-)[0-9]{3}-[0-9]{4}$"
+                                 messageWhenPatternMismatch = "{!$Label.c.phoneformaterror}"
+                                 value="{!v.objwrapper.Phone}"
+                                 onchange= "{!c.formatPhoneNumber}"
+                                 onblur= "{!c.formatPhoneNumber}"
+                                 onkeyup="{!c.formatPhoneNumber}"
+                                 />
+            </div>
+            <div class="slds-large-size_4-of-12 slds-x-small-size_12-of-12 slds-p-left_x-small client-communication">
+                        <lightning:select aura:id="requiredField" label="{!$Label.c.Client_Communication_Preference}" required="true" onchange="{!c.checkValidForm}" value="{!v.objwrapper.CommunicationPref}">
+                            <option value="">{!$Label.c.none}</option> <!-- Lightning Valuate - Anuj -->
+                            <aura:iteration items="{!v.communmap}" var="item">
+                                <option text="{!item.label}" value="{!item.value}" selected="{!item.selected}" />
+                            </aura:iteration>
+                        </lightning:select>
+            </div>
+        </div> 
+    </div>
+</aura:component>

@@ -1,0 +1,19 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes,flexipage:availableForAllPageTypes" controller = "RE_LineChartCtrl">
+    <c:RE_UtilityServerCallerCmp aura:id="bSuper" isSpinnerActive="{!v.isSpinnerActive}"/>
+    <aura:attribute name="referralsSent" type="Integer" description= "This attribute is used to store the Referrals Sent"/>
+    <aura:attribute name="referralsClosed" type="Integer" description= "This attribute is used to store the Referrals Closed"/>
+    <aura:attribute name="showGraph" type="Boolean" />
+    
+ <aura:handler name="init" value="{!this}" action="{! c.onLoadController }"/>
+    
+    <aura:if isTrue="{!v.showGraph}">
+        <div class="slds-grid slds-wrap slds-p-horizontal_medium slds-m-bottom_medium">
+            <div class="slds-card slds-large-size_6-of-12 slds-medium-size_6-of-12 slds-small-size_12-of-12 slds-x-small-size_12-of-12 slds-p-around_small">
+                <c:RE_LineChart id="referralSent" legend="Referrals Sent" graphData="{!v.referralsSent}" graphLabel="Referrals Sent"/>
+            </div>
+            <div class="slds-card slds-large-size_6-of-12 slds-medium-size_6-of-12 slds-small-size_12-of-12 slds-x-small-size_12-of-12 slds-m-top_none slds-p-around_small">
+                <c:RE_LineChart id="referralClosed" legend="Referrals Closed" graphData="{!v.referralsClosed}" graphLabel="Referrals Closed"/>
+            </div>
+        </div>
+    </aura:if>
+</aura:component>

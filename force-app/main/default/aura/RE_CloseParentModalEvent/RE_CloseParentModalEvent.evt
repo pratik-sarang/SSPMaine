@@ -1,0 +1,5 @@
+<aura:event type="COMPONENT">
+    <aura:attribute name="closed" type="Boolean"/>
+    <aura:attribute name="callDoInit" type="Boolean"/>
+    <aura:attribute name="ClientId" type="String"/>
+</aura:event>

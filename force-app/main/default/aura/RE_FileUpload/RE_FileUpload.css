@@ -1,0 +1,25 @@
+.THIS .file-upload-spinner .slds-spinner_container{ 
+    top: 18%;
+    bottom: 18%;
+}
+.THIS .slds-file-selector__dropzone .slds-file-selector__button{
+    font-size: 0;
+}
+.THIS .slds-file-selector__dropzone .slds-file-selector__text{
+    font-size: 0;
+}
+.THIS .slds-file-selector__dropzone .slds-file-selector__button:after{
+    content: 'Upload File';
+    font-size:t(RESize13);
+}
+.THIS .slds-file-selector__dropzone .slds-file-selector__text:after{
+    content: 'Or drop file';
+    font-size: t(RESize13);
+}
+.THIS .slds-assistive-text{
+    margin: -0.063em!important;
+    border: 0.000em!important;
+    padding: 0.000em!important;
+    width: 0.063em!important;
+    height: 0.063em!important;
+}

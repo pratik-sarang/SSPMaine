@@ -1,0 +1,706 @@
+<!--
+ * Component Name    : RE_ClientDetails
+ * Owner             : Payal Dubela
+ * Created Date      : 04/06/2019
+ * Description       : Client Details
+ *
+ *                            M O D I F I C A T I O N   L O G                                          
+ *
+ *  Date        Developer       Description                                                         
+ *  **************************************************************************
+ 
+ *  04/06/2019  Payal	        Initial Development
+*   04/06/2019  Tarun	        UI Development
+-->
+<aura:component controller="RE_ClientDetailsCtrl" implements="forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name = "clientDetails" type ="Object"/>
+    <aura:attribute name = "isIEESClient" type="Boolean" default="false"/>
+    <aura:attribute name = "lstEnrollProgWrapper" type ="object"/>
+    <aura:attribute name = "lstHHCompWrapperLimited" type ="object"/>
+    <aura:attribute name = "lstEnrollProgWrapperLimited" type ="object"/>
+    <aura:attribute name = "lstHHCompWrapper" type ="object"/>
+    <aura:attribute name = "lstFullSDOH" type ="object"/>
+    <aura:attribute name = "clientId" type ="String"/>  
+    <aura:attribute name="hideCheckbox" type="Boolean" default ="true"
+                    description= "this attribute is used to define wheather to show or hide checkbix on data table."/>
+    <aura:attribute name="sortBy" type="String"
+                    description= "this attribute is used to apply sorting."/>
+    <aura:attribute name="sortDirection" type="String" 
+                    description= "this attribute is used to define sorting direction."/>
+    <aura:attribute name="mydatanotes" type="Object"
+                    description= "this attribute is used to store apex response data"/>
+    <aura:attribute name="fulldatanotes" type="Object"
+                    description= "this attribute is used to store apex response data"/>
+    <aura:attribute name="sObject" type="Object" default="Referral__c"/>
+    <aura:attribute name = "showNotesModal" type ="Boolean" default="false"/> 
+        <!-- Venkat: 03/04/2020: Spanish Translation -->
+        <aura:attribute name="mycolumnsHousehold" type="List"/>
+        <aura:attribute name="mycolumnsEnrolledProgram" type="List"/>
+        <aura:attribute name="mycolumnsNotes" type="List"/>
+        <aura:attribute name="fullcolumnsNotes" type="List"/>
+        <aura:attribute name="mycolumnsAssessment" type="List"/>
+        <aura:attribute name="riskFactorsColumns" type="List"/>
+        <aura:attribute name="bShowMyClients" type="Boolean" default="true" />  
+        <!--
+    <aura:attribute name="mycolumnsHousehold" type="List" default = "[
+                                                                     { label: 'Client', fieldName: 'ClientName', type: 'text',sortable : true},
+                                                                     { label: 'Age', fieldName: 'Age', type: 'text',sortable : true},
+                                                                     { label: 'Relationship', fieldName: 'Relationship', type: 'text',sortable : true}
+                                                                     ]"/>
+    <aura:attribute name="mycolumnsEnrolledProgram" type="List" default = "[
+                                                                           { label: 'Program', fieldName: 'ProgramFullName', type: 'text',sortable : true},
+                                                                           { label: 'Start', fieldName: 'StartDate', type: 'date-local',sortable : true,typeAttributes: {day: 'numeric', month: 'numeric',year: 'numeric'}},
+                                                                           { label: 'Renewal', fieldName: 'RenewalDate', type: 'date-local',sortable : true,typeAttributes: {day: 'numeric', month: 'numeric',year: 'numeric'}},
+                                                                           ]"/>
+    <aura:attribute name="mycolumnsNotes" type="List" default = "[
+                                                                 {label: 'Subject', fieldName: 'Title', type: 'text',sortable : true},
+                                                                 { label: 'Created Date', fieldName: 'CreatedDate', type: 'date-local',sortable : true,typeAttributes: {day: 'numeric', month: 'numeric',year: 'numeric'}},
+                                                                 { label: 'Created By', fieldName: 'CreatedBy', type: 'text',sortable : true}, 
+                                                                 { label: '', type:'action', typeAttributes:{rowActions: [
+                                                                 {label:'View' , name:'view'}
+                                                                 ]}}]"/>
+    <aura:attribute name="fullcolumnsNotes" type="List" default = "[
+                                                                   {label: 'Subject', fieldName: 'Title', type: 'text',sortable : true},
+                                                                   { label: 'Created Date', fieldName: 'CreatedDate', type: 'date-local',sortable : true,typeAttributes: {day: 'numeric', month: 'numeric',year: 'numeric'}},
+                                                                   { label: 'Created By', fieldName: 'CreatedBy', type: 'text',sortable : true}, 
+                                                                   { label: 'Last Modified Date', fieldName: 'ModifiedDate', type: 'date-local',sortable : true,typeAttributes: {day: 'numeric', month: 'numeric',year: 'numeric'}},
+                                                                   { label: 'Last Modified By', fieldName: 'ModifiedBy', type: 'text',sortable : true}, 
+                                                                   { label: '', type:'action', typeAttributes:{rowActions: [
+                                                                   {label:'View' , name:'view'}
+                                                                   ]}}]"/>
+    <aura:attribute name="mycolumnsAssessment" type="List" default = "[{ label: 'Date', fieldName: 'assessmentSubmitDate', type: 'date-local',sortable : true,typeAttributes: {day: 'numeric', month: 'numeric',year: 'numeric'}},
+                                                                      {label: 'Name', fieldName: 'assessmentTitle', type: 'text',sortable : true},
+                                                                      {label: 'Taken By', fieldName: 'assessmentTakenBy', type: 'text',sortable : true},
+                                                                      { label: '', type:'action', typeAttributes:{rowActions: [
+                                                                      {label:'View' , name:'view'}
+                                                                      ]}}]"/> 
+    <aura:attribute name="riskFactorsColumns" type="List" default = "[{label: 'Risk Factors', fieldName: 'Category__c', type: 'text',sortable : true,cellAttributes:{iconName: { fieldName: 'riskIconName' }, iconPosition: 'left',iconAlternativeText:{fieldName: 'riskIconLabel'} }},
+                                                                      { label: 'Assessed On', fieldName: 'AssessmentDate__c', type: 'date-local',sortable : true,typeAttributes: {day: 'numeric', month: 'numeric',year: 'numeric'}}]"/>
+    -->
+    <aura:attribute name = "lstAssessmentResponse" type ="object"/>
+    <aura:attribute name = "lstAssessmentResponseLimited" type ="object"/>
+    <aura:attribute name = "selectedRadioAssessmentObj" type ="Object"/>
+    
+    <aura:attribute name="numberOfReords" type="Integer" default ="10"/>
+    <aura:attribute name="noteSubject" type="String" />
+    <aura:attribute name="noteDescription" type="String"/>
+    <aura:attribute name="isTableFilterVisi" type="Boolean" default ="true"/> 
+    <aura:attribute name="bisAssesmentOpen" type="Boolean" default ="false"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:attribute name="Address" type="Map" default="{'AddressLine1':'','AddressLine2':'','AddressLine3':''}"/>
+    <aura:attribute name = "showClientDetail" type ="Boolean" default="false"/> 
+    <aura:attribute name = "sTableHeading" type ="String"/>
+    <aura:attribute name = "clientUniqueId" type ="String"/>  
+    <aura:attribute name = "hasConsentToView" type ="Boolean" default="false"/>
+    <aura:attribute name = "hasActiveConsent" type ="Boolean" default="false"/>
+    <aura:attribute name = "isAnAdult" type ="Boolean" default="false"/>
+    <aura:attribute name = "bShowHHCompo" type ="Boolean" default="false"/>
+    <aura:attribute name = "bShowEnrollProgs" type ="Boolean" default="false"/>
+    <aura:attribute name = "isLoading" type ="Boolean" default="false"/>
+    <aura:attribute name = "bShowNotes" type ="Boolean" default="false"/>
+    <aura:attribute name = "bshowback" type ="Boolean" default="true"/>
+    <aura:attribute name = "showRequestConsent" type ="Boolean" default="false"/>
+    <aura:attribute name="showEmailResidentModal" type="Boolean" default="false"/>
+    <aura:attribute name="bOptOutComm" type="Boolean"/>
+    <aura:attribute name="sendEmailWrapper" type="Map" 
+                    description= "this attribute is used for the sending email"
+                    default="{'clientEmail' : '', 'clientName' : '', 'clientId' : '' ,'message' : ''}"/>
+    <aura:method name="myMethod" action="{!c.myMethodCont}" access="PUBLIC">
+        <aura:attribute name="clientIDParent" type="String"/> 
+    </aura:method>
+    <aura:attribute name = "bShowClientTable" type ="Boolean" default="false"/>
+    <aura:handler name="refreshevt" event="c:RE_RefreshNotes" action="{!c.handlerefresh}"/>
+    <aura:attribute name = "showreferral" type ="Boolean" default="false"/>
+    <aura:attribute name = "riskScoreSetting" type ="List"/>
+    
+    <!--[07/02/2019:Anuj] - Changes done for server call from a common place-->
+    <aura:attribute name="isSpinnerActive" type="Boolean" description= "this attribute is used to store the state of the spinner"/>
+    
+    <!-- Added by Soumya for SDOH list-->
+    <aura:attribute name="lstSDOH" type="List" default="[]"/>
+    <aura:attribute name = "bShowRiskFactors" type ="Boolean" default="false"/>
+    <aura:attribute name="sverbalConsentOrigin" type="String" default="clientoneview"/>
+    <aura:attribute name = "clientWrapper" type="sObject" default="{}"/>
+    <!-- Added for asessment records -->
+    <aura:attribute name="lstAssessment" type="List" default="[]"/>
+    <aura:attribute name = "bShowAssesssmentResponse" type ="Boolean" default="false"/>
+    <c:RE_UtilityServerCallerCmp aura:id="bSuper" isSpinnerActive="{!v.isSpinnerActive}"/>
+    <aura:attribute name="lstSDOHCatPicklistValues" type="List" default="[]"/>
+    <!-- -->
+    <aura:handler name="CloseModalevent" event="c:RE_CloseParentModalEvent" action="{!c.handleModalclose}"/>
+    <!-- displays a toast notification -->
+    <lightning:notificationsLibrary aura:id="notifLib" />
+    
+    
+    <aura:if isTrue="{!v.showClientDetail}">
+        <div class="slds-grid slds-wrap">
+            <div class="client-detail slds-size_12-of-12 slds-grid slds-wrap">
+                <div class="contact-income slds-large-size_9-of-12 slds-medium-size_8-of-12 slds-small-size_12-of-12 slds-x-small-size_12-of-12">
+                    <div class="risk-factor-section slds-m-horizontal_xx-small slds-p-around_small">
+                    <div>
+                        <div class="slds-grid slds-wrap">
+                            <div class="slds-col slds-size_12-of-12 slds-max-medium-size_1-of-1">
+                                <div class="headings-container slds-p-right_x-large">
+                                    <div class="headingContainer">
+                                        <aura:if isTrue="{!v.bshowback}">
+                                            <div class="backButton slds-m-bottom_x-small">
+                                                <lightning:icon class="backIcon" iconName="utility:back" alternativeText="back" size="small"/>
+                                                <a href="javascript:void(0)" onclick="{!c.backToDataTable}">{!$Label.c.ClientDetailsBack}</a>
+                                            </div>   
+                                        </aura:if>
+                                        <!-- added Attribute for GA [CHFS Developer Mohan-03/02/20] -->
+                                        <div class="slds-grid slds-wrap dd-ga-client-Id-container" data-clientid="{!v.clientDetails.Id}"> 
+                                            <h1 class="headingL1">{! v.isIEESClient ? (v.clientDetails.FirstName + ' ' + v.clientDetails.LastName) : v.clientDetails.clientName}</h1>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--  <div class="slds-size_9-of-12 slds-max-medium-size_1-of-1">
+                    <aura:if isTrue="{!v.hasConsentToView}"> 
+                     <div class="slds-grid slds-wrap slds-size_9-of-12 slds-max-medium-size_1-of-1">
+                        <div class="slds-col slds-size_1-of-4 slds-max-medium-size_1-of-2">
+                            <div class="caption2Grey slds-m-vertical_xx-small">
+                                {!$Label.c.ClientId}
+                            </div>
+                            <div class="caption2 slds-m-vertical_xx-small slds-truncate ">
+                                {!v.clientUniqueId}
+                            </div>
+                        </div>
+                        <div class="slds-col slds-size_1-of-4 slds-max-medium-size_1-of-2">
+                            <div class="caption2Grey slds-m-vertical_xx-small">
+                                {!$Label.c.Gender}
+                            </div>
+                            <div class="caption2 slds-m-vertical_xx-small">
+                                {!v.clientDetails.Gender}
+                            </div>
+                        </div>
+                        <div class="slds-col slds-size_1-of-4 slds-max-medium-size_1-of-2">
+                            <div class="caption2Grey slds-m-vertical_xx-small">
+                                {!$Label.c.DOB}
+                            </div>
+                            <div class="caption2 slds-m-vertical_xx-small">
+                                {!v.clientDetails.DOB}
+                            </div>
+                         </div>
+                         <div class="slds-col slds-size_1-of-4 slds-max-medium-size_1-of-2">
+                              <div class="caption2Grey slds-m-vertical_xx-small">
+                                    {!$Label.c.SSN}
+                                </div>
+                                <div class="caption2 slds-m-vertical_xx-small">
+                                    {!'*** ** '+v.clientDetails.SSN}
+                                </div>
+                            </div>
+                        </div>
+                    </aura:if>
+                  </div> -->
+                                
+                                <aura:if isTrue="{!!v.hasConsentToView}">
+                                    <div class="note-referral slds-size_12-of-12 slds-max-medium-size_1-of-1">
+                                        <aura:if isTrue="{!v.hasConsentToView}">
+                                            <lightning:button variant="neutral" onclick="{!c.addNote}" class="slds-m-bottom_small slds-m-right_xx-small slds-m-left_none">{!$Label.c.addnote}</lightning:button>
+                                            <aura:set attribute="else">
+                                                <aura:if isTrue="{!v.isAnAdult}">
+                                                <lightning:button variant="neutral" onclick="{!c.requestConsent}" class="slds-m-bottom_small slds-m-right_xx-small slds-m-left_none">{!$Label.c.Request_Consent}</lightning:button>
+                                                </aura:if>
+                                                </aura:set>
+                                        </aura:if>
+                                        <aura:if isTrue="{!v.hasConsentToView}">
+                                            <lightning:button variant="neutral" onclick="{!c.createReferral}" class="slds-m-bottom_small slds-m-right_xx-small slds-m-left_none">{!$Label.c.createreferral}</lightning:button>
+                                        </aura:if>
+                                        
+                                    </div>
+                                </aura:if>
+                            </div> 
+                            <!--
+                <div class="slds-col slds-size_3-of-12 slds-text-align_center slds-max-medium-size_1-of-1"> 
+                    <lightning:avatar variant="circle" size="large" src="{!v.clientDetails.userDetails.MediumPhotoUrl}" fallbackIconName="standard:user" alternativeText="Amy Weaver" class="slds-m-right_small clientImage slds-m-top_large"/>
+                </div>
+    -->
+                        </div>
+                    </div>
+                    <aura:if isTrue="{!v.hasConsentToView}">
+                        <div class="note-referral slds-size_12-of-12 slds-max-medium-size_1-of-1">
+                            <aura:if isTrue="{!v.bOptOutComm}">
+                                <lightning:button variant="neutral" onclick="{!c.openSendEmailModal}" class="slds-m-bottom_small slds-m-right_xx-small slds-m-left_none">{!$Label.c.SendEmail}</lightning:button>                            
+                            </aura:if>
+                            <aura:if isTrue="{!v.hasConsentToView}">
+                                <lightning:button variant="neutral" onclick="{!c.addNote}" class="slds-m-bottom_small slds-m-right_xx-small slds-m-left_none">{!$Label.c.addnote}</lightning:button>
+                                <aura:set attribute="else">
+                                    <lightning:button variant="neutral" onclick="{!c.requestConsent}" class="slds-m-bottom_small slds-m-right_xx-small slds-m-left_none">{!$Label.c.Request_Consent}</lightning:button>
+                                </aura:set>
+                            </aura:if>
+                            <lightning:button variant="neutral" onclick="{!c.createReferral}" class="slds-m-bottom_small slds-m-right_xx-small slds-m-left_none">{!$Label.c.createreferral}</lightning:button>
+                            <lightning:button variant="neutral" class="slds-m-bottom_small slds-m-right_xx-small slds-m-left_none" onclick="{!c.openSelectAssesment}">{!$Label.c.start_assessment}</lightning:button>
+                            <aura:if isTrue="{!v.bShowMyClients}">
+                                <lightning:button variant="neutral" class="slds-m-bottom_small slds-m-right_xx-small slds-m-left_none"
+                                    onclick="{!c.addToMyClients}">{!$Label.c.RE_Add_Favorite_Client}</lightning:button>
+                                <aura:set attribute="else">
+                                    <lightning:button variant="neutral" class="slds-m-bottom_small slds-m-right_xx-small slds-m-left_none"
+                                        onclick="{!c.removeFromMyClients}">{!$Label.c.RE_Remove_Favorite_Client}</lightning:button>
+                                </aura:set>
+                            </aura:if>
+                        </div>
+                    </aura:if>
+                    <div class="slds-grid slds-wrap">
+                        <div class="addCol">
+                            <div class="resinfo-Subhead"> 
+                                <lightning:formattedText title="Client Information" value="{!$Label.c.Client_Information}"/>
+                            </div>
+                            <div class="slds-grid slds-wrap slds-m-vertical_x-small">
+                                <!-- <aura:if isTrue="{!v.hasConsentToView}"> 
+                                    <section class="slds-size_1-of-2 slds-max-medium-size_1-of-1">
+                                        <div class="caption2Grey slds-m-vertical_xx-small">
+                                            {!$Label.c.ContactInfoHomeAddress}
+                                        </div>
+                                        <div class="caption2 slds-m-vertical_xx-small">
+                                            <lightning:formattedText value="{!v.Address.AddressLine1}" />  
+                                        </div>
+                                        <div class="caption2 slds-m-vertical_xx-small">
+                                            <lightning:formattedText value="{!v.Address.AddressLine2}"/>
+                                        </div>
+                                        <div class="caption2 slds-m-vertical_xx-small">
+                                            <lightning:formattedText value="{!v.Address.AddressLine3}"/>
+                                        </div>
+                                    </section>
+                                </aura:if> -->
+                                <section class="slds-size_1-of-2 slds-max-medium-size_1-of-1">
+                                    <div class="caption2Grey slds-m-vertical_xx-small">
+                                        {!$Label.c.ClientId}
+                                    </div>
+                                    <div class="caption2 slds-m-vertical_xx-small">
+                                        {! v.isIEESClient ? v.clientDetails.IEESId : v.clientUniqueId}
+                                    </div>
+                                    
+                                </section>
+                                <!--<section class="slds-size_1-of-2 slds-max-medium-size_1-of-1">
+                                    <div class="caption2Grey slds-m-vertical_xx-small">
+                                        {!$Label.c.email}
+                                    </div>
+                                    <div class="caption2 slds-m-vertical_xx-small">
+                                        {!v.clientDetails.clientEmail}
+                                    </div>
+                                </section> -->
+                                <section class="slds-size_1-of-2 slds-max-medium-size_1-of-1">
+                                    <div class="caption2Grey slds-m-vertical_xx-small">
+                                        {!$Label.c.Gender}
+                                    </div>
+                                    <div class="caption2 slds-m-vertical_xx-small">
+                                        {!v.clientDetails.Gender}
+                                    </div>
+                                </section>
+                            </div>
+                            <div class="slds-grid slds-wrap slds-m-vertical_x-small">
+                                <!-- <aura:if isTrue="{!v.hasConsentToView}">
+                              <section class="slds-size_1-of-2 slds-max-medium-size_1-of-1">
+                                    <div class="caption2Grey slds-m-vertical_xx-small">
+                                        {!$Label.c.AddressType}
+                                    </div>
+                                    <div class="caption2 slds-m-vertical_xx-small ">
+                                        {!v.clientDetails.AddressType}
+                                    </div>        
+                              </section> 
+                            </aura:if>
+                              <aura:if isTrue="{!v.hasConsentToView}">
+                                <section class="slds-size_1-of-2 slds-max-medium-size_1-of-1">
+                                    <div class="caption2Grey slds-m-vertical_xx-small">
+                                        {!$Label.c.PreferredContactMethod}
+                                    </div>
+                                    <div class="caption2 slds-m-vertical_xx-small ">
+                                        {!v.clientDetails.clientPreferredCommunication}
+                                    </div>
+                                </section>
+                               </aura:if> -->
+                                <!--<section class="slds-size_1-of-2 slds-max-medium-size_1-of-1">
+                                    <div class="caption2Grey slds-m-vertical_xx-small">
+                                        {!$Label.c.MobilePhone}
+                                    </div>
+                                    <div class="caption2 slds-m-vertical_xx-small">
+                                        {!v.clientDetails.clientPhone}
+                                    </div>
+                                </section> -->
+                                <section class="slds-size_1-of-2 slds-max-medium-size_1-of-1">
+                                    <div class="caption2Grey slds-m-vertical_xx-small">
+                                        {!$Label.c.DOB}
+                                    </div>
+                                    <div class="caption2 slds-m-vertical_xx-small">
+                                        {! v.isIEESClient ? v.clientDetails.BirthDate : v.clientDetails.DOB}
+                                    </div>
+                                </section>
+                                
+                            </div>
+                        </div> 
+                        <div class="addCol">
+                            <div class="resinfo-Subhead"> 
+                                <lightning:formattedText title="Contact" value="{!$Label.c.contactinfo}"/>
+                            </div>
+                            <div class="slds-grid slds-wrap slds-m-vertical_x-small">
+                                <!--<section class="slds-size_1-of-2 slds-max-medium-size_1-of-1">
+                                        <div class="caption2Grey slds-m-vertical_xx-small">
+                                                {!$Label.c.TotalAnnualIncome}
+                                        </div>
+                                        <div class="caption2 slds-m-vertical_xx-small">
+                                            {!v.clientDetails.TotalAnnualIncome}
+                                        </div>
+                                    </section> 
+                                    <section class="slds-size_1-of-2 slds-max-medium-size_1-of-1">
+                                        <div class="caption2Grey slds-m-vertical_xx-small">
+                                                {!$Label.c.FPL_ContactInformation}
+                                        </div>
+                                        <div class="caption2 slds-m-vertical_xx-small">
+                                            {!v.clientDetails.FPL}
+                                        </div>
+                                    </section>-->
+                                <section class="slds-size_1-of-2 slds-max-medium-size_1-of-1">
+                                    <div class="caption2Grey slds-m-vertical_xx-small">
+                                        {!$Label.c.email}
+                                    </div>
+                                    <div class="caption2 slds-m-vertical_xx-small client-email">
+                                        {! v.isIEESClient ? v.clientDetails.Email : v.clientDetails.clientEmail}
+                                    </div>
+                                </section>
+                                <section class="slds-size_1-of-2 slds-max-medium-size_1-of-1">
+                                    <div class="caption2Grey slds-m-vertical_xx-small">
+                                        {!$Label.c.PreferredContactMethod}
+                                    </div>
+                                    <div class="caption2 slds-m-vertical_xx-small ">
+                                        {! v.isIEESClient ? v.clientDetails.PreferredContactMethodCode : v.clientDetails.clientPreferredCommunication}
+                                    </div>
+                                </section>
+                            </div>
+                            <div class="slds-grid slds-wrap slds-m-vertical_x-small">
+                                <!--<section class="slds-size_1-of-2 slds-max-medium-size_1-of-1">
+                                        <div class="caption2Grey slds-m-vertical_xx-small">
+                                             {!$Label.c.Employment_Type}
+                                        </div>
+                                        <div class="caption2 slds-m-vertical_xx-small">
+                                            {!v.clientDetails.EmploymentType}
+                                        </div>
+                                    </section> -->
+                                <section class="slds-size_1-of-2 slds-max-medium-size_1-of-1">
+                                    <div class="caption2Grey slds-m-vertical_xx-small">
+                                        {!$Label.c.MobilePhone}
+                                    </div>
+                                    <div class="caption2 slds-m-vertical_xx-small">
+                                        {! v.isIEESClient ? v.clientDetails.Phone : v.clientDetails.clientPhone}
+                                    </div>
+                                </section> 
+                                <aura:if isTrue="{!v.hasConsentToView}">
+                                    <section class="slds-size_1-of-2 slds-max-medium-size_1-of-1 address-section">
+                                        <div class="caption2Grey slds-m-vertical_xx-small">
+                                            {!$Label.c.ContactInfoHomeAddress}
+                                        </div>
+                                        <div class="caption2 slds-m-vertical_xx-small">
+                                            <lightning:formattedText value="{!v.Address.AddressLine1}" />  
+                                        </div>
+                                        <div class="caption2 slds-m-vertical_xx-small">
+                                            <lightning:formattedText value="{!v.Address.AddressLine2}"/>
+                                        </div>
+                                        <div class="caption2 slds-m-vertical_xx-small">
+                                            <lightning:formattedText value="{!v.Address.AddressLine3}"/>
+                                        </div>
+                                    </section> 
+                                </aura:if>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-wrap client-detail-table">
+                        <aura:if isTrue="{!v.hasConsentToView}">
+                            <div class=" addCol">
+                                <div class="resinfo-Subhead slds-grid slds-wrap slds-grid_align-spread"> 
+                                    <lightning:formattedText title="Household Composition" value="{!$Label.c.Household}"/>
+                                    <span><aura:if isTrue="{!v.lstHHCompWrapperLimited.length>0}"> <a onclick="{!c.handleViewAllHHComp}" class="caption2">{!$Label.c.View_All}</a></aura:if></span>
+                                </div>
+                                <div class="slds-grid slds-align_absolute-center slds-wrap slds-m-top_xx-small household-composition">
+                                    <div class="locationtable-cont" aura:id="data-table"> 
+                                       <!-- <aura:if isTrue="{!v.lstHHCompWrapper.length>0}">-->
+                                            <c:RE_GenericLightningTable myData="{!v.lstHHCompWrapperLimited}"  mycolumns= "{!v.mycolumnsHousehold}" />
+                                            <!--<aura:set attribute="else">
+                                                <div class="slds-align_absolute-center noData">{!$Label.c.None_OneView}</div>
+                                            </aura:set>-->
+                                        <!--</aura:if>-->
+                                    </div> 
+                                    
+                                </div>
+                            </div>
+                        </aura:if>
+                        <aura:if isTrue="{!v.hasConsentToView}">
+                            <div class="addCol">
+                                <div class="resinfo-Subhead slds-grid_align-spread slds-grid slds-wrap"> 
+                                    <lightning:formattedText title="Enrolled Programs" value="{!$Label.c.Enrolled_Programs}"/>
+                                    <span><aura:if isTrue="{!v.lstEnrollProgWrapperLimited.length>0}"> <a onclick="{!c.handleViewAllEnrollPrograms}" class="caption2">{!$Label.c.View_All}</a></aura:if></span>
+                                </div>
+                                <div class="slds-grid slds-align_absolute-center slds-wrap slds-m-top_xx-small enrolled-programs">
+                                    <div class="locationtable-cont" aura:id="data-table">
+                                        <!-- <aura:if isTrue="{!v.lstEnrollProgWrapper.length>0}"> -->
+                                            <c:RE_GenericLightningTable myData="{!v.lstEnrollProgWrapperLimited}"  mycolumns= "{!v.mycolumnsEnrolledProgram}" />
+                                            <!--<aura:set attribute="else">
+                                                <div class="slds-align_absolute-center noData">{!$Label.c.None_OneView}</div>
+                                            </aura:set>-->
+                                        <!-- </aura:if>-->
+                                    </div>
+                                </div>
+                            </div>
+                        </aura:if>
+                        <!-- Start Assessment table -->
+                        <aura:if isTrue="{!v.hasConsentToView}">
+                        <div class="addCol slds-m-top_small">
+                            
+                            <div class="resinfo-Subhead slds-grid_align-spread slds-grid slds-wrap"> 
+                                <lightning:formattedText title="Enrolled Programs" value="{!$Label.c.assessments}"/>
+                                <span><aura:if isTrue="{!v.lstAssessmentResponse.length>0}"><a onclick="{!c.handleViewAssesssmentResponse}" class="caption2">{!$Label.c.View_All}</a></aura:if></span>
+                            </div>
+                            <div class="slds-grid slds-align_absolute-center slds-wrap slds-m-top_xx-small enrolled-programs">
+                                <div class="locationtable-cont" aura:id="data-table">
+                                    <!-- <aura:if isTrue="{!v.lstAssessmentResponse.length>0}">-->
+                                        <c:RE_GenericLightningTable myData="{!v.lstAssessmentResponseLimited}"  mycolumns= "{!v.mycolumnsAssessment}" callFunction="ViewAssessment" clientId="{!v.clientId}" clientDetails="{!v.clientDetails}"/>
+                                       <!-- <aura:set attribute="else">
+                                            <div class="slds-align_absolute-center noData">{!$Label.c.None_OneView}</div>
+                                        </aura:set> -->
+                                    <!--</aura:if>-->
+                                </div>
+                            </div>
+                        </div>
+                        </aura:if>
+                        <!-- End Assessment table -->
+                        <aura:if isTrue="{!v.hasConsentToView}">
+                            <div class="addCol slds-m-top_small">
+                                <div class="resinfo-Subhead heading-notes slds-grid_align-spread slds-grid slds-wrap"> 
+                                    <lightning:formattedText title="Notes" value="{!$Label.c.notes}"/>
+                                    <span>
+                                        <aura:if isTrue="{!v.mydatanotes.length>0}"> <a onclick="{!c.handleViewAllNotes}" class="caption2">{!$Label.c.View_All}</a></aura:if></span>
+                                </div>
+                                <div class="slds-grid notes-grid slds-align_absolute-center slds-wrap slds-m-top_xx-small notes-container">
+                                    <div class="notes locationtable-cont" aura:id="data-table"> 
+                                        <!--<aura:if isTrue="{!v.mydatanotes.length>0}">-->
+                                            
+                                            <c:RE_GenericLightningTable myData="{!v.mydatanotes}"  mycolumns= "{!v.mycolumnsNotes}" />
+                                            <!--<aura:set attribute="else">
+                                                <div class="slds-align_absolute-center noData">{!$Label.c.None_OneView}</div>
+                                            </aura:set>--> 
+                                        <!--</aura:if> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </aura:if>
+                    </div>
+                </div>
+                </div>
+                
+                <div class="my-resources slds-large-size_3-of-12 slds-medium-size_4-of-12 slds-small-size_12-of-12 slds-x-small-size_12-of-12 slds-grid slds-wrap">
+                    <div class="risk-factor-section slds-grid slds-wrap slds-p-around_small">
+                        <aura:if isTrue="{!v.hasConsentToView}">
+                            <div class="slds-size_1-of-1">
+                                <div class="resinfo-Subhead slds-grid slds-wrap slds-grid_align-spread"> 
+                                    <lightning:formattedText title="{!$Label.c.MyResource}" value="{!$Label.c.MyResource}"/>
+                                    <span><a onclick="{!c.navigateToMyPlan}" class="caption2">{!$Label.c.View_My_Plan}</a></span>
+                                </div>
+                                <div class="slds-grid slds-wrap slds-m-vertical_x-small referrals-section">
+                                    <section>
+                                        <div class="caption2Grey slds-m-vertical_xx-small">
+                                            {!$Label.c.New}
+                                        </div>
+                                        <div class="referralCount slds-m-vertical_xx-small">
+                                            {!v.clientDetails.referralCount.New}
+                                        </div>
+                                    </section>
+                                    <section>
+                                        <div class="caption2Grey slds-m-vertical_xx-small">
+                                            {!$Label.c.InProgress_OneView}
+                                        </div>
+                                        <div class="referralCount slds-m-vertical_xx-small ">
+                                            {!v.clientDetails.referralCount.InProgress}
+                                        </div>
+                                    </section>
+                                    <section>
+                                        <div class="caption2Grey slds-m-vertical_xx-small">
+                                            {!$Label.c.referralstatusclosed}
+                                        </div>
+                                        <div class="referralCount slds-m-vertical_xx-small ">
+                                            {!v.clientDetails.referralCount.Closed}
+                                        </div>
+                                    </section>
+                                </div>
+                            </div> 
+                        </aura:if>
+                        <div class="slds-size_1-of-1">
+                            <div class="resinfo-Subhead slds-grid slds-wrap slds-grid_align-spread"> 
+                                <lightning:formattedText title="{!$Label.c.Needs}" value="{!$Label.c.Needs}"/>
+                                <span>
+                                    <aura:if isTrue="{!v.lstSDOH.length>0}"> <a onclick="{!c.handleViewAllRiskFactors}" class="caption2">{!$Label.c.View_All}</a></aura:if>
+                                </span>
+                            </div>
+                            <!-- <div class="slds-grid slds-wrap slds-m-vertical_x-small">
+                                <section class="slds-col">
+                                    <lightning:icon iconName="utility:record" alternativeText="{!$Label.c.RE_SDOH_Stable}" size="xx-small" class="color-safe"/>&nbsp;{!$Label.c.RE_SDOH_Stable}
+                                </section>
+                                <section class="slds-col">
+                                    <lightning:icon iconName="utility:record" alternativeText="{!$Label.c.RE_SDOH_Vulnerable}" size="xx-small" class="color-vulnerable"/>&nbsp;{!$Label.c.RE_SDOH_Vulnerable}
+                                </section>
+                                <section class="slds-col">
+                                    <lightning:icon iconName="utility:record" alternativeText="{!$Label.c.RE_SDOH_InCrisis}" size="xx-small" class="color-atrisk"/>&nbsp;{!$Label.c.RE_SDOH_InCrisis}
+                                </section>
+                                <section class="slds-col">
+                                    <lightning:icon iconName="utility:record" alternativeText="{!$Label.c.RE_SDOH_NA}" size="xx-small" class="color-na"/>&nbsp;{!$Label.c.RE_SDOH_NA}
+                                </section>
+                            </div> -->
+                            <div class="slds-grid slds-wrap slds-grid_vertical slds-m-top_x-small">
+                                <aura:iteration items="{!v.lstSDOH}" var="objSdoh">
+                                    <!--<div class="slds-size_1-of-1">
+                                        <lightning:icon iconName="utility:record" alternativeText="{!objSdoh.Category__c}" size="xx-small"
+                                                        class="{! 'slds-m-vertical_xx-small ' + (objSdoh.riskClass)}"/> {!objSdoh.Category__c}                               
+                                    </div>-->
+                                    <div class="slds-size_1-of-1 slds-m-vertical_xx-small">
+                                        <lightning:icon iconName="utility:record" alternativeText="{!objSdoh.Category__c}" size="xx-small"
+                                                        class="{! 'category-icon slds-m-vertical_xx-small ' + (objSdoh.riskClass)}"/> {!objSdoh.Category__c}                               
+                                    </div>
+                                </aura:iteration>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--send email modal-->
+        <aura:if isTrue="{!v.showEmailResidentModal}">
+            <div class="email-resident-modal">
+                <section role="dialog" class="slds-modal slds-fade-in-open">
+                    <div class="slds-modal__container">
+                        <div class="slds-modal__content slds-p-horizontal_medium slds-p-bottom_medium slds-p-top_x-small">
+                            <div class="modal-lg-headingcontainer">
+                                <div class="modal-lg-heading-button">
+                                    <div class="modal-lg-heading" tabindex="0">{!$Label.c.email_resident}</div>
+                                    <lightning:buttonIcon tabindex="0" class="modal-close" iconName="utility:close" alternativeText="close"  onclick="{!c.closeEmailResident}" size="small" />                                 
+                                </div>
+                            </div>
+                            <lightning:input aura:id="clientEmail" type="email" label="{!$Label.c.email}" 
+                                             pattern = "^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
+                                             messageWhenPatternMismatch = "{!$Label.c.invalidemailaddress}"
+                                             value="{!v.sendEmailWrapper.clientEmail}"
+                                             autocomplete="off"/>
+                            <lightning:textarea label="{!$Label.c.message}" value="{!v.sendEmailWrapper.message}"
+                                                messageWhenValueMissing="{!$Label.c.This_field_is_required}"
+                                                autocomplete="off"/>
+                            <div class="modal-lg-footer-button slds-m-top_large">
+                                <lightning:button variant="neutral" class="slds-p-horizontal_x-large slds-m-right_xx-small" onclick="{!c.closeEmailResident}" label="{!$Label.c.cancel}"/>
+                                <div onkeydown="{!c.moveFocusToTop}">
+                                <lightning:button variant="brand" class="slds-p-horizontal_x-large" label="{!$Label.c.send}" onclick="{!c.onSend}" />  
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </section>
+                <div class="slds-backdrop slds-backdrop_open"></div>
+            </div>
+        </aura:if>
+        <!-- Add Note Modal Starts -->
+        <aura:if isTrue="{!v.showNotesModal}">
+            <div class="notes-modal">
+                <section role="dialog" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                    <div class="slds-modal__container">
+                        <div class="slds-modal__content slds-p-horizontal_medium slds-p-bottom_medium slds-p-top_x-small">
+                            <div class="modal-lg-headingcontainer">
+                                <div class="modal-lg-heading-button">
+                                    <div class="modal-lg-heading" tabindex="0">{!$Label.c.addnote}</div>
+                                    <lightning:buttonIcon tabindex="0" class="modal-close" iconName="utility:close" alternativeText="close"  onclick="{!c.hideNote}" size="small" />                            
+                                </div>
+                            </div>
+                            <fieldset class="slds-form-element slds-form-element_compound">
+                                <lightning:input aura:id="title" type="text" label="{!$Label.c.Subject}" name="NotesTitle" value="{!v.noteSubject}" required = "true" autocomplete="off" maxlength="255"/>
+                                <lightning:textarea aura:id="desc" name="NotesDescription" value="{!v.noteDescription}" label="{!$Label.c.description}" maxlength="32768" required = "true" autocomplete="off"/>
+                            </fieldset>
+                            <div class="modal-lg-footer-button">
+                                <lightning:button class="slds-m-right_xx-small slds-p-horizontal_x-large" variant="neutral" label="{!$Label.c.cancel}" title="{!$Label.c.cancel}" onclick="{!c.hideNote}"/>  
+                                <div onkeydown="{!c.moveFocusToTop}">
+                                <lightning:button aura:id="submitNote" class="slds-p-horizontal_x-large" variant="brand" label="{!$Label.c.submit}" title="{!$Label.c.submit}" onclick="{!c.onSave}"/>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </section>
+                <div class="slds-backdrop slds-backdrop_open"></div>
+            </div>
+        </aura:if>
+        
+        <aura:set attribute="else">
+            <aura:if isTrue="{!!v.isLoading}">
+                <div class="headingContainer" aura:id="headingContainer"> 
+                    <div class="backButton slds-m-bottom_x-small">
+                        <lightning:icon iconName="utility:back" alternativeText="back"/>
+                        <a href="javascript:void(0)" onclick="{!c.backToClientDetails}">{!$Label.c.Back_to_OneView}</a>
+                    </div>      
+                    <div class="headingButton slds-grid slds-wrap">
+                        <h1 class="headingL1">{!v.sTableHeading}:<span class="referal-no caption2Grey slds-p-left_large">{! v.isIEESClient ? (v.clientDetails.FirstName + ' ' + v.clientDetails.LastName) : v.clientDetails.clientName}</span></h1>
+                    </div>
+                </div>
+            </aura:if>    
+            <aura:if isTrue="{!v.bShowHHCompo}">
+                <c:RE_GenericLightningTable myData="{!v.lstHHCompWrapper}"  mycolumns= "{!v.mycolumnsHousehold}" />
+            </aura:if>
+            <aura:if isTrue="{!v.bShowEnrollProgs}">
+                <c:RE_GenericLightningTable myData="{!v.lstEnrollProgWrapper}"  mycolumns= "{!v.mycolumnsEnrolledProgram}" />
+            </aura:if>
+            <aura:if isTrue="{!v.bShowAssesssmentResponse}">
+                
+                <c:RE_GenericLightningTable myData="{!v.lstAssessmentResponse}"  mycolumns= "{!v.mycolumnsAssessment}" clientId="{!v.clientId}" clientDetails="{!v.clientDetails}" callFunction="ViewAssessment"/>
+            </aura:if>
+            <aura:if isTrue="{!v.bShowNotes}">
+                <c:RE_GenericLightningTable myData="{!v.fulldatanotes}"  mycolumns= "{!v.fullcolumnsNotes}" />
+            </aura:if>
+            <aura:if isTrue="{!v.bShowRiskFactors}">
+                <div class="slds-grid slds-wrap slds-m-vertical_small slds-p-top_xx-small slds-p-bottom_xx-small risk-factors-all">
+                    <section class="slds-col slds-size_1-of-9 slds-p-horizontal_small">
+                        <lightning:icon iconName="utility:record" alternativeText="{!$Label.c.RE_SDOH_Stable}" size="xx-small" class="color-safe"/>&nbsp;{!$Label.c.RE_SDOH_Stable}
+                    </section>
+                    <section class="slds-col slds-size_1-of-9 slds-p-horizontal_small">
+                        <lightning:icon iconName="utility:record" alternativeText="{!$Label.c.RE_SDOH_Vulnerable}" size="xx-small" class="color-vulnerable"/>&nbsp;{!$Label.c.RE_SDOH_Vulnerable}
+                    </section>
+                    <section class="slds-col slds-size_1-of-9 slds-p-horizontal_small">
+                        <lightning:icon iconName="utility:record" alternativeText="{!$Label.c.RE_SDOH_InCrisis}" size="xx-small" class="color-atrisk"/>&nbsp;{!$Label.c.RE_SDOH_InCrisis}
+                    </section>
+                    <section class="slds-col slds-size_1-of-9 slds-p-horizontal_small">
+                        <lightning:icon iconName="utility:record" alternativeText="{!$Label.c.RE_SDOH_NA}" size="xx-small" class="color-na"/>&nbsp;{!$Label.c.RE_SDOH_NA}
+                    </section>
+                </div>
+                <c:RE_GenericLightningTable myData="{!v.lstFullSDOH}"  mycolumns= "{!v.riskFactorsColumns}" />
+            </aura:if>
+        </aura:set>
+    </aura:if>  
+    <aura:if isTrue="{!v.showreferral}">
+        <c:RE_CreateReferral contactId="{!v.clientId}" aura:id = "createreferral"
+                             clientName="{!v.clientDetails.clientName}"
+                             showClientDetail = "{!v.showClientDetail}"
+                             showreferral = "{!v.showreferral}"
+                             />
+    </aura:if>  
+    <aura:if isTrue="{!v.bisAssesmentOpen}">
+        <!--<c:RE_SelectAssessment bIsCpUser="true" lstAssessment="{!v.lstAssessment}" sClientName="{!v.clientDetails.clientName}" sClientId="{!v.clientId}" /> -->
+          <c:RE_SelectAssessment bisAssesmentOpen="{!v.bisAssesmentOpen}" showClientDetail="{!v.showClientDetail}" bIsCpUser="true"  sClientName="{!v.clientDetails.clientName}" sClientId="{!v.clientId}" />
+    </aura:if>
+    <aura:if isTrue="{!v.showRequestConsent}">
+        <c:RE_RequestConsentModal sverbalConsentOrigin="{!v.sverbalConsentOrigin}" clientId="{!v.clientId}" clientWrapper="{!v.clientWrapper}" isClientDetail="true"/>
+        
+    </aura:if>
+   <!-- <aura:if isTrue="{!v.bisAssesmentOpen}">
+        <section role="dialog" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container select-assesment-modal">
+                <div class="slds-modal__content slds-p-horizontal_medium slds-p-bottom_medium slds-p-top_x-small">
+                    <div class="modal-lg-headingcontainer">
+                        <div class="modal-lg-heading-button">
+                            <div class="modal-lg-heading">{!$Label.c.select_assessment}</div>
+                            <lightning:icon class="modal-close" iconName="utility:close" alternativeText="close"  onclick="{!c.closeSelectAssesment}" size="small" />   
+                        </div>
+                    </div> 
+                    <div class="slds-p-left_medium select-assesment-radio">
+                        <aura:iteration items="{!v.lstAssessment}" var="objAssess" indexVar="index">
+                            <lightning:input name="assesmentoptions" label="{!objAssess.AssessmentTitle__c}" type="radio" value="{!index}" onchange="{!c.selectAssessment}"/>
+                        </aura:iteration>
+                    </div>
+                    <div class="modal-lg-footer-button slds-m-top_large">
+                        <lightning:button class="slds-p-horizontal_x-large slds-button slds-button_neutral slds-m-right_xx-small" onclick="{!c.closeSelectAssesment}">{!$Label.c.cancel}</lightning:button>
+                        <lightning:button aura:id="startAssessmentbtn" class="slds-p-horizontal_x-large slds-button slds-button_brand" onclick="{!c.startAssessment}">{!$Label.c.start}</lightning:button> 
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </aura:if>  -->
+</aura:component>

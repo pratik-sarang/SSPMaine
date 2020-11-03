@@ -1,0 +1,23 @@
+.THIS .completeTraining .slds-form-element{
+    display:inline-block;
+}
+.THIS .completeTraining .uiInputCheckbox .uiLabel{
+    margin: 0 .5rem .25rem 0;
+}
+.THIS .trainingCheckbox{
+    margin: 0.1rem 0;
+}
+.THIS .slds-form-element__row{
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 0 .5rem 0;
+}
+.THIS .rowSize1{
+    padding: 0 .75rem 0 0;
+}
+.THIS .rowSize2{
+    padding: 0 0 0 .75rem;
+}
+.THIS .slds-checkbox .slds-checkbox_faux{
+    border-radius: 0;
+}

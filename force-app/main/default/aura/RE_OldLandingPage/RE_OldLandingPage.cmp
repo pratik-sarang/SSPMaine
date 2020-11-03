@@ -1,0 +1,69 @@
+<!--
+ * Component Name    : RE_OldLandingPage
+ * Owner             : DELOITTE CONSULTING 
+ * Created Date      : 06/26/2019
+ * Description       : Referral Details Edit Modal
+ *
+ *                            M O D I F I C A T I O N   L O G                                          
+ *
+ *  Date        Developer       Description                                                         
+ *  **************************************************************************
+ *  06/26/2019  PRIYANKA        	Initial UI Development
+ *  07/01/2019  NUPOOR 				Backend Integration
+-->
+<aura:component Implements="forceCommunity:availableForAllPageTypes" controller="RE_LandingPageCtrl" access="global">
+    <aura:attribute name="isViewLessPackages" type="Boolean" default="true" />
+    <aura:attribute name="isLoggedInUser" type="Boolean" default="false" />
+    
+    <aura:attribute name="isSpinnerActive" type="Boolean"/>
+    <c:RE_UtilityServerCallerCmp aura:id="bSuper" isSpinnerActive="{!v.isSpinnerActive}"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <div class="landingPage-wrapper" id="landingPageContainer" onclick="{!c.HideGrey}">
+        <div>
+            <aura:if isTrue="{!v.isViewLessPackages}">
+                <div class="landingContentPadding slds-p-vertical_small"></div>
+                <div class="landingContent slds-text-align_center slds-p-vertical_large headingL2">
+                    <p>{!$Label.c.RE_CarouselText1}</p> 
+                    <p>{!$Label.c.RE_CarouselText2}</p>
+                </div>
+                <div class="landingContentPadding slds-p-vertical_small"></div>
+            </aura:if>
+        </div>
+        <div id="resourcePackages" aura:id="ResourcePackages">
+            <c:RE_OldResourcePackages aura:id="resourcePackages" method="{!c.handleEventFromResourcePackages}"/>
+        </div>
+        
+        <div id="categoryContainer" class="resourceGutterSpace slds-p-top_small">
+            <aura:if isTrue="{!v.isViewLessPackages}">
+                <c:RE_ResourceCategory aura:id="resourceCategory"/>
+            </aura:if> 
+        </div>
+        
+        <aura:if isTrue="{!!v.isLoggedInUser}">
+            <div id="partnerSection" class="partnerSection">
+                <div class="slds-p-vertical_medium slds-text-align_center partnerHeader">
+                    <p class="headingL1">{!$Label.c.RE_LandingPageText1}</p>
+                </div>
+                <div class="slds-p-vertical_medium slds-text-align_center partnerContent">
+                    <p class="slds-p-vertical_medium headingL3">{!$Label.c.RE_LandingPageText2}</p>
+                    <lightning:button class="slds-p-horizontal_xx-large slds-p-vertical_xx-small partnerButton" variant="brand" label="{!$Label.c.RE_GetStarted}" title="{!$Label.c.RE_GetStarted}" onclick="{!c.navigateToGetStarted}" />
+                    <div class="slds-clearfix">
+                        <div class="display-flex slds-p-right_xx-large">
+                            <div id="facebook" onclick="{!c.goToSite}">
+                                <img class="slds-m-horizontal_small" src="{!$Resource.RE_SocialMediaIcons+'/fb.png'}" alt="{!$Label.c.facebook}" width="47" height="47"/>
+                            </div>
+                            <div id="twitter" onclick="{!c.goToSite}">
+                                <img class="slds-m-horizontal_small" src="{!$Resource.RE_SocialMediaIcons+'/twitter.png'}" alt="{!$Label.c.twitter}" width="47" height="47"/>
+                            </div>
+                            <div id="instagram" onclick="{!c.goToSite}">
+                                <img class="slds-m-horizontal_small" src="{!$Resource.RE_SocialMediaIcons+'/insta.png'}" alt="{!$Label.c.instagram}" width="47" height="47"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aura:if>
+    </div>
+</aura:component>

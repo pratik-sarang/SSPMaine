@@ -1,0 +1,15 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" >
+    {!$Label.c.RE_ThisIsReferralNotes}
+    <aura:attribute name="notecolumns" type="List"/>
+    <!--
+	 <aura:attribute name="notecolumns" type="List" default = "[
+        {label: 'Subject', fieldName: 'Name', type: 'text'},
+        {label: 'Description', fieldName: 'Industry', type: 'text'},
+        {label: 'Edit',  type: 'button', typeAttributes: {label: 'Edit'}}
+                                                            ]"/> 
+	-->
+    <aura:handler name="init" value="{! this }" action="{! c.init }"/>
+    <aura:attribute name="numberOfReords" type="Integer" default ="10"/>
+    <!--<c:poc_locationtable sObject="{!v.sObject}" numberOfReords = "{!v.numberOfReords}" mycolumns= "{!v.mycolumns}" iconImage="standard:apps"/>-->
+    <c:RE_DataTable mycolumns= "{!v.notecolumns}" /> 
+</aura:component>

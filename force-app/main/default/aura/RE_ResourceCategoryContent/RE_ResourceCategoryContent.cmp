@@ -1,0 +1,21 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name="categoryOptions" type="Map" />
+    <aura:attribute name="categoryMap" type="Map" />
+    <aura:attribute name="domain" type="String" />
+    
+    <aura:handler name="init" value="{!this}"  action="{!c.doInit}" />
+    <div class="slds-grid slds-wrap slds-m-top_none categoryListing">
+        <aura:iteration items="{!v.categoryMap}" var="category" indexVar="Key">
+            <div class="slds-col slds-max-medium-size_1-of-1 slds-size_1-of-4 RE_TileBg">   
+                <div class="slds-p-around_medium">
+                    <ul class="slds-has-block-links--space">
+                        <li class="FirstItem categoryName">{!category.key}</li>
+                        <aura:iteration items="{!category.value}" var="cat" indexVar="Key">                                
+                            <li><a id="{!cat.picklistValue}" class="FirstItem subCategory" data-domain = "{!v.domain}" data-category = "{!category.key}" data-subcategory = "{!cat.picklistValue}"  href="#" onclick="{!c.goToSearchPage}">{!cat.picklistLabel}</a></li>
+                        </aura:iteration>
+                    </ul>
+                </div>            
+            </div>
+        </aura:iteration>
+    </div>
+</aura:component>

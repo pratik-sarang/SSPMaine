@@ -1,0 +1,66 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" controller="RE_NotesCtrl" >
+    <aura:attribute name="showEditModal" type="boolean" default="true"/>
+    <aura:attribute name="isEditable" type="boolean" default="false"/>
+    <aura:attribute name="showViewModal" type="boolean" default="true"/>
+    <aura:attribute name="NotesTitle" type="String"/>
+    <aura:attribute name="NotesDescription" type="String"/>
+    <aura:attribute name="recId" type="String" 
+                    description= "this attribute is used to store the recordId"/>
+    <aura:attribute name="isReferralInbox" type="Boolean"/>
+    <aura:registerEvent name="refreshevt" type="c:RE_RefreshNotes"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+     <c:RE_UtilityServerCallerCmp aura:id="bSuper" isSpinnerActive="{!v.isSpinnerActive}"/> 
+     <lightning:notificationsLibrary aura:id="notifLib" />
+   <!-- <aura:handler name="init" value="{!this}" action="{!c.doInit}" /> -->
+	<aura:if isTrue="{!!v.isReferralInbox}">
+    	<aura:if isTrue="{!v.showEditModal}">
+            <div class="demo-only">
+                <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                    <div class="slds-modal__container">
+                        <div class="slds-modal__content edit-modal-body slds-p-horizontal_medium slds-p-bottom_medium slds-p-top_x-small" id="modal-content-id-1">
+                            <div class="modal-lg-headingcontainer">
+                                <div class="modal-lg-heading-button">
+                                    <div class="modal-lg-heading" tabindex="0">{!$Label.c.notedetails}</div>
+                                    <lightning:buttonIcon tabindex="0" class="modal-close" iconName="utility:close" alternativeText="close"  onclick="{!c.hideEditModal}" size="small" />
+                                </div>                   
+                            </div>
+                            <lightning:input aura:id="title" type="text" label="{!$Label.c.title}" name="NotesTitle" value="{!v.recId.Title}" disabled="{!!v.isEditable}" required = "true" />
+                            <lightning:textarea aura:id="desc" name="NotesDescription" value="{!v.recId.Description}" label="{!$Label.c.description}" maxlength="300" disabled="{!!v.isEditable}" required = "true" />
+                            <div class="modal-lg-footer-button slds-m-top_large">
+                                 <lightning:button class="slds-p-horizontal_x-large" variant="brand" label="{!$Label.c.cancel}" ariaLabel="{!$Label.c.cancel}" onclick="{!c.hideEditModal}"/>
+                                 <lightning:button aura:id="saveNote" class="slds-p-horizontal_x-large" variant="brand" label="{!$Label.c.save}" ariaLabel="{!$Label.c.save}" onblur="{!c.moveFocusToTop}" onclick="{!c.saveNote}" disabled="{!!v.isEditable}"/>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="slds-backdrop slds-backdrop_open"></div>
+            </div>
+        </aura:if>
+       <aura:set attribute="else">
+           <aura:if isTrue="{!v.showViewModal}">
+              <div class="demo-only">
+                    <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                        <div class="slds-modal__container">
+                            <div class="slds-modal__content edit-modal-body slds-p-horizontal_medium slds-p-bottom_medium slds-p-top_x-small" id="modal-content-id-1">
+                                <div class="modal-lg-headingcontainer">
+                                    <div class="modal-lg-heading-button">
+                                        <div class="modal-lg-heading" tabindex="0">{!$Label.c.notedetails}</div>
+                                        <lightning:buttonIcon tabindex="0" class="modal-close" iconName="utility:close" alternativeText="close"  onclick="{!c.hideViewModal}" size="small" />
+                                    </div>                   
+                                </div>
+                                <lightning:input aura:id="title" type="text" label="{!$Label.c.title}" name="NotesTitle" value="{!v.recId.Title}" disabled="{!v.isReferralInbox}" required = "true" />
+                                <lightning:textarea aura:id="desc" name="NotesDescription" value="{!v.recId.Description}" label="{!$Label.c.description}" maxlength="300" disabled="{!v.isReferralInbox}" required = "true" />
+                                <div class="modal-lg-footer-button slds-m-top_large">
+                                     <lightning:button class="slds-p-horizontal_x-large" variant="brand" label="{!$Label.c.cancel}" ariaLabel="{!$Label.c.cancel}" onclick="{!c.hideViewModal}"/>
+                                     <lightning:button aura:id="saveNote" class="slds-p-horizontal_x-large" variant="brand" label="{!$Label.c.save}" ariaLabel="{!$Label.c.save}" onblur="{!c.moveFocusToTop}" onclick="{!c.saveNote}" disabled="{!v.isReferralInbox}"/>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <div class="slds-backdrop slds-backdrop_open"></div>
+                </div>
+            </aura:if>
+        </aura:set>
+    </aura:if>
+    
+</aura:component>

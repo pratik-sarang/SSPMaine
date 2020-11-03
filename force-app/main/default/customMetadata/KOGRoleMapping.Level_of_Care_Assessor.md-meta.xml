@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Level of Care Assessor</label>
+    <protected>false</protected>
+    <values>
+        <field>Is_SSP_User__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>Related_Permission_Sets__c</field>
+        <value xsi:type="xsd:string">LEVEL_OF_CARE_ASSESSOR</value>
+    </values>
+    <values>
+        <field>Role_Name__c</field>
+        <value xsi:type="xsd:string">Level of Care Assessor</value>
+    </values>
+</CustomMetadata>

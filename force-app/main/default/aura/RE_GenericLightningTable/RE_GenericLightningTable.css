@@ -1,0 +1,29 @@
+.THIS .colorRed svg{
+   fill: t(RESemanticRed);
+}
+.THIS .colorYellow svg{
+     fill: t(RESemanticYellow);
+}
+.THIS .colorGreen svg{
+    fill: t(RESemanticGreen);
+}
+.THIS .colorGrey svg{
+    fill: t(RECardResourceTypeGrey);
+}
+.THIS th[class^="color"] svg{
+    margin-bottom: 0.1rem;
+}
+@media only screen and (max-width:768px){
+    .THIS thead .slds-th__action,.THIS thead .slds-has-button-menu {
+        width:unset !important; 
+    }
+    .THIS thead .slds-cell-fixed {
+       position: relative; 
+    }
+    .THIS tr th, .THIS tr td{
+        width: 200px!important;
+    }
+    .THIS .slds-scrollable_y > div{
+        overflow:auto;
+    }
+}

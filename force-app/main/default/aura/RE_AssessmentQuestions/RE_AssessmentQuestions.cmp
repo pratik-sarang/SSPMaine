@@ -1,0 +1,199 @@
+<!--
+ * Component Name    : RE_ReferralDetails
+ * Owner             : DELOITTE CONSULTING
+ * Created Date      : 06/04/2019
+ * Description       : Assessment Questions Flow
+ *
+ *                            M O D I F I C A T I O N   L O G                                          
+ *
+ *  Date        Developer       Description                                                         
+ *  **************************************************************************
+ *  09/25/2019  Abhishek        	Initial UI Development
+ *  09/25/2019  Prashant			Backend Field Integration
+-->
+
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" controller="RE_AssessmentQuestionsCtrl">
+    <!-- Changes done for server call from a common place-->
+    <aura:attribute name="isSpinnerActive" type="Boolean"/>
+    <aura:attribute name="bisRequired" type="Boolean" default="true"/>
+    <aura:attribute name="bshowModal" type="Boolean" default="false"/>
+    <aura:attribute name="bvalidEmail" type="Boolean" default="true"/>
+    <aura:attribute name="bsubmitdisabled" type="Boolean" default="false"/>
+    <aura:attribute name="bisInputVisible" type="Boolean" default="true"/>
+    <aura:attribute name="bisValueSelected" type="Boolean" default="false"/>
+    <aura:attribute name="bShowtemplate" type="Boolean" default="false"/>
+    
+    <aura:attribute name="bis" type="Boolean" default="false"/>
+    <aura:attribute name="sInitialAddress" type="String" />
+    <aura:attribute name="sEmail" type="String" />
+    <aura:attribute name="bIsMeterVisible" type="Boolean" default="false" />
+    <aura:attribute name="bIsNormalMeterVisible" type="Boolean" default="false" />
+    <aura:attribute name="bIsAnonymous" type="Boolean" default="false" />
+    <aura:attribute name="bshowData" type="Boolean" default="false"/>
+    <aura:attribute name="userAssessmentId" type="String" />
+    <aura:attribute name="bisResident" type="Boolean" default="false"/>
+    <aura:attribute name = "bshowassessmentques" type ="Boolean" default="false" />
+    <aura:attribute name = "bshowassessmentres" type ="Boolean" default="false" />
+    
+    
+    <aura:registerEvent name="CloseModalEvt" type="c:RE_OurTeamModalEvt"/>
+    
+    
+    <!-- Nandita 26-02-2020: new attribute to check if Assessment is submitted by Guest User-->
+    <aura:attribute name="bIsAnonymousSubmit" type="Boolean" default="false"/>
+    <c:RE_UtilityServerCallerCmp aura:id="bSuper" isSpinnerActive="{!v.isSpinnerActive}"/>
+    
+    <!-- -->
+    
+    <!-- displays a toast notification -->
+    <lightning:notificationsLibrary aura:id="notifLib" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:attribute name="questions" type="List"/>
+    <aura:attribute name="sContactId" type="String" description= "this attribute is used to store the contact id"/> 
+    <aura:attribute name="sAssessmentId" type="String" default= "" description= "this attribute is used to store the contact id"/> 
+    <aura:attribute name="cName" type="String" default= "" description= "this attribute is used to store the assessmenttemplate id"/> 
+    <aura:attribute name="sTempName" type="String" default= "" description= "this attribute is used to store the assessmenttemplate id"/> 
+    <aura:attribute name="sAssessmenTemplatetId" type="String" default= "" description= "this attribute is used to store the assessmenttemplate id"/> 
+    <aura:attribute name="index" type="Integer" default="0"/>
+   
+    <!-- Nandita 26-02-2020: Display AssessmentResults in the same page for Assessment by Guest User-->
+    <aura:if isTrue="{!v.bIsAnonymousSubmit}">
+        <c:RE_AssessmentResults userAssessmentId="{!v.sAssessmentId}" GuestUserAsessmentRespList="{!v.questions}"/>
+        <aura:set attribute="else">
+            <aura:if isTrue="{!v.bshowassessmentres}">
+                <c:RE_AssessmentResults userAssessmentId="{!v.userAssessmentId}" />
+                <aura:set attribute="else">
+                    
+                    <aura:if isTrue="{!v.bshowModal}">
+                        <div>
+                            <section role="dialog" tabindex="-1" aria-modal="true" class="slds-modal slds-fade-in-open">
+                                <div class="slds-modal__container incomplete-assessment">
+                                    <div class="slds-modal__content slds-p-horizontal_medium slds-p-vertical_large">
+                                        <p class="body1 slds-text-align_center slds-m-top_small slds-p-around_small">{!$Label.c.AssessmentQuestionWarning}</p>
+                                        <div class="modal-sm-button slds-p-top_large">
+                                            <lightning:button class="slds-p-horizontal_x-large slds-button slds-button_neutral slds-m-right_xx-small" onclick="{!c.handleCancel}" label="{!$Label.c.RE_No}"/>
+                                            <lightning:button class="slds-p-horizontal_x-large slds-button slds-button_brand" label="{!$Label.c.yes}" onclick="{!c.handleContinue}"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <div class="slds-backdrop slds-backdrop_open"></div>
+                        </div>
+                    </aura:if>
+                    <!--New Screen Changes-->
+                    
+                    <div>
+                        
+                        
+                        
+                        
+                        <div class="headingContainer"> 
+                            <aura:if isTrue="{!v.bshowData}">
+                               
+                                <div class="backButton slds-m-bottom_x-small">
+                                    <lightning:icon iconName="utility:back" alternativeText="back" />
+                                    <a href="javascript:void(0)" onclick="{!c.handleCancelClick}">{!$Label.c.RE_BackToSurveys}</a>
+                                </div> 
+                                
+                            </aura:if>
+                            <div class="headingButton slds-grid slds-wrap slds-m-around_small">
+                                <h1 class="headingL1">{!v.sTempName} </h1>
+                            </div> 
+                        </div> 
+                        
+                        <!--<div class="body1 slds-text-align_right slds-m-bottom_x-small">{!v.completionPercentage} %</div>-->
+                        <aura:if isTrue="{!v.bIsMeterVisible}">
+                            <div class="body1 slds-text-align_right slds-m-bottom_x-small slds-m-top_small slds-p-around_small"><span class="slds-m-right_xx-small">{!$Label.c.question}</span> <span class="slds-m-right_xx-small">{!v.index}</span><span class="slds-m-right_xx-small"> {!$Label.c.of}</span> {!v.questions.length-1} </div>
+                            <meter class="slds-p-horizontal_medium" value="{!v.index+1}" min="1" max="{!v.questions.length}"/>
+                        </aura:if>
+                       
+                        <aura:iteration items="{!v.questions}" indexVar="key" var="questionWrapper">
+                            <div id="{! 'questioncontainer_'+key}" class="{!key>0 ?'slds-hide container question-container':' container question-container'}">
+                                <div class="slds-grid slds-wrap">
+                                    <div class="slds-large-size_12-of-12 slds-small-size_12-of-12 slds-x-small-size_12-of-12 slds-p-around_large">
+                                        <div>
+                                            <div class="options">
+                                                <!-- <aura:if isTrue="{!v.bisInputVisible}"> bTextAnswerType -->
+                                                <aura:if isTrue="{!questionWrapper.bTextAnswerType}">
+                                                    <aura:if isTrue="{!!v.bIsMeterVisible}">
+                                                        <div class="assessment-txt-input">
+                                                            <h1 class="question-txt-field slds-p-bottom_none">{!questionWrapper.sQuestion}</h1>   
+                                                            <div class="caption2 slds-text-align_center slds-m-bottom_small">{!$Label.c.We_ll_use_this}</div>
+                                                            <aura:if isTrue="{!v.bIsAnonymous}">
+                                                                
+                                                                <div class="{!v.bIsAnonymous ? 'google-typeahead guest-user slds-text-align_center' : 'google-typeahead slds-text-align_center' }" aura:id="emailAddress">
+                                                                    		<div class="caption2 slds-text-align_center slds-m-bottom_small label-left slds-m-left_x-large">{!$Label.c.email}</div>
+                                                                            <lightning:input name="Email" label="Email" aura:id = "required_fld" alt="{!$Label.c.email}" value="{!v.sEmail}"
+                                                                                     pattern = "^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
+                                                                                     onchange= "{!c.validateEmail}" onkeyup="{!c.validateEmail}" 
+                                                                                     onblur = "{!c.validateEmail}" autocomplete="off" placeholder = "{!$Label.c.RE_TypeYourEmail}" variant="label-hidden"/>
+                                                                </div>
+                                                         
+                                                            </aura:if>
+                                                            <aura:if  isTrue="{!v.bIsAnonymous}"><div class="caption2 slds-text-align_center slds-m-bottom_small label-left">{!$Label.c.address}</div></aura:if>
+                                                            <div class="{!v.bIsAnonymous ? 'google-typeahead guest-user slds-text-align_center' : 'google-typeahead slds-text-align_center' }" aura:id ="address">
+                                                                <c:RE_GoogleMapsAutocomplete searchKey="{!questionWrapper.sResponse}" bselectedaddress="{!v.bisValueSelected}" aura:id ="required_fld"/>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                    </aura:if>
+                                                    <aura:if isTrue="{!v.bIsMeterVisible}">
+                                                        <span class="slds-show_inline-block slds-m-right_xx-small question-number">{!key}.</span><span class="question-text"> {!questionWrapper.sQuestion}</span>
+                                                        <lightning:input class="address-email-input" value="{!questionWrapper.sResponse}"/> <!-- Lightning Valuate - Anuj -->
+                                                    </aura:if>
+                                                    
+                                                </aura:if>
+                                                
+                                                <!--for radio button --> 
+                                                <aura:if isTrue="{!questionWrapper.sAnswerType =='Radio Button'}">
+                                                    <div class="slds-grid">
+                                                        
+                                                        <aura:if isTrue="{!v.bIsMeterVisible}">
+                                                            <span class="slds-show_inline-block slds-m-right_xx-small question-number">{!key}.</span>
+                                                        </aura:if>
+                                                        <lightning:radioGroup name="{!questionWrapper.questionId}"
+                                                                              options="{! questionWrapper.lstOptions}"
+                                                                              label="{!questionWrapper.sQuestion}"
+                                                                              value="{!questionWrapper.sResponse}"
+                                                                              type="radio"
+                                                                              tabindex="0"
+                                                                              onchange="{!c.handleAnswerClick}"/>
+                                                    </div>
+                                                </aura:if>
+                                                <!--  -->
+                                                
+                                                <!-- For number -->
+                                                <aura:if isTrue="{!questionWrapper.sAnswerType =='Number'}">
+                                                    <span class="slds-show_inline-block slds-m-right_xx-small question-number">{!key}.</span><span class="question-text"> {!questionWrapper.sQuestion}</span>
+                                                    <lightning:input aura:id ="questionInput" type="number" class="address-email-input" value="{!questionWrapper.sResponse}"  onkeydown="{!c.checkInput}" pattern="[0-9]*" onchange= "{!c.preventTextEntery}" onkeyup="{!c.preventTextEntery}" id="{!questionWrapper}"/> <!-- Lightning Valuate - Anuj -->
+                                                </aura:if>
+                                                <!-- -->
+                                                
+                                                
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="slds-text-align_center slds-m-top_xx-large assessment-btn-section">
+                                            <aura:if isTrue="{!key>0}">
+                                                <lightning:button name="{!key}" class="slds-p-horizontal_large slds-button slds-m-right_xx-small" onclick="{!c.handlePrevious}">{!$Label.c.previous}</lightning:button>
+                                            </aura:if>
+                                            <aura:if isTrue="{!key+1==v.questions.length}">
+                                                <lightning:button name="{!key}" variant="brand" class="slds-p-horizontal_x-large slds-button" value="{!questionWrapper.bIsRequired}" onclick="{!c.handleSubmit}" disabled="{!v.bsubmitdisabled}">{!$Label.c.submit}</lightning:button>
+                                                <aura:set attribute="else">
+                                                    <lightning:button name="{!key}" value="{!questionWrapper.bIsRequired}" variant="brand" class="slds-p-horizontal_x-large slds-button" onclick="{!c.handleNext}">{!$Label.c.next}</lightning:button>
+                                                </aura:set>
+                                            </aura:if>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </aura:iteration>
+                    </div>
+                   
+                </aura:set>
+            </aura:if>
+            
+        </aura:set>
+    </aura:if>
+</aura:component>

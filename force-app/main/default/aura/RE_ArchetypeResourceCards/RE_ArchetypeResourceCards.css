@@ -1,0 +1,189 @@
+/*css related to card expand collapse*/
+.THIS .card-opened .card-toggle-section{
+    display:block;
+}
+.THIS .card-opened .accordion-arrow{
+    transform:rotate(180deg);
+}
+.THIS .goal-expanded .details-card{
+    display:block;
+}
+.THIS .myPlanCard-hover:hover {
+    background-color: t(RENavActiveBG);
+}
+.THIS .card-opened .myPlanCard-hover:hover{
+    background-color: unset;
+}
+.THIS .category-closed .category-arrow-section svg{
+    transform:rotate(180deg);
+} 
+.THIS .category-closed .category-data{
+    display:none;
+}
+.THIS .search-spinner{
+    position: fixed;
+}
+/************************************/
+.THIS .toggle-arrow:focus{
+    outline:none;
+}
+.THIS .card-description:focus{
+    outline:none;
+}
+.THIS .goal-title{
+    line-height: 1.5rem;
+    font-size:t(RESize18);
+}
+.THIS .resource-link:hover{
+    text-decoration:underline;
+}
+.THIS .resource-link:focus{
+    color:t(REResourceBlue);
+}
+.THIS .see-all-resource-btn:focus{
+    box-shadow:unset;
+    color:t(REResourceBlue);
+}
+.THIS .card-btn-section .slds-button_brand svg{
+    fill:t(REWhite);
+}
+.THIS .card-btn-section .slds-button_brand{
+    display:flex;
+    align-items:center;
+}
+/*.THIS .particular-resource .cards-goal .cards-goal-border-section{
+    border-top:0.0625rem solid t(REGreyFieldBorder);
+}*/
+.THIS .cards-section-heading {
+    background-color: t(REBasic);
+    align-items: center;
+    /*background-color:t(RESecondaryBeta);
+    color:t(REWhite);*/
+}
+.THIS .category-arrow-section svg{
+    fill:t(REBlack);
+    cursor:pointer;
+}
+.THIS .cards-section-heading .cards-section-heading-icon img{
+    margin:0;
+    transform:translate(0,-0.1875rem);
+    height: 1.8rem;
+    object-fit: contain;
+}
+.THIS .cards-section-category{
+    color:t(REBlack);
+    font-size: t(RESize22);	
+    line-height: 1.625rem;
+}
+.THIS .cards-section-resourcetype{
+    font-size:t(RESize14);
+    color: t(RENeutralBeta);
+}
+.THIS .card-all-resourcelink .all-resource-icon svg{
+    fill:t(REPrimary);
+    height: 0.5625rem;	
+    width: 0.625rem;
+}
+.THIS .card-more-info-section > div{
+    border-top:0.0625rem solid t(RElightGrey);
+}
+.THIS .card-footer-btn-section{
+    align-items: center;
+}
+.THIS .see-all-resource-btn{
+    color:t(REPrimary);
+    text-decoration: underline;
+}
+.THIS.background-color-share{
+    background:t(REMyPlanRBG);
+}
+.THIS .see-all:after{
+    content:"See All Resources";
+}
+.THIS .see-less:after{
+    content:"See Less Resources";
+}
+
+.THIS .resource-link,
+.THIS .resource-link:focus{
+    border: 0;
+    box-shadow: none;
+    line-height:unset;
+}
+.THIS .partner-name{
+    border-radius: 0.25rem;	
+    background-color:t(RESecondaryBeta); 
+    color:t(REWhite);
+    font-size: 0.75rem;
+}
+.THIS .partner-name-blank{
+    min-height: 1.45rem;
+}
+/********Mobile**********/
+@media screen and (max-device-width: 767px) {
+    .THIS .card-navigation-section a{
+        border: 1px solid t(REPrimary);
+        border-radius: 100%;
+    }
+    .THIS .card-navigation-section .card-navigation-txt{
+        font-family:'ProductSans-Medium';
+    }
+}
+/*Media Query for iPhone XR (Landscape)*/ 
+@media only screen and (min-width: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape){
+    .THIS .card-navigation-section a{
+        border: 1px solid t(REPrimary);
+        border-radius: 100%;
+    }
+    .THIS .card-navigation-section .card-navigation-txt{
+        font-family:'ProductSans-Medium';
+    }
+}
+/*Media Query for iPhone X (Landscape)*/ 
+@media only screen and (min-width: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape){
+    .THIS .card-navigation-section a{
+        border: 1px solid t(REPrimary);
+        border-radius: 100%;
+    }
+    .THIS .card-navigation-section .card-navigation-txt{
+        font-family:'ProductSans-Medium';
+    }
+}
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : portrait) {
+    .THIS .info-padding {
+        padding-left: 2rem;
+        word-break: break-all;
+    }  
+}
+@media screen and (max-device-width: 768px) {
+    .THIS .resource-link{
+        text-align:left;
+    }
+}
+.THIS #favorite-selected-img{
+    width: 1rem;
+}  
+.THIS .favorite-container{
+    border: 1px t(RElightGreyOpacity) solid;
+    border-radius: 0.3rem;
+    background: t(REMyPlanRBG);
+    padding: 0.35rem;
+    margin-right: 1rem;
+}
+.THIS .favorite-container img{
+    width: 1.5rem;
+}
+@media only screen and (max-device-width: 1024px){
+    .THIS .card-btn-section{
+        padding-top: 1.6rem;
+    }
+    .THIS .account-name{
+        min-height: 1.2rem;
+    }
+    .THIS .favorite-container{
+        margin-right: 0.5rem;
+    }
+    .THIS .favorite-container img{
+        width: 1rem;
+    }
+}

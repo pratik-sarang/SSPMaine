@@ -1,0 +1,59 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" >
+    <aura:attribute name="menus" type="Object[]"/>
+    <aura:attribute name="menuStructure" type="String" />
+    <aura:attribute name="selectedCategory" type="String" />
+    <aura:attribute name="categories" type="List"/>
+    <aura:attribute name="categoriesList" type="List"/>
+    <aura:attribute name="subcategoryList" type="List"/>
+    <aura:attribute name="categoriesByLabel" type="Map"/>
+    <aura:attribute name="category" type="String"/>
+    <aura:handler name="init" value="{!this }" action="{!c.init }"/>
+    <aura:if isTrue="{!$Browser.isPhone}">
+        <div id="sidenav-level_1" class="mobile-menu mobile-menu-level-one slds-p-left_xx-small slds-p-bottom_large">
+            <span data-level="1" class="mobile-sidenav-back slds-m-left_small" onclick="{!c.handleCategoryBack}"><lightning:icon iconName="utility:chevronleft" class="slds-m-left_xx-small slds-m-right_xx-small" alternativeText="Back" size="x-small" />{!v.category}</span>
+            <ul class="search-menu-ul slds-p-horizontal_small">
+                <aura:iteration items="{!v.categoriesList}" indexVar="key" var="item">
+                    <li onclick="{!c.handleNext}" data-level="{!key}" data-value = "{!item.label}" class="slds-p-vertical_x-small body1Grey">
+                        <p>
+                            <span>{!item.label}</span>
+                        </p>  
+                        <lightning:icon iconName="utility:right" size="x-small" alternativeText="right"/>
+                        <ul class="search-menu-ul search-menu-ul-level-two slds-p-left_small slds-hide">
+                            <aura:iteration items="{!v.subcategoryList}" indexVar="subkey" var="subitem">
+                                <li data-level="lastlevel" data-value = "{!subitem.value}" data-parent = "{!subitem.parent}" data-domain ="{!v.category}" class="slds-p-horizontal_small slds-p-vertical_x-small body1 dd-ga-menu-subcatg-type">{!subitem.name}</li> 
+                            </aura:iteration>
+                        </ul>   
+                    </li>
+                </aura:iteration>
+            </ul>
+        </div>
+         <!-- added Container class for passing menu-subcatgare values for GA [CHFS Developer Mohan-1/29/2020]  -->
+        <div id="sidenav-level_2" class="mobile-menu slds-p-left_xx-small slds-p-bottom_large slds-hide">
+            <span data-level="2" class="mobile-sidenav-back slds-m-left_small" onclick="{!c.handleSubCategoryBack}"><lightning:icon iconName="utility:chevronleft" class="slds-m-left_xx-small slds-m-right_xx-small" alternativeText="Back" size="x-small" />{!v.selectedCategory}</span>
+            <ul class="search-menu-ul slds-p-horizontal_small dd-ga-ul-menu-subcatg-type">
+                <aura:iteration items="{!v.subcategoryList}" indexVar="subkey" var="subitem">
+                    <li data-level="lastlevel" data-value = "{!subitem.value}" data-parent = "{!subitem.parent}" data-domain ="{!v.category}" onclick="{!c.handleSubNext}" class="slds-p-vertical_x-small body1Grey">{!subitem.name}</li> 
+                </aura:iteration>
+            </ul> 
+        </div>
+        <aura:set attribute="else">
+            <div class="slds-p-left_xx-large slds-p-bottom_large menu-container">
+                <ul class="search-menu-ul search-menu-ul-level-one">
+                    <aura:iteration items="{!v.categoriesList}" indexVar="key" var="item">
+                        <li tabindex="0" onfocus="{!c.handleNext}" onmouseenter="{!c.handleNext}" data-level="{!key}" data-value = "{!item.label}" class="slds-p-horizontal_small slds-p-vertical_x-small body1">
+                            <p>
+                                <span>{!item.label}</span>
+                            </p>
+                            <!-- added Container class for passing menu-subcatgare values for GA [CHFS Developer Mohan-1/29/2020]  -->
+                            <ul class="search-menu-ul search-menu-ul-level-two slds-p-left_small display-none dd-ga-ul-menu-subcatg-type">
+                                <aura:iteration items="{!v.subcategoryList}" indexVar="subkey" var="subitem">
+                                    <li tabindex="0" data-level="lastlevel" data-value = "{!subitem.value}" data-parent  = "{!subitem.parent}" data-domain ="{!v.category}" onkeydown="{!c.handleSubNext}" onclick="{!c.handleSubNext}" class="slds-p-horizontal_small slds-p-vertical_x-small body1">{!subitem.name}</li> 
+                                 </aura:iteration>
+                            </ul>                  
+                        </li>
+                    </aura:iteration>
+                </ul>
+            </div>
+        </aura:set>
+    </aura:if>
+</aura:component>

@@ -1,0 +1,3 @@
+<design:component label="SSP Custom Theme Layout">
+    <design:attribute name="showLeftNavigation" label="Show Left Navigation"/>	
+</design:component>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Pre-Screening-Income Detail</label>
+    <protected>false</protected>
+    <values>
+        <field>IsJSONBasedPage__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>JsonLayoutSchema__c</field>
+        <value xsi:type="xsd:string">{
+&quot;uniqName&quot; : &quot;PS_Application&quot;,
+&quot;title&quot; : &quot;PS_Application&quot;,
+&quot;profiles&quot; : &quot;all&quot;,
+&quot;pageType&quot; : &quot;detail&quot;,
+&quot;pageTitle&quot;: &quot;sspIRDetails&quot;,
+&quot;pageSubtitle&quot;:&quot;sspCompleteIrQuestion&quot;,
+&quot;exitBtnTitle&quot;:&quot;sspExitDashboardTitle&quot;,
+&quot;fields&quot; : [ {
+&quot;uniqName&quot; : &quot;grossIncome&quot;,
+&quot;name&quot; : &quot;grossIncome&quot;,
+&quot;label&quot; : &quot;sspGrossIncome&quot;,
+&quot;required&quot;:true,
+&quot;missValueMsg&quot; : &quot;sspRequiredValidator&quot;,
+&quot;formatter&quot;:&quot;currency&quot;,
+&quot;rangeUnderflowMsg&quot;: &quot;sspPsToolInputRangeFlowMsg&quot;,
+&quot;rangeOverflowMsg&quot;:&quot;sspPsToolInputRangeFlowMsg&quot;,
+&quot;minValue&quot;: &quot;0&quot;,
+&quot;maxValue&quot;: &quot;9999999999.99&quot;,
+&quot;step&quot;:0.01,
+&quot;stepMismatchMsg&quot;:&quot;sspPsToolInputRangeFlowMsg&quot;,
+&quot;badTypeMsg&quot;:&quot;sspPsToolInputRangeFlowMsg&quot;,
+&quot;badInputMsg&quot;: &quot;sspPsToolInputRangeFlowMsg&quot;,
+&quot;fieldCol&quot;: &quot;6-of-12&quot;
+},
+{
+&quot;uniqName&quot; : &quot;checkingSavingIncome&quot;,
+&quot;name&quot; : &quot;checkingSavingIncome&quot;,
+&quot;label&quot; : &quot;sspCheckingSavingIncome&quot;,
+&quot;required&quot;:true,
+&quot;missValueMsg&quot; : &quot;sspRequiredValidator&quot;,
+&quot;formatter&quot;:&quot;currency&quot;,
+&quot;rangeUnderflowMsg&quot;: &quot;sspPsToolInputRangeFlowMsg&quot;,
+&quot;rangeOverflowMsg&quot;:&quot;sspPsToolInputRangeFlowMsg&quot;,
+&quot;minValue&quot;: &quot;0&quot;,
+&quot;maxValue&quot;: &quot;9999999999.99&quot;,
+&quot;step&quot;:0.01,
+&quot;stepMismatchMsg&quot;:&quot;sspPsToolInputRangeFlowMsg&quot;,
+&quot;badTypeMsg&quot;:&quot;sspPsToolInputRangeFlowMsg&quot;,
+&quot;badInputMsg&quot;: &quot;sspPsToolInputRangeFlowMsg&quot;,
+&quot;fieldCol&quot;: &quot;6-of-12&quot;
+}]
+}</value>
+    </values>
+    <values>
+        <field>LightningComponentName__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>PageDisplayName__c</field>
+        <value xsi:type="xsd:string">Income Details</value>
+    </values>
+    <values>
+        <field>PageName__c</field>
+        <value xsi:type="xsd:string">Income Details</value>
+    </values>
+    <values>
+        <field>Page_Display_Name_View__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>URL__c</field>
+        <value xsi:nil="true"/>
+    </values>
+</CustomMetadata>

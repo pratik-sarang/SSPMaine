@@ -1,0 +1,43 @@
+<!--
+ * Component Name    : RE_Profile
+ * Owner             : Payal Dubela
+ * Created Date      : 07/08/2019
+ * Description       : Registration Page for Resident
+ *
+ *                            M O D I F I C A T I O N   L O G                                          
+ *
+ *  Date        Developer       Description                                                         
+ *  **************************************************************************
+ 
+ *  07/08/2019  Payal	        Initial Development
+-->
+<aura:component >
+    
+    <aura:attribute name="archetype" type="Object" 
+                    description= "this attribute is used to store archetypes"/>
+    <aura:attribute name="archetypeSelected" type="Boolean" 
+                    description= "this attribute is used to store archetypes"/>
+    
+    
+    
+        <div class="slds-visual-picker slds-visual-picker_medium slds-m-bottom_medium hoverBorder">
+            <input type="checkbox" id="{!v.archetype.Name}" name="{!v.archetype.Name}" checked="{!v.archetypeSelected}" onchange="{!c.onChange}"/>
+            <label for="{!v.archetype.Name}">
+                <span class="slds-visual-picker__body slds-p-vertical_xx-small">
+                    <span class="slds-text-title caption2">{!v.archetype.Title__c}</span>
+                </span>
+                <span class="slds-visual-picker__figure slds-visual-picker__icon">
+                    <span class="slds-is-selected">
+                        <span class="slds-icon_container">
+                            <lightning:icon iconName="utility:check" alternativeText="{!v.archetype.Title__c}" />
+                        </span>
+                    </span>
+                    <span class="slds-is-not-selected">
+                        <span class="slds-icon_container">
+                            <aura:unescapedHtml value="{!v.archetype.Image__c}"/>
+                        </span>
+                    </span>
+                </span>
+            </label>
+        </div>
+</aura:component>

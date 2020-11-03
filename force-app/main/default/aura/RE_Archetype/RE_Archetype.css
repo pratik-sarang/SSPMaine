@@ -1,0 +1,154 @@
+/*Discover Resource Pop-Up*/
+.THIS.discover-resource-popup .slds-modal__container{
+    width:35%;
+}
+.THIS.discover-resource-popup .location-icon{
+    position: absolute;
+    right: -0.3125rem;
+    top: 0.4375rem;
+}
+.THIS.discover-resource-popup ::-ms-clear {
+    margin-right:0.5rem;
+}
+/*************************/
+.THIS .archtype-map-section{
+    position:relative;
+}
+.THIS .archtype-map-section .showAllLocation{
+    position:absolute;
+    top: 2.25rem;
+    left: 0.75rem;
+}
+.THIS .archetypeBanner{
+    position: relative;
+}
+
+.THIS .empty-div{
+    height: 20rem;
+    background: transparent;
+}
+.THIS .rich-text{
+    position: fixed;
+    left: 0;
+    right: 0;
+    /*z-index: -1;*/
+}
+.THIS .archtype-content{
+    position: relative;
+    background-color: t(REWhite);
+}
+.THIS .borderBottom{
+    border-bottom: 0.0625rem solid t(RElightGrey);
+}
+.THIS .overlaySlider{
+    color: t(REWhite);
+    position: absolute;
+    top: 13rem;
+}
+.THIS .banner-titleSize{
+    font-size: 1.125rem;
+    line-height: 1;
+}
+.THIS .bannerText{
+    font-size: 2.125rem;
+    font-family: ProductSans-Regular;
+}
+.THIS .slds-icon_container.slds-input__icon{
+    left: 90%;
+}
+/********Mobile**********/
+@media screen and (max-device-width: 767px) {
+    .THIS .empty-div {
+        height: 8rem;
+    }
+    .THIS .archtype-map-section{
+        position: relative;
+        top: -3rem;
+    }
+    .THIS .bannerText{
+        font-size: 1.5rem;
+    }
+    .THIS .banner-titleSize{
+        font-size: 1rem;
+    }
+}
+/********Mobile Landscape**********/
+@media screen and (max-device-width: 767px) and (orientation : landscape) {
+    .THIS .overlaySlider{
+        top: 3rem;
+        padding-left: 2rem;
+    }
+}
+/*Media Query for iPhone X (Landscape)*/
+@media only screen and (min-width: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape){
+    .THIS .archtype-map-section{
+        top: -3rem;
+    }
+    .THIS .overlaySlider{
+        top: 8rem;
+    }
+}
+/*Media Query for iPhone XR (Landscape)*/ 
+@media only screen and (min-width: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape){
+    .THIS .archtype-map-section{
+        top: -0.7rem;
+    }
+    .THIS .overlaySlider{
+        top: 9rem;
+    }
+    .THIS .archetypeFilter{
+        padding-top: 2.5rem;
+    }    
+}
+@media screen and (max-device-width: 414px) {
+    .THIS .archetype-cards{
+        padding:0; 
+    }
+}
+@media screen and (max-device-width: 768px) {
+    .THIS .parallax{
+        min-height: 9.375rem;
+    }
+}
+@media screen and (max-device-width: 375px) {
+    .THIS .parallax{
+        min-height: 5.9375rem;
+        background-position: 0 5.75rem;
+    }
+}
+@media only screen and (max-device-width:842px){
+    .THIS.discover-resource-popup .slds-modal__container{
+        width:85%;
+    }
+}
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : portrait) {
+    /* Iphone 6 portrait*/
+    .THIS .overlaySlider{
+        top: 3rem;
+        padding-left: 2rem;
+    }
+}
+@media all and (max-width : 1024px) {  
+    .THIS .archetype-cards{
+        padding:0;
+    }
+}
+/*Ipad Portrait*/
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation:portrait) {
+    .THIS .overlaySlider{
+        top: 6rem;
+    }
+    .THIS .empty-div{
+        height: 16rem;
+    }
+}
+/*Ipad Landscape*/
+@media (height: 768px) and (orientation: landscape) and (width: 1024px){
+    .THIS .archetypeFilter{
+        padding-top: 0;
+    }
+    .THIS .archtype-map-section{
+        top:0;
+        padding-left:0.8rem;
+    }
+}

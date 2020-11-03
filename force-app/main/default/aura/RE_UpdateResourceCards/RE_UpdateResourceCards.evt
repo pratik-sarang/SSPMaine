@@ -1,0 +1,6 @@
+<aura:event type="APPLICATION" description="Event template" >
+    <aura:attribute name="archetypeId" type="String" />
+    <aura:attribute name="subarchetypeId" type="String" />
+    <aura:attribute name="domains" type="String" />
+    <aura:attribute name="zipCode" type="String" />
+</aura:event>

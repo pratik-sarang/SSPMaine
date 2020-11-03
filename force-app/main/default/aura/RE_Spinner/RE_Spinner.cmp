@@ -1,0 +1,18 @@
+<aura:component >
+    <div class="siteforceSpinnerManager siteforcePanelsContainer">
+        <div class="mask"></div>
+        <div class="loadingCon global siteforceLoadingBalls">
+            <span class="loadingBall first"></span>
+            <span class="loadingBall second"></span>
+            <span class="loadingBall third"></span>
+            <span class="assistiveText">{!$Label.c.RE_Loading}</span>
+        </div>
+    </div>
+	<!--<div class="slds-spinner_container">
+      <div role="status" class="slds-spinner slds-spinner- -medium slds-spinner- -brand">
+        <span class="slds-assistive-text" aria-live="assertive">{!$Label.c.Spinner_Loading}</span>
+        <div class="slds-spinner__dot-a"></div>
+        <div class="slds-spinner__dot-b"></div>
+      </div>
+    </div>-->
+</aura:component>

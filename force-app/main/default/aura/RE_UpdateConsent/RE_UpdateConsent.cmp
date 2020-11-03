@@ -1,0 +1,25 @@
+<!--
+ * Component Name    : RE_UpdateConsent
+ * Owner             : DELOITTE
+ * Created Date      : 09/04/2019
+ * Description       : Updates consent record from Email
+ * Author 			 : Lagan Kankane
+ *
+ *                            M O D I F I C A T I O N   L O G                                          
+ *
+ *  Date        Developer       Description                                                         
+ *  **************************************************************************
+
+
+-->
+
+<aura:component controller="RE_RequestConsentModalCtrl" implements="forceCommunity:availableForAllPageTypes" access="global" >
+    <aura:attribute type = "string" name = "sConsentId" />
+    <aura:attribute type = "boolean"  name = "bAccessgiven" default = "false" />
+    <aura:handler name="init" value="{!this}" action="{!c.doinIt}" />
+    
+    <aura:attribute name="isSpinnerActive" type="Boolean" description= "this attribute is used to store the state of the spinner"/>
+    <c:RE_UtilityServerCallerCmp aura:id="bSuper" isSpinnerActive="{!v.isSpinnerActive}"/> 
+    
+    
+</aura:component>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Arabic</label>
+    <protected>false</protected>
+    <values>
+        <field>SSP_InterpreterModalContent__c</field>
+        <value xsi:type="xsd:string">إذا لم تكن تتحدث الإنجليزية وتحتاج إلى المساعدة في فهم هذه المعلومات، يرجى الاتصال على هاتف
+رقم 8959-306-855-1 وسوف يتم توفير مترجم فوري مجانًا.</value>
+    </values>
+</CustomMetadata>

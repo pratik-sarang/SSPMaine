@@ -1,0 +1,136 @@
+<!--
+ * Component Name    : RE_RequestConsentModal
+ * Owner             : DELOITTE CONSULTING
+ * Created Date      : 07/17/2019
+ * Description       : Request Consent Modal
+ *
+ *                            M O D I F I C A T I O N   L O G                                          
+ *
+ *  Date        Developer       Description                                                         
+ *  **************************************************************************
+ *  07/17/2019  Abhijeet        Initial UI Development
+-->
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" controller="RE_RequestConsentModalCtrl">
+    <!--Boolean attribute to indicate if modal is open or not 
+       default value is false as modal is closed when page is loaded 
+    -->
+    <aura:attribute name="isModalOpen" type="boolean" default="false"/>
+    <aura:attribute name = "clientDetails" type ="Contact" default="{ 'sobjectType': 'Contact'}"/>
+    <aura:attribute name = "consentDetails" type ="Consent__c" default="{ 'sobjectType': 'Consent__c'}"/>
+
+    <aura:attribute name = "hasConsentToView" type ="Boolean" default ="false"/>
+    <aura:attribute name = "hasActiveConsent" type ="Boolean" default ="false"/>
+    <aura:attribute name = "hasNoActiveConsent" type ="Boolean" default ="false"/>
+    <aura:attribute name="clientId" type="String" default= "" 
+                    description= "this attribute is used to store the recordId"/>
+    <aura:attribute name="firstName" type="String" default= "" 
+                    description= "this attribute is used to store the first name of client"/>
+    <aura:attribute name="lastName" type="String" default= "" 
+                    description= "this attribute is used to store the last name of client"/>
+    <aura:attribute name = "isLoading" type ="Boolean" default="false"/>
+    <aura:attribute name="isSpinnerActive" type="Boolean" description= "this attribute is used to store the state of the spinner"/>
+    <aura:attribute name="sverbalConsentOrigin" type="String"/>
+    
+    <aura:attribute name="bHasNoEmail" type="Boolean" default="false"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/> 
+    <aura:attribute name = "clientWrapper" type="sObject" default="{}"/>
+    <aura:attribute name = "isIEESData" type ="Boolean" default="false"/>
+    <aura:attribute name="isClientDetail" type="Boolean" default="false"/>
+    <aura:attribute name="hideTextBtn" type="Boolean" default="false"/>
+    <aura:registerEvent name="CloseModalevent" type="c:RE_CloseParentModalEvent"/>
+
+    <c:RE_UtilityServerCallerCmp aura:id="bSuper" isSpinnerActive="{!v.isSpinnerActive}"/> 
+    
+    <div class="request-consent-modal">
+        
+        <!--Use aura:if tag to display/hide popup based on isModalOpen value-->  
+        <aura:if isTrue="{!v.isModalOpen}">
+            
+            <!-- Modal/Popup Box starts here-->
+            <section role="dialog" aria-modal="true" aura:id="ReqConsentModal"  class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container">
+                    <div class="slds-modal__content slds-p-horizontal_medium slds-p-bottom_medium slds-p-top_x-small">
+                        <div class="modal-lg-headingcontainer">
+                            <div class="modal-lg-heading-button">
+                                <div class="modal-lg-heading" tabindex="0"> {!$Label.c.RE_Request_Access}</div>
+                                <lightning:buttonIcon class="modal-close" iconName="utility:close" alternativeText="close"  onclick="{!c.closeModel}" size="small" />   
+                            </div>
+                        </div>
+                        <aura:if isTrue="{!v.hasActiveConsent}">
+                            <div  id="modal-content-id-1">
+                                <p class="body1">{!format($Label.c.RE_HasActiveConsent,v.clientDetails.Name)}</p>
+                            </div>
+                        </aura:if>
+                        <aura:if isTrue="{!v.hasNoActiveConsent}">
+                            <div id="modal-content-id-1">
+                                <p class="body1">{!format($Label.c.RE_HasNoActiveConsent,v.clientDetails.Name)}</p>
+                                <aura:if isTrue="{!v.hasConsentToView}">
+                                    <div class="slds-m-top_medium consent-date">
+                                       <aura:if isTrue="{!! or(v.hideTextBtn,v.isIEESData)}">
+                                        <div class="body1Grey">{!$Label.c.Last_Text_Date_Time}: {!v.consentDetails.LastTextDate__c}</div>
+                                        </aura:if>
+                                        <div class="body1Grey"> {!$Label.c.RE_LastEmailDate}: {!v.consentDetails.LastEmailDate__c}</div>
+                                    </div>   
+                                </aura:if>
+                            </div>
+                        </aura:if>
+                        <div class="modal-lg-footer-button slds-m-top_large">
+                            <lightning:button variant="neutral"
+                                              class="slds-p-horizontal_medium slds-m-right_xx-small"
+                                              label="{!$Label.c.cancel}"
+                                              title="{!$Label.c.cancel}"
+                                              onclick="{! c.closeModel }"/>
+                            <aura:if isTrue="{!v.hasNoActiveConsent}">
+                                <lightning:button variant="brand"
+                                                  class="slds-p-horizontal_medium slds-m-right_xx-small"
+                                                  label="{!$Label.c.SendEmail}"
+                                                  title="{!$Label.c.SendEmail}"
+                                                  onclick="{!c.sendEmail}"/>
+                                 <aura:if isTrue="{!!or(v.hideTextBtn, v.isIEESData)}">
+                                <lightning:button variant="brand"
+                                                  class="slds-p-horizontal_medium slds-m-right_xx-small"
+                                                  label="{!$Label.c.Send_Text}"
+                                                  title="{!$Label.c.Send_Text}"
+                                                  onclick="{!c.sendText}"/>	
+                                </aura:if>
+                                <lightning:button variant="brand"
+                                                  class="slds-p-horizontal_medium slds-m-right_xx-small"
+                                                  label="{!$Label.c.Verbal_Consent}"
+                                                  title="{!$Label.c.Verbal_Consent}"
+                                                  onblur="{!c.moveFocusToTop}"
+                                                  onclick="{!c.handleVerbalConsent}"/>
+                            </aura:if>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open" aura:id="ModalReqConsent"></div>
+        </aura:if>
+        
+        <aura:if isTrue="{!v.bHasNoEmail}">
+            <section role="dialog" aria-modal="true"
+                     class="slds-modal slds-fade-in-open" aura:id="NoEmailModal">
+                <div class="slds-modal__container">
+                    <div class="slds-modal__content slds-p-horizontal_medium slds-p-bottom_medium slds-p-top_x-small no-email-listed">
+                        <div class="modal-lg-headingcontainer">
+                            <div class="modal-lg-heading-button">
+                                <div class="modal-lg-heading" tabindex="0"> {!$Label.c.RE_No_Email_Listed} </div>
+                                <lightning:buttonIcon class="modal-close" iconName="utility:close" alternativeText="close"  onclick="{!c.closeEmailModal}" size="small" />   
+                            </div>
+                        </div>
+                        <div  id="modal-content-id-1">
+                            <p class="body1"> {!$Label.c.RE_No_Email_Listed_Text}
+                            <a href="javascript:void(0)" onclick="{!c.navigateToRegistration}" class="slds-m-top_small">&nbsp;{!$Label.c.RE_KOG_link}</a>.</p>
+                            <div class="slds-text-align_right">
+                                <lightning:button variant="brand" class="slds-p-horizontal_x-large slds-m-top_small" label="{!$Label.c.ok}" title="{!$Label.c.ok}" onblur="{!c.moveFocusToTop}" onclick="{!c.closeEmailModal}"/>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open" aura:id="ModalbackdropEmail"></div>
+            
+        </aura:if>
+    </div>
+</aura:component>

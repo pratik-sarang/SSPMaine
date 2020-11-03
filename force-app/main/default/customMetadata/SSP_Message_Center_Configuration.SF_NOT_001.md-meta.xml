@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>SF_NOT_001</label>
+    <protected>false</protected>
+    <values>
+        <field>Applicable_Role__c</field>
+        <value xsi:type="xsd:string">Primary Applicant</value>
+    </values>
+    <values>
+        <field>Body_Spanish__c</field>
+        <value xsi:type="xsd:string">Sus resultados de elegibilidad están disponibles. Vea los Resultados de elegibilidad completos y los siguientes pasos que es necesario dar en la página Beneficios.</value>
+    </values>
+    <values>
+        <field>Body__c</field>
+        <value xsi:type="xsd:string">Your eligibility results are available. View the full Eligibility Results and needed next steps on the Benefits page.</value>
+    </values>
+    <values>
+        <field>Button_Alt_Text__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Button_Name__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Code__c</field>
+        <value xsi:type="xsd:string">SF-NOT-001</value>
+    </values>
+    <values>
+        <field>Communication_Body_Spanish__c</field>
+        <value xsi:type="xsd:string">Sus resultados de elegibilidad están disponibles. Vea los Resultados de elegibilidad completos y los siguientes pasos que es necesario dar en kynect.ky.gov/benefits</value>
+    </values>
+    <values>
+        <field>Communication_Body__c</field>
+        <value xsi:type="xsd:string">Your eligibility results are available. View the full Eligibility Results and needed next steps on kynect.ky.gov/benefits</value>
+    </values>
+    <values>
+        <field>Due_Date_criterion__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Expiry_Date_Criterion__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Mobile_Button_Action__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Mobile_Button_Alt_Text__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Mobile_Button_Name__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Send_Reminder_Criteria__c</field>
+        <value xsi:type="xsd:string">5 days after creation if notification is unread</value>
+    </values>
+    <values>
+        <field>Severity__c</field>
+        <value xsi:type="xsd:string">Normal</value>
+    </values>
+    <values>
+        <field>Title_Spanish__c</field>
+        <value xsi:type="xsd:string">Resultados de elegibilidad y siguientes pasos</value>
+    </values>
+    <values>
+        <field>Title__c</field>
+        <value xsi:type="xsd:string">Eligibility Results and Next Steps</value>
+    </values>
+    <values>
+        <field>Trash_Action__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>button_Action__c</field>
+        <value xsi:nil="true"/>
+    </values>
+</CustomMetadata>

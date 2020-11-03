@@ -1,0 +1,412 @@
+<!--
+ * Component Name    : RE_ReferralDetails
+ * Owner             : DELOITTE CONSULTING
+ * Created Date      : 05/09/2019
+ * Description       : Referral Details
+ *
+ *                            M O D I F I C A T I O N   L O G                                          
+ *
+ *  Date        Developer       Description                                                         
+ *  **************************************************************************
+ *  05/02/2019  Abhishek        	Initial UI Development
+ *  05/06/2019  Prashant			Backend Field Integration
+-->
+
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" controller="RE_ReferralDetailsCtrl" >
+    <aura:attribute name="mydata" type="Object"/>
+    <!-- <aura:attribute name="mycolumns" type="List"/>  -->
+    <aura:attribute name="hideCheckbox" type="Boolean" default="true"/>
+    
+    <aura:attribute name="showOptoutPopup" type="Boolean" default="false"/>
+    <aura:attribute name="bmasked" type="Boolean" default="false"/>
+    
+    
+    
+    <aura:attribute name="noteObject" type="Object"/>
+    <aura:attribute name="showEditModal" type="boolean" default="false"/>
+    <aura:attribute name="isGreatClicked" type="Boolean" default="false"/>
+    <aura:attribute name="isNtGoodClicked" type="Boolean" default="false"/>
+    <aura:attribute name="showFdbkModal" type="Boolean" default="false"/>
+    <aura:attribute name="isFbkSubmitEnabled" type="Boolean" default="true"/>
+    <aura:attribute name="isSaveEnabled" type="Boolean" default="true"/>
+    <aura:attribute name="bisstatuschange" type="Boolean" default="false"/>
+    <aura:attribute name="bshowclosureinfo" type="Boolean" default="false"/>
+    
+    <aura:attribute name="oldStatus" type="String"/>
+    <aura:attribute name="statusReason" type="String"/>
+    
+    <aura:attribute name="objwrapper" type="Object" 
+                    description= "this attribute is used for the object wrapper"/>
+    <aura:attribute name="statusmap" type="Map" 
+                    description= "this attribute is used to store the status picklist values"/>
+    <aura:attribute name="usermap" type="Map" 
+                    description= "this attribute is used to store the user names"/>
+    <aura:attribute name="outcomemap" type="Map" 
+                    description= "this attribute is used to store the outcome picklist values"/>
+    <aura:attribute name="outcomereasonmap" type="Map" 
+                    description= "this attribute is used to store the outcome reason picklist values"/>
+    <aura:attribute name="picklistValues" type="String" default = "Status__c,OutcomeReason__c,Outcome__c"/>
+    <aura:attribute name="refrecId" type="String" default= "" 
+                    description= "this attribute is used to store the recordId"/> 
+    <aura:attribute name="additionalcomments" type="String" default= "" 
+                    description= "this attribute is used to store the additional comments"/>
+    <aura:attribute name="resident" type="String" default= "" 
+                    description= "this attribute is used to store the resident name"/> 
+    <aura:attribute name="phone" type="String" default= "" 
+                    description= "this attribute is used to store the Phone"/> 
+    <aura:attribute name="email" type="String" default= "" 
+                    description= "this attribute is used to store the Email"/> 
+    <aura:attribute name="referraldate" type="String" default= "" 
+                    description= "this attribute is used to store the referraldate"/> 
+    <aura:attribute name="organization" type="String" default= "" 
+                    description= "this attribute is used to store the organization"/> 
+    <aura:attribute name="referralmadeby" type="String" default= "" 
+                    description= "this attribute is used to store the referralmadeby"/>
+    <aura:attribute name="refName" type="String" default= "" 
+                    description= "this attribute is used to store the referral name"/>
+    <aura:attribute name="daysSinceOpened" type="String" default= "" 
+                    description= "this attribute is used to store the daysSinceOpened"/>
+    <aura:attribute name="showoutcomereason" type="Boolean" default="false"/>
+    <aura:attribute name="isReferralInbox" type="Boolean" default="true"/>
+    <aura:attribute name="OrgNotinSystem" type="string" default="In Progress - Org Not in System" 
+                    description="for status value remove from picklist bug fix"/>
+    
+    <aura:registerEvent name="CloseModalEvt" type="c:RE_OurTeamModalEvt"/>
+    
+    <!--[06/27/2019:Ashwin] - Changes done for server call from a common place-->
+    <aura:attribute name="isSpinnerActive" type="Boolean"/>
+    <c:RE_UtilityServerCallerCmp aura:id="bSuper" isSpinnerActive="{!v.isSpinnerActive}"/> 
+    <!-- -->
+    
+    <!-- displays a toast notification -->
+    <lightning:notificationsLibrary aura:id="notifLib" />
+    <!-- Attribute for referral notes starts -->
+    <aura:attribute name="sObject" type="Object" default="ContentNote"/>
+    <aura:attribute name="mycolumns" type="List"/>
+    <!--
+    <aura:attribute name="mycolumns" type="List" default = "[
+                                                            {label: 'Title', fieldName: 'Title', type: 'text',sortable : true},
+                                                            { label: 'Description', fieldName: 'Description', type: 'text',sortable : true},
+                                                            { label: 'Created Date', fieldName: 'CreatedDate', type: 'date',sortable : true},
+                                                            { label: 'Last Modified Date', fieldName: 'ModifiedDate', type: 'date',sortable : true},
+                                                            { label: 'Referred By', fieldName: 'CreatedBy', type: 'text',sortable : true}, 
+                                                            
+                                                            ]"/>
+    <aura:attribute name="numberOfReords" type="Integer" default ="10"/>
+    -->
+    <!-- Attributes for notes ends -->
+    
+    
+    
+    <aura:handler name="init" value="{! this }" action="{! c.init }"/>
+    
+    <div class="headingContainer"> 
+        <div class="backButton slds-m-bottom_x-small">
+            <lightning:icon iconName="utility:back" alternativeText="back" />
+            <aura:if isTrue="{!!v.isReferralInbox}">
+                <a href="javascript:void(0)" onclick="{!c.backToDataTable}">{!$Label.c.referaldetailsback}</a>
+            	<aura:set attribute="else">
+                  <a href="javascript:void(0)" onclick="{!c.backToDataTable}">{!$Label.c.referaldetailsbackoutbox}</a>
+                </aura:set>
+            </aura:if>
+        </div>      
+        <div class="headingButton slds-grid slds-wrap">
+            <h1 class="headingL1">{!$Label.c.referaldetailsheading}: <span class="referal-no">{!v.refName}</span></h1>
+            <aura:if isTrue="{!!v.isReferralInbox}">
+                <lightning:button class="{!v.isSaveEnabled?'slds-button slds-button_brand slds-p-horizontal_x-large slds-p-vertical_xxx-small refdetails-save-btn' : 'slds-button slds-button_brand slds-p-horizontal_x-large slds-p-vertical_xxx-small slds-float_right refdetails-save-btn fdbk-notgood-btn nopointer-events'}" onclick="{!c.openFdbkModal}">{!$Label.c.save}</lightning:button>
+            </aura:if>
+        </div>
+    </div>
+    <div class="slds-is-open slds-m-top_small" aria-hidden="false">
+        <div class="resinfo-Subhead">{!$Label.c.referralsourceinfo}</div> 
+        <div class="referal-detail-sections slds-grid slds-wrap slds-p-vertical_medium">    
+            <div class="slds-grid slds-wrap slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 details-mediaFigure">
+                <div class="slds-m-bottom_medium fieldWidth slds-large-size_1-of-3 slds-medium-size_1-of-2 slds-small-size_1-of-1 slds-p-right_large">                   
+                    <div class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-is-selected">
+                        <span class="slds-media__figure slds-listbox__option-icon">
+                            <span class="slds-icon_container slds-icon-utility-check slds-current-color">
+                                <lightning:icon iconName="utility:user" alternativeText="user" variant="user" size="small"/>
+                            </span>
+                        </span>
+                        <span class="slds-media__body">
+                            <span class="slds-truncate resMediaName" title="Accounts">
+                                <span class="slds-assistive-text"></span>{!$Label.c.resident}</span>
+                            <p class="resMediaContent"><a href="javascript:void(0)" onclick="{!c.handleResidentClick}" target="_blank" aria-label="{!$Label.c.resident}" class="slds-show--inline-block resident-name">{!v.resident}</a></p>
+                        </span>
+                    </div>
+                </div>
+                <div class="slds-m-bottom_medium fieldWidth slds-large-size_1-of-3 slds-medium-size_1-of-2 slds-small-size_1-of-1 slds-p-right_large">                    
+                    <div class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-is-selected">
+                        <span class="slds-media__figure slds-listbox__option-icon">
+                            <span class="slds-icon_container slds-icon-utility-check slds-current-color">
+                                <lightning:icon iconName="utility:phone_portrait" alternativeText="phone_portrait" variant="phone_portrait" size="small"/>
+                            </span>
+                        </span>
+                        <span class="slds-media__body">
+                            <span class="slds-truncate resMediaName" title="Accounts">
+                                <span class="slds-assistive-text"></span>{!$Label.c.phonenumber}</span>
+                            
+                            <p class="resMediaContent"><span href="javascript:void(0)" aria-label="{!$Label.c.phonenumber}" class="slds-show--inline-block resident-name">
+                               <aura:if isTrue="{!v.bmasked}">
+                                   **********
+                               <aura:set attribute="else">
+                                    {!v.phone} 
+                                </aura:set>
+                                  
+                                </aura:if>
+
+                                
+                                </span></p>
+                        </span>
+                    </div>
+                </div>
+                <div class="slds-m-bottom_medium fieldWidth slds-large-size_1-of-3 slds-medium-size_1-of-2 slds-small-size_1-of-1 slds-p-right_large">                    
+                    <div class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-is-selected">
+                        <span class="slds-media__figure slds-listbox__option-icon">
+                            <span class="slds-icon_container slds-icon-utility-check slds-current-color">
+                                <lightning:icon iconName="utility:email" alternativeText="email" variant="email" size="small"/>
+                            </span>
+                        </span>
+                        <span class="slds-media__body">
+                            <span class="slds-truncate resMediaName" title="Accounts">
+                                <span class="slds-assistive-text"></span>{!$Label.c.emailaddress}</span>
+                            <p class="resMediaContent"><span href="javascript:void(0)" aria-label="{!$Label.c.emailaddress}" class="slds-show--inline-block resident-name">
+                                <aura:if isTrue="{!v.bmasked}">
+                                   **********
+                               <aura:set attribute="else">
+                                    {!v.email}
+                                </aura:set>
+                                  
+                                </aura:if>
+                                
+                                </span></p>
+                        </span>
+                    </div>
+                </div>
+                <div class="slds-m-bottom_medium fieldWidth slds-large-size_1-of-3 slds-medium-size_1-of-2 slds-small-size_1-of-1 slds-p-right_large">                    
+                    <div class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-is-selected">
+                        <span class="slds-media__figure slds-listbox__option-icon">
+                            <span class="slds-icon_container slds-icon-utility-check slds-current-color">
+                                <lightning:icon iconName="utility:date_input" alternativeText="Date" variant="Date" size="small"/>
+                            </span>
+                        </span>
+                        <span class="slds-media__body">
+                            <span class="slds-truncate resMediaName" title="Accounts">
+                                <span class="slds-assistive-text"></span>{!$Label.c.referraldate}</span>
+                            <p class="resMediaContent"><span>{!v.referraldate}</span><span class="slds-m-left_x-small">{!v.daysSinceOpened}</span></p>
+                        </span>
+                    </div>
+                </div>
+                <div class="slds-m-bottom_medium fieldWidth slds-large-size_1-of-3 slds-medium-size_1-of-2 slds-small-size_1-of-1 slds-p-right_large">                    
+                    <div class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-is-selected">
+                        <span class="slds-media__figure slds-listbox__option-icon">
+                            <span class="slds-icon_container slds-icon-utility-check slds-current-color">
+                                <lightning:icon iconName="utility:company" alternativeText="Referral source" variant="Referral source" size="small"/>
+                            </span>
+                        </span>
+                        <span class="slds-media__body">
+                            <span class="slds-truncate resMediaName" title="Accounts">
+                                <span class="slds-assistive-text"></span>{!$Label.c.referralsource}</span>
+                            <p class="resMediaContent"><span href="javascript:void(0)" aria-label="{!$Label.c.referralsource}" class="slds-show--inline-block resident-name">{!v.organization}</span></p>
+                        </span>
+                    </div>
+                </div>
+                <div class="slds-m-bottom_medium fieldWidth slds-large-size_1-of-3 slds-medium-size_1-of-2 slds-small-size_1-of-1 slds-p-right_large">                    
+                    <div class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-is-selected">
+                        <span class="slds-media__figure slds-listbox__option-icon">
+                            <span class="slds-icon_container slds-icon-utility-check slds-current-color">
+                                <lightning:icon iconName="utility:questions_and_answers" alternativeText="Referal made by" variant="Referal made by" size="small"/>
+                            </span>
+                        </span>
+                        <span class="slds-media__body">
+                            <span class="slds-truncate resMediaName" title="Accounts">
+                                <span class="slds-assistive-text"></span>{!$Label.c.referralmadeby}</span>
+                            <p class="resMediaContent">{!v.referralmadeby}</p>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="slds-is-open slds-m-top_small" aria-hidden="false">
+        <div class="resinfo-Subhead">{!$Label.c.ReferralInformation}</div>
+        <div class="fieldWidth slds-large-size_1-of-3 slds-medium-size_1-of-2 slds-small-size_1-of-1 slds-m-top_medium slds-p-right_large">                    
+            <span class="resName">{!$Label.c.resourcename}</span>
+            <p class="resMediaContent"><span class="slds-show--inline-block resident-name">{!v.objwrapper.ResourceName}</span></p>
+        </div>
+        <div class="slds-grid slds-wrap slds-p-top_small refdetail-rsname-sec">
+            <div class="fieldWidth slds-col slds-size_6-of-12">
+                <div class="slds-p-right_small slds-p-bottom_medium">
+                    <lightning:select aura:id="refstatus" name="refstatus" label="{!$Label.c.status}" onchange="{!c.handleStatusChange}" value="{!v.objwrapper.Status}" disabled="{!v.isReferralInbox}">
+                        <aura:iteration items="{!v.statusmap}" var="item">
+                                     <option text="{!item.label}" value="{!item.value}" selected="{!item.selected}"/>
+                        </aura:iteration>
+                    </lightning:select>
+                </div>
+            </div>
+            <div class="fieldWidth slds-col slds-size_6-of-12">
+                <div class="slds-p-left_small slds-p-bottom_medium assignedto-dropdown">
+                    <lightning:select aura:id="assignedto" name='assignedto' label="{!$Label.c.assignedto}"  onchange="{!c.handleStatusChange}" value="{!v.objwrapper.OwnerId}" disabled="{!v.isReferralInbox}">
+                        <aura:iteration items="{!v.usermap}" var="item">
+                            <option text="{!item.label}" value="{!item.value}" selected="{!item.selected}"/>
+                        </aura:iteration>
+                    </lightning:select>
+                    
+                </div>
+            </div>
+        </div>
+        <aura:if isTrue="{!v.bshowclosureinfo}">
+        <div class="fieldWidth slds-large-size_1-of-3 slds-medium-size_1-of-2 slds-small-size_1-of-1 slds-p-right_large">                    
+            <span class="resName">{!$Label.c.RE_RefClosedBy}</span>
+            <p class="resMediaContent"><span class="slds-show--inline-block resident-name">{!v.objwrapper.sClosedByUser}</span></p>
+        </div> 
+        </aura:if>
+    </div>
+    <c:RE_Notes recid="{!v.refrecId}" Adddisabled="{!v.isSaveEnabled}" isReferralInbox="{!v.isReferralInbox}"/>
+    <aura:if isTrue="{!v.showEditModal}">
+        <div>
+            <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container">
+                    <header class="slds-modal__header">
+                        <lightning:buttonIcon iconName="utility:close" variant="bare" onclick="{!c.hideEditModal}" 
+                                              alternativeText="Close" class="slds-modal__close" />
+                        <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">{!$Label.c.editnote}</h2>
+                    </header>
+                    <div class="slds-modal__content edit-modal-body slds-p-around_medium" id="modal-content-id-1">
+                        <lightning:input type="text" label="{!$Label.c.title}" name="addSalami" value="{!v.noteObject.Name}" />
+                        <lightning:textarea name="myTextArea" value="{!v.noteObject.Industry}" label="{!$Label.c.description}" maxlength="300" />
+                    </div>
+                    <footer class="slds-modal__footer">
+                        <lightning:button variant="brand" label="{!$Label.c.cancel}" title="{!$Label.c.cancel}" onclick="{!c.hideEditModal}"/>
+                    </footer>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+        </div>
+    </aura:if>         
+    <!--This might be for the pop up    -->
+    <aura:if isTrue="{!v.showFdbkModal}">
+        <div class="fdbk-modal" >
+            <section role="dialog" class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container">
+                    <div class="slds-modal__content slds-p-horizontal_medium slds-p-bottom_medium slds-p-top_x-small" id="modal-content-id-1">
+                        <div class="modal-lg-headingcontainer">
+                            <div class="modal-lg-heading-button">
+                                <div class="modal-lg-heading" tabindex="0">{!$Label.c.tellabtexperience}</div>                          
+                            </div> 
+                        </div>                     
+                        <div class="caption2 slds-m-top_xx-small slds-m-bottom_xx-small"><span class="slds-required ">*</span>{!$Label.c.tellabtinteraction}</div>
+                        <div class="slds-m-bottom_small slds-grid slds-wrap feedback-btn-section" aria-label="{!$Label.c.tellabtinteraction}">
+                            <div class="slds-col slds-small-size_12-of-12 slds-large-size_6-of-12 slds-p-right_xx-small">
+                                <lightning:button class="{!v.isGreatClicked?'slds-p-horizontal_large slds-button slds-button_brand slds-p-vertical_x-small':'slds-p-horizontal_large slds-button slds-button_neutral slds-p-vertical_x-small'}" aura:id="great" onclick="{!c.handleLike}"><lightning:buttonIcon tabindex="-1" class="slds-button__icon_left" iconName="utility:like" variant="bare" alternativeText="great" /></lightning:button>
+                            </div>
+                            <div class="slds-col slds-p-right_xx-small slds-text-align_right slds-small-size_12-of-12 slds-large-size_6-of-12 yes-btn-section">
+                                <lightning:button class="{!v.isNtGoodClicked?'slds-p-horizontal_large slds-button slds-button_brand slds-p-vertical_x-small':'slds-p-horizontal_large slds-button slds-button_neutral slds-p-vertical_x-small'}" aura:id="notgood" onclick="{!c.handleLike}"><lightning:buttonIcon tabindex="-1" class="slds-button__icon_left" iconName="utility:dislike" variant="bare" alternativeText="not good" /></lightning:button>
+                            </div>
+                        </div> 
+                        
+                        <!-- Outcome starts here -->
+                        <div class="slds-m-bottom_small">                 
+                            <lightning:select aura:id="outcome" label="{!$Label.c.resource_provided}" onchange="{!c.handleStatusChange}" value="{!v.objwrapper.Outcome}" required="true">
+                                <option value="">{!$Label.c.none}</option>
+                                <aura:iteration items="{!v.outcomemap}" var="item">
+                                    <option text="{!item.label}" value="{!item.value}" selected="{!item.selected}"/>
+                                </aura:iteration>
+                            </lightning:select> 
+                        </div>
+                        
+                        <aura:if isTrue="{!v.showoutcomereason}">  
+                            <div class="slds-m-bottom_small">                 
+                                <lightning:select aura:id="feedbackstatus" label="{!$Label.c.reasonservicenot}" onchange="{!c.handleStatusChange}" value="{!v.objwrapper.OutcomeReason}" required="true">
+                                    <option value="">{!$Label.c.none}</option>
+                                    <aura:iteration items="{!v.outcomereasonmap}" var="item">
+                                        <option text="{!item.label}" value="{!item.value}" selected="{!item.selected}"/>
+                                    </aura:iteration>
+                                </lightning:select> 
+                            </div>
+                        
+                        </aura:if>   
+                        <div class="slds-m-bottom_small">
+                            <div class="slds-form-element">
+                                <!--<label class="slds-form-element__label" for="textarea-id-01">Additional Comments</label>-->
+                                <div class="slds-form-element__control add-comments-sec">
+                                    <lightning:textarea aura:id="comments" label="{!$Label.c.additionalcomments}" name="comments" value="{!v.objwrapper.AdditionalComments}" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-lg-footer-button slds-m-top_large">
+                            <lightning:button class="slds-p-horizontal_x-large slds-button slds-button_neutral slds-m-right_xx-small" onclick="{!c.closeFdbkModal}">{!$Label.c.cancel}</lightning:button>
+                            <div onkeydown="{!c.moveFocusToTop}">
+                            	<lightning:button disabled="{!v.isFbkSubmitEnabled}" class="slds-p-horizontal_x-large slds-button slds-button_brand" onclick="{!c.handleFdbkSubmit}">{!$Label.c.submit}</lightning:button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+        </div>
+    </aura:if>
+    
+    <!-- -->
+    <aura:if isTrue="{!v.bshowclosureinfo}">
+        <div class="slds-is-open slds-m-vertical_small" aria-hidden="false">
+            <div class="resinfo-Subhead">{!$Label.c.ReferralClosure}</div>
+        </div>
+        <div class="slds-grid slds-wrap">
+            <div class="fieldWidth slds-col slds-size_6-of-12">
+                <div class="slds-m-bottom_small slds-p-right_small">                 
+                    <lightning:select aura:id="outcome" label="{!$Label.c.resource_provided}" onchange="{!c.handleStatusChange}" value="{!v.objwrapper.Outcome}" disabled="{!v.isReferralInbox}" required="true">
+                        <option value="">{!$Label.c.none}</option>
+                        <aura:iteration items="{!v.outcomemap}" var="item">
+                            <option text="{!item.label}" value="{!item.value}" selected="{!item.selected}"/>
+                        </aura:iteration>
+                    </lightning:select> 
+                </div> 
+            </div>
+            <div class="fieldWidth slds-col slds-size_6-of-12">
+                <aura:if isTrue="{!v.showoutcomereason}">  
+                    <div class="slds-m-bottom_small slds-p-left_small">                 
+                        <lightning:select aura:id="feedbackstatus" label="{!$Label.c.reasonservicenot}" onchange="{!c.handleStatusChange}" value="{!v.objwrapper.OutcomeReason}" disabled="{!v.isReferralInbox}" required="true">
+                            <option value="">{!$Label.c.none}</option>
+                            <aura:iteration items="{!v.outcomereasonmap}" var="item">
+                                <option text="{!item.label}" value="{!item.value}" selected="{!item.selected}"/>
+                            </aura:iteration>
+                        </lightning:select> 
+                    </div>
+                </aura:if> 
+            </div>
+        </div>
+        <div class="slds-m-bottom_small">
+            <div class="slds-form-element">
+                <!--<label class="slds-form-element__label" for="textarea-id-01">Additional Comments</label>-->
+                <div class="slds-form-element__control add-comments-sec">
+                    <lightning:textarea aura:id="comments" label="{!$Label.c.additionalcomments}" name="comments" value="{!v.objwrapper.AdditionalComments}" disabled="{!v.isReferralInbox}"/>
+                </div>
+            </div>
+        </div>
+    </aura:if>
+    <!--  -->
+    
+    <!--Opted Out Popup-->
+    <aura:if isTrue="{!v.showOptoutPopup}">
+        <div class="opted-out-modal">
+            <section role="dialog" tabindex="-1" aria-modal="true" class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container">
+                    <div class="slds-modal__content slds-p-horizontal_medium slds-p-bottom_medium slds-p-top_x-small">
+                        <div class="modal-lg-headingcontainer">
+                            <div class="modal-lg-heading-button">
+                                <div class="modal-lg-heading">{!$Label.c.opted}</div>
+                                <lightning:buttonIcon class="modal-close" iconName="utility:close" alternativeText="close"  onclick="{!c.handleOptoutOk}" size="small" />                                 
+                            </div>
+                        </div>
+                        <div class="body1">{!$Label.c.optedout_text}</div>
+                        <div class="modal-lg-footer-button slds-m-top_large">
+                            <lightning:button class="slds-p-horizontal_x-large" variant="brand" label="{!$Label.c.ok}" title="{!$Label.c.ok}" onclick="{!c.handleOptoutOk}"/>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+        </div>
+    </aura:if>
+</aura:component>

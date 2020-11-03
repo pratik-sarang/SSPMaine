@@ -1,0 +1,52 @@
+<!--
+ * Component Name    : RE_GenericLightningTable
+ * Owner             : Suyash
+ * Created Date      : 04/06/2019
+ * Description       : Table for One View
+ *
+ *                            M O D I F I C A T I O N   L O G                                          
+ *
+ *  Date        Developer       Description                                                         
+ *  **************************************************************************
+
+*   13/06/2019  Suyash	        UI Development
+-->
+<aura:component implements="forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    
+    
+    <aura:attribute name = "myData" type ="object"/>
+    <aura:attribute name="mycolumns" type="List"/>
+    <aura:attribute name = "hideCheckboxColumn" type ="Boolean" default="true"/> 
+    <aura:attribute name="Keyfield" type="String" default =""/>
+    <aura:attribute name="sortBy" type="String" description= "this attribute is used to apply sorting."/>
+    <aura:attribute name="sortDirection" type="String" description= "this attribute is used to define sorting direction."/>
+    <aura:attribute name="callFunction" type="String" default ="ClientNotes"/>
+    <aura:attribute name = "clientId" type ="String"/>
+    <aura:attribute name = "clientDetails" type ="Object"/>
+    
+    <div class="locationtable-cont">
+        <lightning:datatable data="{! v.myData }"
+                             columns="{!v.mycolumns}"
+                             hideCheckboxColumn="{!v.hideCheckboxColumn}"
+                             keyField="{v.Keyfield}"
+                             sortedBy="{!v.sortBy}"
+                             onrowaction="{!c.handleRowClick}"
+                             sortedDirection="{!v.sortDirection}"
+                             resizeColumnDisabled="true"
+                             onsort="{!c.handleSort}"
+                             title="Sortable"/>
+        <aura:if isTrue="{!v.myData}">
+            <aura:if isTrue="{!!v.myData.length}">
+                <div class="body1 slds-text-align_center slds-p-vertical_medium">
+                    {!$Label.c.no_records}
+                </div> 
+            </aura:if>
+        </aura:if>
+    </div>
+    
+    <!-- Add Note Modal Ends -->
+    <div aura:id="cmpBody" class="locationtable-body">
+        {!v.body}
+    </div>  
+    
+</aura:component>

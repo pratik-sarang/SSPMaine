@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>TOD_004A</label>
+    <protected>false</protected>
+    <values>
+        <field>Applicable_Role__c</field>
+        <value xsi:type="xsd:string">Primary Applicant</value>
+    </values>
+    <values>
+        <field>Body_Spanish__c</field>
+        <value xsi:type="xsd:string">Your &lt;benefit name up for renewal&gt; benefit on Case #&lt;Case Number&gt; is due for renewal by [Renewal Due Date]. Please complete your renewal interview by calling or visiting an office.</value>
+    </values>
+    <values>
+        <field>Body__c</field>
+        <value xsi:type="xsd:string">Your &lt;benefit name up for renewal&gt; benefit on Case #&lt;Case Number&gt; is due for renewal by &lt;Renewal Due Date&gt;. Please complete your renewal interview by calling or visiting an office.</value>
+    </values>
+    <values>
+        <field>Button_Alt_Text__c</field>
+        <value xsi:type="xsd:string">Click to call DCBS</value>
+    </values>
+    <values>
+        <field>Button_Name__c</field>
+        <value xsi:type="xsd:string">Call DCBS at 855-306-8959</value>
+    </values>
+    <values>
+        <field>Code__c</field>
+        <value xsi:type="xsd:string">TOD-004A</value>
+    </values>
+    <values>
+        <field>Communication_Body_Spanish__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Communication_Body__c</field>
+        <value xsi:type="xsd:string">Your &lt;benefit name up for renewal&gt; benefit on Case #&lt;Case Number&gt; is due for renewal by &lt;Renewal Due Date&gt;. Please complete your renewal interview by calling 855-306-8959 or visiting a DCBS office.</value>
+    </values>
+    <values>
+        <field>Due_Date_criterion__c</field>
+        <value xsi:type="xsd:string">Renewal Due Date</value>
+    </values>
+    <values>
+        <field>Expiry_Date_Criterion__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Mobile_Button_Action__c</field>
+        <value xsi:type="xsd:string">call</value>
+    </values>
+    <values>
+        <field>Mobile_Button_Alt_Text__c</field>
+        <value xsi:type="xsd:string">Click to Call DCBS</value>
+    </values>
+    <values>
+        <field>Mobile_Button_Name__c</field>
+        <value xsi:type="xsd:string">Call DCBS</value>
+    </values>
+    <values>
+        <field>Send_Reminder_Criteria__c</field>
+        <value xsi:type="xsd:string">Reminder 20 days before Renewal due date.</value>
+    </values>
+    <values>
+        <field>Severity__c</field>
+        <value xsi:type="xsd:string">Critical</value>
+    </values>
+    <values>
+        <field>Title_Spanish__c</field>
+        <value xsi:type="xsd:string">Complete Renewal</value>
+    </values>
+    <values>
+        <field>Title__c</field>
+        <value xsi:type="xsd:string">Complete Renewal</value>
+    </values>
+    <values>
+        <field>Trash_Action__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>button_Action__c</field>
+        <value xsi:type="xsd:string">navigate user to Find a DCBS Office page</value>
+    </values>
+</CustomMetadata>

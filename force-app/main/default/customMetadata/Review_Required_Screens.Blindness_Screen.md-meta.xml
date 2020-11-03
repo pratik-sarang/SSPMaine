@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Blindness_Screen</label>
+    <protected>false</protected>
+    <values>
+        <field>Navigation_Flow_Page_Configuration__c</field>
+        <value xsi:type="xsd:string">HealthInfoBlindness</value>
+    </values>
+    <values>
+        <field>Review_Required_Trigger_Rules__c</field>
+        <value xsi:type="xsd:string">RAC_Blindness_Changes</value>
+    </values>
+</CustomMetadata>

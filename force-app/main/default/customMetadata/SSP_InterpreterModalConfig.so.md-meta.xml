@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Somali</label>
+    <protected>false</protected>
+    <values>
+        <field>SSP_InterpreterModalContent__c</field>
+        <value xsi:type="xsd:string">Haddii aadan ku hadlin luuqada Ingiriisiga oo aad u baahan tahay caawimaad si aad u fahamto macluumaadkan, fadlan wac 1-855-306-8959 waxaa lagu siin doonaa turjubaan bilaash ah.</value>
+    </values>
+</CustomMetadata>

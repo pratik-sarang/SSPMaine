@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Gross monthly income size 12_138FPL</label>
+    <protected>false</protected>
+    <values>
+        <field>Key__c</field>
+        <value xsi:type="xsd:string">138FPL</value>
+    </values>
+    <values>
+        <field>Number_Of_People__c</field>
+        <value xsi:type="xsd:double">12.0</value>
+    </values>
+    <values>
+        <field>Type__c</field>
+        <value xsi:type="xsd:string">EDFMALIMITS</value>
+    </values>
+    <values>
+        <field>Value__c</field>
+        <value xsi:type="xsd:double">7369.0</value>
+    </values>
+</CustomMetadata>

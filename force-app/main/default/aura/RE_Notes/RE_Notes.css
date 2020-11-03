@@ -1,0 +1,28 @@
+.THIS .notes-table{
+    height: 21.875rem;
+}
+.THIS .add-note-sec{
+    line-height: 38px;
+}
+.THIS .add-note-btn{
+    font-size: t(RESize14);
+    float: right;
+}
+.THIS.referal-notes-table{
+    box-shadow:none;
+    overflow:hidden;
+}
+.THIS .slds-th__action{
+    border-top:0.0625rem solid t(REResourceDarkBlue);
+    background-color:t(REResourceDarkBlue);
+    color:t(REWhite);
+}
+.THIS .slds-th__action:hover{
+    border-top:0.0625rem solid t(REResourceDarkBlue);
+    background-color:t(REResourceDarkBlue);
+    color:t(REWhite);
+    box-shadow: t(REResourceDarkBlue) -0.25rem 0 0 inset;
+}
+.THIS .nopointer-events{
+    pointer-events: none;
+}

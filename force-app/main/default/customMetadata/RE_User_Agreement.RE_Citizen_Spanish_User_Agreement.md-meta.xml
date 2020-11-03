@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>RE Citizen Spanish User Agreement</label>
+    <protected>false</protected>
+    <values>
+        <field>Community_Name__c</field>
+        <value xsi:type="xsd:string">RE</value>
+    </values>
+    <values>
+        <field>Header__c</field>
+        <value xsi:type="xsd:string">&lt;center&gt;&lt;b&gt;&lt;u&gt;Acuerdo para residentes&lt;/u&gt;&lt;/b&gt;&lt;/br&gt;&lt;/br&gt;&lt;/center&gt;</value>
+    </values>
+    <values>
+        <field>Language__c</field>
+        <value xsi:type="xsd:string">es_US</value>
+    </values>
+    <values>
+        <field>Status__c</field>
+        <value xsi:type="xsd:string">Active</value>
+    </values>
+    <values>
+        <field>Text__c</field>
+        <value xsi:type="xsd:string">Los usuarios individuales con acceso al sistema kynect resources aceptan cumplir los siguientes términos adicionales: &lt;/br&gt; &lt;/br&gt;
+
+Los usuarios cumplirán las leyes de confidencialidad federales y estatales y no divulgarán registros confidenciales de clientes, a menos que el cliente haya dado consentimiento por escrito autorizando la divulgación. &lt;/br&gt; &lt;/br&gt;
+
+Los usuarios aceptan la responsabilidad de conocer, leer y cumplir los controles, normas y políticas de seguridad y privacidad del Gabinete para Servicios de Salud y de la Familia de Kentucky (CHFS). &lt;/br&gt; &lt;/br&gt;
+
+Los usuarios no crearán, usarán, divulgarán, trasmitirán, mantendrán, copiarán, venderán, prestarán, analizarán, alterarán ni destruirán de ninguna forma información confidencial, excepto cuando esté autorizado en forma adecuada dentro del alcance de los deberes del usuario. &lt;/br&gt; &lt;/br&gt;
+
+Los usuarios acuerdan, en todo momento, proteger y mantener la confidencialidad, integridad y disponibilidad de la información confidencial, incluso si el usuario ya no tiene acceso al sistema kynect resources o sus recursos de información. Las obligaciones de los usuarios según este Acuerdo continuarán después del fin de la asociación del usuario con, o el acceso a, el sistema kynect resources hasta que toda la información confidencial en posesión, custodia o control del usuario se haya devuelto o destruido según indicaciones de CHFS. &lt;/br&gt; &lt;/br&gt;
+
+Las identificaciones y contraseñas de los usuarios se deben mantener en forma segura y no se compartirán. &lt;/br&gt; &lt;/br&gt;
+
+Los usuarios no tienen ningún derecho ni interés de propietario en ninguna información confidencial a la que se haga referencia en este Acuerdo. CHFS puede revocar el código de acceso de un usuario u otro acceso autorizado a información confidencial en cualquier momento. &lt;/br&gt; &lt;/br&gt;
+
+Los usuarios entienden que los datos de los recursos han sido validados y proporcionados por United Way del sistema Bluegrass 2-1-1.  Es responsabilidad de las organizaciones de socios en la comunidad y de United Way de Bluegrass asegurarse de que los datos del recurso estén actualizados y sean precisos. &lt;/br&gt; &lt;/br&gt;
+
+Los privilegios de los usuarios en lo sucesivo están sujetos a análisis, revisión, y si es adecuado, eliminación en forma periódica. &lt;/br&gt; &lt;/br&gt;</value>
+    </values>
+    <values>
+        <field>Version__c</field>
+        <value xsi:type="xsd:string">v1</value>
+    </values>
+    <values>
+        <field>userType__c</field>
+        <value xsi:type="xsd:string">RE Citizen Profile</value>
+    </values>
+</CustomMetadata>

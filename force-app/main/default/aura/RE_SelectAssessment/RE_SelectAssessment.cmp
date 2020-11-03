@@ -1,0 +1,95 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" controller="RE_SelectAssessmentCtrl">
+    <aura:attribute name="lstAssessment" type="List" default="[]"/>
+    <aura:attribute name = "selectedRadioAssessmentObj" type ="Object"/>
+    <aura:attribute name = "bIsCpUser" type ="Boolean" default="false"/>
+    <aura:attribute name = "bIsAgencyUser" type ="Boolean" default="false"/>
+    <aura:attribute name = "bShowtemplate" type ="Boolean" default="false"/>
+    
+    <aura:attribute name = "bisAssesmentOpen" type ="Boolean" />
+    
+    
+    <aura:attribute name = "bIsCitizen" type ="Boolean" />
+    <aura:attribute name = "tempname" type ="String" />
+    <aura:attribute name = "assessmentId" type ="String" />
+    <aura:attribute name = "userAssessmentId" type ="String" />
+    
+    
+    
+    <aura:attribute name = "showClientDetail" type ="Boolean" />
+    
+    <aura:attribute name = "sClientName" type ="String" />
+    <aura:attribute name = "sClientId" type ="String" />
+    <aura:attribute name = "clientId" type ="String" />
+    <aura:attribute name = "sAssessmentId" type ="String" />
+    <aura:attribute name = "sTemplateName" type ="String" />
+    <aura:attribute name = "bshowassessmentques" type ="Boolean" default="false" />
+    <aura:attribute name = "bshowassessmentres" type ="Boolean" default="false"/>
+    
+    
+    <!-- Changes done for server call from a common place-->
+    <aura:attribute name="isSpinnerActive" type="Boolean"/>
+    <c:RE_UtilityServerCallerCmp aura:id="bSuper" isSpinnerActive="{!v.isSpinnerActive}"/>
+    <!-- -->
+    
+    <!-- displays a toast notification -->
+    <lightning:notificationsLibrary aura:id="notifLib" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+        
+        <aura:method name="resetsurvey" action="{!c.onReset}" 
+                 access="public">
+        <aura:attribute name="breset" type="boolean" default="false"/>
+    </aura:method>
+        
+    <aura:handler name="CloseModalEvt" event="c:RE_OurTeamModalEvt" action="{!c.closehandler}" phase="capture" />
+    <aura:if isTrue="{!v.bShowtemplate}">
+    <div>
+        <aura:if isTrue="{!or(v.bIsCpUser,v.bIsAgencyUser)}"> 
+            <div class="backButton slds-m-bottom_x-small">
+                <lightning:icon class="backIcon" iconName="utility:back" alternativeText="back" size="small"/>
+                <a href="javascript:void(0)" onclick="{!c.backToOneView}">{!$Label.c.Back_to_OneView}</a>
+            </div>
+        </aura:if>
+        <h1 class="headingL1">{!$Label.c.Surveys}</h1>
+        <div class="body1Grey slds-p-bottom_medium">
+            {!$Label.c.RE_AssessmentDescription}
+        </div>
+        
+        <aura:if isTrue="{!v.lstAssessment.length>0}">
+            <div class="assessment-container">
+                <aura:iteration items="{!v.lstAssessment}" var="objAssess" indexVar="index">
+                    <div class="assessment-template slds-m-bottom_small slds-p-around_large slds-grid slds-wrap">
+                        <div class="slds-p-bottom_x-small slds-large-size_9-of-12 slds-medium-size_9-of-12 slds-small-size_8-of-12 slds-x-small-size_12-of-12">
+                            <h2 class="assessment-title">{!objAssess.AssessmentTitle__c}</h2>
+                            <div class="body1">
+                                {!objAssess.Description__c}
+                            </div>
+                        </div>
+                        <div class="assessment-btn-section slds-large-size_3-of-12 slds-medium-size_3-of-12 slds-small-size_4-of-12 slds-x-small-size_12-of-12 slds-text-align_right">
+                            <lightning:button variant="brand" ariaLabel="{!objAssess.AssessmentTitle__c + ' ' + $Label.c.RE_GetStarted}" label="{!$Label.c.RE_GetStarted}" value="{!index}" onclick="{!c.selectAssessment}"/>
+                        </div>
+                    </div>
+                </aura:iteration>
+            </div>
+            
+        </aura:if>
+            <aura:if isTrue="{!v.lstAssessment.length==0}">
+                <div class="body1 slds-text-align_center slds-p-vertical_medium">
+                        {!$Label.c.no_surveys}
+                    </div>
+        </aura:if>
+            
+        
+        
+      
+    </div>
+    </aura:if>  
+    <aura:if isTrue="{!v.bshowassessmentques}">
+         <c:RE_AssessmentQuestions bShowtemplate="{v.bShowtemplate}" bshowassessmentres="{v.bshowassessmentres}" bshowassessmentques="{!v.bshowassessmentques}" bisResident="true" sAssessmenTemplatetId="{!v.assessmentId}" cName="{!v.sClientName}" sTempName="{!v.tempname}" sContactId="{!v.clientId}" userAssessmentId="{!v.userAssessmentId}"/>
+        </aura:if>
+  <!--  <aura:if isTrue="{!v.bshowassessmentres}">
+         <c:RE_AssessmentResults userAssessmentId="{!v.userAssessmentId}" />
+        </aura:if>  -->
+        
+</aura:component>

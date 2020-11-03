@@ -1,0 +1,212 @@
+<aura:component controller = "RE_BasicSearchCtrl" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <!-- attribute definitation -->
+    <aura:attribute name="displayCard" type="Boolean" default = "false"  
+                    description="this atrribute is used to show/hide the resouce list tile."/>
+    <aura:attribute name="displayErrorCard" type="Boolean" default = "false"  
+                    description="this atrribute is used to show/hide the error message."/>
+    <aura:attribute name="displayMap" type="Boolean" default = "false"  
+                    description="this atrribute is used to show/hide the resouce list tile."/>
+    <aura:attribute name="showDiscoverResource" type="Boolean" default="false" 
+                    description="This attribute is used to show and hide discover resource popup"/>    
+    <aura:attribute name="zipCode" type="String" 
+                    description="This attribute is used to get the input of zip code"/>
+    <aura:attribute name="lstAllDomains" type="Map" 
+                    description="This attribute is used to store all the Domains"/>
+    <aura:attribute name="strDomains" type="String" 
+                    description="This attribute is used to store string of all the selected Domains"/>
+    <aura:attribute name="lstAvailableDomains" type="List" 
+                    description="This attribute is used to create a list of all the Domains"/>
+    <aura:attribute name="lstApplicableDomains" type="List" 
+                    description="This attribute is used to store all the Domains that are available as per the Goal Resources received"/>
+    <aura:attribute name="isDisabled" type="Boolean" 
+                    description="This attribute is used to disable submit on wrong input"/>
+    <aura:attribute name="selectedHours" type="String" 
+                    description="This attribute is used to display the selected hours"/>
+    <aura:attribute name="sSearchKey" type="String" 
+                    description="This attribute is used to store the user passed keyword"/>
+    <aura:attribute name="domain" type="String" 
+                    description="This attribute is used to display the domain"/>
+    <aura:attribute name="category" type="String" 
+                    description="This attribute is used to display the category"/>
+    <aura:attribute name="subcategory" type="String" 
+                    description="This attribute is used to display the subcategory"/>
+    <aura:attribute name="domainName" type="String" 
+                    description="This attribute is used to display the domain name"/>
+    <aura:attribute name="categoryName" type="String" 
+                    description="This attribute is used to display the category name"/>
+    <aura:attribute name="subcategoryName" type="String" 
+                    description="This attribute is used to display the sub-category name"/>
+    <aura:attribute name="navMenu" type="String" 
+                    description="This attribute is used to display the category/subcategory path"/>
+    <aura:attribute name="onLoad" type="Boolean" default="true" 
+                    description="This attribute is used to determine if the component is loaded initially"/>
+    <aura:attribute name="updateResources" type="Boolean" default="false" 
+                    description="This attribute is used to update the resource data depending on the filters selected"/>
+    <aura:attribute name="bDisplayResults" type="Boolean" default = "false" description="This attribute is used to display the results"/>
+    <aura:attribute name="isSpinnerActive" type="Boolean"/>
+    <aura:attribute name="mapOptions" type="Object" default='{"zoom": 10,"mapTypeControl":false}' 
+                    description="this atrribute is used to display default zoom size on the Map."/>
+    <aura:attribute name="mapOptionsCenter" type="Object" 
+                    description="this atrribute is used to display Map attributes."/>
+    <aura:attribute name="mapData" type="List" 
+                    description="this atrribute is used to display the Map data."/>
+    <aura:attribute name="showMultiPleMarker" type="Boolean" default = "false" 
+                    description="this attribute is used to display markers on the map."/>
+    <aura:attribute name="showMultiPleMarkerForCompleted" type="Boolean" default = "false" 
+                    description="this attribute is used to display markers on the map."/>
+    <aura:attribute name="showSingleMarkerForCompleted" type="Boolean" default = "false" 
+                    description="this attribute is used to display markers on the map."/>
+    <aura:attribute name="searchresults" type="List" 
+                    description="this attribute is used to store the search results." /> <!-- 20Dec LV issue -->
+    <aura:attribute name="isCreateRefferel" type="Boolean"
+                     description="this attribute is used to indicate if the resident has any referrals."/>
+    <aura:attribute name="originalSearchResults" type="List"
+                     description="this attribute is used to store the search results."/>
+    <aura:attribute name="userLocation" type = "String" 
+                    description="this attribute is used to store loggedin user location lat and long"/>
+    <aura:attribute name="isGuestUser" type = "Boolean" 
+                    description="this attribute is used to store loggedin user is a guest user"/>
+    
+    <!-- Pagination attributes -->
+    <aura:attribute name="allData" type="List" description="this is retreve data from the server and used for pagination"/>
+    <aura:attribute name="pageNumber" type="Integer" default="1" description="to capture the page number"/>
+    <aura:attribute name="pageSize" type="Integer" default="4" description="to capture the page size"/> 
+    <aura:attribute name="totalPages" type="Integer" default="0" description="to capture the totalpages size"/> 
+    <aura:attribute name="pageList" type="List" description="to capture the page list"/> 
+    <aura:attribute name="disableScroll" type="Boolean" default="true" description="to disable the infinite scroll on and off"/> 
+	<aura:attribute name="searchbycategory" type="Boolean" default="true" description="to disable the infinite scroll on and off"/> 
+
+    <aura:attribute name="resOffset" type="Integer" default="0"  /> 
+    <aura:attribute name="resLimit" type="Integer" default="30"  /> 
+    <aura:attribute name="resNoPages" type="Integer" default="0"  />
+    <aura:attribute name="setGlobalSearchResourceIds" type="List"/>
+    <aura:attribute name="setGlobalLocationResourceIds" type="List"/>
+    <aura:attribute name="lstDomainsAlreadyChecked" type="List"/>
+    
+    <!-- added attribute class for GA by [CHFS Developer-Mohan-12/12/19] --> 
+    <aura:attribute name="searchTotalCount" type="Integer" default="0" description="This attribute is used to store the total search key results"/> 
+    
+    <!-- Handler definitaion -->
+    <aura:handler name="init" value="{!this}"  action="{!c.doInit}" />    
+    <aura:handler name="change" value="{!v.zipCode}" action="{!c.updateResources}"/>
+    <aura:handler name="change" value="{!v.strDomains}" action="{!c.updateResourcesBasedCategory}"/>
+    <aura:handler name="change" value="{!v.selectedHours}" action="{!c.updateResourcesBasedHours}"/>
+    
+    <c:RE_UtilityServerCallerCmp aura:id="bSuper" isSpinnerActive="{!v.isSpinnerActive}"/>
+    <aura:handler event="c:RE_LightningMapEvent" action="{!c.handleApplicationEvent}"/>
+
+    <div class="slds-p-horizontal_x-large slds-p-top_small">
+        <aura:if isTrue="{!empty(v.sSearchKey)}">
+            <aura:if isTrue="{! !v.isCreateRefferel}">
+                <div class="headingContainer"> 
+                    <div class="slds-grid slds-wrap"> 
+                        <h1 class="headingL2 slds-m-bottom_small">{!v.navMenu}</h1>
+                    </div>
+                </div>
+            </aura:if>
+        </aura:if>
+        <div class="slds-grid slds-wrap">
+            <div class="slds-large-size_1-of-5 slds-medium-size_1-of-1 slds-small-size_1-of-1 slds-p-vertical_large myPlanLeftTab">
+               	<aura:if isTrue="{!$Browser.isPhone}">
+                    <div class="" aura:id="filter-button-show">
+                        <lightning:button label= 'Show Filter' onclick="{!c.showFilter}"/>
+                    </div>
+                <div class="slds-hide" aura:id="result-filter">
+                    <c:RE_SearchByCategoryResults_FilterSection aura:id="cmpFilter" 
+                                                                sZipCode="{!v.zipCode}" 
+                                                                lstDomains="{!v.lstAvailableDomains}" 
+                                                                lstApplicableDomains="{!v.lstApplicableDomains}"
+                                                                selectedDomains="{!v.strDomains}"
+                                                                updateResources="{!v.updateResources}"
+                                                                selectedHours="{!v.selectedHours}"/>
+                    </div>
+                    <aura:set attribute="else">
+                        <div aura:id="result-filter">
+                    <c:RE_SearchByCategoryResults_FilterSection aura:id="cmpFilter" 
+                                                                sZipCode="{!v.zipCode}" 
+                                                                lstDomains="{!v.lstAvailableDomains}" 
+                                             					lstApplicableDomains="{!v.lstApplicableDomains}"
+                                             					selectedDomains="{!v.strDomains}"
+                                                                updateResources="{!v.updateResources}"
+                                                                selectedHours="{!v.selectedHours}"/>
+                </div>
+                    </aura:set>
+                </aura:if>
+                <aura:if isTrue="{!$Browser.isPhone}">
+                    <div class="slds-hide" aura:id="filter-button-hide">
+                        <lightning:button label= 'Hide Filter' onclick="{!c.hideFilter}"/>
+                    </div>
+                </aura:if>
+            </div>
+            
+            <div class="{!v.isCreateRefferel ? 'resourceSection slds-grid slds-wrap slds-large-size_5-of-5 slds-medium-size_1-of-1 slds-small-size_1-of-1 slds-x-small-size_1-of-1' : 'resourceSection resourceSectionBackground slds-grid slds-wrap slds-large-size_4-of-5 slds-medium-size_1-of-1 slds-small-size_1-of-1 slds-x-small-size_1-of-1'}">
+                <aura:if isTrue="{!v.displayCard}">
+                    <div class="{!v.isCreateRefferel ? 'slds-large-size_5-of-5 slds-medium-size_1-of-1 slds-small-size_1-of-1 slds-size_1-of-1 planCardSection' : 'slds-large-size_3-of-5 slds-medium-size_1-of-1 slds-small-size_1-of-1 slds-size_1-of-1 planCardSection'}">
+                        <!-- added search key as part of GA -->
+                        <c:RE_SearchByCategoryResults_ResourceCards methodRef="{!c.actionfromResourceCards}" searchresults = "{!v.searchresults}" sSearchKey = "{!v.sSearchKey}" zipCode = "{!v.zipCode}" displayMap ="{!v.displayMap}" searchResultCount ="{!v.searchTotalCount}"/>
+                         <aura:if isTrue="{!!v.disableScroll}">
+                             <div class="slds-text-align_center load-more-btn">
+                                 <lightning:button label= '{!$Label.c.Load_More}' onclick="{!c.loadMore}"/> 
+                             </div>
+                        </aura:if>
+                        <aura:if isTrue="{!!v.searchbycategory}">
+                             <div class="slds-text-align_center load-more-btn">
+                                 <lightning:button label= '{!$Label.c.Load_More}' onclick="{!c.loadMoreSearchbyCategory}"/> 
+                             </div>
+                        </aura:if>
+                    </div>
+                    
+                </aura:if>
+                <aura:if isTrue="{!v.displayErrorCard}">
+                	<div id="NoSearchResult" tabindex="0" class="slds-p-around_medium body1">{!$Label.c.RE_NoResources}</div>
+                </aura:if> 
+                <aura:if isTrue="{!and(v.displayMap, v.searchresults.length > 0)}">
+                        <div class="slds-large-size_2-of-5 slds-medium-size_1-of-1 slds-small-size_1-of-1 slds-p-vertical_large planMapSection">
+                            <aura:if isTrue="{!v.showMultiPleMarker}">
+                                <c:RE_GoogleMapCmp mapOptions="{!v.mapOptions}" aura:id = "multiple" mapOptionsCenter="{!v.mapOptionsCenter}" mapData="{!v.mapData}" />
+                            </aura:if>
+                            <aura:if isTrue="{!v.showMultiPleMarkerForCompleted}">
+                                <c:RE_GoogleMapCmp mapOptions="{!v.mapOptions}" aura:id = "multipleComplete" mapOptionsCenter="{!v.mapOptionsCenter}" mapData="{!v.mapData}" />
+                            </aura:if>
+                            <aura:if isTrue="{!v.showSingleMarkerForCompleted}">
+                                <c:RE_GoogleMapCmp mapOptions="{!v.mapOptions}" aura:id = "singleMarker" mapOptionsCenter="{!v.mapOptionsCenter}" mapData="{!v.mapData}" />
+                            </aura:if> 
+                        </div>
+                </aura:if>
+            </div>            
+        </div>
+    </div>
+    <!--Discover Resources Pop-Up-->
+    <aura:if isTrue="{!v.showDiscoverResource}">
+        <div class="demo-only discover-resource-popup">
+            <section role="dialog" aria-modal="true" class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container">
+                    <div class="slds-modal__content slds-p-horizontal_medium slds-p-bottom_medium slds-p-top_x-small">
+                        <div class="modal-lg-headingcontainer">
+                            <div class="modal-lg-heading-button">
+                                <div class="modal-lg-heading" tabindex="0">{!$Label.c.RE_ShowResources}</div>
+                                <lightning:buttonIcon class="modal-close" iconName="utility:close" alternativeText="close" size="small" onclick="{!c.cancelZipCode}" />                               
+                            </div>
+                        </div>
+                        <p class="body1 slds-m-bottom_small">{!$Label.c.RE_DiscoverResources}</p>
+                        <div class="slds-grid slds-wrap">
+                            <div class="slds-large-size_7-of-12 slds-is-relative">
+                                <!--lightning:input label="{!$Label.c.location}" variant="label-hidden" value="{!v.zipCode}" aura:id="zip" type="text"
+                                                 onchange="{!c.handleZipCode}" />
+                                <lightning:icon class="slds-icon slds-icon-text-default location-icon" iconName="utility:checkin" size="x-small" alternativeText="location"/-->
+                                <span onchange="{!c.handleZipCode}"> 
+                                	<c:RE_GoogleMapsAutocomplete searchKey="{!v.zipCode}" placeholder="{!$Label.c.RE_EnterLocationZip}"/>
+                            	</span>
+                            </div>
+                        </div>
+                        <div class="modal-lg-footer-button slds-m-top_large">
+                            <lightning:button class="slds-p-horizontal_x-large slds-m-right_xx-small" onclick="{!c.cancelZipCode}" label="{!$Label.c.cancel}" title="{!$Label.c.cancel}"/>
+                            <lightning:button class="slds-p-horizontal_x-large" variant="brand" label="{!$Label.c.submit}" onblur="{!c.moveFocusToTop}" onclick="{!c.submitZipCode}" disabled="{!v.isDisabled}"/>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+        </div>
+    </aura:if>
+</aura:component>

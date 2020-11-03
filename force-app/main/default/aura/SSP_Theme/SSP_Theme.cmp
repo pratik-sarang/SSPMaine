@@ -1,0 +1,26 @@
+<aura:component implements="forceCommunity:themeLayout" access="global" description="SSP Custom Theme Layout">
+    <aura:attribute name="showLeftNavigation" type="Boolean" default="false"/>
+    <div>
+        <div class="ssp-header">
+            <c:sspHeader/>
+        </div>
+        <aura:if isTrue="{!v.showLeftNavigation}">
+            <div class="mainContentArea left-navigation-container slds-grid slds-wrap">
+                <div class="slds-max-medium-size_1-of-1 slds-size_1-of-5  ssp-boxShadow">
+                    <c:sspVerticalMenuList/>
+                </div>
+                <div class="slds-max-medium-size_1-of-1 slds-size_4-of-5">
+                    {!v.body}
+                </div>
+            </div>
+            <aura:set attribute="else">
+                <div class="mainContentArea">
+                    {!v.body}
+                </div>
+            </aura:set>
+        </aura:if> 
+        <div class="ssp-footer">
+            <c:sspFooter/>
+        </div>
+    </div>
+</aura:component>

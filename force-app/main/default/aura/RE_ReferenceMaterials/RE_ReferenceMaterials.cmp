@@ -1,0 +1,61 @@
+<!--
+ * Component Name    : RE_RDResidentView
+ * Owner             : DELOITTE CONSULTING
+ * Created Date      : 06/17/2019
+ * Description       : Refernce Material
+ *
+ *                            M O D I F I C A T I O N   L O G                                          
+ *
+ *  Date        Developer       Description                                                         
+ *  **************************************************************************
+ *  06/17/2019  Chiranjeevi     Initial UI Development
+-->
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
+    <aura:attribute name="isOpen" type="boolean" default="false"/>
+    <aura:attribute name="isOpenDoc" type="boolean" default="false"/>
+    <aura:attribute name="objLstContentDocuments" type="Object"/>
+    
+    <!--aura attributes-->  
+    <aura:attribute name="selectedDocumentId" type="string"/>
+    <aura:attribute name="lstContentDoc" type="List"/>
+    <aura:attribute name="hasModalOpen" type="boolean" default="false"/>
+    
+    <div class="slds-p-top_small">
+        <div class="rd-residentWrapper slds-grid slds-wrap">
+            <div class="slds-size_1-of-1">
+                <p class="body1 headingSize22 slds-m-bottom_small">{!$Label.c.ReferenceMaterials}</p> 
+                <ul class="slds-has-dividers_around slds-has-block-links_space">
+                    <aura:iteration items="{!v.objLstContentDocuments}" var = "objContentDoc">
+                        <li class="referenceItem slds-p-around_xx-small slds-m-bottom_x-small" >
+                            <span ><lightning:icon size="small" iconName="{!('doctype:'+(objContentDoc.objConDoc.FileType == 'MP3'?'audio':(
+                                                                          objContentDoc.objConDoc.FileType == 'AVI'?'audio':(
+                                                                          objContentDoc.objConDoc.FileType == 'FLV'?'audio':(
+                                                                          objContentDoc.objConDoc.FileType == 'WMV'?'audio':(
+                                                                          objContentDoc.objConDoc.FileType == 'MP4'?'audio':(
+                                                                          objContentDoc.objConDoc.FileType == 'MOV'?'audio':(
+                                                                          objContentDoc.objConDoc.FileType == 'WAV'?'audio':(
+                                                                          objContentDoc.objConDoc.FileType == 'PNG'?'image':(
+                                                                          objContentDoc.objConDoc.FileType == 'JPG'?'image':(
+                                                                          objContentDoc.objConDoc.FileType == 'JPEG'?'image':(
+                                                                          objContentDoc.objConDoc.FileType == 'GIF'?'image':(
+                                                                          objContentDoc.objConDoc.FileType == 'SVG'?'image':(
+                                                                          objContentDoc.objConDoc.FileType == 'BMP'?'image':(
+                                                                          objContentDoc.objConDoc.FileType == 'TIF'?'image':(
+                                                                          objContentDoc.objConDoc.FileType == 'WORD_X'?'word':(
+                                                                          objContentDoc.objConDoc.FileType == 'DOC'?'word':(
+                                                                          objContentDoc.objConDoc.FileType == 'DOCX'?'word':(
+                                                                          objContentDoc.objConDoc.FileType == 'TXT'?'word':(
+                                                                          objContentDoc.objConDoc.FileType == 'POWER_POINT'?'ppt':(
+                                                                          objContentDoc.objConDoc.FileType == 'MP4'?'video':(
+                                                                          objContentDoc.objConDoc.FileType == 'EXCEL_M'?'excel':(
+                                                                          objContentDoc.objConDoc.FileType == 'EXCEL_X'?'excel':(
+                                                                          objContentDoc.objConDoc.FileType == 'PDF'?'ppt':'gdoc'))))))))))))))))))))))))}" 
+                                                   alternativeText="{!objContentDoc.objConDoc.Description}" /></span> 
+                            <span class="caption2 slds-p-left_small slds-p-top_xxx-small"><a  id="{!objContentDoc.objConDoc.Id}" href="{!objContentDoc.sDistributionPublicUrl}" onclick="{!c.getSelected}">{!objContentDoc.objConDoc.Title}</a></span>
+                        </li>
+                    </aura:iteration>
+                </ul>
+            </div>
+        </div>
+    </div>
+</aura:component>

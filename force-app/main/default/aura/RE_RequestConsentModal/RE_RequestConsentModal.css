@@ -1,0 +1,8 @@
+.THIS .consent-date{
+    color: t(RENeutralBeta);
+    font-size: t(RESize16);
+}
+.THIS .name-section{
+    font-size: t(RESize16);
+    color:t(RECardResourceTypeGrey);
+}

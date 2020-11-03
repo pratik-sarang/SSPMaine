@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>ExpenseInformation</label>
+    <protected>false</protected>
+    <values>
+        <field>Intake_Order__c</field>
+        <value xsi:type="xsd:double">8.0</value>
+    </values>
+    <values>
+        <field>Is_Intake__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>Is_RAC__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>RAC_Order__c</field>
+        <value xsi:type="xsd:double">6.0</value>
+    </values>
+    <values>
+        <field>Screens__c</field>
+        <value xsi:type="xsd:string">SSP_APP_Select_Expenses
+SSP_APP_Details_ExpenseDetails
+SSP_APP_Details_Expense
+SSP_APP_Details_MedicalExpensesLast3Months
+SSP_APP_Details_RemoveExistingExpense
+SSP_APP_Details_EditExistingExpense</value>
+    </values>
+    <values>
+        <field>View__c</field>
+        <value xsi:type="xsd:string">ExpenseInformation</value>
+    </values>
+</CustomMetadata>

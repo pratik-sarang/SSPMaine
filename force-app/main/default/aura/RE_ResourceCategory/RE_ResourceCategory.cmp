@@ -1,0 +1,54 @@
+<!--
+ * Component Name    : RE_ResourceCategory
+ * Owner             : DELOITTE CONSULTING
+ * Created Date      : 06/27/2019
+ * Description       : Resource Category component in Landing Page
+ *
+ *                            M O D I F I C A T I O N   L O G                                          
+ *
+ *  Date        Developer       Description                                                         
+ *  **************************************************************************
+ *  06/26/2019  Chiranjeevi        	Initial UI Development
+ *  07/01/2019  Nupoor        		Backend Development
+-->
+<aura:component controller="RE_ResourceCategoryCtrl" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name="categoryContent" type="Map" description="Used to show categories for a Domain"/>
+    <aura:attribute name="showCategories" type="Boolean" default="false" description="Flag used to identify category component"/>    
+    <aura:attribute name="selectedDomain" type="String" description="Attribute used to store selected domain"/>    
+    <aura:attribute name="mapConfigMasterRecords" type="Map" description="Used to store domain categories and its related domains"/>
+    <aura:attribute name="mapDomainCategories" type="Map" description="Used to store map of domain and its related categories and sub categories"/>    
+    
+    <aura:handler name="init" value="{!this}"  action="{!c.doInit}" />
+    
+    <aura:attribute name="isSpinnerActive" type="Boolean"/>
+    <c:RE_UtilityServerCallerCmp aura:id="bSuper" isSpinnerActive="{!v.isSpinnerActive}"/>
+    
+    <div class="headingL1 slds-m-vertical_medium"><h2>{!$Label.c.ResourcesByCategory}</h2></div>    
+    <aura:iteration items="{!v.mapConfigMasterRecords}" var="domainCategory" indexVar="key">         
+        <div class="headingL2 slds-m-top_large">{!domainCategory.key}</div>
+        
+        <div class="slds-grid slds-wrap" id="domainName">
+            <aura:iteration items="{!domainCategory.value}" var="domain" indexVar="key"> 
+                <div class="slds-col slds-max-medium-size_1-of-2 slds-size_1-of-1 slds-large-size_1-of-4" >
+                    <div id="{!domain.Domain__c}" class="slds-col slds-p-right_x-small slds-m-right_medium domain-col">
+                        <div id="{!domain.Domain__c}" aura:id="selectedDomain" onclick="{!c.toggle}" class="REcard slds-m-vertical_medium">
+                            <div class="domain-category slds-align_absolute-center slds-p-horizontal_medium slds-p-top_medium domain-image">                                
+                                <aura:unescapedHtml value="{!domain.DomainImage__c}" />
+                            </div>
+                            <div class="headingL2 domain-category slds-align_absolute-center slds-m-top_small">{!domain.domainName}</div>                            
+                        </div> 
+                        <div aura:id="parentContainer" id="{!domain.Domain__c}" class="ChevronIcon1 slds-hide"></div>                                                 
+                    </div>
+                    
+                    <div class="slds-col slds-size_1-of-1 domainCategories">
+                        <div aura:id="domainValue" id="{!domain.Domain__c}" class="slds-hide category-container">                            
+                            <aura:if isTrue="{!v.showCategories}">  
+                                <c:RE_ResourceCategoryContent aura:id="categoryCmp" categoryOptions="{!v.categoryContent}" domain = "{!domain.Domain__c}"/> 
+                            </aura:if>
+                        </div>
+                    </div>
+                </div>
+            </aura:iteration>            
+        </div>        
+    </aura:iteration>    
+</aura:component>

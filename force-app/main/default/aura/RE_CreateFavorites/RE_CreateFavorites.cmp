@@ -1,0 +1,22 @@
+<!--
+ * Component Name    : RE_CreateFavorites
+ * Owner             : DELOITTE CONSULTING
+ * Created Date      : 06/17/2019
+ * Description       : Extensible component giving functionality to create/delete favorites
+ *
+ *                            M O D I F I C A T I O N   L O G                                          
+ *
+ *  Date        Developer       Description                                                         
+ *  **************************************************************************
+ *  06/17/2019  Suyash        Initial UI Development 
+-->
+<aura:component extensible="true" abstract="true" controller="RE_CreateFavCtrl">
+    
+    <aura:attribute type="String" name="LocResourceId"  description="Stores the Location Resource Id"/>
+    <aura:attribute type="String" name="sResourceName"  description="Stores the Resource Name"/>
+    <aura:attribute type="String" name="sOrganisationName" description="Stores the Organisation Name"/>
+    <aura:attribute name="isSpinnerActive" type="Boolean" description= "this attribute is used to store the state of the spinner"/>
+    <c:RE_UtilityServerCallerCmp aura:id="bSuper" isSpinnerActive="{!v.isSpinnerActive}"/>
+    {!v.body}
+    
+</aura:component>

@@ -1,0 +1,687 @@
+<!--
+ * Component Name    : RE_Location
+ * Owner             : DELOITTE
+ * Created Date      : 05/02/2019
+ * Description       : Fetches the information from the Location Object Record and displays it for editing
+ * Author 			 : Suyash Singhal
+ *
+ *                            M O D I F I C A T I O N   L O G                                          
+ *
+ *  Date        Developer       Description                                                         
+ *  **************************************************************************
+ *  05/02/2019  Abhishek        Initial UI Development
+ *  05/02/2019  Suyash			Backend Field Integration
+ *  08/13/2019  Lagan			Backend Field Integration - Modified code for making entire form editable.
+-->
+
+<aura:component controller ="RE_LocationCtrl" 
+                implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction"
+                access="global">
+    <aura:attribute type ="Object" name="Location" />
+    <aura:attribute type ="Object" name="initialLocationObj" />
+    <aura:attribute type ="List" name="lstLanguages" default ="[]" />
+    <aura:attribute type ="String" name="sRecordID" />
+    <aura:attribute name="isOpen" type="boolean" default="false"/>
+    <aura:attribute name="bFileUploadSuccessFromEvent" type="boolean" default ="true"/> 
+    <aura:attribute type ="ContentDocument[]" name="lstFiles" />
+    <aura:attribute type ="Object" name="fileWrapperList" /> 
+    <aura:attribute name="bAddLanguageInput" type="boolean" default="false"/>
+    <aura:attribute name="bMakeReadOnly" type="boolean" default="false"/>
+    <aura:attribute name="bFirstChange" type="boolean" default="false"/>
+    <aura:attribute name="bValidEmail" type="boolean" default="true"/>
+    <aura:attribute name="bValidPhone" type="boolean" default="true"/>
+    <aura:attribute name="lstStatusOptions" type="List" />
+    <aura:attribute name="lstStateOptions" type="List" />
+    <aura:attribute name="lstTimeZoneOptions" type="List" />
+    <!-- Boolean attributes for days opened/closed -->
+    <aura:attribute name="bIsMondayClosed" type="boolean" default="false"/>
+    <aura:attribute name="bIsTuesdayClosed" type="boolean" default="false"/>
+    <aura:attribute name="bIsWednesdayClosed" type="boolean" default="false"/>
+    <aura:attribute name="bIsThursdayClosed" type="boolean" default="false"/>
+    <aura:attribute name="bIsFridayClosed" type="boolean" default="false"/>
+    <aura:attribute name="bIsSaturdayClosed" type="boolean" default="false"/>
+    <aura:attribute name="bIsSundayClosed" type="boolean" default="false"/>
+    <!--    -->
+    <aura:attribute name="bIsPrimary" type="boolean" default="false"/>
+    <!-- Changes done for server call from a common place-->
+    <aura:attribute name="isSpinnerActive" type="Boolean"/>
+    <c:RE_UtilityServerCallerCmp aura:id="bSuper" isSpinnerActive="{!v.isSpinnerActive}"/> 
+    <!-- -->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler name="FileUploadSuccess" event="c:SuccessfulFileUploadListner" action="{!c.getFilesAfterUpload}"/> 
+    <aura:handler name="LanguagesUpdateEvent" event="c:RE_LanguagePillUpdaterEvent" action="{!c.handleLangUpdateEvent}"/> 
+    <aura:handler name="change" value="{!v.Location}" action="{!c.valueChanged}"/>
+    <lightning:unsavedChanges aura:id="unsaved" onsave="{!c.saveLocUpdatedData}" />
+    <div class="headingContainer">
+        <div class="backButton slds-m-bottom_x-small">
+            <lightning:icon class="backIcon" iconName="utility:back" alternativeText="back" size="small"/>
+            <a href="javascript:void(0)" onclick="{!c.backToOrgDetails}">{!$Label.c.backtoorgdetail}</a>
+        </div>      
+        <div class="headingButton slds-grid slds-wrap">
+            <h1 class="headingL1">{!$Label.c.locationdetails}</h1>
+            <aura:if isTrue="{!v.bMakeReadOnly}">
+                <aura:set attribute="else">
+                    <div class="header-btn-section">
+                        <lightning:button variant="Neutral" class="slds-m-left_x-small" label="{!$Label.c.cancel}" title="{!$Label.c.cancel}" onclick="{! c.backToOrgDetails }" />
+                    <lightning:button variant="brand" class="slds-p-horizontal_x-large" label="{!$Label.c.save}" title="{!$Label.c.save}" onclick="{! c.saveLocUpdatedData }" disabled= "{!v.bMakeReadOnly}" />
+                    </div>
+                </aura:set>
+            </aura:if>
+        </div>
+    </div>
+    <div class="resinfo-Subhead">{!$Label.c.RE_LocationInformation}</div>
+    <div class="slds-grid slds-wrap">
+        <div class="slds-large-size_6-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-x-small-size_12-of-12 slds-p-right_medium slds-p-top_medium locdetails-first-col">
+            <lightning:input aura:id="requiredField" name="input1" label="{!$Label.c.Location_Name}" required = "true" value="{!v.Location.sName}" disabled ="{!v.bMakeReadOnly}" readonly="{!v.bMakeReadOnly}"/>
+            <lightning:select name="LocStatus" label="{!$Label.c.status}" class="{!v.bMakeReadOnly?'select-disabled':''}" aura:id="Status" required = "true" disabled ="{!v.bMakeReadOnly}" value="{!v.Location.sStatus }" readonly="{!v.bMakeReadOnly}" >
+                <aura:iteration items="{!v.lstStatusOptions}" var="itrStatus">
+                    <option text="{!itrStatus.label}" value="{!itrStatus.value}" selected="{!itrStatus.value==v.Location.sStatus}"/>
+                </aura:iteration>
+            </lightning:select>
+            <lightning:textarea value ="{!v.Location.sDescription}" label="{!$Label.c.description}" disabled ="{!v.bMakeReadOnly}" readonly="{!v.bMakeReadOnly}"/>
+        </div>
+        <div class="slds-large-size_6-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-x-small-size_12-of-12 slds-p-left_medium slds-p-top_medium locdetails-second-col">
+            <lightning:input name="inputEmail" aura:id="stdemail" value ="{!v.Location.email}" pattern = "^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" 
+                             type="email" label="{!$Label.c.OrganizationLocationEmail}" messageWhenPatternMismatch ="Please enter a valid email address"
+                             disabled ="{!v.bMakeReadOnly}" readonly="{!v.bMakeReadOnly}"/>
+            <lightning:input type="text" aura:id ="stdPhone" value ="{!v.Location.phone}" 
+                             label="{!$Label.c.phone}" alt = "{!$Label.c.phone}" name="phone2" maxlength = "14" 
+                             pattern = "^(\([0-9]{3}\) |[0-9]{3}-)[0-9]{3}-[0-9]{4}$" messageWhenPatternMismatch = "{!$Label.c.phoneformaterror}" 
+                             disabled ="{!v.bMakeReadOnly}" readonly="{!v.bMakeReadOnly}" onchange= "{!c.formatPhoneNumber}" onkeyup="{!c.formatPhoneNumber}" />
+            <lightning:input label="URL" value ="{!v.Location.url}" disabled ="{!v.bMakeReadOnly}" readonly="{!v.bMakeReadOnly}"/>
+            <lightning:input type="checkbox" label="{!$Label.c.This_Location_is_headquarters}" name="PrimaryLoc" checked="{!v.Location.bIsPrimary}" disabled ="{!v.bMakeReadOnly}" readonly="{!v.bMakeReadOnly}"/>  
+        </div>
+    </div>
+    <div class="slds-grid slds-wrap">
+        <div class="slds-large-size_6-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-x-small-size_12-of-12 slds-p-right_medium slds-p-top_medium locdetails-first-col">
+            <div class="resinfo-Subhead slds-m-bottom_medium">{!$Label.c.address}</div>
+            <lightning:input aura:id="requiredField" name="input1" label="{!$Label.c.AddressLine1}" required = "true" value="{!v.Location.sAddress1}" disabled ="{!v.bMakeReadOnly}" readonly="{!v.bMakeReadOnly}"/>
+            <lightning:input aura:id="requiredField" name="input1" label="{!$Label.c.AddressLine2}"  value="{!v.Location.sAddress2 }" disabled ="{!v.bMakeReadOnly}" readonly="{!v.bMakeReadOnly}"/>
+            <lightning:input aura:id="requiredField" name="input1" label="{!$Label.c.City}" required = "true" value="{!v.Location.sCity }" disabled ="{!v.bMakeReadOnly}" readonly="{!v.bMakeReadOnly}"/>
+            <lightning:select name="select1" label="{!$Label.c.State}" class="{!v.bMakeReadOnly?'select-disabled':''}" required = "true" aura:id="requiredField" value="{!v.Location.sState }" disabled ="{!v.bMakeReadOnly}" readonly="{!v.bMakeReadOnly}">
+                <aura:iteration items="{!v.lstStateOptions}" var="itrState">
+                    <option text="{!itrState.label}" value="{!itrState.value}" selected="{!itrState.value==v.Location.sState}"/>
+                </aura:iteration>
+            </lightning:select>
+            <lightning:input name="Zip" label="{!$Label.c.zipcode}" type="phone" aura:id="requiredField" maxlength="5" pattern = "\d{1,5}[0-9]" required = "true" value="{!v.Location.sZip}" disabled ="{!v.bMakeReadOnly}" readonly="{!v.bMakeReadOnly}" />
+            <div class="resinfo-Subhead slds-m-bottom_medium">{!$Label.c.LocationPOCHeader}</div>
+            <lightning:input name="input1" label="{!$Label.c.name}" value="{!v.Location.sPointofContactName}" disabled ="{!v.bMakeReadOnly}" readonly="{!v.bMakeReadOnly}"/>
+            <lightning:input name="inputEmail" aura:id="stdemail" pattern = "^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" type="email" label="{!$Label.c.OrganizationLocationEmail}"
+                             value="{!v.Location.sPointofContactEmail}" messageWhenPatternMismatch ="Please enter a valid email address" disabled ="{!v.bMakeReadOnly}"
+                             readonly="{!v.bMakeReadOnly}"/>
+            
+            <lightning:input type="text" aura:id="stdPhone" label="{!$Label.c.phone}" alt = "{!$Label.c.phone}" name="phone2" maxlength = "14"
+                             pattern = "^(\([0-9]{3}\) |[0-9]{3}-)[0-9]{3}-[0-9]{4}$" messageWhenPatternMismatch = "{!$Label.c.phoneformaterror}" 
+                             value="{!v.Location.sPointofContactPhone}" onchange= "{!c.formatPhoneNumber}" onkeyup="{!c.formatPhoneNumber}"
+                             disabled ="{!v.bMakeReadOnly}" readonly="{!v.bMakeReadOnly}"/>
+            
+            <lightning:input type="text" aura:id="stdPhone" label="{!$Label.c.RE_PhoneExt}" alt = "{!$Label.c.RE_PhoneExt}" name="phoneExt" maxlength = "3"
+                             pattern = "\d{3}" messageWhenPatternMismatch = "{!$Label.c.RE_InvalidPhoneExt}"
+                             value="{!v.Location.sPointofContactPhoneExt}" onchange= "{!c.formatPhoneNumber}" disabled ="{!v.bMakeReadOnly}" readonly="{!v.bMakeReadOnly}" />
+            
+            <div class="resinfo-Subhead slds-m-bottom_medium">{!$Label.c.HoursOfOperationHeader}</div>
+            <lightning:select name="select1" label="{!$Label.c.Time_Zone}" class="{!v.bMakeReadOnly?'select-disabled':''}" aura:id="TimeZone" value="{!v.Location.sTimeZone}" disabled ="{!v.bMakeReadOnly}" readonly="{!v.bMakeReadOnly}">
+                <aura:iteration items="{!v.lstTimeZoneOptions}" var="itrTimeZone">
+                    <option text="{!itrTimeZone.label}" value="{!itrTimeZone.value}" selected="{!itrTimeZone.value==v.Location.sTimeZone}"/>
+                </aura:iteration>
+            </lightning:select>
+            <div class="hours-of-operation-table"> 
+                <table class="slds-table time-combobox">
+                    <caption class="table-caption">{!$Label.c.HoursOfOperationHeader}</caption>
+                    <thead>
+                        <tr class="slds-line-height_reset">
+                            <th  scope="col">
+                                <div class="slds-truncate" title="{!$Label.c.RE_Day}">{!$Label.c.RE_Day}</div>
+                            </th>
+                            <th  scope="col">
+                                <div class="slds-truncate" title="{!$Label.c.RE_StartTime}">{!$Label.c.RE_StartTime}</div>
+                            </th>
+                            <th  scope="col">
+                                <div class="slds-truncate" title="{!$Label.c.RE_EndTime}">{!$Label.c.RE_EndTime}</div>
+                            </th>
+                            <th  scope="col">
+                                <div class="slds-truncate" title="{!$Label.c.RE_Closed}">{!$Label.c.RE_Closed}</div>
+                            </th>    
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="slds-hint-parent">
+                            <th data-label="{!$Label.c.RE_Day}" scope="row">
+                                {!$Label.c.monday}
+                            </th>
+                            <th data-label="{!$Label.c.RE_StartTime}" scope="row">
+                                <lightning:input type="time" name="input4" label="{!$Label.c.Start_Time}" variant="label-hidden" timeZone="UTC"  value="{!v.Location.tMondayOpen}" disabled="{!v.bMakeReadOnly ? true : v.bIsMondayClosed}"/>
+                                <div class="slds-has-error errormsg" >  
+                                    <div class="slds-form-element__help slds-hide slds-p-left_small "  aura:id="monstarttime">{!$Label.c.completefielderror}</div>  
+                                </div>
+                            </th>
+                            <th data-label="{!$Label.c.RE_EndTime}" scope="row">
+                                <lightning:input type="time" name="input4" label="{!$Label.c.RE_EndTime}" variant="label-hidden"  value="{!v.Location.tMondayClose}" disabled="{!v.bMakeReadOnly ? true : v.bIsMondayClosed}"/>
+                                <div class="slds-has-error errormsg" >  
+                                    <div class="slds-form-element__help slds-hide slds-p-left_small " aura:id="monendtime">{!$Label.c.completefielderror}</div>  
+                                </div>
+                            </th>
+                            <th data-label="{!$Label.c.RE_Closed}" scope="row">
+                                <lightning:input type="checkbox" name="input4" label="{!$Label.c.Closed}" variant="label-hidden"  checked="{!v.bIsMondayClosed}" onchange="{!c.onCloseOfAParticularDay}" disabled ="{!v.bMakeReadOnly}" />
+                            </th> 
+                        </tr>
+                        <tr class="slds-hint-parent">
+                            <th data-label="{!$Label.c.RE_Day}" scope="row">
+                                {!$Label.c.tuesday}
+                            </th>
+                            <th data-label="{!$Label.c.RE_StartTime}" scope="row">
+                                <lightning:input type="time" name="input4" label="{!$Label.c.Start_Time}" variant="label-hidden" value="{!v.Location.tTuesdayOpen}" disabled="{!v.bMakeReadOnly ? true : v.bIsTuesdayClosed}"/>
+                                <div class="slds-has-error errormsg" >  
+                                    <div class="slds-form-element__help slds-hide slds-p-left_small " aura:id="tuestarttime">{!$Label.c.completefielderror}</div>  
+                                </div>
+                            </th>
+                            <th data-label="{!$Label.c.RE_EndTime}" scope="row">
+                                <lightning:input type="time" name="input4" label="{!$Label.c.RE_EndTime}" variant="label-hidden"  value="{!v.Location.tTuesdayClose}"  disabled="{!v.bMakeReadOnly ? true : v.bIsTuesdayClosed}"/>
+                                <div class="slds-has-error errormsg" >  
+                                    <div class="slds-form-element__help slds-hide slds-p-left_small " aura:id="tueendtime">{!$Label.c.completefielderror}</div>  
+                                </div>
+                            </th>
+                            <th data-label="{!$Label.c.RE_Closed}" scope="row">
+                                <lightning:input type="checkbox" name="input4" label="{!$Label.c.Closed}" variant="label-hidden" checked="{!v.bIsTuesdayClosed}" onchange="{!c.onCloseOfAParticularDay}" disabled ="{!v.bMakeReadOnly}"/>
+                            </th>
+                        </tr>
+                        <tr class="slds-hint-parent">
+                            <th data-label="{!$Label.c.RE_Day}" scope="row">
+                                {!$Label.c.wednesday}
+                            </th>
+                            <th data-label="{!$Label.c.RE_StartTime}" scope="row">
+                                <lightning:input  type="time" name="input4" label="{!$Label.c.Start_Time}" variant="label-hidden" value="{!v.Location.tWednesdayOpen}"  disabled="{!v.bMakeReadOnly ? true : v.bIsWednesdayClosed}"/>
+                                <div class="slds-has-error errormsg" >  
+                                    <div class="slds-form-element__help slds-hide slds-p-left_small " aura:id="wedstarttime">{!$Label.c.completefielderror}</div>  
+                                </div>
+                            </th>
+                            <th data-label="{!$Label.c.RE_EndTime}" scope="row">
+                                <lightning:input  type="time" name="input4" label="{!$Label.c.RE_EndTime}" variant="label-hidden" value="{!v.Location.tWednesdayClose}"  disabled="{!v.bMakeReadOnly ? true : v.bIsWednesdayClosed}"/>
+                                <div class="slds-has-error errormsg" >  
+                                    <div class="slds-form-element__help slds-hide slds-p-left_small " aura:id="wedendtime">{!$Label.c.completefielderror}</div>  
+                                </div>
+                            </th>
+                            <th data-label="{!$Label.c.RE_Closed}" scope="row">
+                                <lightning:input type="checkbox" name="input4" label="{!$Label.c.Closed}" variant="label-hidden" checked="{!v.bIsWednesdayClosed}" onchange="{!c.onCloseOfAParticularDay}" disabled ="{!v.bMakeReadOnly}"/>
+                            </th>                                            
+                        </tr>
+                        <tr class="slds-hint-parent">
+                            <th data-label="{!$Label.c.RE_Day}" scope="row">
+                                {!$Label.c.thursday}
+                            </th>
+                            <th data-label="{!$Label.c.RE_StartTime}" scope="row">
+                                <lightning:input type="time" name="input4" label="{!$Label.c.Start_Time}" variant="label-hidden" value="{!v.Location.tThursdayOpen}" disabled="{!v.bMakeReadOnly ? true : v.bIsThursdayClosed}"/>
+                                <div class="slds-has-error errormsg" >  
+                                    <div class="slds-form-element__help slds-hide slds-p-left_small " aura:id="thursstarttime">{!$Label.c.completefielderror}</div>  
+                                </div>
+                            </th>
+                            <th data-label="{!$Label.c.RE_EndTime}" scope="row">
+                                <lightning:input type="time" name="input4" label="{!$Label.c.RE_EndTime}" variant="label-hidden" value="{!v.Location.tThursdayClose}" disabled="{!v.bMakeReadOnly ? true : v.bIsThursdayClosed}" />
+                                <div class="slds-has-error errormsg" >  
+                                    <div class="slds-form-element__help slds-hide slds-p-left_small " aura:id="thursendtime">{!$Label.c.completefielderror}</div>  
+                                </div>
+                            </th>
+                            <th data-label="{!$Label.c.RE_Closed}" scope="row">
+                                <lightning:input type="checkbox" name="input4" label="{!$Label.c.Closed}" variant="label-hidden"  checked="{!v.bIsThursdayClosed}" onchange="{!c.onCloseOfAParticularDay}" disabled ="{!v.bMakeReadOnly}"/>
+                            </th>
+                        </tr>
+                        <tr class="slds-hint-parent">
+                            <th data-label="{!$Label.c.RE_Day}" scope="row">
+                                {!$Label.c.friday}
+                            </th>
+                            <th data-label="{!$Label.c.RE_StartTime}" scope="row">
+                                <lightning:input type="time" name="input4" label="{!$Label.c.Start_Time}" variant="label-hidden"  value="{!v.Location.tFridayOpen}" disabled="{!v.bMakeReadOnly ? true : v.bIsFridayClosed}"  />
+                                <div class="slds-has-error errormsg" >  
+                                    <div class="slds-form-element__help slds-hide slds-p-left_small " aura:id="fristarttime">{!$Label.c.completefielderror}</div>  
+                                </div>
+                            </th>
+                            <th data-label="{!$Label.c.RE_EndTime}" scope="row">
+                                <lightning:input type="time" name="input4" label="{!$Label.c.RE_EndTime}" variant="label-hidden"  value="{!v.Location.tFridayClose}" disabled="{!v.bMakeReadOnly ? true : v.bIsFridayClosed}" />
+                                <div class="slds-has-error errormsg" >  
+                                    <div class="slds-form-element__help slds-hide slds-p-left_small " aura:id="friendtime">{!$Label.c.completefielderror}</div>  
+                                </div>
+                            </th>
+                            <th data-label="{!$Label.c.RE_Closed}" scope="row">
+                                <lightning:input type="checkbox" name="input4" label="{!$Label.c.Closed}" variant="label-hidden"  checked="{!v.bIsFridayClosed}" onchange="{!c.onCloseOfAParticularDay}" disabled ="{!v.bMakeReadOnly}"/>
+                            </th>  
+                        </tr>
+                        <tr class="slds-hint-parent">
+                            <th data-label="{!$Label.c.RE_Day}" scope="row">
+                                {!$Label.c.saturday}
+                            </th>
+                            <th data-label="{!$Label.c.RE_StartTime}" scope="row">
+                                <lightning:input type="time" name="input4" label="{!$Label.c.Start_Time}" variant="label-hidden"  value="{!v.Location.tSaturdayOpen}" disabled="{!v.bMakeReadOnly ? true : v.bIsSaturdayClosed}" />
+                                <div class="slds-has-error errormsg" >  
+                                    <div class="slds-form-element__help slds-hide slds-p-left_small " aura:id="satstarttime">{!$Label.c.completefielderror}</div>  
+                                </div>
+                            </th>
+                            <th data-label="{!$Label.c.RE_EndTime}" scope="row">
+                                <lightning:input type="time" name="input4" label="{!$Label.c.RE_EndTime}" variant="label-hidden"  value="{!v.Location.tSaturdayClose}" disabled="{!v.bMakeReadOnly ? true : v.bIsSaturdayClosed}" />
+                                <div class="slds-has-error errormsg" >  
+                                    <div class="slds-form-element__help slds-hide slds-p-left_small " aura:id="satendtime">{!$Label.c.completefielderror}</div>  
+                                </div>
+                            </th>
+                            <th data-label="{!$Label.c.RE_Closed}" scope="row">
+                                <lightning:input type="checkbox" name="input4" label="{!$Label.c.Closed}" variant="label-hidden"  checked="{!v.bIsSaturdayClosed}" onchange="{!c.onCloseOfAParticularDay}" disabled ="{!v.bMakeReadOnly}"/>
+                            </th> 
+                        </tr>
+                        <tr class="slds-hint-parent">
+                            <th data-label="{!$Label.c.RE_Day}" scope="row">
+                                {!$Label.c.sunday}
+                            </th>
+                            <th data-label="{!$Label.c.RE_StartTime}" scope="row">
+                                <lightning:input type="time" name="input4" label="{!$Label.c.Start_Time}" variant="label-hidden"  value="{!v.Location.tSundayOpen}" disabled="{!v.bMakeReadOnly ? true : v.bIsSundayClosed}" />
+                                <div class="slds-has-error errormsg" >  
+                                    <div class="slds-form-element__help slds-hide slds-p-left_small " aura:id="sunstarttime">{!$Label.c.completefielderror}</div>  
+                                </div>
+                            </th>
+                            <th data-label="{!$Label.c.RE_EndTime}" scope="row">
+                                <lightning:input type="time" name="input4" label="{!$Label.c.RE_EndTime}" variant="label-hidden"  value="{!v.Location.tSundayClose}" disabled="{!v.bMakeReadOnly ? true : v.bIsSundayClosed}" />
+                                <div class="slds-has-error errormsg" >  
+                                    <div class="slds-form-element__help slds-hide slds-p-left_small " aura:id="sunendtime">{!$Label.c.completefielderror}</div>  
+                                </div>
+                            </th>
+                            <th data-label="{!$Label.c.RE_Closed}" scope="row">
+                                <lightning:input type="checkbox" name="input4" label="{!$Label.c.Closed}" variant="label-hidden"  checked="{!v.bIsSundayClosed}" onchange="{!c.onCloseOfAParticularDay}" disabled ="{!v.bMakeReadOnly}"/> 
+                            </th>
+                        </tr>
+                      
+                    </tbody>
+                </table>
+            </div>
+            <lightning:textarea name="input1" label="{!$Label.c.Hours_Of_Operation_Notes}" 
+                                class="" value="{!v.Location.sNotes}" disabled ="{!v.bMakeReadOnly}" readonly="{!v.bMakeReadOnly}"/>
+        </div>
+        <div class="slds-large-size_6-of-12 slds-medium-size_12-of-12 slds-small-size_12-of-12 slds-x-small-size_12-of-12 slds-p-left_medium slds-p-top_medium locdetails-second-col">
+            <div class="resinfo-Subhead slds-m-bottom_medium">{!$Label.c.specialinstruction}</div>
+            <lightning:textarea name="input1" label="{!$Label.c.speciallocinstr}" value="{!v.Location.sSpecialLocationInstructions}" disabled ="{!v.bMakeReadOnly}" readonly="{!v.bMakeReadOnly}"/>
+            <lightning:textarea name="input1" label="{!$Label.c.publictransportnotes}" value="{!v.Location.sTransportationInstructions}" disabled ="{!v.bMakeReadOnly}" readonly="{!v.bMakeReadOnly}"/>
+            <lightning:textarea name="input1" label="{!$Label.c.parkinginstr}" value="{!v.Location.sParkingInstructions}" disabled ="{!v.bMakeReadOnly}" readonly="{!v.bMakeReadOnly}"/>
+            <div class="available-lang-sec">
+                <div class="resinfo-Subhead slds-m-bottom_medium">{!$Label.c.availablelang}</div>          
+                <lightning:textarea name="input1" label="{!$Label.c.language}" value="{!v.Location.sLanguage}" disabled ="{!v.bMakeReadOnly}" readonly="{!v.bMakeReadOnly}" maxlength="100" messageWhenTooLong="A maximum of 100 characters are allowed."/>  
+            </div>
+            <div class="resinfo-Subhead slds-m-bottom_medium">{!$Label.c.announcements}</div>
+            <lightning:textarea name="input1" type="String" label="{!$Label.c.announcementstext}" value="{!v.Location.sSpecialAnnouncements}" disabled ="{!v.bMakeReadOnly}" readonly="{!v.bMakeReadOnly}" />
+            <div class="slds-float_right announcement slds-grid">                           
+                <span class="displayann-label">{!$Label.c.displayannouncement}</span>
+                <lightning:input type="checkbox" aura:id="displayAnnouncement" title="{!$Label.c.displayannouncement}" label="{!$Label.c.displayannouncement}" variant="label-hidden"  checked ="{!v.Location.bAnnouncementStatus}"  disabled ="{!v.bMakeReadOnly}" class="announcment"/>
+            </div>
+            <div class="resinfo-Subhead slds-m-bottom_medium doc-upload-title">{!$Label.c.photosvideosdocs}</div>
+            <div class="generic-table-custom hours-of-operation-table slds-m-bottom_large">
+                <table class="slds-table slds-table--striped">
+                    <caption class="table-caption">{!$Label.c.photosvideosdocs}</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col"><span class="slds-truncate">{!$Label.c.name}</span></th>
+                            <th scope="col"><span class="slds-truncate">{!$Label.c.date}</span></th>
+                            <th scope="col"><span class="slds-truncate">{!$Label.c.type}</span></th>
+                            <th scope="col"><span class="slds-truncate"></span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <aura:iteration items="{!v.fileWrapperList}" var="f" indexVar="ind" >  
+                            <tr >  
+                                <td> <a  id="{!f.objConDoc.Id}" onclick="{!c.OpenFile}">{!f.objConDoc.Title}</a></td>  
+                                <td><lightning:formattedDateTime value="{!f.objConDoc.CreatedDate}" year="numeric" month="numeric" day="numeric" /></td>  
+                                <td> {!f.sDocType}</td>
+                                <td onclick="{!c.deleteFile}" data-index="{!ind}" ><lightning:icon iconName="utility:delete" alternativeText="delete"  /></td>
+                            </tr>  
+                        </aura:iteration>  
+                    </tbody>
+                </table>
+                <aura:if isTrue="{!!v.fileWrapperList.length}">
+                    <div class="body1 slds-text-align_center slds-p-vertical_medium">
+                        {!$Label.c.no_records}
+                    </div>
+                </aura:if>
+            </div>
+            <lightning:button label="{!$Label.c.uploaddocuments}" class="img" aura:id="ButtonClass" onclick="{!c.openModel}" disabled ="{!v.bMakeReadOnly}" />                    
+        </div>
+    </div>
+    
+    <!--<div class="slds-grid slds-wrap">
+        <div class="slds-col slds-large-size_6-of-12 slds-medium-size_12-of-12 slds-size_12-of-12 slds-p-right_x-large slds-p-top_medium locdetails-first-col">
+            <div class="slds-m-bottom_x-large">
+                <div class="resinfo-Subhead slds-m-bottom_large">{!$Label.c.LocationAddressHeader}</div>
+                <div class="slds-grid">
+                    <div class="slds-col slds-large-size_10-of-12 slds-size_12-of-12">
+                        <lightning:input aura:id="requiredField" name="input1" label="{!$Label.c.Location_Name}" required = "true" value="{!v.Location.sName}" disabled ="{!v.bMakeReadOnly}" readonly="{!v.bMakeReadOnly}"/>
+                    </div>  
+                </div>
+                <div class="slds-grid">
+                    <div class="slds-col slds-large-size_10-of-12 slds-size_12-of-12">
+                        <lightning:input type="checkbox" label="{!$Label.c.This_Location_is_headquarters}" name="PrimaryLoc" checked="{!v.Location.bIsPrimary}" disabled ="{!v.bMakeReadOnly}" readonly="{!v.bMakeReadOnly}"/>   
+                    </div>
+                </div>
+                <div class="slds-grid">
+                    <div class="slds-col slds-large-size_10-of-12 slds-size_12-of-12">
+                        <lightning:select name="LocStatus"
+                                          label="{!$Label.c.status}"
+                                          class="{!v.bMakeReadOnly?'select-disabled':''}"
+                                          aura:id="Status" 
+                                          required = "true"
+                                          disabled ="{!v.bMakeReadOnly}"
+                                          value="{!v.Location.sStatus }"
+                                          readonly="{!v.bMakeReadOnly}" >
+                            <aura:iteration items="{!v.lstStatusOptions}" var="itrStatus">
+                                <option text="{!itrStatus.label}" value="{!itrStatus.value}" selected="{!itrStatus.value==v.Location.sStatus}"/>
+                            </aura:iteration>
+                        </lightning:select>
+                    </div>
+                </div>
+                <div class="slds-grid">
+                    <div class="slds-col slds-large-size_10-of-12 slds-size_12-of-12">
+                        <lightning:input aura:id="requiredField" name="input1" label="{!$Label.c.AddressLine1}" required = "true" value="{!v.Location.sAddress1}" 
+                                         disabled ="{!v.bMakeReadOnly}" readonly="{!v.bMakeReadOnly}"/>
+                    </div> 
+                </div>
+                <div class="slds-grid">
+                    <div class="slds-col slds-large-size_10-of-12 slds-size_12-of-12">
+                        <lightning:input aura:id="requiredField" name="input1" label="{!$Label.c.AddressLine2}"  value="{!v.Location.sAddress2 }"
+                                         disabled ="{!v.bMakeReadOnly}" readonly="{!v.bMakeReadOnly}"/>
+                    </div> 
+                </div>
+                <div class="slds-grid">
+                    <div class="slds-col slds-large-size_10-of-12 slds-size_12-of-12">
+                        <lightning:input aura:id="requiredField" name="input1" label="{!$Label.c.City}" required = "true" value="{!v.Location.sCity }"
+                                         disabled ="{!v.bMakeReadOnly}" readonly="{!v.bMakeReadOnly}"/>
+                    </div>
+                </div>
+                <div class="slds-grid">
+                    <div class="slds-col slds-large-size_10-of-12 slds-size_12-of-12">
+                        <lightning:select name="select1"
+                                          label="{!$Label.c.State}"
+                                          class="{!v.bMakeReadOnly?'select-disabled':''}"
+                                          required = "true"
+                                          aura:id="requiredField"
+                                          value="{!v.Location.sState }"
+                                          disabled ="{!v.bMakeReadOnly}"
+                                          readonly="{!v.bMakeReadOnly}"
+                                          >
+                            <aura:iteration items="{!v.lstStateOptions}" var="itrState">
+                                <option text="{!itrState.label}" value="{!itrState.value}" selected="{!itrState.value==v.Location.sState}"/>
+                            </aura:iteration>
+                        </lightning:select>
+                    </div>
+                </div>
+                <div class="slds-grid">
+                    <div class="slds-col slds-large-size_10-of-12 slds-size_12-of-12">
+                        <lightning:input name="Zip" label="{!$Label.c.zipcode}"
+                                         type="phone"
+                                         aura:id="requiredField"
+                                         maxlength="5"
+                                         pattern = "\d{1,5}[0-9]"
+                                         required = "true" value="{!v.Location.sZip}"
+                                         disabled ="{!v.bMakeReadOnly}"
+                                         readonly="{!v.bMakeReadOnly}" />
+                    </div>
+                </div>
+            </div>
+            <div class="slds-m-bottom_x-large">
+                <div class="resinfo-Subhead slds-m-bottom_large">{!$Label.c.LocationPOCHeader}</div>
+                <div class="slds-grid">
+                    <div class="slds-col slds-large-size_10-of-12 slds-size_12-of-12">
+                        <lightning:input name="input1"
+                                         label="{!$Label.c.name}"
+                                         value="{!v.Location.sPointofContactName}"
+                                         disabled ="{!v.bMakeReadOnly}"
+                                         readonly="{!v.bMakeReadOnly}"
+                                         />
+                        <lightning:input name="inputEmail"
+                                         pattern = "^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
+                                         type="email" label="{!$Label.c.email}"
+                                         value="{!v.Location.sPointofContactEmail}"
+                                         messageWhenPatternMismatch ="Please enter a valid email address"
+                                         disabled ="{!v.bMakeReadOnly}"
+                                         readonly="{!v.bMakeReadOnly}"
+                                         />
+                        <lightning:input type="text" label="{!$Label.c.phone}" 
+                                         alt = "{!$Label.c.phone}"
+                                         name="phone2" 
+                                         maxlength = "13"
+                                         pattern = "^(\([0-9]{3}\) |[0-9]{3}-)[0-9]{3}-[0-9]{4}$"
+                                         messageWhenPatternMismatch = "{!$Label.c.phoneformaterror}"
+                                         value="{!v.Location.sPointofContactPhone}"
+                                         onchange= "{!c.formatPhoneNumber}"
+                                         onkeyup="{!c.formatPhoneNumber}"
+                                         disabled ="{!v.bMakeReadOnly}"
+                                         readonly="{!v.bMakeReadOnly}"
+                                         />
+                        <lightning:input type="text" label="{!$Label.c.RE_PhoneExt}" 
+                                         alt = "{!$Label.c.RE_PhoneExt}"
+                                         name="phoneExt" 
+                                         maxlength = "3"
+                                         pattern = "\d{3}"
+                                         messageWhenPatternMismatch = "{!$Label.c.RE_InvalidPhoneExt}"
+                                         value="{!v.Location.sPointofContactPhoneExt}"
+                                         disabled ="{!v.bMakeReadOnly}"
+                                         readonly="{!v.bMakeReadOnly}"
+                                         />
+                    </div>
+                </div>
+            </div>
+            <div class="slds-m-bottom_x-large">
+                <div class="slds-grid">
+                    <div class="slds-col">
+                        <div class="resinfo-Subhead slds-m-bottom_large">
+                            {!$Label.c.HoursOfOperationHeader}
+                        </div>    
+                        <div class="slds-grid">
+                            <div class="slds-col slds-size_10-of-12">
+                                <lightning:select name="select1"
+                                                  label="{!$Label.c.Time_Zone}"
+                                                  class="{!v.bMakeReadOnly?'select-disabled':''}"
+                                                  aura:id="TimeZone" 
+                                                  value="{!v.Location.sTimeZone}"
+                                                  disabled ="{!v.bMakeReadOnly}"
+                                                  readonly="{!v.bMakeReadOnly}">
+                                    <aura:iteration items="{!v.lstTimeZoneOptions}" var="itrTimeZone">
+                                        <option text="{!itrTimeZone.label}" value="{!itrTimeZone.value}" selected="{!itrTimeZone.value==v.Location.sTimeZone}"/>
+                                    </aura:iteration>
+                                </lightning:select>
+                            </div> 
+                        </div>
+                        <div class="slds-grid">
+                            <lightning:textarea name="input1" label="{!$Label.c.notes}" 
+                                                class="slds-size_1-of-1" value="{!v.Location.sNotes}" disabled ="{!v.bMakeReadOnly}" readonly="{!v.bMakeReadOnly}"/>
+                        </div>
+                        <div class="slds-grid">
+                            <div class="slds-col slds-size_12-of-12 hours-of-operation-table"> 
+                                <table class="slds-table time-combobox">
+                                    <caption class="table-caption">{!$Label.c.HoursOfOperationHeader}</caption>
+                                    <thead>
+                                        <tr class="slds-line-height_reset">
+                                            <th  scope="col">
+                                                <div class="slds-truncate" title="{!$Label.c.RE_Day}">{!$Label.c.RE_Day}</div>
+                                            </th>
+                                            <th  scope="col">
+                                                <div class="slds-truncate" title="{!$Label.c.RE_StartTime}">{!$Label.c.RE_StartTime}</div>
+                                            </th>
+                                            <th  scope="col">
+                                                <div class="slds-truncate" title="{!$Label.c.RE_EndTime}">{!$Label.c.RE_EndTime}</div>
+                                            </th>
+                                            <th  scope="col">
+                                                <div class="slds-truncate" title="{!$Label.c.RE_Closed}">{!$Label.c.RE_Closed}</div>
+                                            </th>    
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="slds-hint-parent">
+                                            <th data-label="{!$Label.c.RE_Day}" scope="row">
+                                                {!$Label.c.monday}
+                                            </th>
+                                            <th data-label="{!$Label.c.RE_StartTime}" scope="row">
+                                                <lightning:input type="time" name="input4" label="{!$Label.c.Start_Time}" variant="label-hidden" timeZone="UTC"  value="{!v.Location.tMondayOpen}" disabled="{!v.bMakeReadOnly ? true : v.bIsMondayClosed}"/>
+                                            </th>
+                                            <th data-label="{!$Label.c.RE_EndTime}" scope="row">
+                                                <lightning:input type="time" name="input4" label="{!$Label.c.RE_EndTime}" variant="label-hidden"  value="{!v.Location.tMondayClose}" disabled="{!v.bMakeReadOnly ? true : v.bIsMondayClosed}"/>
+                                            </th>
+                                            <th data-label="{!$Label.c.RE_Closed}" scope="row">
+                                                <lightning:input type="checkbox" name="input4" label="{!$Label.c.Closed}" variant="label-hidden"  checked="{!v.bIsMondayClosed}" onchange="{!c.onCloseOfAParticularDay}" disabled ="{!v.bMakeReadOnly}" />
+                                            </th> 
+                                        </tr>
+                                        <tr class="slds-hint-parent">
+                                            <th data-label="{!$Label.c.RE_Day}" scope="row">
+                                                {!$Label.c.tuesday}
+                                            </th>
+                                            <th data-label="{!$Label.c.RE_StartTime}" scope="row">
+                                                <lightning:input type="time" name="input4" label="{!$Label.c.Start_Time}" variant="label-hidden" value="{!v.Location.tTuesdayOpen}" disabled="{!v.bMakeReadOnly ? true : v.bIsTuesdayClosed}"/>
+                                            </th>
+                                            <th data-label="{!$Label.c.RE_EndTime}" scope="row">
+                                                <lightning:input type="time" name="input4" label="{!$Label.c.RE_EndTime}" variant="label-hidden"  value="{!v.Location.tTuesdayClose}"  disabled="{!v.bMakeReadOnly ? true : v.bIsTuesdayClosed}"/>
+                                            </th>
+                                            <th data-label="{!$Label.c.RE_Closed}" scope="row">
+                                                <lightning:input type="checkbox" name="input4" label="{!$Label.c.Closed}" variant="label-hidden" checked="{!v.bIsTuesdayClosed}" onchange="{!c.onCloseOfAParticularDay}" disabled ="{!v.bMakeReadOnly}"/>
+                                            </th>
+                                        </tr>
+                                        <tr class="slds-hint-parent">
+                                            <th data-label="{!$Label.c.RE_Day}" scope="row">
+                                                {!$Label.c.wednesday}
+                                            </th>
+                                            <th data-label="{!$Label.c.RE_StartTime}" scope="row">
+                                                <lightning:input  type="time" name="input4" label="{!$Label.c.Start_Time}" variant="label-hidden" value="{!v.Location.tWednesdayOpen}"  disabled="{!v.bMakeReadOnly ? true : v.bIsWednesdayClosed}"/>
+                                            </th>
+                                            <th data-label="{!$Label.c.RE_EndTime}" scope="row">
+                                                <lightning:input  type="time" name="input4" label="{!$Label.c.RE_EndTime}" variant="label-hidden" value="{!v.Location.tWednesdayClose}"  disabled="{!v.bMakeReadOnly ? true : v.bIsWednesdayClosed}"/>
+                                            </th>
+                                            <th data-label="{!$Label.c.RE_Closed}" scope="row">
+                                                <lightning:input type="checkbox" name="input4" label="{!$Label.c.Closed}" variant="label-hidden" checked="{!v.bIsWednesdayClosed}" onchange="{!c.onCloseOfAParticularDay}" disabled ="{!v.bMakeReadOnly}"/>
+                                            </th>                                            
+                                        </tr>
+                                        <tr class="slds-hint-parent">
+                                            <th data-label="{!$Label.c.RE_Day}" scope="row">
+                                                {!$Label.c.thursday}
+                                            </th>
+                                            <th data-label="{!$Label.c.RE_StartTime}" scope="row">
+                                                <lightning:input type="time" name="input4" label="{!$Label.c.Start_Time}" variant="label-hidden" value="{!v.Location.tThursdayOpen}" disabled="{!v.bMakeReadOnly ? true : v.bIsThursdayClosed}"/>
+                                            </th>
+                                            <th data-label="{!$Label.c.RE_EndTime}" scope="row">
+                                                <lightning:input type="time" name="input4" label="{!$Label.c.RE_EndTime}" variant="label-hidden" value="{!v.Location.tThursdayClose}" disabled="{!v.bMakeReadOnly ? true : v.bIsThursdayClosed}" />
+                                            </th>
+                                            <th data-label="{!$Label.c.RE_Closed}" scope="row">
+                                                <lightning:input type="checkbox" name="input4" label="{!$Label.c.Closed}" variant="label-hidden"  checked="{!v.bIsThursdayClosed}" onchange="{!c.onCloseOfAParticularDay}" disabled ="{!v.bMakeReadOnly}"/>
+                                            </th>
+                                        </tr>
+                                        <tr class="slds-hint-parent">
+                                            <th data-label="{!$Label.c.RE_Day}" scope="row">
+                                                {!$Label.c.friday}
+                                            </th>
+                                            <th data-label="{!$Label.c.RE_StartTime}" scope="row">
+                                                <lightning:input type="time" name="input4" label="{!$Label.c.Start_Time}" variant="label-hidden"  value="{!v.Location.tFridayOpen}" disabled="{!v.bMakeReadOnly ? true : v.bIsFridayClosed}"  />
+                                            </th>
+                                            <th data-label="{!$Label.c.RE_EndTime}" scope="row">
+                                                <lightning:input type="time" name="input4" label="{!$Label.c.RE_EndTime}" variant="label-hidden"  value="{!v.Location.tFridayClose}" disabled="{!v.bMakeReadOnly ? true : v.bIsFridayClosed}" />
+                                            </th>
+                                            <th data-label="{!$Label.c.RE_Closed}" scope="row">
+                                                <lightning:input type="checkbox" name="input4" label="{!$Label.c.Closed}" variant="label-hidden"  checked="{!v.bIsFridayClosed}" onchange="{!c.onCloseOfAParticularDay}" disabled ="{!v.bMakeReadOnly}"/>
+                                            </th>  
+                                        </tr>
+                                        <tr class="slds-hint-parent">
+                                            <th data-label="{!$Label.c.RE_Day}" scope="row">
+                                                {!$Label.c.saturday}
+                                            </th>
+                                            <th data-label="{!$Label.c.RE_StartTime}" scope="row">
+                                                <lightning:input type="time" name="input4" label="{!$Label.c.Start_Time}" variant="label-hidden"  value="{!v.Location.tSaturdayOpen}" disabled="{!v.bMakeReadOnly ? true : v.bIsSaturdayClosed}" />
+                                            </th>
+                                            <th data-label="{!$Label.c.RE_EndTime}" scope="row">
+                                                <lightning:input type="time" name="input4" label="{!$Label.c.RE_EndTime}" variant="label-hidden"  value="{!v.Location.tSaturdayClose}" disabled="{!v.bMakeReadOnly ? true : v.bIsSaturdayClosed}" />
+                                            </th>
+                                            <th data-label="{!$Label.c.RE_Closed}" scope="row">
+                                                <lightning:input type="checkbox" name="input4" label="{!$Label.c.Closed}" variant="label-hidden"  checked="{!v.bIsSaturdayClosed}" onchange="{!c.onCloseOfAParticularDay}" disabled ="{!v.bMakeReadOnly}"/>
+                                            </th> 
+                                        </tr>
+                                        <tr class="slds-hint-parent">
+                                            <th data-label="{!$Label.c.RE_Day}" scope="row">
+                                                {!$Label.c.sunday}
+                                            </th>
+                                            <th data-label="{!$Label.c.RE_StartTime}" scope="row">
+                                                <lightning:input type="time" name="input4" label="{!$Label.c.Start_Time}" variant="label-hidden"  value="{!v.Location.tSundayOpen}" disabled="{!v.bMakeReadOnly ? true : v.bIsSundayClosed}" />
+                                            </th>
+                                            <th data-label="{!$Label.c.RE_EndTime}" scope="row">
+                                                <lightning:input type="time" name="input4" label="{!$Label.c.RE_EndTime}" variant="label-hidden"  value="{!v.Location.tSundayClose}" disabled="{!v.bMakeReadOnly ? true : v.bIsSundayClosed}" />
+                                            </th>
+                                            <th data-label="{!$Label.c.RE_Closed}" scope="row">
+                                                <lightning:input type="checkbox" name="input4" label="{!$Label.c.Closed}" variant="label-hidden"  checked="{!v.bIsSundayClosed}" onchange="{!c.onCloseOfAParticularDay}" disabled ="{!v.bMakeReadOnly}"/> 
+                                            </th>
+                                        </tr>
+                                    </tbody> 
+                                </table>
+                            </div>
+                        </div>
+                    </div>        
+                </div>
+            </div> 
+        </div>
+        <div class="slds-col slds-large-size_6-of-12 slds-medium-size_12-of-12 slds-p-top_medium">
+            <div class="slds-m-bottom_x-large">
+                <div class="resinfo-Subhead slds-m-bottom_large">{!$Label.c.specialinstruction}</div>
+                <div class="slds-grid">
+                    <div class="slds-col slds-size_12-of-12">
+                        <lightning:textarea name="input1" label="{!$Label.c.speciallocinstr}" value="{!v.Location.sSpecialLocationInstructions}" disabled ="{!v.bMakeReadOnly}" readonly="{!v.bMakeReadOnly}"/>
+                        <lightning:textarea name="input1" label="{!$Label.c.publictransportnotes}" value="{!v.Location.sTransportationInstructions}" disabled ="{!v.bMakeReadOnly}" readonly="{!v.bMakeReadOnly}"/>
+                        <lightning:textarea name="input1" label="{!$Label.c.parkinginstr}" value="{!v.Location.sParkingInstructions}" disabled ="{!v.bMakeReadOnly}" readonly="{!v.bMakeReadOnly}"/>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-m-bottom_x-large">
+                <div class="resinfo-Subhead slds-m-bottom_large">{!$Label.c.availablelang}</div>
+                <div class="lang-pills-sec">                    
+                    <lightning:textarea name="input1" label="{!$Label.c.language}" value="{!v.Location.sLanguage}" disabled ="{!v.bMakeReadOnly}" readonly="{!v.bMakeReadOnly}"/>  
+                </div>
+            </div>
+            <div class="slds-m-bottom_x-large">
+                <div class="resinfo-Subhead slds-m-bottom_large">{!$Label.c.announcements}</div>
+                <lightning:textarea name="input1" type="String" label="{!$Label.c.announcementstext}" value="{!v.Location.sSpecialAnnouncements}" disabled ="{!v.bMakeReadOnly}" readonly="{!v.bMakeReadOnly}" />
+                <div class="slds-form-element">
+                    <div class="slds-form-element__control">
+                        <div class="slds-float_right announcement slds-grid">                           
+                            <span class="displayann-label">{!$Label.c.displayannouncement}</span>
+                            <lightning:input type="checkbox" aura:id="displayAnnouncement" title="{!$Label.c.displayannouncement}" label="{!$Label.c.displayannouncement}" variant="label-hidden"  checked ="{!v.Location.bAnnouncementStatus}"  disabled ="{!v.bMakeReadOnly}" class="announcment"/>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <div class="slds-m-bottom_x-large slds-p-top_x-large">
+                <div class="resinfo-Subhead slds-m-bottom_large">{!$Label.c.photosvideosdocs}</div>
+                <div class="generic-table-custom slds-m-bottom_large">
+                    <table class="slds-table slds-table-striped">
+                        <caption class="table-caption">{!$Label.c.photosvideosdocs}</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col"><span class="slds-truncate">{!$Label.c.name}</span></th>
+                                <th scope="col"><span class="slds-truncate">{!$Label.c.date}</span></th>
+                                <th scope="col"><span class="slds-truncate">{!$Label.c.type}</span></th>
+                                <th scope="col"><span class="slds-truncate"></span></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <aura:iteration items="{!v.fileWrapperList}" var="f" indexVar="ind" >  
+                                <tr >  
+                                    <td> <a  id="{!f.objConDoc.Id}" onclick="{!c.OpenFile}">{!f.objConDoc.Title}</a></td>  
+                                    <td><lightning:formattedDateTime value="{!f.objConDoc.CreatedDate}" year="numeric" month="numeric" day="numeric" /></td>  
+                                    <td> {!f.sDocType}</td>
+                                    <td onclick="{!c.deleteFile}" data-index="{!ind}" ><lightning:icon iconName="utility:delete" alternativeText="delete"  /></td>
+                                </tr>  
+                            </aura:iteration>  
+                        </tbody>
+                    </table>
+                    <aura:if isTrue="{!!v.fileWrapperList.length}">
+                        <div class="body1 slds-text-align_center slds-p-vertical_medium">
+                            {!$Label.c.no_records}
+                        </div>
+                    </aura:if>
+                </div>
+                <div >
+                    <lightning:button label="{!$Label.c.uploaddocuments}" class="img" aura:id="ButtonClass" onclick="{!c.openModel}" disabled ="{!v.bMakeReadOnly}" />                    
+                </div>                           
+            </div>
+        </div> 
+    </div>-->
+    <!-- <aura:if isTrue="{!v.isOpen}"> -->
+    <c:RE_FileUpload parentId="{!v.sRecordID}"
+                     isModal ="true"
+                     isOpen ="{!v.isOpen}"
+                     bShowFileUpload = "true"/>
+    <!-- </aura:if> -->
+</aura:component>

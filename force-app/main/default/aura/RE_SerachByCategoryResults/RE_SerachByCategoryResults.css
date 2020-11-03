@@ -1,0 +1,76 @@
+.THIS .slds-nav-vertical__item.slds-is-active .slds-nav-vertical__action .slds-badge,
+.THIS .slds-nav-vertical__item.slds-is-active .slds-nav-vertical__action:hover .slds-badge,
+.THIS .slds-nav-vertical__action:hover .slds-badge{
+    color: t(REWhite);
+    font-weight: normal;
+}
+.THIS .slds-nav-vertical__item .slds-nav-vertical__action .slds-badge{
+    background: none;
+}
+.THIS .headingContainer{
+    margin: 0;
+}
+.THIS .resourceSection, .THIS .privacySettings{
+    min-height: 40rem;
+}
+.THIS .resourceSectionBackground {
+    background: t(REMyPlanRBG);
+}
+.THIS .planMapSection{
+    position: relative;
+}
+.THIS .showAllLocation{
+    position: absolute;
+    left: 0.8rem;
+    top: 1.8rem;
+    margin: 0.5rem 0 0 0; 
+}
+
+.THIS.discover-resource-popup .slds-modal__container{
+    width:30%;
+}
+.THIS.discover-resource-popup .location-icon{
+    position: absolute;
+    right: -0.3125rem;
+    top: 0.4375rem;
+}
+
+.THIS .slds-icon_container.slds-input__icon{
+    left: 90%;
+}
+
+.THIS .planCardSection {
+    padding: 1rem 2rem 1rem 2rem;
+}
+@media only screen and (max-device-width:842px){
+    .THIS.discover-resource-popup .slds-modal__container{
+        width:85%;
+    }
+}
+@media only screen and (device-width : 414px) and (device-height : 736px) and (-webkit-device-pixel-ratio : 3) and (orientation:portrait) { 
+    .THIS .planCardSection {
+        padding: 1rem 0.1rem 1rem 0.1rem;
+    }
+    .THIS .info-padding{
+        padding-left: 1.5rem;
+    }
+    .THIS .card-btn-section{
+        padding-top: 1rem;
+    }
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+  /* For Ipad landscape layouts only  */
+    .THIS .planCardSection {
+        padding: 1rem 0.1rem 1rem 0.1rem;
+    }
+}
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : portrait) {
+    /* For Iphone 6 portrait layouts only  */
+    .THIS .planCardSection {
+        padding: 1rem 0.1rem 1rem 0.1rem;
+    }
+    .THIS .card-btn-section{
+        padding-top: 1rem;
+    }
+}

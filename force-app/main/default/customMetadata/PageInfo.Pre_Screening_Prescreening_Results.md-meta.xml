@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Pre-Screening-Prescreening Results</label>
+    <protected>false</protected>
+    <values>
+        <field>IsJSONBasedPage__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>JsonLayoutSchema__c</field>
+        <value xsi:type="xsd:string">{
+&quot;uniqName&quot;:&quot;PS_Application&quot;,
+&quot;title&quot;:&quot;PS_Application&quot;,
+&quot;profiles&quot;:&quot;all&quot;,
+&quot;pageType&quot;:&quot;detail&quot;,
+&quot;pageTitle&quot;:&quot;sspPrescreeningResults&quot;,
+&quot;isFinalSummaryPage&quot;:true,
+&quot;MedicaidResult&quot;:&quot;&quot;,
+&quot;SnapResult&quot;:&quot;&quot;,
+&quot;ChildCareResult&quot;:&quot;&quot;,
+&quot;KTAPResult&quot;:&quot;&quot;,
+&quot;fields&quot;:[
+{
+&quot;uniqName&quot;:&quot;sspPsResultsInfoText&quot;,
+&quot;name&quot;:&quot;sspPsResultsInfoText&quot;,
+&quot;typ&quot;:&quot;rich-text&quot;,
+&quot;subType&quot;:&quot;formattedText&quot;,
+&quot;formattedText&quot;:&quot;sspPsResultsInfoText&quot;
+},
+{
+&quot;uniqName&quot;:&quot;ssPsResultsInfoCompletionNotice&quot;,
+&quot;name&quot;:&quot;ssPsResultsInfoCompletionNotice&quot;,
+&quot;typ&quot;:&quot;rich-text&quot;,
+&quot;subType&quot;:&quot;noticeCard&quot;,
+&quot;noticeType&quot;:&quot;warning&quot;,
+&quot;noticeText&quot;:&quot;ssPsResultsInfoCompletionNotice&quot;
+},
+{
+&quot;uniqName&quot;:&quot;sspResultCardMa&quot;,
+&quot;name&quot;:&quot;sspResultCardMa&quot;,
+&quot;typ&quot;:&quot;rich-text&quot;,
+&quot;subType&quot;:&quot;resultCard&quot;,
+&quot;cardTitle&quot;:&quot;sspMedicaidTitle&quot;,
+&quot;cardContent&quot;:&quot;sspMedicaidFormattedText&quot;,
+&quot;eligResult&quot;:&quot;maResult&quot;,
+&quot;hasButton&quot;:true,
+&quot;btnLabel&quot;:&quot;sspPsBrowsePlans&quot;,
+&quot;variant&quot;:&quot;brand&quot;,
+&quot;btnTitle&quot;:&quot;sspPsBrowsePlans&quot;,
+&quot;gotoPageType&quot;:&quot;standard__webPage&quot;,
+&quot;resultCardBtnUrlLabel&quot;:&quot;sspPsResultMedicaidBtnUrl&quot;
+},
+{
+&quot;uniqName&quot;:&quot;sspResultCardSnap&quot;,
+&quot;name&quot;:&quot;sspResultCardSnap&quot;,
+&quot;typ&quot;:&quot;rich-text&quot;,
+&quot;subType&quot;:&quot;resultCard&quot;,
+&quot;cardTitle&quot;:&quot;sspSnapTitle&quot;,
+&quot;cardContent&quot;:&quot;sspSnapFormattedText&quot;,
+&quot;eligResult&quot;:&quot;snapResult&quot;
+},
+{
+&quot;uniqName&quot;:&quot;sspResultCardCc&quot;,
+&quot;name&quot;:&quot;sspResultCardCc&quot;,
+&quot;typ&quot;:&quot;rich-text&quot;,
+&quot;subType&quot;:&quot;resultCard&quot;,
+&quot;cardTitle&quot;:&quot;sspCcTitle&quot;,
+&quot;cardContent&quot;:&quot;sspCcFormattedText&quot;,
+&quot;eligResult&quot;:&quot;ccResult&quot;
+},
+{
+&quot;uniqName&quot;:&quot;sspResultCardKtap&quot;,
+&quot;name&quot;:&quot;sspResultCardKtap&quot;,
+&quot;typ&quot;:&quot;rich-text&quot;,
+&quot;subType&quot;:&quot;resultCard&quot;,
+&quot;cardTitle&quot;:&quot;sspKTAPTitle&quot;,
+&quot;cardContent&quot;:&quot;sspKTAPFormattedText&quot;,
+&quot;eligResult&quot;:&quot;ktapResult&quot;
+},
+{
+&quot;uniqName&quot;:&quot;sspPsResultEnrollmentAccessInfo&quot;,
+&quot;name&quot;:&quot;sspPsResultEnrollmentAccessInfo&quot;,
+&quot;typ&quot;:&quot;rich-text&quot;,
+&quot;subType&quot;:&quot;noticeCard&quot;,
+&quot;noticeType&quot;:&quot;warning&quot;,
+&quot;noticeText&quot;:&quot;sspPsResultEnrollmentAccessInfo&quot;
+},
+{
+&quot;uniqName&quot;:&quot;sspPsResultsIneligibleProgHelpInfo&quot;,
+&quot;name&quot;:&quot;sspPsResultsIneligibleProgHelpInfo&quot;,
+&quot;typ&quot;:&quot;rich-text&quot;,
+&quot;subType&quot;:&quot;noticeCard&quot;,
+&quot;noticeType&quot;:&quot;warning&quot;,
+&quot;noticeText&quot;:&quot;sspPsResultsIneligibleProgHelpInfo&quot;
+}
+],
+&quot;navButtons&quot;:[
+{
+&quot;uniqName&quot;:&quot;sspExit&quot;,
+&quot;name&quot;:&quot;sspExit&quot;,
+&quot;typ&quot;:&quot;button&quot;,
+&quot;subType&quot;:&quot;navFlowButton&quot;,
+&quot;label&quot;:&quot;sspExit&quot;,
+&quot;btnTitle&quot;:&quot;sspExitDashboardTitle&quot;,
+&quot;action&quot;:&quot;exit&quot;,
+&quot;gridCol&quot;:&quot;2-of-12&quot;,
+&quot;gridOrderS&quot;:&quot;2&quot;,
+&quot;gridOrderM&quot;:&quot;1&quot;
+},
+{
+&quot;uniqName&quot;:&quot;applyBen&quot;,
+&quot;name&quot;:&quot;applyBen&quot;,
+&quot;typ&quot;:&quot;button&quot;,
+&quot;subType&quot;:&quot;navFlowButton&quot;,
+&quot;label&quot;:&quot;sspHomePageApplyBenefit&quot;,
+&quot;btnTitle&quot;:&quot;sspApplyBenefitsTitle&quot;,
+&quot;action&quot;:&quot;gotopage&quot;,
+&quot;gotoPage&quot;:&quot;getStartedBenefits__c&quot;,
+&quot;variant&quot;:&quot;neutral&quot;,
+&quot;gridCol&quot;:&quot;10-of-12&quot;,
+&quot;gridOrderS&quot;:&quot;1&quot;,
+&quot;gridOrderM&quot;:&quot;2&quot;
+}
+]
+}</value>
+    </values>
+    <values>
+        <field>LightningComponentName__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>PageDisplayName__c</field>
+        <value xsi:type="xsd:string">Prescreening Results</value>
+    </values>
+    <values>
+        <field>PageName__c</field>
+        <value xsi:type="xsd:string">Prescreening Results</value>
+    </values>
+    <values>
+        <field>Page_Display_Name_View__c</field>
+        <value xsi:type="xsd:string">Absent Parent</value>
+    </values>
+    <values>
+        <field>URL__c</field>
+        <value xsi:nil="true"/>
+    </values>
+</CustomMetadata>

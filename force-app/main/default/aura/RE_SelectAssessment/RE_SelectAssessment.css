@@ -1,0 +1,21 @@
+.THIS .assessment-container{
+    padding-right: 9%;
+}
+.THIS .assessment-template{
+    background-color: t(RENavActiveBG);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.THIS .assessment-title{
+    font-size:t(RESize20);
+}
+@media screen and (max-device-width: 768px) {
+    .THIS .assessment-container{
+        padding-right: 0;
+    }
+    .THIS .assessment-btn-section{
+        text-align: left;
+    }
+}

@@ -1,0 +1,122 @@
+.THIS .search-button, .THIS .help-btn{
+    margin: 1.52rem 0 0 1.44rem;
+}
+.THIS.search-details-div .slds-card__header:nth-child(3)>div{
+    padding-top: 0;
+}
+.THIS.pagination-records, .THIS.records-per-page{
+    display: none;
+}
+.THIS .slds-page-header{
+    min-height:4rem;
+}
+.THIS .added-to-db{
+    font-size: t(RESize18);
+}
+.THIS .city-label.slds-form-element__label{
+    margin-bottom:0.5rem;
+}
+.THIS .select-orgn{
+    font-weight: bold;
+}
+.THIS .address-detail, .THIS .slds-page-header__title{
+    font-size:t(RESize16);
+}
+.THIS .address-detail-heading{
+    text-transform: capitalize;
+}
+.THIS .select{
+    width: 55%;
+}
+.THIS.pagination-container{
+    text-align:center;
+    display: none;
+}
+.THIS input[type="search"] ~ div svg.slds-button__icon{
+    margin-bottom: t(RESize16);
+}
+.THIS .claim-site-mpdal.slds-modal__container{
+    width:35%;
+}
+.THIS svg.slds-button__icon.slds-button_icon-inverse{
+    color:t(REResourceGrey);
+}
+.THIS .list-details{
+    list-style: outside;
+}
+.THIS img{
+    max-width:40%;
+}
+.THIS .heading1-time-to-do{
+    font-size:2.625rem;
+    font-weight: 600;
+}
+.THIS .heading2-search-your-org{
+    font-size:1.5rem;
+    color:t(REPrimary);
+}
+.THIS svg.slds-icon.slds-icon-text-default{
+    width: .875rem;
+    height: .875rem;
+}
+.THIS .address-detail-heading:focus{
+    outline:none;
+}
+@media only screen and (max-width:1024px){
+    .THIS .search-button, .THIS .help-btn{
+        margin: 1.44rem 0 0 1.44rem;
+    }
+    .THIS.search-results{
+        min-height:16.2rem;
+    }
+}
+@media only screen and (max-width:768px){
+    .THIS .slds-modal__content{
+        width: 100%;
+        margin-left:0;
+        border: 0.032rem t(REResourceGrey) solid;
+    }
+    .THIS .slds-modal__container{
+        right: 0;
+    }
+    .THIS .search-button, .THIS .help-btn{
+        margin:0.2rem;
+    }
+    .THIS img{
+        max-width:100%;
+    }
+}
+.THIS #results-heading{
+    display: none;
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation:landscape) {
+  /* For Ipad landscape layouts only */
+    .THIS .actionBtns {
+        margin-top: 1.2rem;
+    }
+    .THIS .search-button{
+        margin-top: 5px;
+    }
+}
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : portrait) {
+    /* For Iphone portrait layouts only */
+    .THIS .cantFindBtn {
+        margin-top: 1rem;
+    } 
+} 
+@media only screen and (min-width: 1440px) and (max-width:1679px){
+    .THIS.search-results{
+        min-height:17.5rem;
+    }
+}
+@media only screen and (min-width: 1680px){
+    .THIS.search-results{
+        min-height:21.45rem;
+    }
+}
+@media only screen and (min-width: 1280px) and (max-width: 1439px){
+    .THIS.search-results{
+        min-height:21.45rem;
+    }
+}
