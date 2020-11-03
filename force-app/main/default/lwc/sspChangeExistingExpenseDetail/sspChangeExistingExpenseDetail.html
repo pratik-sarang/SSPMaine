@@ -1,0 +1,181 @@
+<!--
+* name 		    : sspChangeExistingExpenseDetail
+* @description 	: The component is used edit existing expense records child of sspChangeExistingExpense
+* @author 		: Shrikant And Chirag
+* @date 		: 11/27/2019
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName	      MM/DD/YYYY	      A Brief Description 
+						       about the Change
+-->
+
+<template>
+    <div class="slds-m-bottom_medium">
+        <div class="ssp-multipleCheckbox_container">
+            <c-ssp-base-component-multiline-input-checkbox
+                onhandlemultiselectchange={toggleExpenseRecordFunction}
+                class="ssp-cbWithCompleteBorder slds-m-bottom_small slds-size_1-of-1"
+                hide-additional-fields="true"
+                disabled={disabled}
+            >
+                <div slot="labelContent" class="ssp-checkbox-labels">
+                    <p
+                        class="ssp-fontFamily_popinBold ssp-color_monoBody ssp-labelLine1"
+                    >
+                        {headerOne}
+                    </p>
+                    <p class="ssp-fontFamily_popinBold ssp-color_blueAlpha">
+                        {headerTwo}
+                    </p>
+                </div>
+            </c-ssp-base-component-multiline-input-checkbox>
+        </div>
+        <template if:true={toggleExpenseRecord}>
+            <div class={containerClass}>
+                <div
+                    class="slds-p-around_large slds-grid slds-wrap ssp-cbBoxBorder ssp-bg_monoDelta ssp-fieldContainer"
+                >
+                    <template if:true={showExpenseFrequency}>
+                        <div
+                            class="slds-size_1-of-1 slds-large-size_1-of-2 slds-p-horizontal_small slds-p-top_medium"
+                        >
+                            <div>
+                                <c-ssp-base-component-input-picklist
+                                    data-id="ExpenseFrequencyCode__c"
+                                    class={inputClassName}
+                                    value={expenseObj.ExpenseFrequencyCode__c}
+                                    selected-value={expenseObj.ExpenseFrequencyCode__c}
+                                    label={expenseFrequencyLabel}
+                                    title={sspExpenseFrequencyAltLabel}
+                                    entity-name="SSP_Asset__c"
+                                    field-name="ExpenseFrequencyCode__c"
+                                    meta-list={metaDataListParent}
+                                    option={expenseFrequencies}
+                                    onhandlepicklistchange={setLabel}
+                                    onchange={setLabel}
+                                >
+                                </c-ssp-base-component-input-picklist>
+                            </div>
+                        </div>
+                    </template>
+
+                    <template if:true={showExpensesAmount}>
+                        <div
+                            class="slds-size_1-of-1 slds-large-size_1-of-2 slds-p-horizontal_small slds-p-top_x-small"
+                        >
+                            <div class="ssp-input slds-m-top_medium">
+                                <c-ssp-base-component-input-text-icon
+                                    class={inputClassName}
+                                    label={expensesAmountLabel}
+                                    value={expenseObj.ExpenseAmount__c}
+                                    data-id="ExpenseAmount__c"
+                                    entity-name="SSP_Asset__c"
+                                    field-name="ExpenseAmount__c"
+                                    meta-list={metaDataListParent}
+                                    maximum-value="9999999999.99"
+                                >
+                                </c-ssp-base-component-input-text-icon>
+                            </div>
+                        </div>
+                    </template>
+
+                    <template if:true={showTuitionAmount}>
+                        <div
+                            class="slds-size_1-of-1 slds-large-size_1-of-2 slds-p-horizontal_small slds-p-top_x-small"
+                        >
+                            <div class="ssp-input slds-m-top_medium">
+                                <c-ssp-base-component-input-text-icon
+                                    class={inputClassName}
+                                    label={tuitionAmountLabel}
+                                    value={expenseObj.TuitionAmount__c}
+                                    data-id="TuitionAmount__c"
+                                    entity-name="SSP_Asset__c"
+                                    field-name="TuitionAmount__c"
+                                    meta-list={metaDataListParent}
+                                    maximum-value="9999999999.99"
+                                    onchange={handleOnChange}
+                                    custom-validation-error={customValidationError}
+                                >
+                                </c-ssp-base-component-input-text-icon>
+                            </div>
+                        </div>
+                    </template>
+
+                    <template if:true={showBooksAmount}>
+                        <div
+                            class="slds-size_1-of-1 slds-large-size_1-of-2 slds-p-horizontal_small slds-p-top_x-small"
+                        >
+                            <div class="ssp-input slds-m-top_medium">
+                                <c-ssp-base-component-input-text-icon
+                                    class={inputClassName}
+                                    label={booksAmountLabel}
+                                    value={expenseObj.BooksAmount__c}
+                                    data-id="BooksAmount__c"
+                                    entity-name="SSP_Asset__c"
+                                    field-name="BooksAmount__c"
+                                    meta-list={metaDataListParent}
+                                    maximum-value="9999999999.99"
+                                    onchange={handleOnChange}
+                                    custom-validation-error={customValidationError}
+                                >
+                                </c-ssp-base-component-input-text-icon>
+                            </div>
+                        </div>
+                    </template>
+
+                    <template if:true={showFeesAmount}>
+                        <div
+                            class="slds-size_1-of-1 slds-large-size_1-of-2 slds-p-horizontal_small slds-p-top_x-small"
+                        >
+                            <div class="ssp-input slds-m-top_medium">
+                                <c-ssp-base-component-input-text-icon
+                                    class={inputClassName}
+                                    label={feesAmountLabel}
+                                    value={expenseObj.FeesAmount__c}
+                                    data-id="FeesAmount__c"
+                                    entity-name="SSP_Asset__c"
+                                    field-name="FeesAmount__c"
+                                    meta-list={metaDataListParent}
+                                    maximum-value="9999999999.99"
+                                    onchange={handleOnChange}
+                                    custom-validation-error={customValidationError}
+                                >
+                                </c-ssp-base-component-input-text-icon>
+                            </div>
+                        </div>
+                    </template>
+
+                    <template if:true={showMiscellaneousAmount}>
+                        <div
+                            class="slds-size_1-of-1 slds-large-size_1-of-2 slds-p-horizontal_small slds-p-top_x-small"
+                        >
+                            <div class="ssp-input slds-m-top_medium">
+                                <c-ssp-base-component-input-text-icon
+                                    class={inputClassName}
+                                    label={miscellaneousAmountLabel}
+                                    value={expenseObj.MiscellaneousAmount__c}
+                                    data-id="MiscellaneousAmount__c"
+                                    entity-name="SSP_Asset__c"
+                                    field-name="MiscellaneousAmount__c"
+                                    meta-list={metaDataListParent}
+                                    maximum-value="9999999999.99"
+                                    onchange={handleOnChange}
+                                    custom-validation-error={customValidationError}
+                                >
+                                </c-ssp-base-component-input-text-icon>
+                            </div>
+                        </div>
+                    </template>
+
+                    <template if:true={isError}>
+                        <span
+                            class="slds-m-top_small ssp-errorMessage ssp-color_redOmega"
+                            >{label.sspAtLeastOneEducationExpenseErrorMessage}</span
+                        >
+                    </template>
+                </div>
+            </div>
+        </template>
+    </div>
+</template>

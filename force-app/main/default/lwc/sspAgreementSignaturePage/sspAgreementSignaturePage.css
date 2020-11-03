@@ -1,0 +1,88 @@
+.ssp-fontSize {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+.ssp-signaturePage_Container {
+    margin-bottom: 6.25rem;
+    margin-top: 1.875rem;
+}
+.ssp-termsOfAgreement,
+.ssp-voterRegistration {
+    font-size: 1.125rem;
+    font-weight: bold;
+    letter-spacing: -0.01875rem;
+    line-height: 1.5rem;
+}
+.ssp-greyUnderline {
+    height: 0.3125rem;
+    border-radius: 0.15625rem;
+}
+.ssp-greyUnderlineSmall {
+    height: 0.0625rem;
+}
+.ssp-navigationLink {
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: -0.3px;
+    line-height: 30px;
+}
+.ssp-headerText {
+    font-size: 42px;
+    font-weight: 900;
+    letter-spacing: 0;
+    line-height: 48px;
+}
+.ssp-ruler {
+    height: 5px;
+    width: 100%;
+    border-radius: 2.5px;
+}
+.ssp-infoText {
+    font-size: 16px;
+    letter-spacing: 0.3px;
+    line-height: 22px;
+}
+.ssp-bottomMargin {
+    margin-bottom: 40px;
+}
+.ssp-rulerBeta {
+    height: 1px;
+    width: 100%;
+}
+.ssp-childElement {
+    margin-right: 100px;
+}
+.ssp-buttonWidth {
+    width: 170px;
+}
+.ssp-backgroundImage {
+    position: absolute;
+    top: 62px;
+    right: 0;
+    height: 242px;
+    width: auto;
+    z-index: -1;
+}
+@media only screen and (max-width: 768px) {
+    .ssp-headerText {
+        font-size: 24px;
+        font-weight: 900;
+        letter-spacing: 0;
+        line-height: 32px;
+    }
+    .ssp-childElement {
+        margin-right: 0;
+    }
+    .ssp-elements {
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .ssp-backgroundImage {
+        position: absolute;
+        right: 0;
+        height: 122px;
+        width: auto;
+        z-index: -1;
+    }
+}

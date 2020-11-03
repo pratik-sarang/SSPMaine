@@ -1,0 +1,45 @@
+<!--
+* name          : sspSearchCard.
+* @description  : This is component is used to search data.
+* @author       : Soumyashree.
+* @date         : 12/11/2019
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName                MM/DD/YYYY               A Brief Description about the Change
+  Soumya                    12/11/2019                          Initial Version
+-->
+<template>
+    <div class="ssp-searchCard ssp-boxShadow">
+        <div class="ssp-searchCardBody">
+            <div
+                class="ssp-searchCardTitle slds-grid slds-grid_align-spread ssp-fontFamily_popinBold"
+            >
+                <div class="ssp-color_blueAlpha ssp-headerWidth">
+                    {sspSearchCardTitle}
+                </div>
+
+                <p class="ssp-color_monoBody ssp-alignText">
+                    <span class="ssp-textGapping">{sspSearchCardDist}</span>
+                    {label.sspMiles}
+                </p>
+            </div>
+            <div class="ssp-searchCardContent">
+                <div>
+                    <p class="ssp-fontFamily  _popinBold ssp-color_monoBody">
+                        {sspSearchCardCompany}
+                    </p>
+                </div>
+                <div>
+                    <slot></slot>
+                </div>
+            </div>
+        </div>
+        <div class="ssp-searchCardFooter">
+            <lightning-button
+                label={sspSearchCardBtnVal}
+                class="ssp-fontFamily_popinBold ssp-color_monoBody ssp-button_base"
+            ></lightning-button>
+        </div>
+    </div>
+</template>

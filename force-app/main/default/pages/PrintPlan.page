@@ -1,0 +1,87 @@
+<!--
+*   Type        :   Visualforce Page
+*   Name        :   PrintPlan
+*   Created By   :  Deloitte
+*   Created Date :  04/02/2020
+*   Description :   Visualforce Page renders as pdf to print view MyPlan details of the citizen
+*   Modification Log:
+*   --------------------------------------------------------------------------------------
+*   * Developer                   Date          Description
+*   * ------------------------------------------------------------------------------------                 
+*     Anuj                    04/02/2020        Initial Version
+-->
+<apex:page controller="RE_MyPlanCtrl" action="{!printPlans}" renderAs="pdf" applyBodyTag="false" applyHtmlTag="false" showHeader="false" title="Print Plan" cache="false">    
+    <apex:form >
+        <div style="font-family: Calibri, sans-serif;font-size: 18px; color: black">
+			<apex:pageBlock mode="maindetail">
+            <h1 class="slds-hide" >&nbsp;</h1> <!--Added to avoid non consecutive tags issues in ForceReviewer-->
+				<h2>
+                    <apex:outputText escape="false" value="{!$Label.RE_PrintPlanCaption}">
+                    <apex:param value="{!partnerName}"/>
+                    </apex:outputText>&nbsp;<apex:outputText value="{0,date,M/d/yyyy}"> <apex:param value="{!TODAY()}" /> </apex:outputText>
+               <!--RE_Release 1.1 –ForceReviewer Changes- Payal Dubela-->
+                    <div style="font-size: 26px; margin-top:40px; margin-bottom:3px;"><strong><apex:outputText value="{!$Label.RE_In_Progress_Resource}"/></strong></div>
+                </h2>
+                <div style="font-size:19px;">
+                    <apex:repeat value="{!resultInProgressResources}" var="a" rendered="{!AND(resultInProgressResources != null, resultInProgressResources.size>0)}">
+                        <apex:outputPanel layout="block" style="margin-left: 70px;">
+                             <!--RE_Release 1.1 –ForceReviewer Changes- Payal Dubela-->
+                            <strong><apex:outputText value="{!a.resource.sResourceName}" style="line-height:25px;" rendered="{!a.resource.sResourceName != ''}"/></strong>
+                            <br/>
+                            <apex:outputText value="{!a.acc.sReferralOrgName}" style="line-height:25px;" rendered="{!a.acc.sReferralOrgName != ''}"/>
+                            <br/>
+                            <div style="{!IF(((a.location.sLocationAddress1 != '' && a.location.sLocationAddress1 != null) || (a.location.sLocationAddress2 !='' && a.location.sLocationAddress2 != null)), 'display:block', 'display:none')}">
+                                <apex:outputText value="{!a.location.sLocationAddress1}" style="line-height:25px;"/><apex:outputText value="{! IF(a.location.sLocationAddress2 == null, '',  ", " )}" style="line-height:25px;"/><apex:outputText value="{! IF(a.location.sLocationAddress2 == null, '',  a.location.sLocationAddress2)}" style="line-height:25px;"/>
+                            <br/>
+                            </div>
+                            <div style="{!IF(((a.location.sLocationCity != '' && a.location.sLocationCity != null) || (a.location.sLocationState !='' && a.location.sLocationState != null) || (a.location.sLocationZip !='' && a.location.sLocationZip != null)), 'display:block', 'display:none')}">
+                             <apex:outputText value="{!a.location.sLocationCity}{! IF(a.location.sLocationState == null, '',  ", " )} {!a.location.sLocationState} {!a.location.sLocationZip} {!a.location.sLocationZipExt}" style="line-height:25px;"/>
+                            <br/>  
+                            </div>
+                            <apex:outputText value="{!$Label.phone}: {!a.location.sPOCPhone}" style="line-height:25px;"/>
+                            <br/>
+                            <apex:outputText value="{!$Label.emailaddress}: " style="line-height:25px;"/><apex:outputLink style="color:#0563C1" value="{!a.location.sPOCEmail}" id="ipEmail">{!a.location.sPOCEmail}</apex:outputLink> 
+                            <br/>
+                            <apex:outputText value="{!$Label.Website}: " style="line-height:25px;"/><apex:outputLink style="color:#0563C1" value="{!a.location.sLocationWebsite}{! IF(a.location.sLocationWebsite == null, a.acc.sReferralOrgUrl, a.location.sLocationWebsite )}" id="ipWebsite">{! IF(a.location.sLocationWebsite == null, a.acc.sReferralOrgUrl, a.location.sLocationWebsite )}</apex:outputLink>
+                            <br/>
+                            <apex:outputText value="{!$Label.HoursOfOperationHeader}: {!a.sOperatingHoursToday}" style="line-height:25px;"/>
+                            <br/>
+                            <br/>
+                        </apex:outputPanel>
+                    </apex:repeat>
+                    <apex:outputText value="{!$Label.RE_NoInProgressResources}" rendered="{!AND(resultInProgressResources != null, resultInProgressResources.size<=0)}" />
+                    <h2 style="font-size: 26px; margin-bottom:5px;"><apex:outputText value="{!$Label.completed_resources}"/></h2>
+                    <div style="font-size:19px;">
+                        <apex:repeat value="{!resultCompletedResources}" var="a" rendered="{!AND(resultCompletedResources != null, resultCompletedResources.size>0)}">
+                            <apex:outputPanel layout="block" style="margin-left: 70px;">
+                            <!--RE_Release 1.1 –ForceReviewer Changes- Payal Dubela-->
+                            <strong><apex:outputText value="{!a.resource.sResourceName}" style="line-height:25px;"/></strong>
+                            <br/>
+                            <apex:outputText value="{!a.acc.sReferralOrgName}" style="line-height:25px;"/>
+                            <br/>
+                            <div style="{!IF(((a.location.sLocationAddress1 != '' && a.location.sLocationAddress1 != null) || (a.location.sLocationAddress2 !='' && a.location.sLocationAddress2 != null)), 'display:block', 'display:none')}">
+                                <apex:outputText value="{!a.location.sLocationAddress1}" style="line-height:25px;"/><apex:outputText value="{! IF(a.location.sLocationAddress2 == null, '',  ", " )}" style="line-height:25px;"/><apex:outputText value="{! IF(a.location.sLocationAddress2 == null, '',  a.location.sLocationAddress2)}" style="line-height:25px;"/>
+                            <br/>
+                            </div>
+                            <div style="{!IF(((a.location.sLocationCity != '' && a.location.sLocationCity != null) || (a.location.sLocationState !='' && a.location.sLocationState != null) || (a.location.sLocationZip !='' && a.location.sLocationZip != null)), 'display:block', 'display:none')}">
+                             <apex:outputText value="{!a.location.sLocationCity}{! IF(a.location.sLocationState == null, '',  ", " )} {!a.location.sLocationState} {!a.location.sLocationZip} {!a.location.sLocationZipExt}" style="line-height:25px;"/>
+                            <br/>  
+                            </div>
+                            <apex:outputText value="{!$Label.phone}: {!a.location.sPOCPhone}" style="line-height:25px;"/>
+                            <br/>
+                            <apex:outputText value="{!$Label.emailaddress}: " style="line-height:25px;"/><apex:outputLink style="color:#0563C1" value="{!a.location.sPOCEmail}" id="ipEmail">{!a.location.sPOCEmail}</apex:outputLink> 
+                            <br/>
+                            <apex:outputText value="{!$Label.Website}: " style="line-height:25px;"/><apex:outputLink style="color:#0563C1" value="{!a.location.sLocationWebsite}{! IF(a.location.sLocationWebsite == null, a.acc.sReferralOrgUrl, a.location.sLocationWebsite )}" id="ipWebsite">{! IF(a.location.sLocationWebsite == null, a.acc.sReferralOrgUrl, a.location.sLocationWebsite )}</apex:outputLink>
+                            <br/>
+                            <apex:outputText value="{!$Label.HoursOfOperationHeader}: {!a.sOperatingHoursToday}" style="line-height:25px;"/>
+                            <br/>
+                            <br/>
+                        </apex:outputPanel>
+                        </apex:repeat>
+                    </div>
+                    <apex:outputText value="{!$Label.RE_NoCompletedResources}" rendered="{!AND(resultCompletedResources != null, resultCompletedResources.size<=0)}"/>
+                </div>
+            </apex:pageBlock>
+        </div>
+    </apex:form>
+</apex:page>

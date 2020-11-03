@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- NonZeroValidator_Msg --></label>
+    <name>NonZeroValidator_Msg__c</name>
+    <picklistValues>
+        <masterLabel>Please enter  a value greater than zero</masterLabel>
+        <translation><!-- Please enter  a value greater than zero --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

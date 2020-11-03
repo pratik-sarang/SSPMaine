@@ -1,0 +1,418 @@
+<!--
+* name : SspDocumentCenterHome
+* @description :This screen is container for Document center Home page.
+* @author : Kyathi Kanumuri
+* @date : 4/7/2020
+* MODIFICATION LOG:
+* DEVELOPER             DATE            DESCRIPTION
+* ________________________________________________________________________________
+* Kyathi                4/7/2020     Creating HTML Structure
+* Aniket                4/7/2020     Backend
+* Ashwin                4/28/2020    Backend
+-->
+<template>
+    <main class="ssp-documentCenterContainer">
+        <!--Spinner-->
+        <template if:true={showSpinner}>
+            <c-ssp-spinner></c-ssp-spinner>
+        </template>
+        <!--Pop up-->
+        <!--FIX Issue 96(Tracker)-->
+        <template if:true={showUploadNav}>
+        <template if:true={isNonEmptyRFIInformationList}>
+        <c-ssp-document-center-popup
+            open-model={openModel}
+            onnavigatetowizardscreen={navigateToDocumentWizard}
+        ></c-ssp-document-center-popup>
+        </template>
+        </template>
+        <!--Home Page-->
+        <template if:true={showHome}>
+            <div
+                class="slds-grid slds-wrap  ssp-documentCenterHome left-navigation-container"
+            >
+                <div
+                    class="slds-max-medium-size_1-of-1 slds-size_1-of-5  ssp-boxShadow"
+                >
+                    <c-ssp-vertical-menu-list></c-ssp-vertical-menu-list>
+                </div>
+                <div class="slds-max-medium-size_1-of-1 slds-size_4-of-5">
+                    <div class="ssp-bodyContainer">
+                        <h1
+                            class="ssp-fontFamily_popinBlack ssp-color_blueAlpha ssp-header ssp-marginBottom30"
+                        >
+                            {label.sspDocuments}
+                        </h1>
+                        <div
+                            class="slds-col slds-size_1-of-1 ssp-headerContent1 ssp-color_monoOmega slds-m-bottom_large ssp-fontFamily_ArvoRegular
+"
+                        >
+                            <p class="slds-m-bottom_x-small">
+                                {label.sspDocumentCenterHomeContent1}
+                            </p>
+                            <div class="ssp-headerList">
+                                <ul>
+                                    <li>
+                                        {label.sspDocumentCenterHomeContent2}
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="slds-col slds-size_1-of-1">
+                            <c-ssp-general-notice-card>
+                                <div>
+                                    <span
+                                        class="ssp-fontFamily_popinBold ssp-color_monoBody"
+                                        >{label.sspDocumentCenterUploadText}</span
+                                    >
+                                    <span
+                                        class="slds-p-left_xx-small ssp-fontFamily_ArvoRegular ssp-color_greyAlpha"
+                                        >{label.sspDocumentCenterUploadText2}</span
+                                    >
+                                </div>
+                            </c-ssp-general-notice-card>
+                        </div>
+                        <div
+                            class="slds-col slds-size_1-of-1 ssp-warningCard ssp-marginBottom30 ssp-appTable_borderBottom"
+                        >
+                            <c-ssp-general-notice-card notice-type="warning">
+                                {label.sspDocumentCenterHomeNoticeText}
+                            </c-ssp-general-notice-card>
+                        </div>
+
+                        <!--Show if role has write access-->
+                        <template if:true={showUploadNav}>
+                            <template if:true={isNonEmptyRFIInformationList}>
+                                <div
+                                    class="slds-col slds-size_1-of-1 slds-m-bottom_medium ssp-ReadyToUploadContent ssp-marginBottom30 ssp-appTable_borderBottom ssp-resourceSummary_container
+        "
+                                >
+                                    <p
+                                        class="ssp-fontFamily_popinBold ssp-color_monoBody slds-m-top_medium ssp-readyToUploadText
+        "
+                                    >
+                                        {label.sspDocumentReadyToUpload}
+                                    </p>
+                                    <p
+                                        class="ssp-documentUploadRequestText ssp-color_monoOmega ssp-fontFamily_ArvoRegular ssp-marginBottom30"
+                                    >
+                                        {label.sspDocumentUploadRequested}
+                                    </p>
+                                    <lightning-button
+                                        label={label.sspDocumentWizardLabel}
+                                        class="ssp-button_neutral ssp-documentWizardButton ssp-addResourceButton ssp-fontSize_16"
+                                        onclick={navigateToDocumentWizard}
+                                        title={label.sspDocumentWizardTitle}
+                                    >
+                                    </lightning-button>
+                                </div>
+                            </template>
+                        </template>
+                        <!--Show if role has write access-->
+                        <template if:true={showUploadNav}>
+                            <div
+                                class="slds-col slds-size_1-of-1 ssp-ReadyToUploadContent ssp-resourceSummary_container
+    "
+                            >
+                                <p
+                                    class="ssp-fontFamily_ArvoRegular ssp-color_monoOmega  ssp-marginBottom30"
+                                >
+                                    {label.sspDocumentNoRequestText}
+                                </p>
+                                <lightning-button
+                                    label={label.sspUploadDocuments}
+                                    class="ssp-button_base ssp-uploadDocumentButton ssp-addResourceButton ssp-fontSize_16"
+                                    onclick={navigateToUploadPage}
+                                    title={label.sspUploadDocumentsTitle}
+                                >
+                                </lightning-button>
+                            </div>
+                        </template>
+                    </div>
+
+                    <div
+                        class="slds-col slds-size_1-of-1  ssp-ReadyToUploadContent ssp-documentTabsetContainer
+"
+                    >
+                        <div>
+                            <lightning-tabset selected-tab-id="ssp-approved">
+                                <lightning-tab
+                                    label={label.sspDocumentsNeeded}
+                                    id="ssp-requested"
+                                    class="ssp-documentsNeededTab"
+                                >
+                                    <template
+                                        for:each={rfiInformationList}
+                                        for:item="individual"
+                                    >
+                                        <div
+                                            class="ssp-marginBottom30"
+                                            key={individual.iIndividualId}
+                                        >
+                                            <c-ssp-generic-dashboard-card
+                                                card-header={individual.sIndividualName}
+                                            >
+                                                <template
+                                                    for:each={individual.individualData}
+                                                    for:item="individualData"
+                                                >
+                                                    <div
+                                                        class="ssp-dashboardTabsRow ssp-appTable_borderBottom ssp-bg_monoDelta"
+                                                        key={individualData.iIndividualId}
+                                                    >
+                                                        <div
+                                                            class="slds-grid slds-wrap"
+                                                        >
+                                                            <div
+                                                                class="slds-col slds-max-medium-size_1-of-1 slds-size_1-of-3 ssp-dashboardTab  ssp-color_monoOmega"
+                                                            >
+                                                                <p
+                                                                    class="ssp-fontFamily_popinBold ssp-tabRowHeader ssp-color_monoBlackTheta  ssp-color_monoAlpha"
+                                                                >
+                                                                    {individualData.sTypeOfProof}
+                                                                </p>
+                                                                <p
+                                                                    if:true={individualData.isUniqueIdentifierExists}
+                                                                    class="ssp-pendingReview"
+                                                                >
+                                                                    {label.sspPendingReview}
+                                                                </p>
+                                                                <p
+                                                                    if:false={individualData.isUniqueIdentifierExists}
+                                                                    class="ssp-documentNeeded"
+                                                                >
+                                                                    {label.sspNotSubmitted}
+                                                                </p>
+                                                            </div>
+                                                            <div
+                                                                class="slds-max-medium-size_1-of-1 slds-size_1-of-3 slds-col ssp-dashboardTab  ssp-color_monoOmega ssp-tabCenterRow
+"
+                                                            >
+                                                                <p
+                                                                    class="ssp-fontFamily_popinBold ssp-color_blueAlpha ssp-documentsSection2"
+                                                                >
+                                                                    {individualData.sRecordIdentifier}
+                                                                </p>
+                                                                <div
+                                                                    if:true={individualData.isUniqueIdentifierExists}
+                                                                >
+                                                                    <div
+                                                                        class="ssp-documentDates ssp-fontFamily_popinRegular ssp-color_monoBlackZeta"
+                                                                    >
+                                                                        <span
+                                                                            if:true={individualData.isRFIDocument}
+                                                                            >{label.sspDueDate}:</span
+                                                                        >
+                                                                        <span
+                                                                            if:true={individualData.isKIHIPPPremiumPayment}
+                                                                            >{label.sspDueDate}:</span
+                                                                        >
+                                                                        <span
+                                                                            if:true={individualData.isKIHIPPEligibility}
+                                                                            >{label.sspPreferredDueDate}:</span
+                                                                        >
+                                                                        <span
+                                                                            class="slds-m-left_xx-small"
+                                                                            >{individualData.sDueDate}</span
+                                                                        >
+                                                                    </div>
+
+                                                                    <div
+                                                                        class="ssp-documentDates ssp-color_monoBlackZeta ssp-fontFamily_popinRegular"
+                                                                        if:true={individualData.sSubmittedDate}
+                                                                    >
+                                                                        <span
+                                                                            >{label.sspSubmittedDate}:</span
+                                                                        >
+                                                                        <span
+                                                                            class="slds-m-left_xx-small"
+                                                                            >{individualData.sSubmittedDate}</span
+                                                                        >
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div
+                                                                if:false={individualData.isUniqueIdentifierExists}
+                                                                class="slds-max-medium-size_1-of-1 slds-size_1-of-3 slds-col ssp-dashboardTab  ssp-color_monoOmega ssp-nullPaddingLeft"
+                                                            >
+                                                                <div
+                                                                    class="ssp-documentDates ssp-color_monoBlackZeta ssp-fontFamily_popinRegular"
+                                                                >
+                                                                    <span
+                                                                        if:true={individualData.isRFIDocument}
+                                                                        >{label.sspDueDate}:</span
+                                                                    >
+                                                                    <span
+                                                                        if:true={individualData.isKIHIPPPremiumPayment}
+                                                                        >{label.sspDueDate}:</span
+                                                                    >
+                                                                    <span
+                                                                        if:true={individualData.isKIHIPPEligibility}
+                                                                        >{label.sspPreferredDueDate}:</span
+                                                                    >
+                                                                    <span
+                                                                        class="slds-m-left_xx-small"
+                                                                        >{individualData.sDueDate}</span
+                                                                    >
+                                                                </div>
+                                                            </div>
+                                                            <div
+                                                                class="slds-max-medium-size_1-of-1 slds-size_1-of-3 slds-col ssp-dashboardTab  ssp-color_monoOmega ssp-nullPaddingLeft"
+                                                                if:true={individualData.isUniqueIdentifierExists}
+                                                            >
+                                                                <template
+                                                                    for:each={individualData.documentList}
+                                                                    for:item="document"
+                                                                >
+                                                                    <p
+                                                                        key={document.Id}
+                                                                        class="ssp-documentLink"
+                                                                    >
+                                                                        <a
+                                                                            tabindex="0"
+                                                                            data-document-name={document.sDocumentName}
+                                                                            data-content-id={document.sContentDocumentId}
+                                                                            data-metadata-id={document.sDocumentMetadataId}
+                                                                            data-extension={document.sExtension}
+                                                                            onclick={downloadTheFile}
+                                                                            onkeydown={downloadTheFile}
+                                                                            class="ssp-color_blueAlpha ssp-fontFamily_popinRegular"
+                                                                            title={document.sFormattedLink}
+                                                                            >{document.sDocumentName}</a
+                                                                        >
+                                                                    </p>
+                                                                </template>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </template>
+                                            </c-ssp-generic-dashboard-card>
+                                        </div>
+                                    </template>
+                                </lightning-tab>
+                                <lightning-tab
+                                    label={label.sspRecentlySubmitted}
+                                    id="ssp-approved"
+                                    class="ssp-submittedTab"
+                                >
+                                    <div
+                                        class="ssp-recentlySubmittedHeaderText ssp-genericDashboardCard ssp-marginBottom30 ssp-color_monoOmega ssp-fontFamily_ArvoRegular"
+                                    >
+                                        <p class="slds-m-bottom_medium">
+                                            {label.sspRecentlySubmittedHeaderText1}
+                                        </p>
+                                        <p class="slds-m-bottom_large">
+                                            {label.sspRecentlySubmittedHeaderText2}
+                                        </p>
+                                    </div>
+
+                                    <template
+                                        for:each={documentMetaDataList}
+                                        for:item="individual"
+                                    >
+                                        <c-ssp-generic-dashboard-card
+                                            card-header={individual.sIndividualName}
+                                            key={individual.iIndividualId}
+                                        >
+                                            <template
+                                                for:each={individual.individualData}
+                                                for:item="individualData"
+                                            >
+                                                <div
+                                                    class="ssp-dashboardTabsRow ssp-appTable_borderBottom ssp-bg_monoDelta"
+                                                    key={individualData.iIndividualId}
+                                                >
+                                                    <div
+                                                        class="slds-grid slds-wrap"
+                                                    >
+                                                        <div
+                                                            class="ssp-dashboardTab ssp-color_monoBody active slds-col slds-max-medium-size_1-of-1 slds-size_2-of-3"
+                                                        >
+                                                            <div
+                                                                class="ssp-submittedDetails"
+                                                            >
+                                                                <p
+                                                                    class="ssp-fontFamily_popinBold ssp-tabRowHeader ssp-color_monoBlackTheta  ssp-color_monoAlpha"
+                                                                >
+                                                                    {individualData.sDocumentType}
+                                                                </p>
+
+                                                                <div
+                                                                    class="ssp-documentDates ssp-fontFamily_popinRegular ssp-color_monoBlackZeta"
+                                                                >
+                                                                    <span
+                                                                        >{label.sspSubmittedDate}:</span
+                                                                    >
+                                                                    <span
+                                                                        class="slds-m-left_xx-small"
+                                                                        >{individualData.sSubmittedDate}</span
+                                                                    >
+                                                                </div>
+                                                            </div>
+
+                                                            <span
+                                                                class="ssp-documentLink"
+                                                            >
+                                                                <a
+                                                                    tabindex="0"
+                                                                    data-document-name={individualData.sDocumentName}
+                                                                    data-metadata-id={individualData.sDocumentMetadataId}
+                                                                    data-extension={individualData.sExtension}
+                                                                    onclick={downloadTheFile}
+                                                                    onkeydown={downloadTheFile}
+                                                                    class="ssp-color_blueAlpha ssp-fontFamily_popinRegular"
+                                                                    title={individualData.sFormattedLink}
+                                                                    >{individualData.sDocumentName}</a
+                                                                >
+                                                            </span>
+                                                        </div>
+
+                                                        <div
+                                                            class="ssp-dashboardTab  ssp-documentStatusTab slds-col slds-max-medium-size_1-of-1 slds-size_1-of-3 ssp-color_monoBlackZeta"
+                                                        >
+                                                            <p
+                                                                class="ssp-documentStatusAccepted"
+                                                                if:true={individualData.isAccepted}
+                                                            >
+                                                                {label.sspAccepted}
+                                                            </p>
+                                                            <p
+                                                                class="ssp-documentNeeded"
+                                                                if:false={individualData.isAccepted}
+                                                            >
+                                                                {label.sspRejected}
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </template>
+                                        </c-ssp-generic-dashboard-card>
+                                    </template>
+                                </lightning-tab>
+                            </lightning-tabset>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+        <!--Document Wizard-->
+        <template if:true={showDocWizard}>
+            <!--<c-ssp-document-center-wizard
+                 -r-f-i-wrapper={RFIWrapper}
+                 onshowdocumentcenterhome={renderDocCenterHome}
+             ></c-ssp-document-center-wizard>-->
+            <c-ssp-document-center-wizard
+                -r-f-i-wrapper={rfiInformationList}
+                onshowdocumentcenterhome={renderDocCenterHome}
+            ></c-ssp-document-center-wizard>
+        </template>
+        <!--Generic Doc Upload-->
+        <template if:true={showGenericDocUpload}>
+            <c-ssp-document-center-generic-upload
+                case-wrapper={caseWrapper}
+                onshowdocumentcenterhome={renderDocCenterHome}
+            >
+            </c-ssp-document-center-generic-upload>
+        </template>
+    </main>
+</template>

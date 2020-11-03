@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ApplyReportChangeRecertifyChecksToClient__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Contains Apply, Report Changes, Recertify, and receive checks made out to client Permission</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Contains Apply, Report Changes, Recertify, and receive checks made out to client Permission</inlineHelpText>
+    <label>Apply,ReprtChnge,Recertif,ChecksToClient</label>
+    <type>Checkbox</type>
+</CustomField>

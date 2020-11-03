@@ -1,0 +1,74 @@
+.ssp-myInformationCard {
+    padding: 0.938rem 0.938rem 0.938rem 2.125rem;
+    margin: 1.875rem 8.438rem 4.063rem 1.875rem;
+    text-align: left;
+    border-radius: 0.375rem;
+}
+.ssp-myInformationWidth {
+    width: 100%;
+}
+
+.ssp-collapsedContent {
+    display: block;
+    margin-bottom: 0.938rem;
+    text-align: left;
+    line-height: 1.875rem;
+    word-break: break-word;
+    padding: 0 0.625rem;
+}
+
+.ssp-expandedView {
+    margin-top: 1.5rem;
+}
+
+.ssp-expandedContent {
+    display: block;
+    text-align: left;
+    margin-bottom: 0.938rem;
+    line-height: 1.875rem;
+    word-break: break-word;
+    padding: 0.313rem;
+}
+
+.ssp-viewMore {
+    text-align: right;
+    position: relative;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.ssp-viewMore:focus {
+    outline: none;
+}
+
+.ssp-myInformationContent {
+    font-size: 1rem;
+    line-height: 1.375rem;
+    letter-spacing: 0.3px;
+    text-align: left;
+}
+
+.ssp-cisHr {
+    height: 0.313rem;
+    border-radius: 0.156rem;
+    margin-bottom: 0.9375rem;
+    margin-top: 0.9375rem;
+}
+/*Added by kyathi*/
+.ssp-exportClientList {
+    text-decoration: underline;
+    padding-left: 25px;
+}
+
+@media only screen and (max-device-width: 768px) {
+    .ssp-myInformationCard {
+        margin: 1.875rem 1.875rem 4.063rem;
+        padding: 0.938rem;
+    }
+    .ssp-collapsedContent {
+        padding: 0;
+    }
+    .ssp-expandedContent {
+        padding: 0;
+    }
+}

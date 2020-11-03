@@ -1,0 +1,21 @@
+.ssp-firstGroupBtn {
+    margin-right: 30px;
+}
+
+@media only screen and (max-width: 800px) {
+    .ssp-firstGroupBtn {
+        padding-right: 10px;
+        margin-right: 0;
+    }
+    .ssp-secondGroupBtn {
+        padding-left: 10px;
+    }
+    .ssp-firstGroupBtn,
+    .ssp-secondGroupBtn {
+        width: 50%;
+    }
+    .ssp-signature-page.ssp-firstGroupBtn {
+        width: 100%;
+        padding-right: 0;
+    }
+}

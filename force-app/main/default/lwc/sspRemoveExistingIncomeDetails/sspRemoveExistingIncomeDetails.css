@@ -1,0 +1,20 @@
+.ssp-cbBoxBorder{
+    /*border: 1px solid #97a1b6;*/
+   /*  background: #f8f9fb; */
+    border-top: 0;
+    position: relative;
+    bottom: 16px;
+    border-radius: 0 0 .25rem .25rem;
+}
+
+
+
+/* .ssp-input{
+    margin-top: 1rem;
+}
+
+
+.ssp-removeExistingIncome-details{
+    margin-bottom: 1rem;
+
+} */

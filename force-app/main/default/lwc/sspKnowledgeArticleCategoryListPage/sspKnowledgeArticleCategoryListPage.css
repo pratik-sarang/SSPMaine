@@ -1,0 +1,60 @@
+.ssp-ka-header {
+    border-bottom: 1px solid #eeeff2;
+}
+
+.ssp-ka-header .ssp-ka-page-title .slds-grid .slds-size_1-of-1 > h1 {
+    font-size: 2.625rem;
+    line-height: 3rem;
+}
+
+.ssp-ka-separation {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.ssp-searchIcon {
+    height: 24px;
+    width: 24px;
+    position: absolute;
+    top: 18px;
+	left: 7px;
+}
+
+.ssp-kaSearchField {
+    position: relative;
+}
+
+.ssp-kaSearchField .slds-input {
+    padding-left: 2rem;
+}
+
+.ssp-accordionSlot {
+    padding-bottom: 30px;
+}
+
+h1 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin: 25px 0;
+}
+
+@media only screen and (max-width: 768px) {
+    .ssp-ka-header .ssp-ka-page-title .slds-grid .slds-size_1-of-1 > h1 {
+        font-size: 1.5rem;
+        line-height: 1.875rem;
+    }
+
+    .ssp-searchIcon {
+        height: 24px;
+        width: 24px;
+        position: absolute;
+    }
+
+    .ssp-look-up-searchIcon .ssp-searchIcon {
+        height: 24px;
+        width: 24px;
+        position: absolute;
+        top: 65px;
+        left: 5px;
+    }
+}

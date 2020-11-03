@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IsFinalSummaryPage__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Flag to indicate whether this page is the final summary page in the flow. This flag is used to differentiate whether to show the progress bar for this page. For Final Summary Page progress bar will not be displayed.</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Flag to indicate whether this page is the final summary page in the flow. This flag is used to differentiate whether to show the progress bar for this page. For Final Summary Page progress bar will not be displayed.</inlineHelpText>
+    <label>Is Final Summary Page</label>
+    <type>Checkbox</type>
+</CustomField>

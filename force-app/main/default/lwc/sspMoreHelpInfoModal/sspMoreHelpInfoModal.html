@@ -1,0 +1,32 @@
+<!--
+* name 		        : sspMoreHelpInfoModal
+* @description 	  : Pop Up for More Help & Information.
+* @author 		    : Fazeel Ahmed
+* @date 		      : 01/30/2019
+* MODIFICATION LOG:
+* DEVELOPER           DATE                DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* Fazeel              30/01/2020          Front end completed.
+-->
+<template>
+  <div class="ssp-more_info_modal">
+    <c-ssp-spinner if:true={showSpinner}></c-ssp-spinner>
+    <c-ssp-Detailed-Information-Modal
+      reference={reference}
+      header-value={modelTitle}
+      open-model="true"
+      if:false={showSpinner}
+    >
+      <div slot="contentSlot" class="ssp-modalContainer">
+        <a
+          class="ssp-fontFamily_popinBold ssp-color_monoBody"
+          tabindex="0"
+          href="/apex/SSP_MoreHelpInfoPDF"
+          target="_blank"
+          >{customLabel.sspMoreHelpInfoModalDownloadPDF}</a
+        >
+        <div class="ssp-helpContent" tabindex="0"></div>
+      </div>
+    </c-ssp-Detailed-Information-Modal>
+  </div>
+</template>

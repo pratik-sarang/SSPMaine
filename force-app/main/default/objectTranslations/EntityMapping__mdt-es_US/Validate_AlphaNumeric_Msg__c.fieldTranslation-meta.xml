@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Validate AlphaNumeric Msg --></label>
+    <name>Validate_AlphaNumeric_Msg__c</name>
+    <picklistValues>
+        <masterLabel>Please enter either letter and numeric characters.</masterLabel>
+        <translation>Ingresar tanto caracteres de letras como numéricos.</translation>
+    </picklistValues>
+</CustomFieldTranslation>

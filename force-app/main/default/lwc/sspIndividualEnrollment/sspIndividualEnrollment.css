@@ -1,0 +1,108 @@
+.ssp-individualEnrollTitle {
+    font-size: 2.625rem;
+    line-height: 48px;
+    text-align: left;
+    margin-top: 60px;
+}
+.ssp-individualEnrollMemberFullName {
+    font-size: 1.125rem;
+    line-height: 24px;
+    letter-spacing: -.3px;
+    text-align: left;
+    margin-bottom: 30px;
+}
+.ssp-individualEnrollHr {
+    height: 5px;
+    width: 100%;
+    border-radius: 2.5px;
+    margin: 15px 0 20px 0;
+}
+.ssp-individualEnrollDesc {
+    font-size: 1rem;
+    line-height: 24px;
+    letter-spacing: -.3px;
+    text-align: left;
+    margin: 30px 0;
+}
+.ssp-individualEnrollEmployerInfo,
+.ssp-individualEnrollMemberDetails,
+.ssp-individualEnrollTobacco,
+.ssp-individualEnrollRelationships {
+    margin-bottom: 60px;
+}
+.ssp-individualEnrollEmployerTitle,
+.ssp-individualEnrollMemberDetailsTitle,
+.ssp-individualEnrollRelationshipsTitle,
+.ssp-individualEnrollPolicyCoverageTitle {
+    font-size: 1.125rem;
+    line-height: 24px;
+    letter-spacing: -.3px;
+    text-align: left;
+}
+.ssp-individualEnrollEmployerRadioGroup {
+    width: 370px;
+    margin-bottom: 20px;
+}
+.ssp-individualEnrollEmployerName {
+    width: 370px;
+    margin: 30px 0 60px 0;
+}
+.ssp-individualEnrollMemberInfo div,
+.ssp-individualEnrollPolicyCoverageCheck {
+    width: 370px;
+    margin-bottom: 15px;
+}
+.ssp-individualEnrollMemberInfo div:last-of-type {
+    margin: 0;
+}
+.ssp-individualEnrollRelation div,
+.ssp-individualEnrollOtherEmployer {
+    width: 370px;
+}
+.ssp-individualEnrollTypeOfCoverage {
+    font-size: 1rem;
+    line-height: 24px;
+    letter-spacing: -.3px;
+    text-align: left;
+    margin-bottom: 15px;
+}
+.ssp-individualEnrollCoverageEnd div{
+    margin-top: 15px;
+}
+.ssp-individualEnrollFooter {
+    margin: 100px 0 60px 0;
+}
+.ssp-individualEnrollMemberDetails
+    .ssp-individualEnrollMemberInfo
+    .ssp-outside-policy-holder {
+    width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+    .ssp-individualEnrollTitle {
+        font-size: 1.5rem;
+        line-height: 28px;
+    }
+    .ssp-individualEnrollMemberFullName {
+        font-size: 1rem;
+        line-height: 24px;
+        letter-spacing: -.3px;
+    }
+    .ssp-individualEnrollEmployerRadioGroup,
+    .ssp-individualEnrollEmployerName,
+    .ssp-individualEnrollOtherEmployer,
+    .ssp-individualEnrollPolicyCoverageCheck,
+    .ssp-individualEnrollMemberInfo div,
+    .ssp-individualEnrollRelation div {
+        width: 100%;
+    }
+    .ssp-individualEnrollSaveBtn {
+        width: 50%;
+        padding-left: 10px;
+    }
+
+    .ssp-individualEnrollCancelBtn {
+        width: 50%;
+        padding-right: 10px;
+    }
+}

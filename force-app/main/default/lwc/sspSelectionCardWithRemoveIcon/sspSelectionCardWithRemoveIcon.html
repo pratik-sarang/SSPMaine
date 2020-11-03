@@ -1,0 +1,211 @@
+<!--
+* name          : sspSelectionCardWithRemoveIcon.
+* @description  : This is user information card with remove icon.
+* @author       : Kyathi.
+* @date         : 12/11/2019
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName                MM/DD/YYYY               A Brief Description about the Change
+  Kyathi                     12/11/2019                          Initial Version
+-->
+<template>
+    <div class="ssp-ProgressCardContainer">
+        <div
+            class="ssp-ProgressCard ssp-boxShadow slds-grid slds-wrap slds-grid_align-spread slds-grid_vertical-align-center"
+        >
+            <div
+                class="ssp-bg_white ssp-progressCardHead slds-grid slds-wrap slds-grid_align-spread slds-grid_vertical-align-center"
+            >
+                <!-- With Edit and Start Action Buttons-->
+                <div
+                    if:false={hideButtons}
+                    class=" ssp-leftContent slds-grid slds-max-large-size_2-of-4 slds-wrap slds-grid_vertical-align-center slds-grid_vertical-align-center"
+                >
+                    <div
+                        class="slds-max-large-size_1-of-4 progresSelectionCardIconSize"
+                        if:true={displayEdit}
+                    >
+                        <img alt={label.sspProgressIcon} src={checkedIconUrl} />
+                    </div>
+                    <div
+                        class="slds-max-large-size_1-of-4 progresSelectionCardIconSize"
+                        if:false={displayEdit}
+                    >
+                        <img
+                            alt={label.sspProgressIcon}
+                            src={uncheckedIconUrl}
+                        />
+                    </div>
+                    <div
+                        class="slds-max-large-size_3-of-4 ssp-cardContentContainer"
+                    >
+                        <slot name="cardContent"></slot>
+                    </div>
+                </div>
+                <!-- Without Edit and Start Action Buttons-->
+                <div
+                    if:true={hideButtons}
+                    class="slds-grid slds-max-large-size_4-of-4 slds-size_4-of-4 slds-wrap slds-grid_vertical-align-center slds-grid_vertical-align-center"
+                >
+                    <div
+                        class="slds-max-large-size_1-of-4 progresSelectionCardIconSize"
+                        if:true={displayCheckmark}
+                    >
+                        <img alt={label.sspProgressIcon} src={checkedIconUrl} />
+                    </div>
+                    <div
+                        class="slds-max-large-size_3-of-4 ssp-cardContentLayout"
+                    >
+                        <slot name="cardContent"></slot>
+                    </div>
+                </div>
+                <template if:false={hideButtons}>
+                    <template if:false={isViewButtonVisible}>
+                        <!-- CD2 2.5 Security Role Matrix and Program Access - Added disabled attribute -->
+                        <div if:true={displayEdit}>
+                            <lightning-button
+                                name={objCard}
+                                variant="base"
+                                label={editButtonText}
+                                aria-label={buttonAltText}
+                                title={buttonAltText}
+                                onclick={handleActionButton}
+                                class="ssp-button_base ssp-cardItemsButton"
+                                disabled={disabled}
+                            >
+                            </lightning-button>
+                        </div>
+                        <!-- CD2 2.5 Security Role Matrix and Program Access - Added disabled attribute -->
+                        <div if:false={displayEdit}>
+                            <lightning-button
+                                name={objCard}
+                                variant="Neutral"
+                                label={label.startButton}
+                                aria-label={buttonAltText}
+                                title={buttonAltText}
+                                onclick={handleActionButton}
+                                class="ssp-button_neutral ssp-cardItemsButton"
+                                disabled={disabled}
+                            >
+                            </lightning-button>
+                        </div>
+                    </template>
+                    <template if:true={isViewButtonVisible}>
+                            <lightning-button
+                                name={objCard}
+                                variant="base"
+                                label={label.sspView}
+                                aria-label={viewButtonAltText}
+                                title={viewButtonAltText}
+                                onclick={handleActionButton}
+                                class="ssp-button_base ssp-cardItemsButton"
+                            >
+                            </lightning-button>
+                    </template>
+                </template>
+            </div>
+        </div>
+        <div>
+            <!-- CD2 2.5 Security Role Matrix and Program Access - Added canDelete condition -->
+            <template if:false={hideRemoveIcon}>
+                <!--<lightning-button-icon
+                    icon-name="utility:close"
+                    size="x-small"
+                    aria-label={removeIconAlt}
+                    title={removeIconAlt}
+                    alternative-text={removeIconAlt}
+                    onclick={displayRemoveModal}
+                    class="ssp-progressCardCloseIcon"
+                ></lightning-button-icon>-->
+                <template if:false={hideDeleteModal}>
+                <a
+                    tabindex="0"
+                    role="button"
+                    if:true={canDelete}
+                    alt={removeIconAlt}
+                    aria-label={removeIconAlt}
+                    onclick={displayRemoveModal}
+                    onkeydown={displayRemoveModal}
+                    title={removeIconAlt}
+                >
+                    <img
+                        src={removeIcon}
+                        role="presentation"
+                        aria-hidden="true"
+                        class="ssp-progressCardCloseIcon ssp-trashIcon"
+                        alt={label.sspProgressIcon}
+                    />
+                </a>
+                </template>
+                <template if:true={hideDeleteModal}>
+                    <a
+                        tabindex="0"
+                        role="button"
+                        if:true={canDelete}
+                        alt={removeIconAlt}
+                        aria-label={removeIconAlt}
+                        onclick={removeCard}
+                        onkeydown={removeCard}
+                        title={removeIconAlt}
+                    >
+                        <img
+                            src={removeIcon}
+                            role="presentation"
+                            aria-hidden="true"
+                            class="ssp-progressCardCloseIcon ssp-trashIcon"
+                            alt={label.sspProgressIcon}
+                        />
+                    </a>
+                </template>
+                <!--<img if:true={canDelete} src={removeIcon}  alt={removeIconAlt} aria-label={removeIconAlt} onclick={displayRemoveModal} title={removeIconAlt} class="ssp-progressCardCloseIcon ssp-trashIcon"/>-->
+            </template>
+        </div>
+        <template if:true={showModelForExist}>
+            <c-ssp-remove-coverage-modal
+                application-id={applicationId}
+                member-id={memberId}
+                policy-data={policyData}
+                covered-ind-data={coveredIndData}
+                is-covered-ind-deletion={isCoveredIndDeletion}
+                open-model-for-exist={showModelForExist}
+                onremovemodalclose={closeRemoveModal}
+            >
+            </c-ssp-remove-coverage-modal>
+        </template>
+        <template if:false={openModelForExist}>
+            <c-ssp-detailed-information-modal
+                reference={reference}
+                header-value={removeModalHeading}
+                open-model={showModel}
+                onclosemodal={closeModal}
+            >
+                <span slot="contentSlot">
+                    <p>
+                        {removeModalContent}
+                    </p>
+                </span>
+                <div
+                    slot="Footer"
+                    class="ssp-remove-income-modal slds-grid slds-wrap slds-grid_align-spread"
+                >
+                    <lightning-button
+                        variant="brand"
+                        label={deleteButtonLabel}
+                        title={deleteButtonTitle}
+                        name={objCard}
+                        class="ssp-deleteButton ssp-button_brand slds-size--1-of-1 slds-p-bottom_medium ssp-fontFamily_popinBold "
+                        onclick={removeCard}
+                    ></lightning-button>
+                    <lightning-button
+                        variant="neutral"
+                        label={label.cancelButton}
+                        title={cancelButtonTitle}
+                        class="ssp-cancelButton ssp-button_base slds-size--1-of-1 ssp-fontFamily_popinBold"
+                        onclick={closeModal}
+                    ></lightning-button>
+                </div>
+            </c-ssp-detailed-information-modal>
+        </template>
+    </div>
+</template>

@@ -1,0 +1,159 @@
+<template>
+    <c-ssp-logging-and-error-handling-modal if:true={showErrorModal} error-id={errorCode} onprogressvaluechange={closeError}>
+    </c-ssp-logging-and-error-handling-modal>
+    <template if:true={showSpinner}>
+        <c-ssp-spinner></c-ssp-spinner>
+    </template>   
+    <c-ssp-toast
+    if:true={showErrorToast}
+    ssp-toast-title-val={labels.toastErrorText}
+    onhidetoast={handleHideToast}
+    show-error-toast={showErrorToast}></c-ssp-toast>
+    <template if:true={showAccessDenied}>
+        <c-ssp-access-denied></c-ssp-access-denied>
+    </template>
+    <template if:true={showScreen}>
+    <div class="ssp-bodyContainer">
+        <div class="slds-grid slds-wrap slds-p-vertical_large">
+            <div
+                class="ssp-headerText ssp-fontFamily_popinBold ssp-color_blueAlpha slds-size_1-of-1"
+            >
+                {labels.sspDiscontinueBenefits}
+            </div>
+
+            <div
+                class="ssp-headerBetaText slds-size_1-of-1 ssp-fontFamily_popinBold  ssp-color_monoBody"
+            >
+                {labels.sspCaseHash} {caseNumber}
+            </div>
+        </div>
+
+        <div
+            class="ssp-horizontalLine ssp-color_monoAlpha ssp-bg_monoAlpha  slds-m-bottom_large slds-size_1-of-1"
+        ></div>
+        <div class="slds-grid slds-wrap">
+            <div
+                class="ssp-infoText slds-m-bottom_large ssp-color_monoOmega ssp-fontFamily_ArvoRegular"
+            >
+                {labels.sspNoLongerProvideAssistance}
+            </div>
+            <p tabindex="0" class="ssp-programCheckboxLabel ssp-fontFamily_popinBold  ssp-color_monoBody">{labels.sspSelectProgramToDiscontinue}</p>
+            <template for:each={programs} for:item="program">
+            <div key={program.programName} class="slds-m-bottom_large slds-size_1-of-1"  onchange={handleCheckbox} >
+                <c-ssp-base-component-multiline-input-checkbox
+                    class=" ssp-checkBoxGroup"
+                    name={program.programName}  
+                    id={program.programValue}   
+                    hide-additional-fields ={program.isSnap} 
+                    onhandlemultiselectchange  ={handleCheckbox}
+                >
+                    <div slot="labelContent" class="ssp-programName" >{program.programName}</div>
+                    <template if:false={program.isSnap}>
+                    <div slot="buttonContainer">
+                        <c-ssp-base-component-input-checkbox-group
+                            options={program.benefitIndividuals}
+                            class="ssp-applicationInputs"
+                            name={program.programValue}
+                            
+                        ></c-ssp-base-component-input-checkbox-group></div>
+                        </template>
+                    </c-ssp-base-component-multiline-input-checkbox>
+            </div>
+            </template>
+            <template if:true ={showRequiredError}> 
+                <p  role="alert" aria-atomic="true" class="slds-size_1-of-1 ssp-show-error ssp-color_redOmega">{errorMessage}</p>
+            </template>
+             <div class="slds-m-bottom_large slds-size_1-of-1 ssp-bottomMargin">
+                <c-ssp-base-component-input-picklist
+                label={labels.sspReasonForDiscontinuation}
+                title={labels.sspDiscontinuanceOption}
+                    class="ssp-inputPicklist"
+                    option={optList}                    
+                    onhandlepicklistchange={handleReason}
+                ></c-ssp-base-component-input-picklist>
+            </div> 
+            <template if:true={showAddress}>
+             <div class="slds-m-bottom_large">
+                 <c-ssp-address-auto-complete
+                                  class="addressLineClass slds-size_1-of-1"
+                                  record={addressRecord}
+                                  field-map={fieldMap}  >                         
+                              </c-ssp-address-auto-complete>
+        </div>
+    </template>
+        </div>
+        <div
+            class="slds-grid slds-wrap slds-size_1-of-1 slds-grid_align-spread slds-m-bottom_x-large ssp-action-btn-section"
+        >
+            <lightning-button
+                label={labels.sspDiscontinueBenefits}
+                title={labels.sspDiscontinueSelectedBenefits}
+                class="slds-medium-size_1-of-2 slds-size_1-of-1 ssp-button_brand ssp-cancel-btn ssp-buttonWidth"
+                onclick={openModal}
+                variant="brand"
+            ></lightning-button>
+            <lightning-button
+                label={labels.sspCancel}
+                title={labels.sspGoBackToDashboard}
+                class="slds-medium-size_1-of-2 slds-size_1-of-1 ssp-button_base ssp-next-btn slds-text-align_right ssp-buttonWidth"
+                onclick={handleNavigation}
+                variant="neutral"
+            ></lightning-button>
+        </div>
+    </div>
+
+    <template if:true={openModel}>
+        <c-ssp-detailed-information-modal
+            header-value={labels.sspDiscontinueBenefits2}
+            open-model={openModel}
+            onclosemodal={handleProp}
+            reference={reference}
+        >
+            <p
+                class="ssp-fontFamily_ArvoRegular ssp-color_monoOmega slds-p-bottom_large"
+                slot="contentSlot"
+            >
+                {labels.sspKentuckyNoLongerProvideBenefits}
+            </p>
+            <template for:each={lstPrograms} for:item="program">
+            <p key ={program}
+                class="ssp-fontFamily_ArvoRegular ssp-color_monoOmega slds-p-bottom_large"
+                slot="contentSlot"
+            >
+            
+                • {program} 
+            </p>
+</template>
+            <p
+                class="ssp-fontFamily_ArvoRegular ssp-color_monoOmega slds-p-bottom_large"
+                slot="contentSlot"
+            >
+                {labels.sspAreYouSureDiscontinueBenefits}
+            </p>
+
+            <div
+                slot="Footer"
+                class="slds-grid slds-wrap slds-grid_align-spread"
+            >
+                <lightning-button
+                    variant="brand"
+                    label={labels.sspYesDiscontinueBenefits}
+                    title={labels.sspAltYesDiscontinueBenefits}
+                    class="ssp-exitModalBtn ssp-exitSaveBtn ssp-button_brand slds-size_1-of-2 ssp-buttonText"
+                    onclick={saveAndExitModal}
+                >
+                </lightning-button>
+                <lightning-button
+                    variant="base"
+                    label={labels.sspNoCancel}
+                    class="ssp-exitModalBtn ssp-cancelBtn ssp-button_base slds-size_1-of-2 ssp-buttonText"
+                    onclick={cancelModal}
+                    title={labels.sspAltNoCancel}
+                    
+                >
+                </lightning-button>
+            </div>
+        </c-ssp-detailed-information-modal>
+    </template>
+    </template>
+</template>

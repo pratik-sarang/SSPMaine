@@ -1,0 +1,195 @@
+:host {
+    /** make the host DOM to disappear to apply correct SLDS styles. **/ 
+    display: contents;
+}
+h1 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    padding-bottom: 30px;
+    margin: 30px 0;
+}
+h2 {
+    font-size: 1.125rem;
+    letter-spacing: -0.3px;
+    line-height: 1.5rem;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    border-radius: 2.5px;
+}
+p {
+    font-size: 1rem;
+    letter-spacing: -0.3px;
+    line-height: 1.5rem;
+}
+a {
+    cursor: pointer;
+    font-size: 0.8125rem;
+    letter-spacing: -0.3px;
+    line-height: 30px;
+    text-decoration: underline;
+}
+
+.ssp-flow-header .ssp-flow-title {
+    text-transform: uppercase;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: -.3px;
+    text-align: left;
+}
+
+.ssp-flow-header .ssp-flow-page-title > h1 {
+    font-size: 2.625rem;
+    line-height: 3rem;
+    white-space: nowrap;
+}
+
+.ssp-flow-header .ssp-flow-page-instr {
+    font-size: 1rem;
+    letter-spacing: -.3px;
+    line-height: 1.5rem;
+}
+
+.ssp-flow-progress-section > span{
+    font-size: 1.125rem;
+}
+
+.ssp-flow-progress-bar {
+    width: 100px;
+    height: 15px;
+    background-color: rgba(0, 35, 98, 0.1);
+    border-radius: 100px;
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.ssp-flow-progress-bar-value {
+    width: 100%;
+    border-radius: 100px;
+}
+
+.ssp-exitSaveBtn {
+    padding: 0;
+}
+
+.ssp-firstGroupBtn {
+    margin-right: 30px;
+}
+.ssp-buttonWidth {
+    max-width: 200%;
+}
+.ssp-button-container {
+    margin-top: 100px;
+}
+
+.ssp-imgElementsMargin {
+    padding-left: 48px;
+    padding-right: 48px;
+}
+
+.ssp-imgElements {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 650px;
+    padding: 0;
+    margin-left: -3%;
+}
+
+.ssp-imgElementsBigHeader {
+    font-size: 42px;
+    line-height: 3rem;
+}
+
+.ssp-imgContainerHeading {
+    width: 100%;
+    height: 428px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.ssp-bottomMargin {
+    margin-bottom: 60px;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .ssp-flow-header .ssp-flow-page-title > h1 {
+        font-size: 1.5rem;
+        line-height: 1.875rem;
+    }
+
+    .ssp-flow-progress-bar {
+        float: right;
+        margin-left: 0;
+        margin-top: 5px;
+    }
+
+    
+    p {
+        font-size: 0.8125rem;
+    }
+    .ssp-firstGroupBtn {
+        padding-right: 10px;
+        margin-right: 0;
+    }
+    .ssp-secondGroupBtn {
+        padding-left: 10px;
+    }
+    .ssp-firstGroupBtn,
+    .ssp-secondGroupBtn {
+        width: 50%;
+    }
+    .ssp-exitModalBtn {
+        width: 100%;
+        margin: 0 0 20px 0;
+    }
+    .ssp-exitSaveBtn,
+    .ssp-cancelBtn {
+        padding: 0;
+    }
+
+    .ssp-imgElementsMargin {
+        padding: 0;
+    }
+
+    .ssp-imgElements {
+        width: 100%;
+        padding: 0 30px 0 30px;
+    }
+
+    .ssp-imgElementsBigHeader {
+        font-size: 24px;
+        font-weight: 900;
+        line-height: 32px;
+    }
+
+    .ssp-imgContainerHeading {
+        width: 100%;
+        height: 428px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        background-position: center center;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .ssp-flow-progress-bar {
+        width: 90px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    h1 {
+        font-size: 2.625rem;
+    }
+    h2 {
+        margin: 15px 0 30px 0;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+}

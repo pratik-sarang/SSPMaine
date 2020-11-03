@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IllegalCharactersValidator__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This field is used to apply illegal character validator</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>IllegalCharactersValidator</label>
+    <type>Checkbox</type>
+</CustomField>

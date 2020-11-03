@@ -1,0 +1,163 @@
+<!--
+* name : SspDocumentCenterGenericUpload
+* @description :This is a container for Generic Upload Screen
+* @author : Aniket
+* @date : 4/15/2020 
+* MODIFICATION LOG:
+* DEVELOPER             DATE            DESCRIPTION
+* ________________________________________________________________________________
+* Kyathi                4/15/2020       Creating HTML Structure
+* Aniket                4/15/2020     Backend Integration
+-->
+<template>
+    <div class="ssp-genericUploadContainer">
+        <div class="ssp-section1 ssp-appTable_borderBottom">
+            <div class="ssp-bodyContainer ssp-appTable_borderBottom">
+                <template if:true={showDetailsSpinner}>
+                    <c-ssp-spinner></c-ssp-spinner>
+                </template>
+                <div>
+                    <h1 class="ssp-fontFamily_popinBlack ssp-color_blueAlpha">
+                        {label.sspUpload}
+                    </h1>
+                </div>
+                <p class="ssp-sectionSeperator ssp-bg_monoAlpha"></p>
+                <div class="ssp-errorToast" if:true={hasSaveValidationError}>
+                    <c-ssp-toast
+                        ssp-toast-title-val={label.sspRequiredValidationMsg}
+                        show-error-toast={trueValue}
+                        onhidetoast={hideToast}
+                    ></c-ssp-toast>
+                </div>
+                <div class="slds-grid slds-wrap ssp-resourceDetailsForm">
+                    <p
+                        class="ssp-completeQuestions ssp-color_monoOmega ssp-fontFamily_ArvoRegular"
+                    >
+                        {label.sspEnterDocumentInformation}
+                    </p>
+                    <div class=" slds-size_1-of-1">
+                        <div
+                            class="slds-grid slds-wrap slds-size_1-of-2 slds-max-medium-size_1-of-1 ssp-fieldsContainer"
+                        >
+                            <c-ssp-base-component-input-picklist
+                                class="ssp-caseInput slds-size_1-of-1 ssp-desktopPaddingRight15"
+                                label={label.sspCaseNumber}
+                                title={label.sspCaseNumberTitle}
+                                option={caseOptions}
+                                selected-value={selectedCaseNumber}
+                                value={selectedCaseNumber}
+                                onhandlepicklistchange={caseOnChange}
+                                disabled={isDisabledCaseSelect}
+                            ></c-ssp-base-component-input-picklist>
+                        </div>
+                    </div>
+
+                    <div
+                        class="slds-grid slds-wrap slds-size_1-of-1 ssp-fieldsContainer"
+                    >
+                        <c-ssp-base-component-input-picklist
+                            class="ssp-indInput slds-max-medium-size_1-of-1 slds-size_1-of-2 ssp-desktopPaddingRight15"
+                            label={label.sspHouseholdMember}
+                            title={label.sspHouseholdMemberTitle}
+                            option={indOptions}
+                            selected-value={selectedIndId}
+                            value={selectedIndId}
+                            onhandlepicklistchange={indOnChange}
+                            disabled={isDisabledIndSelect}
+                        ></c-ssp-base-component-input-picklist>
+                        <!--<c-ssp-base-component-input-picklist
+                            class="ssp-typeOfProofInput slds-max-medium-size_1-of-1 slds-size_1-of-2"
+                            label={label.sspTypeOfProof}
+                            title={label.sspTypeOfProofTitle}
+                            option={typeOfProofOptions}
+                            selected-value={selectedTypeOfProof}
+                            value={selectedTypeOfProof}
+                            onhandlepicklistchange={onChangeTypeOfProof}
+                            has-truncated-labels="true"
+                        ></c-ssp-base-component-input-picklist>-->
+                        <c-ssp-type-ahead-picklist
+                            class="ssp-typeOfProofInput slds-max-medium-size_1-of-1 slds-size_1-of-2"
+                            placeholder={label.sspStartTypingPlaceholder}
+                            label={label.sspTypeOfProof}
+                            title={label.sspTypeOfProofTitle}
+                            list-values={typeOfProofOptions}
+                            value={selectedTypeOfProof}
+                            onselectedval={onChangeTypeOfProof}
+                            has-truncated-labels="true"
+                            is-generic-upload="true"
+                            do-you-want-on-change-empty-value="true"
+                        ></c-ssp-type-ahead-picklist>
+                    </div>
+                    <template if:true={isRenderPolicyInput}>
+                        <div class=" slds-size_1-of-1">
+                            <div
+                                class="slds-grid slds-wrap slds-size_1-of-2 slds-max-medium-size_1-of-1 ssp-fieldsContainer"
+                            >
+                                <c-ssp-base-component-input-text
+                                    class="ssp-policyInput slds-size_1-of-1 ssp-desktopPaddingRight15"
+                                    label={label.sspPolicyNumber}
+                                    value={policyNumberCaptured}
+                                    onchange={onChangePolicyNumber}
+                                ></c-ssp-base-component-input-text>
+                            </div>
+                        </div>
+                    </template>
+                    <div
+                        class="slds-grid slds-wrap slds-size_1-of-1 ssp-fieldsContainer  ssp-description"
+                    >
+                        <c-ssp-base-component-input-text-area
+                            class="ssp-descInput  slds-size_1-of-1"
+                            label={label.sspDescription}
+                            value={descCaptured}
+                            entity-name={descCaptured}
+                            field-name={descCaptured}
+                            handle-change="true"
+                            onhandlechange={onDescChange}
+                        ></c-ssp-base-component-input-text-area>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ssp-section2  ssp-bodyContainer">
+            <!--Generic File Upload-->
+            <c-ssp-document-file-upload
+                selected-case-number={selectedCaseNumber}
+                selected-ind-id={selectedIndId}
+                desc-captured={descCaptured}
+                selected-type-of-proof={selectedTypeOfProof}
+                form-of-proof-options={formOfProofOptions}
+                onformproofchange={formOfProofOnChange}
+                onsinglefileupload={singleFileUploaded}
+                selected-form-of-proof={selectedFormOfProof}
+                policy-no-captured={policyNumberCaptured}
+                handle-generic="true"
+                selected-ind-name={selectedIndName}
+                selected-form-of-proof-name={selectedTypeOfProofLabel}
+                is-eligible-for-renewal={isEligibleForRenewal}
+                task-code={taskCode}
+                onresetformofproof={handleResetFormOfProof}
+                template-map={templateMap}
+            ></c-ssp-document-file-upload>
+        </div>
+        <div
+            class="slds-grid slds-wrap slds-size_1-of-1 ssp-actionButtonsContainer ssp-buttonWidth  ssp-bodyContainer ssp-uploadProofForms"
+        >
+            <div class="slds-size_1-of-1 ssp-actionButtons">
+                <lightning-button
+                    class="ssp-button_base ssp-cancelButton ssp-screenFooterBlueBtn"
+                    label={label.sspCancel}
+                    onclick={cancelAndNavigate}
+                    title={label.sspCancelUploadTitle}
+                >
+                </lightning-button>
+                <lightning-button
+                    class="ssp-button_neutral ssp-saveButton ssp-screenFooterNextBtn"
+                    label={label.sspUpload}
+                    onclick={uploadDocuments}
+                    title={label.sspUploadDocuments}
+                >
+                </lightning-button>
+            </div>
+        </div>
+    </div>
+</template>

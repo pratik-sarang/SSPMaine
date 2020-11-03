@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Edit__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This Field indicates whether user can edit data or not</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Edit</label>
+    <type>Checkbox</type>
+</CustomField>

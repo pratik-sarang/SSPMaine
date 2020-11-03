@@ -1,0 +1,27 @@
+<template>
+  <div class="kynect-hpcard-container">
+    <div class={hpCardHeaderStyle}>
+      <div
+        class="kynect-color_white kynect-card-title kynect-fontFamily_proximaSoftBold"
+      >
+        {cardTitle}
+      </div>
+      <div>
+        <img
+          class="kynect-hpcard-img"
+          src={cardImage}
+          alt="baloonImage"
+          aria-hidden="true"
+          role="presentation"
+        />
+      </div>
+    </div>
+
+    <div class="kynect-hpcard-body">
+      <slot name="content"></slot>
+    </div>
+    <div class="kynect-cardButton">
+      <slot name="footer"></slot>
+    </div>
+  </div>
+</template>

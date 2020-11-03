@@ -1,0 +1,318 @@
+<!--
+* name : SspDocumentFileUpload
+* @description :This screen is used for Document File Upload
+* @author : Aniket,Kyathi
+* @date : 4/15/2020 
+* MODIFICATION LOG:
+* DEVELOPER             DATE            DESCRIPTION
+* ________________________________________________________________________________
+* Kyathi                4/29/2020       Creating HTML Structure
+* Aniket                4/29/2020     Backend Integration
+-->
+<template>
+    <div class="slds-grid slds-wrap">
+        <template if:true={showDetailsSpinner}>
+            <c-ssp-spinner></c-ssp-spinner>
+        </template>
+        <div class="ssp-errorToast" if:true={hasSaveValidationError}>
+            <c-ssp-toast
+                ssp-toast-title-val={toastErrorText}
+                ssp-toast-additional-info={toastAdditionalInfo}
+                show-error-toast={trueValue}
+                onhidetoast={hideToast}
+                condition={toastCondition}
+            ></c-ssp-toast>
+        </div>
+        <template if:true={restrictAddDocument}>
+            <div
+                if:false={isHearing}
+                class="slds-col slds-size_1-of-1 ssp-genericFileUploadSubContainer"
+            >
+                <div
+                    class="slds-grid slds-wrap slds-size_1-of-2 slds-max-medium-size_1-of-1 ssp-fieldsContainer"
+                >
+                    <c-ssp-base-component-input-picklist
+                        class="ssp-formOfProofInput slds-size_1-of-1 ssp-desktopPaddingRight15"
+                        label={label.sspFormOfProof}
+                        title={label.sspFormOfProofTitle}
+                        option={formOfProofOptions}
+                        selected-value={selectedFormOfProof}
+                        value={selectedFormOfProof}
+                        is-help-text={trueValue}
+                        help-text-content={label.sspFormOfProofHelpText}
+                        onhandlepicklistchange={onChangeFormOfProof}
+                        has-truncated-labels="true"
+                    >
+                    </c-ssp-base-component-input-picklist>
+                </div>
+            </div>
+            <div
+                if:true={isHearing}
+                class="slds-col slds-size_1-of-1 ssp-genericFileUploadSubContainer"
+            >
+                <div
+                    class="slds-grid slds-wrap slds-size_1-of-2 slds-max-medium-size_1-of-1 ssp-fieldsContainer"
+                >
+                    <c-ssp-base-component-input-picklist
+                        class="ssp-formOfProofInput slds-size_1-of-1 ssp-desktopPaddingRight15"
+                        name={label.sspHearingDocumentSelectName}
+                        option={hearingPickListValues}
+                        title={label.sspHearingDocumentSelectTitle}
+                        label={label.sspHearingDocumentSelectName}
+                        selected-value={selectedHearingDocumentType}
+                        value={selectedHearingDocumentType}
+                        is-help-text={trueValue}
+                        help-text-content={label.sspHearingUploadHelp}
+                        onhandlepicklistchange={onChangeHearingDocumentType}
+                        has-truncated-labels="true"
+                    >
+                    </c-ssp-base-component-input-picklist>
+                </div>
+            </div>
+            <div if:true={isShowTemplate} class="ssp-writtenStatement">
+                <p
+                    class="ssp-fontFamily_ArvoRegular ssp-color_monoOmega ssp-writtenStatementText slds-m-bottom_xx-small"
+                >
+                    {label.sspTemplateInstruction}
+                </p>
+                <p>
+                    <a
+                        tabindex="0"
+                        title={templateExampleLabel}
+                        onclick={openTemplateDocument}
+                        onkeydown={openTemplateDocument}
+                        class="ssp-writtenStatementLink ssp-fontFamily_popinBold ssp-color_blueAlpha"
+                    >
+                        {templateExampleLabel}
+                    </a>
+                </p>
+            </div>
+           
+            <div if:true={isPAFS76} class="ssp-writtenStatement">
+                <p
+                    class="ssp-fontFamily_ArvoRegular ssp-color_monoOmega ssp-writtenStatementText slds-m-bottom_xx-small"
+                >
+                    {label.sspPAFSFormOneLabelOne}
+                    <a
+                        tabindex="0"
+                        class="ssp-writtenStatementLink slds-m-horizontal_xx-small ssp-fontFamily_popinBold ssp-color_blueAlpha"
+                        data-form="PAFS76"
+                        onclick={openPDF}
+                        if:false={showTargetAnchorTag}
+                    >
+                        {label.sspCollateralForm}
+                    </a>
+                    <a
+                        tabindex="0"
+                        class="ssp-writtenStatementLink slds-m-horizontal_xx-small ssp-fontFamily_popinBold ssp-color_blueAlpha"
+                        href={PAFS76DocUrl}
+                        if:true={showTargetAnchorTag}
+                        target="_blank"
+                    >
+                        {label.sspCollateralForm}
+                    </a>
+                    {label.sspPAFSFormOneLabelTwo}
+                </p>
+            </div>
+            <div if:true={isPAFS700} class="ssp-writtenStatement">
+                <p
+                    class="ssp-fontFamily_ArvoRegular ssp-color_monoOmega ssp-writtenStatementText slds-m-bottom_xx-small"
+                >
+                    {label.sspPAFSFormTwoLabelOne}
+                    <a
+                        tabindex="0"
+                        data-form="PAFS700"
+                        onclick={openPDF}
+                        if:false={showTargetAnchorTag}
+                        class="ssp-writtenStatementLink slds-m-horizontal_xx-small ssp-fontFamily_popinBold ssp-color_blueAlpha"
+                    >
+                        {label.sspPAFSFormTwo}
+                    </a>
+                    <a
+                        tabindex="0"
+                        href={PAFS700DocUrl}
+                        target="_blank"
+                        if:true={showTargetAnchorTag}
+                        class="ssp-writtenStatementLink slds-m-horizontal_xx-small ssp-fontFamily_popinBold ssp-color_blueAlpha"
+                    >
+                        {label.sspPAFSFormTwo}
+                    </a>
+                    {label.sspPAFSFormTwoLabelTwo}
+                </p>
+            </div>
+            <div if:true={isPAFS702} class="ssp-writtenStatement">
+                <p
+                    class="ssp-fontFamily_ArvoRegular ssp-color_monoOmega ssp-writtenStatementText slds-m-bottom_xx-small"
+                >
+                    {label.sspFormThreeLabelOne}
+                    <a
+                        tabindex="0"
+                        data-form="PAFS702"
+                        onclick={openPDF}
+                        class="ssp-writtenStatementLink slds-m-horizontal_xx-small ssp-fontFamily_popinBold ssp-color_blueAlpha"
+                        if:false={showTargetAnchorTag}
+                    >
+                        {label.sspPAFSFormThree}
+                    </a>
+                    <a
+                        tabindex="0"
+                        class="ssp-writtenStatementLink slds-m-horizontal_xx-small ssp-fontFamily_popinBold ssp-color_blueAlpha"
+                        if:true={showTargetAnchorTag}
+                        href={PAFS702DocUrl}
+                        target="_blank"
+                    >
+                        {label.sspPAFSFormThree}
+                    </a>
+                    {label.sspFormThreeLabelTwo}
+                </p>
+            </div>
+            
+            <div class="slds-col slds-size_1-of-1">
+                <div class="ssp-fileUploadContainer ssp-appTable_borderBottom">
+                    <template if:false={isHearing}>
+                        <lightning-input
+                            name="file-upload-input"
+                            onchange={onFileChange}
+                            type="file"
+                            label={label.sspAddAdditionalDocument}
+                            variant="label-hidden"
+                            title={sspSelectDocumentToUploadTitle}
+                            class={statusClassUploadInput}
+                            disabled={isDisableUploadInput}
+                        ></lightning-input>
+                    </template>
+                    <template if:true={isHearing}>
+                        <lightning-input
+                            name="file-upload-input"
+                            onchange={onFileChange}
+                            type="file"
+                            label={label.sspAddAdditionalDocument}
+                            variant="label-hidden"
+                            title={label.sspHearingDocumentAddButton}
+                            class={statusClassHearingDocumentUpload}
+                            disabled={disableHearingDocumentUpload}
+                        ></lightning-input>
+                    </template>
+                    <div
+                        if:true={showUploadError}
+                        role="alert"
+                        aria-atomic="true"
+                        tabindex="0"
+                        key={error}
+                        class="ssp-showError ssp-color_redAlpha"
+                    >
+                        {errorFileUploadErrorAtField}
+                    </div>
+                    <div
+                        if:true={showFileNotUploadedError}
+                        role="alert"
+                        aria-atomic="true"
+                        tabindex="0"
+                        key={error}
+                        class="ssp-showError ssp-color_redAlpha"
+                    >
+                        {label.sspRequiredValidationMsg}
+                    </div>
+                </div>
+            </div>
+        </template>
+        <template if:true={showUploadedDocList}>
+            <div
+                class="slds-col slds-size_1-of-1 ssp-cardContainer ssp-appTable_borderBottom"
+            >
+                <template for:each={uploadedDocumentList} for:item="aDoc">
+                    <div key={aDoc.fileId} class="ssp-documentCard">
+                        <c-ssp-selection-card-with-remove-icon
+                            onremove={deleteTheFile}
+                            card-id={aDoc.fileId}
+                            data-item-id={aDoc.fileId}
+                            obj-card={aDoc.fileId}
+                            hide-buttons={trueValue}
+                            display-checkmark={trueValue}
+                            remove-modal-heading={label.sspRemoveDocumentModalHeader}
+                            remove-alt-text={label.sspRemoveDocumentTitle}
+                            remove-modal-content={label.sspRemoveDocumentModalContent}
+                            delete-button-label={label.sspRemoveDocumentModalHeader}
+                            delete-button-title={label.sspRemoveDocumentButtonTitle}
+                            cancel-button-title={label.cancelButtonTitle}
+                        >
+                            <div
+                                slot="cardContent"
+                                class="ssp-selectionCardTitle"
+                            >
+                                <p
+                                    class="slds-m-left_x-small  ssp-color_monoBody ssp-fontFamily_popinBold ssp-word-break-all"
+                                >
+                                    {aDoc.proofName}
+                                </p>
+                                <p
+                                    slot="cardContent"
+                                    class=" ssp-selectionCardTitle ssp-color_monoBody ssp-fontFamily_popinBold slds-m-left_x-small ssp-word-break-all"
+                                >
+                                    <a
+                                        tabindex="0"
+                                        data-document-name={aDoc.fileName}
+                                        data-content-id={aDoc.contentDocumentId}
+                                        data-extension={aDoc.fileType}
+                                        onclick={openFile}
+                                        onkeydown={openFile}
+                                        class="ssp-uploadedDocument ssp-fontFamily_popinBold ssp-color_blueAlpha"
+                                        title={aDoc.selectDocumentTitle}
+                                        >{aDoc.fileName}</a
+                                    >
+                                </p>
+                            </div>
+                        </c-ssp-selection-card-with-remove-icon>
+                    </div>
+                </template>
+            </div>
+        </template>
+
+        <div
+            class="slds-col slds-size_1-of-1 ssp-resourceSummary_container ssp-attachDocumentsContainer ssp-genericUploadContainer"
+        >
+            <p if:false={isHearing}
+                class="ssp-attachMoreDocumentsText ssp-color_monoOmega ssp-fontFamily_ArvoRegular"
+            >
+                {label.sspAttachProofDocument}
+            </p>
+            <p if:true={isHearing}
+                class="ssp-attachMoreDocumentsText ssp-color_monoOmega ssp-fontFamily_ArvoRegular"
+            >
+                {label.sspHearingDocumentContentThree}
+            </p>
+            <template if:false={isHearing}>
+                <lightning-button
+                    name="addDoc"
+                    class="ssp-button_base ssp-addResourceButton"
+                    label={label.sspAddDocument}
+                    title={label.sspAddDocumentTitle}
+                    onclick={enableSectionDocUpload}
+                    disabled={restrictAddDocument}
+                >
+                </lightning-button>
+            </template>
+            <template if:true={isHearing}>
+                <lightning-button
+                    name="addDoc"
+                    class="ssp-button_brand ssp-addResourceButton"
+                    label={label.sspHearingDocumentAddButton}
+                    title={label.sspHearingDocumentAddTitle}
+                    onclick={enableSectionDocUpload}
+                    disabled={restrictAddDocument}
+                    variant="brand"
+                >
+                </lightning-button>
+            </template>
+            <div
+                if:true={showFileNotUploadedTileHiddenError}
+                role="alert"
+                aria-atomic="true"
+                key={error}
+                class="ssp-showError ssp-color_redAlpha"
+            >
+                {label.sspRequiredValidationMsg}
+            </div>
+        </div>
+    </div>
+</template>

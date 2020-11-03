@@ -1,0 +1,20 @@
+.ssp-searchBox-outer{
+    height: 60px;
+    padding: 0.5rem;
+}
+
+.ssp-searchBox-outertext{
+    line-height: 3em;
+}
+
+.ssp-searchBox-child{
+    width:95%;
+}
+
+ .ssp-chevronleft-icon
+{
+    position: relative;
+    top: 0.5rem;
+    left:1rem;
+    z-index: 4;
+}

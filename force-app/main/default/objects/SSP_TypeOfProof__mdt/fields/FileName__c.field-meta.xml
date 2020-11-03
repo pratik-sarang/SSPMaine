@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FileName__c</fullName>
+    <description>File Name from static resource, Including the static resource name.
+        This file should be organized respective language folders &quot;en&quot; and &quot;es&quot;.
+        File Names should match in both &quot;en&quot; and &quot;es&quot; folders
+
+        In the file path there is no need to provide &quot;en&quot; or &quot;es&quot;, It will be dynamically added based on the language
+
+        Ex:  doctemplate/Information Request-Landlord (PAFS-76).pdf</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>File Name from static resource, Including the static resource name.
+        This file should be organized respective language folders &quot;en&quot; and &quot;es&quot;.
+        File Names should match in both &quot;en&quot; and &quot;es&quot; folders</inlineHelpText>
+    <label>File Name</label>
+    <length>255</length>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

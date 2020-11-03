@@ -1,0 +1,22 @@
+<!--
+* name            : sspBaseComponentInputEmail
+* @description    : Generic component for Input Email.
+-->
+<template>
+  <div class="ssp-genericInput">
+    <lightning-input
+      name={name}
+      data-id="inpValue"
+      label={label}
+      title={title}
+      value={value}
+      onblur={handleValidations}
+      onchange={handleValidations}
+      disabled={isDisabled}
+      placeholder={placeholder}
+    ></lightning-input>
+    <template for:each={ErrorMessageList} for:item="error">
+      <p tabindex="0" role="alert" aria-atomic="true" key={error} class="showError ssp-color_redOmega">{error}</p>
+    </template>
+  </div>
+</template>

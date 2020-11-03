@@ -1,0 +1,147 @@
+.ssp-multipleRolesContainer {
+    padding-left: 3.75rem;
+}
+.ssp-welcomeText {
+    font-size: 2.625rem;
+    line-height: 3rem;
+    letter-spacing: normal;
+    text-align: left;
+    padding: 1.875rem 0;
+}
+.ssp-goToDashboard {
+    text-align: left;
+    text-decoration: underline;
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+}
+
+.ssp-profileDropDownContainer {
+    width: 100%;
+}
+.ssp-profileContainer {
+    display: block;
+    padding-left: 1.5rem;
+}
+.ssp-profileText {
+    font-size: 1.125rem;
+    line-height: 1.875rem;
+}
+
+.ssp-profileMenuDropDown {
+    width: 100%;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.ssp-profileMenuDropDown:focus {
+    outline: none;
+}
+
+.ssp-profileMenuDropDownHeader {
+    /* max-width: 85%; */
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: -0.3px;
+    /* text-overflow: ellipsis; */
+}
+.ssp-profileMenuDropDownHeader p:first-child {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: -0.3px;
+    text-align: left;
+}
+
+.ssp-profileMenuDropDownHeader p:last-child {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: -0.3px;
+    text-align: left;
+}
+
+.ssp-selectedRoleLabel:focus {
+    outline: none;
+}
+
+.ssp-profileMenuDropDownIcon {
+    height: 1.5rem;
+    width: 1.5rem;
+    background-size: 1.5rem;
+    background-image: url(../resource/sspOverviewIcons/icons/ic_dropdown/ic_dropdown@3x.png);
+    background-repeat: no-repeat;
+    margin-left: 0.938rem;
+    padding: 0 0.938rem;
+}
+.ssp-profileMenuDropDownIcon:focus {
+    outline: none;
+}
+
+.ssp-profileMenuDropDownContent {
+    display: none;
+    position: absolute;
+    border-radius: 0 0 6px 6px;
+    /* width: 830px; */
+    z-index: 9;
+    background: #fff;
+    max-height: 435px;
+    overflow-y: overlay;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+}
+
+.ssp-profileMenuDropDownContent a {
+    overflow: hidden;
+    display: block;
+    text-decoration: none;
+    font-size: 1rem;
+    line-height: 22px;
+    letter-spacing: 0.3px;
+    text-align: left;
+    padding: 15px 30px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.ssp-profileMenuDropDownContent a:hover {
+    background-color: #eeeff2;
+}
+
+.ssp-profileMenuDropDownContent div:first-child {
+    padding-top: 10px;
+}
+
+.ssp-profileMenuDropDownContent div:last-child {
+    padding-bottom: 10px;
+}
+
+.ssp-expandDropDown {
+    display: block;
+}
+
+.ssp-collapseDropDown {
+    background-image: url(../resource/sspOverviewIcons/icons/ic_collapsedropdown/ic_collapsedropdown@3x.png);
+}
+
+@media only screen and (max-device-width: 768px) {
+    .ssp-multipleRolesContainer {
+        width: 100%;
+        padding: 0 1.875rem;
+    }
+
+    /* .ssp-profileMenuDropDownHeader {
+        overflow: hidden;
+    } */
+    .ssp-profileContainer {
+        max-width: 80%;
+    }
+    .ssp-profileMenuDropDownContent {
+        width: 100%;
+        left: 0;
+        right: 0;
+    }
+    .ssp-profileMenuDropDownContent a {
+        padding: 15px 30px;
+    }
+    .ssp-profileDropDownContainer {
+        width: 100%;
+    }
+}

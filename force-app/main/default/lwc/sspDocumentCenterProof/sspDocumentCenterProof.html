@@ -1,0 +1,201 @@
+<!--
+* name : SspDocumentCenterProof
+* @description :This screen is container for Document Center Proof Screen.
+* @author : Kyathi Kanumuri
+* @date : 4/12/2020
+* MODIFICATION LOG:
+* DEVELOPER             DATE            DESCRIPTION
+* ________________________________________________________________________________
+* Kyathi                4/12/2020     Creating HTML Structure
+* Aniket               4/12/2020      JS Controller
+-->
+<template>
+    <div class="ssp-proofContainer ssp-bodyContainer ssp-documentCenterHome">
+        <template if:true={showSpinner}>
+            <c-ssp-spinner></c-ssp-spinner>
+        </template>
+        <c-ssp-exit-document-wizard-modal
+            open-model={openExitWizardModel}
+            onclosemodal={closeExitWizardModel}
+        ></c-ssp-exit-document-wizard-modal>
+        <template if:true={showVerificationPopup}>
+            <c-ssp-detailed-information-modal
+                reference={reference}
+                header-value={currentRFI.RFI}
+                open-model={showVerificationPopup}
+                onclosemodal={closeVerificationPopup}
+            >
+                <span slot="contentSlot">
+                    <p class="slds-m-bottom_medium ssp-fontFamily_ArvoRegular">
+                        {label.sspDocumentExamples}
+                    </p>
+                    <ul
+                        class="ssp-fontFamily_popinBold ssp-fontSize13 ssp-color_monoBody"
+                    >
+                        <template for:each={proofOptions} for:item="proof">
+                            <li class="slds-m-top_xxx-small" key={proof.key}>
+                                {proof.label}
+                            </li>
+                        </template>
+                    </ul>
+                </span>
+            </c-ssp-detailed-information-modal>
+        </template>
+        <div class="ssp-errorToast" if:true={hasSaveValidationError}>
+            <c-ssp-toast
+                ssp-toast-title-val={label.sspSummaryRecordValidator}
+                show-error-toast={trueValue}
+                onhidetoast={hideToast}
+            ></c-ssp-toast>
+        </div>
+        <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_1-of-1">
+                <h1 class="ssp-fontFamily_popinBlack ssp-color_blueAlpha">
+                    {label.sspProof}
+                </h1>
+                <p
+                    class="ssp-fontFamily_popinRegular ssp-color_monoBody ssp-proofRequests ssp-fontSize13"
+                >
+                    {sspProofRequests}
+                </p>
+                <p
+                    class="ssp-color_monoBody ssp-proofType  ssp-fontSize13 ssp-fontFamily_popinBold"
+                >
+                    {sspProofType}
+                </p>
+            </div>
+            <div
+                class="slds-col slds-size_1-of-1 ssp-headerList ssp-proofForms"
+            >
+                <p
+                    if:true={isToShowRecommendedProofBlock}
+                    class="ssp-color_monoOmega ssp-fontFamily_ArvoRegular"
+                >
+                    {label.sspProofForms}
+                </p>
+                <ul
+                    if:true={isToShowRecommendedProofBlock}
+                    class="ssp-fontFamily_ArvoRegular ssp-color_monoOmega"
+                >   <li if:true={isPAFS700}>
+                       {label.sspPAFSFormTwoLabelOne}
+                       <a
+                          tabindex="0"
+                          data-form="PAFS700"
+                          onclick={openPDF}
+                          if:false={showTargetAnchorTag}
+                          class="ssp-writtenStatementLink slds-m-horizontal_xx-small ssp-fontFamily_popinBold ssp-color_blueAlpha"
+                        >
+                          {label.sspPAFSFormTwo}
+                        </a>
+                        <a
+                          tabindex="0"
+                          target="_blank"
+                          href={PAFS700DocUrl}
+                          if:true={showTargetAnchorTag}
+                          class="ssp-writtenStatementLink slds-m-horizontal_xx-small ssp-fontFamily_popinBold ssp-color_blueAlpha"
+                        >
+                          {label.sspPAFSFormTwo}
+                        </a>
+                        {label.sspPAFSFormTwoLabelTwo}
+                    </li>
+                    <template
+                        for:each={recommendedProofOptions}
+                        for:item="proof"
+                    >
+                        <li key={proof.key}>
+                            {proof.label}
+                        </li>
+                    </template>
+                    <li if:true={isPAFS76}>
+                        {label.sspPAFSFormOneLabelOne}
+                        <a
+                          tabindex="0"
+                          class="ssp-writtenStatementLink slds-m-horizontal_xx-small ssp-fontFamily_popinBold ssp-color_blueAlpha"
+                          data-form="PAFS76"
+                          onclick={openPDF}
+                          if:false={showTargetAnchorTag}
+                        >
+                          {label.sspCollateralForm}
+                        </a>
+                        <a
+                          tabindex="0"
+                          class="ssp-writtenStatementLink slds-m-horizontal_xx-small ssp-fontFamily_popinBold ssp-color_blueAlpha"
+                          target="_blank"
+                          href={PAFS76DocUrl}
+                          if:true={showTargetAnchorTag}
+                        >
+                          {label.sspCollateralForm}
+                        </a>
+                        {label.sspPAFSFormOneLabelTwo}
+                    </li>
+                </ul>
+                <ul if:true={isPAFS702} class="ssp-fontFamily_ArvoRegular ssp-color_monoOmega">
+                    <li>
+                        {label.sspFormThreeLabelOne}
+                        <a
+                          tabindex="0"
+                          data-form="PAFS702"
+                          onclick={openPDF}
+                          if:false={showTargetAnchorTag}
+                          class="ssp-writtenStatementLink slds-m-horizontal_xx-small ssp-fontFamily_popinBold ssp-color_blueAlpha"
+                        >
+                          {label.sspPAFSFormThree}
+                        </a>
+                        <a
+                          tabindex="0"
+                          target="_blank"
+                          href={PAFS702DocUrl}
+                          if:true={showTargetAnchorTag}
+                          class="ssp-writtenStatementLink slds-m-horizontal_xx-small ssp-fontFamily_popinBold ssp-color_blueAlpha"
+                        >
+                          {label.sspPAFSFormThree}
+                        </a>
+                        {label.sspFormThreeLabelTwo}
+                    </li>
+                </ul>
+            </div>
+            <div if:true={isViewAcceptedLink} class="slds-col slds-size_1-of-1">
+                <a
+                    tabindex="0"
+                    onclick={displayVerificationPopup}
+                    onkeydown={displayVerificationPopup}
+                    class="ssp-fontFamily_popinBold ssp-color_monoBody ssp-fontSize13 ssp-viewProofLink"
+                    title={label.sspViewProofTitle}
+                    >{label.sspAcceptedProof}</a
+                >
+            </div>
+            <div
+                class="slds-col slds-size_1-of-1 ssp-color_monoBody ssp-fullWidthDetailsForm"
+            >
+                <c-ssp-base-component-input-toggle
+                    class="ssp-inputYesNo"
+                    label={sspHaveProofQuestion}
+                    options={yesNoOptions}
+                    onhandlechange={handleYesNoChange}
+                    handle-change="true"
+                ></c-ssp-base-component-input-toggle>
+            </div>
+        </div>
+        <div
+            class="slds-grid slds-wrap slds-size_1-of-1 ssp-actionButtonsContainer ssp-buttonWidth ssp-uploadProofForms"
+        >
+            <div class="slds-size_1-of-1 ssp-actionButtons">
+                <lightning-button
+                    name="cancel"
+                    class="ssp-button_base ssp-cancelButton ssp-screenFooterBlueBtn"
+                    label={label.sspExitButton}
+                    onclick={handleExit}
+                    title={label.sspExitDocumentWizard}
+                ></lightning-button>
+                <lightning-button
+                    name="save"
+                    class="ssp-button_neutral ssp-saveButton ssp-screenFooterNextBtn"
+                    label={label.sspNext}
+                    onclick={navigateNextScreen}
+                    title={label.sspGoToNextScreen}
+                    disabled={nextButtonDisabled}
+                ></lightning-button>
+            </div>
+        </div>
+    </div>
+</template>

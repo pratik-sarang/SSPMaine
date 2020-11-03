@@ -1,0 +1,196 @@
+<template>
+    <div if:true={showToast} role="alert">
+        <c-ssp-toast
+            condition="positive"
+            ssp-toast-title-val={label.requestSent}
+            onhidetoast={handleHideToast}
+            show-error-toast={showToast}
+        ></c-ssp-toast>
+    </div>
+    <template if:true={showSpinner}>
+        <c-ssp-spinner></c-ssp-spinner>
+    </template>
+    <template if:true={showHearingSummary}>
+        <div class="ssp-hearingSummaryMainContainer ssp-hearingContainer">
+            <h1
+                class="ssp-color_blueAlpha ssp-margin-bottom_large ssp-fontFamily_popinBlack"
+            >
+                {label.hearings}
+            </h1>
+            <p
+                class="ssp-color_monoOmega ssp-margin-bottom_large ssp-fontFamily_ArvoRegular"
+            >
+                {label.hearingSummaryNote}
+            </p>
+            <div class="ssp-margin-bottom_large">
+                <a
+                    class="ssp-fontFamily_popinBold ssp-color_monoBody ssp-margin-bottom_small"
+                    href="javascript:void(0)"
+                    onclick={learnMoreModal}
+                    title={label.learnMoreTitle}
+                    tabindex="0"
+                    role="button"
+                    >{label.learnMoreLink}</a
+                >
+            </div>
+            <c-ssp-detailed-information-modal
+                if:true={showLearnMore}
+                header-value={label.learnMoreLink}
+                open-model={showLearnMore}
+                onclosemodal={closeLearnMoreModal}
+                reference={reference}
+            >
+                <p
+                    slot="contentSlot"
+                    class="ssp-learnMore ssp-fontFamily_ArvoRegular"
+                ></p>
+                <p
+                    slot="contentSlot"
+                    class="ssp-fontFamily_ArvoRegular ssp-AnchorCall"
+                >
+                    <a
+                        class="ssp-color_blueAlpha ssp-anchor"
+                        href={label.sspHearingSummaryLearnMorePhoneLink}
+                        tabindex="0"
+                        role="button"
+                        >{label.sspHearingSummaryLearnMorePhone}</a
+                    >
+                </p>
+            </c-ssp-detailed-information-modal>
+            <div class="ssp-margin-bottom_xlarge">
+                <template if:true={showRequestHearingButton}>
+                    <lightning-button
+                        label={label.requestHearing}
+                        variant="brand"
+                        class="ssp-button_brand ssp-add-income-btn ssp-cardButton"
+                        title={label.requestHearingTitle}
+                        onclick={handleRequestHearing}
+                    ></lightning-button>
+                </template>
+            </div>
+        </div>
+        <template if:true={showSummaryInner}>
+            <template if:true={showAccessDeniedComponent}>
+                <c-ssp-access-denied></c-ssp-access-denied>
+            </template>
+            <template if:true={isScreenAccessible}>
+                <div
+                    if:true={showMyRequest}
+                    class="ssp-cardContainer ssp-bg_monoAlpha"
+                >
+                    <div class="ssp-hearingSummaryContentContainer">
+                        <div
+                            class="ssp-color_blueAlpha ssp-margin-bottom_small ssp-sectionHeading ssp-fontFamily_popinBold"
+                        >
+                            {label.myRequests}
+                        </div>
+                        <template for:each={hearingSummary} for:item="hearing">
+                            <div
+                                class="ssp-margin-bottom_xlarge"
+                                key={hearing.HearingId}
+                            >
+                                <c-ssp-generic-dashboard-card
+                                    card-header={hearing.HearingProgram}
+                                >
+                                    <div class="ssp-cardInnerContainer">
+                                        <p class="ssp-fontFamily_popinBold">
+                                            {label.hearingIDText}
+                                            {hearing.HearingId}
+                                        </p>
+
+                                        <p
+                                            class="ssp-hearingStauts ssp-fontFamily_popinRegular ssp-color_monoOmega ssp-margin-bottom_large"
+                                        >
+                                            {hearing.hearingStatusText}
+                                        </p>
+                                        <div
+                                            class="slds-grid slds-wrap ssp-margin-bottom_large"
+                                        >
+                                            <div
+                                                class="slds-size_1-of-1 slds-large-size_1-of-2 ssp-mobileSectionMargin"
+                                            >
+                                                <p
+                                                    class="ssp-hearingStauts ssp-fontFamily_popinRegular ssp-color_monoOmega"
+                                                >
+                                                    {hearing.HearingReasonText}
+                                                </p>
+                                                <p
+                                                    class="ssp-fontFamily_popinRegular ssp-color_monoBody"
+                                                >
+                                                    {hearing.HearingReason}
+                                                </p>
+                                            </div>
+                                            <div
+                                                class="slds-size_1-of-1 slds-large-size_1-of-2"
+                                            >
+                                                <p
+                                                    class="ssp-hearingStauts ssp-fontFamily_popinRegular ssp-color_monoOmega"
+                                                >
+                                                    {label.submissionDate}
+                                                </p>
+                                                <p
+                                                    class="ssp-fontFamily_popinRegular ssp-color_monoBody"
+                                                >
+                                                   <!-- N- Defect fix 390728-->
+                                                    <lightning-formatted-date-time
+                                                        value={hearing.HearingDate}
+                                                        year="numeric"
+                                                        month="2-digit"
+                                                        day="2-digit"
+                                                        time-zone="UTC"
+                                                    >
+                                                    </lightning-formatted-date-time>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <lightning-button
+                                            label={label.viewDetails}
+                                            variant="netural"
+                                            class="ssp-button_base ssp-cardButton ssp-stacked-btn-width"
+                                            title={label.viewDetailsTitle}
+                                            onclick={navigateToHearingDetails}
+                                            data-id={hearing.HearingId}
+                                            data-request={hearing.RequestId}
+                                        ></lightning-button>
+                                    </div>
+                                </c-ssp-generic-dashboard-card>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+            </template>
+        </template>
+    </template>
+    <c-ssp-request-hearing
+        if:true={showRequestHearing}
+        onsaverequesthearing={handleSaveHearingRequest}
+        individual-address={individualAddress}
+    ></c-ssp-request-hearing>
+    <c-ssp-hearing-next-steps
+        if:true={showNextSteps}
+        onclosenextstep={backToSummary}
+        hearing-id={hearingId}
+        onnavigatetoupload={navigateToUpload}
+    ></c-ssp-hearing-next-steps>
+    <c-ssp-hearing-request-detail
+        if:true={showRequestDetails}
+        selected-detail={selectedDetailId}
+        request-id={requestId}
+        ongobackhearing={backToHearing}
+        onuploadfromrequestdetails={uploadFromHearingDetails}
+    ></c-ssp-hearing-request-detail>
+    <c-ssp-hearing-upload-document
+        selected-detail={selectedDetailId}
+        request-id={requestId}
+        if:true={uploadHearingDocuments}
+        ongobackrequestdetails={requestDetailsFromUpload}
+        ongobacknextsteps={backToNextSteps}
+        upload-back-to-summary={uploadBackToSummary}
+    ></c-ssp-hearing-upload-document>
+    <c-ssp-logging-and-error-handling-modal
+        if:true={showErrorModal}
+        error-id={errorMsg}
+        onprogressvaluechange={closeError}
+    >
+    </c-ssp-logging-and-error-handling-modal>
+</template>

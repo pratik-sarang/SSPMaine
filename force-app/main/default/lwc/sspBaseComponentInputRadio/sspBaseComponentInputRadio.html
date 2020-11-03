@@ -1,0 +1,23 @@
+<!--
+ * name sspBaseComponentInputRadio.
+ * @description: This component is used to render radio button.
+-->
+<template>
+  <div class="ssp-genericInput slds-grid slds-wrap">
+    <div>
+      <lightning-input
+        type="radio"
+        label={label}
+        title={title}
+        checked={checked}
+        value={value}
+        onblur={handleValidations}
+        onchange={handleValidations}
+        disabled={isDisabled}
+      ></lightning-input>
+      <template for:each={ErrorMessageList} for:item="error">
+        <p key={error} class="showError ssp-color_redOmega">{error}</p>
+      </template>
+    </div>
+  </div>
+</template>

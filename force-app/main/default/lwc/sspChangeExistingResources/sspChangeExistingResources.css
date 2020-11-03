@@ -1,0 +1,16 @@
+.ssp-changeResource_container .ssp-fieldLabel {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: -0.01875rem;
+}
+
+.ssp-changeResource_container .ssp-checkboxLabels,
+.ssp-changeResource_container .ssp-singleLineCheckboxLabel {
+    font-size: 0.813rem;
+    line-height: 1.5rem;
+    letter-spacing: -0.015rem;
+}
+
+.ssp-changeResource_container .ssp-labelLine1 {
+    line-height: 1.125rem;
+}

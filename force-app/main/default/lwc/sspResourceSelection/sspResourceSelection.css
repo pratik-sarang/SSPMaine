@@ -1,0 +1,49 @@
+.sspResourceSelection {
+    margin-bottom: 6.25rem;
+} 
+
+.ssp-resourceSelectionLearnText {
+    font-size: 13px;
+    letter-spacing: -.3px;
+    line-height: 30px;
+    text-decoration: underline;
+    text-underline-position: under;
+}
+
+.ssp-resourceSelectionInfoText {
+    font-size: 1rem;
+    line-height: 24px;
+    letter-spacing: -.3px;
+    text-align: left;
+}
+
+.ssp-resourceSelectionQuestion.ssp-border-bottom {
+    border-bottom: 1px solid #dadee4;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.sspMember {
+    min-width: 48%;
+}
+.ssp-selectApplicants {
+    font-size: 0.8125rem;
+    line-height: 30px;
+    letter-spacing: 0.3px;
+    text-align: left;
+    width: 100%;
+}
+@media only screen and (max-device-width: 896px) and (orientation: landscape) {
+    .sspMember {
+        min-width: 100%;
+    }
+}
+@media only screen and (max-device-width: 768px) {
+    .sspMember {
+        min-width: 100%;
+    }
+}
+@media only screen and (device-width: 1024px) and (device-height: 768px) and (orientation: landscape) {
+    .sspMember {
+        min-width: 53%;
+    }
+}

@@ -1,0 +1,45 @@
+.ssp-shortHeading {
+    padding: 1.25rem 1.875rem;
+    margin-bottom: 3px;
+}
+
+.ssp-appCardOrangeTitle {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    text-transform: uppercase;
+}
+
+.ssp-headingSignaturePage {
+    font-size: 2.625rem;
+    line-height: 3rem;
+}
+
+.ssp-greyUnderline {
+    height: .3125rem;
+    border-radius: .15625rem;
+}
+
+.ssp-margin-bottom_thirty {
+    margin-bottom: 1.875rem;
+}
+
+.ssp-waiverContent {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.ssp-waiverScreenQuestContainer {
+    margin: 60px auto;
+}
+
+.ssp-waiverButtons {
+    margin-top: 30px;
+}
+.ssp-callCommunityAlternatives {
+    padding-left: 4px;
+}
+@media only screen and (max-width: 768px) {
+    .ssp-actionButtons {
+        margin-top: 15px;
+    }
+}

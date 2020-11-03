@@ -1,0 +1,225 @@
+<!--
+* name          : sspFooter.
+* @description  : This is the footer that is shown at the bottom of the screen.
+* @author       : Venkata.
+* @date         : 12/11/2019
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName                MM/DD/YYYY               A Brief Description about the Change
+* Narapa                       07/27/2020               Task 363516: Development Activity to Link Help and FAQ Landing Pages
+*                                                                    and Contact us Landing Pages
+-->
+<template>
+  <footer>
+    <div
+            class="slds-grid slds-wrap slds-p-vertical_xx-large ssp-footer ssp-container_width"
+        >
+            <div
+                class="slds-size_1-of-1 slds-medium-size_1-of-1 slds-large-size_1-of-1 slds-p-bottom_large ssp-footer-top-text"
+            >
+                <h2
+                    class="ssp-fontFamily_popinBold ssp-color_monoGamma ssp-footer-expanded-kynect slds-p-bottom_medium"
+                >
+                    {label.sspFooterExpandedKynect}
+                </h2>
+                <p class="ssp-color_white">
+                    {label.sspFooterGoToKynect}&nbsp;
+                    <a
+                        class="ssp-color_monoGamma ssp-footer-link"
+                        href={label.sspKynectLandingPageURL}
+                        target="_blank"
+                        title={sspFooterKynectPageURLAltText}
+                    >
+                        {label.sspFooterKynectLink}</a
+                    >&nbsp; {label.sspFooterGoToKynectTextTwo}
+                </p>
+            </div>
+            <div
+                class="slds-size_1-of-2 slds-medium-size_1-of-2 slds-large-size_1-of-4 slds-p-bottom_large"
+            >
+                <h2>
+                    <a
+                        tabindex="0"
+                        class="ssp-footer-heading ssp-fontFamily_popinBold ssp-footer-link"
+						title={label.sspHelpResources}
+                        onclick={navigateToHelpFAQ}
+                        >{label.sspHelpResources}</a
+          >
+        </h2>
+        <ul class="ssp-footer-text">
+          <li class="ssp-footer-list">
+                        <a
+                            class="ssp-footer-link"
+                            data-page="google_map__c"
+                            href={label.sspDCBSLink}
+                            title={label.sspFooterDCBSAlternateText}
+                            >{label.sspDCBSOffice}</a
+                        >
+            </li>
+            <li class="ssp-footer-list">
+                        <a
+                            href={label.sspFooterCHFSHomePageLink}
+                            class="ssp-footer-link"
+                            target="_blank"
+                            title={label.sspFooterCHFSAlternateText}
+                            >{label.sspFooterCHFS}</a
+                        >
+             </li>
+              <li class="ssp-footer-list">
+                        <a
+                            class="ssp-footer-link"
+                            onclick={navigateToPrintableFormsPage}
+                            title={label.sspPrintableFormAlt}
+                            >{label.sspPrintableForms}</a
+                        >
+              </li>
+         </ul>
+            </div>
+            <div
+                class="slds-col_bump-right ssp-contact-container slds-size_1-of-2 slds-medium-size_1-of-2 slds-large-size_1-of-4 ssp-col-mid"
+            >
+                <div class="ssp-footer-contactMarginBottom">
+                    <h2>
+                        <a
+                            tabindex="0"
+                            class="ssp-footer-heading ssp-fontFamily_popinBold ssp-footer-link"
+							onclick={navigateToContactUsPage}
+                            title={label.sspFooterContactUs}
+                            >{label.sspFooterContactUs}</a
+                        >
+                    </h2>
+                    <ul class="ssp-footer-text ssp-footer-text-middle">
+                        <li class="ssp-footer-list">
+                            <div tabindex="0">{label.sspBENEFIND}</div>
+                            <a
+                                class="ssp-footer-link ssp-fontFamily_popinBold"
+                                title={label.sspFooterPhoneAlternateText}
+                                href={sspContactNumber}
+              >
+                                {label.sspFooterContactNumber}</a
+                            >
+                        </li>
+                        <li class="ssp-footer-list ssp-isMobile">
+                            <div tabindex="0">
+                                {label.sspFooterTechnicalAssistance}
+                            </div>
+                            <a
+                                class="ssp-footer-link ssp-fontFamily_popinBold"
+                                title={label.sspFooterPhoneAlternateText}
+                                href={sspTechnicalAssistanceNumber}
+                            >
+                                {label.sspFooterTechnicalAssistanceNumber}</a
+                            >
+                        </li>
+                        
+            <li class="ssp-footer-list ssp-isMobile">
+                            <a
+								tabindex="0"
+                                href="JavaScript:Void(0);"
+                                onkeydown={reportFraud}
+                                onclick={reportFraud}
+                                class="ssp-footer-link ssp-fontFamily_popinBold"
+                                title={label.sspFooterReportFraudAlternateText}
+                                >{label.sspFooterReportFraud}</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="slds-size_1-of-2 slds-medium-size_1-of-2 slds-large-size_1-of-4 ssp-complaint-section"
+            >
+                <ul class="ssp-footer-text ssp-footer-text-middle">
+                    <li class="ssp-footer-list">
+                        
+                        <div tabindex="0">
+                            {label.sspFooterTechnicalAssistance}
+                        </div>
+                        <a
+                            class="ssp-footer-link ssp-fontFamily_popinBold"
+                            title={label.sspFooterPhoneAlternateText}
+                            href={sspTechnicalAssistanceNumber}
+                        >
+                            {label.sspFooterTechnicalAssistanceNumber}</a
+                        >
+                    </li>
+          <li class="ssp-footer-list">
+                        <a
+                            tabindex="0"
+                            onkeydown={reportFraud}
+                            onclick={reportFraud}
+                            class="ssp-footer-link ssp-fontFamily_popinBold"
+                            title={label.sspFooterReportFraudAlternateText}
+                            >{label.sspFooterReportFraud}</a
+                        >
+          </li>
+        </ul>
+      </div>
+
+            <div
+                class="slds-size_1-of-1 slds-medium-size_1-of-1 slds-large-size_1-of-4"
+            >
+                <div
+                    class="slds-m-bottom_xx-large ssp-footer-social-media slds-border_bottom ssp-color_monoGamma ssp-fontFamily_popinBold"
+                >
+                    <div class="slds-p-bottom_small">
+                        {label.sspFooterConnect}
+                    </div>
+                    <div>
+                        <a
+                            target="_blank"
+                            href={sspFooterFaceBookURL}
+                            title={faceBookIconAltText}
+                        >
+                            <img
+                                tabindex="0"
+                                src={footerFaceBookIcon}
+                                alt={faceBookIconAltText}
+                                class="slds-m-right_small"
+                            />
+                        </a>
+
+                        <a
+                            target="_blank"
+                            href={sspFooterTwitterURL}
+                            title={twitterIconAltText}
+                        >
+                            <img
+                                tabindex="0"
+                                src={footerTwitterIcon}
+                                alt={twitterIconAltText}
+                            />
+                        </a>
+                    </div>
+                </div>
+                <div class="ssp-footer_logo">
+                    <img tabindex="0" src={agencyLogo} alt="agency-logo" />
+                </div>
+            </div>
+            <div class="ssp-footer-text slds-grid slds-m-bottom_none slds-m-top_medium">
+              {label.sspFooterBrowserText}
+            </div>
+        </div>
+        <div
+            class="slds-p-horizontal_xx-large slds-size_1-of-1 ssp-privacy-policy ssp-color_white slds-grid ssp-bg_monoZeta ssp-fontFamily_popinRegular"
+        >
+            <div
+                class="ssp-container_width slds-grid slds-wrap slds-grid_align-spread"
+            >
+                <a
+                    tabindex="0"
+                    target="_blank"
+                    class="ssp-privacy-link slds-p-vertical_small ssp-color_white"
+                    data-page="Privacy_Policy__c"
+                    href={label.sspFooterPrivacyPolicyLink}
+                    title={label.sspFooterPrivacyPolicyAndTermOfUseAlternateText}
+                    >{label.sspFooterPrivacyPolicyAndTermsOfUse}</a
+                >
+                <span tabindex="0" class="slds-p-vertical_small"
+                    >&copy; {label.sspFooterCopyright}&nbsp;{currentYear}</span
+                >
+            </div>
+        </div>
+    </footer>
+</template>

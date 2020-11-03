@@ -1,0 +1,39 @@
+.ssp-appCard {
+    border-radius: 6px;
+    height: 100%;
+}
+
+.ssp-appCardHeader {
+    padding: 15px 30px;
+    border-radius: 6px 6px 0 0;
+    font-size: 1rem;
+    line-height: 24px;
+    letter-spacing: -0.3px;
+}
+
+.ssp-appCardBody {
+    padding: 15px 30px 30px 30px;
+}
+
+.ssp-appCardTitle {
+    font-size: 1rem;
+    line-height: 24px;
+    letter-spacing: -0.3px;
+    text-align: left;
+}
+
+.ssp-appDisc {
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+
+@media only screen and (max-width: 768px) {
+    .ssp-appCardHeader {
+        padding: 15px 24px;
+    }
+    .ssp-appCardBody {
+        padding: 15px 24px 24px 24px;
+    }
+}

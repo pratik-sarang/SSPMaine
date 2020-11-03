@@ -1,0 +1,52 @@
+<template>
+    <template if:true={showSpinner}>
+        <c-ssp-spinner></c-ssp-spinner>
+    </template>
+    <template if:false={showSpinner}>
+    <div class="ssp-change-member-email">
+        <c-ssp-Detailed-Information-Modal
+            header-value={label.sspChangeEmailAddress}
+            open-model="true"
+            onclosemodal={initCancel}
+            reference={reference}
+        >
+            <span slot="contentSlot">
+                <div class="ssp-errorToast" if:true={hasSaveValidationError}>
+                    <c-ssp-toast
+                        ssp-toast-title-val={label.toastErrorText}
+                        show-error-toast={trueValue}
+                        onhidetoast={hideToast}
+                    ></c-ssp-toast>
+                </div>
+
+                <c-ssp-base-component-input-email
+                    label={label.sspEmail}
+                    value={memberEmail}
+                    class="ssp-applicationInput"
+                    meta-list={MetaDataListParent}
+                    field-name="Email__c"
+                    entity-name="SSP_Member__c"
+                ></c-ssp-base-component-input-email>
+            </span>
+            <span slot="Footer" class="slds-grid slds-wrap slds-grid_align-spread ssp-myinfo-modal-footer">
+                <lightning-button
+                    variant="base"
+                    title={label.sspCancel}
+                    class="ssp-button_base slds-p-right_medium slds-size_1-of-2"
+                    onclick={initCancel}
+                    label={label.sspCancel}
+                ></lightning-button>
+                <lightning-button
+                    variant="neutral"
+                    title={label.sspSave}
+                    class="ssp-button_neutral slds-p-left_medium slds-size_1-of-2"
+                    onclick={initSave}
+                    label={label.sspSave}
+                ></lightning-button>
+            </span>
+        </c-ssp-Detailed-Information-Modal>
+    </div>
+    </template>
+    <c-ssp-logging-and-error-handling-modal if:true={showErrorModal} error-id={errorMsg} onprogressvaluechange={closeError}>
+    </c-ssp-logging-and-error-handling-modal>
+</template>

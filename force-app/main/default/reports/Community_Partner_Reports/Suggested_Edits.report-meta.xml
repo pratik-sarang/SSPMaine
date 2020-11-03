@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>ReportConcern__c$CreatedDate</field>
+    </columns>
+    <columns>
+        <field>ReportConcern__c$Location_Name__c</field>
+    </columns>
+    <columns>
+        <field>ReportConcern__c$Resource_Name__c</field>
+    </columns>
+    <columns>
+        <field>ReportConcern__c$Category__c</field>
+    </columns>
+    <columns>
+        <field>ReportConcern__c$ConcernDetails__c</field>
+    </columns>
+    <columns>
+        <field>ReportConcern__c$ConcernStatus__c</field>
+    </columns>
+    <columns>
+        <field>ReportConcern__c$ReporterName__c</field>
+    </columns>
+    <columns>
+        <field>ReportConcern__c$ReporterPhone__c</field>
+    </columns>
+    <description>RE Feedback reports</description>
+    <filter>
+        <criteriaItems>
+            <column>ReportConcern__c$RecordType</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>ReportConcern__c.Change</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Suggested Edits</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Report_Concern__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>ReportConcern__c$CreatedDate</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>ReportConcern__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

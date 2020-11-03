@@ -1,0 +1,342 @@
+<template>
+  <main role="main">
+    <div class="kynect-home-main-container">
+      <!--Home Page :Banner 1-->
+      <template if:true={showNotificationBanner}>
+        <div class="  kynect-home-banner1 ">
+          <c-kynect-notification-banner
+            info-text={customLabels.kynectHomeBannerMsg1Text}
+            link-title={customLabels.kynectHomeBannerMsg1LinkTitle}
+            link-url={customLabels.kynectHomeBannerMsg1Link}
+          >
+          </c-kynect-notification-banner>
+        </div>
+      </template>
+      <div
+        class="slds-p-horizontal_xx-large kynect-imgContainer slds-grid slds-grid_align-center slds-grid_vertical-align-center kynect-home-section_1"
+      >
+        <div class="slds-col kynect-home-section1-container">
+          <!--Home Page :Banner 1 Heading-->
+          <div
+            class="kynect-homepage-section-row kynect-homepage-banner1-Heading"
+          >
+            <div
+              class="kynect-headline_1 slds-text-align_center kynect-color_blueAlpha kynect-fontFamily_proximaSoftBold"
+            >
+              <span>{customLabels.kynectIsBack}</span>
+              <span>{customLabels.kynectBroughtBackup}</span>
+            </div>
+          </div>
+          <!--Home Page :Banner 1 Caption-->
+          <div
+            class="kynect-homepage-section-row kynect-homepage-banner1-caption slds-m-top_x-large"
+          >
+            <div
+              class="kynect-body_regular slds-text-align_center kynect-color_black kynect-fontFamily_breeSerifRegular slds-m-bottom_large"
+            >
+              {customLabels.kynectLearnAboutResourcesAndBenefits}
+            </div>
+          </div>
+          <!--Home Page :Banner 1 Video-->
+          <div class="kynect-homepage-section-row kynect-videoWrap">
+            <div class="slds-text-align_center kynect-video-container">
+              <iframe
+                title="kynect"
+                role="kynect"
+                aria-label="kynect"
+                allowfullscreen="true"
+                scrolling="no"
+                src={customLabels.kynectLMSVideoUrl}
+                class="kynect-video"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Home Page :Banner 2-->
+      <div
+        class="slds-p-horizontal_xx-large kynect-imgContainer slds-grid slds-grid_align-center slds-grid_vertical-align-center kynect-home-section_2"
+      >
+        <div
+          class="slds-col slds-size_1-of-1 slds-medium-size_10-of-12 slds-large-size_6-of-12 slds-m-vertical_xx-large slds-p-vertical_xx-large"
+        >
+          <!--Home Page :Banner 2 Heading-->
+          <div
+            class="kynect-homepage-section-row kynect-homepage-banner1-Heading"
+          >
+            <div
+              class="kynect-headline_1 slds-text-align_center kynect-color_blueAlpha kynect-fontFamily_proximaSoftBold"
+            >
+              <span>{customLabels.kynectWayToKynect}</span>
+            </div>
+          </div>
+          <!--Home Page :Banner 2 Content-->
+          <div
+            class="kynect-homepage-section-row kynect-homepage-banner1-caption slds-m-top_x-large"
+          >
+            <div
+              class="kynect-body_regular slds-text-align_center kynect-color_black kynect-fontFamily_breeSerifRegular"
+            >
+              {customLabels.kynectGoodNewsKynectIsBack}
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Home Page :Banner 3-->
+      <section class="slds-p-horizontal_xx-large kynect-subsection_wrap">
+        <section class="kynect-container_width">
+          <div class="kynect-card_wrap" role="article">
+            <!--Home Page :Banner 3 Card 1 - Health Coverage-->
+            <div class="kynect-card-container">
+              <c-kynect-home-page-card
+                card-image={blueBalloon}
+                card-title={customLabels.kynectHealthCoverage}
+                card-header-style="kynect-bgcolor_blue"
+              >
+                <section slot="content">
+                                    <div
+                                        class="slds-m-around_large kynectlink-lineheight"
+                                    >
+                                        <a
+                                            class="kynect-hclink"
+                                            href={customLabels.kynectBaloonMedicaidChildrenCoverageLink}
+                                        >
+                                            <div
+                                                class="slds-grid slds-grid_align-spread  kynect-color_blue"
+                                            >
+                                                <div
+                                                    class="kynect-hyperlink slds-col slds-size_3-of-4 slds-m-horizontal_small kynect-fontFamily_proximaSoftBold"
+                                                >
+                                                    {customLabels.kynectBaloonMedicaidChildrenCoverage}
+                                                </div>
+                                                <lightning-icon
+                                                    icon-name="utility:chevronright"
+                                                    size="small"
+                                                ></lightning-icon>
+                                            </div>
+                                        </a>
+                                        <a
+                                            class="kynect-hclink"
+                                            href={customLabels.kynectBaloonPremiumAssistanceLink}
+                                        >
+                                            <div
+                                                class="slds-grid slds-grid_align-spread  kynect-color_blue slds-m-top_small kynect-hclink-margin"
+                                            >
+                                                <div
+                                                    class="kynect-hyperlink slds-col  slds-m-horizontal_small kynect-fontFamily_proximaSoftBold"
+                                                >
+                                                    {customLabels.kynectBaloonPremiumAssistance}
+                                                </div>
+                                                <lightning-icon
+                                                    icon-name="utility:chevronright"
+                                                    size="small"
+                                                ></lightning-icon>
+                                            </div>
+                                        </a>
+                                        <a
+                                            class="kynect-hclink"
+                                            href={customLabels.kynectBaloonQualifiedHealthPlansLink}
+                                        >
+                                            <div
+                                                class="slds-grid slds-grid_align-spread  kynect-color_blue slds-m-top_small kynect-hclink-margin"
+                                            >
+                                                <div
+                                                    class="kynect-hyperlink slds-col  slds-m-horizontal_small kynect-fontFamily_proximaSoftBold"
+                                                >
+                                                    {customLabels.kynectBaloonQualifiedHealthPlans}
+                                                </div>
+                                                <lightning-icon
+                                                    icon-name="utility:chevronright"
+                                                    size="small"
+                                                ></lightning-icon></div
+                                        ></a>
+                                        <a
+                                            class="kynect-hclink"
+                                            href={customLabels.kynectBaloonCOVID19TimeLimitedCoverageLink}
+                                        >
+                                            <div
+                                                class="slds-grid slds-grid_align-spread  kynect-color_blue slds-m-top_small kynect-hclink-margin"
+                  >
+                <div
+                                                    class="kynect-hyperlink slds-col  slds-m-horizontal_small kynect-fontFamily_proximaSoftBold"
+                >
+                                                    {customLabels.kynectBaloonCOVID19TimeLimitedCoverage}
+                                                </div>
+                                                <lightning-icon
+                                                    icon-name="utility:chevronright"
+                                                    size="small"
+                                                ></lightning-icon></div
+                                        ></a>
+                  <a
+                                            class="kynect-hclink"
+                                            href={customLabels.kynectBaloonFindKynectorsLink}
+                                        >
+                                            <div
+                                                class="slds-grid slds-grid_align-spread  kynect-color_blue slds-m-top_small kynect-hclink-margin"
+                  >
+                                                <div
+                                                    class="kynect-hyperlink slds-col  slds-m-horizontal_small kynect-fontFamily_proximaSoftBold"
+                                                >
+                                                    {customLabels.kynectBaloonFindKynectors}
+                                                </div>
+                                                <lightning-icon
+                                                    icon-name="utility:chevronright"
+                                                    size="small"
+                                                ></lightning-icon></div
+                  ></a>
+                </div>
+                                </section>
+              </c-kynect-home-page-card>
+            </div>
+            <!--Home Page :Banner 3 Card 2 - Benefits-->
+            <div class="kynect-card-container">
+              <c-kynect-home-page-card
+                card-image={purpleBalloon}
+                card-title={customLabels.kynectBenefits}
+                card-header-style="kynect-bgcolor_purple"
+              >
+                <section slot="content">
+                  <p
+                    class="kynect-color_black kynect-fontFamily_breeSerifRegular slds-m-around_large slds-p-left_small"
+                  >
+                    {customLabels.kynectBenefitsContent}
+                  </p>
+                </section>
+                <div
+                  slot="footer"
+                  class="slds-p-bottom_medium slds-align_absolute-center"
+                >
+                  <a class="kynect-link" href={customLabels.kynectBenefitsUrl} onmouseover={benefitsArrowHover} onmouseout={benefitsArrowHoverOut}>
+                    <span
+                      class="kynect-hyperlink kynect-color_blue  slds-m-horizontal_small kynect-fontFamily_proximaSoftBold"
+                    >
+                      {customLabels.kynectGetBenefits}</span
+                    ><span>
+                      <img
+                        class="kynect-hpcard-button-arrow benefits-arrow"
+                        src={arrow}
+                        alt={customLabels.kynectGetMoreAlt}
+                        aria-hidden="true"
+                        role="presentation"
+                      /> </span
+                  ></a>
+                </div>
+              </c-kynect-home-page-card>
+            </div>
+            <!--Home Page :Banner 3 Card 2 - Resources-->
+            <div class="kynect-card-container">
+              <c-kynect-home-page-card
+                card-image={greenBalloon}
+                card-title={customLabels.kynectResources}
+                card-header-style="kynect-bgcolor_green"
+              >
+                <section slot="content">
+                  <p
+                    class="kynect-color_black kynect-fontFamily_breeSerifRegular slds-m-around_large slds-p-left_small"
+                  >
+                    {customLabels.kynectResourcesCardContent}
+                  </p>
+                </section>
+                <div
+                  slot="footer"
+                  class="slds-m-vertical_medium slds-align_absolute-center"
+                >
+                  <a class="kynect-link" href={customLabels.kynectResourcesUrl} onmouseover={resourceArrowHover} onmouseout={resourceArrowHoverOut}>
+                    <span
+                      class="kynect-hyperlink kynect-color_blue  slds-m-horizontal_small kynect-fontFamily_proximaSoftBold"
+                    >
+                      {customLabels.kynectGetHelp}</span
+                    ><span>
+                      <img
+                        class="kynect-hpcard-button-arrow resource-arrow"
+                        src={arrow}
+                        alt={customLabels.kynectGetHelpAlt}
+                        aria-hidden="true"
+                        role="presentation"
+                      />
+                    </span>
+                  </a>
+                </div>
+              </c-kynect-home-page-card>
+            </div>
+          </div>
+        </section>
+      </section>
+    </div>
+    <!--Home Page :Banner 4-->
+    <section class="slds-p-horizontal_xx-large kynect-subsection_wrap">
+      <section class="kynect-container_width">
+        <div class="slds-grid slds-wrap">
+          <!--Home Page :Banner 4 Left content-->
+          <div
+            class="slds-col slds-size_1-of-1 slds-medium-size_8-of-12 slds-large-size_8-of-12"
+          >
+            <div class="slds-grid slds-wrap">
+              <div
+                class="slds-col slds-size_1-of-1  slds-medium-size_3-of-4 slds-large-size_3-of-4 slds-align-top"
+              >
+                <div class="slds-m-vertical_x-large kynect-title">
+                  <!--Home Page :Banner 4 Heading-->
+                  <div
+                    class="kynect-headline_1  kynect-color_blueAlpha kynect-fontFamily_proximaSoftBold"
+                  >
+                    <span>{customLabels.kynectGotQuestions}</span>
+                    <span>{customLabels.kynectGotAnswers}</span>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="slds-col slds-size_1-of-1 slds-medium-size_3-of-4  slds-large-size_3-of-4 slds-align-middle"
+              >
+                <div class="slds-m-vertical_x-large kynect-text-div">
+                  <!--Home Page :Banner 4 Content-->
+                  <div
+                    class=" kynect-color_black  kynect-text kynect-body_regular kynect-fontFamily_breeSerifRegular"
+                  >
+                    {customLabels.kynectOurFriendlyHelpfulKynectors}
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="slds-col slds-size_3-of-4 slds-medium-size_7-of-12  slds-large-size_5-of-12 "
+              >
+                <div
+                  class="kynect-blp-button slds-m-vertical_x-large slds-text-align_center "
+                >
+                  <!--Home Page :Banner 4 Button-->
+                  <a
+                    class="kynect-link"
+                    title={customLabels.kynectQuestionsPhoneNo}
+                    href={kynectContactNumber}
+                  >
+                    <div
+                      class="kynect-button kynect-button_regular kynect-blp-button-text slds-p-bottom_large slds-p-vertical_small kynect-color_white"
+                    >
+                      {customLabels.kynectQuestionsPhoneNo}
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Home Page :Banner 4 Image-->
+          <div
+            class="slds-col slds-size_1-of-1 slds-medium-size_4-of-12  slds-large-size_4-of-12 slds-show_medium"
+          >
+            <div class="kynect-image">
+              <img
+                class="kynect-image"
+                src={peopleImage}
+                alt="peopleImage"
+                aria-hidden="true"
+                role="presentation"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+  </main>
+</template>

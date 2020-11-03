@@ -1,0 +1,218 @@
+.ssp-headerText {
+    font-size: 42px;
+    font-weight: 900;
+    letter-spacing: 0;
+    line-height: 48px;
+}
+.ssp-containerBody {
+    padding: 60px 135px 0 60px;
+}
+.ssp-additionalInfoContainer{
+    width: 80%;
+}
+.ssp-infoText {
+    font-size: 16px;
+    letter-spacing: -0.2992px;
+    line-height: 24px;
+}
+.ssp-hrRuler {
+    height: 1px;
+
+    background-color: #dadee4;
+}
+.ssp-renewalText {
+    font-size: 16px;
+    letter-spacing: -0.3px;
+    line-height: 24px;
+}
+.ssp-textPadding_6 {
+    margin-right: 6px;
+}
+.ssp_renewYourBenefits {
+    font-size: 13px;
+    letter-spacing: -0.3px;
+    line-height: 30px;
+    text-align: right;
+    padding-left: 15px;
+}
+
+.ssp-TabsRow {
+    display: flex;
+    width: 100%;
+}
+.ssp-TabWidth {
+    width: 100%;
+}
+.ssp-Tab {
+    font-size: 0.8125rem;
+    line-height: 18px;
+    letter-spacing: -0.3px;
+    text-align: left;
+    padding: 16px 0 17px 30px;
+    /* width: 187px; */
+    /* word-spacing: 100vw; */
+    border-bottom: 4px solid #dadee4;
+    border-top: 1px solid #dadee4;
+}
+
+.ssp-Tab:hover {
+    cursor: pointer;
+}
+
+.ssp-TabsContent {
+    border-radius: 0 0 6px 6px;
+    /* padding: 20px 30px 26px 30px; */
+    display: none;
+}
+.ssp-active {
+    border-bottom: 4px solid #0044be;
+    color: #262729;
+}
+
+.ssp-show {
+    display: block;
+}
+.ssp-caseRow {
+    height: 60px;
+
+    background-color: #f8f9fa;
+}
+.ssp-caseText {
+    margin: 19px 0 19px 60px;
+}
+.ssp-programText {
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: -0.3px;
+    line-height: 24px;
+}
+.ssp-leftMargin {
+    padding-left: 60px;
+}
+.ssp-card {
+    /* height: 203px; */
+    width: 83.3%;
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 15px 25px -7px rgba(0, 35, 98, 0.1),
+        0 0 6px 0 rgba(0, 35, 98, 0.15);
+}
+.ssp-medicaidCard {
+    /* height: 203px; */
+    width: 84%;
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 15px 25px -7px rgba(0, 35, 98, 0.1),
+        0 0 6px 0 rgba(0, 35, 98, 0.15);
+}
+.ssp-leftpadding30 {
+    padding-left: 30px;
+}
+.ssp-rightPadding30 {
+    padding-right: 30px;
+}
+
+.ssp-Disc {
+    height: 8px;
+    width: 8px;
+    background-color: #00a563;
+    border-radius: 50%;
+    align-self: center;
+    margin-right: 6px;
+}
+.ssp-redDisc {
+    height: 8px;
+    width: 8px;
+    background-color: #ba3953;
+    border-radius: 50%;
+    align-self: center;
+    margin-right: 6px;
+}
+.ssp-blueIcon {
+    height: 32px;
+    width: 32px;
+    background-color: #e7f3ff;
+    border-radius: 50%;
+    align-self: center;
+    margin-right: 6px;
+    color: #0044be;
+}
+.ssp-infoText13 {
+    font-size: 13px;
+    letter-spacing: 0;
+    line-height: 24px;
+}
+.ssp-cardElement {
+    padding: 15px 60px 0 0;
+}
+.ssp-medicaidCardElement {
+    padding: 15px 50px 0 0;
+}
+.ssp-months ~ div {
+    padding-left: 50px;
+}
+.ssp-amounts ~ div {
+    padding-left: 50px;
+}
+.ssp-reviewIcon {
+    height: 24px;
+    width: 24px;
+    margin-right: 10px;
+
+    font-size: 22px;
+}
+.ssp-iconDropDown {
+    position: absolute;
+    padding: 15px;
+    height: 165px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px 0 rgba(179, 179, 179, 0.5);
+    margin-top: 35px;
+    width: 205px;
+    z-index: 1;
+}
+.ssp-iconSize {
+    width: 4%;
+}
+.ssp-textSize {
+    width: 96%;
+}
+.ssp-iconDots {
+    bottom: 7px;
+    position: relative;
+    font-size: 22px;
+}
+.ssp-buttonAlignment {
+    align-self: flex-end;
+}
+.ssp-orangeDisc {
+    height: 8px;
+    width: 8px;
+    background-color: #f8b656;
+    border-radius: 50%;
+    align-self: center;
+    margin-right: 6px;
+}
+.ssp-allotmentCard {
+    padding: 15px 0 0 0;
+}
+.ssp-allotmentElements {
+    padding: 0 60px 0 0;
+}
+@media only screen and (max-width: 768px) {
+    .ssp-componentWidth {
+        width: 100%;
+    }
+    .ssp-card {
+        width: 91.5%;
+    }
+}
+@media only screen and (max-width: 420px) {
+    .ssp-cardElement {
+        padding: 15px 36px 0 0;
+    }
+    .ssp-allotmentElements {
+        padding: 0 36px 0 0;
+    }
+}

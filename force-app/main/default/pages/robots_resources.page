@@ -1,0 +1,16 @@
+<!--***************************************************************************************** * 
+NAME : robots_resources 
+DESCRIPTION : This VF page is used only for PROD – For site to appear on google search....** 
+@DATE 08/31/2020 
+***********************************************************************************************-->
+<apex:page contentType="text/plain">
+User-agent: *
+Disallow: /   
+Allow: /resources/s  
+Allow: /resources/s/claimsiterequest
+Allow: /resources/s/landing-page
+Allow: /resources/s/resource-details
+
+Sitemap: https://kynect.ky.gov/resources/s/sitemap.xml
+
+</apex:page>

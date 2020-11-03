@@ -1,0 +1,35 @@
+<!--
+* name          : sspAnotherStartedModal
+* @description  : This modal appears when a user attempts to initiate an application on behalf of a client who already has an application in-progress.
+* @author       : Chirag
+* @date         : 05/07/2020
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName                MM/DD/YYYY               A Brief Description about the Change
+-->
+<template>
+    <c-ssp-detailed-information-modal
+        header-value={label.sspApplicationHasBeenStarted}
+        open-model={openModel}
+        onclosemodal={closeModal}
+        reference={reference}
+        class="ssp-AnotherUserAlreadyHere"
+    >
+        <div slot="contentSlot">
+            <div>
+                {label.sspApplicationHasBeenStartedContent}
+            </div>
+        </div>
+
+        <span slot="Footer" class="ssp-modalFooter ssp-stacked-btn-width">
+            <lightning-button
+                variant="brand"
+                label={label.sspDashboard}
+                class="ssp-button_brand slds-m-top_medium ssp-fontFamily_popinBold"
+                onclick={closeModal}
+                title={label.sspDashboard}
+            ></lightning-button>
+        </span>
+    </c-ssp-detailed-information-modal>
+</template>

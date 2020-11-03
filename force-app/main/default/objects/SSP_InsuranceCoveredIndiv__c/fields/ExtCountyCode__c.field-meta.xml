@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ExtCountyCode__c</fullName>
+    <description>County Code of External policy holder/covered individual</description>
+    <externalId>false</externalId>
+    <label>External Policy Holder County</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>SSPCounty</valueSetName>
+    </valueSet>
+</CustomField>

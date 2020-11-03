@@ -1,0 +1,39 @@
+<!--
+* name          : sspReviewSectionCard.
+* @description  : This is component show review items to the user.
+* @author       : Saurabh.
+* @date         : 12/11/2019
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName                MM/DD/YYYY               A Brief Description about the Change
+  Saurabh                    12/11/2019                          Initial Version
+-->
+<template>
+    <div class="slds-box ssp-ReviewCard ssp-bg_redGamma ssp-boxShadow">
+        <div
+            class="slds-grid slds-wrap slds-grid_align-spread slds-grid_vertical-align-center"
+        >
+            <div
+                class="slds-grid slds-col_bump-right slds-grid_vertical-align-center"
+            >
+                <div class="ssp-ReviewCardIcon slds-m-right_small">
+                    <img alt="Review_needed_Icon" src={iconUrl} />
+                </div>
+                <div class="ssp-ReviewCardText ssp-fontFamily_popinBold">
+                    <slot></slot>
+                </div>
+            </div>
+            <div>
+                <lightning-button
+                    label={buttonValue}
+                    variant="neutral"
+                    title="Neutral action"
+                    onclick={handleClick}
+                    class="ssp-button_neutral ssp-cardButton"
+                >
+                </lightning-button>
+            </div>
+        </div>
+    </div>
+</template>

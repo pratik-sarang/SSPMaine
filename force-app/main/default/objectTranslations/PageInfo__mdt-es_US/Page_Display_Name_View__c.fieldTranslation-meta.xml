@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Page Display Name View --></label>
+    <name>Page_Display_Name_View__c</name>
+    <picklistValues>
+        <masterLabel>Absent Parent</masterLabel>
+        <translation>Padre/madre ausente</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Access to Healthcare Coverage Summary</masterLabel>
+        <translation>Acceso a la cobertura de atención de salud</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Address Information</masterLabel>
+        <translation>Información de dirección</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Address Information - Non Primary</masterLabel>
+        <translation>Información de dirección</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Alien Sponsor</masterLabel>
+        <translation>Patrocinador de extranjero</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>American Indian or Alaskan Native</masterLabel>
+        <translation>Indígena estadounidense o nativo de Alaska</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AuthRepsAssisterAgents</masterLabel>
+        <translation><!-- AuthRepsAssisterAgents --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Benefits from Another State</masterLabel>
+        <translation>Beneficios de otro estado</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Blindness</masterLabel>
+        <translation>Ceguera</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Caretaker Services</masterLabel>
+        <translation>Servicios de persona que brinda cuidados</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Change in Existing Expense</masterLabel>
+        <translation>Cambio en gasto existente</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Change in Existing Income</masterLabel>
+        <translation>Cambio en ingreso existente</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Change in Existing Resource</masterLabel>
+        <translation>Cambio en recurso existente</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Child Support Enforcement</masterLabel>
+        <translation>Exigencia de Cumplimiento de Manutención Infantil</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Community Integration Supplementation (CIS)</masterLabel>
+        <translation>Suplementación para Integración a la Comunidad (CIS)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Contact Information</masterLabel>
+        <translation>Información de contacto</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Conviction</masterLabel>
+        <translation>Condena</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Disability</masterLabel>
+        <translation>Discapacidad</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Education</masterLabel>
+        <translation>Educación</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Enrollment in Healthcare Coverage Summary</masterLabel>
+        <translation>Inscripción en cobertura de atención de salud</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Entitled Benefits</masterLabel>
+        <translation>Beneficios a los que tiene derecho</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Expedite your SNAP Benefits</masterLabel>
+        <translation>Acelerar sus beneficios de SNAP</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Expenses</masterLabel>
+        <translation>Gastos</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Expenses Summary</masterLabel>
+        <translation>Resumen de gastos</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Former Foster Care</masterLabel>
+        <translation>Cuidados de Crianza</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Health</masterLabel>
+        <translation>Salud</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Health Condition</masterLabel>
+        <translation>Condición de salud</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Healthcare Coverage Selection</masterLabel>
+        <translation>Selección de cobertura de atención de salud</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Household Circumstances</masterLabel>
+        <translation>Las Circunstancias del Hogar</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Household Meals</masterLabel>
+        <translation>Comidas del hogar</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Household Member Summary</masterLabel>
+        <translation>Miembros del hogar</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In Home Assistance</masterLabel>
+        <translation>Ayuda en el hogar</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Income &amp; Subsidies Selection</masterLabel>
+        <translation>Selección de ingresos y subsidios</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Income Summary</masterLabel>
+        <translation>Resumen de ingresos</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>KI-HIPP Preferred Payment Method</masterLabel>
+        <translation>Método de pago preferido de KI-HIPP</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Living Arrangements</masterLabel>
+        <translation>Dónde y con quién vive</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Medical Expenses (Last 3 Months)</masterLabel>
+        <translation>Gastos médicos (últimos 3 meses)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Medical Support Enforcement</masterLabel>
+        <translation>Exigencia de Cumplimiento de Manutención Médica</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Medicare Coverage</masterLabel>
+        <translation>Cobertura Medicare</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not a U.S. Citizen</masterLabel>
+        <translation>No es ciudadano estadounidense</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other Resources</masterLabel>
+        <translation>Otros recursos</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Preferred MCO Selection</masterLabel>
+        <translation>Selección de organización de atención administrada (MCO) preferida</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pregnancy</masterLabel>
+        <translation>Embarazo</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Relationships</masterLabel>
+        <translation>Relaciones</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Remove Existing Expense</masterLabel>
+        <translation>Eliminar gasto existente</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Remove Existing Income</masterLabel>
+        <translation>Eliminar ingreso existente</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Remove Existing Resource</masterLabel>
+        <translation>Eliminar recurso existente</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Resource Summary</masterLabel>
+        <translation>Resumen de recursos</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Resources</masterLabel>
+        <translation>Recursos</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SSI Benefits</masterLabel>
+        <translation>Beneficios de Seguro de Ingreso Suplementario (SSI)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Signature Page</masterLabel>
+        <translation>Página de firmas</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tax Filing</masterLabel>
+        <translation>Declaración de impuestos</translation>
+    </picklistValues>
+</CustomFieldTranslation>

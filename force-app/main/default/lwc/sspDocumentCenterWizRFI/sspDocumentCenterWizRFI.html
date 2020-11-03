@@ -1,0 +1,36 @@
+<!--
+* name : SspDocumentCenterWizRFI
+* @description :This screen is used for Document Wizard Navigation through RFIs.
+* @author : Aniket
+* @date : 4/10/2020.
+* MODIFICATION LOG:
+* DEVELOPER             DATE            DESCRIPTION
+* ________________________________________________________________________________
+* Kyathi               4/10/2020     Creating HTML Structure
+* Aniket              4/10/2020     Integration of Salesforce with HTML
+-->
+<template>
+    <template if:true={showRFI}>
+        <!--Proofs Screen -->
+        <template if:true={showProofs}>
+            <c-ssp-document-center-proof
+                current-r-f-i={currentRFI}
+                total-r-f-i-count={totalRFICount}
+                current-r-f-i-index={currentRFIIndex}
+                onshowupload={renderUpload}
+                onshownextrfi={loadNextRFI}
+                onexitwizard={closeWizard}
+            >
+            </c-ssp-document-center-proof>
+        </template>
+        <!--Upload Screen ( Wizard ) -->
+        <template if:true={showUpload}>
+            <c-ssp-document-center-doc-upload
+                current-r-f-i={currentRFI}
+                onexitwizard={closeWizard}
+                onshownextrfi={loadNextRFI}
+            >
+            </c-ssp-document-center-doc-upload>
+        </template>
+    </template>
+</template>

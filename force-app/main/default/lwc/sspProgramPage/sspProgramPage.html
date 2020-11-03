@@ -1,0 +1,1023 @@
+<!--
+* name          : sspProgramPage
+* @description  : The component shows 6 different program pages.
+* @author       : P V Siddarth
+* @date         : 02/010/2020
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName                MM/DD/YYYY               A Brief Description about the Change
+     Siddarth                  12/04/19                          Initial Version
+	 Narapa                    07/01/2020               Defect Fix - Bug 373165 : Aligned the Apply for Benfit and Prescreening Buttons
+-->
+<template>
+    <!-- **************************************************************************************************************************************************-->
+    <!-- *******************************************************Background - Image - ANd - Text *****************************************************-->
+    <div class={backgroundClass}>
+        <div
+            class="ssp-imgElementsMargin ssp-container_width slds-grid slds-wrap ssp-wordBreak"
+        >
+            <div class="ssp-imgElements">
+                <div
+                    class="ssp-imgElementsSmallHeader  ssp-color_monoBody ssp-fontFamily_popinBold"
+                >
+                    {label.sspStateProgram}
+                </div>
+
+                <template if:true={SNAPApplicationIsTrue}>
+                    <div
+                        class="ssp-imgElementsBigHeader ssp-color_monoBody slds-m-bottom_x-large ssp-fontFamily_popinBold"
+                    >
+                        {label.sspSupplementalNutritionAssistanceProgramSNAP}
+                    </div>
+                </template>
+
+                <template if:true={MEDICAIDApplicationIsTrue}>
+                    <div
+                        class="ssp-imgElementsBigHeader ssp-color_monoBody slds-m-bottom_x-large ssp-fontFamily_popinBold"
+                    >
+                        {label.sspMedicaidAndKCHIP}
+                    </div>
+                </template>
+
+                <template if:true={KTAPApplicationIsTrue}>
+                    <div
+                        class="ssp-imgElementsBigHeader ssp-color_monoBodyslds-m-bottom_x-large ssp-fontFamily_popinBold"
+                    >
+                        {label.sspKentuckyTransitionalAssistanceProgram}
+                    </div>
+                </template>
+
+                <template if:true={CCAPApplicationIsTrue}>
+                    <div
+                        class="ssp-imgElementsBigHeader ssp-color_monoBody slds-m-bottom_x-large ssp-fontFamily_popinBold"
+                    >
+                        {label.sspChildCareAssistanceProgramCCAP}
+                    </div>
+                </template>
+
+                <template if:true={KIHIPPApplicationIsTrue}>
+                    <div
+                        class="ssp-imgElementsBigHeader ssp-color_monoBody slds-m-bottom_x-large ssp-fontFamily_popinBold"
+                    >
+                        {label.sspKentuckyIntegratedHealthInsurancePremiumPaymentKIHIPP}
+                    </div>
+                </template>
+
+                <div class="slds-grid ssp-program-btn-section">
+                    <div
+                        class="ssp-buttonWidth slds-m-right_large slds-grid slds-wrap ssp-applyBenefitBtn"
+                    >
+                        <lightning-button
+                            variant="neutral"
+                            label={label.sspApplyForBenefits}
+                            title={label.sspApplyForBenefits}
+                            class="ssp-exitModalBtn ssp-fontSize_16 ssp-button_neutral"
+                            onclick={redirectToApplyBenefit}
+                        >
+                        </lightning-button>
+                    </div>
+                    <template if:false={KIHIPPApplicationIsTrue}>
+                        <div
+                            class="ssp-buttonWidth  slds-grid slds-wrap ssp-prescreeningOrder"
+                        >
+                            <lightning-button
+                                variant="brand"
+                                label={label.sspHomePageCheckEligibility}
+                                title={label.sspHomePageCheckEligibility}
+                                class="ssp-exitModalBtn ssp-fontSize_16 ssp-button_brand"
+                                onclick={redirectToPreScreeningTool}
+                            >
+                            </lightning-button>
+                        </div>
+                    </template>
+                </div>
+            </div>
+</div>
+</div>
+<!-- ****************************************************Background - Image - ANd - Text ENDS HERE ***********************************************-->
+<!-- **************************************************************************************************************************************************-->
+<!-- ***************************************************Body Container Starts Here ******************************************************************-->
+    <div class="ssp-fullBodyContainer ssp-wordBreak">
+<div class="ssp-bodyContainerAlpha ssp-bottomMargin">
+    <template if:true={SNAPApplicationIsTrue}>
+        <div
+            class="ssp-bodyHeaderAlpha  ssp-fontFamily_popinBlack slds-m-bottom_medium"
+        >
+            {label.sspSnapOverviewApplicants}
+        </div>
+        <div
+            class="ssp-infoText ssp-color_monoOmega ssp-fontFamily_ArvoRegular ssp-bottomMargin"
+        >
+            {label.sspSNAPHelpsPeople}
+        </div>
+        <div
+            class=" ssp-bodyHeaderBeta ssp-fontFamily_popinBold ssp-color_blueAlpha  slds-m-bottom_x-small"
+        >
+            {label.sspBasicQualifications}
+        </div>
+        <div
+            class="ssp-infoText ssp-color_monoOmega ssp-fontFamily_ArvoRegular ssp-bottomMargin"
+        >
+            {label.sspHouseHoldMeetingBasicIncome}
+        </div>
+    </template>
+    <template if:true={MEDICAIDApplicationIsTrue}>
+                <div class="slds-grid slds-wrap ssp-bottomMargin">
+                    <div
+                        class="slds-grid slds-wrap ssp-boxShadow ssp-lowCostCard slds-size_1-of-1"
+                    >
+                        <div
+                            class="ssp-bodyHeaderBeta ssp-fontFamily_popinBold ssp-color_blueAlpha slds-m-bottom_medium"
+                        >
+                            {label.sspTimeLimitedMedicaidHeader}
+                        </div>
+                        <div
+                            class="ssp-infoText slds-m-bottom_x-large ssp-fontFamily_ArvoRegular"
+                        >
+                         {label.sspTimeLimitedMedicaidContent}
+                        </div>
+                        <div class="ssp-lowCostCardContainer">
+                            <div class="ssp-buttonWidth  slds-grid slds-wrap">
+                                <lightning-button
+                                    variant="brand"
+                                    label={label.sspApplyForTimeLimitedCoverage}
+                                    title={label.sspApplyForTimeLimitedCoverage}
+                                    class="ssp-exitModalBtn ssp-fontSize_16 ssp-button_brand"
+                                    onclick={navigateTimeLimitedCoverage}
+                                >
+                                </lightning-button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        <div
+            class="ssp-bodyHeaderAlpha  ssp-fontFamily_popinBlack slds-m-bottom_medium"
+        >
+                    {label.sspOverviewMedicaidAndKCHIP}
+        </div>
+        <div
+            class="ssp-infoText ssp-color_monoOmega ssp-fontFamily_ArvoRegular ssp-bottomMargin"
+        >
+            <lightning-formatted-rich-text
+                value={label.sspOverviewMedicaidDescription}
+            >
+            </lightning-formatted-rich-text>
+        </div>
+        <div
+            class=" ssp-bodyHeaderBeta ssp-fontFamily_popinBold ssp-color_blueAlpha  slds-m-bottom_x-small"
+        >
+                    {label.sspQualificationsMedicaidAndKCHIP}
+        </div>
+        <div
+                    class="ssp-infoText ssp-color_monoOmega ssp-fontFamily_ArvoRegular  "
+        >
+                        
+            <lightning-formatted-rich-text
+                        value={sspQualificationsMedicaidDescriptionFull}
+            >
+            </lightning-formatted-rich-text>
+                </div>
+                <div class="slds-grid slds-wrap ssp-bottomMargin">
+                    <div
+                        class="slds-grid slds-wrap ssp-boxShadow ssp-lowCostCard slds-size_1-of-1"
+                    >
+                        <div
+                            class="ssp-bodyHeaderBeta ssp-fontFamily_popinBold ssp-color_blueAlpha slds-m-bottom_medium"
+                        >
+                            {label.sspLowCostHealth}
+                        </div>
+                        <div
+                            class="ssp-infoText slds-m-bottom_x-large ssp-fontFamily_ArvoRegular"
+                        >
+                         {label.sspFindOutCoverageYouQualify}
+                        </div>
+                        <div class="ssp-lowCostCardContainer">
+                            <div class="ssp-buttonWidth  slds-grid slds-wrap">
+                                <lightning-button
+                                    variant="brand"
+                                    label={label.sspHealthBenefitExchange}
+                                    title={label.sspHealthBenefitExchange}
+                                    class="ssp-exitModalBtn ssp-fontSize_16 ssp-button_brand"
+                                    onclick={navigateHealthBenefits}
+                                >
+                                </lightning-button>
+                            </div>
+                        </div>
+                    </div>
+        </div>
+    </template>
+    <template if:true={KTAPApplicationIsTrue}>
+        <div
+            class="ssp-bodyHeaderAlpha  ssp-fontFamily_popinBlack slds-m-bottom_medium"
+        >
+            {label.sspOverviewKTAP}
+        </div>
+        <div
+            class="ssp-infoText ssp-color_monoOmega ssp-fontFamily_ArvoRegular ssp-bottomMargin"
+        >
+            {label.sspOverviewKTAPDescription}
+        </div>
+        <div
+            class=" ssp-bodyHeaderBeta ssp-fontFamily_popinBold ssp-color_blueAlpha  slds-m-bottom_x-small"
+        >
+            {label.sspQualificationsKTAP}
+        </div>
+        <div
+            class="ssp-infoText ssp-color_monoOmega ssp-fontFamily_ArvoRegular ssp-bottomMargin"
+        >
+            <lightning-formatted-rich-text
+                value={label.sspQualificationsKTAPDescription}
+            >
+            </lightning-formatted-rich-text>
+        </div>
+    </template>
+    <template if:true={CCAPApplicationIsTrue}>
+        <div
+            class="ssp-bodyHeaderAlpha  ssp-fontFamily_popinBlack slds-m-bottom_medium"
+        >
+            {label.sspOverviewCCAP}
+        </div>
+        <div
+            class="ssp-infoText ssp-color_monoOmega ssp-fontFamily_ArvoRegular ssp-bottomMargin"
+        >
+            {label.sspOverviewCCAPDescription}
+        </div>
+        <div
+            class=" ssp-bodyHeaderBeta ssp-fontFamily_popinBold ssp-color_blueAlpha  slds-m-bottom_x-small"
+        >
+            {label.sspBasicQualifications}
+        </div>
+        <div
+            class="ssp-infoText ssp-color_monoOmega ssp-fontFamily_ArvoRegular ssp-bottomMargin"
+        >
+            <lightning-formatted-rich-text
+                value={sspQualificationsCCAPDescriptionFull}
+            >
+            </lightning-formatted-rich-text>
+        </div>
+    </template>
+    <template if:true={KIHIPPApplicationIsTrue}>
+        <div
+            class="ssp-bodyHeaderAlpha  ssp-fontFamily_popinBlack slds-m-bottom_medium"
+        >
+            {label.sspOverviewKIHIPP}
+        </div>
+        <div
+            class="ssp-infoText ssp-color_monoOmega ssp-fontFamily_ArvoRegular ssp-bottomMargin"
+        >
+            <lightning-formatted-rich-text
+                value={label.sspOverviewKIHIPPDescription}
+            >
+            </lightning-formatted-rich-text>
+        </div>
+        <div
+            class=" ssp-bodyHeaderBeta ssp-fontFamily_popinBold ssp-color_blueAlpha  slds-m-bottom_x-small"
+        >
+            {label.sspBasicQualifications}
+        </div>
+        <div
+            class="ssp-infoText ssp-color_monoOmega ssp-fontFamily_ArvoRegular ssp-bottomMargin"
+        >
+            <lightning-formatted-rich-text
+                value={label.sspQualificationsKIHIPPDescription}
+            >
+            </lightning-formatted-rich-text>
+        </div>
+    </template>
+</div>
+<!-- **************************************************************************************************************************************************-->
+<!-- **************************************************************************************************************************************************-->
+<template if:true={SNAPApplicationIsTrue}>
+    <div class="ssp-bodyContainerBeta slds-grid slds-wrap">
+        <!-- 1st icon box -->
+        <div
+            class="ssp-iconContainer  slds-grid slds-wrap slds-medium-size_1-of-2 slds-size_1-of-1"
+        >
+            <div
+                class="slds-medium-size_1-of-1 slds-size_1-of-6 slds-m-bottom_small "
+            >
+                <img
+                    class="ssp-iconSize"
+                    src={icFileIcon}
+                    alt="File Icon"
+                />
+            </div>
+            <div class="slds-size_4-of-6 slds-medium-size_1-of-1">
+                <div
+                    class="ssp-fontFamily_popinBold slds-size_1-of-1 slds-m-bottom_small ssp-iconHeader ssp-color_monoBody "
+                >
+                    {label.sspCitizenship}
+                </div>
+                <div
+                    class="ssp-fontFamily_ArvoRegular ssp-iconText slds-size_1-of-1 slds-m-bottom_small"
+                >
+                    {label.sspOnlyUSCitizensMeetRequirements}
+                </div>
+            </div>
+        </div>
+        <!-- 2nd icon box -->
+        <div
+            class="ssp-iconContainer slds-grid slds-wrap slds-medium-size_1-of-2 slds-size_1-of-1"
+        >
+            <div
+                class="slds-medium-size_1-of-1 slds-size_1-of-6 slds-m-bottom_small"
+            >
+                <img
+                    class="ssp-iconSize "
+                    src={icPencilIcon}
+                    alt="File Icon"
+                />
+            </div>
+            <div class="slds-size_4-of-6 slds-medium-size_1-of-1">
+                <div
+                    class="ssp-fontFamily_popinBold slds-size_1-of-1 slds-m-bottom_small ssp-iconHeader ssp-color_monoBody "
+                >
+                    {label.sspWorkRegistration}
+                </div>
+                <div
+                    class="ssp-fontFamily_ArvoRegular ssp-iconText slds-size_1-of-1 slds-m-bottom_small"
+                >
+                    <p class="slds-m-bottom_large">
+                        {label.sspHouseHoldMembersMustParticipate}
+                    </p>
+                    <p>
+                        {label.sspSomeExceptionsMayApply}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+            <div
+                class="ssp-bodyContainerBeta ssp-bottomMargin slds-grid slds-wrap"
+            >
+            <!-- 3rd icon box -->
+            <div
+                class="ssp-iconContainer slds-grid slds-wrap slds-medium-size_1-of-2 slds-size_1-of-1"
+            >
+                <div
+                    class="slds-medium-size_1-of-1 slds-size_1-of-6 slds-m-bottom_small"
+                >
+                    <img
+                        class="ssp-iconSize"
+                        src={icLaptopIcon}
+                        alt="File Icon"
+                    />
+                </div>
+                <div class="slds-size_4-of-6 slds-medium-size_1-of-1">
+                    <div
+                        class="ssp-fontFamily_popinBold slds-size_1-of-1  slds-m-bottom_small ssp-iconHeader ssp-color_monoBody "
+                    >
+                        {label.sspResources}
+                    </div>
+                    <div
+                        class="ssp-fontFamily_ArvoRegular ssp-iconText slds-size_1-of-1 slds-m-bottom_small ssp-resource-text"
+                    >
+                        <p class="slds-m-bottom_large">
+                            {label.sspHouseHoldMayHaveNoMoreThan}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- 4rth icon box -->
+            <div
+                class="slds-grid slds-wrap slds-medium-size_1-of-2 slds-size_1-of-1"
+            >
+                <div
+                    class="slds-medium-size_1-of-1 slds-size_1-of-6 slds-m-bottom_small"
+                >
+                    <img
+                        class="ssp-iconSize "
+                        src={icIncomeIcon}
+                        alt="Income Icon"
+                    />
+                </div>
+                <div class="slds-size_4-of-6 slds-medium-size_1-of-1">
+                    <div
+                        class="ssp-fontFamily_popinBold slds-size_1-of-1 slds-m-bottom_small ssp-iconHeader ssp-color_monoBody "
+                    >
+                        {label.sspIncome}
+                    </div>
+                    <div
+                        class="ssp-fontFamily_ArvoRegular ssp-iconText slds-size_1-of-1 slds-m-bottom_small"
+                    >
+                        <lightning-formatted-rich-text
+                            value={label.sspHouseholdSizeDeterminesIncome}
+                        ></lightning-formatted-rich-text>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+    <!-- *************************************************** Body Container Ends Here ******************************************************************-->
+    <!-- **************************************************************************************************************************************************-->
+    <!-- *******************************************************************2nd Body Container Starts Here ***********************************************-->
+    <div class="ssp-bodyContainerAlpha ssp-bottomMargin">
+        <template if:true={SNAPApplicationIsTrue}>
+            <div
+                class="ssp-bodyHeaderBeta ssp-fontFamily_popinBold ssp-color_blueAlpha slds-m-bottom_small"
+            >
+                {label.sspWhatIsExpeditedSnap}
+            </div>
+            <div
+                class="ssp-fontFamily_ArvoRegular ssp-iconText slds-size_1-of-1 slds-m-bottom_large"
+            >
+                <p class="slds-m-bottom_large">
+                    {label.sspYouMayQualifySNAP}
+                </p>
+
+                <lightning-formatted-rich-text
+                    value={label.sspHouseHoldGrossIncomeLess}
+                ></lightning-formatted-rich-text>
+            </div>
+        </template>
+    </div>
+    </div>
+    <!-- **************************************************************************************************************************************************-->
+    <!-- ***************************************************************3rd Body Container Starts Here ***************************************************-->
+    <div class="ssp-bodyContainerGamma ssp-bg_appHeaderGradient ssp-wordBreak">
+        <div class="ssp-fullBodyContainer">
+        <template if:true={SNAPApplicationIsTrue}>
+            <div class="ssp-bodyContainerAlpha">
+                <div
+                    class="ssp-bodyHeaderBeta ssp-fontFamily_popinBold slds-m-bottom_x-large"
+                >
+                    {label.sspAdditionalInformation}
+                </div>
+
+                <div class="slds-m-bottom_small">
+                    <div class="ssp-bg_whiteAlpha ssp-accordianBorderRadius">
+                        <c-ssp-accordion-drop-down-card>
+                            <div
+                                class="ssp-iconText ssp-fontFamily_popinBold"
+                                slot="Title"
+                            >
+                                {label.sspHowToApplySNAP}
+                            </div>
+                            <div
+                                class="ssp-infoText ssp-color_monoOmega ssp-fontFamily_ArvoRegular"
+                                slot="contentSlot"
+                            >
+                                <ol>
+                                    <lightning-formatted-rich-text
+                                        value={label.sspHowToApplySNAPSteps1}
+                                    ></lightning-formatted-rich-text>
+
+                                    <div class="ssp-bodyContainerDelta">
+                                        <lightning-formatted-rich-text
+                                            value={label.sspLanguageGrid1}
+                                        ></lightning-formatted-rich-text>
+                                        <lightning-formatted-rich-text
+                                            value={label.sspLanguageGrid2}
+                                        ></lightning-formatted-rich-text>
+                                            <lightning-formatted-rich-text
+                                                value={label.sspLanguageGrid3}
+                                            ></lightning-formatted-rich-text>
+                                    </div>
+                                    <lightning-formatted-rich-text
+                                        value={label.sspHowToApplySNAPSteps2}
+                                    ></lightning-formatted-rich-text>
+                                </ol>
+                            </div>
+                        </c-ssp-accordion-drop-down-card>
+                    </div>
+                </div>
+                <!-- 2nd Accordion Starts Here -->
+                <div class="slds-m-bottom_small">
+                    <div class="ssp-bg_whiteAlpha ssp-accordianBorderRadius">
+                        <c-ssp-accordion-drop-down-card>
+                            <div
+                                class="ssp-iconText ssp-fontFamily_popinBold"
+                                slot="Title"
+                            >
+                                {label.sspSNAPApplicationAssistance}
+                            </div>
+                            <div
+                                class="ssp-infoText ssp-color_monoOmega ssp-fontFamily_ArvoRegular"
+                                slot="contentSlot"
+                            >
+                                <p class="slds-m-bottom_small ssp-bottomMargin">
+                                   <lightning-formatted-rich-text
+                                        value={label.sspShouldYouNeedAssistance}
+                                   ></lightning-formatted-rich-text>
+                                </p>
+                            </div>
+                        </c-ssp-accordion-drop-down-card>
+                    </div>
+                </div>
+                <!-- 3rd Accordion Starts Here -->
+                <div>
+                    <div class="ssp-bg_whiteAlpha ssp-accordianBorderRadius">
+                        <c-ssp-accordion-drop-down-card>
+                            <div
+                                class="ssp-iconText ssp-fontFamily_popinBold"
+                                slot="Title"
+                            >
+                                {label.sspSNAPApplicantLegalRights}
+                            </div>
+                            <div
+                                class="ssp-infoText ssp-color_monoOmega ssp-fontFamily_ArvoRegular slds-m-bottom_large"
+                                slot="contentSlot"
+                            >
+                                <lightning-formatted-rich-text
+                                    value={label.sspAsSNAPApplicant}
+                                ></lightning-formatted-rich-text>
+                            </div>
+                        </c-ssp-accordion-drop-down-card>
+                    </div>
+                </div>
+            </div>
+        </template>
+        <template if:true={MEDICAIDApplicationIsTrue}>
+            <div class="ssp-bodyContainerAlpha">
+                <div
+                    class="ssp-bodyHeaderBeta ssp-fontFamily_popinBold slds-m-bottom_x-large"
+                >
+                        {label.sspAdditionalInformationMedicaidAndKCHIPP}
+                </div>
+                <!--*********************** 1st ACCORDION ********************-->
+                <div class="slds-m-bottom_small">
+                    <div class="ssp-bg_whiteAlpha ssp-accordianBorderRadius">
+                        <c-ssp-accordion-drop-down-card>
+                            <div
+                                class="ssp-iconText ssp-fontFamily_popinBold"
+                                slot="Title"
+                            >
+                                    {label.sspWaysToApplyMedicaidAndKCHIPP}
+                            </div>
+                            <div
+                                class="ssp-infoText ssp-color_monoOmega ssp-fontFamily_ArvoRegular"
+                                slot="contentSlot"
+                            >
+                                <p class="slds-m-bottom_small ssp-bottomMargin">
+                                    <lightning-formatted-rich-text
+                                        value={label.sspWaysToApplyMedicaidDescription}
+                                        >
+                                        </lightning-formatted-rich-text>
+                                        <lightning-formatted-rich-text
+                                            value={label.sspWaysToApplyMedicaidDescriptionTwo}
+                                    >
+                                    </lightning-formatted-rich-text>
+                                    <lightning-formatted-rich-text
+                                        value={label.sspQuestionsAboutMedicaid}
+                                    ></lightning-formatted-rich-text>
+                                </p>
+                            </div>
+                        </c-ssp-accordion-drop-down-card>
+                    </div>
+                </div>
+                <!-- ****************** 2nd ACCORDION ********************  -->
+                <div class="slds-m-bottom_small">
+                    <div class="ssp-bg_whiteAlpha ssp-accordianBorderRadius">
+                        <c-ssp-accordion-drop-down-card>
+                            <div
+                                class="ssp-iconText ssp-fontFamily_popinBold"
+                                slot="Title"
+                            >
+                                {label.sspMedicaidApplicationAssistance}
+                            </div>
+                            <div
+                                class="ssp-infoText ssp-color_monoOmega ssp-fontFamily_ArvoRegular"
+                                slot="contentSlot"
+                            >
+                                <p class="slds-m-bottom_small ssp-bottomMargin">
+                                    <lightning-formatted-rich-text
+                                        value={label.sspMedicaidApplicationAssistanceDescription}
+                                    >
+                                    </lightning-formatted-rich-text>
+                                </p>
+                            </div>
+                        </c-ssp-accordion-drop-down-card>
+                    </div>
+                </div>
+            </div>
+        </template>
+        <template if:true={KTAPApplicationIsTrue}>
+            <div class="ssp-bodyContainerAlpha">
+                <div
+                    class="ssp-bodyHeaderBeta ssp-fontFamily_popinBold slds-m-bottom_x-large"
+                >
+                    {label.sspAdditionalInformation}
+                </div>
+
+                <!--********************* 1st ACCORDION **********************-->
+                <div class="slds-m-bottom_small">
+                    <div class="ssp-bg_whiteAlpha ssp-accordianBorderRadius">
+                        <c-ssp-accordion-drop-down-card>
+                            <div
+                                class="ssp-iconText ssp-fontFamily_popinBold"
+                                slot="Title"
+                            >
+                                {label.sspWaysToApplyKTAPHeading}
+                            </div>
+                            <div
+                                class="ssp-infoText ssp-color_monoOmega ssp-fontFamily_ArvoRegular"
+                                slot="contentSlot"
+                            >
+                                    <p
+                                        class="slds-m-bottom_small ssp-bottomMargin"
+                                    >
+                                        <lightning-formatted-rich-text
+                                            value={sspWaysToApplyKTAPFull}
+                                        >
+                                        </lightning-formatted-rich-text>
+                                </p>
+                            </div>
+                        </c-ssp-accordion-drop-down-card>
+                    </div>
+                </div>
+                <!-- ********************** 2ND ACCORDION ****************** -->
+                <div class="slds-m-bottom_small">
+                    <div class="ssp-bg_whiteAlpha ssp-accordianBorderRadius">
+                        <c-ssp-accordion-drop-down-card>
+                            <div
+                                class="ssp-iconText ssp-fontFamily_popinBold"
+                                slot="Title"
+                            >
+                                {label.sspKTAPPolicy}
+                            </div>
+                            <div
+                                class="ssp-infoText ssp-color_monoOmega ssp-fontFamily_ArvoRegular"
+                                slot="contentSlot"
+                            >
+                                <p class="slds-m-bottom_small ssp-bottomMargin">
+                                    <lightning-formatted-rich-text
+                                        value={label.sspKTAPPolicyDescription}
+                                    >
+                                    </lightning-formatted-rich-text>
+                                </p>
+                            </div>
+                        </c-ssp-accordion-drop-down-card>
+                    </div>
+                </div>
+            </div>
+        </template>
+        <template if:true={CCAPApplicationIsTrue}>
+            <div class="ssp-bodyContainerAlpha">
+                <div
+                    class="ssp-bodyHeaderBeta ssp-fontFamily_popinBold slds-m-bottom_x-large"
+                >
+                    {label.sspAdditionalInformation}
+                </div>
+                <!--****************** 1st ACCORDION **************-->
+                <div class="slds-m-bottom_small">
+                    <div class="ssp-bg_whiteAlpha ssp-accordianBorderRadius">
+                        <c-ssp-accordion-drop-down-card>
+                            <div
+                                class="ssp-iconText ssp-fontFamily_popinBold"
+                                slot="Title"
+                            >
+                                {label.sspWaysToApplyCCAP}
+                            </div>
+                            <div
+                                class="ssp-infoText ssp-color_monoOmega ssp-fontFamily_ArvoRegular"
+                                slot="contentSlot"
+                            >
+                            <p
+                                class="slds-m-bottom_small ssp-bottomMargin"
+                            >
+                                    <lightning-formatted-rich-text
+                                        value={label.sspWaysToApplyCCAPDescription}
+                                >
+                                </lightning-formatted-rich-text>
+                                                                <lightning-formatted-rich-text
+                                    value={label.sspWaysToApplyCCAPDescriptionBeta}
+                                    >
+                                    </lightning-formatted-rich-text>
+                                    <span class="slds-m-top_medium">
+                                        {label.sspWaysToApplyCCAPDescription2} 
+											<a
+												href="tel:1(855)306-8959"
+												class="ssp-color_blueAlpha ssp-call-dcbs"
+												><u>1 (855) 306-8959</u>.</a
+											>
+										</span>
+									</p>
+								</div>
+							</c-ssp-accordion-drop-down-card>
+						</div>
+					</div>
+					<!--****************** 2 nd ACCORDION **************-->
+					<div class="slds-m-bottom_small">
+						<div class="ssp-bg_whiteAlpha ssp-accordianBorderRadius">
+							<c-ssp-accordion-drop-down-card>
+								<div class="ssp-iconText ssp-fontFamily_popinBold" slot="Title">
+									{label.sspChildCareProviderHeader}
+								</div>
+                            <div class="ssp-infoText ssp-color_monoOmega ssp-fontFamily_ArvoRegular ssp-appTable_borderBottom" 
+                              slot="contentSlot">
+                              <div class="slds-grid slds-wrap slds-grid_align-spread">
+                                <div class="slds-grid slds-wrap slds-large-size_1-of-2 of-4 slds-size_1-of-1">
+                                    <div
+                                        class="slds-m-bottom_medium slds-size_1-of-1 slds-p-right_x-large">
+                                       
+                                        <lightning-formatted-rich-text
+                                          value={label.sspChildCareSumamary}
+                                        >  
+                                        </lightning-formatted-rich-text>
+                                
+                                    </div>
+                                </div>
+                                <div class="slds-grid slds-wrap  ssp-buttonAlignment ssp-componentWidth slds-large-size_1-of-2 slds-size_1-of-1">
+                                    <lightning-button label={label.sspSearchChildCareProviders}
+                                        title={label.sspSearchChildCareProviders}
+                                        class="slds-medium-size_1-of-1 slds-size_1-of-1 ssp-button_brand ssp-buttonWidth"
+                                        onclick={handleChildCareSearch} variant="brand"></lightning-button>
+                                </div>
+                            </div>
+                            <div class=" slds-m-bottom_small ssp-fontFamily_popinBold">
+                                <a href="javascript:void(0);" class="ssp-color_blueAlpha"
+                                    title={label.sspChildcareDownload} onclick={handleDownloadCCProvider}>{label.sspChildcareDownload}</a>
+                            </div>
+                            <div class=" slds-m-bottom_small ssp-iconText ssp-fontFamily_popinBold">
+                                {label.sspChildCareResource}
+                            </div>
+                                <p
+                                    class="slds-m-bottom_small ssp-bottomMargin"
+                                >
+                                    <lightning-formatted-rich-text
+                                        value={label.sspChildCareAware}
+                                    >
+                                    </lightning-formatted-rich-text>
+                                    <lightning-formatted-rich-text
+                                       value={label.sspChildCareAware2}
+                                    >
+                                    </lightning-formatted-rich-text>
+                                </p>  
+                            </div>
+                        </c-ssp-accordion-drop-down-card>
+                    </div>
+                </div>
+            </div>
+        </template>
+        <template if:true={KIHIPPApplicationIsTrue}>
+            <div class="ssp-bodyContainerAlpha">
+                <div
+                    class="ssp-bodyHeaderBeta ssp-fontFamily_popinBold slds-m-bottom_x-large"
+                >
+                    {label.sspAdditionalInformation}
+                </div>
+                <!--****************** 1st ACCORDION **************-->
+                <div class="slds-m-bottom_small">
+                    <div class="ssp-bg_whiteAlpha ssp-accordianBorderRadius">
+                        <c-ssp-accordion-drop-down-card>
+                            <div
+                                class="ssp-iconText ssp-fontFamily_popinBold"
+                                slot="Title"
+                            >
+                                {label.sspWaysToApplyKIHIPP}
+                            </div>
+                            <div
+                                class="ssp-infoText ssp-color_monoOmega ssp-fontFamily_ArvoRegular"
+                                slot="contentSlot"
+                            >
+                                    <div
+                                        class="slds-m-bottom_small ssp-bottomMargin"
+                                    >
+                                        <ul class="ssp-solidCircle">
+                                            <lightning-formatted-rich-text
+                                                value={label.sspWaysToApplyKIHIPPDescription1}
+                                            >
+                                            </lightning-formatted-rich-text>
+
+                                            <ul class="ssp-circleListStyle">
+                                                <li>
+                                                    <template
+                                                        if:false={languageSpanish}
+                                                    >
+                                                        <a
+                                                            class="ssp-color_blueAlpha ssp-healthFormLink"
+                                                            onclick={openHealthCoverageForm}
+                                                            onkeydown={openHealthCoverageForm}
+                                                            tabindex="0"
+                                                            data-document-name="KIHIPPHealthCover"
+                                                            data-resource-url={healthCoverKIHip}
+                                                            if:false={showTargetAnchorTag}
+                                                            >{label.sspHealthCoverageForm}</a
+                                                        >
+                                                    </template>
+                                                    <template
+                                                        if:true={languageSpanish}
+                                                    >
+                                                        <a
+                                                            class="ssp-color_blueAlpha ssp-healthFormLink"
+                                                            onclick={openHealthCoverageFormSpanish}
+                                                            onkeydown={openHealthCoverageFormSpanish}
+                                                            tabindex="0"
+                                                            data-document-name="KIHIPPHealthCoverSpanish"
+                                                            data-resource-url={healthCoverKIHipSpanish}
+                                                            if:false={showTargetAnchorTag}
+                                                            >{label.sspHealthCoverageForm}</a
+                                                        >
+                                                    </template>
+                                                    <a
+                                                    class="ssp-color_blueAlpha ssp-healthFormLink"
+                                                    tabindex="0"
+                                                    data-document-name="KIHIPPHealthCover"
+                                                    data-resource-url ={healthCoverKIHip}
+                                                    href={healthCoverKIHip}
+                                                    target="_blank"
+                                                    if:true={showTargetAnchorTag}
+                                                    >{label.sspHealthCoverageForm}</a
+                                                >
+                                                </li>
+                                            </ul>
+                                        </ul>
+                                    </div>
+                                </div>
+                        </c-ssp-accordion-drop-down-card>
+                    </div>
+                </div>
+                <!--*************** 2ND ACCORDION **********-->
+                <div class="slds-m-bottom_small">
+                    <div class="ssp-bg_whiteAlpha ssp-accordianBorderRadius">
+                        <c-ssp-accordion-drop-down-card>
+                            <div
+                                class="ssp-iconText ssp-fontFamily_popinBold"
+                                slot="Title"
+                            >
+                                {label.sspKIHIPPEligibilityDocuments}
+                            </div>
+                            <div
+                                class="ssp-infoText ssp-color_monoOmega ssp-fontFamily_ArvoRegular"
+                                slot="contentSlot"
+                            >
+                                <p class="slds-m-bottom_small ssp-bottomMargin">
+                                    <lightning-formatted-rich-text
+                                        value={label.sspKIHIPPEligibilityDocumentsDescription}
+                                    >
+                                    </lightning-formatted-rich-text>
+                                </p>
+                            </div>
+                        </c-ssp-accordion-drop-down-card>
+                    </div>
+                </div>
+                    <!--*************** 3RD ACCORDION **************-->
+                    <div class="slds-m-bottom_small">
+                        <div
+                            class="ssp-bg_whiteAlpha ssp-accordianBorderRadius"
+                        >
+                            <c-ssp-accordion-drop-down-card>
+                                <div
+                                    class="ssp-iconText ssp-fontFamily_popinBold"
+                                    slot="Title"
+                                >
+                                    {label.sspWhereToSendDocuments}
+                                </div>
+                                <div
+                                    class="ssp-infoText slds-grid slds-wrap ssp-color_monoOmega ssp-fontFamily_ArvoRegular"
+                                    slot="contentSlot"
+                                >
+                                    <div
+                                        class="ssp-iconContainer slds-grid slds-wrap slds-medium-size_1-of-3 slds-size_1-of-1 ssp-whereToSendDocInfo"
+                                    >
+                                        <div
+                                            class="slds-medium-size_1-of-1 slds-size_1-of-1 "
+                                        >
+                                            <div class="slds-m-bottom_small">
+                                                <img
+                                                    class="ssp-iconSize"
+                                                    src={icUploadIcon}
+                                                    alt="Upload Icon"
+                                                />
+                                            </div>
+                                            <div>
+                                                <lightning-formatted-rich-text
+                                                    value={label.sspKIHIPPUploadTheDoc}
+                                                >
+                                                </lightning-formatted-rich-text>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="ssp-iconContainer slds-grid slds-wrap slds-medium-size_1-of-3 slds-size_1-of-1 ssp-whereToSendDocInfo"
+                                    >
+                                        <div
+                                            class="slds-medium-size_1-of-1 slds-size_1-of-1 "
+                                        >
+                                            <div class="slds-m-bottom_small">
+                                                <img
+                                                    class="ssp-iconSize"
+                                                    src={icEmailIcon}
+                                                    alt="Upload Icon"
+                                                />
+                                            </div>
+                                            <div>
+                                                <lightning-formatted-rich-text
+                                                    value={label.sspKIHIPPEmailTHeDoc}
+                                                >
+                                                </lightning-formatted-rich-text>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="ssp-iconContainer slds-grid slds-wrap slds-medium-size_1-of-3 slds-size_1-of-1"
+                                    >
+                                        <div
+                                            class="slds-medium-size_1-of-1 slds-size_1-of-1 "
+                                        >
+                                            <div class="slds-m-bottom_small">
+                                                <img
+                                                    class="ssp-iconSize"
+                                                    src={icMailIcon}
+                                                    alt="Upload Icon"
+                                                />
+                                            </div>
+                                            <div>
+                                                <lightning-formatted-rich-text
+                                                    value={label.sspKIHIPPMailTheDoc}
+                                                >
+                                                </lightning-formatted-rich-text>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </c-ssp-accordion-drop-down-card>
+                        </div>
+                    </div>
+                <!--*************** 4rth ACCORDION **************-->
+                <div class="slds-m-bottom_small">
+                    <div class="ssp-bg_whiteAlpha ssp-accordianBorderRadius">
+                        <c-ssp-accordion-drop-down-card>
+                            <div
+                                class="ssp-iconText ssp-fontFamily_popinBold"
+                                slot="Title"
+                            >
+                                {label.sspPaymentsKIHIPP}
+                            </div>
+                            <div
+                                class="ssp-infoText ssp-color_monoOmega ssp-fontFamily_ArvoRegular"
+                                slot="contentSlot"
+                            >
+                                    <p class="slds-m-bottom_small">
+                                        <lightning-formatted-rich-text
+                                            value={label.sspKIHIPPPaymentsDescription}
+                                        >
+                                        </lightning-formatted-rich-text>
+                                        <template if:false={languageSpanish}>
+                                            <a
+                                                class="ssp-color_blueAlpha ssp-healthFormLink ssp-inlineTextMargin"
+                                                onclick={openDirectDepositForm}
+                                                onkeydown={openDiretDepositForm}
+                                                tabindex="0"
+                                                data-document-name="KHIPPDirectDepositAuthorizationForm"
+                                                data-resource-url={healthCoverAuthorization}
+                                                if:false={showTargetAnchorTag}
+                                                >{label.sspKihipp63Form}</a
+                                            >
+                                        </template>
+                                        <template if:true={languageSpanish}>
+                                            <a
+                                                class="ssp-color_blueAlpha ssp-healthFormLink ssp-inlineTextMargin"
+                                                onclick={openDirectDepositFormSpanish}
+                                                onkeydown={openDiretDepositFormSpanish}
+                                                tabindex="0"
+                                                data-document-name="KHIPPDirectDepositAuthorizationFormSpanish"
+                                                data-resource-url={healthCoverAuthorizationSpanish}
+                                                if:false={showTargetAnchorTag}
+                                                >{label.sspKihipp63Form}</a
+                                            >
+                                        </template>
+                                    </p>
+                                    <p
+                                        class="slds-m-bottom_small ssp-bottomMargin"
+                                    >
+                                        <lightning-formatted-rich-text
+                                            value={sspKIHIPPPaymentsDescriptionFull}
+                                    >
+                                    </lightning-formatted-rich-text>
+                                </p>
+                            </div>
+                        </c-ssp-accordion-drop-down-card>
+                    </div>
+                </div>
+            </div>
+        </template>
+    </div>
+    </div>
+    <div class="ssp-programFooterBtns slds-grid slds-grid_align-end ssp-wordBreak">
+        <div class="ssp-buttonWidth slds-m-right_large">
+            <lightning-button
+                variant="neutral"
+                label={label.sspApplyForBenefits}
+                title={label.sspApplyForBenefits}
+                class="ssp-exitModalBtn ssp-fontSize_16 ssp-button_neutral"
+                onclick={redirectToApplyBenefit}
+            >
+            </lightning-button>
+        </div>
+        <template if:false={KIHIPPApplicationIsTrue}>
+            <div class="ssp-buttonWidth slds-m-right_large">
+                <lightning-button
+                    variant="base"
+                    label={label.sspHomePageCheckEligibility}
+                    title={label.sspHomePageCheckEligibility}
+                    class="ssp-exitModalBtn ssp-fontSize_16 ssp-button_base"
+                    onclick={redirectToPreScreeningTool}
+                >
+                </lightning-button>
+            </div>
+        </template>
+    </div>
+</template>

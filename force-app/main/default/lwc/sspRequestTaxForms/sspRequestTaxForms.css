@@ -1,0 +1,101 @@
+.ssp-requestTaxFormsHeader {
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+.ssp-requestTaxFormsHeaderText {
+    font-size: 2.625rem;
+    line-height: 48px;
+}
+.ssp-horizontal-rule {
+    height: 0.313em;
+    border-radius: 0.156em;
+    margin: 0;
+    border: none;
+}
+.ssp-formType, .ssp-yearToggle {
+    margin: 30px 0;
+}
+.ssp-plansSection {
+    font-family: 1rem;
+    margin-bottom: 44px;
+}
+.ssp-plansHeading {
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+.ssp-plansMultiCheckbox {
+    margin-bottom: 14px;
+}
+.ssp-plansMultiCheckbox:last-child {
+    margin-bottom: 0;
+}
+.ssp-defaultFontSize {
+    font-size: 0.8125rem;
+}
+.ssp-mailTextbox {
+    width: 370px;
+}
+.ssp-mailingAddressCardSection {
+    margin-top: 30px;
+}
+.ssp-mailingAddressCard {
+    width: 370px;
+}
+.ssp-EmailSection {
+    margin: 30px 0;
+}
+.ssp-reportChangeLink {
+    margin-top: 30px;
+    display: inline-block;
+    text-decoration: none;
+    line-height: 1;
+}
+.ssp-formBInfo {
+    margin: 30px 0;
+}
+
+
+.ssp-requestTaxForms .ssp-action-btn-section {
+    margin: 100px 0 60px 0;
+}
+.ssp-requestTaxForms .ssp-action-btn-section .ssp-cancel-btn {
+    padding-right: 12px;
+    width: 170px;
+    height: 60px;
+}
+.ssp-requestTaxForms .ssp-action-btn-section .ssp-next-btn {
+    padding-left: 12px;
+    width: 270px;
+    height: 60px;
+}
+.ssp-GoToPortalBtn {
+    width: 270px;
+}
+
+@media only screen and (max-device-width: 768px) {
+    .ssp-requestTaxFormsHeaderText {
+        font-size: 1.5rem;
+    }
+    .ssp-mailTextbox {
+        width: 100%;
+    }
+    .ssp-mailingAddressCard {
+        width: 100%;
+    }
+    .ssp-requestTaxForms .ssp-action-btn-section .ssp-cancel-btn {
+        order: 2;
+        padding-right: 0;
+        width: 100%;
+        height: 45px;
+        margin-top: 15px;
+    }
+    .ssp-requestTaxForms .ssp-action-btn-section .ssp-next-btn {
+        padding-left: 0;
+        width: 100%;
+        height: 45px;
+    }
+    .ssp-GoToPortalBtn {
+        width: 100%;
+        height: 45px;
+    }
+}

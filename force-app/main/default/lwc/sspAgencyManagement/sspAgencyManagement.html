@@ -1,0 +1,438 @@
+<template>
+  <template if:true={showToast}>
+    <c-ssp-toast
+      ssp-toast-title-val={toastMessage}
+      show-error-toast={showToast}
+      condition={toastCondition}
+      onhidetoast={hideToast}
+    ></c-ssp-toast>
+  </template>
+  <template if:true={showSpinner}>
+    <c-ssp-spinner></c-ssp-spinner>
+  </template>
+  <main class="ssp-agency-management">
+    <div class="ssp-agency-management-search-from ssp-bg_monoDelta">
+      <div class="ssp-agency-management-header">
+        <h1
+          class="ssp-agency-management-header-text ssp-fontFamily_popinBlack ssp-color_blueAlpha"
+        >
+          {customLabels.sspAgencyManagement}
+        </h1>
+        <p
+          class="ssp-fontFamily_ArvoRegular ssp-color_monoOmega ssp-info_fontSize ssp-agencyManagementInfo"
+        >
+          {customLabels.sspAgencyManagementInfo}
+        </p>
+      </div>
+      <div
+        class="slds-grid slds-wrap ssp-agency-management-from ssp-color_monoBody"
+      >
+        <div class="slds-grid slds-wrap slds-size_1-of-1">
+          <p
+            class="ssp-fontFamily_popinBold ssp-color_monoBody ssp-search-label"
+          >
+            {customLabels.sspSearchPlaceholder}
+          </p>
+        </div>
+        <div class="slds-grid slds-wrap slds-size_1-of-1">
+          <div
+            class="slds-grid slds-wrap slds-large-size_1-of-2 slds-size_1-of-1 ssp-textBox-right ssp-assignTo"
+          >
+            <c-ssp-type-ahead-picklist
+              class="ssp-applicationInputs slds-size_1-of-1"
+              label={customLabels.sspAssignedTo}
+              title={customLabels.sspStartTypingNameOrClickToSeeAllAssisters}
+              placeholder={customLabels.sspStartTyping}
+              list-values={listOfAssisters}
+              value={assignedTo}
+              onchangetypeaheadpicklistvalue={onChangeTypeAhead}
+              onselectedval={onSelectTypeAhead}
+            >
+            </c-ssp-type-ahead-picklist>
+          </div>
+        </div>
+        <div
+          class="slds-grid slds-wrap slds-large-size_1-of-2 slds-size_1-of-1 ssp-textBox-right"
+        >
+          <div class="slds-size_1-of-1 ssp-basecmp-inputText">
+            <lightning-input
+              class="ssp-applicationInputs"
+              type="text"
+              label={customLabels.sspClientFirstName}
+              value={clientFirstName}
+              name="clientFirstName"
+              onchange={handleInputChange}
+              max-length="50"
+            ></lightning-input>
+          </div>
+        </div>
+        <div
+          class="slds-grid slds-wrap slds-large-size_1-of-2 slds-size_1-of-1 ssp-textBox-left"
+        >
+          <div class="slds-size_1-of-1 ssp-basecmp-inputText">
+            <lightning-input
+              class="ssp-applicationInputs"
+              type="text"
+              label={customLabels.sspClientLastName}
+              value={clientLastName}
+              name="clientLastName"
+              onchange={handleInputChange}
+              max-length="50"
+            ></lightning-input>
+          </div>
+        </div>
+        <div
+          class="slds-grid slds-wrap slds-large-size_1-of-2 slds-size_1-of-1 ssp-textBox-right"
+        >
+          <div class="ssp-radioButtonContainer">
+            <label for="ssp-applicationNumber" class="ssp-label-name"
+              >{customLabels.sspSearchApplicationNumber}</label
+            >
+            <input
+              id="ssp-applicationNumber"
+              type="radio"
+              name="radio"
+              aria-label="radio"
+              class="ssp-multilineRadioInput"
+              value="Application Number"
+              onclick={handleRadioClick}
+              title={customLabels.sspSearchApplicationNumber}
+            />
+            <span class="ssp-multilineRadioChecked"></span>
+          </div>
+          <div class="slds-size_1-of-1 ssp-application-number">
+           
+            <c-ssp-base-component-input-phone
+              class="ssp-applicationInputs"
+              value={applicationNumber}
+              disabled={isAppNumberDisabled}
+              onchange={handleAppNumberChange}
+              case-application-field="true"
+              max-length="9"
+          >
+          </c-ssp-base-component-input-phone>
+          </div>
+        </div>
+        <div
+          class="slds-grid slds-wrap slds-large-size_1-of-2 slds-size_1-of-1 ssp-textBox-left"
+        >
+          <div class="ssp-radioButtonContainer">
+            <label for="ssp-caseNumber" class="ssp-label-name"
+              >{customLabels.sspSearchCaseNumber}</label
+            >
+            <input
+              id="ssp-caseNumber"
+              type="radio"
+              name="radio"
+              aria-label="radio"
+              value="Case Number"
+              class="ssp-multilineRadioInput"
+              onclick={handleRadioClick}
+              title={customLabels.sspSearchCaseNumber}
+            />
+            <span class="ssp-multilineRadioChecked"></span>
+          </div>
+          <div class="slds-size_1-of-1 ssp-case-number">
+           
+            <c-ssp-base-component-input-phone
+              class="ssp-applicationInputs"
+              value={caseNumber}
+              disabled={isCaseNumberDisabled}
+              onchange={handleCaseNumberChange}
+              max-length="9"
+              case-application-field="true"
+          >
+          </c-ssp-base-component-input-phone>
+          </div>
+        </div>
+        <div
+          if:true={isSearchErrorMessage}
+          class="slds-grid slds-wrap slds-size_1-of-1"
+        >
+          <span class="slds-m-top_small ssp-errorMessage ssp-color_redOmega"
+            >{customLabels.sspPleaseEnterAtLeastOneSearchCriteria}</span
+          >
+        </div>
+      </div>
+      <div class="slds-grid slds-wrap slds-size_1-of-1 ssp-search-action">
+        <lightning-button
+          class="ssp-button_base ssp-reset-button"
+          label={customLabels.sspReset}
+          title={customLabels.sspResetSearchCriteria}
+          onclick={resetSearchCriteria}
+        >
+        </lightning-button>
+        <lightning-button
+          variant="brand"
+          class="ssp-button_brand ssp-search-button"
+          label={customLabels.sspSearchPlaceholder}
+          title={customLabels.sspSearchBasedOnTheEnteredCriteria}
+          onclick={onSearch}
+        >
+        </lightning-button>
+      </div>
+    </div>
+    <!--Start- Defect 392952-->
+    <div
+        if:true={isToShowMoreThan200RecordsMessage}
+        class="slds-m-horizontal_large"
+    >
+        <c-ssp-explicit-notice-card>
+            {showMoreThan200RecordsMessageLabel}
+        </c-ssp-explicit-notice-card>
+    </div>
+    <!--End- Defect 392952-->
+    <div if:true={isSearchResults} class="search-results-section">
+      <div class="slds-grid slds-wrap search-results ssp-flex-between">
+        <p class="ssp-fontFamily_popinBold ssp-color_monoBody ssp-result-count">
+          {clientResultsCount} {customLabels.sspResults}
+        </p>
+        <lightning-button
+          class="ssp-button_base ssp-change-assignment"
+          label={customLabels.sspChangeAssignment}
+          title={customLabels.sspChangeAssignmentsForSelectedClients}
+          disabled={isChangeAssignmentDisabled}
+          onclick={changeAssignment}
+        >
+        </lightning-button>
+      </div>
+      <div class="slds-grid slds-wrap ssp-results-summary">
+        <div class="ssp-selectAll-Checkbox">
+          <lightning-input
+            type="checkbox"
+            label="checkbox"
+            variant="label-hidden"
+            class="ssp-selectAllCheckbox"
+            disabled
+            checked={isSelectAllRecords}
+            onchange={handleCheck}
+          ></lightning-input>
+        </div>
+        <div class="ssp-selectAll-Dropdown">
+          <div class="ssp-dashboardDropdown">
+            <div
+              tabindex="0"
+              class="ssp-dashboardDropdownBtn slds-grid slds-grid_align-spread slds-grid_vertical-align-center"
+              onmousedown={toggleDropdown}
+              onblur={closeDropDown}
+            >
+              <div class="ssp-dashboardDropdownIcon"></div>
+            </div>
+          </div>
+          <div
+            class="ssp-dashboardDropdownContent ssp-boxShadow slds-grid slds-wrap"
+          >
+            <div if:true={isSelectAll}>
+              <a
+                class="ssp-dashboardDropdownOptions ssp-fontFamily_popinRegular ssp-color_monoBody"
+                onmousedown={onSelectAll}
+                onkeydown={onSelectAll}
+                data-id={selectAllDisplayText}
+                >{selectAllDisplayText}</a
+              >
+            </div>
+            <div if:false={isSelectAll}>
+              <a
+                class="ssp-dashboardDropdownOptions ssp-fontFamily_popinRegular ssp-color_monoBody"
+                onmousedown={onSelectAllPages}
+                onkeydown={onSelectAllPages}
+                data-id={selectAllPagesDisplayText}
+                >{selectAllPagesDisplayText}</a
+              >
+            </div>
+            <div if:false={isSelectAll}>
+              <a
+                class="ssp-dashboardDropdownOptions ssp-fontFamily_popinRegular ssp-color_monoBody"
+                onmousedown={onSelectCurrentPage}
+                onkeydown={onSelectCurrentPage}
+                data-id={selectCurrentPageDisplayText}
+                >{selectCurrentPageDisplayText}</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="ssp-clients-selected">
+          <p class="ssp-color_monoBody">
+            {clientsSelected} {customLabels.sspClientsSelected}
+          </p>
+        </div>
+      </div>
+      <div class="slds-grid slds-wrap slds-size_1-of-1 slds-m-top_large">
+        <div class="slds-size_1-of-1 ssp-result-table">
+          <table
+            class="slds-table slds-table_cell-buffer slds-no-row-hover slds-table_bordered"
+          >
+            <caption class="slds-hide">
+              Message Caption
+            </caption>
+            <thead>
+              <tr class="slds-line-height_reset">
+                <th
+                  class="slds-text-align_right ssp-bg_monoDelta ssp-color_monoBody"
+                  scope="col"
+                  style="width:1px"
+                ></th>
+                <template for:each={columns} for:item="col">
+                  <th
+                    class="ssp-th-styles ssp-bg_monoDelta ssp-color_monoBody ssp-fontFamily_popinBold"
+                    scope="col"
+                    key={col}
+                  >
+                    <div class="slds-truncate">
+                      {col.colName}
+                      <span class="ssp-action-image-container ssp-bg_monoDelta">
+                        <img
+                          class="ssp-sort-image"
+                          onclick={handleSorting}
+                          data-name={col.colName}
+                          src={iconUrl}
+                          alt="icon"
+                        />
+                      </span>
+                    </div>
+                  </th>
+                </template>
+              </tr>
+            </thead>
+            <tbody>
+              <template
+                for:each={currentPageData}
+                for:item="data"
+                for:index="index"
+              >
+                <tr class="slds-hint-parent" key={data}>
+                  <td class="slds-text-align_right" role="gridcell">
+                    <lightning-input
+                      type="checkbox"
+                      label="checkbox"
+                      variant="label-hidden"
+                      class="ssp-selectCheckbox"
+                      data-id={index}
+                      checked={data.isSelected}
+                      onchange={handleCheck}
+                    ></lightning-input>
+                  </td>
+                  <td class="ssp-td-styles" data-label="Client Details">
+                    <div class="slds-truncate">
+                      <p class="ssp-fontFamily_popinBold ssp-client-name">
+                        {data.clientDetails.firstName}
+                        {data.clientDetails.lastName}
+                      </p>
+                      <p class="ssp-color_monoOmega">
+                        {data.clientDetails.gender} | {customLabels.sspAge}
+                        {data.clientDetails.age}
+                      </p>
+                      <p
+                        if:true={data.isCaseNumber}
+                        class="ssp-color_monoOmega"
+                      >
+                        {customLabels.sspRenewalPageCase}{data.clientDetails.caseNumber}
+                      </p>
+                      <p
+                        if:false={data.isCaseNumber}
+                        class="ssp-color_monoOmega"
+                      >
+                        {customLabels.sspApplicationHash}{data.clientDetails.appNumber}
+                      </p>
+                    </div>
+                  </td>
+                  <td class="ssp-td-styles" data-label="Assignment Start Date">
+                    <div class="slds-truncate ssp-color_monoOmega">
+                      {data.assignedTo.assignmentStartDate}
+                    </div>
+                  </td>
+                  <td class="ssp-td-styles" data-label="Assigned To">
+                    <div class="slds-truncate ssp-color_monoOmega">
+                      {data.assignedTo.firstName} {data.assignedTo.lastName}
+                    </div>
+                  </td>
+                </tr>
+              </template>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="slds-grid slds-wrap slds-size_1-of-1">
+        <div class="slds-size_1-of-1 ssp-paginationContainer">
+          <template if:true={tableData}>
+            <c-ssp-pagination
+              class="ssp-agency-pagination"
+              per-page={perPage}
+              page-size={pageSize}
+              table-data={tableData}
+              onpagedata={getCurrentPageData}
+            ></c-ssp-pagination>
+          </template>
+        </div>
+      </div>
+    </div>
+    <template if:true={isSearch}>
+      <div
+        if:false={isSearchResults}
+        class="ssp-noResultsFound slds-m-vertical_large slds-text-align_center"
+      >
+        <p
+          class="ssp-fontFamily_ArvoRegular ssp-color_monoOmega ssp-info_fontSize"
+        >
+          {customLabels.sspNoResultsFound}
+        </p>
+      </div>
+    </template>
+  </main>
+  <template if:true={isChangeAssignmentModal}>
+    <c-ssp-detailed-information-modal
+      reference={reference}
+      open-model={isChangeAssignmentModal}
+      onclosemodal={closeChangeAssignmentModal}
+      header-value={changeAssignmentHeaderLabel}
+      class="ssp-clientViewModalContainer"
+    >
+      <div
+        slot="contentSlot"
+        class="ssp-clientViewModal ssp-fontFamily_ArvoRegular ssp-color_monoOmega"
+      >
+        <template if:true={showSpinner}>
+          <c-ssp-spinner></c-ssp-spinner>
+        </template>
+        <div class="slds-grid slds-wrap slds-size_1-of-1">
+          <div class="slds-grid slds-wrap slds-size_1-of-1 ssp-assignTo">
+            <c-ssp-type-ahead-picklist
+              class="ssp-applicationInputs slds-size_1-of-1"
+              label={customLabels.sspAssignTo}
+              title={customLabels.sspStartTypingNameOrClickToSeeAllAssisters}
+              placeholder={customLabels.sspStartTyping}
+              list-values={listOfAssisters}
+              value={assignTo}
+              onchangetypeaheadpicklistvalue={onChangeAssignTo}
+              onselectedval={onSelectAssignTo}
+              entity-name="SSP_Member__c"
+              meta-list={metaDataListParent}
+              field-name="FirstName__c"
+            >
+            </c-ssp-type-ahead-picklist>
+          </div>
+        </div>
+      </div>
+      <div
+        slot="Footer"
+        class="slds-grid slds-wrap slds-size_1-of-1 ssp-stacked-btn-width"
+      >
+        <lightning-button
+          title={customLabels.sspAssignClientsToSelectedAssister}
+          label={customLabels.sspAssign}
+          variant="brand"
+          class="ssp-button_brand slds-size_1-of-1"
+          onclick={assignAssister}
+        >
+        </lightning-button>
+        <lightning-button
+          title={customLabels.sspCancelAndGoBackToAgencyManagementScreen}
+          label={customLabels.sspCancel}
+          class="ssp-button_base slds-size_1-of-1 ssp-cancel-button"
+          onclick={closeChangeAssignmentModal}
+        >
+        </lightning-button>
+      </div>
+    </c-ssp-detailed-information-modal>
+  </template>
+</template>

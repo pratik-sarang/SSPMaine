@@ -1,0 +1,184 @@
+<template>
+    <c-ssp-spinner if:true={showSpinner}></c-ssp-spinner>
+    <template if:true={showAccessDenied}>
+        <c-ssp-access-denied></c-ssp-access-denied>
+    </template>
+    <template if:true={showScreen}>
+        <div class="ssp-bodyContainer ssp-signaturePage_Container">
+            <div
+                class="ssp-navigationLink ssp-margin-bottom_large ssp-fontFamily_popinBold"
+            >
+                <a class="ssp-anchor" onclick={backToBenefits} onkeydown={backToBenefits} tabindex="0">
+                    <span class="ssp-color_magentaAlpha">&lt;</span>
+                    <span class="ssp-color_monoBody"
+                        >{label.sspBackToBenefitDetails}</span
+                    ></a
+                >
+            </div>
+            <h1
+                class="ssp-headerText ssp-color_blueAlpha ssp-fontFamily_popinBold ssp-margin-bottom_large"
+            >
+                {label.sspKIHIPPPaymentSummary}
+            </h1>
+            <div
+                class="ssp-ruler ssp-bg_monoAlpha ssp-margin-bottom_large"
+            ></div>
+            <div
+                class="ssp-buttonAlignment ssp-componentWidth ssp-margin-bottom_large"
+            >
+                <lightning-button
+                    label={label.sspFilter}
+                    class="ssp-exitModalBtn ssp-button_base ssp-buttonWidth"
+                    onclick={openModal}
+                    variant="base"
+                ></lightning-button>
+            </div>
+        </div>
+        <div class="ssp-bodyContainerGamma ssp-bg_appHeaderGradient">
+            <div class="ssp-bodyContainer slds-p-bottom_x-large">
+                <template for:each={dataCardFiltered} for:item="item">
+                    <div key={item}>
+                        <div
+                            class="ssp-infotText18  ssp-fontFamily_popinBold slds-m-bottom_large slds-p-top_x-large "
+                        >
+                            {item.userName}
+                        </div>
+                        <template for:each={item.userCard} for:item="item">
+                            <div
+                                key={item.benefitMonth}
+                                class="ssp-bg_whiteAlpha slds-m-bottom_large"
+                            >
+                                <c-ssp-k-i-h-i-p-p-drop-down
+                                    show-benefit-month={item.benefitMonth}
+                                    show-total-premium={item.totalPremium}
+                                    show-adjustments={item.adjustmentAmount}
+                                    total-premium-modal-values={item.modalTotalPremium}
+                                    adjustments-modal-values={item.modalAdjustment}
+                                >
+                                    <div
+                                        slot="Title"
+                                        class="ssp-accordionHeader"
+                                    >
+                                        <div
+                                            class="slds-grid slds-wrap ssp-elements"
+                                        >
+                                            <div class="ssp-childElement">
+                                                <div
+                                                    class="slds-size_1-of-1 ssp-navigationLink ssp-color_monoBody ssp-fontFamily_popinBold"
+                                                >
+                                                    {label.sspReimbursedOn}
+                                                </div>
+                                                <div
+                                                    class="slds-size_1-of-1  ssp-navigationLink ssp-color_monoBody"
+                                                >
+                                                    {item.reimbursedDate}
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="ssp-infotText18 ssp-fontFamily_popinBold"
+                                            >
+                                                {label.sspDollarSign}{item.reimbursedAmount}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div slot="contentSlot"></div>
+                                </c-ssp-k-i-h-i-p-p-drop-down>
+                            </div>
+                        </template>
+                    </div>
+                </template>
+                <template if:true={showViewMore}>
+                    <div class="slds-size_1-of-1">
+                        <lightning-button
+                            variant="brand"
+                            label={label.sspViewMore}
+                            title={label.sspViewMore}
+                            class="ssp-button_brand ssp-stacked-btn-width slds-size_1-of-1"
+                            onclick={handleViewMoreClick}
+                        ></lightning-button>
+                    </div>
+                </template>
+            </div>
+        </div>
+        <template if:true={openModel}>
+            <c-ssp-detailed-information-modal
+                header-value={label.sspFilter}
+                onclosemodal={handleProp}
+                open-model={openModel}
+                reference={reference}
+            >
+                <div slot="contentSlot">
+                    <div class="slds-m-bottom_large ssp-toggleInputRadio">
+                        <c-ssp-base-component-input-radio-group
+                            label={label.sspSortBy}
+                            options={filterOptions}
+                            onchange={handleSortChange}
+                            value={sortByField}
+                        ></c-ssp-base-component-input-radio-group>
+                    </div>
+                    <div class="slds-m-bottom_large">
+                        <div
+                            class="ssp-infoText ssp-fontFamily_popinBold ssp-color_monoBody slds-m-bottom_medium"
+                        >
+                            {label.sspTimePeriod}
+                        </div>
+                        <div class="slds-m-bottom_large">
+                            <c-ssp-base-component-input-date
+                                label={label.sspStartDate}
+                                value={filterStartDate}
+                                onchange={updateStartDate}
+                            ></c-ssp-base-component-input-date>
+                            <c-ssp-base-component-input-date
+                                label={label.sspEndDate}
+                                value={filterEndDate}
+                                onchange={updateEndDate}
+                            ></c-ssp-base-component-input-date>
+                        </div>
+                    </div>
+                    <!-- <div class="slds-m-bottom_large">
+                        <c-ssp-base-component-input-checkbox-group
+                            label={label.sspPolicyHolder}
+                            options={policyHolder}
+                        ></c-ssp-base-component-input-checkbox-group>
+                    </div> -->
+                    <div class="slds-m-bottom_large">
+                        <!-- <lightning-checkbox-group
+                                name="optCheckbox"
+                                label={label.sspPolicyHolder}
+                                options={policyHolder}
+                                value={selectedPolicyHolder}
+                                onchange={handleFilterChange}
+                            ></lightning-checkbox-group> -->
+                        <c-ssp-base-component-input-checkbox-group
+                            name="optCheckbox"
+                            label={label.sspPolicyHolder}
+                            options={policyHolder}
+                            value={selectedPolicyHolder}
+                            onchange={handleFilterChange}
+                        ></c-ssp-base-component-input-checkbox-group>
+                    </div>
+                </div>
+                <div
+                    slot="Footer"
+                    class="slds-grid slds-wrap slds-size_1-of-1 ssp-stacked-btn-width"
+                >
+                    <lightning-button
+                        variant="brand"
+                        label={label.sspViewResults}
+                        title={label.sspViewResults}
+                        class="ssp-button_brand ssp-stacked-btn-width slds-text-align_left slds-size_1-of-1 slds-p-around_x-small"
+                        onclick={applyFilters}
+                    ></lightning-button>
+                    <lightning-button
+                        variant="neutral"
+                        label={label.sspResetFilter}
+                        title={label.sspResetFilter}
+                        onclick={resetFilters}
+                        class="ssp-button_base ssp-stacked-btn-width slds-size_1-of-1 slds-p-around_x-small"
+                    >
+                    </lightning-button>
+                </div>
+            </c-ssp-detailed-information-modal>
+        </template>
+    </template>
+</template>

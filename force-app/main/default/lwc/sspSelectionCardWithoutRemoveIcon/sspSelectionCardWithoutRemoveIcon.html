@@ -1,0 +1,98 @@
+<!--
+* name          : sspSelectionCardWithoutRemoveIcon.
+* @description  : This component is used to show user information without remove icon.
+* @author       : Kyathi.
+* @date         : 12/11/2019
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName                MM/DD/YYYY               A Brief Description about the Change
+  Kyathi                     12/11/2019                          Initial Version
+-->
+<template>
+    <div class="ssp-ProgressCardContainer">
+        <div
+            class="ssp-ProgressCard ssp-boxShadow slds-grid slds-wrap slds-grid_align-spread slds-grid_vertical-align-center"
+        >
+            <div
+                class="ssp-bg_whiteAlpha ssp-progressCardHead slds-grid slds-wrap slds-grid_align-spread slds-grid_vertical-align-center"
+            >
+                <div
+                    class="slds-grid slds-wrap slds-grid_vertical-align-center slds-grid_align-spread slds-grid_vertical-align-center"
+                >
+                    <template if:false={hideButtons}>
+                        <div
+                            class="progresSelectionCardIconSize"
+                            if:true={displayEdit}
+                        >
+                            <img
+                                alt={label.progressIcon}
+                                src={checkedIconUrl}
+                            />
+                        </div>
+                        <div
+                            class="progresSelectionCardIconSize"
+                            if:false={displayEdit}
+                        >
+                            <img
+                                alt={label.progressIcon}
+                                src={uncheckedIconUrl}
+                            />
+                        </div>
+                    </template>
+                    <div>
+                        <slot name="cardContent"></slot>
+                    </div>
+                </div>
+                <template if:false={hideButtons}>
+                    <template if:false={isViewButtonVisible}>
+                        <div if:true={displayEdit}>
+                            <lightning-button
+                                variant="base"
+                                label={label.editButton}
+                                onclick={handleButton}
+                                title={buttonAltText}
+                                class="ssp-button_base ssp-cardItemsButton"
+                                disabled={sectionDisable}
+                            >
+                            </lightning-button>
+                        </div>
+                        <div if:false={displayEdit}>
+                            <template if:false={displayContinue}>
+                                <lightning-button
+                                    variant="Neutral"
+                                    label={label.startButton}
+                                    onclick={handleButton}
+                                    title={buttonAltText}
+                                    class="ssp-button_neutral ssp-cardItemsButton"
+                                    disabled={sectionDisable}
+                                >
+                                </lightning-button>
+                            </template>
+                            <template if:true={displayContinue}>
+                                <lightning-button
+                                    variant="Neutral"
+                                    label={label.continueButton}
+                                    onclick={handleButton}
+                                    title={buttonAltText}
+                                    class="ssp-button_neutral ssp-cardItemsButton"
+                                >
+                                </lightning-button>
+                            </template>
+                        </div>
+                    </template>
+                    <template if:true={isViewButtonVisible}>
+                            <lightning-button
+                                variant="base"
+                                label={label.sspView}
+                                onclick={handleButton}
+                                title={viewButtonAltText}
+                                class="ssp-button_base ssp-cardItemsButton"
+                            >
+                            </lightning-button>
+                    </template>
+                </template>
+            </div>
+        </div>
+    </div>
+</template>

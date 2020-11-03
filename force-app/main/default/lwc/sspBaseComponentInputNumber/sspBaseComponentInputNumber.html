@@ -1,0 +1,30 @@
+<!--
+* name            : sspBaseComponentInputNumber
+* @description    : Generic component for Input Number.
+-->
+<template>
+    <div class="ssp-genericInput">
+        <span class="ssp-genericRequired ssp-color_redOmega">{retExp1}</span>
+        <lightning-input
+            type={inputType}
+            data-id="inpValue"
+            label={label}
+            class={className}
+            value={value}
+            maxlength={maxlength}
+            formatter={formatter}
+            step={step}
+            placeholder={placeholder}
+            minlength={minlength}
+            title={title}
+            onblur={handleValidations}
+            onchange={handleValidations}
+            disabled={isDisabled}
+            variant={labelVariant}
+        ></lightning-input>
+
+        <template for:each={ErrorMessageList} for:item="error">
+            <p key={error} class="showError ssp-color_redOmega">{error}</p>
+        </template>
+    </div>
+</template>

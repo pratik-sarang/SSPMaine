@@ -1,0 +1,183 @@
+<!--
+* name 		    : sspChangeExistingIncome
+* @description 	: The component is used edit existing income records and child component of sspChangeExistingIncome 
+* @author 		: Shrikant And Chirag
+* @date 		: 11/12/2019
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName	      MM/DD/YYYY	      A Brief Description 
+						       about the Change
+-->
+
+<template>
+    <div class="ssp-changeExistingIncome-detail slds-m-bottom_medium">
+        <div class="ssp-multipleCheckbox_container">
+            <c-ssp-base-component-multiline-input-checkbox
+                onhandlemultiselectchange={toggleIncomeRecordFunction}
+                class="ssp-cbWithCompleteBorder slds-m-bottom_small slds-size_1-of-1"
+                hide-additional-fields="true"
+                disabled={disabled}
+            >
+                <div slot="labelContent" class="ssp-checkbox-labels">
+                    <p
+                        class="ssp-fontFamily_popinBold ssp-color_monoBody ssp-labelLine1"
+                    >
+                        {headerOne}
+                    </p>
+                    <p class="ssp-fontFamily_popinBold ssp-color_blueAlpha">
+                        {headerTwo}
+                    </p>
+                </div>
+            </c-ssp-base-component-multiline-input-checkbox>
+        </div>
+        <template if:true={toggleIncomeRecord}>
+            <div class={containerClass}>
+                <div
+                    class="slds-p-around_large slds-grid slds-wrap ssp-cbBoxBorder ssp-bg_monoDelta ssp-fieldContainer"
+                >
+                    <template if:true={showIncomePayFrequency}>
+                        <div
+                            class="slds-size_1-of-1 slds-large-size_1-of-2 slds-p-horizontal_small slds-p-top_medium"
+                        >
+                            <div>
+                                <c-ssp-base-component-input-picklist
+                                    data-id="IncomePayFrequency__c"
+                                    class={inputClassName}
+                                    value={incomeObj.IncomePayFrequency__c}
+                                    selected-value={incomeObj.IncomePayFrequency__c}
+                                    label={customLabel.sspIncomeFrequency}
+                                    entity-name="SSP_Asset__c"
+                                    field-name="IncomePayFrequency__c"
+                                    meta-list={metaDataListParent}
+                                    option={incomeFrequencies}
+                                    onhandlepicklistchange={setLabel}
+                                    onchange={setLabel}
+                                    title={customLabel.sspIncomeFrequencyAlternateText}
+                                >
+                                </c-ssp-base-component-input-picklist>
+                            </div>
+                        </div>
+                    </template>
+
+                    <template if:true={showTotalGrossAmount}>
+                        <div
+                            class="slds-size_1-of-1 slds-large-size_1-of-2 slds-p-horizontal_small slds-p-top_x-small"
+                        >
+                            <div class="ssp-input slds-m-top_medium">
+                                <c-ssp-base-component-input-text-icon
+                                    class={inputClassName}
+                                    label={totalGrossAmountLabel}
+                                    value={incomeObj.TotalGrossAmount__c}
+                                    data-id="TotalGrossAmount__c"
+                                    entity-name="SSP_Asset__c"
+                                    field-name="TotalGrossAmount__c"
+                                    meta-list={metaDataListParent}
+                                    maximum-value="9999999999.99"
+                                >
+                                </c-ssp-base-component-input-text-icon>
+                            </div>
+                        </div>
+                    </template>
+
+                    <template if:true={showTipsPerFrequency}>
+                        <div
+                            class="slds-size_1-of-1 slds-large-size_1-of-2 slds-p-horizontal_small slds-p-top_x-small"
+                        >
+                            <div class="ssp-input slds-m-top_medium">
+                                <c-ssp-base-component-input-text-icon
+                                    class={inputClassName}
+                                    label={tipsPerFrequencyLabel}
+                                    value={incomeObj.Tips__c}
+                                    data-id="Tips__c"
+                                    entity-name="SSP_Asset__c"
+                                    field-name="Tips__c"
+                                    meta-list={metaDataListParent}
+                                    maximum-value="9999999999.99"
+                                >
+                                </c-ssp-base-component-input-text-icon>
+                            </div>
+                        </div>
+                    </template>
+
+                    <template if:true={showHoursField}>
+                        <div
+                            class="slds-size_1-of-1 slds-large-size_1-of-2 slds-p-horizontal_small slds-p-top_x-small"
+                        >
+                            <div class="ssp-input slds-m-top_medium">
+                                <c-ssp-base-component-input-number
+                                    data-id="IncomePayDetailHoursPerWeek__c"
+                                    entity-name="SSP_Asset__c"
+                                    field-name="IncomePayDetailHoursPerWeek__c"
+                                    maximum-value="168"
+                                    meta-list={metaDataListParent}
+                                    class={inputClassName}
+                                    value={incomeObj.IncomePayDetailHoursPerWeek__c}
+                                    label={customLabel.sspHoursWorkedPerWeek}
+                                >
+                                </c-ssp-base-component-input-number>
+                            </div>
+                        </div>
+                    </template>
+
+                    <template if:true={showExpensesAmount}>
+                        <div
+                            class="slds-size_1-of-1 slds-large-size_1-of-2 slds-p-horizontal_small slds-p-top_x-small"
+                        >
+                            <div class="ssp-input slds-m-top_medium">
+                                <c-ssp-base-component-input-text-icon
+                                    class={inputClassName}
+                                    label={expensesAmountLabel}
+                                    value={incomeObj.ExpenseAmount__c}
+                                    data-id="ExpenseAmount__c"
+                                    entity-name="SSP_Asset__c"
+                                    field-name="ExpenseAmount__c"
+                                    meta-list={metaDataListParent}
+                                    maximum-value="9999999999.99"
+                                >
+                                </c-ssp-base-component-input-text-icon>
+                            </div>
+                        </div>
+                    </template>
+                    <template if:true={showContractFields}>
+                        <div
+                            class="slds-size_1-of-1 slds-large-size_1-of-2 slds-p-horizontal_small slds-p-top_x-small"
+                        >
+                            <div class="ssp-input">
+                                <c-ssp-base-component-input-date
+                                    label={customLabel.sspContractStartDate}
+                                    value={incomeObj.ContractStartDate__c}
+                                    data-id="ContractStartDate__c"
+                                    entity-name="SSP_Asset__c"
+                                    field-name="ContractStartDate__c"
+                                    class={inputClassName}
+                                    meta-list={metaDataListParent}
+                                    time-travel-current-date={timeTravelDate}
+                                    onchange={handleContractStartDate}
+                                    onblur={handleContractStartDate}
+                                ></c-ssp-base-component-input-date>
+                            </div>
+                        </div>
+                        <div
+                            class="slds-size_1-of-1 slds-large-size_1-of-2 slds-p-horizontal_small slds-p-top_x-small"
+                        >
+                            <div class="ssp-input slds-m-top_medium">
+                                <c-ssp-base-component-input-date
+                                    label={customLabel.sspContractEndDate}
+                                    value={incomeObj.ContractEndDate__c}
+                                    data-id="ContractEndDate__c"
+                                    entity-name="SSP_Asset__c"
+                                    class={inputClassName}
+                                    field-name="ContractEndDate__c"
+                                    meta-list={metaDataListParent}
+                                    time-travel-current-date={timeTravelDate}
+                                    comparing-date={contractStartDate}
+                                ></c-ssp-base-component-input-date>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </template>
+    </div>
+</template>

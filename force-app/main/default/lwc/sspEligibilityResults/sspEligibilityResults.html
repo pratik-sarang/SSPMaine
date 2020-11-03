@@ -1,0 +1,285 @@
+<!--
+* name          : sspEligibilityResults
+* @description  : To Show Eligibility Details for household.
+* @author       : Saurabh
+* @date         : 11/02/2020
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName                MM/DD/YYYY               A Brief Description about the Change
+  Vishakha                      22/02/20                            Development
+  Saurabh                      22/02/20                           Development
+-->
+
+<template>
+    <template if:true={showSpinner}>
+        <c-ssp-spinner></c-ssp-spinner>
+    </template>
+       <template if:true={isLearnMoreModal}>
+        <c-ssp-detailed-information-modal
+            header-value={label.sspLearnMore}
+            open-model={isLearnMoreModal}
+            onclosemodal={closeLearnMoreModal}
+            reference={reference}
+        >
+            <p
+                slot="contentSlot"
+                class="ssp-learnMore ssp-fontFamily_ArvoRegular"
+            ></p>
+        </c-ssp-detailed-information-modal>
+    </template>
+    <template if:false={screenRenderingStatus}>
+        <c-ssp-toast
+        if:true={showToast}
+        condition="positive"
+        ssp-toast-title-val={label.benefitsSubmitted}
+        ssp-toast-additional-info={benefitsSubmitted}
+        show-error-toast={showToast}
+    >
+    </c-ssp-toast>
+        <div
+            if:false={showNextSteps}
+            class="sspHeadingBar slds-p-horizontal_xx-large slds-p-vertical_medium ssp-bg_appHeaderGradient slds-grid slds-wrap slds-grid_vertical-align-center ssp-margin-bottom_large"
+        >
+            <div class="ssp-container_width slds-grid slds-wrap">
+                <p class="ssp-fontFamily_popinBold ssp-appCardOrangeTitle ssp-color_monoBody">
+                    {label.benefitsApplication}
+                </p>
+            </div>
+        </div>
+        <div class="slds-m-vertical_x-large">
+            <div class="ssp-innerContainer">
+                <img
+                    src={backgroundUrl}
+                    class="ssp-member-background"
+                    alt={label.sspEligibilityResults}
+                    role="presentation"
+                />
+                <h1
+                    class="ssp-fontFamily_popinBlack ssp-margin-bottom_small ssp-color_greenAlpha"
+                >
+                    {label.sspEligibilityResults}
+                </h1>
+
+                <div class="ssp-margin-bottom_small">
+                    <a
+                        class="ssp-fontFamily_popinBold ssp-color_monoBody ssp-margin-bottom_small"
+                        href="javascript:void(0)"
+                        onclick={openLearnMoreModal}
+                        >{label.learnMoreLink}</a
+                    >
+                </div>
+                
+                <template if:true={notUnderReview}>
+                    <p
+                        class="ssp-appCardOrangeAdditional ssp-margin-bottom_large ssp-color_monoBody"
+                    >
+                        {caseNumber}
+                    </p>
+                    <div class="ssp-margin-bottom_large slds-is-relative" if:true={isBannerTextVisible}>
+                        <c-ssp-explicit-notice-card>
+                            <p class="ssp-fontFamily_popinBold ssp-color_monoBody">
+                                {label.sspEligibilityResultsBanner}
+                            </p> 
+                        </c-ssp-explicit-notice-card>
+                    </div>
+                    <p
+                        class="ssp-color_monoOmega ssp-fontFamily_ArvoRegular ssp-margin-bottom_large ssp-appCardOrangeTitle"
+                    >
+                        {label.eligibilityResultsThankText}
+                    </p>
+                   <p if:true={isRequireAction}
+                        class="ssp-color_monoOmega ssp-fontFamily_ArvoRegular ssp-margin-bottom_large ssp-appCardOrangeTitle"
+                    >
+                        {label.eligibilityResultsReviewText}
+                    </p>
+                    <p
+                        class="ssp-color_monoOmega ssp-fontFamily_ArvoRegular ssp-margin-bottom_large ssp-appCardOrangeTitle"
+                    >
+                        {label.eligibilityResultsNextText}
+                    </p>
+                </template>
+            </div>
+            <div
+                if:true={notUnderReview}
+                class="ssp-cardContainer ssp-bg_monoAlpha ssp-margin-bottom_large"
+            >
+                <template for:each={programCard} for:item="card">
+                    <div
+                        class="slds-grid slds-wrap slds-m-vertical_large ssp-innerContainer"
+                        key={card.id}
+                    >
+                        <c-ssp-application-card-orange
+                            header-value={card.sProgramCode}
+                            class="ssp-componentWidth slds-grid slds-wrap ssp-margin-bottom_small ssp-bg_whiteAlpha"
+                        >
+                            <template
+                                for:each={card.lstMemberRecords}
+                                for:item="userCard"
+                            >
+                                <div
+                                    slot="bodySlot"
+                                    key={userCard.IndividualIds}
+                                    class={card.style}
+                                >
+                                    <div
+                                        class="ssp-appCardOrangeBody ssp-componentWidth"
+                                    >
+                                        <div class="ssp-componentWidth">
+                                            <p
+                                                class="ssp-appCardOrangeTitle ssp-fontFamily_popinBold ssp-color_monoBody ssp-componentWidth"
+                                            >
+                                                {userCard.IndividualNames}
+                                            </p>
+                                            <div
+                                                class="slds-grid slds-grid_vertical-align-center ssp-componentWidth"
+                                            >
+                                                <div
+                                                    class={userCard.iconStyle}
+                                                ></div>
+                                                <p class="ssp-color_monoOmega">
+                                                    {userCard.BenefitStatus}
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="ssp-appCardOrangeHr ssp-bg_monoBeta ssp-componentWidth"
+                                        ></div>
+                                        <div
+                                            class="ssp-appCardOrangeAdditional ssp-color_monoOmega ssp-componentWidth"
+                                        >
+                                        <p if:true={userCard.isEligibleForExpeditedSNAP}>{label.expeditedSnapReason}</p>
+                                            <p> <lightning-formatted-rich-text
+                                                value={userCard.additionalNotes}
+                                                >
+                                            </lightning-formatted-rich-text></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </template>
+                        </c-ssp-application-card-orange>
+                    </div>
+                </template>
+            </div>
+            <div if:true={notUnderReview} class="ssp-innerContainer">
+                <div
+                    if:true={showReportedPolicyNote}
+                    class="ssp-bottomNote ssp-color_monoBody ssp-margin-bottom_large"
+                >
+                    <lightning-formatted-rich-text
+                                            value={label.bottomNote}
+                                        >
+                                        </lightning-formatted-rich-text>
+                </div>
+                <p
+                    class="ssp-color_monoOmega ssp-fontFamily_ArvoRegular ssp-appCardOrangeTitle ssp-margin-bottom_xlarge"
+                >
+                    {label.callText}
+                    <a
+                        class="ssp-color_blueAlpha slds-m-left_xx-small"
+                        href={telephoneNumber}
+                        >{label.noticeCardPhoneNumber}</a
+                    >
+                </p>
+                <div class="ssp-footerContainer ssp-eligibilityResultFooter">
+                    <lightning-button
+                        if:true={isNextStep}
+                        label={label.nextStep}
+                        onclick={handleNextButton}
+                        variant="netural"
+                        class="dd-slds-nav_btn-next ssp-button_neutral ssp-screenFooterNextBtn"
+                        title={label.nextStepAltText}
+                    ></lightning-button>
+                    <lightning-button
+                        if:false={isNextStep}
+                        label={label.goDashboard}
+                        onclick={handleNextButton}
+                        variant="netural"
+                        class="dd-slds-nav_btn-next ssp-button_neutral ssp-screenFooterNextBtn"
+                        title={label.goDashboard}
+                    ></lightning-button>
+                </div>
+            </div>
+            <div if:true={underReview} class="ssp-innerContainer">
+                <p
+                    class="ssp-color_monoOmega ssp-fontFamily_ArvoRegular ssp-margin-bottom_large ssp-appCardOrangeTitle"
+                >
+                    {label.submissionSuccessText}
+                </p>
+                <p
+                    class="ssp-color_monoOmega ssp-fontFamily_ArvoRegular ssp-margin-bottom_large ssp-appCardOrangeTitle"
+                >
+                    {label.thankForSubmissionText}
+                </p>
+                <p
+                    class="ssp-color_monoOmega ssp-fontFamily_ArvoRegular ssp-margin-bottom_large ssp-appCardOrangeTitle"
+                >
+                    {label.unableApplicationResultText}
+                </p>
+                <p
+                    class="ssp-color_monoOmega ssp-fontFamily_ArvoRegular ssp-margin-bottom_large ssp-appCardOrangeTitle"
+                >   {label.contactPleaseVisit}
+                    <a class = "ssp-textPadding ssp-color_blueAlpha" onclick={navigateToContactUsPage}>{label.sspFooterContactUs}</a>
+                    {label.contactCustomerService}
+                </p>
+                <div class="ssp-footerContainer ssp-eligibilityResultFooter">
+                    <lightning-button
+                        label={label.goDashboard}
+                        onclick={handleNextButton}
+                        variant="netural"
+                        class="dd-slds-nav_btn-next ssp-button_neutral ssp-screenFooterNextBtn"
+                        title={label.goDashboard}
+                    ></lightning-button>
+                </div>
+            </div>
+        </div>
+    </template>
+    <template if:true={showAccessDeniedComponent}>
+        <div class="slds-m-vertical_x-large">
+            <div class="ssp-innerContainer">
+              <h1
+                class="ssp-fontFamily_popinBlack ssp-margin-bottom_small ssp-color_greenAlpha"
+              >
+                {label.sspEligibilityResults}
+              </h1>
+            </div>
+        </div>
+        <c-ssp-access-denied></c-ssp-access-denied>
+        <div class="slds-m-vertical_x-large">
+          <div class="ssp-innerContainer">
+             <div class="ssp-footerContainer ssp-eligibilityResultFooter">
+                    <lightning-button
+                        if:true={isNextStep}
+                        label={label.nextStep}
+                        onclick={handleNextButton}
+                        variant="netural"
+                        class="dd-slds-nav_btn-next ssp-button_neutral ssp-screenFooterNextBtn"
+                        title={label.nextStepAltText}
+                    ></lightning-button>
+                    <lightning-button
+                        if:false={isNextStep}
+                        label={label.goDashboard}
+                        onclick={handleNextButton}
+                        variant="netural"
+                        class="dd-slds-nav_btn-next ssp-button_neutral ssp-screenFooterNextBtn"
+                        title={label.goDashboard}
+                    ></lightning-button>
+            </div>
+           </div>
+        </div>
+    </template>
+    <c-ssp-logging-and-error-handling-modal if:true={showErrorModal} error-id={errorMsg} onprogressvaluechange={closeError}>
+    </c-ssp-logging-and-error-handling-modal>
+<c-ssp-next-steps
+    if:true={showNextSteps}
+    next-steps-data={nextStepsData}
+    case-number-data={caseNumber}
+    show-verification-text={showVerificationText}
+    is-r-f-i={isRFI}
+    is-next-steps-not-accessible={isNextStepsNotAccessible}
+    is-next-steps-show-access-denied-component={isNextStepsShowAccessDeniedComponent}
+    is-info-modal-not-accessible={isInfoModalNotAccessible}
+    is-read-only-info-modal={isReadOnlyInfoModal}
+></c-ssp-next-steps> </template
+>
+</template>

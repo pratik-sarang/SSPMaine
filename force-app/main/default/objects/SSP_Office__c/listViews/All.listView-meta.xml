@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>DCOfficeId__c</columns>
+    <columns>NAME</columns>
+    <columns>PhysicalAddressLine1__c</columns>
+    <columns>PhysicalAddressLine2__c</columns>
+    <columns>PhysicalZipCode4__c</columns>
+    <columns>PhysicalZipCode5__c</columns>
+    <columns>PhysicalCity__c</columns>
+    <columns>Geolocation__Latitude__s</columns>
+    <columns>Geolocation__Longitude__s</columns>
+    <columns>OfficeHoursFrom__c</columns>
+    <columns>OfficeHoursTo__c</columns>
+    <columns>OfficeHoursFromText__c</columns>
+    <columns>OfficeHoursToText__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>CREATEDBY_USER</columns>
+    <filterScope>Everything</filterScope>
+    <label>All</label>
+    <language>en_US</language>
+</ListView>

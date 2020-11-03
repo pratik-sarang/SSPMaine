@@ -1,0 +1,147 @@
+<apex:page showHeader="false">
+    <html>
+        <head>
+            <link rel="stylesheet" href="//developers.google.com/maps/documentation/javascript/demos/demos.css"/>
+        </head>
+        <body>
+            <div id="map"></div>
+            <script>
+            <!-- var lexOrigin = 'https://{!$CurrentPage.parameters.lcHost}';  -->
+            var lexOrigin = 'https://{!JSENCODE($CurrentPage.parameters.lcHost)}';
+            
+            //Data for Google map
+            var data;
+            
+            //Send message to LC
+            function sendToLC(message) {
+                if(typeof(lexOrigin) != 'undefined'){
+	                parent.postMessage(message, lexOrigin);
+                }
+            }
+            
+            //Receive message from LC
+            window.addEventListener("message", function(event) {
+                
+                // Handle message
+                data = event.data;
+    
+                if(!event.data.loadGoogleMap){
+                    var script = document.createElement("script");
+                	google.maps.event.trigger(data.mapData[0], 'click');
+                    document.getElementsByTagName("head")[0].appendChild(script);  
+                }
+                if(event.data.loadGoogleMap){
+                    //Load Google Map Script
+                    var script = document.createElement("script");
+                    script.src = "https://maps.googleapis.com/maps/api/js?key={!$Setup.Google_Map_API__c.Key_Value__c}&callback=initMap";
+                    document.getElementsByTagName("head")[0].appendChild(script);        
+                }
+            }, false);
+            
+            //Callback when Google Map is loaded
+            function initMap() {
+                //Create new map
+                
+                var map = new google.maps.Map(document.getElementById("map"), JSON.parse(data.mapOptions));
+                //Add marker for each point along with text
+                //var infoWindow1 = new google.maps.InfoWindow;
+               	var lastOpenedInfoWindow;
+                function addMarker(feature) {
+                    	if(feature.selected ==="My location"){
+                        	var markerUserLoc = new google.maps.Marker({
+                                position: feature.position,
+                                icon:"{!URLFOR($Resource.RE_ResourceMarkerIcon)}",
+                                map: map
+                            });
+                            var infoWindowUserLoc = new google.maps.InfoWindow({
+                                content: feature.markerText
+                            }); 
+                            markerUserLoc.addListener('click', function() {
+                                closeLastOpenedInfoWindow();
+                                infoWindowUserLoc.open(map, markerUserLoc);
+                                lastOpenedInfoWindow=infoWindowUserLoc;
+                            });
+                        }
+                   		if(feature.selected ==="selectedLocation"){
+                        	var markerSelected = new google.maps.Marker({
+                                position: feature.position,
+                                icon:"{!URLFOR($Resource.mapicon)}",
+                                map: map
+                            });
+                            var infoWindowSelected = new google.maps.InfoWindow({
+                                content: feature.markerText
+                            }); 
+                            markerSelected.addListener('click', function() {
+                                closeLastOpenedInfoWindow();
+                                infoWindowSelected.open(map, markerSelected);
+                                lastOpenedInfoWindow=infoWindowSelected;
+                            });
+                        }
+                     
+						if(feature.selected ==="None"){
+                            console.log('none:='+feature.selected);
+							var marker1 = new google.maps.Marker({
+                                position: feature.position,
+                                map: map
+                            });
+                            var infoWindow1 = new google.maps.InfoWindow({
+                                content: feature.markerText
+                            }); 
+                            marker1.addListener('click', function() {
+                                closeLastOpenedInfoWindow();
+                                infoWindow1.open(map, marker1);
+                                lastOpenedInfoWindow=infoWindow1;
+                            });
+                    }
+                    	
+                }
+                function closeLastOpenedInfoWindow() {
+                    if (lastOpenedInfoWindow) {
+                        lastOpenedInfoWindow.close();
+                    }
+                }
+                
+                
+                //Set map center
+                
+                //iterate through map data for each point (even if 1)
+                var mapData = data.mapData;
+                var markerBounds = new google.maps.LatLngBounds();
+                var randomPoint, i;
+                console.log('hey'+mapData.length)
+                if(mapData.length >1){
+					for(var i=0, j=mapData.length; i<j; i++){
+						//Add marker for each point 
+
+                        if(mapData[i].lat && mapData[i].lng){
+                            
+                            var myLatlng = new google.maps.LatLng(mapData[i].lat, mapData[i].lng);
+                            addMarker({position: myLatlng, markerText: mapData[i].markerText,selected:mapData[i].selected  });
+                            markerBounds.extend(myLatlng);
+                        }
+					}
+                    map.fitBounds(markerBounds);
+                }
+                else{
+                    map.setCenter(data.mapOptionsCenter);
+					for(var i=0, j=mapData.length; i<j; i++){
+						//Add marker for each point 
+						var myLatlng = new google.maps.LatLng(mapData[i].lat, mapData[i].lng);
+						console.log('VF Data33:='+mapData[i].lat);
+                        if(mapData[i].lat && mapData[i].lng){
+                            addMarker({position: myLatlng, markerText: mapData[i].markerText,selected:mapData[i].selected});
+                        }
+					}
+                    map.setZoom(16);
+                }
+            }
+            
+            //Let LC know that VF page been loaded along with it's URL
+            //LC will then send the data
+            //This is done because LC has no way to know that VF page in iFrame has been loaded, event listener set and ready for data
+            var vfHost = "{!LEFT($CurrentPage.URL,FIND('/',$CurrentPage.URL,9))}";
+            sendToLC({'state':'LOADED', 'vfHost': vfHost});
+            </script>      
+    </body>
+    </html>
+</apex:page>

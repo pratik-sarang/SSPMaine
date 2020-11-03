@@ -1,0 +1,260 @@
+<!--
+* name          : SspAuthRepNextStepUpdates
+* @description  : To Show Next step for Reps Assisters.
+* @author       : Kyathi
+* @date         :  6/10/2020
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+*Kyathi                      6/10/2020               HTML Structure
+-->
+<template>
+    <template if:true={showSpinner}>
+        <c-ssp-spinner></c-ssp-spinner>
+    </template>
+    <main
+        class="ssp-color_monoOmega ssp-fontFamily_ArvoRegular  ssp-nextStepContainer slds-is-relative"
+    >
+        <div
+            class="ssp_headingBar ssp-horizantalPadding slds-p-horizontal_xx-large slds-p-vertical_medium ssp-bg_appHeaderGradient slds-grid slds-wrap slds-grid_vertical-align-center "
+        >
+            <div class="ssp-container_width slds-grid slds-wrap">
+                <h1
+                    class="ssp-fontFamily_popinBold ssp-color_monoBody ssp-benefitsApp"
+                >
+                    {label.benefitsApplication}
+                </h1>
+            </div>
+            <img
+                src={backgroundImg}
+                class="ssp-backgroundImage ssp-mobileBackgroundImage"
+                aria-hidden="true"
+                role="presentation"
+                alt={label.benefitsApplication}
+            />
+            <img
+                src={desktopBackgroundImg}
+                class="ssp-backgroundImage ssp-desktopBackgroundImage"
+                aria-hidden="true"
+                role="presentation"
+                alt={label.benefitsApplication}
+            />
+        </div>
+        <div
+            class="ssp-innerContainer ssp-horizantalPadding slds-p-horizontal_xx-large slds-is-relative"
+        >
+            <h2
+                class="ssp-topHeader ssp-color_greenAlpha ssp-fontFamily_popinBlack ssp-boderBottom5X ssp-margin-bottom_medium ssp-mobilePadding"
+            >
+                {label.nextStep}
+            </h2>
+            <div
+                if:true={authFullMatchNoProgramAccess}
+                class="ssp-nextStepUpdate slds-m-bottom_large"
+            >
+                <h3>{label.sspNoAppPermissionText1}</h3>
+                <h4>{label.sspNoAppPermissionText2}</h4>
+                <h5 class="slds-m-top_medium">
+                    {label.sspNoAppPermissionText3}
+                </h5>
+            </div>
+            <div
+                if:true={authFullMatchSentNotification}
+                class="ssp-nextStepUpdate slds-m-bottom_large"
+            >
+                <h6>{label.sspNoCasePermissionText1}</h6>
+                <p class="slds-m-top_medium">
+                    {label.sspNoCasePermissionText2}
+                </p>
+            </div>
+            <div
+                if:true={clientNoCommunicationPref}
+                class="ssp-nextStepUpdate slds-m-bottom_large"
+            >
+                <p>{label.sspNoCaseAccessText1}</p>
+                <p class="slds-m-top_medium">{label.sspNoCaseAccessText2}</p>
+                <div class="slds-m-top_medium">
+                    <span>
+                        {label.sspNoCaseAccessText3}
+                    </span>
+                    <a
+                        title={label.sspMAPLinkTitle}
+                        class="slds-m-horizontal_xx-small ssp-color_blueAlpha"
+                        tabindex="0"
+                        href={mapURLLink}
+                        target="_blank"
+                    >
+                        {label.sspMapLink}
+                    </a>
+                    <span>{label.sspNoCaseAccessText4}</span>
+                </div>
+            </div>
+            <div
+                if:true={anyProgramNoCommunicationPref}
+                class="ssp-nextStepUpdate slds-m-bottom_large"
+            >
+                <p>{label.sspNoCaseAccessText5}</p>
+                <p class="slds-m-top_medium">{label.sspNoCaseAccessText6}</p>
+                <div class="slds-m-top_medium">
+                    <span>
+                        {label.sspNoCaseAccessText3}
+                    </span>
+                    <a
+                        title={label.sspMAPLinkTitle}
+                        class="slds-m-horizontal_xx-small ssp-color_blueAlpha"
+                        tabindex="0"
+                        href={mapURLLink}
+                        target="_blank"
+                    >
+                        {label.sspMapLink}
+                    </a>
+                    <span>{label.sspNoCaseAccessText4}</span>
+                    <span>{label.sspNoCaseAccessText7}</span>
+                </div>
+            </div>
+            <div
+                if:true={authRequestNonMedicaidAccess}
+                class="ssp-nextStepUpdate slds-m-bottom_large"
+            >
+                <p>{label.sspNoCaseAccessText8}</p>
+                <p class="slds-m-top_medium">{label.sspNoCaseAccessText9}</p>
+                <p class="slds-m-top_medium">{label.sspNoCaseAccessText10}</p>
+            </div>
+            <div
+                if:true={authRequestPartialMatch}
+                class="ssp-nextStepUpdate slds-m-bottom_large"
+            >
+                {label.sspIndividualKnownText1}
+            </div>
+            <div
+                if:true={authNoMatchSentNotification}
+                class="ssp-nextStepUpdate slds-m-bottom_large"
+            >
+                <p>{label.sspAuthRequestReceivedText1}</p>
+                <p class="slds-m-top_medium">
+                    {label.sspAuthRequestReceivedText2}
+                </p>
+                <p class="slds-m-top_medium">
+                    {label.sspAuthRequestReceivedText3}
+                </p>
+            </div>
+            <div
+                if:true={noCaseMatch}
+                class="ssp-nextStepUpdate slds-m-bottom_large"
+            >
+                {label.sspIndividualNotKnownText1}
+            </div>
+            <div
+                if:true={authAssisterHaveAccess}
+                class="ssp-nextStepUpdate slds-m-bottom_large"
+            >
+                {label.sspAuthAlreadyHasAccess}
+            </div>
+            <div
+                if:true={accessPendingRequest}
+                class="ssp-nextStepUpdate slds-m-bottom_large"
+            >
+                <p>{label.sspAlreadyRequestedAccessText1}</p>
+                <p class="slds-m-top_medium">
+                    {label.sspAlreadyRequestedAccessText2}
+                </p>
+            </div>
+            <div
+                if:true={medicaidProgramRequestNoMatchOrInactive}
+                class="ssp-nextStepUpdate slds-m-bottom_large"
+            >
+                <p>{label.sspAuthRequestNotProcessedText1}</p>
+                <p class="slds-m-top_medium">
+                    {label.sspAuthRequestNotProcessedText2}
+                </p>
+                <div class="slds-m-top_medium">
+                    <span>
+                        {label.sspNoCaseAccessText3}
+                    </span>
+                    <a
+                        title={label.sspMAPLinkTitle}
+                        class="slds-m-horizontal_xx-small ssp-color_blueAlpha"
+                        tabindex="0"
+                        href={mapURLLink}
+                        target="_blank"
+                    >
+                        {label.sspMapLink}
+                    </a>
+                    <span>{label.sspReturnToDCBS}</span>
+                </div>
+            </div>
+            <div
+                if:true={anyProgramRequestNoMatchOrInactive}
+                class="ssp-nextStepUpdate slds-m-bottom_large"
+            >
+                <p>{label.sspAuthRequestNotProcessedText1}</p>
+                <p class="slds-m-top_medium">
+                    {label.sspAuthRequestNotProcessedText2}
+                </p>
+                <div class="slds-m-top_medium">
+                    <span>
+                        {label.sspNoCaseAccessText3}
+                    </span>
+                    <a
+                        title={label.sspMAPLinkTitle}
+                        class="slds-m-horizontal_xx-small ssp-color_blueAlpha"
+                        tabindex="0"
+                        href={mapURLLink}
+                        target="_blank"
+                    >
+                        {label.sspMapLink}
+                    </a>
+                    <span>{label.sspReturnToDCBS}</span>
+                    <span>{label.sspContactRegardingAuthApplication}</span>
+                </div>
+            </div>
+            <div
+                if:true={nonMedicaidRequestNoMatchOrInactive}
+                class="ssp-nextStepUpdate slds-m-bottom_large"
+            >
+                <p>{label.sspAuthRequestNotProcessedText1}</p>
+                <p class="slds-m-top_medium">
+                    {label.sspAuthRequestNotProcessedText2}
+                </p>
+                <p class="slds-m-top_medium">
+                    {label.sspAlternativelyCallDCBS}
+                </p>
+            </div>
+            <div
+                if:true={clientRejectedApplication}
+                class="ssp-nextStepUpdate slds-m-bottom_large"
+            >
+                <p>{label.sspAuthNotGivenAccessText1}</p>
+                <p class="slds-m-top_medium">
+                    {label.sspAuthNotGivenAccessText2}
+                </p>
+            </div>
+            <div
+                if:true={consentNotFullyGiven}
+                class="ssp-nextStepUpdate slds-m-bottom_large"
+            >
+                <p>{label.sspAuthMayNotCompleteApplicationText1}</p>
+                <p class="slds-m-top_medium">
+                    {label.sspAuthMayNotCompleteApplicationText2}
+                </p>
+            </div>
+            <div
+                if:true={consentFullyGiven}
+                class="ssp-nextStepUpdate slds-m-bottom_large"
+            >
+                <p>{label.sspFullConsentGiven}</p>
+            </div>
+        </div>
+        <div
+            class="ssp-footerContainer ssp-mobilePadding ssp-eligibilityResultFooter ssp-margin-bottom_xlarge ssp-horizantalPadding slds-p-horizontal_xx-large ssp-uploadProofForms"
+        >
+            <lightning-button
+                label={label.goDashboard}
+                onclick={navigateToDashboard}
+                variant="netural"
+                class="dd-slds-nav_btn-next ssp-button_neutral ssp-screenFooterNextBtn ssp-actionButtons"
+                title={label.goDashboard}
+            ></lightning-button>
+        </div>
+    </main>
+</template>

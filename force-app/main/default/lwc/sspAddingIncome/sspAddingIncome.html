@@ -1,0 +1,34 @@
+<template>
+    <!--
+* name 		: sspAddingIncome
+* @description 	: The component shows up when the user navigates to Income Summary page for the first time
+* @author 		: Soumyashree Jena
+* @date 		: 18/11/2019
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName	              MM/DD/YYYY	             A Brief Description about the Change
+-->
+    <div if:true={openModal}>
+        <c-ssp-Detailed-Information-Modal
+            header-value={customLabel.sspAddingIncomePopUpHeader}
+            open-model="true"
+            reference={reference}
+        >
+            <span slot="contentSlot">
+                <lightning-formatted-rich-text
+                    value={customLabel.sspAddingIncomePopUpContent}
+                ></lightning-formatted-rich-text>
+            </span>
+            <span slot="Footer" class="slds-col ssp-stacked-btn-width">
+                <lightning-button
+                    variant="brand"
+                    label={customLabel.sspNext}
+                    class="ssp-button_brand ssp-cardButton slds-align_absolute-center"
+                    onclick={closeModal}
+                    title={customLabel.sspGoToIncomeSummary}
+                ></lightning-button>
+            </span>
+        </c-ssp-Detailed-Information-Modal>
+    </div>
+</template>

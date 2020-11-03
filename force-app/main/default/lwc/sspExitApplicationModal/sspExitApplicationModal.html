@@ -1,0 +1,67 @@
+<!--
+* name          : sspExitApplicationModal
+* @description  : This component is used to save and exit out of the flow.
+* @author       : Shikha Khanuja and P V Siddarth
+* @date         : 15/11/2019
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName                MM/DD/YYYY               A Brief Description about the Change
+  Shikha Khanuja                12/04/19                            Development
+  P V Siddarth                  12/04/19                            Development
+-->
+
+<template>
+  
+  <template if:true={openModel}>
+    <c-ssp-detailed-information-modal
+      header-value={label.sspLeaveApplication}
+      open-model={openModel}
+      onclosemodal={handleProp}
+      reference={reference}
+    >
+    <template if:true={isLoading}>
+      <c-ssp-spinner></c-ssp-spinner>
+    </template>
+      <p
+        class="ssp-fontFamily_ArvoRegular ssp-color_monoOmega slds-p-bottom_large"
+        slot="contentSlot"
+      >
+        {label.sspLeaveTheApplication}
+      </p>
+      <p
+        class="ssp-fontFamily_ArvoRegular ssp-color_monoOmega slds-p-bottom_large"
+        slot="contentSlot"
+      >
+        {label.sspProgressWillBeLost}
+      </p>
+
+      <p class="ssp-fontFamily_popinBold ssp-color_monoBody" slot="contentSlot">
+        {label.sspPleaseNote}
+      </p>
+      <p
+        class="ssp-fontFamily_ArvoRegular ssp-color_monoOmega"
+        slot="contentSlot"
+      >
+        {label.sspCannotBeConsideredForBenefits}
+      </p>
+
+      <div slot="Footer" class="slds-grid slds-wrap slds-grid_align-spread">
+        <lightning-button
+          variant="brand"
+          label={summaryButtonLabel}
+          class="ssp-exitModalBtn ssp-exitSaveBtn ssp-button_brand slds-size_1-of-2 ssp-buttonText"
+          onclick={saveAndExitModal}
+        >
+        </lightning-button>
+        <lightning-button
+          variant="base"
+          label={label.sspCancel}
+          class="ssp-exitModalBtn ssp-cancelBtn ssp-button_base slds-size_1-of-2 ssp-buttonText"
+          onclick={cancelModal}
+        >
+        </lightning-button>
+      </div>
+    </c-ssp-detailed-information-modal>
+  </template>
+</template>

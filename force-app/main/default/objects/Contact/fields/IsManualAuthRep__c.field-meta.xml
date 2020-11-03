@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IsManualAuthRep__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>flag set to true for auth reps added manually in SSP. This will be false for auth reps added via day 0 data load.</description>
+    <externalId>false</externalId>
+    <label>Is Manual Auth Rep</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>

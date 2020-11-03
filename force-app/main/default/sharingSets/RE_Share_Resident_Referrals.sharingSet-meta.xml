@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <accessMappings>
+        <accessLevel>Edit</accessLevel>
+        <object>Account</object>
+        <objectField>Id</objectField>
+        <userField>Contact.Account</userField>
+    </accessMappings>
+    <accessMappings>
+        <accessLevel>Edit</accessLevel>
+        <object>Consent__c</object>
+        <objectField>Organization__c</objectField>
+        <userField>Contact.Account</userField>
+    </accessMappings>
+    <accessMappings>
+        <accessLevel>Edit</accessLevel>
+        <object>RE_Resource_Taxonomy__c</object>
+        <objectField>Resource__c.Organization__c</objectField>
+        <userField>Account</userField>
+    </accessMappings>
+    <accessMappings>
+        <accessLevel>Edit</accessLevel>
+        <object>Referral__c</object>
+        <objectField>ReferredAccountID__c</objectField>
+        <userField>Contact.Account</userField>
+    </accessMappings>
+    <accessMappings>
+        <accessLevel>Read</accessLevel>
+        <object>ReportConcern__c</object>
+        <objectField>Organization__c</objectField>
+        <userField>Account</userField>
+    </accessMappings>
+    <description>Share the resident&apos;s referral records with the corresponding organization&apos;s partners</description>
+    <name>RE - CP user accessible set</name>
+    <profiles>RE Community Partner User Profile</profiles>
+</SharingSet>

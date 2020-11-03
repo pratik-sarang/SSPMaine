@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Adoption &amp; Foster Care</masterLabel>
+        <translation>Adopción y cuidados de crianza</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Adult and Continuing Education</masterLabel>
+        <translation>Educación continua y para adultos</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Advocacy and Referrals</masterLabel>
+        <translation>Defensoría y referencias</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Agriculture Assistance</masterLabel>
+        <translation>Ayuda de agricultura</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Anger Management</masterLabel>
+        <translation>Manejo de la ira</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Assisted Living</masterLabel>
+        <translation>Vida asistida</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Birth Control</masterLabel>
+        <translation>Métodos anticonceptivos</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Books</masterLabel>
+        <translation>Libros</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Bus Fare</masterLabel>
+        <translation>Tarifa de autobús</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Cancer Detection and Treatment</masterLabel>
+        <translation>Detección y tratamiento de cáncer</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Car Buying Assistance</masterLabel>
+        <translation>Ayuda para comprar un automóvil</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Car Rental - Cars to Work Program</masterLabel>
+        <translation>Alquiler de un automóvil - Programa Automóviles para Trabajo</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Car Repair Assistance</masterLabel>
+        <translation>Ayuda para reparar un automóvil</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Caregiver Subsidy</masterLabel>
+        <translation>Subsidio de persona a cargo de cuidados</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Cell Phones</masterLabel>
+        <translation>Teléfonos celulares</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Child Care Assistance</masterLabel>
+        <translation>Ayuda para Cuidados Infantiles</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Child/Adult Care Food Programs</masterLabel>
+        <translation>Programas de alimentación para menores/adultos</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Citizenship</masterLabel>
+        <translation>Ciudadanía</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Civil Rights</masterLabel>
+        <translation>Derechos civiles</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Clothes</masterLabel>
+        <translation>Ropa</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Community Centers</masterLabel>
+        <translation>Centros comunitarios</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Community Clinics</masterLabel>
+        <translation>Clínicas comunitarias</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Community Groups</masterLabel>
+        <translation>Grupos comunitarios</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Computer Skills</masterLabel>
+        <translation>Habilidades informáticas</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Consumer Complaints</masterLabel>
+        <translation>Quejas de consumidores</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Consumer Education and Protection</masterLabel>
+        <translation>Educación y protección de consumidores</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Consumer Regulation and Standards</masterLabel>
+        <translation>Regulaciones y normas para consumidores</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Counseling</masterLabel>
+        <translation>Terapia psicológica</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Courts and Detention Centers</masterLabel>
+        <translation>Tribunales y centros de detención</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Credit Counseling</masterLabel>
+        <translation>Asesoramiento para crédito</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Crisis Intervention</masterLabel>
+        <translation>Intervención para crisis</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Crisis Shelter</masterLabel>
+        <translation>Refugio para crisis</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Dental</masterLabel>
+        <translation>Dental</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Do Not Call Registry</masterLabel>
+        <translation>Registro de no llamar</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Domestic Violence Shelter</masterLabel>
+        <translation>Refugio para violencia doméstica</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>ESL - English as a Second Language</masterLabel>
+        <translation>ESL - Inglés como segundo idioma</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Emergencies &amp; Disasters</masterLabel>
+        <translation>Emergencias y desastres</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Emergency Payment Assistance</masterLabel>
+        <translation>Ayuda con los pagos de emergencias</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Employment Programs</masterLabel>
+        <translation>Programas de empleo</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Energy Efficiency Upgrades</masterLabel>
+        <translation>Mejoras de eficiencia energética</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Environmental Conservation</masterLabel>
+        <translation>Conservación del medio ambiente</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Expense Assistance</masterLabel>
+        <translation>Ayuda para gastos</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Farmers Markets</masterLabel>
+        <translation>Mercados de productores de granja</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Fertility</masterLabel>
+        <translation>Fertilidad</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Financial Aid</masterLabel>
+        <translation>Ayuda financiera</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Financial Planning</masterLabel>
+        <translation>Planificación financiera</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Food Delivery</masterLabel>
+        <translation>Entrega de alimentos</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Food Distribution Sites</masterLabel>
+        <translation>Sitios de distribución de alimentos</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Food Pantries/Banks</masterLabel>
+        <translation>Bancos de alimentos</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Food Stamps - SNAP and WIC</masterLabel>
+        <translation>Cupones de alimentos - SNAP y WIC</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Food Stamps/SNAP/WIC</masterLabel>
+        <translation>Cupones de alimentos/SNAP/WIC</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Foreclosure Counseling</masterLabel>
+        <translation>Asesoramiento para ejecuciones hipotecarias</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>GED/HS Diploma</masterLabel>
+        <translation>Diploma de enseñanza secundaria/GED</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Gardening Programs</masterLabel>
+        <translation>Programas de jardinería</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Gas Money</masterLabel>
+        <translation>Dinero para combustible</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Government Support</masterLabel>
+        <translation>Apoyo del gobierno</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>HIV Testing, Prevention, Treatment</masterLabel>
+        <translation>Pruebas, prevención y tratamiento de VIH</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Health Education</masterLabel>
+        <translation>Educación en salud</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Health Insurance Counseling</masterLabel>
+        <translation>Asesoramiento para seguro de salud</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Health Screening</masterLabel>
+        <translation>Control de salud</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Healthcare &amp; Appointment Ride Programs</masterLabel>
+        <translation>Programas para atención de la salud y transporte para citas médicas</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Help Finding School</masterLabel>
+        <translation>Ayuda para encontrar escuela</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Help paying for Utilities</masterLabel>
+        <translation>Ayuda para pagar servicios públicos</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Help paying for Utilities/Expenses</masterLabel>
+        <translation>Ayuda para pagar servicios públicos/gastos</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Help paying for funeral</masterLabel>
+        <translation>Ayuda para pagar un funeral</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Help paying for medical devices</masterLabel>
+        <translation>Ayuda para pagar dispositivos médicos</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Help paying for prescriptions</masterLabel>
+        <translation>Ayuda para pagar medicamentos con receta</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Homebuyer Education</masterLabel>
+        <translation>Educación para comprador de vivienda</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Homeless Shelter</masterLabel>
+        <translation>Refugio para personas sin hogar</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Hospice Care</masterLabel>
+        <translation>Atención para enfermos terminales</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Household Items and Appliances</masterLabel>
+        <translation>Artículos y electrodomésticos del hogar</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Housing Search Assistance</masterLabel>
+        <translation>Ayuda para búsqueda de vivienda</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Independent Living</masterLabel>
+        <translation>Vida independiente</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Inpatient Treatment</masterLabel>
+        <translation>Tratamiento para pacientes internados</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Interview Preparation</masterLabel>
+        <translation>Preparación de entrevistas</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Job Search</masterLabel>
+        <translation>Búsqueda de empleo</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Life Skills</masterLabel>
+        <translation>Habilidades para la vida</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Literacy Programs</masterLabel>
+        <translation>Programas de lectura y escritura</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Maternity Care</masterLabel>
+        <translation>Atención para maternidad</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Mediation</masterLabel>
+        <translation>Mediación</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Medicaid</masterLabel>
+        <translation>Medicaid</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Medical Expense Assistance</masterLabel>
+        <translation>Ayuda con gastos médicos</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Medical Public Assistance</masterLabel>
+        <translation>Asistencia médica pública</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Medicare</masterLabel>
+        <translation>Medicare</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Mental Health</masterLabel>
+        <translation>Salud mental</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Mental Health Care</masterLabel>
+        <translation>Cuidados de salud mental</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Mental Health Facilities</masterLabel>
+        <translation>Centros de atención de salud mental</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Mental Health Support Groups</masterLabel>
+        <translation>Grupos de apoyo de salud mental</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Mental Health Treatment</masterLabel>
+        <translation>Tratamiento de salud mental</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Mortgage Payment Assistance</masterLabel>
+        <translation>Ayuda con los pagos de la hipoteca</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Municipal Services &amp; Government Offices</masterLabel>
+        <translation>Servicios municipales y oficinas gubernamentales</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Nutrition Education</masterLabel>
+        <translation>Educación en nutrición</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Outpatient Treatment</masterLabel>
+        <translation>Tratamiento para pacientes ambulatorios</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Pain Management</masterLabel>
+        <translation>Manejo del dolor</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Personal Care Items</masterLabel>
+        <translation>Artículos de cuidado personal</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Physical Therapy</masterLabel>
+        <translation>Fisioterapia</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Post-natal Care</masterLabel>
+        <translation>Atención después del nacimiento</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Predatory Lending Assistance</masterLabel>
+        <translation>Ayuda con préstamos abusivos</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Primary Care</masterLabel>
+        <translation>Atención primaria</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Professional Associations</masterLabel>
+        <translation>Asociaciones profesionales</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Property Tax Rebate Information</masterLabel>
+        <translation>Información de reembolso de impuesto sobre la propiedad</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Public Housing</masterLabel>
+        <translation>Vivienda pública</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Public Transportation</masterLabel>
+        <translation>Transporte público</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Records, Permits, Licenses</masterLabel>
+        <translation>Registros, permisos y licencias</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Rent Payment Assistance</masterLabel>
+        <translation>Ayuda con los pagos de alquiler</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Repair Assistance</masterLabel>
+        <translation>Ayuda para reparaciones</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Residential Treatment</masterLabel>
+        <translation>Tratamiento residencial</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Resume Preparation</masterLabel>
+        <translation>Preparación de currículo</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Retirement</masterLabel>
+        <translation>Jubilación</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Ride Sharing Programs</masterLabel>
+        <translation>Programas de transporte compartido</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Scholarships</masterLabel>
+        <translation>Becas</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>School Counseling</masterLabel>
+        <translation>Asesoramiento escolar</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Schools</masterLabel>
+        <translation>Escuelas</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Screening</masterLabel>
+        <translation>Control</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Senior Living</masterLabel>
+        <translation>Vida de adultos mayores</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Senior and Disabled Ride Programs</masterLabel>
+        <translation>Programas de transporte para adultos mayores y discapacitados</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Skills Assessment</masterLabel>
+        <translation>Evaluación de habilidades</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Smoking Cessation</masterLabel>
+        <translation>Dejar de fumar</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Sober Living</masterLabel>
+        <translation>Vida sobria</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Social Security</masterLabel>
+        <translation>Seguro Social</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Social Security Disability Insurance (SSDI)</masterLabel>
+        <translation>Seguro de discapacidad del Seguro Social (SSDI)</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Specialized Training</masterLabel>
+        <translation>Capacitación especializada</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Stolen Identity</masterLabel>
+        <translation>Robo de identidad</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Substance Abuse</masterLabel>
+        <translation>Abuso de sustancias</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Supported Employment</masterLabel>
+        <translation>Empleo con apoyo</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>TANF</masterLabel>
+        <translation>TANF</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Tax Preparation Assistance</masterLabel>
+        <translation>Ayuda en la preparación de declaración de impuestos</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Thrift Shops</masterLabel>
+        <translation>Tiendas de artículos usados</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Transitional Housing Shelter</masterLabel>
+        <translation>Vivienda transicional</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Translation/Interpretation</masterLabel>
+        <translation>Traducción/Interpretación</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Tutoring</masterLabel>
+        <translation>Tutorías</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Unemployment Insurance</masterLabel>
+        <translation>Seguro de desempleo</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Vaccinations</masterLabel>
+        <translation>Vacunas</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>View All Consumer</masterLabel>
+        <translation>Ver todo de Consumidores</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>View All Education</masterLabel>
+        <translation>Ver todo de Educación</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>View All Employment</masterLabel>
+        <translation>Ver todo de Empleo</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>View All Financial</masterLabel>
+        <translation>Ver todo de Finanzas</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>View All Food</masterLabel>
+        <translation>Ver todo de Alimentos</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>View All Health/Medical</masterLabel>
+        <translation>Ver todo de Salud/Medicina</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>View All Housing</masterLabel>
+        <translation>Ver todo de Vivienda</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>View All Legal</masterLabel>
+        <translation>Ver todo de Legal</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>View All Mental Health &amp; Addiction</masterLabel>
+        <translation>Ver todo de Salud mental y Adicciones</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>View All Transportation</masterLabel>
+        <translation>Ver todo de Transporte</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Vision</masterLabel>
+        <translation>Visión</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Vocational Rehabilitation (for Disabilities)</masterLabel>
+        <translation>Rehabilitación Vocacional (para discapacidades)</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Volunteer Opportunities</masterLabel>
+        <translation>Oportunidades de voluntariado</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Voter Registration</masterLabel>
+        <translation>Registro de votantes</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Worker&apos;s Compensation</masterLabel>
+        <translation>Indemnización laboral</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Workplace Rights</masterLabel>
+        <translation>Derechos en el lugar de trabajo</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Youth Shelter</masterLabel>
+        <translation>Vivienda para jóvenes</translation>
+    </valueTranslation>
+</GlobalValueSetTranslation>

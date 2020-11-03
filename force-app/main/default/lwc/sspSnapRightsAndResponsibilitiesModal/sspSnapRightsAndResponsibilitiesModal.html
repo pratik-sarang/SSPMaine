@@ -1,0 +1,124 @@
+<!--
+* name 		: sspSnapRightsAndResponsibilitiesModal
+* @description 	: This component opens the SNAP Rights and Responsibilities Modal.
+* @author 		: Karthik Velu, Sai Kiran.
+* @date 		: 2/3/2020
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName	      MM/DD/YYYY	      A Brief Description 
+                  about the Change
+-->
+<template>
+    <div class="ssp-medicaidPenaltyWarning">
+        <c-ssp-detailed-information-modal
+            header-value={label.sspSnapRightsAndResponsibilities}
+            open-model={openModel}
+            onclosemodal={closeSnapRightsModal}
+            reference={reference}
+            scroll-event={trueValue}
+            scroll-bottom-event={trueValue}
+            onenablemodalbuttons={enableModalButtons}
+        >
+            <span
+                class="ssp-mainContent ssp-fontFamily_ArvoRegular ssp-color_monoOmega ssp-margin-bottom_large"
+                slot="contentSlot"
+            >
+                <div class="ssp-margin-bottom_large ssp-fontWeight_bold" tabindex="0">
+                    {label.sspPenaltyWarning}
+                </div>
+                <div class="ssp-margin-bottom_large" tabindex="0">
+                    {label.sspAnyoneInYour}
+                </div>
+                <div class="ssp-margin-bottom_large" tabindex="0">
+                    {label.sspFollowTheseRules}
+                </div>
+
+                <ul>
+                    <li class="ssp-margin-bottom_large" tabindex="0">
+                            {label.sspGiveFalseInformation}
+                    </li>
+                    <li class="ssp-margin-bottom_large" tabindex="0">
+                       {label.sspNotTradeSell}
+                    </li>
+                    <li class="ssp-margin-bottom_large" tabindex="0">
+                       {label.sspToBuyIneligibleItems}
+                    </li>
+                    <li class="ssp-margin-bottom_large" tabindex="0">
+                        {label.sspUseSomeoneElse}
+                    </li>
+                    <li class="ssp-margin-bottom_large" tabindex="0">
+                       {label.sspForSomeoneOutside}
+                    </li>
+                    <li class="ssp-margin-bottom_large" tabindex="0">
+                        {label.sspSnapEligibleFood}
+                    </li>
+                    <li class="ssp-margin-bottom_large" tabindex="0">
+                        {label.sspSellFoodPurchased}
+                    </li>
+                    <li class="ssp-margin-bottom_large" tabindex="0">
+                       {label.sspCooperateWithQuality}
+                    </li>
+                </ul>
+                <div class="ssp-margin-bottom_large" tabindex="0">
+                    {label.sspIfYouBreak}
+                </div>
+                <div class="ssp-margin-bottom_large" tabindex="0">
+                    {label.sspHouseholdsFoundGuilty}
+                </div>
+                <div class="ssp-margin-bottom_large" tabindex="0">
+                    {label.sspRecipientsFoundGuilty}
+                </div>
+                <div class="ssp-margin-bottom_large" tabindex="0">
+                    {label.sspYouWillNotGetSnapBenefits}
+                </div>
+                <div class="ssp-margin-bottom_large" tabindex="0">
+                    {label.sspFleeingFelon}
+                </div>
+                <div class="ssp-margin-bottom_large" tabindex="0">
+                    {label.sspWhatWeDo}
+                </div>
+                <div class="ssp-margin-bottom_large" tabindex="0">
+                    {label.sspIfAnyInformation}
+                </div>
+                <div class="ssp-margin-bottom_large ssp-fontWeight_bold" tabindex="0">
+                    {label.sspPrivacyAct}
+                </div>
+                <div class="ssp-margin-bottom_large" tabindex="0">
+                    {label.sspTheCollectionOfThis}
+                </div>
+                <div class="ssp-margin-bottom_large" tabindex="0">
+                    {label.sspDisclosedToOther}
+                </div>
+                <div class="ssp-margin-bottom_large" tabindex="0">
+                    {label.sspIfSnapClaimArises}
+                </div>
+                <div class="ssp-margin-bottom_large" tabindex="0">
+                    {label.sspProvidingTheRequested}
+                </div>
+                <div class="ssp-margin-bottom_large ssp-fontWeight_bold ssp-last-focus-element" tabindex="0">
+                    {label.sspWeCheckWhatYou}
+                </div>
+                <div tabindex="0">
+                    {label.sspWeUseComputer}{label.sspThingsWeMightCheck}
+                </div>
+            </span>
+
+            <span slot="Footer" class="slds-grid slds-gutters">
+                <div class="slds-col slds-size_1-of-2">
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-button
+                        name="Agree"
+                        variant="neutral"
+                        title={label.sspAgreeButtonAlternate}
+                        class="ssp-button_neutral"
+                        label={label.sspAgreeButton}
+                        disabled={buttonDisability}
+                        onclick={handleOnClick}
+                    ></lightning-button>
+                </div>
+            </span>
+        </c-ssp-detailed-information-modal>
+    </div>
+</template>

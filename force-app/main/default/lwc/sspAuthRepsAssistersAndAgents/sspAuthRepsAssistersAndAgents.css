@@ -1,0 +1,138 @@
+.ssp-reps-app-header {
+    margin-bottom: 1.875rem;
+}
+.ssp-reps-text {
+    font-size: 1rem;
+    padding-left: 8.75rem;
+}
+.ssp-auth-reps {
+    font-size: 1rem;
+}
+.ssp-list-margin {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.ssp-clickable-text {
+    text-decoration: underline;
+}
+.ssp-m-vertical-card {
+    margin-top: 0.938rem;
+    margin-bottom: 0.938rem;
+}
+.ssp-text-margin-small {
+    margin-bottom: 1.875rem;
+}
+.ssp-m-section {
+    margin-top: 2rem;
+}
+.ssp-m-button {
+    margin-top: 1.875rem;
+    margin-bottom: 1.875rem;
+}
+.ssp-auth-reps-heading {
+    font-size: 1.125rem;
+    margin-bottom: 0.313rem;
+}
+.ssp-dot {
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    margin-right: 10px;
+    display: inline-block;
+}
+.ssp-bullet-points p {
+    display: flex;
+    align-items: center;
+}
+.ssp-centerText {
+    font-size: 0.813rem;
+}
+
+.ssp-cardHeading {
+    font-size: 0.813rem;
+}
+
+.ssp-cardSubHeading {
+    font-size: 0.813rem;
+}
+
+.ssp-horizontal-rule {
+    height: 0.063rem;
+    border-radius: 0.156em;
+    margin: 1em 0;
+    border: none;
+}
+.ssp-horizontal-rule.ssp-horizontal-rule-button {
+    margin: 1.875rem 0 1.5rem;
+}
+.ssp-horizontal-rule.ssp-horizontal-rule-middle {
+    margin: 1.875rem 0 1rem;
+}
+.ssp-horizontal-rule.ssp-horizontal-rule-top {
+    margin: 0 0 1rem;
+}
+.ssp-action-btn-section {
+    margin: 100px 0 60px 0;
+}
+.ssp-firstGroupBtn {
+    margin-right: 30px;
+}
+.ssp-permission-details td {
+    font-size: 0.813rem;
+}
+.ssp-permission-details tr td:last-child {
+    font-size: 1rem;
+}
+
+.ssp-WorkerPortal{
+    margin-bottom: 30px;
+}
+
+.ssp-add-auth-rep-program-header-text {
+    font-size: 2.625rem;
+}
+
+.ssp-horizontal-rule-heading  {
+    height: .313rem;
+    border-radius: .156rem;
+    border: none;
+}
+@media only screen and (max-device-width: 768px) {
+    .ssp-reps-text {
+        padding-left: 1.875rem;
+    }
+    .ssp-permission-details tr td{
+        display: block;
+        width: 100%;
+    }
+
+    .ssp-permission-details tr{
+        margin-bottom: 15px;
+        display: block;
+        width: 100%;
+    }
+
+    .ssp-permission-details tr:last-child{
+        margin-bottom: 0;
+    }
+
+    .ssp-permission-details tr:first-child{
+        margin-top: 5px;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .ssp-firstGroupBtn {
+        padding-right: 10px;
+        margin-right: 0;
+    }
+    .ssp-secondGroupBtn {
+        padding-left: 10px;
+    }
+    .ssp-firstGroupBtn,
+    .ssp-secondGroupBtn {
+        width: 50%;
+    }
+    .ssp-footerBtnNext {
+        margin-bottom: 30px;
+    }
+}

@@ -1,0 +1,62 @@
+<!--
+
+* name : SspEligibilityResultsLoadingPage
+* @description :This is html for eligibility results loading page .
+* @author : Kyathi Kanumuri
+* @date : 2/2/2020
+* MODIFICATION LOG:
+* DEVELOPER             DATE            DESCRIPTION
+* ________________________________________________________________________________
+
+* FE: Kyathi                2/11/2020     Creating HTML Structure
+-->
+<template>
+    <div class="ssp-eligibilityLoadingPageMainContainer" if:false={isNotAccessible}>
+        <div
+            class="sspHeadingBar slds-p-horizontal_xx-large slds-p-vertical_medium ssp-bg_appHeaderGradient slds-grid slds-wrap slds-grid_vertical-align-center"
+            >
+            <div class="ssp-container_width slds-grid slds-wrap">
+                <h1 class="ssp-fontFamily_popinBold ssp-eligibilityResultsHeader">BENEFITS APPLICATION</h1>
+            </div>
+        </div>
+        <div class="ssp-eligibilityLoadingPage_container">
+            <div class="ssp-bodyContainer">
+                <div class="ssp-loaderContainer">
+                    <img
+                        alt="Spinner"
+                        src={loadingSpinner}
+                        class="ssp-spinner"
+                    />
+                </div>
+                <div class="ssp-loader-container">
+                    <template for:each={loaderObject} for:item="item">
+                        <div key={item.id} class="ssp-message-container slds-grid slds-wrap slds-p-vertical_small">
+                            <div if:true={item.isGearVisible} class="slds-large-size_2-of-12 slds-text-align_right">
+                                <img alt="Gear Icon" src={gearSrc}/>
+                            </div>
+                            <div if:true={item.isTickVisible} class="slds-large-size_2-of-12 slds-text-align_right">
+                                <img alt="Success Tick Icon" src={successTickSrc}/>
+                            </div>
+                            <div if:true={item.isMessageVisible} class="slds-large-size_10-of-12 slds-p-left_medium">
+                                {item.message}
+                            </div>
+                        </div>
+                    </template>
+                </div>
+                <div class="slds-m-top_large ssp-color_monoOmega ssp-fontFamily_popinBold ssp-loadingInformation">
+                    <span>
+                        {label.sspLoadingTextLine3}
+                    </span>
+                    <span class="ssp-displayNextLine">
+                        {label.sspLoadingTextLine4}
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <template if:true={showAccessDeniedComponent}>
+        <c-ssp-access-denied></c-ssp-access-denied>
+    </template>
+    <!--<c-ssp-logging-and-error-handling-modal if:true={showErrorModal} error-id={errorMsg} onprogressvaluechange={closeError}>
+    </c-ssp-logging-and-error-handling-modal>-->
+</template>

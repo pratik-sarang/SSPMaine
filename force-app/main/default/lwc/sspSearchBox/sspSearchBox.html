@@ -1,0 +1,38 @@
+<!--
+* name          : sspSearchBox.
+* @description  : This is component is used to search data.
+* @author       : Chirag.
+* @date         : 12/11/2019
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName                MM/DD/YYYY               A Brief Description about the Change
+  Chirag                    12/11/2019                          Initial Version
+-->
+<template>
+    <div class="ssp-searchBox">
+        <p class="ssp-searchBox-outertext ">Search</p>
+        <div class="ssp-searchBox-outer">
+            <div onkeyup={handleKeyUp} class="slds-grid slds-wrap">
+                <div
+                    if:true={showBackIcon}
+                    class="ssp-chevronleft-icon ssp-bg_whiteAlpha"
+                >
+                    <lightning-icon
+                        icon-name="utility:chevronleft"
+                        class=""
+                        size="xx-small"
+                    ></lightning-icon>
+                </div>
+                <lightning-input
+                    class="ssp-searchBox-child"
+                    placeholder="Search"
+                    name="sspSearch"
+                    type="search"
+                    onclick={handleSearchInput}
+                    onchange={handleSearchInput}
+                ></lightning-input>
+            </div>
+        </div>
+    </div>
+</template>

@@ -1,0 +1,37 @@
+<!--
+* name : sspDocumentCenterWizard
+* @description :This screen is used for Document Wizard.
+* @author : Aniket
+* @date : 4/10/2020
+* MODIFICATION LOG:
+* DEVELOPER             DATE            DESCRIPTION
+* ________________________________________________________________________________
+* Kyathi               4/10/2020     Creating HTML Structure
+* Aniket              4/10/2020     Integration of Salesforce with HTML
+-->
+<template>
+    <!--Spinner-->
+     <template if:true={showSpinner}>
+        <c-ssp-spinner></c-ssp-spinner>
+    </template>
+    <!-- Welcome -->
+    <c-ssp-document-center-wiz-welcome
+        show-welcome={showWelcome}
+        onloadrfiiteration={renderRFIScreen}
+    ></c-ssp-document-center-wiz-welcome>
+    <!-- RFI -->
+    <c-ssp-document-center-wiz-r-f-i
+        show-r-f-i={showRFI}
+        current-r-f-i={currentRFI}
+        onloadnextrfi={processNextRFI}
+        total--r-f-i-count={totalRFICount}
+        current-r-f-i-index={currentRFIIndex}
+        onfileuploadforrfi={collectUploadedFiles}
+    >
+    </c-ssp-document-center-wiz-r-f-i>
+    <!-- Submitted Documets -->
+    <c-ssp-document-center-wiz-summary
+        show-summary={showSummary}
+        uploaded-file-summary={uploadedFileSummary}
+    ></c-ssp-document-center-wiz-summary>
+</template>

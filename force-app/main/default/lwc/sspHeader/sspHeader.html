@@ -1,0 +1,589 @@
+<template>
+    <!--PERF Fix-->
+    <template if:true={showSpinner}>
+        <c-ssp-spinner></c-ssp-spinner>
+    </template>
+    <header>
+        <div class="slds-grid slds-wrap ssp-header-desktop">
+            <div if:true={isClientViewBanner} class="slds-grid slds-wrap slds-size_12-of-12 ssp-clientViewBanner">
+                <div>
+                    <span if:true={isNonCitizenClientView} onclick={openClientViewModal} role="button" tabindex="0" onkeydown={openClientViewModal}>
+                        <span class="ssp-returnIcon ssp-fontFamily_popinBlack">&lt;</span>
+                        <span class="ssp-return-to-assister-text">{customLabels.sspReturnToLastVisitedUserRoleDashboard}</span>
+                    </span>
+                    <span if:false={isNonCitizenClientView} onclick={openPersonalViewModal} role="button" tabindex="0" onkeydown={openPersonalViewModal}>
+                        <span class="ssp-returnIcon">&lt;</span>
+                        <span class="ssp-return-to-assister-text">{customLabels.sspReturnToLastVisitedUserRoleDashboard}</span>
+                    </span>
+                </div>
+                
+                <div class="ssp-clientFullName">
+                    <p if:true={isNonCitizenClientView} class="ssp-clinetViewBannerText">{customLabels.sspClientView}: {clientFullName}</p>
+                    <p if:false={isNonCitizenClientView} class="ssp-clinetViewBannerText">{customLabels.sspPersonalDashboard}: {clientFullName}</p>
+                </div>
+            </div>
+            <div
+                class="slds-grid slds-wrap slds-size_12-of-12 slds-p-vertical_x-small slds-p-horizontal_xx-large ssp-header ssp-bg_blueAlpha ssp-color_white"
+            >
+                <div class="ssp-container_width slds-grid slds-wrap">
+                    <div
+                        class="slds-large-size_12-of-12 slds-medium-size_12-of-12 slds-small-size_1-of-1"
+                    >
+                        <ul
+                            class="slds-list_horizontal slds-has-inline-block-links_space ssp-horizontal-menu"
+                        >
+                            <li tabindex="0" if:true={renderingMap.siteLogo.isAccessible}>
+                                <span
+                                    class="ssp-header-logo slds-m-right_large ssp-fontFamily_popinBold"
+                                >
+                                    <img
+                                        src={headerLogo}
+                                        onclick={navigateToHomePage}
+                                        alt={customLabels.sspFind}
+                                    />
+                                </span>
+                            </li>
+                            <li if:true={dashboardLinkRendering}>
+                                <a
+                                    href="javascript:void(0);"
+                                    class="ssp-fontFamily_popinBold"
+                                    title={customLabels.sspDashboard}
+                                    data-page="Home"
+                                    onclick={navigateToHomePage}
+                                    >{customLabels.sspDashboard}</a
+                                >
+                            </li>
+                            <li class="ssp-programs-dropdown" if:true={renderingMap.programsLink.isAccessible}>
+                                <a
+                                    tabindex="0"
+                                    href="javascript:void(0);"
+                                    class="ssp-fontFamily_popinBold"
+                                    >{customLabels.sspPrograms}</a
+                                >
+                                <lightning-icon
+                                    tabindex="0"
+                                    class="ssp-dropdown-focus-program"
+                                    icon-name="utility:chevrondown"
+	                                alternative-text={customLabels.sspDownArrow}
+                                >
+                                </lightning-icon>
+                                <div class="ssp-dropdown-content ssp-bg_white ssp-hover-dropdown-content">
+                                    <template
+                                        for:each={programsOptions}
+                                        for:item="programOption"
+                                    >
+                                        <a  tabindex="0" title={programOption.option.label}  key={programOption.index} data-program={programOption.option.value} onclick={programNavigation} 
+                                            >{programOption.option.label}</a
+                                        >
+                                    </template>
+                                </div>
+                            </li>
+                                    <template if:true={isNonPrimary}>
+
+                            <li if:true={repsAssisterLinkRendering} class="ssp-ellipsis ssp-reps-width">
+
+                                <a
+                                    tabindex="0"
+                                    class="ssp-fontFamily_popinBold"
+                                    title={customLabels.sspRepsAssistersAgents}
+                                    data-page="authRepsAssisters__c"
+                                    onclick={handleNavigation}
+                                    >{customLabels.sspRepsAssistersAgents}</a
+                                >
+                            </li>
+                            </template>
+                            <li if:true={renderingMap.helpResourceLink.isAccessible} class="ssp-ellipsis ssp-faq-width">
+                                <a
+                                    tabindex="0"
+                                    class="ssp-fontFamily_popinBold"
+                                    title={customLabels.sspHelpResources}
+									onclick={navigateToHelpFAQ}
+                                    >{customLabels.sspHelpResources}</a
+                                >
+                            </li>
+                            <li if:true={showQualifiedPortalLink} class="ssp-ellipsis ssp-entity-width">
+                                <a
+                                    tabindex="0"
+                                    class="ssp-fontFamily_popinBold"
+                                    title={customLabels.sspQualifiedPortal}
+                                    onclick={navigateToQualifiedPortal}
+                                    >{customLabels.sspQualifiedPortal}</a
+                                >
+                            </li>
+                            <li class="ssp-mail-container">
+                                <template if:true={renderingMap.messageCenterLink.isAccessible}>
+                                    <div if:true={hideMessageCenter} class="ssp-mail-rectangle" onclick={navigateToMessageCenter} >
+                                        <span class="ssp-mail-icon">
+                                            <lightning-icon
+                                                icon-name="utility:email"
+                                                alternative-text={customLabels.sspMailIcon}
+                                            >
+                                            </lightning-icon>
+                                        </span>
+                                        <!-- <span class="ssp-color_blueAlpha">5</span> -->
+                                    </div>
+                                </template>                                
+                            </li>
+                            <li class="ssp-profile-dropdown">
+                                <div class="slds-show_inline-block ssp-sign-in">
+                                    <a if:true={isUserLoggedIn}
+                                        href="javascript:void(0);"
+                                        class="slds-p-right_x-small ssp-first-name ssp-fontFamily_popinBold"
+                                        >{loginContactFirstName}</a
+                                    >
+                                    <a if:false={isUserLoggedIn}
+                                        href="javascript:void(0);"
+                                        onclick={navigateToLoginPage}
+                                        class="slds-p-right_x-small ssp-first-name ssp-fontFamily_popinBold"
+                                        >{customLabels.sspSignIn}</a
+                                    >
+                                    <img
+                                        src={profileIcon}
+                                        alt={customLabels.sspProfileIcon}
+                                    />
+                                </div>
+                                <div if:true={isUserLoggedIn}
+                                    class="ssp-dropdown-content ssp-bg_white ssp-fontFamily_popinBold"
+                                >
+                                    <div class="slds-text-align_center ssp-user-name ssp-bg_monoDelta">
+                                         {loginContactName}
+                                    </div>
+                                    
+                                    <!--Changed to showMyInfoNonPrimary #390435-->
+                                    <template if:true={showMyInfoNonPrimary}>
+                                        <a href="javascript:void(0);" 
+                                            title={customLabels.sspMyInfo}
+                                            onclick={handleNavigation}
+                                            data-page="myInformation__c" >
+                                            {customLabels.sspMyInfo}
+                                        </a>
+                                    </template>
+                                    <a href={logoutUrl}>{customLabels.sspSignOut}</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="slds-grid slds-wrap slds-size_12-of-12 slds-p-vertical_xx-small slds-p-horizontal_xx-large ssp-language-container"
+            >
+                <div class="ssp-container_width slds-text-align_right">
+                    <span class="ssp-color_white ssp-fontFamily_popinBold slds-m-right_xx-small ssp-language-text">{customLabels.sspLanguagesText}</span>
+                    <template if:true={isUserLoggedIn}>
+                       <div class="ssp-language-dropdown slds-p-right_small">
+                        <a
+                            href="javascript:void(0);"
+                            class="ssp-fontFamily_popinBold"
+                            >{chosenLanguage}</a
+                        >
+                        <lightning-icon
+                            icon-name="utility:chevrondown"
+                            tabindex="0"
+                            class="ssp-dropdownFocus"
+                            alternative-text={customLabels.sspDownArrow}
+                        >
+                        </lightning-icon>
+                        <div
+                            class="ssp-dropdown-content ssp-fontFamily_popinRegular ssp-bg_white ssp-hover-dropdown-content"
+                        >
+                            <template
+                                for:each={languageOptions}
+                                for:item="languageOption"
+                            >
+                                <a
+                                    tabindex="0"
+                                    key={languageOption.name}
+                                    onclick={languageChange}
+                                    onkeydown={languageChange}
+                                    data-value={languageOption.value}
+                                    >{languageOption.name}</a
+                                >
+                            </template>     
+                        </div>
+                       </div>
+                    </template>
+                    <template if:false={isUserLoggedIn}>
+                        <div class="slds-show_inline-block ssp-horizontal-languages">
+                           
+                           <template for:each={languageOptions} for:item="languageOption">
+                                <a
+                                    tabindex="0"
+                                    class="ssp-color_white ssp-fontFamily_popinBold"
+                                    key={languageOption.name}
+                                    onclick={languageChange}
+                                    onkeydown={languageChange}
+                                    data-value={languageOption.value}
+                                    >{languageOption.name}
+                                </a>
+                           </template>
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </div>
+
+        <div class="slds-grid slds-wrap ssp-header-mobile">
+            <div if:true={isClientViewBanner} class="slds-grid slds-wrap slds-size_12-of-12 ssp-clientViewBanner">
+                <div class="slds-size_1-of-4">
+                    <span if:true={isNonCitizenClientView} onclick={openClientViewModal}>
+                        <span class="ssp-returnIcon ssp-fontFamily_popinBlack">&lt;</span>
+                    </span>
+                    <span if:false={isNonCitizenClientView} onclick={openPersonalViewModal}>
+                        <span class="ssp-returnIcon">&lt;</span>
+                    </span>
+                </div>
+                <div class="slds-size_3-of-4">
+                    <p if:true={isNonCitizenClientView} class="ssp-clinetViewBannerText">{customLabels.sspClientView}: {clientFullName}</p>
+                    <p if:false={isNonCitizenClientView} class="ssp-clinetViewBannerText">{customLabels.sspPersonalDashboard}: {clientFullName}</p>
+                </div>
+            </div>
+            <div
+                class="slds-size_12-of-12 slds-p-horizontal_small slds-p-vertical_x-small ssp-hamburger-header ssp-bg_blueAlpha ssp-color_white"
+            >
+             <div class="slds-size_1-of-3">
+                <a
+                    href="javascript:void(0)"
+                    aria-label={customLabels.sspNavigation}
+                    class="ssp-mobile-hamburger ssp-color_white"
+                    onclick={openSideNav}
+                >
+                    <lightning-icon
+                        icon-name="utility:assignment"
+                        alternative-text={customLabels.sspNavigation}
+                        size="small"
+                    ></lightning-icon>
+                </a>
+            </div>
+               
+                <div class="ssp-header-logo  ssp-fontFamily_popinBold slds-size_1-of-3 slds-grid ssp-justifyCenter" if:true={renderingMap.siteLogo.isAccessible}>
+                    <img src={headerLogo} alt={customLabels.sspFind} onclick={navigateToHomePage}/>
+                </div>
+               
+                <div class="ssp-flex-center slds-size_1-of-3 ssp-justifyEnd">
+                    <div if:true={hideMessageCenter} class="ssp-mail-container">
+                        <div class="ssp-mail-rectangle" onclick={navigateToMessageCenter}>
+                            <span class="ssp-mail-icon">
+                                <lightning-icon
+                                    icon-name="utility:email"
+                                    alternative-text={customLabels.sspMailIcon}
+                                >
+                                </lightning-icon>
+                            </span>
+                            <!-- <span class="ssp-color_blueAlpha">5</span> -->
+                        </div>
+                    </div>
+                    <div class="ssp-profile-dropdown">
+                    <a if:false={isUserLoggedIn}
+                        href="javascript:void(0);"
+                        onclick={navigateToLoginPage}
+                        class="slds-p-right_x-small ssp-first-name ssp-fontFamily_popinBold"
+                        >{customLabels.sspSignIn}
+                    </a>
+                        <img
+                            src={profileIcon}
+                            alt={customLabels.sspProfileIcon}
+                        />
+                        <div if:true={isUserLoggedIn}
+                            class="ssp-dropdown-content ssp-bg_white ssp-fontFamily_popinBold"
+                        >
+                        <div class="slds-text-align_center ssp-user-name ssp-bg_monoDelta">
+                             {loginContactName}
+                        </div>
+                            <!--Changed to showMyInfoNonPrimary #390435-->
+                            <template if:true={showMyInfoNonPrimary}>
+                                <a href="javascript:void(0);"
+                                    data-page="myInformation__c" 
+                                    title={customLabels.sspMyInfo} 
+                                    onclick={handleNavigation}
+                                    >{customLabels.sspMyInfo}
+                                </a>
+                            </template>
+                            <a href={logoutUrl}>{customLabels.sspSignOut}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                id="mySidenav"
+                class="ssp-sidenav ssp-bg_blueAlpha ssp-color_white"
+            >
+                <div class="slds-p-around_small ssp-sidenav-header">
+                    <a
+                        href="javascript:void(0)"
+                        class="ssp-closebtn ssp-color_white"
+                        onclick={closeSideNav}
+                        >&times;</a
+                    >
+                    <span class="ssp-header-logo ssp-headerLogoMobile ssp-fontFamily_popinBold" if:true={renderingMap.siteLogo.isAccessible}>
+                        <img src={headerLogo} alt={customLabels.sspFind} onclick={navigateToHomePage}/>
+                    </span>
+                    <div class="ssp-flex-center">
+                        <div if:true={hideMessageCenter} class="ssp-mail-container">
+                            <div class="ssp-mail-rectangle" onclick={navigateToMessageCenter}>
+                                <span class="ssp-mail-icon">
+                                    <lightning-icon
+                                        icon-name="utility:email"
+                                        alternative-text={customLabels.sspMailIcon}
+                                    >
+                                    </lightning-icon>
+                                </span>
+                                <!-- <span class="ssp-color_blueAlpha">5</span> -->
+                            </div>
+                        </div>
+                        <div class="ssp-profile-dropdown">
+                            <a if:false={isUserLoggedIn}
+                                href="javascript:void(0);"
+                                onclick={navigateToLoginPage}
+                                class="slds-p-right_x-small ssp-first-name ssp-fontFamily_popinBold"
+                                >{customLabels.sspSignIn}
+                            </a>
+                            <img
+                                src={profileIcon}
+                                alt={customLabels.sspProfileIcon}
+                            />
+                            <div if:true={isUserLoggedIn} class="ssp-dropdown-content ssp-bg_white">
+                                <div class="slds-text-align_center ssp-user-name ssp-bg_monoDelta">
+                                    {loginContactName}
+                                </div>
+
+                                <!--Changed to showMyInfoNonPrimary #390435-->
+                                <template if:true={showMyInfoNonPrimary}>     
+                                    <a href="javascript:void(0);"
+                                        data-page="myInformation__c"
+                                        title={customLabels.sspMyInfo} 
+                                        onclick={handleNavigation}>
+                                        {customLabels.sspMyInfo}
+                                    </a>
+                                </template>
+                                <a href={logoutUrl}>{customLabels.sspSignOut}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a if:true={isUserLoggedIn}
+                    href="javascript:void(0)"
+                    class="ssp-dropdown-btn ssp-fontFamily_popinBold"
+                    title={customLabels.sspDashboard}
+                    onclick={togglePrograms}
+                    >{customLabels.sspDashboard}
+                    <lightning-icon
+                        class="ssp-chevrondown"
+                        icon-name="utility:chevrondown"
+                        alternative-text={customLabels.sspDownArrow}
+                    ></lightning-icon>
+                </a>
+                <div
+                    class="ssp-dropdown-container ssp-bg_blueAlpha ssp-color_white"
+                >
+                    <template for:each={dashboardOptions} for:item="dbOption">
+                        <div
+                            data-page={dbOption.apiName}
+                            class={dbOption.name}
+                            key={dbOption.index}
+                            onclick={handleNavigation}
+                        >
+                            <a
+                                tabindex="0"
+                                title={dbOption.option}
+                                class="ssp-fontFamily_popinRegular"
+                                onclick={handleNavigation}
+                                data-page={dbOption.apiName}
+                            >
+                                <span>{dbOption.option}</span>
+                                <div class="ssp-white-rect"></div>
+                            </a>
+                        </div>
+                    </template>
+                </div>
+                <a
+                    if:true={renderingMap.programsLink.isAccessible}
+                    href="javascript:void(0);"
+                    class="ssp-dropdown-btn ssp-fontFamily_popinBold"
+                    title={customLabels.sspPrograms}
+                    onclick={togglePrograms}
+                    >{customLabels.sspPrograms}
+                    <lightning-icon
+                        class="ssp-chevrondown"
+                        icon-name="utility:chevrondown"
+                        alternative-text={customLabels.sspDownArrow}
+                    ></lightning-icon>
+                </a>
+                <div class="ssp-dropdown-container ssp-bg_blueAlpha">
+                    <template
+                        for:each={programsOptions}
+                        for:item="programOption"
+                    >
+                        <a
+                            key={programOption.index}
+                            role="button" 
+                            tabindex="0"
+                            class="ssp-fontFamily_popinRegular"
+                            title={programOption.option}
+                            data-program={programOption.option.value}
+                            onclick={programNavigation}
+                            ><span>{programOption.option.label}</span>
+                            <div class="ssp-white-rect"></div>
+                        </a>
+                    </template>
+                </div>
+                <template if:true={isNonPrimary}>
+                <a if:true={repsAssisterLinkRendering}
+                    role="button" 
+                    tabindex="0"
+                    class="ssp-fontFamily_popinBold ssp-dropdown-btn-without-options"
+                    title={customLabels.sspRepsAssistersAgents}
+                    data-page="authRepsAssisters__c"
+                    onclick={handleNavigation}
+                    >{customLabels.sspRepsAssistersAgents}</a
+                ></template> 
+                <a
+                    if:true={renderingMap.helpResourceLink.isAccessible}
+                    role="button" 
+                    tabindex="0"
+                    class="ssp-fontFamily_popinBold ssp-dropdown-btn-without-options"
+                    title={customLabels.sspHelpResources}
+                    data-page="Knowledge_Categories__c"
+                    onclick={handleNavigation}
+                    >{customLabels.sspHelpResources}</a
+                >
+                <a
+                    if:true={showQualifiedPortalLink}
+                    role="button" 
+                    tabindex="0"
+                    class="ssp-fontFamily_popinBold ssp-dropdown-btn-without-options"
+                    title={customLabels.sspQualifiedPortal}
+                    onclick={navigateToQualifiedPortal}
+                    >{customLabels.sspQualifiedPortal}</a
+                >
+                
+                <hr class="ssp-hr-line" ></hr>
+                <a
+                    if:true ={isUserLoggedIn}
+                    href="#"
+                    class="ssp-dropdown-btn ssp-fontFamily_popinRegular"
+                    onclick={togglePrograms}
+                    >{chosenLanguage}
+                    <lightning-icon
+                        class="ssp-chevrondown"
+                        icon-name="utility:chevrondown"
+                        alternative-text={customLabels.sspDownArrow}
+                    ></lightning-icon>
+                </a>
+                <div if:true ={isUserLoggedIn} class="ssp-dropdown-container ssp-bg_blueAlpha">
+                    <template
+                        for:each={languageOptions}
+                        for:item="languageOptionMobile"
+                    >
+                        <a
+                            tabindex="0"
+                            class="ssp-fontFamily_popinRegular"
+                            key={languageOptionMobile.name}
+                            onclick={languageChange}
+                            data-value={languageOptionMobile.value}
+                            >{languageOptionMobile.name}
+                            <div class="ssp-white-rect"></div>
+                        </a>
+                    </template>
+                </div>
+                <div if:false={isUserLoggedIn} class="ssp-dropdown-unauth ssp-bg_blueAlpha">
+                    <template
+                        for:each={languageOptions}
+                        for:item="languageOptionMobile"
+                    >
+                        <a
+                            tabindex="0"
+                            class="ssp-fontFamily_popinRegular"
+                            key={languageOptionMobile.name}
+                            onclick={languageChange}
+                            data-value={languageOptionMobile.value}
+                            >{languageOptionMobile.name}
+                            <div class="ssp-white-rect"></div>
+                        </a>
+                    </template>
+                </div>
+                <a
+                    if:false={isUserLoggedIn}
+                    href="javascript:void(0);"
+                    onclick={navigateToLoginPage}
+                    class="ssp-fontFamily_popinRegular ssp-dropdown-btn-without-options"
+                    >{customLabels.sspSignIn}</a
+                >
+                <a
+                    if:true={isUserLoggedIn}
+                    href={logoutUrl}
+                    class="ssp-fontFamily_popinRegular ssp-dropdown-btn-without-options"
+                    onclick={closeSideNav}
+                    >{customLabels.sspSignOut}</a
+                >
+            </div>
+        </div>
+    </header>
+    <template if:true={showInterpreterModal}>
+        <c-ssp-get-interpreter-modal selected-language={selectedLanguage} onclosemodal={closeInterpreterModal}>
+        </c-ssp-get-interpreter-modal>
+    </template>
+        <template if:true={isClientViewModal}>
+        <c-ssp-detailed-information-modal
+            reference={reference}
+            open-model={isClientViewModal}
+            onclosemodal={closeClientViewModal}
+            header-value={customLabels.sspExitClientDashboard}
+        >
+        <div slot="contentSlot" class="ssp-clientViewModal ssp-fontFamily_ArvoRegular ssp-color_monoOmega">
+            <p>
+                {customLabels.sspExitClientViewMessage}
+            </p>
+        </div>
+        <div slot="Footer" class="slds-grid slds-wrap slds-size_1-of-1 ssp-stacked-btn-width">
+            <lightning-button
+            title={customLabels.sspYesExit}
+            label={customLabels.sspYesExit}
+            variant="brand"
+            class="ssp-button_brand slds-size_1-of-1"
+            onclick={returnToNonCitizenDashboard}
+            >
+            </lightning-button>
+            <lightning-button
+            title={customLabels.sspCancel}
+            label={customLabels.sspCancel}
+            class="ssp-button_base slds-size_1-of-1 ssp-cancel-button"
+            onclick={closeClientViewModal}
+            >
+            </lightning-button>
+        </div>
+        </c-ssp-detailed-information-modal>
+    </template>
+
+    <template if:true={isPersonalViewModal}>
+        <c-ssp-detailed-information-modal
+            reference={reference}
+            open-model={isPersonalViewModal}
+            onclosemodal={closePersonalViewModal}
+            header-value={customLabels.sspExitPersonalDashboard}
+        >
+        <div slot="contentSlot" class="ssp-clientViewModal ssp-fontFamily_ArvoRegular ssp-color_monoOmega">
+            <p>
+                {customLabels.sspExitPersonalDashboardMessage}
+            </p>
+        </div>
+        <div slot="Footer" class="slds-grid slds-wrap slds-size_1-of-1 ssp-stacked-btn-width">
+            <lightning-button
+            title={customLabels.sspYesExit}
+            label={customLabels.sspYesExit}
+            variant="brand"
+            class="ssp-button_brand slds-size_1-of-1"
+            onclick={returnToNonCitizenDashboard}
+            >
+            </lightning-button>
+            <lightning-button
+            title={customLabels.sspCancel}
+            label={customLabels.sspCancel}
+            class="ssp-button_base slds-size_1-of-1 ssp-cancel-button"
+            onclick={closePersonalViewModal}
+            >
+            </lightning-button>
+        </div>
+        </c-ssp-detailed-information-modal>
+    </template>
+</template>

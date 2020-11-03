@@ -1,0 +1,184 @@
+<!--
+* name          : sspConvictionPage
+* @description  : This screen takes conviction information for an applicant.
+* @author       : Samridh and Siddarth
+* @date         : JAN-09-2020
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName                MM/DD/YYYY               A Brief Description about the Change
+  Samridh and Siddarth         JAN-09-2020.                       Initial Version
+-->
+<template>
+    <template if:true={showSpinner}>
+        <c-ssp-spinner></c-ssp-spinner>
+    </template>
+    <template if:false={isNotAccessible}> <!--CD2 2.5 Security Role Matrix.-->
+      <div class="ssp-bodyContainer">
+        <div class="slds-m-vertical_large">
+            <template if:true={convictionVerification}>
+                <c-ssp-general-notice-card>
+                    <p>
+                        {label.sspPageInformationVerified}
+                        <span><a href={callUsAt}
+                                class="ssp-color_blueAlpha slds-m-left_xx-small"
+                                >{label.startBenefitsAppCallNumber}.</a>
+                        </span>
+                    </p>
+                </c-ssp-general-notice-card>
+            </template>
+        </div>
+        <div
+            class="ssp-infoText slds-m-vertical_large ssp-color_monoOmega ssp-fontFamily_ArvoRegular"
+        >
+            {label.sspAnswerQuestionsConviction}
+        </div>
+        <div
+            if:true={showMultipleProgramQuestion}
+            class="slds-grid slds-wrap slds-m-vertical_x-large"
+        >
+            <c-ssp-base-component-input-toggle
+                label={label.sspAnyoneFleeingFelon}
+                data-id="IsFleeingFelonToggle__c"
+                field-name="IsFleeingFelonToggle__c"
+                entity-name="SSP_Application__c"
+                options={yesNoOptions}
+                meta-list={metaListValues}
+                class="convictionDetails slds-m-bottom_x-large"
+                value={fleeingFelon}
+                disabled={convictionVerification}
+                onchange={handleInputChange}
+                is-help-text={isHelpText}
+                help-text-content={label.sspFleeingFelonHelpText}
+            ></c-ssp-base-component-input-toggle>
+        </div>
+
+        <div
+            if:true={showMultipleProgramQuestion}
+            class="slds-grid slds-wrap slds-m-vertical_x-large"
+        >
+            <c-ssp-base-component-input-toggle
+                label={label.sspConvictedDrugFelony}
+                data-id="IsConvictedOfDrugFelonyToggle__c"
+                field-name="IsConvictedOfDrugFelonyToggle__c"
+                entity-name="SSP_Application__c"
+                options={yesNoOptions}
+                meta-list={metaListValues}
+                class="convictionDetails slds-m-bottom_x-large"
+                value={convictedDrugFelony}
+                disabled={convictionVerification}
+                onchange={handleConvictedDrugFelonyChange}
+            ></c-ssp-base-component-input-toggle>
+        </div>
+        <template if:true={isTrueIndividualChemicallyDependent}>
+            <div
+                if:true={showMultipleProgramQuestion}
+                class="slds-grid slds-wrap slds-m-vertical_x-large"
+            >
+                <c-ssp-base-component-input-toggle
+                    label={label.sspIndividualChemicallyDependent}
+                    data-id="IsConvictedChemicallyDependentToggle__c"
+                    field-name="IsConvictedChemicallyDependentToggle__c"
+                    entity-name="SSP_Application__c"
+                    options={yesNoOptions}
+                    meta-list={metaListValues}
+                    class="convictionDetails slds-m-bottom_x-large"
+                    value={convictedChemicalDept}
+                    disabled={convictionVerification}
+                    onchange={handleConvictedDependentChange}
+                ></c-ssp-base-component-input-toggle>
+            </div>
+            <template if:true={isTrueChemicalDependencyTreatment}>
+                <div
+                    if:true={showMultipleProgramQuestion}
+                    class="slds-grid slds-wrap slds-m-vertical_x-large"
+                >
+                    <c-ssp-base-component-input-toggle
+                        label={label.sspChemicalDependencyTreatment}
+                        data-id="IsParticipatingCompltdTreatmentToggle__c"
+                        field-name="IsParticipatingCompltdTreatmentToggle__c"
+                        entity-name="SSP_Application__c"
+                        options={yesNoOptions}
+                        meta-list={metaListValues}
+                        class="convictionDetails slds-m-bottom_x-large"
+                        value={participatingOrCompletedTreat}
+                        disabled={convictionVerification}
+                        onchange={handleInputChange}
+                    ></c-ssp-base-component-input-toggle>
+                </div>
+            </template>
+        </template>
+        <div
+            if:true={showSingleProgramQuestion}
+            class="slds-grid slds-wrap slds-m-vertical_x-large"
+        >
+            <c-ssp-base-component-input-toggle
+                label={label.sspConvictedGivingWrongInformation}
+                data-id="HasGivenWrongInformationToggle__c"
+                field-name="HasGivenWrongInformationToggle__c"
+                entity-name="SSP_Application__c"
+                options={yesNoOptions}
+                meta-list={metaListValues}
+                class="convictionDetails slds-m-bottom_x-large"
+                value={givenWrongInfo}
+                disabled={convictionVerification}
+                onchange={handleInputChange}
+            ></c-ssp-base-component-input-toggle>
+        </div>
+        <div
+            if:true={showSingleProgramQuestion}
+            class="slds-grid slds-wrap slds-m-vertical_x-large"
+        >
+            <c-ssp-base-component-input-toggle
+                label={label.sspConvictedBuyingSellingTrading}
+                data-id="HasConvictedOfBuyingSellingToggle__c"
+                field-name="HasConvictedOfBuyingSellingToggle__c"
+                entity-name="SSP_Application__c"
+                options={yesNoOptions}
+                meta-list={metaListValues}
+                class="convictionDetails slds-m-bottom_x-large"
+                value={convictedBuyingSelling}
+                disabled={convictionVerification}
+                onchange={handleInputChange}
+            ></c-ssp-base-component-input-toggle>
+        </div>
+        <div
+            if:true={showSingleProgramQuestion}
+            class="slds-grid slds-wrap slds-m-vertical_x-large"
+        >
+            <c-ssp-base-component-input-toggle
+                label={label.sspTradingSNAPBenefitsFirearms}
+                data-id="HasConvictedOfTradingFirearm__c"
+                field-name="HasConvictedOfTradingFirearm__c"
+                entity-name="SSP_Application__c"
+                options={yesNoOptions}
+                meta-list={metaListValues}
+                class="convictionDetails slds-m-bottom_x-large"
+                value={convictedTradingFirearm}
+                disabled={convictionVerification}
+                onchange={handleInputChange}
+            ></c-ssp-base-component-input-toggle>
+        </div>
+        <div
+            if:true={showSingleProgramQuestion}
+            class="slds-grid slds-wrap slds-m-vertical_x-large ssp-footerMargin"
+        >
+            <c-ssp-base-component-input-toggle
+                label={label.sspTradingSNAPBenefitsDrugs}
+                data-id="HasConvictedOfTradingDrugsToggle__c"
+                field-name="HasConvictedOfTradingDrugsToggle__c"
+                entity-name="SSP_Application__c"
+                options={yesNoOptions}
+                meta-list={metaListValues}
+                class="convictionDetails"
+                value={convictedTradingDrugs}
+                disabled={convictionVerification}
+                onchange={handleInputChange}
+            ></c-ssp-base-component-input-toggle>
+        </div>
+      </div>
+    </template>
+    <template if:true={showAccessDeniedComponent}>
+        <c-ssp-access-denied></c-ssp-access-denied>
+    </template>
+</template>

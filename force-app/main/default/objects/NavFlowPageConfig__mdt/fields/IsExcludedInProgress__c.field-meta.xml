@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IsExcludedInProgress__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Flag to indicate whether this page should be excluded from progress calculation in the flow.</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Flag to indicate whether this page should be excluded from progress calculation in the flow.</inlineHelpText>
+    <label>Is Excluded In Progress</label>
+    <type>Checkbox</type>
+</CustomField>

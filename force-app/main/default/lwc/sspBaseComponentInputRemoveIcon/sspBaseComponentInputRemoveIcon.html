@@ -1,0 +1,35 @@
+<template>
+    <!-- declaring aura method to fetch ErrorMessageList-->
+    <div class="ssp-genericInput slds-grid slds-wrap">
+        <div class="ssp-inputText">
+            <div class="ssp-removeIcon" if:true={showRemoveIcon}>
+                <lightning-button-icon
+                    icon-name="utility:close"
+                    size="x-small"
+                    onclick={removeCurrentField}
+                    alternative-text="Delete"
+                    class="ssp-progressCardCloseIcon"
+                    title="Delete"
+                    data-id={fieldId}
+                ></lightning-button-icon>
+            </div>
+            <lightning-input
+                data-id="inpValue"
+                label={label}
+                value={value}
+                class={className}
+                title={title}
+                onblur={handleValidations}
+                onchange={handleValidations}
+                disabled={isDisabled}
+                placeholder={placeholder}
+            >
+            </lightning-input>
+            <!--<template if:true={hasError}>-->
+            <template for:each={ErrorMessageList} for:item="error">
+                <p key={error} class="showError ssp-color_redOmega">{error}</p>
+            </template>
+        </div>
+        <!--</template>-->
+    </div>
+</template>

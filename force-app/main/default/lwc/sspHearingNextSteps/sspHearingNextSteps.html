@@ -1,0 +1,50 @@
+<template>
+    <div class="ssp-hearingNextSteps ssp-mobilePadding">
+        <h1
+            class="ssp-topHeader ssp-color_greenAlpha ssp-margin-bottom_large ssp-fontFamily_popinBlack"
+        >
+            {label.nextStep}
+        </h1>
+        <p
+            class="ssp-caseNumberFont ssp-margin-bottom_large ssp-color_monoOmega ssp-fontFamily_ArvoRegular"
+        >
+            {label.hearingNextStepsContentOne}
+        </p>
+        <p
+            class="ssp-caseNumberFont ssp-margin-bottom_large ssp-color_monoOmega ssp-fontFamily_ArvoRegular"
+        >
+            {label.hearingNextStepsContentTwo}
+        </p>
+        <p
+            class="ssp-caseNumberFont ssp-margin-bottom_large ssp-color_monoOmega ssp-fontFamily_ArvoRegular"
+        >
+            {label.hearingNextStepsContentThree}
+        </p>
+        <p
+            class="ssp-caseNumberFont ssp-margin-bottom_large ssp-color_monoOmega ssp-fontFamily_ArvoRegular"
+        >
+            {label.haringNextStepsContentFour}
+        </p>
+        <div class="ssp-first-time-user-dashboard ssp-margin-bottom_xlarge">
+            <lightning-button
+                variant="brand"
+                label={label.uploadDocument}
+                title={label.uploadDocument}
+                onclick={navigateToDocumentUpload}
+                class="ssp-button_brand ssp-cardButton ssp-addHouseHoldButtonWrap ssp-add-income-btn"
+            ></lightning-button>
+        </div>
+
+        <div
+            class="ssp-footerContainer ssp-first-time-user-dashboard ssp-margin-bottom_xlarge"
+        >
+            <lightning-button
+                variant="neutral"
+                label={label.backHearingsSummary}
+                title={label.backHearingsSummary}
+                onclick={backToHearingSummary}
+                class="ssp-button_neutral ssp-cardButton ssp-screenFooterSaveBtn ssp-dashboard-action-section"
+            ></lightning-button>
+        </div>
+    </div>
+</template>

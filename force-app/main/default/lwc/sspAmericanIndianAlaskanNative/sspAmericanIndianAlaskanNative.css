@@ -1,0 +1,38 @@
+.ssp-infoText {
+    font-size: 16px;
+    letter-spacing: -0.0187rem;
+    line-height: 1.5rem;
+}
+.ssp-typeAheadWidth {
+    width: 45%;
+}
+.ssp-unorderedList {
+    list-style-position: inside;
+    list-style-type: disc;
+}
+.ssp-componentWidth {
+    width: 100%;
+}
+.ssp-middlePadding {
+    padding-left: 4%;
+}
+.ssp-toggleFont {
+    font-size: 1rem;
+}
+.ssp-footerMargin {
+    margin-bottom: 100px;
+}
+.ssp-alignItems {
+    align-items: stretch;
+}
+@media only screen and (max-width: 768px) {
+    .ssp-typeAheadWidth {
+        width: 100%;
+    }
+    .ssp-middlePadding {
+        padding-left: 0;
+    }
+    .ssp-mobileComponentWidth {
+        width: 100%;
+    }
+}

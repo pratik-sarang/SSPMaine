@@ -1,0 +1,308 @@
+<template>
+    <template if:true={showSpinner}>
+        <c-ssp-spinner></c-ssp-spinner>
+    </template>
+    <template if:true={showRACPopUp}>
+        <c-ssp-report-a-change-modal
+            onclose={handleClose}
+            application-list={racCasesString}
+            origin="benefits-page"
+        ></c-ssp-report-a-change-modal>
+    </template>
+    <div class="ssp-caseRow slds-grid slds-wrap slds-grid_align-spread">
+        <div class="ssp-caseText">
+            <span
+                if:false={program.isFailureScenario}
+                class="ssp-fontFamily_popinBold ssp-infoText"
+            >
+                {labels.sspCaseHash}{caseNumber}
+            </span>
+            <span
+                if:true={program.isFailureScenario}
+                class="ssp-fontFamily_popinBold ssp-infoText"
+            >
+                {labels.sspApplicationHash}{caseNumber}
+            </span>
+        </div>
+        <div class="slds-grid slds-wrap ssp-rightPadding30">
+            <span if:true={isHeadOfHousehold} class="ssp-centerText">
+                <span if:false={isChangeMode}>
+                    <span if:false={isJORITWIST}>
+                        <!--Matrix Implementation is same for RAC and Renewal. So can use either flag-->
+                        <span if:true={renderingMap.showRAC.isAccessible}>
+                            <a
+                                onclick={handleLinkClick}
+                                class="ssp-color_blueAlpha ssp-anchor"
+                                tabindex="0"
+                                if:true={linkLabel}
+                            >
+                                {linkLabel}
+                            </a>
+                        </span>
+                    </span>
+                </span>
+            </span>
+            <div class="ssp-centerText">
+                <div
+                    onclick={dropDown} onkeydown={dropDown}
+                    class="ssp-blueIcon slds-m-left_medium slds-grid slds-wrap ssp-fontFamily_ArvoRegular"
+                >
+                    <span class="slds-align_absolute-center ssp-iconDots "  tabindex="0"
+                        >...</span
+                    >
+                    <template if:true={openDropDown}>
+                        <div class="ssp-iconDropDown">
+                            <p
+                                if:true={isHeadOfHousehold}
+                                class="slds-p-bottom_medium"
+                            >
+                                <span if:false={isTMember}>
+                                    <span if:true={showDiscontinueBenefitLink}>
+                                        <a
+                                            if:true={renderingMap.showDiscontinue.isAccessible}
+                                            class="ssp-color_blueAlpha ssp-anchor slds-size_1-of-1"
+                                            onclick={handleDiscontinue}
+                                            tabindex="0"
+                                        >
+                                            {labels.sspDiscontinueBenefits}
+                                        </a>
+                                    </span>
+                                </span>
+                            </p>
+                            <p class="slds-p-bottom_medium">
+                                <a
+                                    if:true={renderingMap.showPastApps.isAccessible}
+                                    class="ssp-color_blueAlpha ssp-anchor slds-size_1-of-1"
+                                    onclick={handlePastApplication}
+                                    tabindex="0"
+                                    >{labels.sspPastApplications}</a
+                                >
+                            </p>
+                            <p class="slds-p-bottom_medium">
+                                <a
+                                    if:true={renderingMap.showDisqualification.isAccessible}
+                                    class="ssp-color_blueAlpha ssp-anchor slds-size_1-of-1"
+                                    onclick={handleDisqualification}
+                                    tabindex="0"
+                                >
+                                    {labels.sspDisqualificationPenaltiesSuspension}
+                                </a>
+                            </p>
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <template if:true={showSNAP}>
+        <template if:true={program.SNAPBenefit.isSNAPProgram}>
+            <c-ssp-benefits-page-program-card
+                program={program.SNAPBenefit}
+                case-number={program.caseNumber}
+                is-head-of-household={isHeadOfHousehold}
+                is-change-mode={isChangeMode}
+                is-j-o-r-i-t-w-i-s-t={isJORITWIST}
+                is-t-member={isTMember}
+                rendering-map={renderingMap}
+                logged-in-individual-id={loggedInIndividualId}
+                key={program.key}
+            ></c-ssp-benefits-page-program-card>
+        </template>
+    </template>
+
+    <template if:true={showCC}>
+        <template if:true={program.CCBenefit.isCCProgram}>
+            <c-ssp-benefits-page-program-card
+                program={program.CCBenefit}
+                case-number={program.caseNumber}
+                is-head-of-household={isHeadOfHousehold}
+                is-change-mode={isChangeMode}
+                is-j-o-r-i-t-w-i-s-t={isJORITWIST}
+                is-t-member={isTMember}
+                rendering-map={renderingMap}
+                logged-in-individual-id={loggedInIndividualId}
+                key={program.key}
+            ></c-ssp-benefits-page-program-card>
+        </template>
+    </template>
+
+    <template if:true={showKTAP}>
+        <template for:each={KTAPProgramsData} for:item="programKTAP" >
+            <template if:true={programKTAP.isKTAPProgram}>
+                <c-ssp-benefits-page-program-card
+                    program={programKTAP}
+                    is-head-of-household={isHeadOfHousehold}
+                    is-change-mode={isChangeMode}
+                    is-j-o-r-i-t-w-i-s-t={isJORITWIST}
+                    is-t-member={isTMember}
+                    rendering-map={renderingMap}
+                    logged-in-individual-id={loggedInIndividualId}
+                    key={programKTAP.key}
+                ></c-ssp-benefits-page-program-card>
+            </template>
+        </template>
+    </template>
+
+    <template if:true={showKinship}>
+        <template for:each={kinshipProgramsData} for:item="programKinship" >
+            <template if:true={programKinship.isKinshipProgram}>
+                <c-ssp-benefits-page-program-card
+                    program={programKinship}
+                    is-head-of-household={isHeadOfHousehold}
+                    is-change-mode={isChangeMode}
+                    is-j-o-r-i-t-w-i-s-t={isJORITWIST}
+                    is-t-member={isTMember}
+                    rendering-map={renderingMap}
+                    logged-in-individual-id={loggedInIndividualId}
+                    key={programKinship.key}
+                ></c-ssp-benefits-page-program-card>
+            </template>
+        </template>
+    </template>
+
+
+    <div class="slds-grid slds-wrap ssp-bg_monoAlpha ssp-leftpadding60">
+        <!-- MEDICAID CARDS -->
+        <div class="slds-size_1-of-1">
+            <template if:true={showMedicaid}>
+                <div
+                    class="ssp-bg_monoAlpha  ssp-programText slds-p-bottom_medium ssp-fontFamily_popinBold ssp-color_blueAlpha"
+                >
+                    {labels.sspMedicaidTitle}
+                </div>
+                <div class="slds-grid slds-wrap">
+                    <template
+                        for:each={program.MedicaidBenefits}
+                        for:item="otherBenefit"
+                    >
+                        <div
+                            class="slds-max-medium-size_1-of-1 slds-size_1-of-2"
+                            key={otherBenefit.key}
+                        >
+                            <c-ssp-benefits-page-individual-program-card
+                                program={otherBenefit}
+                                is-head-of-household={isHeadOfHousehold}
+                                is-change-mode={isChangeMode}
+                                is-j-o-r-i-t-w-i-s-t={isJORITWIST}
+                                is-t-member={isTMember}
+                                rendering-map={renderingMap}
+                                case-number={caseNumber}
+                                logged-in-individual-id={loggedInIndividualId}
+                                selected-role={selectedRole}
+                                map-waiver-details={mapWaiverDetails}
+                                map-waiver-status={mapWaiverStatus}
+                                key={otherBenefit.key}
+                            ></c-ssp-benefits-page-individual-program-card>
+                        </div>
+                    </template>
+                </div>
+            </template>
+        </div>
+
+        <!-- WAIVER CARDS -->
+        <div class="slds-size_1-of-1">
+            <template if:true={showWaiver}>
+                <div
+                    class="ssp-bg_monoAlpha  ssp-programText slds-p-bottom_medium ssp-fontFamily_popinBold ssp-color_blueAlpha"
+                >
+                    {labels.medicaidWaiver}
+                </div>
+                <div class="slds-grid slds-wrap">
+                    <template
+                        for:each={listWaiverStatus}
+                        for:item="waiverBenefit"
+                    >
+                        <div
+                            class="slds-max-medium-size_1-of-1 slds-size_1-of-2"
+                            key={waiverBenefit.key}
+                        >
+                            <c-ssp-benefits-waiver-program-card
+                                program={waiverBenefit}
+                                is-head-of-household={isHeadOfHousehold}
+                                is-change-mode={isChangeMode}
+                                is-j-o-r-i-t-w-i-s-t={isJORITWIST}
+                                is-t-member={isTMember}
+                                rendering-map={renderingMap}
+                                case-number={caseNumber}
+                                logged-in-individual-id={loggedInIndividualId}
+                                map-waiver-details={mapWaiverDetails}
+                                map-waiver-status={mapWaiverStatus}
+                                key={waiverBenefit.key}
+                            ></c-ssp-benefits-waiver-program-card>
+                        </div>
+                    </template>
+                </div>
+            </template>
+        </div>
+
+        <!-- KI-HIPP CARDS -->
+        <div class="slds-size_1-of-1">
+            <template if:true={showKIHIPP}>
+                <div
+                    class="ssp-bg_monoAlpha  ssp-programText slds-p-bottom_medium ssp-fontFamily_popinBold ssp-color_blueAlpha"
+                >
+                    {labels.sspKIHIPP}
+                </div>
+                <div class="slds-grid slds-wrap">
+                    <template
+                        for:each={program.KIHIPPBenefits}
+                        for:item="otherBenefit"
+                    >
+                        <div
+                            class="slds-max-medium-size_1-of-1 slds-size_1-of-2"
+                            key={otherBenefit.key}
+                        >
+                            <c-ssp-benefits-page-individual-program-card
+                                program={otherBenefit}
+                                is-head-of-household={isHeadOfHousehold}
+                                is-change-mode={isChangeMode}
+                                is-j-o-r-i-t-w-i-s-t={isJORITWIST}
+                                is-t-member={isTMember}
+                                rendering-map={renderingMap}
+                                case-number={caseNumber}
+                                selected-role={selectedRole}
+                                logged-in-individual-id={loggedInIndividualId}
+                                key={otherBenefit.key}
+                            ></c-ssp-benefits-page-individual-program-card>
+                        </div>
+                    </template>
+                </div>
+            </template>
+        </div>
+
+        <!-- State Supplement Card -->
+        <div class="slds-size_1-of-1">
+            <template if:true={showSS}>
+                <div
+                    class="ssp-bg_monoAlpha  ssp-programText slds-p-bottom_medium ssp-fontFamily_popinBold ssp-color_blueAlpha"
+                >
+                    {labels.sspStateSupplementation}
+                </div>
+                <div class="slds-grid slds-wrap">
+                    <template
+                        for:each={program.SSBenefits}
+                        for:item="otherBenefit"
+                    >
+                        <div
+                            class="slds-max-medium-size_1-of-1 slds-size_1-of-2"
+                            key={otherBenefit.key}
+                        >
+                            <c-ssp-benefits-page-individual-program-card
+                                program={otherBenefit}
+                                is-head-of-household={isHeadOfHousehold}
+                                is-change-mode={isChangeMode}
+                                is-j-o-r-i-t-w-i-s-t={isJORITWIST}
+                                is-t-member={isTMember}
+                                rendering-map={renderingMap}
+                                selected-role={selectedRole}
+                                logged-in-individual-id={loggedInIndividualId}
+                                key={otherBenefit.key}
+                            ></c-ssp-benefits-page-individual-program-card>
+                        </div>
+                    </template>
+                </div>
+            </template>
+        </div>
+    </div>
+</template>

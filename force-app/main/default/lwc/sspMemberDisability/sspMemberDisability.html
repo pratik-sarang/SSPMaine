@@ -1,0 +1,127 @@
+<!--
+* name          :SspMemberDisability
+* @description  : This component is used to take information on disabilities/blindness of member.
+* @author       : Sanchita Tibrewala, Shivam Tiwari and Saurabh Rathi
+* @date         : 19/12/2019 
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName                             MM/DD/YYYY               A Brief Description about the Change
+  Sanchita, Shivam and Saurabh             19/12/2019                      Initial Version
+-->
+<template>
+  <template if:true={retMemberDisabilityInformationExpr}>
+    <div class="ssp-member-disability ssp-bodyContainer">
+      <template if:true={memberDisabilityVerification}>
+        <div class="slds-m-vertical_large">
+          <c-ssp-general-notice-card>
+            <p>
+              {label.sspPageInformationVerified}
+              <span
+                ><a
+                  href={callUsAt}
+                  class="ssp-color_blueAlpha slds-m-left_xx-small"
+                  >{label.startBenefitsAppCallNumber}.</a
+                ></span
+              >
+            </p>
+          </c-ssp-general-notice-card>
+        </div>
+      </template>
+
+      <div
+        if:true={showReceivingBenefitsQuestion}
+        class="slds-m-vertical_x-large"
+      >
+        <c-ssp-base-component-input-checkbox-group
+          data-id="benefitTypeCode"
+          class="ssp-applicationInputs"
+          label={label.receivingBenefitsQuestion}
+          entity-name="SSP_Member__c"
+          field-name={fieldMeta.BenefitTypeCode}
+          meta-list={MetaDataListParent}
+          options={benefitTypeValues}
+          value={benefitTypeCodeValue}
+          onchange={handleReceivingBenefitsQuestion}
+          disabled={memberDisabilityVerification}
+        ></c-ssp-base-component-input-checkbox-group>
+      </div>
+      <div class="ssp-member-details-section  slds-p-bottom_xx-small">
+        <div
+          if:true={showRenalDiseaseQuestion}
+          class="slds-m-bottom_x-large slds-p-top_small slds-m-top_xx-large slds-p-bottom_x-large"
+        >
+          <c-ssp-base-component-input-toggle
+            class="ssp-applicationInputs"
+            options={toggleOptions}
+            data-id="hasEndStageRenalDisease"
+            field-name={fieldMeta.HasEndStageRenalDisease}
+            entity-name="SSP_Member__c"
+            label={label.renalDiseaseQuestion}
+            meta-list={MetaDataListParent}
+            value={memberDisabilityInformation.hasEndStageRenalDisease}
+            disabled={memberDisabilityVerification}
+          >
+          </c-ssp-base-component-input-toggle>
+        </div>
+        <template if:false={isBlindnessScreen}>
+          <div
+            if:true={showCookHerselfQuestion}
+            class="slds-m-vertical_x-large slds-p-bottom_x-large"
+          >
+            <c-ssp-base-component-input-toggle
+              class="ssp-applicationInputs"
+              options={toggleOptions}
+              data-id="unableToBuyCookForSelf"
+              field-name={fieldMeta.UnableToBuyCookForSelf}
+              entity-name="SSP_Member__c"
+              label={label.cookHerselfQuestion}
+              meta-list={MetaDataListParent}
+              value={memberDisabilityInformation.unableToBuyCookForSelf}
+              disabled={buyCookDisabled}
+            >
+            </c-ssp-base-component-input-toggle>
+          </div>
+        </template>
+        <div
+          if:true={showChildCareQuestion}
+          class="slds-m-vertical_x-large slds-p-bottom_x-large"
+        >
+          <c-ssp-base-component-input-toggle
+            class="ssp-applicationInputs"
+            options={toggleOptions}
+            data-id="parentUnableToCareForChild"
+            field-name={fieldMeta.ParentUnableToCareForChild}
+            entity-name="SSP_Member__c"
+            label={label.childCareQuestion}
+            meta-list={MetaDataListParent}
+            value={memberDisabilityInformation.parentUnableToCareForChild}
+            onchange={handleChildCareQuestion}
+            disabled={memberDisabilityVerification}
+          >
+          </c-ssp-base-component-input-toggle>
+        </div>
+        <div
+          if:true={showPermanentDisabilityQuestion}
+          class="slds-m-vertical_x-large slds-p-bottom_x-large"
+        >
+          <c-ssp-base-component-input-toggle
+            class="ssp-applicationInputs"
+            options={disabilityPermanentTemporary}
+            data-id="disabilityPermanentTemporary"
+            field-name={fieldMeta.DisabilityPermanentTemporary}
+            entity-name="SSP_Member__c"
+            label={label.permanentDisabilityQuestion}
+            meta-list={MetaDataListParent}
+            value={memberDisabilityInformation.disabilityPermanentTemporary}
+            disabled={memberDisabilityVerification}
+          >
+          </c-ssp-base-component-input-toggle>
+        </div>
+      </div>
+    </div>
+  </template>
+  <template if:true={showAccessDeniedComponent}>
+      <c-ssp-access-denied></c-ssp-access-denied>
+  </template>
+</template>

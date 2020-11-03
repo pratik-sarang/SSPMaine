@@ -1,0 +1,261 @@
+.ssp-agency-management-search-from {
+    padding: 0 165px 0 60px;
+}
+.ssp-noResultsFound {
+    padding: 0 165px 0 60px;
+}
+.ssp-agency-management-header {
+    padding-top: 32px;
+}
+.ssp-agency-management-header-text {
+    font-size: 2.625rem;
+    line-height: 48px;
+}
+.ssp-agencyManagementInfo {
+    padding-top: 30px;
+}
+.ssp-agency-management-from {
+    margin: 60px 0 50px 0;
+}
+.ssp-agency-management-from > div {
+    margin-bottom: 15px;
+}
+.ssp-info_fontSize {
+    font-size: 1rem;
+}
+.ssp-search-action {
+    padding-bottom: 30px;
+    justify-content: flex-end;
+}
+.ssp-search-label {
+    font-size: 1.125rem;
+}
+.search-results {
+    padding: 30px 165px 0 60px;
+}
+.ssp-result-count {
+    font-size: 1.125rem;
+    margin-left: 34px;
+}
+
+
+.ssp-radioButtonContainer {
+    display: flex;
+    position: relative;
+    margin-bottom: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+/* Hide the browser's default radio button */
+.ssp-multilineRadioInput {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    z-index: 9;
+}
+
+/* Create a custom radio button */
+.ssp-multilineRadioChecked {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.ssp-multilineRadioChecked:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.ssp-multilineRadioInput:checked~.ssp-multilineRadioChecked:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.ssp-multilineRadioChecked:after {
+    top: 2.5px;
+    left: 2px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+.ssp-label-name {
+    padding-left: 25px;
+    font-size: 0.8125rem;
+}
+.ssp-reset-button, .ssp-search-button {
+    width: 158px;
+}
+.ssp-change-assignment {
+    width: 345px;
+}
+.ssp-results-summary {
+    margin-top: 42px;
+    padding-left: 17px;
+}
+
+/*Table related css*/
+.ssp-result-table {
+    overflow-x: auto;
+    padding-left: 2px;
+}
+.ssp-action-image-container {
+    display: inline-block;
+}
+.ssp-sort-image {
+    width: 24px;
+    height: 24px;
+    margin-left: 12px;
+    cursor: pointer;
+}
+.ssp-th-styles {
+    line-height: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 31.5%;
+}
+table thead th:nth-child(2) {
+    padding-left: 34px;
+}
+.ssp-td-styles {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+table tbody td:nth-child(2) {
+    padding-left: 34px;
+}
+.ssp-paginationContainer {
+    padding-left: 15px;
+    overflow-x: auto;
+}
+.search-results-section {
+    margin-bottom: 100px;
+}
+
+
+@media only screen and (max-device-width: 768px) {
+    .ssp-agency-management-header-text {
+        font-size: 1.375rem;
+    }
+    .ssp-reset-button, .ssp-search-button, .ssp-change-assignment {
+        width: 100%;
+    }
+
+    .ssp-search-button, .ssp-change-assignment {
+        margin-top: 15px;
+    }
+    .ssp-result-count {
+        margin-left: 63px;
+    }
+}
+@media only screen and (max-device-width: 1023px) {
+    .ssp-agency-management-search-from {
+        padding: 0 30px 0 30px;
+    }
+    .ssp-noResultsFound {
+        padding: 0 30px 0 30px;
+    }
+    .search-results {
+        padding: 30px 30px 0 30px;
+    }
+}
+@media only screen and (min-device-width: 1023px) {
+    .ssp-textBox-left {
+        padding-left: 22px;
+    }
+    .ssp-textBox-right {
+        padding-right: 22px;
+    }
+    .ssp-search-button {
+        margin-left: 30px;
+    }
+    .ssp-flex-between {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+
+/* Dropdown related css */
+
+.ssp-selectAll-Dropdown {
+    position: relative;
+}
+.ssp-dashboardDropdown {
+    cursor: pointer;
+}
+.ssp-dashboardDropdownBtn {
+    padding-right: 18px;
+    width: 100%;
+    border: none;
+    background:none;
+}
+.ssp-dashboardDropdownBtn:focus {
+    outline: none;
+}
+.ssp-dashboardDropdownHeader p {
+    font-size: 1rem;
+    line-height: 24px;
+    letter-spacing: -0.3px;
+    text-align: left;
+}
+.ssp-dashboardDropdownHeader p:first-child {
+    margin-right: 5px;
+}
+.ssp-dashboardDropdownIcon {
+    height: 24px;
+    width: 24px;
+    background-size: 24px;
+    background-image: url(../resource/sspOverviewIcons/icons/ic_dropdown/ic_dropdown@3x.png);
+}
+.ssp-collapseDropdown {
+    background-image: url(../resource/sspOverviewIcons/icons/ic_collapsedropdown/ic_collapsedropdown@3x.png);
+}
+.ssp-dashboardDropdownContent {
+    display: none;
+    position: absolute;
+    z-index: 9;
+    top: 24px;
+    left: 12px;
+    width: 232px;
+    background: white;
+}
+.ssp-dashboardDropdownContent a {
+    display: block;
+    text-decoration: none;
+    font-size: 1rem;
+    line-height: 22px;
+    letter-spacing: 0.3px;
+    text-align: left;
+    padding: 5px 15px;
+}
+.ssp-dashboardDropdownContent div:first-child {
+    padding-top: 10px;
+}
+.ssp-dashboardDropdownContent div:last-child {
+    padding-bottom: 10px;
+}
+.ssp-expandDropdown {
+    display: block;
+}
+.ssp-clients-selected {
+    font-size: 1rem;
+}
+.ssp-client-name {
+    font-size: 1rem;
+}
+.ssp-cancel-button {
+    margin-top: 15px;
+}

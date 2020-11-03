@@ -1,0 +1,99 @@
+.ssp-healthCareEnrollTitle {
+  font-size: 2.625rem;
+  line-height: 48px;
+  text-align: left;
+  margin-bottom: 30px;
+}
+.ssp-healthCareEnrollHr {
+  height: 5px;
+  border-radius: 2.5px;
+  width: 100%;
+  margin-bottom: 25px;
+}
+.ssp-healthCareEnrollDesc {
+  font-size: 1rem;
+  line-height: 24px;
+  letter-spacing: -0.3px;
+  text-align: left;
+  margin-bottom: 30px;
+}
+.ssp-healthCareEnrollSource,
+.ssp-healthCareEnrollMembers {
+  margin-bottom: 15px;
+}
+.ssp-healthCareEnrollSource {
+  margin-top: 30px;
+}
+.ssp-healthCareEnrollPolicyHolder {
+  margin-top: 15px;
+}
+.ssp-healthCareEnrollNextBtn,
+.ssp-healthCareEnrollBackBtn,
+.ssp-healthCareEnrollSaveBtn {
+  font-size: 1.125rem;
+  line-height: 27px;
+  text-align: center;
+}
+.ssp-healthCareEnrollBackBtn {
+  margin-right: 30px;
+}
+.ssp-healthCareEnrollMemberCont {
+  margin-left: 15px;
+}
+.ssp-healthCareEnrollMemberTitle,
+.ssp-healthCareEnrollMemberDesc {
+  font-size: 1rem;
+  line-height: 18px;
+  letter-spacing: -0.3px;
+  text-align: left;
+}
+.ssp-healthCareEnrollMemberTitle {
+  margin-bottom: 5px;
+}
+.ssp-policyTitle {
+  margin-right: 5px;
+}
+.ssp-healthCareEnrollPolicyCont {
+  font-size: 1rem;
+  line-height: 18px;
+  letter-spacing: -0.3px;
+  text-align: left;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.ssp-healthCareEnrollPolicyAdditional {
+  font-size: 0.8125rem;
+  line-height: 18px;
+  letter-spacing: -0.24px;
+  text-align: left;
+}
+.ssp-bodyContainer {
+  margin-bottom: 100px;
+}
+
+@media only screen and (max-width: 768px) {
+  .ssp-healthCareEnrollAppSumm {
+    margin-top: 30px;
+  }
+  .ssp-healthCareEnrollTitle {
+    font-size: 1.5rem;
+    line-height: 32px;
+    text-align: left;
+    margin-bottom: 30px;
+  }
+  .ssp-healthCareEnrollHr {
+    margin-bottom: 30px;
+  }
+  .ssp-policyTitle {
+    display: block;
+  }
+  .ssp-healthCareEnrollPolicyCont,
+  .ssp-healthCareEnrollMemberTitle,
+  .ssp-healthCareEnrollMemberDesc {
+    font-size: 0.8125rem;
+    line-height: 18px;
+    letter-spacing: -0.24px;
+    text-align: left;
+  }
+}

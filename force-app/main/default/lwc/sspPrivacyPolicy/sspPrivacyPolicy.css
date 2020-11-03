@@ -1,0 +1,72 @@
+.ssp-privacyPolicyContainer {
+    margin: 60px auto;
+}
+h2 {
+    font-size: 2.625rem;
+    line-height: 3rem;
+    padding-bottom: 30px;
+}
+h3 {
+    font-size: 1.125rem;
+    letter-spacing: -0.3px;
+    line-height: 1.5rem;
+}
+.ssp-policySection {
+    padding-bottom: 30px;
+}
+.ssp-policySection p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.ssp-policySection:last-child {
+    border-bottom: none;
+    padding: 0;
+}
+.ssp-scollBox {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    height: 52px;
+    width: 50px;
+    border-radius: 6px 0 0 6px;
+    cursor: pointer;
+    text-align: center;
+    padding-top: 17px;
+}
+nav {
+    padding-bottom: 30px;
+    margin-bottom: 10px;
+}
+.ssp-tabList,
+.ssp-copyRightSection a {
+    text-decoration: underline;
+    word-break: break-all;
+}
+.ssp-tabList {
+    letter-spacing: -0.24px;
+    line-height: 1.5rem;
+}
+.ssp-copyRightSection {
+    padding: 30px;
+    border-radius: 6px;
+    box-shadow: 0 15px 25px -7px rgba(0, 35, 98, 0.1),
+        0 0 6px 0 rgba(0, 35, 98, 0.15);
+}
+
+.ssp-scollBox svg {
+    width: 14px;
+    vertical-align: middle;
+    height: 14px;
+    fill: t(sspWhiteAlpha);
+}
+
+@media only screen and (max-width: 768px) {
+    h2 {
+        font-size: 1.5rem;
+        line-height: 1.875rem;
+    }
+    .ssp-tabList {
+        font-size: 0.8125rem;
+    }
+}

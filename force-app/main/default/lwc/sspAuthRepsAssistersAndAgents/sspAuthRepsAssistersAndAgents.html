@@ -1,0 +1,1128 @@
+<!--
+* name 		    : sspAuthRepsAssistersAndAgents
+* @description 	: The component is to This module enables users to view their existing authorized representatives, assisters, and insurance agents, as well as search for new ones.
+* @author 		: Kireeti And Chirag
+* @date 		: 1/13/2019
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName	      MM/DD/YYYY	      A Brief Description
+						       about the Change
+-->
+<template>
+    <template if:true={showSpinner}>
+        <c-ssp-spinner></c-ssp-spinner>
+    </template>
+   
+    <template if:true={showToast}>
+        <c-ssp-toast
+        condition="positive"
+        ssp-toast-title-val={toastMessage}
+        onhidetoast={handleHideToast}
+        show-error-toast={showToast}
+    >
+    </c-ssp-toast>
+    </template>
+    <template if:true={showFind}>
+        <c-ssp-find-assister-or-agent
+            selected-type={selectedType}
+            onsuccess={completeFind}
+            application-id={applicationId}
+            oncancel={handleCancel}
+        ></c-ssp-find-assister-or-agent>
+    </template>
+    <c-ssp-logging-and-error-handling-modal if:true={showErrorModal} error-id={errorCode} onprogressvaluechange={closeError}>
+    </c-ssp-logging-and-error-handling-modal>
+    <template if:true={showAllDetails}>
+        <div class="ssp-auth-reps-assisters-and-agents">
+            <main class="slds-m-bottom_xx-large">
+                <template if:true={authRepsHomePage}>
+                    <div
+                        class="ssp-reps-app-header ssp-bg_appHeaderGradient slds-p-vertical_medium slds-m-bottom_x-large"
+                    >
+                        <h1 class="ssp-fontFamily_popinBold ssp-reps-text">
+                            {customLabel.sspRepsAssistsAgents}
+                        </h1>
+                    </div>
+                    
+                    <div
+                        class="slds-m-vertical_large ssp-auth-reps-assisters-agents ssp-bodyContainer"
+                    >
+                       <template if:true={showWorkerPortalBanner}>
+                <div class="ssp-WorkerPortal">
+                <c-ssp-worker-portal-banner>
+
+                </c-ssp-worker-portal-banner>
+                </div>
+                       </template>
+                        <template if:true={isApplicationSummary}>
+                            <div>
+                                <i class="ssp-arrow_left"></i>
+                                <a
+                                    title={pageTitleAlt}
+                                    onclick={handleNavigateSummary}
+                                    class="ssp-viewSummary ssp-color_monoBody ssp-fontFamily_popinBold"
+                                    tabindex="0"
+                                >
+                                    {summaryTitle}
+                                </a>
+                                <div class="ssp-add-auth-rep-program-header-text ssp-fontFamily_popinBlack ssp-color_blueAlpha">{customLabel.sspRepsAssistsAgents}</div>
+                                <hr class="ssp-horizontal-rule-heading ssp-bg_monoAlpha slds-m-vertical_medium"></hr>
+                            </div>
+                        </template>
+                        <template if:true={hasRequiredPrograms}>
+                            <div
+                                class="ssp-auth-reps ssp-fontFamily_ArvoRegular ssp-border-bottom"
+                            >
+                                <h2
+                                    class="ssp-fontFamily_popinBold ssp-auth-reps-heading"
+                                >
+                                    {customLabel.sspAuthorizedRepresentative}
+                                </h2>
+                                <p>
+                                    {customLabel.sspContentOfAuthorizeRepresentativeScreen1}
+                                </p>
+                                <div
+                                    class="ssp-list-margin ssp-bullet-points"
+                                    role="list"
+                                >
+                                    <p role="presentation">
+                                        <span class="ssp-dot"></span
+                                        ><span role="listitem"
+                                            >{customLabel.sspApplyForBenefits}</span
+                                        >
+                                    </p>
+                                    <p role="presentation">
+                                        <span class="ssp-dot"></span
+                                        ><span role="listitem"
+                                            >{customLabel.sspReportChangesInformation}</span
+                                        >
+                                    </p>
+                                    <p role="presentation">
+                                        <span class="ssp-dot"></span
+                                        ><span role="listitem"
+                                            >{customLabel.sspCertifyYourBenefitsApplication}</span
+                                        >
+                                    </p>
+                                    <p role="presentation">
+                                        <span class="ssp-dot"></span
+                                        ><span role="listitem"
+                                            >{customLabel.sspReceiveCopyOfNotices}</span
+                                        >
+                                    </p>
+                                </div>
+                                <p class="ssp-text-margin-small">
+                                    {customLabel.sspContentOfAuthorizeRepresentativeScreen2}
+                                </p>
+
+                                <template
+                                    for:each={authorizedRepresentativeRecords}
+                                    for:item="data"
+                                >
+                                    <template if:true={data.isHOH}>
+                                        <div key={data.id}>
+                                            <div class="ssp-m-vertical-card">
+                                                <c-ssp-accordion-card is-expanded={data.isAccessRequest}>
+                                                    <div slot="Title">
+                                                        <p
+                                                            class="ssp-fontFamily_popinBold ssp-color_blueAlpha"
+                                                        >
+                                                            {data.contactName}
+                                                        </p>
+                                                        <p
+                                                            class="ssp-fontFamily_popinRegular ssp-color_monoBody ssp-centerText"
+                                                        >
+                                                            {data.programsApplied}
+                                                        </p>
+                                                        <template
+                                                            if:true={data.showCaseNumber}
+                                                        >
+                                                            <p
+                                                                class="ssp-fontFamily_popinBold ssp-color_monoBody"
+                                                            >
+                                                                {customLabel.sspCaseHashColon}
+                                                                {data.caseNumber}
+                                                            </p>
+                                                        </template>
+                                                        <template
+                                                            if:false={data.showCaseNumber}
+                                                        >
+                                                            <p
+                                                                class="ssp-fontFamily_popinBold ssp-color_monoBody"
+                                                            >
+                                                                {customLabel.sspApplicationCaseHashColon}
+                                                                {data.applicationName}
+                                                            </p>
+                                                        </template>
+                                                    </div>
+                                                    <div slot="contentSlot">
+                                                        <hr
+                                                            class="ssp-horizontal-rule ssp-bg_monoAlpha ssp-horizontal-rule-top"
+                                                        ></hr>
+                                                        <p
+                                                            class="ssp-fontFamily_popinBold ssp-color_blueAlpha slds-var-m-top_medium ssp-cardSubHeading"
+                                                        >
+                                                            {customLabel.sspPermissionDetails}
+                                                        </p>
+                                                        <table
+                                                            class="ssp-permission-details"
+                                                        >
+                                                        <caption class="slds-hide">Message Caption</caption>
+<thead class="slds-hide">
+	<tr>
+		<th scope="col"></th>
+		<th scope="col"></th>
+	</tr>
+</thead>
+                                                            <template
+                                                                for:each={data.programPermissions}
+                                                                for:item="program"
+                                                            >
+                                                                <tr
+                                                                    key={program.programName}
+                                                                    class="ssp-fontFamily_popinRegular"
+                                                                >
+                                                                    <td>
+                                                                        {program.programName}&nbsp;
+                                                                        <template
+                                                                            if:true={data.showCaseNumber}
+                                                                            >{customLabel.sspCaseHash}
+                                                                            {data.caseNumber}</template
+                                                                        >
+                                                                        <template
+                                                                            if:false={data.showCaseNumber}
+                                                                            >{customLabel.sspApplicationHash}
+                                                                            {data.applicationName}</template
+                                                                        >
+                                                                    </td>
+                                                                    <td
+                                                                        class="ssp-color_monoBody"
+                                                                    >
+                                                                        {program.permissionLevel}
+                                                                    </td>
+                                                                </tr>
+                                                            </template>
+                                                        </table>
+                                                        <hr
+                                                            class="ssp-horizontal-rule ssp-bg_monoAlpha ssp-horizontal-rule-middle"
+                                                        ></hr>
+                                                        <p
+                                                            class="ssp-fontFamily_popinBold ssp-color_blueAlpha slds-var-m-top_medium ssp-cardHeading"
+                                                        >
+                                                            {customLabel.sspContactInformation}
+                                                        </p>
+                                                        <template if:true={data.showPhone}>
+                                                        <p
+                                                            class="ssp-fontFamily_popinRegular ssp-color_monoOmega slds-var-m-top_medium ssp-cardSubHeading"
+                                                        >
+                                                            {customLabel.sspPhone}
+                                                        </p>
+                                                        <p
+                                                            class="ssp-fontFamily_popinRegular ssp-color_monoBody slds-var-m-bottom_medium slds-var-m-bottom_medium"
+                                                        >
+                                                            <a
+                                                                title={data.PhoneTitle}
+                                                                class="ssp-color_blueAlpha ssp-clickable-text"
+                                                                href={data.formattedPhone}
+                                                                >{data.maskedPhone}</a
+                                                            >
+                                                        </p>
+                                                    </template>
+                                                        <p
+                                                            class="ssp-fontFamily_popinRegular ssp-color_monoOmega slds-var-m-top_medium ssp-cardSubHeading"
+                                                        >
+                                                            {customLabel.sspEmail}
+                                                        </p>
+                                                        <p
+                                                            class="ssp-fontFamily_popinRegular ssp-color_monoBody slds-var-m-bottom_medium slds-var-m-bottom_medium"
+                                                        >
+                                                            <a
+                                                                title={data.emailTitle}
+                                                                class="ssp-color_blueAlpha ssp-clickable-text"
+                                                                href={data.formattedEmail}
+                                                                >{data.contactEmail}</a
+                                                            >
+                                                        </p>
+                                                        <p
+                                                            class="ssp-fontFamily_popinRegular ssp-color_monoOmega slds-var-m-top_medium ssp-cardSubHeading"
+                                                        >
+                                                            {customLabel.sspAddress}
+                                                        </p>
+                                                        <p
+                                                            class="ssp-fontFamily_popinRegular ssp-color_monoBody slds-var-m-bottom_medium slds-var-m-bottom_medium"
+                                                        >
+                                                            <a
+                                                            title={data.AddressTitle}
+                                                                class="ssp-color_blueAlpha ssp-clickable-text"
+                                                                href={data.addressURL}
+                                                                target="_blank"
+                                                                >{data.mailingAddress}</a
+                                                            >
+                                                        </p>
+                                                        <hr
+                                                            class="ssp-horizontal-rule ssp-bg_monoAlpha ssp-horizontal-rule-button"
+                                                        ></hr>
+                                                        <p
+                                                            class="slds-m-vertical_large"
+                                                        >
+                                                        <template if:true={data.isAccessRequest}>
+                                                        <lightning-button  
+                                                        data-app-id={data.applicationId}                                                      
+                                                        data-contact-id={data.contactId}
+                                                        class="ssp-button_base"
+                                                        variant="base"
+                                                        label={customLabel.sspStart}
+                                                        onclick={handleAuthRepAccessRequest}
+                                                        data-id={data.contactId}
+                                                        title={customLabel.sspStart}
+                                                    ></lightning-button>
+                                                        </template>
+                                                        <template if:false={data.isAccessRequest}>
+                                                        <template if:true={showEdit}>
+                                                         <template if:false={data.isEditAccessRequest}>
+                                                            <lightning-button
+                                                                data-app-id={data.applicationId}
+                                                                data-contact-id={data.contactId}
+                                                                class="ssp-button_base"
+                                                                variant="base"
+                                                                label={customLabel.sspEditButton}
+                                                                onclick={editRecord}
+                                                                data-id={data.contactId}
+                                                                title={customLabel.sspAuthRepEditTitle}
+                                                            ></lightning-button>
+                                                            </template>
+                                                            </template>
+                                                            </template>
+                                                            <template if:true={data.isEditAccessRequest}>
+                                                                <lightning-button
+                                                                    data-app-id={data.applicationId}
+                                                                    data-contact-id={data.contactId}
+                                                                    class="ssp-button_base"
+                                                                    variant="base"
+                                                                    label={customLabel.sspEditButton}
+                                                                    onclick={handleAuthRepAccessRequest}
+                                                                    data-id={data.contactId}
+                                                                    title={customLabel.sspAuthRepEditTitle}
+                                                                ></lightning-button>
+                                                                </template>
+                                                        </p>
+                                                        <p
+                                                            class="slds-m-vertical_large"
+                                                        >
+                                                        <template if:false={data.isAccessRequest}>
+                                                        <template if:true={showRemoveAuthRep}>
+                                                            <template if:true={data.showRemoveButtonToCurrentUser}>
+                                                                <lightning-button
+                                                                    class="ssp-button_base ssp-remove-btn"
+                                                                    variant="base"
+                                                                    label={customLabel.sspRemove}
+                                                                    onclick={openRemoveModal}
+                                                                    data-id={data.id}
+                                                                    data-name={data.contactName}
+                                                                    data-role={data.role}
+                                                                    data-app-id={data.applicationId}
+                                                                    title={customLabel.sspAuthRepRemoveTitle}
+                                                                ></lightning-button>
+                                                            </template>
+                                                            </template>
+                                                            </template>
+                                                        </p>
+                                                    </div>
+                                                </c-ssp-accordion-card>
+                                            </div>
+                                        </div>
+                                    </template>
+                                </template>
+                                
+                                <p class="ssp-m-button">
+                                    <template if:true={showAdd}>
+                                    <lightning-button
+                                        class="ssp-button_brand"
+                                        variant="brand"
+                                        label={customLabel.sspAddAuthorizedRepresentative}
+                                        title={customLabel.sspAddAuthRepAlt}
+                                        onclick={addAuthRep}
+                                    ></lightning-button>
+                                    </template>
+                                </p>
+                            </div>
+                        </template>
+                        <template if:true={hasMedicaid}>
+                            <div
+                                class="ssp-auth-reps ssp-fontFamily_ArvoRegular ssp-border-bottom ssp-m-section"
+                            >
+                                <h2
+                                    class="ssp-fontFamily_popinBold ssp-auth-reps-heading"
+                                >
+                                    {customLabel.sspAssist}
+                                </h2>
+                                <p>
+                                    {customLabel.sspContentOfAuthorizeRepresentativeScreen3}
+                                </p>
+                                <div
+                                    class="ssp-list-margin ssp-bullet-points"
+                                    role="list"
+                                >
+                                    <p role="presentation">
+                                        <span class="ssp-dot"></span
+                                        ><span role="listitem"
+                                            >{customLabel.sspApplyForMedicaidOrKIHIPP}</span
+                                        >
+                                    </p>
+                                    <p role="presentation">
+                                        <span class="ssp-dot"></span
+                                        ><span role="listitem"
+                                            >{customLabel.sspReportChangesInformation}</span
+                                        >
+                                    </p>
+                                    <p role="presentation">
+                                        <span class="ssp-dot"></span
+                                        ><span role="listitem"
+                                            >{customLabel.sspCertifyYourMedicaidApplication}</span
+                                        >
+                                    </p>
+                                    
+                                    <p role="presentation">
+                                        <span class="ssp-dot"></span
+                                        ><span role="listitem"
+                                            >{customLabel.sspStartBenefitsAppContactAssisterListFour}</span
+                                        >
+                                    </p>
+                                    <p role="presentation">
+                                        <span class="ssp-dot"></span
+                                        ><span role="listitem"
+                                            >{customLabel.sspStartBenefitsAppContactAssisterListFive}</span
+                                        >
+                                    </p>
+                                    <p role="presentation">
+                                        <span class="ssp-dot"></span
+                                        ><span role="listitem"
+                                            >{customLabel.sspStartBenefitsAppContactAssisterListSix}</span
+                                        >
+                                    </p>
+                                </div>
+                              <!--  <template if:true={showAssistCard}>-->
+                                    <template
+                                        for:each={assistRecords}
+                                        for:item="assistRecord"
+                                    >
+                                        <div
+                                            key={showAssistCard.Id}
+                                            class="ssp-m-vertical-card"
+                                        >
+                                            <c-ssp-accordion-card is-expanded={assistRecord.isAccessRequest}>
+                                                <div slot="Title">
+                                                    <p
+                                                        class="ssp-fontFamily_popinBold ssp-color_blueAlpha"
+                                                    >
+                                                        {assistRecord.contactName}
+                                                    </p>
+                                                    <template
+                                                        if:true={assistRecord.showCaseNumber}
+                                                    >
+                                                        <p
+                                                            class="ssp-fontFamily_popinBold ssp-color_monoBody"
+                                                        >
+                                                            {customLabel.sspCaseHashColon}
+                                                            {assistRecord.caseNumber}
+                                                        </p>
+                                                    </template>
+                                                    <template
+                                                        if:false={assistRecord.showCaseNumber}
+                                                    >
+                                                        <p
+                                                            class="ssp-fontFamily_popinBold ssp-color_monoBody"
+                                                        >
+                                                            {customLabel.sspApplicationCaseHashColon}
+                                                            {assistRecord.applicationName}
+                                                        </p>
+                                                    </template>
+                                                </div>
+                                                <div slot="contentSlot">
+                                                    <hr
+                                                        class="ssp-horizontal-rule ssp-bg_monoAlpha ssp-horizontal-rule-top"
+                                                    ></hr>
+                                                    <p
+                                                        class="ssp-fontFamily_popinRegular ssp-color_monoOmega slds-var-m-top_medium ssp-cardSubHeading"
+                                                    >
+                                                        {customLabel.sspOrganization}
+                                                    </p>
+                                                    <p
+                                                        class="ssp-fontFamily_popinRegular ssp-color_monoBody slds-var-m-bottom_medium slds-var-m-bottom_medium"
+                                                    >
+                                                        {assistRecord.contactOrganization}
+                                                    </p>
+
+                                                    <p
+                                                        class="ssp-fontFamily_popinRegular ssp-color_monoOmega slds-var-m-top_medium ssp-cardSubHeading"
+                                                    >
+                                                        {customLabel.sspLanguageS}
+                                                    </p>
+                                                    <p
+                                                        class="ssp-fontFamily_popinRegular ssp-color_monoBody slds-var-m-bottom_medium slds-var-m-bottom_medium"
+                                                    >
+                                                        {assistRecord.language}
+                                                    </p>
+                                                    <hr
+                                                        class="ssp-horizontal-rule ssp-bg_monoAlpha ssp-horizontal-rule-middle"
+                                                    ></hr>
+                                                    <p
+                                                        class="ssp-fontFamily_popinBold ssp-color_blueAlpha slds-var-m-top_medium ssp-cardHeading"
+                                                    >
+                                                        {customLabel.sspContactInformation}
+                                                    </p>
+                                                    <template if:true={assistRecord.showPhone}>
+                                                    <p
+                                                        class="ssp-fontFamily_popinRegular ssp-color_monoOmega slds-var-m-top_medium ssp-cardSubHeading"
+                                                    >
+                                                        {customLabel.sspPhone}
+                                                    </p>
+                                                    <p
+                                                        class="ssp-fontFamily_popinRegular ssp-color_monoBody slds-var-m-bottom_medium slds-var-m-bottom_medium"
+                                                    >
+                                                        <a
+                                                            title={assistRecord.PhoneTitle}
+                                                            class="ssp-color_blueAlpha ssp-clickable-text"
+                                                            href={assistRecord.formattedPhone}
+                                                            >{assistRecord.maskedPhone}</a
+                                                        >
+                                                    </p>
+                                                </template>
+                                                    <p
+                                                        class="ssp-fontFamily_popinRegular ssp-color_monoOmega slds-var-m-top_medium ssp-cardSubHeading"
+                                                    >
+                                                        {customLabel.sspEmail}
+                                                    </p>
+                                                    <p
+                                                        class="ssp-fontFamily_popinRegular ssp-color_monoBody slds-var-m-bottom_medium slds-var-m-bottom_medium"
+                                                    >
+                                                        <a
+                                                            title={assistRecord.emailTitle}
+                                                            class="ssp-color_blueAlpha ssp-clickable-text"
+                                                            href={assistRecord.formattedEmail}
+                                                            >{assistRecord.contactEmail}</a
+                                                        >
+                                                    </p>
+                                                    <p
+                                                        class="ssp-fontFamily_popinRegular ssp-color_monoOmega slds-var-m-top_medium ssp-cardSubHeading"
+                                                    >
+                                                        {customLabel.sspAddress}
+                                                    </p>
+                                                    <p
+                                                        class="ssp-fontFamily_popinRegular ssp-color_monoBody slds-var-m-bottom_medium slds-var-m-bottom_medium"
+                                                    >
+                                                        <a
+                                                            title={assistRecord.AddressTitle}
+                                                            class="ssp-color_blueAlpha ssp-clickable-text"
+                                                            href={assistRecord.addressURL}
+                                                            target="_blank"
+                                                            >{assistRecord.mailingAddress}</a
+                                                        >
+                                                    </p>
+                                                    <hr
+                                                        class="ssp-horizontal-rule ssp-bg_monoAlpha ssp-horizontal-rule-button"
+                                                    ></hr>
+                                                    <template
+                                                        if:true={assistRecord.isHOH}
+                                                    >
+                                                    <p
+                                                    class="slds-m-vertical_large"
+                                                >
+                                                    <template if:true={assistRecord.isAccessRequest}>
+                                                        <lightning-button                                                        
+                                                        data-contact-id={assistRecord.contactId}
+                                                        class="ssp-button_base"
+                                                        variant="base"
+                                                        label={customLabel.sspStart}
+                                                        onclick={handleAssisterRequest}
+                                                        data-id={assistRecord.contactId}
+                                                        title={customLabel.sspStart}
+                                                    ></lightning-button>
+                                                        </template>
+                                                        </p>
+                                                    <template if:false={assistRecord.isAccessRequest}>
+                                                    <template
+                                                    if:true={showRemove}
+                                                >
+                                                <template if:true={assistRecord.showRemoveButtonToCurrentUser}>
+                                                        <p
+                                                            class="slds-m-vertical_large"
+                                                        >
+                                                            <lightning-button
+                                                                class="ssp-button_base ssp-remove-btn"
+                                                                variant="base"
+                                                                label={customLabel.sspRemove}
+                                                                onclick={openRemoveModal}
+                                                                data-name={assistRecord.contactName}
+                                                                data-id={assistRecord.id}
+                                                                data-role={assistRecord.role}
+                                                                data-app-id={assistRecord.applicationId}
+                                                                title={customLabel.sspAuthRepRemoveAssistTitle}
+                                                            ></lightning-button>
+                                                        </p>
+                                                    </template>
+                                                        </template>
+                                                        </template>
+                                                    </template>
+                                                </div>
+                                            </c-ssp-accordion-card>
+                                        </div>
+                                    </template>
+                               <!-- </template>-->
+                                <!--<template if:true={isHeadOfHousehold}>-->
+                                <p class="ssp-m-button">
+                                    <lightning-button
+                                        class="ssp-button_brand"
+                                        variant="brand"
+                                        data-type="Assister"
+                                        label={customLabel.sspFindAssist}
+                                        title={customLabel.sspFindAnAssisterAlt}
+                                        onclick={findAssisterOrAgent}
+                                    ></lightning-button>
+                                </p>
+                                <!--</template>-->
+                            </div>
+                        </template>
+                        <template if:true={hasMedicaid}>
+                            <div
+                                class="ssp-auth-reps ssp-fontFamily_ArvoRegular slds-m-top_large"
+                            >
+                                <h2
+                                    class="ssp-fontFamily_popinBold ssp-auth-reps-heading"
+                                >
+                                    {customLabel.sspInsuranceAgent}
+                                </h2>
+                                <p>
+                                    {customLabel.sspContentOfAuthorizeRepresentativeScreen4}
+                                </p>
+                                <div
+                                    class="ssp-list-margin ssp-bullet-points"
+                                    role="list"
+                                >
+                                    <p role="presentation">
+                                        <span class="ssp-dot"></span
+                                        ><span role="listitem"
+                                            >{customLabel.sspApplyForMedicaidOrKIHIPP}</span
+                                        >
+                                    </p>
+                                    <p role="presentation">
+                                        <span class="ssp-dot"></span
+                                        ><span role="listitem"
+                                            >{customLabel.sspReportChangesInformation}</span
+                                        >
+                                    </p>
+                                    <p role="presentation">
+                                        <span class="ssp-dot"></span
+                                        ><span role="listitem"
+                                            >{customLabel.sspCertifyYourMedicaidApplication}</span
+                                        >
+                                    </p>
+
+                                    <p role="presentation">
+                                        <span class="ssp-dot"></span
+                                        ><span role="listitem"
+                                            >{customLabel.sspStartBenefitsAppContactAssisterListFour}</span
+                                        >
+                                    </p>
+                                    <p role="presentation">
+                                        <span class="ssp-dot"></span
+                                        ><span role="listitem"
+                                            >{customLabel.sspStartBenefitsAppContactAssisterListFive}</span
+                                        >
+                                    </p>
+                                    <p role="presentation">
+                                        <span class="ssp-dot"></span
+                                        ><span role="listitem"
+                                            >{customLabel.sspStartBenefitsAppContactAssisterListSix}</span
+                                        >
+                                    </p>
+                                </div>
+                                <template if:true={showInsuranceAgentCard}>
+                                    <template
+                                        for:each={insuranceAgentRecords}
+                                        for:item="insuranceAgentRecord"
+                                    >
+                                        <div
+                                            key={insuranceAgentRecord.Id}
+                                            class="ssp-m-vertical-card"
+                                        >
+                                            <c-ssp-accordion-card>
+                                                <div slot="Title">
+                                                    <p
+                                                        class="ssp-fontFamily_popinBold ssp-color_blueAlpha"
+                                                    >
+                                                        {insuranceAgentRecord.contactName}
+                                                    </p>
+                                                    <template
+                                                        if:true={insuranceAgentRecord.showCaseNumber}
+                                                    >
+                                                        <p
+                                                            class="ssp-fontFamily_popinBold ssp-color_monoBody"
+                                                        >
+                                                            {customLabel.sspCaseHashColon}
+                                                            {insuranceAgentRecord.caseNumber}
+                                                        </p>
+                                                    </template>
+                                                    <template
+                                                        if:false={insuranceAgentRecord.showCaseNumber}
+                                                    >
+                                                        <p
+                                                            class="ssp-fontFamily_popinBold ssp-color_monoBody"
+                                                        >
+                                                            {customLabel.sspApplicationCaseHashColon}
+                                                            {insuranceAgentRecord.applicationName}
+                                                        </p>
+                                                    </template>
+                                                </div>
+                                                <div slot="contentSlot">
+                                                    <hr
+                                                        class="ssp-horizontal-rule ssp-bg_monoAlpha ssp-horizontal-rule-top"
+                                                    ></hr>
+                                                    <p
+                                                        class="ssp-fontFamily_popinRegular ssp-color_monoOmega slds-var-m-top_medium ssp-cardSubHeading"
+                                                    >
+                                                        {customLabel.sspOrganization}
+                                                    </p>
+                                                    <p
+                                                        class="ssp-fontFamily_popinRegular ssp-color_monoBody slds-var-m-bottom_medium slds-var-m-bottom_medium"
+                                                    >
+                                                        {insuranceAgentRecord.contactOrganization}
+                                                    </p>
+
+                                                    <p
+                                                        class="ssp-fontFamily_popinRegular ssp-color_monoOmega slds-var-m-top_medium ssp-cardSubHeading"
+                                                    >
+                                                        {customLabel.sspInsuranceCompany}
+                                                    </p>
+                                                    <p
+                                                        class="ssp-fontFamily_popinRegular ssp-color_monoBody slds-var-m-bottom_medium slds-var-m-bottom_medium"
+                                                    >
+                                                        {insuranceAgentRecord.company}
+                                                    </p>
+                                                    <p
+                                                        class="ssp-fontFamily_popinRegular ssp-color_monoOmega slds-var-m-top_medium ssp-cardSubHeading"
+                                                    >
+                                                        {customLabel.sspLanguageS}
+                                                    </p>
+                                                    <p
+                                                        class="ssp-fontFamily_popinRegular ssp-color_monoBody slds-var-m-bottom_medium slds-var-m-bottom_medium"
+                                                    >
+                                                        {insuranceAgentRecord.language}
+                                                    </p>
+                                                    <hr
+                                                        class="ssp-horizontal-rule ssp-bg_monoAlpha ssp-horizontal-rule-middle"
+                                                    ></hr>
+                                                    <p
+                                                        class="ssp-fontFamily_popinBold ssp-color_blueAlpha slds-var-m-top_medium ssp-cardHeading"
+                                                    >
+                                                        {customLabel.sspContactInformation}
+                                                    </p>
+                                                    <template if:true={insuranceAgentRecord.showPhone}>
+                                                    <p
+                                                        class="ssp-fontFamily_popinRegular ssp-color_monoOmega slds-var-m-top_medium ssp-cardSubHeading"
+                                                    >
+                                                        {customLabel.sspPhone}
+                                                    </p>
+                                                    <p
+                                                        class="ssp-fontFamily_popinRegular ssp-color_monoBody slds-var-m-bottom_medium slds-var-m-bottom_medium"
+                                                    >
+                                                        <a
+                                                            title={insuranceAgentRecord.PhoneTitle}
+                                                            class="ssp-color_blueAlpha ssp-clickable-text"
+                                                            href={insuranceAgentRecord.formattedPhone}
+                                                            >{insuranceAgentRecord.maskedPhone}</a
+                                                        >
+                                                    </p>
+                                                    </template>
+                                                    <p
+                                                        class="ssp-fontFamily_popinRegular ssp-color_monoOmega slds-var-m-top_medium ssp-cardSubHeading"
+                                                    >
+                                                        {customLabel.sspEmail}
+                                                    </p>
+                                                    <p
+                                                        class="ssp-fontFamily_popinRegular ssp-color_monoBody slds-var-m-bottom_medium slds-var-m-bottom_medium"
+                                                    >
+                                                        <a
+                                                            title={insuranceAgentRecord.emailTitle}
+                                                            class="ssp-color_blueAlpha ssp-clickable-text"
+                                                            href={insuranceAgentRecord.formattedEmail}
+                                                            >{insuranceAgentRecord.contactEmail}</a
+                                                        >
+                                                    </p>
+                                                    <p
+                                                        class="ssp-fontFamily_popinRegular ssp-color_monoOmega slds-var-m-top_medium ssp-cardSubHeading"
+                                                    >
+                                                        {customLabel.sspAddress}
+                                                    </p>
+                                                    <p
+                                                        class="ssp-fontFamily_popinRegular ssp-color_monoBody slds-var-m-bottom_medium slds-var-m-bottom_medium"
+                                                    >
+                                                        <a
+                                                            title={insuranceAgentRecord.AddressTitle}
+                                                            class="ssp-color_blueAlpha ssp-clickable-text"
+                                                            href={insuranceAgentRecord.addressURL}
+                                                            target="_blank"
+                                                            >{insuranceAgentRecord.mailingAddress}</a
+                                                        >
+                                                    </p>
+                                                    <hr
+                                                        class="ssp-horizontal-rule ssp-bg_monoAlpha ssp-horizontal-rule-middle"
+                                                    ></hr>
+                                                    <p
+                                                        class="ssp-fontFamily_popinBold ssp-color_blueAlpha slds-var-m-vertical_medium ssp-cardHeading"
+                                                    >
+                                                        {customLabel.sspAvailability}
+                                                    </p>
+                                                    <template
+                                                        for:each={insuranceAgentRecord.hoursAvailableCodes}
+                                                        for:item="availability"
+                                                    >
+                                                        <p
+                                                            class="ssp-fontFamily_popinRegular ssp-color_monoBody slds-var-m-bottom_medium slds-var-m-bottom_medium"
+                                                            key={availability}
+                                                        >
+                                                            {availability}
+                                                        </p>
+                                                    </template>
+                                                    <template
+                                                        if:true={insuranceAgentRecord.isHOH}
+                                                    >                                                   
+                                                        <template if:false={insuranceAgentRecord.isAccessRequest}>
+                                                    <template
+                                                    if:true={showRemove}
+                                                >
+                                                <template if:true={insuranceAgentRecord.showRemoveButtonToCurrentUser}>
+                                                        <hr
+                                                            class="ssp-horizontal-rule ssp-bg_monoAlpha ssp-horizontal-rule-button"
+                                                        ></hr>
+                                                        <p
+                                                            class="slds-m-vertical_large"
+                                                        >
+                                                            <lightning-button
+                                                                class="ssp-button_base ssp-remove-btn"
+                                                                variant="base"
+                                                                label={customLabel.sspRemove}
+                                                                onclick={openRemoveModal}
+                                                                data-name={insuranceAgentRecord.contactName}
+                                                                data-id={insuranceAgentRecord.id}
+                                                                data-role={insuranceAgentRecord.role}
+                                                                data-app-id={insuranceAgentRecord.applicationId}
+                                                                title={customLabel.sspAuthRepRemoveInsuranceTitle}
+                                                            ></lightning-button>
+                                                        </p>
+                                                    </template>
+                                                    </template>
+                                                    </template>
+                                                    </template>
+                                                </div>
+                                            </c-ssp-accordion-card>
+                                        </div>
+                                    </template>
+                                </template>
+                                <!-- <template if:true={isHeadOfHousehold}>-->
+                                <p class="ssp-m-button">
+                                    <lightning-button
+                                        class="ssp-button_brand ssp-remove-btn"
+                                        variant="brand"
+                                        data-type="Agent"
+                                        label={customLabel.sspFindInsuranceAgent}
+                                        title={customLabel.sspFindInsuranceAgentAlt}
+                                        onclick={findAssisterOrAgent}
+                                    ></lightning-button>
+                                </p>
+                                <!--</template>-->
+                            </div>
+                        </template>
+                        <template if:true={isApplicationSummary}>
+                            <div
+                                class="slds-grid slds-wrap slds-grid_align-center slds-m-bottom_xx-large ssp-action-btn-section"
+                            >
+                                <div
+                                    class="slds-grid slds-wrap ssp-footerBtnBackSave slds-size_1-of-2 slds-small-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2"
+                                >
+                                    <div class="slds-col ssp-firstGroupBtn">
+                                        <lightning-button
+                                            label={customLabel.sspBack}
+                                            class="ssp-button_base"
+                                            onclick={handleNavigateSummary}
+                                        >
+                                        </lightning-button>
+                                    </div>
+                                    <div class="slds-col ssp-secondGroupBtn" if:false={showExit}>
+                                        <lightning-button
+                                            label={customLabel.sspSaveAndExit}
+                                            onclick={handleExitButton}
+                                            variant="brand"
+                                            class="dd-slds-nav_btn-next ssp-button_base"
+                                        ></lightning-button>
+                                    </div>
+                                    <div class="slds-col ssp-secondGroupBtn" if:true={showExit}>
+                                        <lightning-button
+                                            label={customLabel.sspExitButton}
+                                            onclick={handleOnlyExit}
+                                            variant="brand"
+                                            class="dd-slds-nav_btn-next ssp-button_base"
+                                            title={customLabel.sspExitButton}
+                                        ></lightning-button>
+                                    </div>
+                                </div>
+                                <div
+                                    class="slds-col ssp-footerBtnNext slds-text-align_right slds-size_1-of-2 slds-small-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2"
+                                >
+                                    <lightning-button
+                                        label={customLabel.sspNext}
+                                        onclick={handleNextNavigateSummary}
+                                        variant="netural"
+                                        class="dd-slds-nav_btn-next ssp-button_neutral"
+                                        disabled={disableNext}
+                                    ></lightning-button>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                </template>
+            </main>
+
+            <c-ssp-detailed-information-modal
+                if:true={showRemoveModal}
+                header-value={customLabel.sspConfirmRemoval}
+                open-model={showRemoveModal}
+                onclosemodal={closeRemoveModal}
+                reference={reference}
+            >
+                <p slot="contentSlot">
+                    {removeModalContent}
+                </p>
+                <div
+                    slot="Footer"
+                    class="slds-grid slds-wrap slds-size_1-of-1 ssp-stacked-btn-width"
+                >
+                    <lightning-button
+                        variant="brand"
+                        label={customLabel.sspRemove}
+                        class="ssp-button_brand slds-size_1-of-1"
+                        onclick={removeRecord}
+                    >
+                    </lightning-button>
+                    <lightning-button
+                    label={customLabel.sspCancel}
+                    class="ssp-button_base slds-size_1-of-1 slds-m-top_medium"
+                    onclick={closeRemoveModal}
+                    >
+                    </lightning-button>
+                </div>
+            </c-ssp-detailed-information-modal>
+        </div>
+    </template>
+
+    <template if:true={showNonAuthenticatedView}>
+        <div class="ssp-auth-reps-assisters-and-agents">
+            <main class="slds-m-bottom_xx-large">
+                <div
+                class="ssp-reps-app-header ssp-bg_appHeaderGradient slds-p-vertical_medium slds-m-bottom_x-large"
+            >
+                <h1 class="ssp-fontFamily_popinBold ssp-reps-text">
+                    {customLabel.sspRepsAssistsAgents}
+                </h1>
+            </div>
+            <div
+                class="slds-m-vertical_large ssp-auth-reps-assisters-agents ssp-bodyContainer"
+            >
+        <div
+        class="ssp-auth-reps ssp-fontFamily_ArvoRegular ssp-border-bottom"
+    >
+        <h2
+            class="ssp-fontFamily_popinBold ssp-auth-reps-heading"
+        >
+            {customLabel.sspAuthorizedRepresentative}
+        </h2>
+        <p>
+            {customLabel.sspContentOfAuthorizeRepresentativeScreen1}
+        </p>
+        <div
+            class="ssp-list-margin ssp-bullet-points"
+            role="list"
+        >
+            <p role="presentation">
+                <span class="ssp-dot"></span
+                ><span role="listitem"
+                    >{customLabel.sspApplyForBenefits}</span
+                >
+            </p>
+            <p role="presentation">
+                <span class="ssp-dot"></span
+                ><span role="listitem"
+                    >{customLabel.sspReportChangesInformation}</span
+                >
+            </p>
+            <p role="presentation">
+                <span class="ssp-dot"></span
+                ><span role="listitem"
+                    >{customLabel.sspCertifyYourBenefitsApplication}</span
+                >
+            </p>
+            <p role="presentation">
+                <span class="ssp-dot"></span
+                ><span role="listitem"
+                    >{customLabel.sspReceiveCopyOfNotices}</span
+                >
+            </p>
+        </div>
+        <p class="ssp-text-margin-small">
+            {customLabel.sspContentOfAuthorizeRepresentativeScreen2}
+        </p>
+        
+
+        <p class="ssp-text-margin-small">{customLabel.sspAddAuthRepDescriptionText}</p>
+        </div>
+
+
+
+                    <div
+                        class="ssp-auth-reps ssp-fontFamily_ArvoRegular ssp-border-bottom ssp-m-section"
+                    >
+                        <h2
+                            class="ssp-fontFamily_popinBold ssp-auth-reps-heading"
+                        >
+                            {customLabel.sspAssist}
+                        </h2>
+                        <p>
+                            {customLabel.sspContentOfAuthorizeRepresentativeScreen3}
+                        </p>
+                        <div
+                            class="ssp-list-margin ssp-bullet-points"
+                            role="list"
+                        >
+                            <p role="presentation">
+                                <span class="ssp-dot"></span
+                                ><span role="listitem"
+                                    >{customLabel.sspApplyForMedicaidOrKIHIPP}</span
+                                >
+                            </p>
+                            <p role="presentation">
+                                <span class="ssp-dot"></span
+                                ><span role="listitem"
+                                    >{customLabel.sspReportChangesInformation}</span
+                                >
+                            </p>
+                            <p role="presentation">
+                                <span class="ssp-dot"></span
+                                ><span role="listitem"
+                                    >{customLabel.sspCertifyYourMedicaidApplication}</span
+                                >
+                            </p>
+
+                            <p role="presentation">
+                                <span class="ssp-dot"></span
+                                ><span role="listitem"
+                                    >{customLabel.sspStartBenefitsAppContactAssisterListFour}</span
+                                >
+                            </p>
+                            <p role="presentation">
+                                <span class="ssp-dot"></span
+                                ><span role="listitem"
+                                    >{customLabel.sspStartBenefitsAppContactAssisterListFive}</span
+                                >
+                            </p>
+                            <p role="presentation">
+                                <span class="ssp-dot"></span
+                                ><span role="listitem"
+                                    >{customLabel.sspStartBenefitsAppContactAssisterListSix}</span
+                                >
+                            </p>
+                        </div>
+                        <p class="ssp-m-button">
+                            <lightning-button
+                                class="ssp-button_brand"
+                                variant="brand"
+                                data-type="Assister"
+                                label={customLabel.sspFindAssist}
+                                onclick={findAssisterOrAgent}
+                            ></lightning-button>
+                        </p>
+                    </div>
+                    <div
+                        class="ssp-auth-reps ssp-fontFamily_ArvoRegular slds-m-top_large"
+                    >
+                        <h2
+                            class="ssp-fontFamily_popinBold ssp-auth-reps-heading"
+                        >
+                            {customLabel.sspInsuranceAgent}
+                        </h2>
+                        <p>
+                            {customLabel.sspContentOfAuthorizeRepresentativeScreen4}
+                        </p>
+                        <div
+                            class="ssp-list-margin ssp-bullet-points"
+                            role="list"
+                        >
+                            <p role="presentation">
+                                <span class="ssp-dot"></span
+                                ><span role="listitem"
+                                    >{customLabel.sspApplyForMedicaidOrKIHIPP}</span
+                                >
+                            </p>
+                            <p role="presentation">
+                                <span class="ssp-dot"></span
+                                ><span role="listitem"
+                                    >{customLabel.sspReportChangesInformation}</span
+                                >
+                            </p>
+                            <p role="presentation">
+                                <span class="ssp-dot"></span
+                                ><span role="listitem"
+                                    >{customLabel.sspCertifyYourMedicaidApplication}</span
+                                >
+                            </p>
+
+                            <p role="presentation">
+                                <span class="ssp-dot"></span
+                                ><span role="listitem"
+                                    >{customLabel.sspStartBenefitsAppContactAssisterListFour}</span
+                                >
+                            </p>
+                            <p role="presentation">
+                                <span class="ssp-dot"></span
+                                ><span role="listitem"
+                                    >{customLabel.sspStartBenefitsAppContactAssisterListFive}</span
+                                >
+                            </p>
+                            <p role="presentation">
+                                <span class="ssp-dot"></span
+                                ><span role="listitem"
+                                    >{customLabel.sspStartBenefitsAppContactAssisterListSix}</span
+                                >
+                            </p>
+                        </div>
+                        <p class="ssp-m-button">
+                            <lightning-button
+                                class="ssp-button_brand ssp-remove-btn"
+                                variant="brand"
+                                data-type="Agent"
+                                label={customLabel.sspFindInsuranceAgent}
+                                onclick={findAssisterOrAgent}
+                            ></lightning-button>
+                        </p>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </template>
+    <template if:true={showAuthRepModification}>
+        <c-ssp-add-auth-rep
+            ssp-contact-id={sspContactId}
+            ssp-application-id={sspApplicationId}
+            onsave={handleClose}
+            oncancel={handleCancel}
+            flow-name={flowName}
+            auth-rep-request={isAuthRepAccessRequest}
+        >
+        </c-ssp-add-auth-rep>
+    </template>
+    <template if:true={saveExit}>
+        <c-ssp-exit-application-modal
+            open-model={saveExit}
+            onclosemodal={closeExitModal}
+        ></c-ssp-exit-application-modal>
+    </template>
+</template>

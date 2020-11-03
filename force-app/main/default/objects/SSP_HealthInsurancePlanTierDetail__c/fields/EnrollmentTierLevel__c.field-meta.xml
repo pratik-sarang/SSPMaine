@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EnrollmentTierLevel__c</fullName>
+    <description>This field is used to store the Enrollment Tier Level</description>
+    <externalId>false</externalId>
+    <label>Enrollment Tier Level</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>EMPO</fullName>
+                <default>false</default>
+                <label>Employee Only</label>
+            </value>
+            <value>
+                <fullName>EMSP</fullName>
+                <default>false</default>
+                <label>Employee plus Spouse</label>
+            </value>
+            <value>
+                <fullName>EMOD</fullName>
+                <default>false</default>
+                <label>Employee plus One dependent</label>
+            </value>
+            <value>
+                <fullName>EMTD</fullName>
+                <default>false</default>
+                <label>Employee plus two or more dependents</label>
+            </value>
+            <value>
+                <fullName>FAM</fullName>
+                <default>false</default>
+                <label>Family</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

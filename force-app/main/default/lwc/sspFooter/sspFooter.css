@@ -1,0 +1,151 @@
+.ssp-footer{
+    align-items: center;
+}
+
+a:focus {
+    outline: none;
+}
+.ssp-footer-heading {
+    font-size: 1.125rem;
+    padding: 5px;
+    text-decoration: underline;
+}
+
+.ssp-footer-heading-large{
+    font-size: 3.75em;
+}
+
+.ssp-footer-text{
+    font-size: 1rem;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+.ssp-footer-text-child3 {
+    font-size: 0.813em;
+}
+
+
+li.ssp-footer-list{
+    padding-bottom:1em;
+}
+
+li.ssp-footer-side-text{
+    padding-bottom: 0;
+    line-height: 1.8em;
+}
+li.ssp-footer-side-text-down{
+    padding-top: 1em;
+}
+
+a.ssp-footer-link {
+    text-decoration: underline;
+}
+ .slds-col{
+    max-width: 270px;
+    margin-top: 30px;
+}
+.ssp-privacy-policy {
+    font-size: 0.75rem;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.ssp-footer-logo-container {
+    justify-content: center;
+}
+.ssp-footer-logo-container img{
+    height: 4rem;
+}
+.ssp-footer_logo img {
+    height: 4rem;
+}
+.ssp-privacy-link {
+    text-decoration: underline;
+}
+.ssp-col-mid {
+    padding-left: 4rem;
+}
+.ssp-complaint-section {
+    display: block;
+}
+.ssp-isMobile {
+    display: none;
+}
+.ssp-footer-top-text {
+    text-align: center;
+    font-size: 1rem;
+}
+.ssp-footer-expanded-kynect {
+    font-size: 1.125rem;
+}
+.ssp-footer-social-media {
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+.ssp-footer-contactMarginBottom {
+    margin-bottom: 4.0625rem;
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    .ssp-contact-container {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+    .ssp-footer {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        align-items: flex-start;
+    }
+}
+@media only screen and (min-device-width: 741px) and (max-device-width: 896px) and (orientation: landscape) {
+    .ssp-footer {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        align-items: flex-start;
+    }
+}
+@media only screen and (max-device-width: 896px) and (orientation: landscape) {
+    .ssp-contact-container {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+@media only screen and (max-device-width: 768px) {
+    .ssp-footer {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        align-items: flex-start;
+    }
+    .ssp-col-mid {
+        padding-left: 0;
+    }
+    .ssp-complaint-section {
+        display: none;
+    }
+    .ssp-isMobile {
+        display: block;
+    }
+    .ssp-privacy-policy {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    .ssp-footer-contactMarginBottom {
+        margin-bottom: 0rem;
+    }
+}
+@media only screen and (max-device-width : 480px)  {
+    .ssp-footer-heading{
+        font-size: 0.875rem;
+}
+    .ssp-footer-text{
+      
+        font-size: 0.75rem;
+}
+    .ssp-footer-heading-large{
+        font-size: 1.87em;
+}
+    .slds-col{
+    max-width: 100px;
+}
+}

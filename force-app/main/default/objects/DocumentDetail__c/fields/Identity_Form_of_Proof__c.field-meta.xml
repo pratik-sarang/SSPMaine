@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Identity_Form_of_Proof__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Click here to see all forms of proof</inlineHelpText>
+    <label>Identity Form of Proof</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Affidavit from non-US citizen</fullName>
+                <default>false</default>
+                <label>Affidavit from non-US citizen</label>
+            </value>
+            <value>
+                <fullName>Divorce Decree</fullName>
+                <default>false</default>
+                <label>Divorce Decree</label>
+            </value>
+            <value>
+                <fullName>Drivers License</fullName>
+                <default>false</default>
+                <label>Drivers License</label>
+            </value>
+            <value>
+                <fullName>Verified by DMV</fullName>
+                <default>false</default>
+                <label>Verified by DMV</label>
+            </value>
+            <value>
+                <fullName>Verified by DPP</fullName>
+                <default>false</default>
+                <label>Verified by DPP</label>
+            </value>
+            <value>
+                <fullName>Employee ID</fullName>
+                <default>false</default>
+                <label>Employee ID</label>
+            </value>
+            <value>
+                <fullName>Federal Government issued ID</fullName>
+                <default>false</default>
+                <label>Federal Government issued ID</label>
+            </value>
+            <value>
+                <fullName>GED</fullName>
+                <default>false</default>
+                <label>GED</label>
+            </value>
+            <value>
+                <fullName>Immigration Document (Government Issued)</fullName>
+                <default>false</default>
+                <label>Immigration Document (Government Issued)</label>
+            </value>
+            <value>
+                <fullName>Health Insurance Card</fullName>
+                <default>false</default>
+                <label>Health Insurance Card</label>
+            </value>
+            <value>
+                <fullName>High School or College Diploma</fullName>
+                <default>false</default>
+                <label>High School or College Diploma</label>
+            </value>
+            <value>
+                <fullName>Affidavit from US citizen</fullName>
+                <default>false</default>
+                <label>Affidavit from US citizen</label>
+            </value>
+            <value>
+                <fullName>Verified by IRS</fullName>
+                <default>false</default>
+                <label>Verified by IRS</label>
+            </value>
+            <value>
+                <fullName>Verified by KTAP or Kinship Care</fullName>
+                <default>false</default>
+                <label>Verified by KTAP or Kinship Care</label>
+            </value>
+            <value>
+                <fullName>Verified by Law enforcement</fullName>
+                <default>false</default>
+                <label>Verified by Law enforcement</label>
+            </value>
+            <value>
+                <fullName>Local Government Issued ID</fullName>
+                <default>false</default>
+                <label>Local Government Issued ID</label>
+            </value>
+            <value>
+                <fullName>Marriage License</fullName>
+                <default>false</default>
+                <label>Marriage License</label>
+            </value>
+            <value>
+                <fullName>Military Dependent&apos;s ID</fullName>
+                <default>false</default>
+                <label>Military Dependent&apos;s ID</label>
+            </value>
+            <value>
+                <fullName>US Coast Guard Merchant Mariner card</fullName>
+                <default>false</default>
+                <label>US Coast Guard Merchant Mariner card</label>
+            </value>
+            <value>
+                <fullName>Certificate of US Citizenship (N-560 or N-561)</fullName>
+                <default>false</default>
+                <label>Certificate of US Citizenship (N-560 or N-561)</label>
+            </value>
+            <value>
+                <fullName>Naturalization Certificate</fullName>
+                <default>false</default>
+                <label>Naturalization Certificate</label>
+            </value>
+            <value>
+                <fullName>Property Deed or Title</fullName>
+                <default>false</default>
+                <label>Property Deed or Title</label>
+            </value>
+            <value>
+                <fullName>Award Letter</fullName>
+                <default>false</default>
+                <label>Award Letter</label>
+            </value>
+            <value>
+                <fullName>Passport</fullName>
+                <default>false</default>
+                <label>Passport</label>
+            </value>
+            <value>
+                <fullName>Not verified</fullName>
+                <default>false</default>
+                <label>Not verified</label>
+            </value>
+            <value>
+                <fullName>Verified by residential care facility administration</fullName>
+                <default>false</default>
+                <label>Verified by residential care facility administration</label>
+            </value>
+            <value>
+                <fullName>State Government Issued ID</fullName>
+                <default>false</default>
+                <label>State Government Issued ID</label>
+            </value>
+            <value>
+                <fullName>School Photo ID</fullName>
+                <default>false</default>
+                <label>School Photo ID</label>
+            </value>
+            <value>
+                <fullName>Verified by SNAP</fullName>
+                <default>false</default>
+                <label>Verified by SNAP</label>
+            </value>
+            <value>
+                <fullName>School Record</fullName>
+                <default>false</default>
+                <label>School Record</label>
+            </value>
+            <value>
+                <fullName>Verified by SSA</fullName>
+                <default>false</default>
+                <label>Verified by SSA</label>
+            </value>
+            <value>
+                <fullName>US Military ID Card or Draft Record</fullName>
+                <default>false</default>
+                <label>US Military ID Card or Draft Record</label>
+            </value>
+            <value>
+                <fullName>Verified by correctional agency</fullName>
+                <default>false</default>
+                <label>Verified by correctional agency</label>
+            </value>
+            <value>
+                <fullName>Adoption Record</fullName>
+                <default>false</default>
+                <label>Adoption Record</label>
+            </value>
+            <value>
+                <fullName>Verified by Child Support</fullName>
+                <default>false</default>
+                <label>Verified by Child Support</label>
+            </value>
+            <value>
+                <fullName>ID verified by other Federal or State agency</fullName>
+                <default>false</default>
+                <label>ID verified by other Federal or State agency</label>
+            </value>
+            <value>
+                <fullName>Wage Stubs</fullName>
+                <default>false</default>
+                <label>Wage Stubs</label>
+            </value>
+            <value>
+                <fullName>Receipt of Medicare/Medicare Card</fullName>
+                <default>false</default>
+                <label>Receipt of Medicare/Medicare Card</label>
+            </value>
+            <value>
+                <fullName>Social Security Card</fullName>
+                <default>false</default>
+                <label>Social Security Card</label>
+            </value>
+            <value>
+                <fullName>Birth Certificate</fullName>
+                <default>false</default>
+                <label>Birth Certificate</label>
+            </value>
+            <value>
+                <fullName>Certificate of Tribal Affiliation</fullName>
+                <default>false</default>
+                <label>Certificate of Tribal Affiliation</label>
+            </value>
+            <value>
+                <fullName>Collateral statement</fullName>
+                <default>false</default>
+                <label>Collateral statement</label>
+            </value>
+            <value>
+                <fullName>Client statement</fullName>
+                <default>false</default>
+                <label>Client statement</label>
+            </value>
+            <value>
+                <fullName>Conversion</fullName>
+                <default>false</default>
+                <label>Conversion</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Goal__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>The goal record to which the assessment answer is related to</description>
+    <externalId>false</externalId>
+    <label>Goal</label>
+    <referenceTo>RE_Goal__c</referenceTo>
+    <relationshipLabel>Goal Answers</relationshipLabel>
+    <relationshipName>Goal_Answers</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

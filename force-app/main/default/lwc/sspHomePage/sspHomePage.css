@@ -1,0 +1,464 @@
+.ssp-video:focus {
+    outline: none;
+}
+.ssp-autoMargin {
+    margin: auto;
+}
+.ssp-width75 {
+    width: 65%;
+}
+.ssp-home_page_wrap {
+  padding-top: 81px;
+  padding-bottom: 60px;
+}
+.ssp-browser-banner {
+    z-index: 1;
+}
+.ssp-welcome_text {
+  font-size: 3.75rem;
+  line-height: 60px;
+  margin-bottom: 15px;
+}
+
+.ssp-welcome_content {
+  font-size: 1rem;
+  line-height: 24px;
+  margin-bottom: 30px;
+  max-width: 600px;
+}
+
+.ssp-videoWrap {
+    padding-left: 24px;
+    z-index: 99;
+}
+
+.ssp-video {
+  height: 271px;
+  width: 100%;
+  border: 0;
+  border-radius: 6px;
+  box-shadow: 0 15px 25px -12px rgba(0, 35, 98, 0.1);
+  z-index: 999;
+}
+
+.ssp-margin_right-medium {
+  margin-right: 30px;
+  margin-bottom: 13px;
+  display: inline-block;
+}
+
+.ssp-btn_wrap_right {
+  display: none;
+}
+
+.ssp-signUp_wrap {
+  font-size: 0.813rem;
+  padding-top: 17px;
+  padding-bottom: 16.5px;
+}
+
+.ssp-signUp_wrap div:first-child {
+  margin-bottom: 8px;
+}
+
+.ssp-signUp_wrap a {
+  text-decoration: underline;
+}
+
+.ssp-subsection_wrap {
+  padding-top: 30px;
+  padding-bottom: 62px;
+}
+
+.ssp-subsection_wrap h2 {
+  font-size: 1.5rem;
+  line-height: 32px;
+  margin-bottom: 15px;
+}
+
+.ssp-subsection_wrap div:first-child {
+  font-size: 1rem;
+  line-height: 24px;
+}
+
+.ssp-card_wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ssp-card_wrap > div {
+  width: 33%;
+  padding: 30px 15px;
+}
+
+.ssp-help_section .ssp-card_wrap > div {
+  width: 25%;
+  padding-bottom: 0;
+}
+
+.ssp-help_section .ssp-card_wrap > div:nth-child(1),
+.ssp-card_wrap > div:nth-child(1) {
+  padding-left: 0;
+}
+
+.ssp-card_wrap > div:nth-child(1n + 4) {
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+}
+
+.ssp-card_wrap > div:last-child {
+  padding-left: 15px;
+}
+
+.ssp-card_wrap > div:nth-child(3n) {
+  padding-right: 0;
+}
+
+.ssp-help_section .ssp-card_wrap > div:nth-child(3n) {
+  padding-right: 15px;
+}
+
+.ssp-help_section .ssp-card_wrap > div:nth-child(1n + 4) {
+  padding-top: 30px;
+  padding-bottom: 0;
+  padding-right: 0;
+  padding-left: 15px;
+}
+
+p.ssp-card_content {
+  margin-bottom: 30px;
+}
+
+.ssp-card_footer_wrap {
+  margin-top: 30px;
+  display: inline-block;
+  width: 100%;
+}
+
+.ssp-local-resource_wrap {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  position: relative;
+}
+
+h2.ssp-home_local_resource {
+  font-size: 1.5rem;
+  letter-spacing: -0.3px;
+  line-height: 30px;
+  margin-bottom: 15px;
+}
+
+.ssp-local-resource_wrap .ssp-videoWrap {
+    padding-left: 86px;
+}
+
+.ssp-local-resource_wrap .ssp-videoWrap .ssp-video {
+    height: 240px;
+}
+.ssp-resource_content {
+  margin-bottom: 15px;
+}
+
+.ssp-resource_link {
+  font-size: 0.813rem;
+  letter-spacing: -0.3px;
+  line-height: 30px;
+  text-decoration: underline;
+}
+
+.ssp-help_section {
+  padding-top: 60px;
+  padding-bottom: 100px;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+ul li {
+  list-style: disc;
+}
+
+.ssp-top_banner {
+  height: 490px;
+  width: 615px;
+  position: absolute;
+  z-index: 0;
+  top: 85px;
+  right: 85px;
+}
+
+.ssp-banner_left_section {
+  z-index: 99;
+}
+
+.ssp-bottom_banner {
+  position: absolute;
+  z-index: 0;
+  right: 0;
+  height: 249px;
+  bottom: 132px;
+}
+
+.ssp-top_banner_mobile {
+  display: none;
+}
+
+.ssp-phone_number {
+  visibility: hidden;
+  position: absolute;
+}
+
+.ssp-card_footer_wrap_margin_small {
+  margin-top: 50px;
+}
+
+.ssp-font_defaultSize {
+  font-size: 1rem;
+}
+
+.ssp-subsection_wrap h2.ssp-medium_lheight {
+  line-height: 30px;
+}
+
+.ssp-button_neutral,
+.ssp-button_brand,
+.ssp-button_base {
+  cursor: pointer;
+}
+
+.ssp-grid {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.ssp-grid > div {
+  width: 50%;
+}
+
+.ssp-homeCardBody {
+    font-size: 1rem;
+    line-height: 24px;
+    text-align: left;
+}
+
+.ssp-homeButtonCard {
+    border-radius: 6px;
+}
+.ssp-imgContainer {
+    width: 100%;
+
+    background-image: url(../resource/SSP_KynectImages/homePageBeta.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-position: center center;
+    background-size: 100% 100%;
+}
+.ssp-imgContainerBeta {
+    width: 100%;
+    background-image: url(../resource/SSP_KynectImages/homePageAlpha.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-position: center center;
+    padding: 30px 0;
+    background-size: 100% 100%;
+}
+
+.ssp-kynectImage {
+    height: 130px;
+}
+.ssp-kynectLogo {
+    width: 145px;
+    height: 56px;
+    border-radius: 6px;
+}
+.ssp-textCenter {
+    text-align: center;
+}
+.ssp-blackDisc {
+    border-radius: 50%;
+    background-color: #262729;
+    height: 16px;
+    width: 16px;
+    margin-left: 7px;
+    margin-top: 3px;
+    margin-right: 7px;
+}
+.ssp-centerImage {
+    justify-content: center;
+    display: flex;
+}
+.ssp-imgElementsTwo {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    right: 30px;
+}
+.ssp-homePageBannerTextOne {
+    font-size: 2.5rem;
+}
+@media only screen and (min-width: 769px) {
+    .ssp-imgElements {
+        
+        
+        padding: 0px 4.68rem 7.5rem;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .ssp-imgElementsTwo {
+        position: absolute;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        right: 30px;
+        margin-top: 50px;
+    }
+    .ssp-width75 {
+        width: 100%;
+    }
+    .ssp-imgContainer {
+        width: 100%;
+
+        background-image: url(../resource/SSP_KynectImages2/homePageBetaMobile.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        background-position: center center;
+    }
+    .ssp-imgContainerBeta {
+        width: 100%;
+        background-image: url(../resource/SSP_KynectImages2/homePageAlphaMobile.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        background-position: center center;
+    }
+    .ssp-imgElements {
+        width: 100%;
+        padding: 0 30px 30px;
+    }
+    .ssp-grid > div {
+        width: 100%;
+    }
+
+  .ssp-home_page_wrap {
+    padding: 60px 30px 30px 30px;
+  }
+
+  .ssp-welcome_text {
+    width: auto;
+    height: auto;
+    font-size: 2.625rem;
+    font-weight: 900;
+    line-height: 48px;
+  }
+
+  .ssp-videoWrap,
+  .ssp-local-resource_wrap .ssp-videoWrap {
+    padding-left: 0;
+  }
+
+  .ssp-btn_wrap_left {
+    display: none;
+  }
+
+  .ssp-btn_wrap_right {
+    display: inline-block;
+    margin-top: 30px;
+    width: 100%;
+  }
+
+  .ssp-button_brand .slds-button_brand,
+  .ssp-button_neutral .slds-button_neutral {
+    width: 100%;
+  }
+
+  .ssp-btn_wrap_right .ssp-button_brand,
+  .ssp-btn_wrap_right .ssp-button_neutral {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .ssp-btn_wrap_right .ssp-button_brand {
+    margin-bottom: 13px;
+    margin-right: 0;
+  }
+
+  .ssp-signUp_wrap {
+    padding: 15px 30px;
+  }
+
+  .ssp-subsection_wrap {
+    padding: 30px 30px 60px 30px;
+  }
+
+  .ssp-card_wrap > div,
+  .ssp-help_section .ssp-card_wrap > div,
+  .ssp-card_wrap > div:nth-child(1n + 4),
+  .ssp-help_section .ssp-card_wrap > div:nth-child(1n + 4) {
+    width: 100%;
+    padding: 7.5px 0 7.5px 0;
+  }
+
+  .ssp-card_wrap > div:first-child,
+  .ssp-help_section .ssp-card_wrap > div:first-child {
+    padding-top: 30px;
+  }
+
+  .ssp-card_wrap > div:last-child,
+  .ssp-help_section .ssp-card_wrap > div:last-child {
+    padding-top: 7.5px;
+    padding-bottom: 0;
+  }
+
+  .ssp-help_section .ssp-card_wrap > div:nth-child(3n) {
+    padding-right: 0;
+  }
+
+  .ssp-local-resource_wrap {
+    padding: 60px 30px;
+  }
+
+  .ssp-resource_link {
+    margin-bottom: 30px;
+    display: inline-block;
+  }
+
+  .ssp-help_section {
+    padding-top: 60px;
+    padding-bottom: 100px;
+  }
+
+  .ssp-top_banner {
+    display: none;
+  }
+
+  .ssp-top_banner_mobile {
+    right: 0;
+    top: 60px;
+    display: block;
+    position: absolute;
+  }
+
+  .ssp-bottom_banner {
+    display: none;
+  }
+
+  .ssp-card_footer_wrap_margin_small {
+    margin-top: 30px;
+  }
+
+  .ssp-min_height {
+    min-height: 185px;
+  }
+  
+  .ssp-homeButtonCard {
+        border-radius: 6px;
+  }
+}

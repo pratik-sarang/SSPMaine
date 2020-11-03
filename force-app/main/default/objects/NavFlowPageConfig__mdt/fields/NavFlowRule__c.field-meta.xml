@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NavFlowRule__c</fullName>
+    <description>Rule condition to queue/show the page. If no rule is configured then by default the page will be queued/showed.</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Rule condition to queue/show the page. If no rule is configured then by default the page will be queued/showed.</inlineHelpText>
+    <label>Navigation Flow Rule</label>
+    <referenceTo>NavFlowRule__mdt</referenceTo>
+    <relationshipLabel>Navigation Flow Page Configuration</relationshipLabel>
+    <relationshipName>Navigation_Flow_Page_Configuration</relationshipName>
+    <required>false</required>
+    <type>MetadataRelationship</type>
+    <unique>false</unique>
+</CustomField>

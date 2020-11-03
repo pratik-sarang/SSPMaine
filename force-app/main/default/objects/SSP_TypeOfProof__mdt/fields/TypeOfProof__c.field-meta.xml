@@ -1,0 +1,1721 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TypeOfProof__c</fullName>
+    <description>Used to store the RFI type of proof details</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Type of Proof</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>V003</fullName>
+                <default>false</default>
+                <label>US Citizenship</label>
+            </value>
+            <value>
+                <fullName>V004</fullName>
+                <default>false</default>
+                <label>Verification of Immigration status</label>
+            </value>
+            <value>
+                <fullName>V006</fullName>
+                <default>false</default>
+                <label>Verification of lawful presence.</label>
+            </value>
+            <value>
+                <fullName>V007</fullName>
+                <default>false</default>
+                <label>Immigration Entry Date Verification</label>
+            </value>
+            <value>
+                <fullName>V008</fullName>
+                <default>false</default>
+                <label>Proof of termination of ESI coverage (Employer Sponsored Insurance).</label>
+            </value>
+            <value>
+                <fullName>V009</fullName>
+                <default>false</default>
+                <label>Proof of termination of other health care coverage (Minimum Essential Coverage)</label>
+            </value>
+            <value>
+                <fullName>V010</fullName>
+                <default>false</default>
+                <label>Identity</label>
+            </value>
+            <value>
+                <fullName>V011</fullName>
+                <default>false</default>
+                <label>Proof of not receiving Medicare benefits</label>
+            </value>
+            <value>
+                <fullName>V012</fullName>
+                <default>false</default>
+                <label>Employment History</label>
+            </value>
+            <value>
+                <fullName>V018</fullName>
+                <default>false</default>
+                <label>Residency</label>
+            </value>
+            <value>
+                <fullName>V020</fullName>
+                <default>false</default>
+                <label>Relationship Verification</label>
+            </value>
+            <value>
+                <fullName>V032</fullName>
+                <default>false</default>
+                <label>SEVIS ID Number for Lawful Presence Verification</label>
+            </value>
+            <value>
+                <fullName>V037</fullName>
+                <default>false</default>
+                <label>Lawful Presence Verification</label>
+            </value>
+            <value>
+                <fullName>V041</fullName>
+                <default>false</default>
+                <label>Earned Income Credit</label>
+            </value>
+            <value>
+                <fullName>V050</fullName>
+                <default>false</default>
+                <label>Earned Income Verification</label>
+            </value>
+            <value>
+                <fullName>V051</fullName>
+                <default>false</default>
+                <label>Gifts and Contributions Income</label>
+            </value>
+            <value>
+                <fullName>V052</fullName>
+                <default>false</default>
+                <label>Interest Income</label>
+            </value>
+            <value>
+                <fullName>V053</fullName>
+                <default>false</default>
+                <label>Notes Income</label>
+            </value>
+            <value>
+                <fullName>V054</fullName>
+                <default>false</default>
+                <label>Pension Income</label>
+            </value>
+            <value>
+                <fullName>V055</fullName>
+                <default>false</default>
+                <label>Prizes Income</label>
+            </value>
+            <value>
+                <fullName>V056</fullName>
+                <default>false</default>
+                <label>Railroad Retirement Income</label>
+            </value>
+            <value>
+                <fullName>V058</fullName>
+                <default>false</default>
+                <label>Royalties Income</label>
+            </value>
+            <value>
+                <fullName>V059</fullName>
+                <default>false</default>
+                <label>RSDI Income</label>
+            </value>
+            <value>
+                <fullName>V060</fullName>
+                <default>false</default>
+                <label>Self Employment Income</label>
+            </value>
+            <value>
+                <fullName>V061</fullName>
+                <default>false</default>
+                <label>SSI income</label>
+            </value>
+            <value>
+                <fullName>V063</fullName>
+                <default>false</default>
+                <label>UIB Income</label>
+            </value>
+            <value>
+                <fullName>V064</fullName>
+                <default>false</default>
+                <label>VA Benefit Income</label>
+            </value>
+            <value>
+                <fullName>V065</fullName>
+                <default>false</default>
+                <label>Workers Compensation Income</label>
+            </value>
+            <value>
+                <fullName>V066</fullName>
+                <default>false</default>
+                <label>Trust Proceeds Income</label>
+            </value>
+            <value>
+                <fullName>V067</fullName>
+                <default>false</default>
+                <label>Energy Payment Income</label>
+            </value>
+            <value>
+                <fullName>V068</fullName>
+                <default>false</default>
+                <label>Government Housing Income</label>
+            </value>
+            <value>
+                <fullName>V070</fullName>
+                <default>false</default>
+                <label>TPR LTC Disability Insurance Income</label>
+            </value>
+            <value>
+                <fullName>V071</fullName>
+                <default>false</default>
+                <label>Vendor Payment Income</label>
+            </value>
+            <value>
+                <fullName>V072</fullName>
+                <default>false</default>
+                <label>VolAg Match Grant Income</label>
+            </value>
+            <value>
+                <fullName>V077</fullName>
+                <default>false</default>
+                <label>Loss of Employment</label>
+            </value>
+            <value>
+                <fullName>V088</fullName>
+                <default>false</default>
+                <label>Third Party Reimbursement</label>
+            </value>
+            <value>
+                <fullName>V089</fullName>
+                <default>false</default>
+                <label>Death</label>
+            </value>
+            <value>
+                <fullName>V091</fullName>
+                <default>false</default>
+                <label>Self Employment Expense</label>
+            </value>
+            <value>
+                <fullName>V094</fullName>
+                <default>false</default>
+                <label>Alimony Expense</label>
+            </value>
+            <value>
+                <fullName>V102</fullName>
+                <default>false</default>
+                <label>Third Party Resources</label>
+            </value>
+            <value>
+                <fullName>V106</fullName>
+                <default>false</default>
+                <label>Annuity Income</label>
+            </value>
+            <value>
+                <fullName>V107</fullName>
+                <default>false</default>
+                <label>TANF/Foster Care/IHFS/Adoption Subsidy</label>
+            </value>
+            <value>
+                <fullName>V108</fullName>
+                <default>false</default>
+                <label>Social Security Number</label>
+            </value>
+            <value>
+                <fullName>V109</fullName>
+                <default>false</default>
+                <label>Identity   </label>
+            </value>
+            <value>
+                <fullName>V112</fullName>
+                <default>false</default>
+                <label>Earned Income Payment</label>
+            </value>
+            <value>
+                <fullName>V119</fullName>
+                <default>false</default>
+                <label>Updated Student Information through SEVIS by Contacting School or Program Sponsor</label>
+            </value>
+            <value>
+                <fullName>V120</fullName>
+                <default>false</default>
+                <label>Other Unearned Income</label>
+            </value>
+            <value>
+                <fullName>V127</fullName>
+                <default>false</default>
+                <label>Identity </label>
+            </value>
+            <value>
+                <fullName>V128</fullName>
+                <default>false</default>
+                <label>Identity  </label>
+            </value>
+            <value>
+                <fullName>V16A</fullName>
+                <default>false</default>
+                <label>Lawful Presence Verification </label>
+            </value>
+            <value>
+                <fullName>V221</fullName>
+                <default>false</default>
+                <label>Benefits received from another State</label>
+            </value>
+            <value>
+                <fullName>V426</fullName>
+                <default>false</default>
+                <label>Applied for SSN Verification</label>
+            </value>
+            <value>
+                <fullName>V464</fullName>
+                <default>false</default>
+                <label>Unearned Income Payment Verification</label>
+            </value>
+            <value>
+                <fullName>V490</fullName>
+                <default>false</default>
+                <label>Room and Board Expenses</label>
+            </value>
+            <value>
+                <fullName>V532</fullName>
+                <default>false</default>
+                <label>Identity - Individual Interviewed</label>
+            </value>
+            <value>
+                <fullName>V533</fullName>
+                <default>false</default>
+                <label>Identity - Individual Interviewed </label>
+            </value>
+            <value>
+                <fullName>V542</fullName>
+                <default>false</default>
+                <label>Incarceration status verification</label>
+            </value>
+            <value>
+                <fullName>V543</fullName>
+                <default>false</default>
+                <label>AIAN Verification</label>
+            </value>
+            <value>
+                <fullName>V544</fullName>
+                <default>false</default>
+                <label>Income Verification</label>
+            </value>
+            <value>
+                <fullName>V545</fullName>
+                <default>false</default>
+                <label>NCP Good Cause</label>
+            </value>
+            <value>
+                <fullName>V546</fullName>
+                <default>false</default>
+                <label>Deductions</label>
+            </value>
+            <value>
+                <fullName>V547</fullName>
+                <default>false</default>
+                <label>Authorized Representative</label>
+            </value>
+            <value>
+                <fullName>V548</fullName>
+                <default>false</default>
+                <label>Zero Income Verification</label>
+            </value>
+            <value>
+                <fullName>V549</fullName>
+                <default>false</default>
+                <label>APTC income verification</label>
+            </value>
+            <value>
+                <fullName>V552</fullName>
+                <default>false</default>
+                <label>Identity Verification</label>
+            </value>
+            <value>
+                <fullName>V553</fullName>
+                <default>false</default>
+                <label>RailRoad Disability</label>
+            </value>
+            <value>
+                <fullName>V555</fullName>
+                <default>false</default>
+                <label>Life Time Worker Disability</label>
+            </value>
+            <value>
+                <fullName>V556</fullName>
+                <default>false</default>
+                <label>VA Benefit Disability</label>
+            </value>
+            <value>
+                <fullName>V557</fullName>
+                <default>false</default>
+                <label>End Stage Renal Disability</label>
+            </value>
+            <value>
+                <fullName>V558</fullName>
+                <default>false</default>
+                <label>Surgery Illness Disability</label>
+            </value>
+            <value>
+                <fullName>V559</fullName>
+                <default>false</default>
+                <label>Sick Leave Disability</label>
+            </value>
+            <value>
+                <fullName>V561</fullName>
+                <default>false</default>
+                <label>RSDI</label>
+            </value>
+            <value>
+                <fullName>V562</fullName>
+                <default>false</default>
+                <label>Household</label>
+            </value>
+            <value>
+                <fullName>V563</fullName>
+                <default>false</default>
+                <label>Student Education Enrollment</label>
+            </value>
+            <value>
+                <fullName>V564</fullName>
+                <default>false</default>
+                <label>Student Attendance</label>
+            </value>
+            <value>
+                <fullName>V565</fullName>
+                <default>false</default>
+                <label>Pregnancy</label>
+            </value>
+            <value>
+                <fullName>V566</fullName>
+                <default>false</default>
+                <label>Drug Felony Assessment</label>
+            </value>
+            <value>
+                <fullName>V567</fullName>
+                <default>false</default>
+                <label>Drug Felony Completed</label>
+            </value>
+            <value>
+                <fullName>V568</fullName>
+                <default>false</default>
+                <label>Drug Felony Participation</label>
+            </value>
+            <value>
+                <fullName>V569</fullName>
+                <default>false</default>
+                <label>Work Registration</label>
+            </value>
+            <value>
+                <fullName>V570</fullName>
+                <default>false</default>
+                <label>Voluntarily Quit Good Cause</label>
+            </value>
+            <value>
+                <fullName>V571</fullName>
+                <default>false</default>
+                <label>Living Arrangement</label>
+            </value>
+            <value>
+                <fullName>V572</fullName>
+                <default>false</default>
+                <label>Fourty Quarter Alien</label>
+            </value>
+            <value>
+                <fullName>V573</fullName>
+                <default>false</default>
+                <label>Alien Sponsor</label>
+            </value>
+            <value>
+                <fullName>V574</fullName>
+                <default>false</default>
+                <label>Battered Alien</label>
+            </value>
+            <value>
+                <fullName>V575</fullName>
+                <default>false</default>
+                <label>Alien Entry Date</label>
+            </value>
+            <value>
+                <fullName>V576</fullName>
+                <default>false</default>
+                <label>Utility</label>
+            </value>
+            <value>
+                <fullName>V577</fullName>
+                <default>false</default>
+                <label>Shelter</label>
+            </value>
+            <value>
+                <fullName>V578</fullName>
+                <default>false</default>
+                <label>Dependent Care</label>
+            </value>
+            <value>
+                <fullName>V579</fullName>
+                <default>false</default>
+                <label>Medical Expense</label>
+            </value>
+            <value>
+                <fullName>V580</fullName>
+                <default>false</default>
+                <label>Child Support</label>
+            </value>
+            <value>
+                <fullName>V581</fullName>
+                <default>false</default>
+                <label>Employment Income</label>
+            </value>
+            <value>
+                <fullName>V582</fullName>
+                <default>false</default>
+                <label>Other Earned Income</label>
+            </value>
+            <value>
+                <fullName>V583</fullName>
+                <default>false</default>
+                <label>Unearned Income</label>
+            </value>
+            <value>
+                <fullName>V584</fullName>
+                <default>false</default>
+                <label>Self Employment Income </label>
+            </value>
+            <value>
+                <fullName>V585</fullName>
+                <default>false</default>
+                <label>Third Party Liability</label>
+            </value>
+            <value>
+                <fullName>V589</fullName>
+                <default>false</default>
+                <label>MRT Disability</label>
+            </value>
+            <value>
+                <fullName>V591</fullName>
+                <default>false</default>
+                <label>Group Living Arrangement</label>
+            </value>
+            <value>
+                <fullName>V592</fullName>
+                <default>false</default>
+                <label>Drug Addiction and Alcohol Treatment Centers</label>
+            </value>
+            <value>
+                <fullName>V593</fullName>
+                <default>false</default>
+                <label>Living Arrangement-Family Care Home</label>
+            </value>
+            <value>
+                <fullName>V594</fullName>
+                <default>false</default>
+                <label>Living Arrangement-Personal Care Home</label>
+            </value>
+            <value>
+                <fullName>V595</fullName>
+                <default>false</default>
+                <label>Community Integration Supplementation</label>
+            </value>
+            <value>
+                <fullName>V597</fullName>
+                <default>false</default>
+                <label>Disability - MRT Disabled</label>
+            </value>
+            <value>
+                <fullName>V598</fullName>
+                <default>false</default>
+                <label>Utility - Electricity</label>
+            </value>
+            <value>
+                <fullName>V599</fullName>
+                <default>false</default>
+                <label>Utility - Garbage</label>
+            </value>
+            <value>
+                <fullName>V600</fullName>
+                <default>false</default>
+                <label>Utility - LIHEAP Assistance</label>
+            </value>
+            <value>
+                <fullName>V601</fullName>
+                <default>false</default>
+                <label>Utility - Billed for Primary Heating</label>
+            </value>
+            <value>
+                <fullName>V602</fullName>
+                <default>false</default>
+                <label>Utility - Sewage</label>
+            </value>
+            <value>
+                <fullName>V603</fullName>
+                <default>false</default>
+                <label>Utility - Telephone</label>
+            </value>
+            <value>
+                <fullName>V604</fullName>
+                <default>false</default>
+                <label>Utility - Water</label>
+            </value>
+            <value>
+                <fullName>V605</fullName>
+                <default>false</default>
+                <label>Utility - Allowance Sua</label>
+            </value>
+            <value>
+                <fullName>V606</fullName>
+                <default>false</default>
+                <label>Utility - Allowance Bua</label>
+            </value>
+            <value>
+                <fullName>V607</fullName>
+                <default>false</default>
+                <label>Utility - Allowance Telephonestandard</label>
+            </value>
+            <value>
+                <fullName>V608</fullName>
+                <default>false</default>
+                <label>Shelter Mortgage</label>
+            </value>
+            <value>
+                <fullName>V609</fullName>
+                <default>false</default>
+                <label>Shelter Rent</label>
+            </value>
+            <value>
+                <fullName>V610</fullName>
+                <default>false</default>
+                <label>Shelter Tax</label>
+            </value>
+            <value>
+                <fullName>V611</fullName>
+                <default>false</default>
+                <label>Child Support - Alimony</label>
+            </value>
+            <value>
+                <fullName>V612</fullName>
+                <default>false</default>
+                <label>Child Support - Alimony Childsupportarrears</label>
+            </value>
+            <value>
+                <fullName>V613</fullName>
+                <default>false</default>
+                <label>Child Support - Taxintercept</label>
+            </value>
+            <value>
+                <fullName>V614</fullName>
+                <default>false</default>
+                <label>Medical expense  Cancer Policy Premium</label>
+            </value>
+            <value>
+                <fullName>V615</fullName>
+                <default>false</default>
+                <label>Medical expense  Cost sharing/spend down expenses</label>
+            </value>
+            <value>
+                <fullName>V616</fullName>
+                <default>false</default>
+                <label>Medical expense  Dentures</label>
+            </value>
+            <value>
+                <fullName>V617</fullName>
+                <default>false</default>
+                <label>Medical expense  Hearing aids</label>
+            </value>
+            <value>
+                <fullName>V618</fullName>
+                <default>false</default>
+                <label>Medical Expense - Prescription Drug</label>
+            </value>
+            <value>
+                <fullName>V619</fullName>
+                <default>false</default>
+                <label>Deduction</label>
+            </value>
+            <value>
+                <fullName>V620</fullName>
+                <default>false</default>
+                <label>Short Term Expense</label>
+            </value>
+            <value>
+                <fullName>V621</fullName>
+                <default>false</default>
+                <label>Care for Individual - Child Care</label>
+            </value>
+            <value>
+                <fullName>V624</fullName>
+                <default>false</default>
+                <label>Liquid Asset Not Verified</label>
+            </value>
+            <value>
+                <fullName>V625</fullName>
+                <default>false</default>
+                <label>Liquid Asset - Debt</label>
+            </value>
+            <value>
+                <fullName>V626</fullName>
+                <default>false</default>
+                <label>Liquid Asset - Excluded Amount</label>
+            </value>
+            <value>
+                <fullName>V627</fullName>
+                <default>false</default>
+                <label>Liquid Asset - Joint Ownership Details</label>
+            </value>
+            <value>
+                <fullName>V628</fullName>
+                <default>false</default>
+                <label>Liquid Asset - Inaccessibility</label>
+            </value>
+            <value>
+                <fullName>V629</fullName>
+                <default>false</default>
+                <label>Liquid Asset - Ownership End Details</label>
+            </value>
+            <value>
+                <fullName>V630</fullName>
+                <default>false</default>
+                <label>Vehicle - Able to Ride in Vehicle</label>
+            </value>
+            <value>
+                <fullName>V631</fullName>
+                <default>false</default>
+                <label>Vehicle - Fair Market Value</label>
+            </value>
+            <value>
+                <fullName>V632</fullName>
+                <default>false</default>
+                <label>Vehicle - Debt Verification</label>
+            </value>
+            <value>
+                <fullName>V633</fullName>
+                <default>false</default>
+                <label>Vehicle - Joint Ownership Details</label>
+            </value>
+            <value>
+                <fullName>V634</fullName>
+                <default>false</default>
+                <label>Vehicle - Inaccessibility</label>
+            </value>
+            <value>
+                <fullName>V635</fullName>
+                <default>false</default>
+                <label>Vehicle - Ownership End Details</label>
+            </value>
+            <value>
+                <fullName>V636</fullName>
+                <default>false</default>
+                <label>Life Insurance - Face Value</label>
+            </value>
+            <value>
+                <fullName>V637</fullName>
+                <default>false</default>
+                <label>Life Insurance - Cash Surrender Value</label>
+            </value>
+            <value>
+                <fullName>V638</fullName>
+                <default>false</default>
+                <label>Life Insurance - Loan Balance</label>
+            </value>
+            <value>
+                <fullName>V641</fullName>
+                <default>false</default>
+                <label>Burial Plots - Resource Value Details</label>
+            </value>
+            <value>
+                <fullName>V642</fullName>
+                <default>false</default>
+                <label>Burial Plots - Ownership End Details</label>
+            </value>
+            <value>
+                <fullName>V645</fullName>
+                <default>false</default>
+                <label>Real Property - Fair Market Value</label>
+            </value>
+            <value>
+                <fullName>V646</fullName>
+                <default>false</default>
+                <label>Real Property - Debt</label>
+            </value>
+            <value>
+                <fullName>V647</fullName>
+                <default>false</default>
+                <label>Real Property - Exclusion</label>
+            </value>
+            <value>
+                <fullName>V648</fullName>
+                <default>false</default>
+                <label>Real Property - Is the individual listed the property with a Real Estate Agent</label>
+            </value>
+            <value>
+                <fullName>V649</fullName>
+                <default>false</default>
+                <label>Real Property - Advertising the property in the local newspaper or on television or radio stations or the internet</label>
+            </value>
+            <value>
+                <fullName>V650</fullName>
+                <default>false</default>
+                <label>Real Property - Placing a &quot;For Sale&quot; sign on the property which is clearly visible from the nearest public road</label>
+            </value>
+            <value>
+                <fullName>V651</fullName>
+                <default>false</default>
+                <label>Real Property - Distributing fliers advertising the property for sale</label>
+            </value>
+            <value>
+                <fullName>V652</fullName>
+                <default>false</default>
+                <label>Real Property - Posting notices regarding availability of the property on community bulletin boards</label>
+            </value>
+            <value>
+                <fullName>V653</fullName>
+                <default>false</default>
+                <label>Real Property - Showing the property to interested parties on a continuing basis, documented on a log with dates</label>
+            </value>
+            <value>
+                <fullName>V654</fullName>
+                <default>false</default>
+                <label>Real Property - Inaccessibility</label>
+            </value>
+            <value>
+                <fullName>V655</fullName>
+                <default>false</default>
+                <label>Real Property - Ownership End Details</label>
+            </value>
+            <value>
+                <fullName>V656</fullName>
+                <default>false</default>
+                <label>Life Estate - Establishment of Life Estate</label>
+            </value>
+            <value>
+                <fullName>V657</fullName>
+                <default>false</default>
+                <label>Life Estate - Relinquishment Details</label>
+            </value>
+            <value>
+                <fullName>V658</fullName>
+                <default>false</default>
+                <label>Annuity - Information</label>
+            </value>
+            <value>
+                <fullName>V659</fullName>
+                <default>false</default>
+                <label>Annuity - Termination/Surrender End</label>
+            </value>
+            <value>
+                <fullName>V660</fullName>
+                <default>false</default>
+                <label>Trust - Termination End</label>
+            </value>
+            <value>
+                <fullName>V661</fullName>
+                <default>false</default>
+                <label>Promisory Note/Land Contract Details</label>
+            </value>
+            <value>
+                <fullName>V662</fullName>
+                <default>false</default>
+                <label>Termination of Promisory Note/Land Contract End</label>
+            </value>
+            <value>
+                <fullName>V663</fullName>
+                <default>false</default>
+                <label>Other Resources - Fair Market Value</label>
+            </value>
+            <value>
+                <fullName>V664</fullName>
+                <default>false</default>
+                <label>Other Resources - Debt</label>
+            </value>
+            <value>
+                <fullName>V665</fullName>
+                <default>false</default>
+                <label>Other Resources - Joint Ownership Details</label>
+            </value>
+            <value>
+                <fullName>V666</fullName>
+                <default>false</default>
+                <label>Other Resources - Inaccessibility</label>
+            </value>
+            <value>
+                <fullName>V667</fullName>
+                <default>false</default>
+                <label>Other Resources - Ownership End Details</label>
+            </value>
+            <value>
+                <fullName>V668</fullName>
+                <default>false</default>
+                <label>Life Time Care Agreement</label>
+            </value>
+            <value>
+                <fullName>V670</fullName>
+                <default>false</default>
+                <label>Life Settlement Contract - Face Value</label>
+            </value>
+            <value>
+                <fullName>V671</fullName>
+                <default>false</default>
+                <label>Life Settlement Contract - Cash Surrender Value</label>
+            </value>
+            <value>
+                <fullName>V672</fullName>
+                <default>false</default>
+                <label>Life Settlement Contract - Loan Balance</label>
+            </value>
+            <value>
+                <fullName>V673</fullName>
+                <default>false</default>
+                <label>Resource Transfer - Return Asset</label>
+            </value>
+            <value>
+                <fullName>V674</fullName>
+                <default>false</default>
+                <label>Resource Assessment - Assessment Information</label>
+            </value>
+            <value>
+                <fullName>V675</fullName>
+                <default>false</default>
+                <label>Real Property - Joint Ownership</label>
+            </value>
+            <value>
+                <fullName>V676</fullName>
+                <default>false</default>
+                <label>Authorized Representative - Identity</label>
+            </value>
+            <value>
+                <fullName>V677</fullName>
+                <default>false</default>
+                <label>Authorized Representative  Relationship</label>
+            </value>
+            <value>
+                <fullName>V678</fullName>
+                <default>false</default>
+                <label>Emergency Nature Condition</label>
+            </value>
+            <value>
+                <fullName>V679</fullName>
+                <default>false</default>
+                <label>Alien Type - Legal Alien Permanent Resident</label>
+            </value>
+            <value>
+                <fullName>V680</fullName>
+                <default>false</default>
+                <label>SAFE - Shelter Expenses</label>
+            </value>
+            <value>
+                <fullName>V681</fullName>
+                <default>false</default>
+                <label>Absent Parent - Non Custodial</label>
+            </value>
+            <value>
+                <fullName>V682</fullName>
+                <default>false</default>
+                <label>Voluntary Absent Parent - Non Custodial</label>
+            </value>
+            <value>
+                <fullName>V683</fullName>
+                <default>false</default>
+                <label>Alien - Parolee</label>
+            </value>
+            <value>
+                <fullName>V684</fullName>
+                <default>false</default>
+                <label>Disablity - Loss of RSDI</label>
+            </value>
+            <value>
+                <fullName>V685</fullName>
+                <default>false</default>
+                <label>Qualified Income Trust</label>
+            </value>
+            <value>
+                <fullName>V687</fullName>
+                <default>false</default>
+                <label>Boarder</label>
+            </value>
+            <value>
+                <fullName>V688</fullName>
+                <default>false</default>
+                <label>Application Signature Verification</label>
+            </value>
+            <value>
+                <fullName>V689</fullName>
+                <default>false</default>
+                <label>Medical expense - Prosthetics</label>
+            </value>
+            <value>
+                <fullName>V690</fullName>
+                <default>false</default>
+                <label>Medical expense - Securing/maintaining service animals</label>
+            </value>
+            <value>
+                <fullName>V691</fullName>
+                <default>false</default>
+                <label>Medical expense - Glasses/contacts</label>
+            </value>
+            <value>
+                <fullName>V692</fullName>
+                <default>false</default>
+                <label>Medical expense - Telephone charges</label>
+            </value>
+            <value>
+                <fullName>V693</fullName>
+                <default>false</default>
+                <label>Medical expense - Transportation</label>
+            </value>
+            <value>
+                <fullName>V694</fullName>
+                <default>false</default>
+                <label>Medical expense - Lodging</label>
+            </value>
+            <value>
+                <fullName>V695</fullName>
+                <default>false</default>
+                <label>Medical expense - Attendant/home held/child care/housekeeper</label>
+            </value>
+            <value>
+                <fullName>V696</fullName>
+                <default>false</default>
+                <label>Medical expense - SMI Premium</label>
+            </value>
+            <value>
+                <fullName>V697</fullName>
+                <default>false</default>
+                <label>Medical expense - Medicare Premiums</label>
+            </value>
+            <value>
+                <fullName>V698</fullName>
+                <default>false</default>
+                <label>Medical expense - Other</label>
+            </value>
+            <value>
+                <fullName>V699</fullName>
+                <default>false</default>
+                <label>Medical expense - Medically Necessary Items with Doctor&apos;s Note</label>
+            </value>
+            <value>
+                <fullName>V700</fullName>
+                <default>false</default>
+                <label>Medical expense - Medical supplies</label>
+            </value>
+            <value>
+                <fullName>V702</fullName>
+                <default>false</default>
+                <label>Alien Type - Active duty member of the U.S. Armed Forces</label>
+            </value>
+            <value>
+                <fullName>V703</fullName>
+                <default>false</default>
+                <label>Alien Type - American Indian&apos;s born in Canada (50%+)</label>
+            </value>
+            <value>
+                <fullName>V704</fullName>
+                <default>false</default>
+                <label>Alien Type - Amerasian Immigrant</label>
+            </value>
+            <value>
+                <fullName>V705</fullName>
+                <default>false</default>
+                <label>Alien Type - Asylee</label>
+            </value>
+            <value>
+                <fullName>V706</fullName>
+                <default>false</default>
+                <label>Alien Type - Afghani Special Immigrant</label>
+            </value>
+            <value>
+                <fullName>V707</fullName>
+                <default>false</default>
+                <label>Alien Type - Conditional Entry</label>
+            </value>
+            <value>
+                <fullName>V708</fullName>
+                <default>false</default>
+                <label>Alien Type - Cuban/Haitian Entrant</label>
+            </value>
+            <value>
+                <fullName>V709</fullName>
+                <default>false</default>
+                <label>Alien Type - Current spouse of an active duty member of U.S. Armed Forces</label>
+            </value>
+            <value>
+                <fullName>V710</fullName>
+                <default>false</default>
+                <label>Alien Type - Current spouse of a veteran</label>
+            </value>
+            <value>
+                <fullName>V711</fullName>
+                <default>false</default>
+                <label>Alien Type - Diplomats &amp; Diplomat&apos;s Families</label>
+            </value>
+            <value>
+                <fullName>V712</fullName>
+                <default>false</default>
+                <label>Alien Type - Deportation Withheld</label>
+            </value>
+            <value>
+                <fullName>V713</fullName>
+                <default>false</default>
+                <label>Alien Type - Enrolled member of an Indian Tribe</label>
+            </value>
+            <value>
+                <fullName>V714</fullName>
+                <default>false</default>
+                <label>Alien Type - Iraqi Special Immigrant</label>
+            </value>
+            <value>
+                <fullName>V715</fullName>
+                <default>false</default>
+                <label>Alien Type - Permanent Resident under Color of Law (PRUCOL)</label>
+            </value>
+            <value>
+                <fullName>V716</fullName>
+                <default>false</default>
+                <label>Alien Type - Refugee</label>
+            </value>
+            <value>
+                <fullName>V717</fullName>
+                <default>false</default>
+                <label>Alien Type - SSI Determined</label>
+            </value>
+            <value>
+                <fullName>V718</fullName>
+                <default>false</default>
+                <label>Alien Type - Students (Temp. stay)</label>
+            </value>
+            <value>
+                <fullName>V719</fullName>
+                <default>false</default>
+                <label>Alien Type - Undocumented Aliens</label>
+            </value>
+            <value>
+                <fullName>V720</fullName>
+                <default>false</default>
+                <label>Alien Type - Unmarried child of an active duty member of USAF</label>
+            </value>
+            <value>
+                <fullName>V721</fullName>
+                <default>false</default>
+                <label>Alien Type - Unmarried child of a veteran</label>
+            </value>
+            <value>
+                <fullName>V722</fullName>
+                <default>false</default>
+                <label>Alien Type - Widow of a veteran (not remarried)</label>
+            </value>
+            <value>
+                <fullName>V723</fullName>
+                <default>false</default>
+                <label>Alien Type - Veteran</label>
+            </value>
+            <value>
+                <fullName>V724</fullName>
+                <default>false</default>
+                <label>Alien Type - Visitors / Tourists</label>
+            </value>
+            <value>
+                <fullName>V725</fullName>
+                <default>false</default>
+                <label>Alien Type - Victim of Trafficking</label>
+            </value>
+            <value>
+                <fullName>V728</fullName>
+                <default>false</default>
+                <label>Special Needs</label>
+            </value>
+            <value>
+                <fullName>V729</fullName>
+                <default>false</default>
+                <label>Work Hours</label>
+            </value>
+            <value>
+                <fullName>V731</fullName>
+                <default>false</default>
+                <label>Pending for interview</label>
+            </value>
+            <value>
+                <fullName>V733</fullName>
+                <default>false</default>
+                <label>Unable to care for child due to disability</label>
+            </value>
+            <value>
+                <fullName>V734</fullName>
+                <default>false</default>
+                <label>Temporary disability</label>
+            </value>
+            <value>
+                <fullName>V785</fullName>
+                <default>false</default>
+                <label>Joint Custody Verification</label>
+            </value>
+            <value>
+                <fullName>V787</fullName>
+                <default>false</default>
+                <label>Black Lung Disability</label>
+            </value>
+            <value>
+                <fullName>V800</fullName>
+                <default>false</default>
+                <label>Declaration of Annuities</label>
+            </value>
+            <value>
+                <fullName>V801</fullName>
+                <default>false</default>
+                <label>No checking/savings/CD verification</label>
+            </value>
+            <value>
+                <fullName>V802</fullName>
+                <default>false</default>
+                <label>Self-Employment operated with child present In-Home </label>
+            </value>
+            <value>
+                <fullName>V803</fullName>
+                <default>false</default>
+                <label>Child Care Benefits - Delinquent Claims</label>
+            </value>
+            <value>
+                <fullName>V804</fullName>
+                <default>false</default>
+                <label>CCAP Job Search Documentation</label>
+            </value>
+            <value>
+                <fullName>V805</fullName>
+                <default>false</default>
+                <label>Special Needs for child under thirteen</label>
+            </value>
+            <value>
+                <fullName>V806</fullName>
+                <default>false</default>
+                <label>Entitled Benefits Verification</label>
+            </value>
+            <value>
+                <fullName>V807</fullName>
+                <default>false</default>
+                <label>Full-time Student Status for PATH Exemption</label>
+            </value>
+            <value>
+                <fullName>V808</fullName>
+                <default>false</default>
+                <label>Child Support Assignment of Rights Signature</label>
+            </value>
+            <value>
+                <fullName>V809</fullName>
+                <default>false</default>
+                <label>Proof of Assets Held by the Trust</label>
+            </value>
+            <value>
+                <fullName>V812</fullName>
+                <default>false</default>
+                <label>IRWE Work Expense</label>
+            </value>
+            <value>
+                <fullName>V813</fullName>
+                <default>false</default>
+                <label>BWE Work Expense</label>
+            </value>
+            <value>
+                <fullName>V814</fullName>
+                <default>false</default>
+                <label>Deduction - Non-reimbursable educator expense</label>
+            </value>
+            <value>
+                <fullName>V815</fullName>
+                <default>false</default>
+                <label>Deduction - Tuition and fees</label>
+            </value>
+            <value>
+                <fullName>V816</fullName>
+                <default>false</default>
+                <label>Deduction - Alimony</label>
+            </value>
+            <value>
+                <fullName>V817</fullName>
+                <default>false</default>
+                <label>Deduction - Student loan interest</label>
+            </value>
+            <value>
+                <fullName>V818</fullName>
+                <default>false</default>
+                <label>Deduction - AI/AN Income</label>
+            </value>
+            <value>
+                <fullName>V819</fullName>
+                <default>false</default>
+                <label>Deduction - Certain business expenses of reservists and officials (Form 2106)</label>
+            </value>
+            <value>
+                <fullName>V820</fullName>
+                <default>false</default>
+                <label>Deduction - Health savings account deduction</label>
+            </value>
+            <value>
+                <fullName>V821</fullName>
+                <default>false</default>
+                <label>Deduction - Moving expenses</label>
+            </value>
+            <value>
+                <fullName>V822</fullName>
+                <default>false</default>
+                <label>Deduction - Deductible part of self employment tax</label>
+            </value>
+            <value>
+                <fullName>V823</fullName>
+                <default>false</default>
+                <label>Deduction - Self-employed simple plans</label>
+            </value>
+            <value>
+                <fullName>V824</fullName>
+                <default>false</default>
+                <label>Deduction - Self-employed qualified plans</label>
+            </value>
+            <value>
+                <fullName>V825</fullName>
+                <default>false</default>
+                <label>Deduction - Self-employed health insurance deduction</label>
+            </value>
+            <value>
+                <fullName>V826</fullName>
+                <default>false</default>
+                <label>Deduction - Penalty on early withdrawal of savings</label>
+            </value>
+            <value>
+                <fullName>V827</fullName>
+                <default>false</default>
+                <label>Deduction - IRA deduction</label>
+            </value>
+            <value>
+                <fullName>V828</fullName>
+                <default>false</default>
+                <label>Deduction - Domestic production activities</label>
+            </value>
+            <value>
+                <fullName>V829</fullName>
+                <default>false</default>
+                <label>Proof of participation in KWP activity for 15 calendar days</label>
+            </value>
+            <value>
+                <fullName>V830</fullName>
+                <default>false</default>
+                <label>STABLE Accounts Not Verified </label>
+            </value>
+            <value>
+                <fullName>V001</fullName>
+                <default>false</default>
+                <label>Age</label>
+            </value>
+            <value>
+                <fullName>KHIPP_ENRL</fullName>
+                <default>false</default>
+                <label>KI-HIPP Enrollment</label>
+            </value>
+            <value>
+                <fullName>KHIPP_MON_VER</fullName>
+                <default>false</default>
+                <label>KI-HIPP Monthly Verification</label>
+            </value>
+            <value>
+                <fullName>KHIPP_GOOD_CAUSE</fullName>
+                <default>false</default>
+                <label>KI-HIPP Good Cause</label>
+            </value>
+            <value>
+                <fullName>KHIPP_ELE_ABO</fullName>
+                <default>false</default>
+                <label>Elective Abortion</label>
+            </value>
+            <value>
+                <fullName>KHIPP_OOP_EXP</fullName>
+                <default>false</default>
+                <label>KI-HIPP Preferred Payment Method</label>
+            </value>
+            <value>
+                <fullName>KHIPP_ARV</fullName>
+                <default>false</default>
+                <label>Authorized Representative Verification</label>
+            </value>
+            <value>
+                <fullName>V833</fullName>
+                <default>false</default>
+                <label>Alimony income agreement verification</label>
+            </value>
+            <value>
+                <fullName>V834</fullName>
+                <default>false</default>
+                <label>Alimony deduction agreement verification</label>
+            </value>
+            <value>
+                <fullName>V835</fullName>
+                <default>false</default>
+                <label>Domestic violence verification</label>
+            </value>
+            <value>
+                <fullName>V837</fullName>
+                <default>false</default>
+                <label>High risk pregnancy verification</label>
+            </value>
+            <value>
+                <fullName>V838</fullName>
+                <default>false</default>
+                <label>Job end verification</label>
+            </value>
+            <value>
+                <fullName>V839</fullName>
+                <default>false</default>
+                <label>Conditional Enrollment in Medicare Part A</label>
+            </value>
+            <value>
+                <fullName>V005</fullName>
+                <default>false</default>
+                <label>Immigration status under review</label>
+            </value>
+            <value>
+                <fullName>V550</fullName>
+                <default>false</default>
+                <label>Case profile income question verification</label>
+            </value>
+            <value>
+                <fullName>V551</fullName>
+                <default>false</default>
+                <label>Case profile deduction question verification</label>
+            </value>
+            <value>
+                <fullName>V586</fullName>
+                <default>false</default>
+                <label>KWP Assessment</label>
+            </value>
+            <value>
+                <fullName>V587</fullName>
+                <default>false</default>
+                <label>Deprivation Non-Custodial Parent</label>
+            </value>
+            <value>
+                <fullName>V588</fullName>
+                <default>false</default>
+                <label>Deprivation Disability</label>
+            </value>
+            <value>
+                <fullName>V596</fullName>
+                <default>false</default>
+                <label>Caretaker services - Caretaker statement</label>
+            </value>
+            <value>
+                <fullName>V622</fullName>
+                <default>false</default>
+                <label>Care for Individual - Incapacitated</label>
+            </value>
+            <value>
+                <fullName>V726</fullName>
+                <default>false</default>
+                <label>Caretaker services - Physician Statement</label>
+            </value>
+            <value>
+                <fullName>V730</fullName>
+                <default>false</default>
+                <label>Expected Incarceration status verification</label>
+            </value>
+            <value>
+                <fullName>V732</fullName>
+                <default>false</default>
+                <label>Trust Document</label>
+            </value>
+            <value>
+                <fullName>V737</fullName>
+                <default>false</default>
+                <label>Case Profile Annuity Questions Verification</label>
+            </value>
+            <value>
+                <fullName>V738</fullName>
+                <default>false</default>
+                <label>Case Profile Burial Fund Questions Verification</label>
+            </value>
+            <value>
+                <fullName>V739</fullName>
+                <default>false</default>
+                <label>Case Profile Burial Insurance Questions Verification</label>
+            </value>
+            <value>
+                <fullName>V740</fullName>
+                <default>false</default>
+                <label>Case Profile Burial Plot Questions Verification</label>
+            </value>
+            <value>
+                <fullName>V741</fullName>
+                <default>false</default>
+                <label>Case Profile Life Estate Questions Verification</label>
+            </value>
+            <value>
+                <fullName>V742</fullName>
+                <default>false</default>
+                <label>Case Profile Life Insurance Questions Verification</label>
+            </value>
+            <value>
+                <fullName>V743</fullName>
+                <default>false</default>
+                <label>Case Profile Life Settlement Contract Questions Verification</label>
+            </value>
+            <value>
+                <fullName>V745</fullName>
+                <default>false</default>
+                <label>Case Profile Other Resource Questions Verification</label>
+            </value>
+            <value>
+                <fullName>V747</fullName>
+                <default>false</default>
+                <label>Case Profile Promissory Note or Land Contract Questions Verification</label>
+            </value>
+            <value>
+                <fullName>V748</fullName>
+                <default>false</default>
+                <label>Case Profile Real Property Questions Verification</label>
+            </value>
+            <value>
+                <fullName>V749</fullName>
+                <default>false</default>
+                <label>Case Profile Resource Transfer Questions Verification</label>
+            </value>
+            <value>
+                <fullName>V753</fullName>
+                <default>false</default>
+                <label>Case Profile Self Employment Income Questions Verification</label>
+            </value>
+            <value>
+                <fullName>V754</fullName>
+                <default>false</default>
+                <label>Case Profile Unearned Income Questions Verification</label>
+            </value>
+            <value>
+                <fullName>V755</fullName>
+                <default>false</default>
+                <label>Case Profile Dependent Care Expense Questions Verification</label>
+            </value>
+            <value>
+                <fullName>V756</fullName>
+                <default>false</default>
+                <label>Case Profile Household Paid Alimony Questions Verification</label>
+            </value>
+            <value>
+                <fullName>V757</fullName>
+                <default>false</default>
+                <label>Case Profile Household Paid Child Support Questions Verification</label>
+            </value>
+            <value>
+                <fullName>V759</fullName>
+                <default>false</default>
+                <label>Case Profile Medical Part D Premium Questions Verification</label>
+            </value>
+            <value>
+                <fullName>V760</fullName>
+                <default>false</default>
+                <label>Case Profile Has Medicare Questions Verification</label>
+            </value>
+            <value>
+                <fullName>V761</fullName>
+                <default>false</default>
+                <label>Case Profile Shelter Expense Questions Verification</label>
+            </value>
+            <value>
+                <fullName>V762</fullName>
+                <default>false</default>
+                <label>Case Profile Utility Expense Questions Verification</label>
+            </value>
+            <value>
+                <fullName>V763</fullName>
+                <default>false</default>
+                <label>Case Profile Utility Expense Allowance Questions Verification</label>
+            </value>
+            <value>
+                <fullName>V764</fullName>
+                <default>false</default>
+                <label>Case Profile Completed Chemical Treatment Questions Verification</label>
+            </value>
+            <value>
+                <fullName>V765</fullName>
+                <default>false</default>
+                <label>Case Profile Convicted of Drug Felony Questions Verification</label>
+            </value>
+            <value>
+                <fullName>V766</fullName>
+                <default>false</default>
+                <label>Case Profile Discontinued SSI Questions Verification</label>
+            </value>
+            <value>
+                <fullName>V767</fullName>
+                <default>false</default>
+                <label>Case Profile Entitled Benefits Questions Verification</label>
+            </value>
+            <value>
+                <fullName>V768</fullName>
+                <default>false</default>
+                <label>Case Profile LTC Arrangement Questions Verification</label>
+            </value>
+            <value>
+                <fullName>V769</fullName>
+                <default>false</default>
+                <label>Case Profile Out of State Benefits Questions Verification</label>
+            </value>
+            <value>
+                <fullName>V770</fullName>
+                <default>false</default>
+                <label>Case Profile Partnership Qualified LTC Policy Questions Verification</label>
+            </value>
+            <value>
+                <fullName>V771</fullName>
+                <default>false</default>
+                <label>Case Profile Chemically Dependent Questions Verification</label>
+            </value>
+            <value>
+                <fullName>V772</fullName>
+                <default>false</default>
+                <label>Case Profile Blind, Disabled, Incapacitated Questions Verification</label>
+            </value>
+            <value>
+                <fullName>V773</fullName>
+                <default>false</default>
+                <label>Case Profile Domestic Violence Victim Questions Verification</label>
+            </value>
+            <value>
+                <fullName>V774</fullName>
+                <default>false</default>
+                <label>Case Profile Emancipated Questions Verification</label>
+            </value>
+            <value>
+                <fullName>V776</fullName>
+                <default>false</default>
+                <label>Case Profile Ever in Foster Care Questions Verification</label>
+            </value>
+            <value>
+                <fullName>V777</fullName>
+                <default>false</default>
+                <label>Case Profile Fleeing Felon or Probation Parole Violator Questions Verification</label>
+            </value>
+            <value>
+                <fullName>V779</fullName>
+                <default>false</default>
+                <label>Case Profile Pregnant Questions Verification</label>
+            </value>
+            <value>
+                <fullName>V780</fullName>
+                <default>false</default>
+                <label>Case Profile Care for Incapacitated Individual Questions Verification</label>
+            </value>
+            <value>
+                <fullName>V782</fullName>
+                <default>false</default>
+                <label>Case Profile Receiving or Applied for SSI Questions Verification</label>
+            </value>
+            <value>
+                <fullName>V783</fullName>
+                <default>false</default>
+                <label>Case Profile Someone in Household on Strike Questions Verification</label>
+            </value>
+            <value>
+                <fullName>V786</fullName>
+                <default>false</default>
+                <label>Non-Compliant for KWP Full Family Sanction Requirement</label>
+            </value>
+            <value>
+                <fullName>V788</fullName>
+                <default>false</default>
+                <label>Tax Filing Information</label>
+            </value>
+            <value>
+                <fullName>V789</fullName>
+                <default>false</default>
+                <label>MRT Determination</label>
+            </value>
+            <value>
+                <fullName>V790</fullName>
+                <default>false</default>
+                <label>ETP Assessment</label>
+            </value>
+            <value>
+                <fullName>V791</fullName>
+                <default>false</default>
+                <label>Alien -Refugee Settlement Program</label>
+            </value>
+            <value>
+                <fullName>V792</fullName>
+                <default>false</default>
+                <label>FDAK funeral trust Agreement</label>
+            </value>
+            <value>
+                <fullName>V793</fullName>
+                <default>false</default>
+                <label>Loss of Unearned Income</label>
+            </value>
+            <value>
+                <fullName>V794</fullName>
+                <default>false</default>
+                <label>Loss of Self Employment</label>
+            </value>
+            <value>
+                <fullName>V795</fullName>
+                <default>false</default>
+                <label>Educational Expenses</label>
+            </value>
+            <value>
+                <fullName>V796</fullName>
+                <default>false</default>
+                <label>Temporary Leave</label>
+            </value>
+            <value>
+                <fullName>V797</fullName>
+                <default>false</default>
+                <label>Mandatory Withholding - Other</label>
+            </value>
+            <value>
+                <fullName>V798</fullName>
+                <default>false</default>
+                <label>Case Profile Mandatory withholding Questions Verification</label>
+            </value>
+            <value>
+                <fullName>V799</fullName>
+                <default>false</default>
+                <label>Mandatory Withholding - Mandatory Taxes</label>
+            </value>
+            <value>
+                <fullName>V810</fullName>
+                <default>false</default>
+                <label>Annuity Document</label>
+            </value>
+            <value>
+                <fullName>V811</fullName>
+                <default>false</default>
+                <label>KTAP Extension Request</label>
+            </value>
+            <value>
+                <fullName>V831</fullName>
+                <default>false</default>
+                <label>Your legal obligation to pay Child Support</label>
+            </value>
+            <value>
+                <fullName>V832</fullName>
+                <default>false</default>
+                <label>Life Insurance - Ownership End Details</label>
+            </value>
+            <value>
+                <fullName>V836</fullName>
+                <default>false</default>
+                <label>Field determination</label>
+            </value>
+            <value>
+                <fullName>V840</fullName>
+                <default>false</default>
+                <label>Proof of custody order</label>
+            </value>
+            <value>
+                <fullName>V841</fullName>
+                <default>false</default>
+                <label>Proof of custody order not being followed</label>
+            </value>
+            <value>
+                <fullName>V842</fullName>
+                <default>false</default>
+                <label>Pension Verification</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

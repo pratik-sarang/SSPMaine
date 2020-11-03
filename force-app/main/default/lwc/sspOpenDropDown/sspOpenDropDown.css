@@ -1,0 +1,133 @@
+.ssp-menuItemDropDown {
+    cursor: pointer;
+}
+
+.ssp-menuItemDropDownBtn {
+    padding: 25px 0;
+    width: 100%;
+    border: none;
+    background: none;
+}
+
+.ssp-menuItemDropDownBtn:focus {
+    outline: none;
+}
+
+.ssp-menuItemDropDownHeader p:first-child {
+    font-size: 1rem;
+    line-height: 24px;
+    letter-spacing: -0.3px;
+    text-align: left;
+}
+
+.ssp-menuItemDropDownHeader p:last-child {
+    font-size: 0.8125rem;
+    line-height: 18px;
+    letter-spacing: 0.3px;
+    text-align: left;
+}
+
+.ssp-menuItemDropDownIcon {
+    height: 24px;
+    width: 24px;
+    background-size: 24px;
+    background-image: url(../resource/sspOverviewIcons/icons/ic_dropdown/ic_dropdown@3x.png);
+    margin-left: 15px;
+}
+
+.ssp-menuItemDropDownContent {
+    display: none;
+    border-radius: 0 0 6px 6px;
+    position: absolute;
+    width: 105%;
+    z-index: 9;
+    background: #fff;
+    max-height: 435px;
+    overflow-y: overlay;
+    left: -30px;
+    top: 75px;
+}
+
+.ssp-menuItemDropDownContent a {
+    display: block;
+    text-decoration: none;
+    font-size: 1rem;
+    line-height: 22px;
+    letter-spacing: 0.3px;
+    text-align: left;
+    padding: 15px 30px 15px 50px;
+}
+
+.ssp-menuItemDropDownContent a:hover {
+    background-color: #eeeff2;
+}
+
+.ssp-menuItemDropDownContent a.ssp-inProgress {
+    background: url(../resource/SSP_Icons/sspIcons/Combined_Shape_Copy@1x.svg)
+        transparent no-repeat 30px 19px;
+}
+
+.ssp-menuItemDropDownContent a.ssp-inProgress:hover {
+    background: url(../resource/SSP_Icons/sspIcons/Combined_Shape_Copy@1x.svg)
+        #eeeff2 no-repeat 30px 19px;
+    cursor: pointer;
+}
+
+.ssp-menuItemDropDownContent a.ssp-progressChecked {
+    background: url(../resource/SSP_Icons/sspIcons/Oval_Copy_5@1x.svg) transparent
+        no-repeat 30px 19px;
+}
+
+.ssp-menuItemDropDownContent a.ssp-progressChecked:hover {
+    background: url(../resource/SSP_Icons/sspIcons/Oval_Copy_5@1x.svg) #eeeff2
+        no-repeat 30px 19px;
+    cursor: pointer;
+}
+
+.ssp-menuItemDropDownContent a.ssp-lockedProgress {
+    background: url(../resource/SSP_Icons/sspIcons/Group_3@1x.svg) transparent
+        no-repeat 32px 19px;
+    color: #97a1b6;
+    cursor: context-menu;
+}
+
+.ssp-menuItemDropDownContent a.ssp-lockedProgress:hover {
+    background: url(../resource/SSP_Icons/sspIcons/Group_3@1x.svg) transparent
+        no-repeat 32px 19px;
+}
+
+.ssp-menuItemDropDownContent div:first-child {
+    padding-top: 10px;
+}
+
+.ssp-menuItemDropDownContent div:last-child {
+    padding-bottom: 10px;
+}
+
+.ssp-expandDropDown {
+    display: block;
+}
+
+.ssp-collapseDropDown {
+    background-image: url(../resource/sspOverviewIcons/icons/ic_collapsedropdown/ic_collapsedropdown@3x.png);
+}
+
+.ssp-pos_relative {
+    position: relative;
+}
+
+.ssp-borderWrap {
+    border-top: 1px solid #dadee4;
+    border-bottom: 1px solid #dadee4;
+}
+
+.ssp-menuItemDropDownHeader {
+    max-width: 85%;
+}
+
+@media only screen and (max-width: 768px) {
+    .ssp-menuItemDropDownContent {
+        left: 0;
+        width: 100%;
+    }
+}

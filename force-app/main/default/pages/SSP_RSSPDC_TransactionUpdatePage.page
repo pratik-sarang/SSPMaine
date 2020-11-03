@@ -1,0 +1,8 @@
+<!--
+/**
+ * Visualforce Page which allows the Integration class to save Integration Detail records.
+ * <p /><p />
+ * @author Rajeev
+ */
+-->
+<apex:page controller="SSP_RSSPDC_TransactionUpdateController" action="{!insertTransactionRecord}" />

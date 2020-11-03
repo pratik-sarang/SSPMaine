@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FieldSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SSP_Queuing</fullName>
+    <description>This field set is being used to pass query fields</description>
+    <displayedFields>
+        <field>Is_Eligible_For_RSSPDC__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <displayedFields>
+        <field>DoesCaseExistForIndividual__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <label>SSP_Queuing</label>
+</FieldSet>

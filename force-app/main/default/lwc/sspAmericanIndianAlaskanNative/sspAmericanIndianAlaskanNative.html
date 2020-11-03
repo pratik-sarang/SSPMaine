@@ -1,0 +1,141 @@
+<!--
+* name          : sspAmericanIndianAlaskanNative
+* @description  : The component is used to collect American Indian / Alaskan Native tribe information
+* @author       : Sanchita Tibrewala and Priyanka Gound
+* @date         : 01/10/2020
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName                MM/DD/YYYY               A Brief Description about the Change
+  Sanchita and Priyanka         01/10/20                          Initial Version
+-->
+<template>
+    <template if:true={retMemberObjectExpr}>
+        <template if:true={showSpinner}>
+            <c-ssp-spinner></c-ssp-spinner>
+        </template>
+        <!-- CD2 2.5 Security Role Matrix. -->
+        <div if:true={isPageAccessible} class="ssp-bodyContainer">
+            <div
+                class="slds-grid slds-wrap slds-m-top_large slds-m-bottom_x-large"
+            >
+                <c-ssp-base-component-input-toggle
+                    label={label.sspMemberOfRecognizeTribe}
+                    onchange={toggleMemberOfRecognizeTribe}
+                    options={yesNoPicklist}
+                    class="ssp-amIndianDetails ssp-mobileComponentWidth "
+                    data-id="IsFederalRecognizedIndianTribeToggle__c"
+                    value={memberTribeObject.IsFederalRecognizedIndianTribeToggle__c}
+                    field-name="IsFederalRecognizedIndianTribeToggle__c"
+                    entity-name="SSP_Member__c"
+                    meta-list={MetaDataListParent}
+                ></c-ssp-base-component-input-toggle>
+            </div>
+            <template if:true={isTrueMemberOfRecognizeTribe}>
+                <div
+                    class="slds-grid slds-wrap slds-m-bottom_x-large ssp-alignItems"
+                >
+                    <div class="ssp-typeAheadWidth  slds-m-vertical_medium">
+                        <c-ssp-type-ahead-picklist
+                            label={label.sspTribe}
+                            placeholder={label.sspStartTyping}
+                            list-values={indTribeCode}
+                            data-id="IndianTribeCode__c"
+                            value={memberTribeObject.IndianTribeCode__c}
+                            onselectedval={assignValues}
+                            class="ssp-amIndianDetails"
+                            field-name="IndianTribeCode__c"
+                            entity-name="SSP_Member__c"
+                            meta-list={MetaDataListParent}
+                            title={label.sspStartTypingTribeOptions}
+                        >
+                        </c-ssp-type-ahead-picklist>
+                    </div>
+                    <div
+                        class="ssp-typeAheadWidth ssp-middlePadding slds-m-vertical_medium "
+                    >
+                        <c-ssp-type-ahead-picklist
+                            label={label.sspTribePrimarilyLocated}
+                            placeholder={label.sspStartTyping}
+                            list-values={indTribeState}
+                            data-id="IndianTribeState__c"
+                            value={memberTribeObject.IndianTribeState__c}
+                            onselectedval={assignValues}
+                            class="ssp-amIndianDetails"
+                            field-name="IndianTribeState__c"
+                            entity-name="SSP_Member__c"
+                            meta-list={MetaDataListParent}
+                            title={label.sspStateOptions}
+                        >
+                        </c-ssp-type-ahead-picklist>
+                    </div>
+                </div>
+            </template>
+            <div class="ssp-footerMargin">
+                <div tabindex="0"
+                    class="slds-grid slds-wrap slds-m-top_x-large slds-m-bottom_x-large"
+                >
+                    <div
+                        class="slds-m-top_x-large ssp-fontFamily_popinBold slds-grid slds-wrap ssp-componentWidth ssp-toggleFont"
+                    >
+                        {label.sspHasIndividualReceivedService}
+                    </div>
+                    <div
+                        class="slds-grid slds-wrap ssp-componentWidth ssp-toggleFont"
+                    >
+                        <ul class="ssp-unorderedList">
+                            <li>{label.sspIndianHealthService}</li>
+                            <li>{label.sspTribalHealthProgram}</li>
+                            <li>{label.sspUrbanIndianHealthProgram}</li>
+                        </ul>
+                    </div>
+                    <div class="slds-grid slds-wrap ssp-componentWidth">
+                        <c-ssp-base-component-input-toggle
+                            options={yesNoPicklist}
+                            onchange={toggleHasIndividualReceivedService}
+                            class="ssp-amIndianDetails ssp-mobileComponentWidth "
+                            data-id="IsEligibleForIHFlagToggle__c"
+                            value={memberTribeObject.IsEligibleForIHFlagToggle__c}
+                            field-name="IsEligibleForIHFlagToggle__c"
+                            entity-name="SSP_Member__c"
+                            meta-list={MetaDataListParent}
+                        ></c-ssp-base-component-input-toggle>
+                    </div>
+                </div>
+                <template if:true={isTrueHasIndividualReceivedService}>
+                    <div tabindex="0" class="slds-grid slds-wrap slds-m-top_x-large">
+                        <div
+                            class="slds-m-top_x-large ssp-fontFamily_popinBold slds-grid slds-wrap ssp-componentWidth ssp-toggleFont"
+                        >
+                            {label.sspIsIndividualEligibleReceiveService}
+                        </div>
+                        <div
+                            class="slds-grid slds-wrap ssp-componentWidth ssp-toggleFont"
+                        >
+                            <ul class="ssp-unorderedList">
+                                <li>{label.sspIndianHealthService}</li>
+                                <li>{label.sspTribalHealthProgram}</li>
+                                <li>{label.sspUrbanIndianHealthProgram}</li>
+                            </ul>
+                        </div>
+                        <div class="slds-grid slds-wrap ssp-componentWidth">
+                            <c-ssp-base-component-input-toggle
+                                options={yesNoPicklist}
+                                class="ssp-amIndianDetails ssp-mobileComponentWidth "
+                                data-id="IsEligibleForIndianHealthServicesToggle__c"
+                                value={memberTribeObject.IsEligibleForIndianHealthServicesToggle__c}
+                                field-name="IsEligibleForIndianHealthServicesToggle__c"
+                                entity-name="SSP_Member__c"
+                                meta-list={MetaDataListParent}
+                            ></c-ssp-base-component-input-toggle>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </template>
+    <!-- CD2 2.5 Security Role Matrix. -->
+    <template if:true={showAccessDeniedComponent}>
+        <c-ssp-access-denied></c-ssp-access-denied>
+    </template>
+</template>

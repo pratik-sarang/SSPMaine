@@ -1,0 +1,194 @@
+<template>
+  <br />
+
+  <lightning-button
+    label={buttonLabel}
+    title={buttonTitle}
+    class="ssp-button_base"
+    onclick={openModal}
+    variant="brand"
+  ></lightning-button>
+  <template if:true={isInsuranceAgentModal}>
+    <c-ssp-detailed-information-modal
+      reference={reference}
+      open-model={isInsuranceAgentModal}
+      onclosemodal={closeModal}
+      header-value={headerVal}
+    >
+      <div
+        slot="contentSlot"
+        class="ssp-agent-modal ssp-fontFamily_ArvoRegular ssp-color_monoOmega"
+      >
+        <template if:true={showSpinner}>
+          <c-ssp-spinner></c-ssp-spinner>
+        </template>
+        <template if:true={contactHasData}>
+          <div class="ssp-user-info">
+                        <template if:false={isOrganization}>
+                        <p class="ssp-color_blueAlpha ssp-fontFamily_popinBold">
+                            {contactData.FirstName} {contactData.LastName}
+                        </p>
+                        <p class="ssp-fontFamily_popinBold ssp-color_monoBody">
+                            {accountName}
+                        </p>
+                        </template>
+                        <template if:true={isOrganization}>
+                          <p class="ssp-color_blueAlpha ssp-fontFamily_popinBold">
+                            {organizationName}
+                        </p>
+                          </template>
+                    </div>
+                    <hr class="ssp-bg_monoAlpha ssp-horizontal-rule" ></hr>
+          <div if:true={isOfficeAddress} class="ssp-common-margin">
+            <p
+              class="ssp-fontFamily_popinBold ssp-color_monoBody ssp-info-header"
+            >
+              {customLabel.sspOfficeAddress}
+            </p>
+            <a href={mapsLink} target="_blank" title={addressTitle}>
+              <template if:true={isOrganization}>
+              <p class="ssp-underline ssp-color_monoOmega">
+                {accountAddressLine1}
+              </p>
+              <p class="ssp-underline ssp-color_monoOmega">
+                {accountAddressLine2}
+              </p>
+            </template>
+            <template if:false={isOrganization}>
+              <p class="ssp-underline ssp-color_monoOmega">
+                {contactData.MailingStreet} {contactData.MailingCity}
+              </p>
+              <p class="ssp-underline ssp-color_monoOmega">
+                {contactData.CountyCode__c}, {contactData.MailingState}
+                {contactData.MailingPostalCode}
+              </p>
+            </template>
+            </a>
+          </div>
+          <div class="ssp-common-margin">
+            <p
+              class="ssp-fontFamily_popinBold ssp-color_monoBody ssp-info-header"
+            >
+              {customLabel.sspContactMethod}
+            </p>
+            <template if:true={phoneMasked}>
+            <p>
+              {customLabel.sspCall}:
+              <a
+                href={phoneHref}
+                title={phoneTitle}
+                class="ssp-color_monoOmega ssp-underline"
+                >{phoneMasked}</a
+              >
+            </p>
+            </template>
+            <p>
+              {customLabel.sspEmail}:
+              <template if:true={isOrganization}>
+              <a
+                href={emailHref}
+                title={emailTitle}
+                class="ssp-color_monoOmega ssp-underline"
+                >{accountEmail}</a
+              >
+            </template>
+            <template if:false={isOrganization}>
+              <a
+                href={emailHref}
+                title={emailTitle}
+                class="ssp-color_monoOmega ssp-underline"
+                >{contactData.Email}</a
+              >
+            </template>
+            </p>
+          </div>
+          <template if:false={isOrganization}>
+          <div
+            class="slds-grid slds-wrap ssp-common-margin"
+            if:true={showAvailability}
+          >
+            <p
+              class="ssp-fontFamily_popinBold ssp-color_monoBody slds-size_1-of-1 ssp-info-header"
+            >
+              {customLabel.sspAvailability}
+            </p>
+            <div class="slds-grid slds-wrap slds-size_1-of-1">
+              <div class="slds-large-size_1-of-3">
+                <template for:each={availabilityList} for:item="available">
+                  <p key={available}>{available}</p>
+                </template>
+              </div>
+            </div>
+          </div>
+          <div class="ssp-common-margin">
+            <p
+              class="ssp-fontFamily_popinBold ssp-color_monoBody ssp-info-header"
+            >
+              {customLabel.sspLanguagesText}
+            </p>
+            <p>{languages}</p>
+          </div>
+          <div class="ssp-common-margin" if:true={showIsPrivate}>
+            <c-ssp-explicit-notice-card>
+              <p>
+                <span class="ssp-fontFamily_popinBlack"
+                  >{customLabel.sspYouSelectedPrivateAssist}</span
+                >
+                {customLabel.sspYouShouldOnlySelectThisAssist}
+              </p>
+            </c-ssp-explicit-notice-card>
+          </div>
+        </template>
+          <template if:true={showApplicationList}>
+            <c-ssp-base-component-input-picklist
+              if:false={showAvailability}
+              label={customLabel.sspWhichCaseWouldYouLikeToAddThisAssistTo}
+              title={customLabel.sspClickHereToSeeCaseOptions}
+              selected-value={selectedCaseId}
+              value={selectedCaseId}
+              onchange={handleCaseChange}
+              onhandlepicklistchange={handleCaseChange}
+              option={caseListOptions}
+              class="ssp-caseList"
+            >
+            </c-ssp-base-component-input-picklist>
+            <c-ssp-base-component-input-picklist
+              if:true={showAvailability}
+              label={customLabel.sspWhichCaseWouldYouLikeToAddThisAgentTo}
+              title={customLabel.sspClickHereToSeeCaseOptions}
+              selected-value={selectedCaseId}
+              value={selectedCaseId}
+              onchange={handleCaseChange}
+              onhandlepicklistchange={handleCaseChange}
+              option={caseListOptions}
+              class="ssp-caseList"
+            >
+            </c-ssp-base-component-input-picklist>
+          </template>
+          <!-- <hr class="ssp-bg_monoAlpha ssp-horizontal-rule-bottom"> -->
+        </template>
+      </div>
+      <div
+        slot="Footer"
+        class="slds-grid slds-wrap slds-size_1-of-1 ssp-stacked-btn-width"
+            >
+                <template if:true={showSelect}>
+        <lightning-button
+          title={customLabel.sspAddThisIndividualToYourCase}
+          label={buttonLabelText}
+          onclick={initSelectAssist}
+          variant="brand"
+          class="ssp-button_brand slds-size_1-of-1"
+        >
+                    </lightning-button>
+                </template>
+      </div>
+    </c-ssp-detailed-information-modal>
+  </template>
+  <c-ssp-logging-and-error-handling-modal
+    if:true={showErrorModal}
+    error-id={errorCode}
+    onprogressvaluechange={closeError}
+  >
+  </c-ssp-logging-and-error-handling-modal>
+</template>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Application_State_is_RAC_or_Renewals</fullName>
+        <description>This fields update, updates case application is RAC or Renewal</description>
+        <field>Application_State__c</field>
+        <formula>IF( RecordType.Name ==&apos;Case&apos; &amp;&amp;  LEN(RAC_Selections__c) &gt;= 1, &apos;RAC&apos; ,&apos;Renewal&apos; )</formula>
+        <name>Application State is RAC or Renewals</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stamp_user_role_on_application</fullName>
+        <description>Stamp user role on application</description>
+        <field>Created_By_Role__c</field>
+        <formula>IF(CreatedBy.SelectedRole__c != null, CreatedBy.SelectedRole__c, &apos;Citizen_Individual&apos;)</formula>
+        <name>Stamp user role on application</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <rules>
+        <fullName>Application Case is RAC or Renewal</fullName>
+        <actions>
+            <name>Application_State_is_RAC_or_Renewals</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>SSP_Application__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Case</value>
+        </criteriaItems>
+        <description>This rule is for whether case application is RAC or Renewal</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>UpdateCreatedByRole</fullName>
+        <actions>
+            <name>Stamp_user_role_on_application</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>SSP_Application__c.RecordTypeId</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <description>Updated created by user&apos;s role on application</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+</Workflow>

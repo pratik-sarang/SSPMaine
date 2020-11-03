@@ -1,0 +1,42 @@
+<!--
+* name          : sspToast.
+* @description  : This component is used to show Toast messages.
+* @author       : Saurabh.
+* @date         : 12/11/2019
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName                MM/DD/YYYY               A Brief Description about the Change
+  Saurabh                      12/11/2019                          Initial Version
+-->
+<template>
+    <div
+        if:true={showErrorToast}
+        class="ssp-toastContainer slds-box slds-grid slds-wrap slds-col_bump-right slds-grid_vertical-align-center"
+    >
+        <div class="ssp-toastIconSize slds-m-right_small">
+            <img
+                class="ssp-toastIcon"
+                alt="Progress_checked_icon"
+                src={positiveIcon}
+                if:true={isPositive}
+            />
+            <img
+                class="ssp-toastIcon"
+                alt="Progress_checked_icon"
+                src={negativeIcon}
+                if:true={isNegative}
+            />
+        </div>
+        <div class="ssp-toastTextContainer" role="alert">
+            <span class="ssp-toastHeading ssp-fontFamily_popinBold"
+                >{sspToastTitleVal}</span
+            >
+            <p>
+                <span class="ssp-toastSubtext ssp-fontFamily_popinRegular"
+                    >{sspToastAdditionalInfo}</span
+                >
+            </p>
+        </div>
+    </div>
+</template>

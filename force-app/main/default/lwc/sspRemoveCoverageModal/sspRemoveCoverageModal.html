@@ -1,0 +1,106 @@
+<!--
+* name : sspRemoveCoverageModal
+* @description : This Screen is used for Remove Coverage Modal.
+* @author : Sharon Roja
+* @date : 16/12/2019.
+* MODIFICATION LOG:
+* DEVELOPER             DATE            DESCRIPTION
+* ________________________________________________________________________________
+* Sharon Roja            16/12/2019      Creating HTML Structure
+* Sai Kiran              01/06/2020      Backend Integration
+-->
+<template>
+    <template if:true={openModelForExist}>
+        <div class="ssp-errorToast" if:true={hasSaveValidationError}>
+            <c-ssp-toast
+                ssp-toast-title-val={label.toastErrorText}
+                show-error-toast={trueValue}
+                onhidetoast={hideToast}
+            ></c-ssp-toast>
+        </div>
+        <template if:true={showCoverageSpinner}>
+            <c-ssp-spinner></c-ssp-spinner>
+        </template>
+        <template if:true={showCoverageModal}>
+        <c-ssp-detailed-information-modal 
+            reference={reference}  
+            header-value={label.sspRemoveCoverageTitle}  
+            open-model={openModelForExist}
+            onclosemodal={closeRemoveCoverageModal}
+        >
+            <span slot="contentSlot">
+                <div class="ssp-removeCoverageModalContainer">
+                    <p class="ssp-resourceDetailsHeaderText ssp-fontFamily_popinBold ssp-color_blueAlpha">
+                        {policyData.sPlanName}
+                    </p>
+                    <p class="ssp-complete-questions ssp-fontFamily_ArvoRegular ssp-color_monoOmega slds-m-top_medium">{removeCoverageHeadingOne}</p>  
+                    <p class="ssp-complete-questions ssp-fontFamily_ArvoRegular ssp-color_monoOmega slds-m-top_large">{removeCoverageHeadingTwo}</p>
+                    <p class="ssp-complete-questions ssp-fontFamily_ArvoRegular ssp-color_monoOmega slds-m-top_medium">{removeCoverageHeading}</p>
+                    <div class="ssp-removeCoverageContent ssp-removeCoverageTopMarginThirty">
+                        <div class="slds-grid slds-wrap slds-large-size_4-of-7 slds-size_1-of-1 ssp-removeCoverageInputContainer">
+                            <c-ssp-base-component-input-picklist
+                                meta-list={MetaDataListParent}
+                                title={label.sspRemoveCoverageReasonAlternateText}
+                                entity-name="SSP_TrackDeletion__c"
+                                field-name="EndReason__c"
+                                data-id="sEndReason"
+                                option={endReasonValues}
+                                class="ssp-applicationInputs slds-size_1-of-1"
+                                label={label.sspRemoveCoverageReasonLabel}
+                                onhandlepicklistchange={changeCoverageReason}
+                            >
+                        </c-ssp-base-component-input-picklist>
+                        </div>
+                        <template if:true={otherOptionDisplayInput}>
+                            <div class="slds-grid slds-wrap slds-large-size_4-of-7 slds-size_1-of-1 ssp-removeCoverageMarginTopFifteen ssp-removeCoverageInputContainer">
+                                <c-ssp-base-component-input-text
+                                    meta-list={MetaDataListParent}
+                                    entity-name="SSP_TrackDeletion__c"
+                                    field-name="OtherReason__c"
+                                    data-id="sOtherReason"
+                                    class="ssp-applicationInputs slds-size_1-of-1"
+                                    label={label.sspRemoveCoveragePleaseExplain}>
+                                </c-ssp-base-component-input-text>
+                            </div>
+                        </template>
+                        <div class="slds-grid slds-wrap slds-large-size_4-of-7 slds-size_1-of-1 ssp-removeCoverageMarginTopFifteen ssp-removeCoverageInputContainer">
+                            <c-ssp-base-component-input-date
+                                meta-list={MetaDataListParent}
+                                entity-name="SSP_TrackDeletion__c"
+                                field-name="EndDate__c"
+                                data-id="dEndDate"
+                                class="ssp-applicationInputs slds-size_1-of-1"
+                                label={label.sspRemoveCoverageEndDate}
+                            >
+                            </c-ssp-base-component-input-date>
+                        </div>
+                    </div>
+                </div>
+            </span>
+            <div
+                slot="Footer"
+                class="slds-grid slds-wrap ssp-remove-coverage-footer"
+            >
+                <div class="slds-grid slds-wrap slds-size_1-of-1">
+                    <lightning-button
+                        variant="brand"
+                        label={label.sspRemoveCoverageButton}
+                        onclick={removePolicyCoverage}
+                        title={label.sspRemoveButtonTitle}
+                        class="ssp-removeCoverageButton ssp-button_brand slds-grid slds-wrap slds-size_1-of-1"
+                    ></lightning-button>
+                </div>
+                <div class="slds-grid slds-wrap slds-size_1-of-1 ssp-removeCoverageMarginTopFifteen"></div>
+                    <lightning-button
+                        variant="brand"
+                        label={label.sspRemoveCoverageCancel}
+                        onclick={closeRemoveCoverageModal}
+                        title={label.sspCancelButtonTitle}
+                        class="ssp-button_base ssp-cancelButton slds-grid slds-wrap slds-size_1-of-1"
+                    ></lightning-button>
+                </div>
+            </div>
+        </c-ssp-detailed-information-modal>
+        </template>
+    </template>
+</template>

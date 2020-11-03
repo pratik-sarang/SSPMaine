@@ -1,0 +1,61 @@
+.ssp-shortHeading {
+    padding: 1.125rem 1.875rem;
+    margin-bottom: 3px;
+}
+
+.ssp-headingSignaturePage {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+.ssp-appCardOrangeTitle {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    text-transform: uppercase;
+}
+
+.ssp-snapAddressInformationContainer {
+    margin: 1.875rem auto 3.75rem auto;
+}
+
+.ssp-greyUnderline {
+    height: 0.3125rem;
+    border-radius: 0.15625rem;
+}
+
+.ssp-marginHeading {
+    margin-bottom: 1.875rem;
+}
+
+.ssp-addressmarginSpace {
+    margin: 1rem auto 1.875rem auto
+}
+
+.ssp-marginTopSixty {
+    margin-top: 3.75rem;
+}
+
+.ssp-marginTopHundred {
+    margin-top: 6.25rem;
+}
+
+.ssp-fontSize {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+@media only screen and (min-width: 769px) {
+    .ssp-headingSignaturePage {
+        font-size: 2.625rem;
+        line-height: 3rem;
+    }
+    .ssp-snapAddressInformationContainer {
+        margin: 3.75rem auto;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .ssp-cancel-btn{
+        width:45%;
+    }
+}

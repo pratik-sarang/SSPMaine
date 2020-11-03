@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NonZeroValidator__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This field checks for non zero validation for input value</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>NonZeroValidator</label>
+    <type>Checkbox</type>
+</CustomField>

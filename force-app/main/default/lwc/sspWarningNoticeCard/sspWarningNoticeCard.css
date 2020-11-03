@@ -1,0 +1,19 @@
+.ssp-warningNoticeCard {
+    border-radius: 6px;
+    box-sizing: border-box;
+    padding: 30px 30px 30px 24px;
+    font-size: 0.8125rem;
+    line-height: 18px;
+    letter-spacing: 0.3px;
+}
+
+.ssp-warningNoticeCardIcon {
+    height: 24px;
+    width: 24px;
+}
+
+@media only screen and (max-width: 768px) {
+    .ssp-warningNoticeCard {
+        padding: 15px 24px;
+    }
+}

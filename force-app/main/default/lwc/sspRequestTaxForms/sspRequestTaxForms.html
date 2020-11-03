@@ -1,0 +1,179 @@
+<template>
+    <c-ssp-spinner if:true={showSpinner}></c-ssp-spinner>
+    <c-ssp-access-denied if:true={noAccess}></c-ssp-access-denied>
+    <div if:false={noAccess} class="ssp-requestTaxForms ssp-bodyContainer">
+        <div class="ssp-requestTaxFormsHeader">
+            <h1 class="ssp-requestTaxFormsHeaderText ssp-fontFamily_popinBlack ssp-color_blueAlpha">
+                {label.requestTaxForms}
+            </h1>
+        </div>
+        <hr class="ssp-horizontal-rule ssp-bg_monoAlpha" ></hr>
+        <div class="slds-grid slds-wrap slds-size_1-of-1 ssp-formType">
+            <c-ssp-base-component-input-toggle
+                class="ssp-inputs"
+                label={label.formType}
+                options={formTypeOptions}
+                value={currentFormTypeSelected}
+                onchange={handleFormTypeChange}
+                disabled={disableFormTypeToggle}
+            >
+            </c-ssp-base-component-input-toggle>
+        </div>
+        <template if:false={dataLoading}>
+            <hr class="ssp-horizontal-rule ssp-bg_monoAlpha" ></hr>
+            <template if:true={formASelected}>
+                <div class="slds-grid slds-wrap slds-size_1-of-1 ssp-yearToggle">
+                    <c-ssp-base-component-input-toggle
+                        class="ssp-inputs"
+                        label={label.year}
+                        options={yearOptions}
+                        value={initialYear}
+                        onchange={handleYearChange}
+                    >
+                    </c-ssp-base-component-input-toggle>
+                </div>
+                <div if:true={currentYearSelected} class="slds-grid slds-wrap slds-size_1-of-1 ssp-plansSection">
+                    <p tabindex="0" class="ssp-fontFamily_popinBold ssp-color_monoBody ssp-plansHeading">{label.plans}</p>
+                    <template for:each={planOptions} for:item="plan" >
+                        <c-ssp-base-component-multiline-input-checkbox 
+                            key={plan.PlanEnrollmentId}
+                            data-plan-id={plan.PlanEnrollmentId}
+                            hide-additional-fields="true"
+                            onhandlemultiselectchange={handlePlanSelection}
+                            class="ssp-inputs slds-size_1-of-1 ssp-plansMultiCheckbox">
+                            <div slot="labelContent" class="slds-size_1-of-1">
+                                <p class="ssp-fontFamily_popinBold ssp-color_monoBody">{plan.PlanName}</p> 
+                                <p class="ssp-fontFamily_popinRegular ssp-color_monoBody">{label.sspPolicy} {plan.PlanEnrollmentId}</p>
+                            </div>
+                        </c-ssp-base-component-multiline-input-checkbox>
+                    </template>
+                    <div tabindex="0" class="slds-size_1-of-1" if:false={hasPlans}>{label.noPlanForTheYear}</div>
+                </div>
+                <div class="slds-grid slds-wrap slds-size_1-of-1">
+                    <lightning-radio-group
+                        field-name="PreferredNotificationMethodForTaxCode__c"
+                        entity-name="SSP_Member__c"
+                        meta-list={validationConfig}
+                        label={label.mailingOptionsLabel}
+                        options={mailingOptions}
+                        class="ssp-radioGroup slds-size_1-of-1"
+                        type="radio"
+                        value={memberDetail.PreferredNotificationMethodForTaxCode__c}
+                        onchange={handleMailingOptionChange}
+                         tabindex="0"
+                    ></lightning-radio-group>
+                </div>
+                <div if:true={showEmailAddress} class="slds-grid slds-wrap slds-size_1-of-1 ssp-EmailSection">
+                    <c-ssp-base-component-input-email
+                        field-name="Email__c"
+                        entity-name="SSP_Member__c"
+                        meta-list={validationConfig}
+                        class="ssp-inputs ssp-mailTextbox"
+                        value={memberDetail.Email__c}
+                        label={label.emailAddress}
+                        onchange={handleEmailChange}
+                    >
+                    </c-ssp-base-component-input-email>
+                </div>
+                <div if:true={showMailingAddress} class="slds-grid slds-wrap slds-size_1-of-1 ssp-mailingAddressCardSection">
+                    <c-ssp-cta-card-blue class="ssp-mailingAddressCard">
+                        <div slot="content">
+                            <p class="ssp-fontFamily_popinRegular ssp-color_monoOmega ssp-defaultFontSize">{label.mailingAddress}</p>
+                            <p class="ssp-fontFamily_popinRegular ssp-color_monoBody">{mailingAddress}</p>
+                            <a if:true={isRACEnabled} class="ssp-fontFamily_popinBold ssp-color_monoBody ssp-defaultFontSize ssp-reportChangeLink" tabindex="0" title={label.reportChangeRelatedToMailingAddress} onclick={handleReportAChangeClick}>
+                                {label.reportAChange}
+                            </a>
+                        </div>
+                    </c-ssp-cta-card-blue>
+                </div>
+            </template>
+            <template if:true={formBSelected}>
+                <p class="ssp-color_monoBody ssp-formBInfo">{label.requestTaxFormsInfo}</p>
+                <div class="slds-grid slds-wrap slds-size_1-of-1">
+                    <lightning-button
+                        label={label.formBButton}
+                        title={label.clickToGoToTheFormBPortal}
+                        onclick={launchFormBPortal}
+                        variant="brand"
+                        class="ssp-button_brand ssp-GoToPortalBtn"
+                    ></lightning-button>
+                </div>
+            </template>
+            <!--Footer-->
+            <div class="slds-grid slds-wrap slds-size_1-of-1 slds-grid_align-spread ssp-action-btn-section">
+                <lightning-button
+                    label={label.cancel}
+                    title={label.clickToGoBackToTheDashboard}
+                    onclick={handleCancel}
+                    class="slds-size_1-of-2 ssp-button_base ssp-cancel-btn"
+                ></lightning-button>
+                <lightning-button
+                    label={label.submit}
+                    title={label.clickToSubmitFormARequest}
+                    onclick={handleSubmit}
+                    disabled={submitButtonDisabled}
+                    class="slds-size_1-of-2 ssp-button_neutral ssp-next-btn slds-text-align_right"
+                    if:true={formASelected}
+                ></lightning-button>
+            </div>
+        </template>
+
+        <!--modal-->
+        <c-ssp-detailed-information-modal
+            header-value={label.ssp1095AForm}
+            open-model={modalOpen}
+            onclosemodal={handleModalClose}
+            reference={reference}
+        >
+            <div slot="contentSlot">
+                <p>{label.requestEnRoute}</p>
+                <p class="slds-m-top_medium">{label.contactDCBS}</p>
+            </div>
+            <div slot="Footer" class="slds-grid slds-wrap slds-size_1-of-1 ssp-stacked-btn-width">
+                <lightning-button
+                    label={label.sspOKButton}
+                    title={label.sspOKButton}
+                    variant="brand"
+                    class="ssp-button_brand slds-size_1-of-1"
+                    onclick={sendResponse}
+                >
+                </lightning-button>
+            </div>
+        </c-ssp-detailed-information-modal>
+    </div>
+
+    <c-ssp-logging-and-error-handling-modal if:true={showErrorModal} error-id={errorMsg} onprogressvaluechange={closeErrorModal}>
+    </c-ssp-logging-and-error-handling-modal>
+    <c-ssp-report-a-change-modal
+        if:true={showRACModal}
+        onclose={handleRACModalClose}
+        origin="request-tax-forms"
+    >
+    </c-ssp-report-a-change-modal>
+    <c-ssp-detailed-information-modal
+        header-value={label.sspErrorStatus}
+        open-model={showCorrespondenceErrorModal}
+        onclosemodal={closeCorrespondenceErrorModal}
+    >
+        <div slot="contentSlot">
+            <template for:each={correspondenceErrors} for:item="errorWrapper">
+                <div key={errorWrapper.plan}>
+                    <h4>{errorWrapper.plan}</h4>
+                    <ul>
+                        <template for:each={errorWrapper.errors} for:item="error">
+                            <li key={error.Message}>{error.Message}</li>
+                        </template>
+                    </ul>
+                </div>
+            </template>
+        </div>
+        <span slot="Footer">
+            <lightning-button
+                variant="neutral"
+                label={label.sspContinueButton}
+                class="ssp-button_base ssp-cardButton ssp-stacked-btn-width"
+                onclick={closeCorrespondenceErrorModal}
+            ></lightning-button>
+        </span>
+    </c-ssp-detailed-information-modal>
+</template>

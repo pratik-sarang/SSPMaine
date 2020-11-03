@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Past_Date_Validation_Msg__c</fullName>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Past_Date_Validation_Msg</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Past Dates are not allowed</fullName>
+                <default>true</default>
+                <label>Past Dates are not allowed</label>
+            </value>
+            <value>
+                <fullName>Date should be today or in the past.</fullName>
+                <default>false</default>
+                <label>Date should be today or in the past.</label>
+            </value>
+            <value>
+                <fullName>Date should be today or in the future.</fullName>
+                <default>false</default>
+                <label>Date should be today or in the future.</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

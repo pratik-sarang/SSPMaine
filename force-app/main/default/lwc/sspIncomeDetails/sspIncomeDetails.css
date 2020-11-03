@@ -1,0 +1,94 @@
+.ssp-benefits-text {
+  font-size: 1rem;
+  padding-left: 8.75rem;
+}
+
+.ssp-income-details-header {
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+
+.ssp-income-details-header-text {
+  font-size: 2.625rem;
+  line-height: 1;
+}
+
+.ssp-user-name {
+  font-size: 1.125rem;
+}
+
+.ssp-horizontal-rule {
+  height: 0.313em;
+  border-radius: 0.156em;
+  margin: 1rem 0;
+  border: none;
+}
+
+.ssp-complete-questions {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.ssp-income-details-form > * {
+  margin-top: 1rem;
+}
+
+.ssp-common-margin-top {
+    margin-top: 0;
+    padding-left: 30px;
+}
+.ssp-alignItems {
+    align-items: baseline;
+}
+
+.ssp-income-details-form .ssp-action-btn-section {
+  margin-top: 4rem;
+}
+.ssp-income-details-form .ssp-action-btn-section .ssp-cancel-btn{
+  padding-right: 12px;
+}
+.ssp-income-details-form .ssp-action-btn-section .ssp-next-btn{
+  padding-left: 12px;
+}
+
+
+.ssp-content {
+  font-size: 1rem;
+  line-height: 24px;
+  padding-bottom: 1.5rem;
+}
+
+.ssp-contentChild {
+  padding-top: 1.5rem;
+}
+
+.ssp-modalFooter {
+	width: -webkit-fill-available;
+}
+
+.ssp-capatilize {
+    text-transform: capitalize;
+}
+@media only screen and (max-device-width: 768px) {
+  .ssp-income-details-header-text {
+    font-size: 1.5rem;
+  }
+  .ssp-common-margin-top {
+    margin-top: 1em;
+    padding-left: 0;
+  }
+  .ssp-ext-field {
+    width: 100%;
+  }
+  .ssp-benefits-text {
+    padding-left: 1.875rem;
+  }
+}
+
+@media only screen and (min-device-width: 769px) {
+  .ssp-applicationInputs {
+    width: 370px;
+  }
+  .ssp-ext-field {
+    width: 170px;
+  }
+}

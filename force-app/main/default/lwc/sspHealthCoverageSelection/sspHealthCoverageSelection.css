@@ -1,0 +1,57 @@
+.ssp-healthCovSelectionTitle {
+    font-size: 2.625rem;
+    line-height: 48px;
+    text-align: left;
+    margin: 8px 0;
+}
+.ssp-healthCovSelectionLearnMore {
+    font-size: 0.8125rem;
+    line-height: 30px;
+    letter-spacing: -0.3px;
+    text-align: left;
+    text-decoration: underline;
+}
+.ssp-healthCovSelectionDesc {
+    font-size: 1rem;
+    line-height: 24px;
+    letter-spacing: -0.3px;
+    text-align: left;
+    margin: 16px 0;
+}
+.ssp-healthCovSelectionOptions {
+    margin-bottom: 24px;
+}
+.ssp-healthCovSelectionOptions:last-of-type {
+    margin-bottom: 53px;
+}
+.ssp-healthCovSelectionBtnGroup {
+    margin-top: 100px;
+    margin-bottom: 60px;
+}
+.ssp-healthCovSelectionNextBtn,
+.ssp-healthCovSelectionBackBtn,
+.ssp-healthCovSelectionSaveBtn {
+    font-size: 1.125rem;
+    line-height: 27px;
+    text-align: center;
+
+}
+.ssp-healthCovSelectionBackBtn {
+    margin-right: 30px;
+}
+@media only screen and (max-width: 768px) {
+    .ssp-healthCovSelectionTitle {
+        font-size: 1.5rem;
+        line-height: 32px;
+        text-align: left;
+        margin: 30px 0 8px 0;
+    }
+    .ssp-healthCovSelectionMagentaBtn {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .ssp-healthCovSelectionBackBtn {
+        margin-right: 23px;
+    }
+    
+}

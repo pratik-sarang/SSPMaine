@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AssociatedPrograms__c</fullName>
+    <description>All program codes, Organization is supporting will be stored as a comma seperated string. Example MA,KT,SN,KP,CC.</description>
+    <externalId>false</externalId>
+    <label>Associated Programs</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>BenefitPrograms</valueSetName>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

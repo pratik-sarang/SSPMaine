@@ -1,0 +1,68 @@
+.ssp-mainHeading {
+    font-size: 2.625rem;
+    line-height: 3rem;
+}
+.ssp-subHeading {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+.ssp-label {
+    font-size: 0.813rem;
+    line-height: 1.875rem;
+}
+.ssp-labelContent {
+    font-size: 1rem;
+    line-height: 1.375rem;
+    width: 70%;
+    overflow-wrap: break-word;
+}
+.ssp-line {
+    size: 1.875rem;
+}
+.ssp-learnMore {
+    font-size: 0.8125rem;
+    line-height: 1.875rem;
+    text-decoration: underline;
+    display: inline;
+}
+.ssp-learnMore:hover,
+.ssp-noticeLink,
+.ssp-noticeLink:hover {
+    text-decoration: underline;
+}
+.ssp-horizontal-rule {
+    height: 0.313em;
+    border-radius: 0.156em;
+    margin: 1em 0 2rem;
+    border: none;
+}
+.ssp-WorkerPortal{
+    margin-bottom: 30px;
+}
+@media only screen and (min-width: 1024px) {
+    .ssp-rowContainer {
+        padding-right: 6.25rem;
+    }
+    .ssp-rowcontentContainer {
+        padding-right: 6.25rem;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .ssp-communicationHeading {
+        margin-top: 2rem;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .ssp-contentContainer {
+        margin: 4.688rem 0 6.563rem;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .ssp-mainHeading {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+    .ssp-contentContainer {
+        margin: 2.5rem 0 6.375rem;
+    }
+}

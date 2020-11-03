@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NotRequiredIfNotDenied</fullName>
+    <active>true</active>
+    <description>Field should be mandatory to save the Claim record only when Denied.</description>
+    <errorConditionFormula>AND(NOT(ISBLANK( ReasonForDenial__c )), NOT(ISPICKVAL( Status__c , &quot;Denied&quot;)))</errorConditionFormula>
+    <errorDisplayField>ReasonForDenial__c</errorDisplayField>
+    <errorMessage>To enter a Reason for Denial, you must update the status to &quot;Denied&quot;</errorMessage>
+</ValidationRule>

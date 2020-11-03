@@ -1,0 +1,80 @@
+<!--
+* name : SspDocumentCenterDocUpload
+* @description :This is a container for Document Wizard Upload Screen
+* @author : Aniket,Kyathi
+* @date : 4/15/2020 
+* MODIFICATION LOG:
+* DEVELOPER             DATE            DESCRIPTION
+* ________________________________________________________________________________
+* Kyathi                4/15/2020       Creating HTML Structure
+* Aniket                4/15/2020     Backend Integration
+-->
+<template>
+    <div class="ssp-wizardUploadContainer ssp-bodyContainer">
+        <template if:true={showDetailsSpinner}>
+            <c-ssp-spinner></c-ssp-spinner>
+        </template>
+        <div class="ssp-errorToast" if:true={hasSaveValidationError}>
+            <c-ssp-toast
+                ssp-toast-title-val={label.toastErrorText}
+                show-error-toast={trueValue}
+                onhidetoast={hideToast}
+                condition={toastCondition}
+            ></c-ssp-toast>
+        </div>
+        <div>
+            <h1 class="ssp-fontFamily_popinBlack ssp-color_blueAlpha">
+                {label.sspUpload}
+            </h1>
+            <div class="ssp-username ssp-color_monoBody">
+                <span class="ssp-fontFamily_popinBold">
+                    {sspUploadType}:
+                </span>
+                <span class="ssp-fontFamily_popinRegular slds-m-left_xxx-small"
+                    >{currentRFI.recordIdentifier}</span
+                >
+            </div>
+        </div>
+        <p class="ssp-sectionSeperator ssp-bg_monoAlpha"></p>
+        <div class="ssp-section2">
+            <!--Generic File Upload-->
+            <c-ssp-document-file-upload
+                selected-type-of-proof={selectedTypeOfProof}
+                form-of-proof-options={formOfProofOptions}
+                onformproofchange={formOfProofOnChange}
+                onsinglefileupload={singleFileUploaded}
+                handle-generic="false"
+                selected-ind-name={selectedIndName}
+                selected-form-of-proof-name={selectedFormOfProofName}
+                current-r-f-i-identifier={currentRFIIdentifier}
+                selected-ind-id={selectedIndId}
+                selected-case-number={selectedCaseNumber}
+                is-eligible-for-renewal={currentRFI.isEligibleForRenewal}
+                task-code={taskCode}
+                s-due-date={sDueDate}
+				template-map={templateMap}
+            ></c-ssp-document-file-upload>
+        </div>
+        <div
+            class="slds-grid slds-wrap slds-size_1-of-1 ssp-actionButtonsContainer ssp-buttonWidth ssp-uploadProofForms"
+        >
+            <div class="slds-size_1-of-1 ssp-actionButtons">
+                <lightning-button
+                    class="ssp-button_base ssp-cancelButton ssp-screenFooterBlueBtn"
+                    label={label.sspSkip}
+                    onclick={skipAndNavigate}
+                    title={label.sspSkipUploadTitle}
+                >
+                </lightning-button>
+                <lightning-button
+                    class="ssp-button_neutral ssp-saveButton ssp-screenFooterNextBtn"
+                    label={label.sspUploadAndContinue}
+                    onclick={handleUploadAndContinue}
+                    disabled={isDisabledUploadNext}
+                    title={label.sspUploadContinueTitle}
+                >
+                </lightning-button>
+            </div>
+        </div>
+    </div>
+</template>

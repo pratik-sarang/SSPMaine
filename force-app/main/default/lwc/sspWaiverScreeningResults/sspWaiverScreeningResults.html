@@ -1,0 +1,107 @@
+<!-- 
+* name 		      : sspWaiverScreeningResults
+* @description 	  : This modal is used for Application Statement of Understanding 
+* @author 		  : Sharon
+* @date           : 05/20/2020
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* --------------------------------------------------------------------------------------------
+-->
+<template>
+    <main>
+        <template if:true={showSpinner}>
+            <c-ssp-spinner></c-ssp-spinner>
+        </template>
+        <div
+            class="sspHeadingBar ssp-shortHeading slds-p-horizontal_xx-large ssp-mobileHorizontalPadding ssp-bg_appHeaderGradient slds-grid slds-wrap slds-grid_vertical-align-center"
+        >
+            <div class="ssp-container_width slds-grid slds-wrap">
+                <p
+                    class="ssp-fontFamily_popinBold ssp-appCardOrangeTitle ssp-color_monoBody"
+                >
+                    {label.sspWaiverQuestionsApply}
+                </p>
+            </div>
+        </div>
+        <div class="ssp-bodyContainer ssp-SnapContactInformationContainer ssp-waiverScreenQuestContainer">
+            <template if:true={doesNotMeetRequirement}>
+                <h1
+                    class="ssp-fontFamily_popinBlack ssp-color_blueAlpha ssp-headingSignaturePage ssp-margin-bottom_thirty"
+                >
+                    {label.sspWaiverResultsHeading}
+                </h1>
+                <div
+                    class="ssp-margin-bottom_thirty ssp-bg_monoAlpha ssp-greyUnderline"
+                ></div>
+                <div
+                    class="ssp-fontFamily_ArvoRegular ssp-color_monoOmega ssp-waiverContent"
+                >
+                    <span>{label.sspWaiverResultsContent}</span>
+                    <span>
+                        <a
+                            href={phoneNumber}
+                            class="ssp-color_blueAlpha ssp-callCommunityAlternatives ssp-anchor"
+                            >{label.sspWaiverResultsPhone}.</a
+                        ></span
+                    >
+                    <span class="ssp-callCommunityAlternatives"
+                        >{label.sspWaiverResultsContent2}</span
+                    >
+                </div>
+                <div class="ssp-waiverResultsBtn ssp-waiverButtons">
+                    <lightning-button
+                        variant="brand"
+                        title={label.sspWaiverResultButtonTitle}
+                        label={label.sspWaiverResultButton}
+                        class="ssp-button_brand ssp-fontFamily_popinBold"
+                        data-page="Benefits_Page__c"
+                        onclick={handleNavigation}
+                    ></lightning-button>
+                </div>
+            </template>
+            <template if:true={meetRequirement}>
+                <h1
+                    class="ssp-fontFamily_popinBlack ssp-color_blueAlpha ssp-headingSignaturePage ssp-margin-bottom_thirty"
+                >
+                    {label.sspWaiverResultConditionHeading}
+                </h1>
+                <div
+                    class="ssp-margin-bottom_thirty ssp-bg_monoAlpha ssp-greyUnderline"
+                ></div>
+                <div
+                    class="ssp-fontFamily_ArvoRegular ssp-color_monoOmega ssp-waiverContent"
+                >
+                    {label.sspWaiverResultConditionContent}
+                </div>
+                <div class="ssp-waiverResultsBtn">
+                    <div class="ssp-container_width slds-grid slds-wrap">
+                        <div
+                            class="slds-col slds-size_1-of-1 ssp-footerBtnBackSave slds-large-size_6-of-12 ssp-actionButtons ssp-waiverButtons"
+                        >
+                            <lightning-button
+                                variant="base"
+                                title={label.sspWaiverResultExitTitle}
+                                label={label.sspWaiverResultExitButton}
+                                class="ssp-exitModalBtn ssp-button_base ssp-fontFamily_popinBold"
+                                data-page="Benefits_Page__c"
+                                onclick={handleNavigation}
+                            ></lightning-button>
+                           
+                        </div>
+                        <div
+                            class="slds-col slds-size_1-of-1 slds-large-size_6-of-12 ssp-footerBtnNext slds-text-align_right ssp-waiverButtons"
+                        >
+                        <lightning-button
+                            variant="brand"
+                            title={label.sspWaiverResultContinueTitle}
+                            label={label.sspWaiverResultContinueButton}
+                            class="ssp-button_brand ssp-fontFamily_popinBold" 
+                            onclick={handleContinueWaiver}                           
+                        ></lightning-button>
+                        </div>
+                    </div>
+                </div>
+            </template>
+        </div>
+    </main>
+</template>

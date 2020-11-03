@@ -1,0 +1,155 @@
+.ssp-semiHeader {
+    height: 60px;
+}
+
+.ssp-semiHeaderText {
+    padding-left: 30px;
+    font-size: 1rem;
+}
+
+.ssp-headingSignaturePage {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+.ssp-marginHeading {
+    margin-bottom: 30px;
+}
+
+.ssp-SnapContactInformationContainer {
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+.ssp-infoText {
+    font-size: 1rem;
+    letter-spacing: -0.0187rem;
+    line-height: 1.5rem;
+}
+
+.ssp-input-container {
+    align-items: baseline;
+}
+
+.ssp-inputFieldLarge {
+    width: 48.1%;
+}
+
+.ssp-greyUnderline {
+    height: 0.3125rem;
+    border-radius: 0.15625rem;
+}
+
+.ssp-tempPadding {
+    padding-left: 4%;
+}
+.ssp-BottomPadding {
+    padding-bottom: 45px;
+}
+
+.ssp-phoneNumber {
+    width: 48.1%;
+}
+.ssp-extOptional {
+    width: 26.1%;
+    padding-left: 4%;
+    padding-top: 0.1875rem;
+}
+
+.ssp-dropDownSpokenLang {
+    width: 48.1%;
+}
+.ssp-dropDownWrittenLang {
+    width: 48.1%;
+    padding-left: 4%;
+}
+.ssp-checkBoxPrefferedContactMethod {
+    width: 100%;
+}
+.ssp-componentWidth {
+    width: 100%;
+}
+
+.ssp-fontSize {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+.ssp-learnMoreLink {
+    position: absolute;
+    left: 178px;
+    top: 2px;
+}
+
+.ssp-learnMoreText {
+    text-decoration: underline;
+}
+ 
+.ssp-snapContactInput{
+    position:relative;
+}
+
+@media only screen and (max-width: 768px) {
+    .ssp-inputFieldLarge {
+        width: 100%;
+        padding: 0px;
+    }
+    .ssp-inputFieldSmall {
+        width: 100%;
+        padding: 0px;
+    }
+    .ssp-extOptional {
+        width: 40%;
+        padding-left: 6%;
+        padding-top: 0.1875rem;
+    }
+    .ssp-phoneNumber {
+        width: 60%;
+    }
+    .ssp-tempPadding {
+        padding: 0;
+    }
+    .ssp-dropDownSpokenLang {
+        width: 100%;
+    }
+    .ssp-dropDownWrittenLang {
+        width: 100%;
+        padding-left: 0;
+    }
+    .ssp-componentWidth {
+        width: 100%;
+    }
+    .ssp-cancel-btn {
+        width: 45%;
+    }
+}
+
+@media only screen and (max-width: 345px) {
+    .ssp-phoneNumber {
+        width: 100%;
+        margin-bottom: 0;
+        padding-bottom: 0.9375rem;
+    }
+    .ssp-extOptional {
+        width: 100%;
+        padding: 0;
+        margin-top: 0;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .ssp-headingSignaturePage {
+        font-size: 2.625rem;
+        line-height: 3rem;
+    }
+    .ssp-SnapContactInformationContainer {
+        margin-top: 55px;
+        margin-bottom: 60px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .ssp-cancel-btn {
+        width: 45%;
+    }
+
+}

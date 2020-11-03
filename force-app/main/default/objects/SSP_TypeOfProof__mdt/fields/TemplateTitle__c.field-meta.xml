@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TemplateTitle__c</fullName>
+    <description>Picklist to show the title of the required Proof, example Template</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Template Title</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Child Care Verification (PAFS-19)</fullName>
+                <default>false</default>
+                <label>Child Care Verification (PAFS-19)</label>
+            </value>
+            <value>
+                <fullName>Childs Certification of School Enrollment/Attendance (PA-33D)</fullName>
+                <default>false</default>
+                <label>Childs Certification of School Enrollment/Attendance (PA-33D)</label>
+            </value>
+            <value>
+                <fullName>Household Information Request (PA-21)</fullName>
+                <default>false</default>
+                <label>Household Information Request (PA-21)</label>
+            </value>
+            <value>
+                <fullName>Information Request-Landlord (PAFS-76)</fullName>
+                <default>false</default>
+                <label>Information Request-Landlord (PAFS-76)</label>
+            </value>
+            <value>
+                <fullName>Irregular Work Form (PAFS-121)</fullName>
+                <default>false</default>
+                <label>Irregular Work Form (PAFS-121)</label>
+            </value>
+            <value>
+                <fullName>Notice for Initial Job Search(DCC-90P)</fullName>
+                <default>false</default>
+                <label>Notice for Initial Job Search(DCC-90P)</label>
+            </value>
+            <value>
+                <fullName>Proof of Zero Income Form (PAFS-702)</fullName>
+                <default>false</default>
+                <label>Proof of Zero Income Form (PAFS-702)</label>
+            </value>
+            <value>
+                <fullName>Qualifying Income Trust (MAP-007)</fullName>
+                <default>false</default>
+                <label>Qualifying Income Trust (MAP-007)</label>
+            </value>
+            <value>
+                <fullName>Statement of Disability or Incapacity (FS-704)</fullName>
+                <default>false</default>
+                <label>Statement of Disability or Incapacity (FS-704)</label>
+            </value>
+            <value>
+                <fullName>Student Work Verification (DCC-90L)</fullName>
+                <default>false</default>
+                <label>Student Work Verification (DCC-90L)</label>
+            </value>
+            <value>
+                <fullName>Verification of Contributions - Loans - Roomer/Boarder Payments (PAFS-73)</fullName>
+                <default>false</default>
+                <label>Verification of Contributions - Loans - Roomer/Boarder Payments (PAFS-73)</label>
+            </value>
+            <value>
+                <fullName>Verification of Employment and Wages (PAFS-700)</fullName>
+                <default>false</default>
+                <label>Verification of Employment and Wages (PAFS-700)</label>
+            </value>
+            <value>
+                <fullName>Verification of Kentucky Works Program Participation (KW-33)</fullName>
+                <default>false</default>
+                <label>Verification of Kentucky Works Program Participation (KW-33)</label>
+            </value>
+            <value>
+                <fullName>Written Income Statement</fullName>
+                <default>false</default>
+                <label>Written Income Statement</label>
+            </value>
+            <value>
+                <fullName>Written Statement</fullName>
+                <default>false</default>
+                <label>Written Statement</label>
+            </value>
+            <value>
+                <fullName>Written Statement from Lender</fullName>
+                <default>false</default>
+                <label>Written Statement from Lender</label>
+            </value>
+            <value>
+                <fullName>Written Statement for Income or No Income</fullName>
+                <default>false</default>
+                <label>Written Statement for Income or No Income</label>
+            </value>
+            <value>
+                <fullName>Written Statement from Boarder</fullName>
+                <default>false</default>
+                <label>Written Statement from Boarder</label>
+            </value>
+            <value>
+                <fullName>Written Statement from Child Care Facility</fullName>
+                <default>false</default>
+                <label>Written Statement from Child Care Facility</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,16 @@
+<template>
+  <div class="ssp-ctaCardGrey ssp-boxShadow">
+    <div class="ssp-ctaCardTitle">
+      <p class="ssp-fontFamily_popinBold ssp-color_monoBody">{sspTitleVal}</p>
+    </div>
+    <div class="ssp-ctaCardBody">
+      <p class="ssp-fontFamily_ArvoRegular ssp-color_monoOmega">
+        <slot name="content"></slot>
+      </p>
+    </div>
+    <div class="ssp-ctaCardButton">
+      <!--<lightning-button class="ssp-button_base ssp-fontFamily_popinBold ssp-color_monoBody" label={sspButtonLabel} title="Base action"></lightning-button>-->
+      <slot name="footer"></slot>
+    </div>
+  </div>
+</template>

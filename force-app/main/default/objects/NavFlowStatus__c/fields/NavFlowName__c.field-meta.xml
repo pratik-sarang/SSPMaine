@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NavFlowName__c</fullName>
+    <description>Navigation flow detail (NavFlowDetail__mdt.FlowName__c) custom meta data name. Make sure to exactly match with a custom metadata record.</description>
+    <encryptionScheme>None</encryptionScheme>
+    <externalId>false</externalId>
+    <inlineHelpText>Navigation flow detail (NavFlowDetail__mdt) custom meta data name. Make sure to exactly match with a custom metadata record.</inlineHelpText>
+    <label>Navigation Flow Name</label>
+    <length>255</length>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

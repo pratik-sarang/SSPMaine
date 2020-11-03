@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SSP_InsuranceCoveredIndiv__c</fullName>
+    <description>This field is used to indicate Insurance Covered Individual for a Health Insurance Facility type</description>
+    <externalId>false</externalId>
+    <label>SSP_InsuranceCoveredIndiv</label>
+    <referenceTo>SSP_InsuranceCoveredIndiv__c</referenceTo>
+    <relationshipName>SSP_HealthInsuranceFacilityTypes</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

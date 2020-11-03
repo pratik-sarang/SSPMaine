@@ -1,0 +1,74 @@
+<!-- 
+* name 		      : sspKIHIPPConsenetModal
+* @description 	  : This component creates a screen for KI-HIPP Consent Modal. 
+* @author 		  : Sharon
+* @date           : 04/02/2020
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* 	      
+-->
+<template>
+    <div class="ssp-medicaidPenaltyWarning ssp-kiHIPPConsentModalContainer">
+        <c-ssp-detailed-information-modal
+            reference={reference}
+            header-value={label.sspKIHIPPConsentHeader}
+            open-model={openModel}
+            onclosemodal={closeKIHIPPConsentModal}
+            scroll-event={trueValue}
+            onenablemodalbuttons={enableModalButtons}
+            class="ssp-kIHIPPConsentModal"
+        >
+            <span class="ssp-mainContent" slot="contentSlot">
+                <div
+                    class="ssp-KIHIPPConsentContentContainer ssp-fontFamily_ArvoRegular ssp-color_monoOmega"
+                >
+                    <p tabindex="0" class="ssp-marginBottomThirty ssp-focus-element">
+                        {label.sspKIHIPPConsentContentModalOne}
+                    </p>
+                    <ul class="ssp-KIHIPPConsentUnOrderedMainList">
+                        <li tabindex="0" class="ssp-marginBottomThirty">
+                            {label.sspKIHIPPConsentModalListOne}
+                        </li>
+                        <li tabindex="0" class="ssp-marginBottomThirty">
+                            {label.sspKIHIPPConsentModalListTwo} 
+                            <a href={label.sspKIHIPPConsentModalListTwoLink} target="_blank"> {label.sspKIHIPPConsentModalListTwoLink}</a>
+                        </li>
+                        <li tabindex="0" class="ssp-marginBottomThirty">
+                            {label.sspKIHIPPConsentModalListThree}
+                        </li>
+                        <li tabindex="0" class="ssp-marginBottomThirty">
+                            {label.sspKIHIPPConsentModalListFour}
+                        </li>
+                        <li tabindex="0">
+                            {label.sspKIHIPPConsentModalListFive}
+                        </li>
+                    </ul>
+                </div>
+            </span>
+            <div
+                slot="Footer"
+                class="slds-grid slds-wrap slds-grid_align-spread slds-gutters"
+            >
+                <div
+                    class="slds-col slds-size_1-of-2 slds-medium-size_1-of-2 slds-large-size_6-of-12"
+                >
+                </div>
+                <div
+                    class="slds-col slds-size_1-of-2 slds-medium-size_1-of-2 slds-large-size_6-of-12"
+                >
+                    <lightning-button
+                        name="Agree"
+                        variant="neutral"
+                        title={label.sspKIHIPPConsentAgreeButton}
+                        label={label.sspAgreeButton}
+                        class="ssp-exitModalBtn ssp-button_neutral"
+                        onclick={handleOnClick}
+                        disabled={buttonDisability}
+                    >
+                    </lightning-button>
+                </div>
+            </div>
+        </c-ssp-detailed-information-modal>
+    </div>
+</template>

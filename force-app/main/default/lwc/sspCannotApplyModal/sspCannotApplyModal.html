@@ -1,0 +1,123 @@
+<!--
+* name          : sspCannotApplyModal
+* @description  : This screen contains three modals which open when the condition do not match.
+* @author       : Suyash and P V Siddarth
+* @date         : 07/01/20   
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName                MM/DD/YYYY               A Brief Description about the Change
+  Suyash                   07/01/20                            Development
+  Siddarth                 07/01/20                            Development
+-->
+<template>
+    <template if:true={openModel}>
+        <c-ssp-detailed-information-modal
+            header-value={label.sspExistingCaseFound}
+            open-model={openModel}
+            onclosemodal={returnToDashboard}
+            reference={reference}
+        >
+            <p
+                class="ssp-fontFamily_ArvoRegular ssp-color_monoOmega slds-p-bottom_large"
+                slot="contentSlot"
+            >
+                {label.sspRecordFoundDuplicate}
+            </p>
+            <p
+                class="ssp-fontFamily_ArvoRegular ssp-color_monoOmega slds-p-bottom_large"
+                slot="contentSlot"
+            >
+                {label.sspPleaseContactDCBSText1}&nbsp;
+                <a class="ssp-color_blueAlpha" href={telephoneNumber} tabindex="0">{label.sspPleaseContactDCBSText2}</a>&nbsp;
+                {label.sspPleaseContactDCBSText3}
+            </p>
+            <div
+                slot="Footer"
+                class="slds-grid slds-wrap slds-grid_align-spread"
+            >
+                <lightning-button
+                    variant="brand"
+                    label={label.sspReturnToDashboard}
+                    class="ssp-exitModalBtn ssp-exitSaveBtn ssp-button_brand ssp-buttonWidth "
+                    onclick={returnToDashboard}
+                    reference={reference}
+                >
+                </lightning-button>
+            </div>
+        </c-ssp-detailed-information-modal>
+    </template>
+    <template if:true={openMemberAddedTwice}>
+        <c-ssp-detailed-information-modal
+            header-value={label.sspMemberAddedTwice}
+            open-model={openModel}
+            onclosemodal={handleProp}
+            reference={reference}
+        >
+            <p
+                class="ssp-fontFamily_ArvoRegular ssp-color_monoOmega slds-p-bottom_large"
+                slot="contentSlot"
+            >
+                {label.sspFoundIndividualInformation}
+            </p>
+            <p
+                class="ssp-fontFamily_ArvoRegular ssp-color_monoOmega slds-p-bottom_large"
+                slot="contentSlot"
+            >
+                {label.sspMembersAddedOnlyOnce}
+            </p>
+            <div
+                slot="Footer"
+                class="slds-grid slds-wrap slds-grid_align-spread"
+            >
+                <lightning-button
+                    variant="brand"
+                    label={label.sspRemoveDuplicateEntry}
+                    class="ssp-exitModalBtn ssp-exitSaveBtn ssp-button_brand ssp-buttonWidth "
+                    onclick={handleProp}
+                >
+                </lightning-button>
+            </div>
+        </c-ssp-detailed-information-modal>
+    </template>
+    <template if:true={openDuplicateKOGAccount}>
+        <c-ssp-detailed-information-modal
+            header-value={label.sspDuplicateKOGAccount}
+            open-model={openModel}
+            onclosemodal={returnToDashboard}
+            reference={reference}
+        >
+            <p
+                class="ssp-fontFamily_ArvoRegular ssp-color_monoOmega slds-p-bottom_large"
+                slot="contentSlot"
+            >
+                {label.sspYouAlreadyHaveAnAccount}
+            </p>
+            <p
+                class="ssp-fontFamily_ArvoRegular ssp-color_monoOmega slds-p-bottom_large"
+                slot="contentSlot"
+            >
+                {label.sspPleaseContactCustomerService}
+            </p>
+            <div
+                slot="Footer"
+                class="slds-grid slds-wrap slds-grid_align-spread"
+            >
+                <lightning-button
+                    variant="brand"
+                    label={label.sspReturnToDashboard}
+                    class="ssp-exitModalBtn ssp-exitSaveBtn ssp-button_brand slds-size_1-of-2"
+                    onclick={returnToDashboard}
+                >
+                </lightning-button>
+                <lightning-button
+                    variant="base"
+                    label={label.sspLogOut}
+                    class="ssp-exitModalBtn ssp-cancelBtn ssp-button_base slds-size_1-of-2"
+                    onclick={logOutFunction}
+                >
+                </lightning-button>
+            </div>
+        </c-ssp-detailed-information-modal>
+    </template>
+</template>

@@ -1,0 +1,44 @@
+<!--
+* name          :sspBaseComponentInputTextIcon
+* @description  : This screen is used for currency input field.
+* @author       :Nupoor
+* @date         : 29/11/2019
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+*Kyathi         1/3/2020               HTML Structure
+-->
+<template>
+  <div class="ssp-genericInput slds-grid slds-wrap">
+    <div class="ssp-inputText ssp-inputIconContainer">
+      <template if:true={isHelpText}>
+        <lightning-helptext
+          class="ssp-helptextIcon"
+          icon-name="utility:info_alt"
+          content={helpTextContent}
+        ></lightning-helptext>
+      </template>
+      <lightning-input
+        data-id="inpValue"
+        label={label}
+        value={inputValue}
+        class={className}
+        title={title}
+        onblur={handleValidations}
+        onchange={handleValidations}
+        disabled={isDisabled}
+        min="0"
+        type="number"
+        step="any"
+        placeholder={placeholder}
+        onkeypress={restrictNumeric}
+      >
+      </lightning-input>
+      <template for:each={ErrorMessageList} for:item="error">
+        <p tabindex="0" role="alert" aria-atomic="true" key={error} class="ssp-textIconError showError ssp-color_redOmega">
+          {error}
+        </p>
+      </template>
+    </div>
+  </div>
+</template>

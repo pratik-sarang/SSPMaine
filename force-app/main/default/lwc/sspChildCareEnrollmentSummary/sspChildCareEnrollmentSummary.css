@@ -1,0 +1,56 @@
+.ssp-childCareEnSummary_Container {
+    margin: 30px auto;
+}
+.ssp-headerText {
+    font-size: 2.625rem;
+    letter-spacing: 0;
+    line-height: 48px;
+}
+.ssp-ruler {
+    height: 5px;
+    width: 100%;
+    border-radius: 2.5px;
+}
+.ssp-premium li {
+    display: flex;
+}
+.ssp-premium li .ssp-copay {
+    order: 1;
+}
+.ssp-premium li .ssp-amount {
+    order: 3;
+}
+.ssp-premium li::after {
+    content: "";
+    flex-grow: 1;
+    order: 2;
+    margin: 0 0 7px 0;
+}
+.ssp-card {
+    border-radius: 6px;
+    padding: 15px 24px;
+}
+.ssp-phone-number {
+    text-decoration: underline;
+}
+.ssp-Disc {
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    margin-right: 5px;
+    display: inline-block;
+}
+.ssp-label-text {
+    line-height: 30px;
+    letter-spacing: 0.3px;
+}
+@media only screen and (max-width: 896px) {
+    .ssp-bodyContainerGamma .ssp-bodyContainer {
+        padding: 30px;
+    }
+    .ssp-headerText {
+        font-size: 1.5rem;
+        line-height: 32px;
+        letter-spacing: normal;
+    }
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Assister__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Assister</description>
+    <externalId>false</externalId>
+    <label>Assister</label>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Assisters</relationshipLabel>
+    <relationshipName>ConsentsContact</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

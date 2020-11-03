@@ -1,0 +1,68 @@
+<!--
+* name 		    : sspChangePreferredSpokenLanguage
+* @description 	: The component is to change preferred spoken language.
+* @author 		: Soumya and Shrikant
+* @date 		: 1/6/2019
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName	      MM/DD/YYYY	      A Brief Description 
+						       about the Change
+-->
+<template>
+    <div class="ssp-change-member-preferred-spoken-lang">
+        <template if:false={isVisible}>
+            <c-ssp-spinner></c-ssp-spinner>
+        </template>
+        <template if:true={isVisible}>
+            <c-ssp-Detailed-Information-Modal
+                header-value={label.sspChangePreferredSpokenLanguage}
+                open-model="true"
+                onclosemodal={initCancel}
+                reference={reference}
+            >
+                <span slot="contentSlot" class="ssp-color_monoBody">
+                    <div
+                        class="ssp-errorToast"
+                        if:true={hasSaveValidationError}
+                    >
+                        <c-ssp-toast
+                            ssp-toast-title-val={label.toastErrorText}
+                            show-error-toast={trueValue}
+                            onhidetoast={hideToast}
+                        ></c-ssp-toast>
+                    </div>
+                    <c-ssp-type-ahead-picklist
+                        label={label.sspPreferredSpokenLanguage}
+                        class="ssp-applicationInputs slds-large-size_1-of-2 slds-size_1-of-1 slds-p-right_medium ssp-typeheadLabel"
+                        data-id="PreferredSpokenLanguageCode__c"
+                        list-values={typeOfSpokenLanguageOpts}
+                        value={memberSpokenLanguage}
+                        entity-name="SSP_Member__c"
+                        meta-list={metaDataListParent}
+                        field-name="PreferredSpokenLanguageCode__c"
+                    ></c-ssp-type-ahead-picklist>
+                    <br tabindex="0" />
+                </span>
+                <span slot="Footer" class="slds-grid slds-wrap slds-grid_align-spread ssp-myinfo-modal-footer">
+                    <lightning-button
+                        variant="base"
+                        title={label.sspCancel}
+                        class="ssp-button_base slds-p-right_medium slds-size_1-of-2"
+                        onclick={initCancel}
+                        label={label.sspCancel}
+                    ></lightning-button>
+                    <lightning-button
+                        variant="neutral"
+                        title={label.sspSave}
+                        class="ssp-button_neutral slds-p-left_medium slds-size_1-of-2"
+                        label={label.sspSave}
+                        onclick={initSave}
+                    ></lightning-button>
+                </span>
+            </c-ssp-Detailed-Information-Modal>
+        </template>
+    </div>
+    <c-ssp-logging-and-error-handling-modal if:true={showErrorModal} error-id={errorMsg} onprogressvaluechange={closeError}>
+    </c-ssp-logging-and-error-handling-modal>
+</template>

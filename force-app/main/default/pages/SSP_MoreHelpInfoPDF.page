@@ -1,0 +1,7 @@
+<apex:page controller="SSP_MoreHelpInfoController" title="{!$Label.sspMoreHelpInfoModalHeader}" renderAs="pdf" showHeader="true" standardStylesheets="false" applyBodyTag="false" id="pgname" >
+<apex:stylesheet value="{!URLFOR($Resource.SSP_MoreHelpInfoPDFStyle)}"/>
+<div class="slds-align_absolute-center ssp-more_info_title">
+  <apex:outputField value="{!helpMoreArticle.Title}"/>
+</div>
+<apex:outputField value="{!helpMoreArticle.HelpModal__c}"/>  
+</apex:page>

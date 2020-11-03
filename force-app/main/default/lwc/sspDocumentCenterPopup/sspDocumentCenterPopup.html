@@ -1,0 +1,63 @@
+<!--
+* name : SspDocumentCenterPopup
+* @description :This screen is container for Document center Popup.
+* @author : Kyathi Kanumuri
+* @date : 4/7/2020
+* MODIFICATION LOG:
+* DEVELOPER             DATE            DESCRIPTION
+* ________________________________________________________________________________
+* Kyathi                4/7/2020     Creating HTML Structure
+-->
+<template>
+    <div class="ssp-documentCenterPopup">
+        <template if:true={openModel}>
+            <c-ssp-detailed-information-modal
+                reference={reference}
+                header-value={label.sspDocumentCenterPopupHeading}
+                open-model={openModel}
+                onclosemodal={closeDocumentCenterModal}
+                class="ssp-documentCenterModal"
+            >
+                <span slot="contentSlot">
+                    <p
+                        class="slds-m-bottom_medium ssp-fontFamily_popinBold ssp-color_monoBody"
+                    >
+                        {label.sspDocumentCenterPopupContent1}
+                    </p>
+                    <p
+                        class="slds-m-bottom_medium ssp-fontFamily_popinBold ssp-color_monoBody"
+                    >
+                        {label.sspDocumentCenterPopupContent2}
+                    </p>
+                    <p class="ssp-fontFamily_popinBold ssp-color_monoBody">
+                        {label.sspDocumentCenterPopupContent3}
+                    </p>
+                    <div>
+                        <c-ssp-base-component-input-toggle
+                            class="ssp-applicationModalInputs"
+                            options={yesNoOptions}
+                            handle-change={trueValue}
+                            onhandlechange={setModalToggleOption}
+                        >
+                        </c-ssp-base-component-input-toggle>
+                    </div>
+                    <p
+                        class="slds-m-top_medium ssp-fontFamily_ArvoRegular ssp-popupLastLine"
+                    >
+                        {label.sspDocumentCenterPopupContent4}
+                    </p>
+                </span>
+                <div slot="Footer" class="slds-col ssp-adding-income-btns">
+                    <lightning-button
+                        variant="brand"
+                        label={label.sspNextButton}
+                        class="ssp-button_brand ssp-modalButtonAlign"
+                        onclick={handleModalNextButton}
+                        title={label.sspGoToNextScreenTitle}
+                    >
+                    </lightning-button>
+                </div>
+            </c-ssp-detailed-information-modal>
+        </template>
+    </div>
+</template>

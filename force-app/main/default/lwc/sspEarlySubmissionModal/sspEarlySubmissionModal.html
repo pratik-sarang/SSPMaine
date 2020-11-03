@@ -1,0 +1,51 @@
+<!--
+* name 		: sspEarlySubmissionModal
+* @description 	: This component is used to enter early submission screen.
+* @author 		: Karthik Velu, Sai Kiran.
+* @date 		: 1/13/2020
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName	      MM/DD/YYYY	      A Brief Description 
+                  about the Change
+-->
+<template>
+    <div class="ssp-earlySubmissionModal">
+     <template if:true={isOpenModal}>
+        <c-ssp-detailed-information-modal
+            header-value={label.sspSubmitApplicationNow}
+            open-model={isOpenModal}
+            reference={reference}
+            onclosemodal={closeModal}
+        >
+            <span
+                class="ssp-fontFamily_ArvoRegular ssp-color_monoOmega slds-p-bottom_large"
+                slot="contentSlot"
+            >
+                <p class="ssp-margin-bottom_large">{label.sspAreYou}</p>
+                <p class="ssp-margin-bottom_large">{label.sspIfYouChoose}</p>
+                <p>{label.sspWeRecommend}</p>
+            </span>
+            <span
+                slot="Footer"
+                class="slds-col ssp-stacked-btn-width ssp-continueButton "
+            >
+                <lightning-button
+                    variant="brand"
+                    label={label.sspContinueToSubmit}
+                    onclick={continueEarly}
+                    class="ssp-button_brand"
+                    disabled={isReadOnlyUser}
+                >
+                </lightning-button>
+                <lightning-button
+                    label={label.sspContinueApplication}
+                    class="ssp-button_base"
+                    onclick={closeModal}
+                >
+                </lightning-button>
+            </span>
+        </c-ssp-detailed-information-modal>
+    </template>
+    </div>
+</template>

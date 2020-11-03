@@ -1,0 +1,75 @@
+<!--
+* name          : sspTypeAheadPicklist
+* @description  : A type ahead picklist that displays those values from the picklist that 
+                  contain the substring in the input
+* @author       : Shikha Khanuja
+* @date         : 29/11/2019
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName                MM/DD/YYYY               A Brief Description about the Change
+-->
+<template>
+    <div class="ssp-typeAheadMainContainer">
+        <div class="ssp-alignHelpText">
+            <label for="sspInputPicklist">{label}</label>
+            <template if:true={isHelpText}>
+                <lightning-helptext
+                    class="ssp-helptextIcon"
+                    icon-name="utility:info_alt"
+                    content={helpTextContent}
+                ></lightning-helptext>
+            </template>
+        </div>
+        <lightning-input
+            label={label}
+            value={displayValue}
+            class="className ssp-addClass"
+            title={title}
+            disabled={isDisabled}
+            placeholder={placeholder}
+            onchange={searchValues}
+            onkeydown={handleKeyDown}
+            onfocusout={handleInputFocusOrBlur}
+            variant="label-hidden"
+            id="sspInputPicklist"
+            onfocusin={searchValues}
+        >
+        </lightning-input>
+
+        <ul class="ssp-lookup-option-container ssp-Hide">
+            <template for:each={displayValues} for:item="dispItem">
+                <li
+                    class="ssp-typeahead-items"
+                    key={dispItem.value}
+                    onclick={selectedValue}
+                    data-id={dispItem.value}
+                    data-label={dispItem.label}
+                    onkeydown={selectedValue}
+                    onblur={handleBlur}
+                    tabindex="0"
+                >
+                    <template if:true={hasTruncatedLabels}>
+                        <div
+                            key={dispItem.value}
+                            title={dispItem.title}
+                            aria-label={dispItem.title}
+                        >
+                            {dispItem.label}
+                        </div>
+                    </template>
+                    <template if:false={hasTruncatedLabels}>
+                        <div key={dispItem.value}>
+                            {dispItem.label}
+                        </div>
+                    </template>
+                    <br />
+                </li>
+            </template>
+        </ul>
+
+        <template for:each={ErrorMessageList} for:item="error">
+            <p tabindex="0" role="alert" aria-atomic="true" key={error} class="ssp-showError ssp-color_redAlpha">{error}</p>
+        </template>
+    </div>
+</template>

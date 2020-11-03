@@ -1,0 +1,38 @@
+<template>
+  <template if:true={isLinkButton}>
+    <div class="slds-form-element slds-form-element_stacked dd-form-element">
+    <lightning-button variant="base" label={label} title={buttonTitle} onclick={linkClick} class="ssp-color_blueAlpha ssp-fontFamily_popinBold ssp-prescreeninglinkText">
+    </lightning-button>
+    </div>  
+    </template>
+
+  <template if:true={isNavFlowButton}>
+    <div class={buttonClass}>
+            <lightning-button
+                label={label}
+                title={buttonTitle}
+                data-navaction={action}
+                data-gotopage={gotoPage}
+                onclick={handleNavAction}
+                disabled={disabled}
+            ></lightning-button>
+    </div>
+  </template>
+
+
+  <template if:true={isCaptchaButton}>
+    <div class="dd-captchabuttonpadding">
+      <div class="ssp-captchaParent">
+                <iframe
+                    src={captchaVFPage}
+                    id="recaptchaIframe"
+                    title="frame"
+                    class="iframe-captcha ssp-getBenefitCaptcha"
+                    scrolling="no"
+                    width="100%"
+                    height="90px"
+                ></iframe>
+      </div>
+    </div>
+  </template>
+</template>

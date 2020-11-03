@@ -1,0 +1,14 @@
+.ssp-learnMore {
+    font-size: 0.8125rem;
+    text-decoration: underline;
+    letter-spacing: -0.01875rem;	
+    line-height: 1.875rem;
+    text-underline-position: under;
+}
+.ssp-fontSize{
+    font-size: 1rem;
+}
+.ssp-expeditedSnapBenefitsContainer{
+    padding-top: 1.875rem;
+    padding-bottom: 6.25rem;
+}

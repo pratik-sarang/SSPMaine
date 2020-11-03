@@ -1,0 +1,8 @@
+<template>
+    <template if:true={optiondata.optionSelected}>
+        <option key={optiondata.value} value={optiondata.value} selected>{optiondata.label}</option>
+    </template>
+    <template if:false={optiondata.optionSelected}>
+        <option key={optiondata.value} value={optiondata.value}>{optiondata.label}</option>
+    </template>
+</template>

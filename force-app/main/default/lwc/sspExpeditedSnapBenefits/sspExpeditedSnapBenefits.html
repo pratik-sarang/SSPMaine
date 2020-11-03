@@ -1,0 +1,114 @@
+<!--
+* name 		: sspExpeditedSnapBenefits
+* @description 	: The Expedite SNAP Benefits screen asks for information to determine if the user qualifies for expedited SNAP.
+* @author 		: Karthik Velu, Sai Kiran
+* @date 		: 1/17/2020
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName	      MM/DD/YYYY	      A Brief Description 
+                  about the Change
+-->
+<template>
+    <template if:true={showSpinner}>
+        <c-ssp-spinner></c-ssp-spinner>
+    </template>
+    <div class="ssp-bodyContainer ssp-expeditedSnapBenefitsContainer" if:false={isNotAccessible}>
+        <div class="ssp-errorToast" if:true={hasSaveValidationError}>
+            <c-ssp-toast
+                ssp-toast-title-val={label.toastErrorText}
+                show-error-toast={trueValue}
+                onhidetoast={hideToast}
+            ></c-ssp-toast>
+        </div>
+        <div>
+            <div
+                class="ssp-fontFamily_ArvoRegular ssp-fontSize ssp-color_monoOmega"
+            >
+                {label.sspTheQuestionsBelow}
+            </div>
+            <div class="ssp-margin-bottom_large">
+                <a
+                    tabindex="0"
+                    onclick={displayLearnMoreModelMethod}
+                    onkeydown={displayLearnMoreModelMethod}
+                    title={label.sspLearnMoreAlternate}
+                    class="ssp-fontFamily_popinBold ssp-selectionCardIconText ssp-learnMore"
+                >
+                    {label.sspLearnMoreLink}
+                </a>
+                <template if:true={openLearnMoreModel}>
+                    <c-ssp-detailed-information-modal
+                        header-value={label.sspLearnMoreLink}
+                        open-model={openLearnMoreModel}
+                        onclosemodal={hideLearnMoreModelMethod}
+                        reference={reference}
+                    >
+                        <span
+                            slot="contentSlot"
+                            class="ssp-learnMoreLink ssp-fontFamily_ArvoRegular"
+                        >
+                        </span>
+                    </c-ssp-detailed-information-modal>
+                </template>
+            </div>
+        </div>
+        <div class="slds-grid">
+            <c-ssp-base-component-input-text-icon
+                value={applicationWrap.sCashSavingAmount}
+                meta-list={MetaDataListParent}
+                pattern="^[1-9][0-9]{0,9}(\.[0-9]{0,2})?$"
+                entity-name="SSP_Application__c"
+                field-name="HouseholdTotalMonthlyCashSavingAmount__c"
+                data-id="sCashSavingAmount"
+                label={label.sspLiquidResources}
+                class="ssp-applicationInputs ssp-margin-bottom_large  slds-large-size_1-of-2 slds-size_1-of-1"
+            >
+            </c-ssp-base-component-input-text-icon>
+        </div>
+        <div class="slds-grid">
+            <c-ssp-base-component-input-text-icon
+                value={applicationWrap.sGrossIncAmount}
+                meta-list={MetaDataListParent}
+                pattern="^[1-9][0-9]{0,9}(\.[0-9]{0,2})?$"
+                entity-name="SSP_Application__c"
+                field-name="HouseholdTotalMonthlyGrossIncAmount__c"
+                data-id="sGrossIncAmount"
+                label={label.sspGrossIncome}
+                class="ssp-applicationInputs ssp-margin-bottom_large  slds-large-size_1-of-2 slds-size_1-of-1"
+            >
+            </c-ssp-base-component-input-text-icon>
+        </div>
+        <div class="ssp-margin-bottom_xlarge">
+            <c-ssp-base-component-input-toggle
+                value={applicationWrap.bDestituteFarmOrMigrantHouseholdToggle}
+                meta-list={MetaDataListParent}
+                entity-name="SSP_Application__c"
+                field-name="IsDestituteFarmOrMigrantHouseholdToggle__c"
+                data-id="sIsDestituteFarmOrMigrantHouseholdToggle"
+                label={label.sspFarmWorker}
+                options={responseOptions}
+                class="ssp-applicationInputs"
+            >
+            </c-ssp-base-component-input-toggle>
+        </div>
+        <div>
+            <c-ssp-base-component-input-toggle
+                value={applicationWrap.bShelterExpExceedIncomeResourcesToggle}
+                meta-list={MetaDataListParent}
+                entity-name="SSP_Application__c"
+                field-name="HasShelterExpExceedIncomeResourcesToggle__c"
+                data-id="sHasShelterExpExceedingIncAndResources"
+                label={label.sspShelterExpenses}
+                options={responseOptions}
+                class="ssp-applicationInputs"
+                is-help-text="true"
+                help-text-content={label.sspShelterExpensesHelpContent}
+            >
+            </c-ssp-base-component-input-toggle>
+        </div>
+    </div>
+    <template if:true={showAccessDeniedComponent}>
+        <c-ssp-access-denied></c-ssp-access-denied>
+    </template>
+</template>

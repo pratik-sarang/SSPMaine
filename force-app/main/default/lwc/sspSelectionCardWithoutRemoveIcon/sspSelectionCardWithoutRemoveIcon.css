@@ -1,0 +1,53 @@
+.ssp-ProgressCardContainer {
+    position: relative;
+}
+
+.ssp-ProgressCard {
+    border-radius: 6px;
+    /* box-shadow: 0 15px 25px -7px rgba(0,35,98,0.1), 0 0 6px 0 rgba(0,35,98,0.15); */
+}
+
+.ssp-progressCardHead {
+    width: 100%;
+    padding: 15px 30px 15px 30px;
+    border-radius: 6px;
+    /*border-top-right-radius: 6px;*/
+}
+.ssp-progresCardText {
+    height: 18px;
+    /* width: 123px; */
+    font-size: 13px;
+    letter-spacing: -0.24px;
+    line-height: 18px;
+}
+
+.progresSelectionCardIconSize {
+    height: 24px;
+    width: 24px;
+    margin-right: 5px;
+}
+
+@media only screen and (max-width: 768px) {
+    .ssp-progressCardHead {
+        padding: 16px 15px;
+    }
+
+    .ssp-ProgressCard {
+        width: 100%;
+        border-radius: 6px;
+        /* box-shadow: 0 15px 25px -7px rgba(0,35,98,0.1), 0 0 6px 0 rgba(0,35,98,0.15); */
+    }
+
+    /*.ssp-progressCardCotent {
+        width: 60%;
+    }*/
+
+    /*.ssp-progressCardTextContainer {
+        width: 78%;
+    }*/
+
+    .ssp-selectionCardActionTitle {
+        text-overflow: ellipsis;
+        overflow: auto;
+    }
+}

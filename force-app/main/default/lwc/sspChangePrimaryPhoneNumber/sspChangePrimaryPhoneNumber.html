@@ -1,0 +1,136 @@
+<!--
+* name 		    : sspChangePrimaryPhoneNumber
+* @description 	: The component is to change primary phone number and related data.
+* @author 		: Shrikant And Chirag
+* @date 		: 1/7/2019
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName	      MM/DD/YYYY	      A Brief Description 
+						       about the Change
+-->
+<template>
+    <div class="ssp-change-primary-number">
+        <template if:false={isVisible}
+            ><c-ssp-spinner></c-ssp-spinner>
+        </template>
+        <template if:true={isVisible}>
+            <c-ssp-Detailed-Information-Modal
+                header-value={label.sspChangePhoneNumber}
+                open-model="true"
+                onclosemodal={initCancel}
+                reference={reference}
+            >
+                <span slot="contentSlot">
+                    <template if:true={isVisible}>
+                        <div
+                            class="ssp-errorToast"
+                            if:true={hasSaveValidationError}
+                        >
+                            <c-ssp-toast
+                                ssp-toast-title-val={label.toastErrorText}
+                                show-error-toast={trueValue}
+                                onhidetoast={hideToast}
+                            ></c-ssp-toast>
+                        </div>
+
+                        <div class="slds-grid slds-wrap slds-gutters">
+                            <div
+                                class="slds-col slds-large-size_8-of-12 slds-small-size_1-of-1 ssp-color_monoBody ssp-phoneNumberContainer"
+                            >
+                                <c-ssp-base-component-input-phone
+                                    label={label.sspPhoneNumber}
+                                    title={label.sspPhoneNumber}
+                                    entity-name="SSP_Member__c"
+                                    class="ssp-applicationInputs"
+                                    meta-list={metaDataListParent}
+                                    field-name="PrimaryPhoneNumber__c"
+                                    data-id="PrimaryPhoneNumber__c"
+                                    max-length="12"
+                                    value={member.PrimaryPhoneNumber__c}
+                                >
+                                </c-ssp-base-component-input-phone>
+                            </div>
+                            <div
+                                class="slds-col slds-large-size_4-of-12 slds-small-size_1-of-1 ssp-color_monoBody ssp-extContainer"
+                            >
+                                <c-ssp-base-component-input-text
+                                    label={label.sspExt}
+                                    title={label.sspExt}
+                                    entity-name="SSP_Member__c"
+                                    class="ssp-applicationInputs ssp-extension-input"
+                                    meta-list={metaDataListParent}
+                                    field-name="PrimaryPhoneExtension__c"
+                                    data-id="PrimaryPhoneExtension__c"
+                                    value={member.PrimaryPhoneExtension__c}
+                                    disabled={isReadOnly.PrimaryPhoneExtension__c}
+                                    max-length={label.sspMaxLength}
+                                >
+                                </c-ssp-base-component-input-text>
+                            </div>
+
+                            <div
+                                class="slds-col slds-large-size_8-of-12 ssp-m-field ssp-toggle"
+                            >
+                                <c-ssp-base-component-input-toggle
+                                    label={label.sspPhoneType}
+                                    options={phoneTypeCodes}
+                                    class="ssp-applicationInputs"
+                                    onchange={managePhoneType}
+                                    data-id="PrimaryPhoneTypeCode__c"
+                                    entity-name="SSP_Member__c"
+                                    field-name="PrimaryPhoneTypeCode__c"
+                                    meta-list={metaDataListParent}
+                                    value={member.PrimaryPhoneTypeCode__c}
+                                >
+                                    >
+                                </c-ssp-base-component-input-toggle>
+                            </div>
+
+                            <div
+                                class=" slds-col slds-large-size_8-of-12 ssp-m-field ssp-toggle"
+                            >
+                                <c-ssp-base-component-input-toggle
+                                    label={label.sspCanWeSendTextMessages}
+                                    options={textPreferredValues}
+                                    class="ssp-applicationInputs"
+                                    onchange={manageSendingTextMessages}
+                                    data-id="IsPrimaryTextPreferred__c"
+                                    entity-name="SSP_Member__c"
+                                    field-name="IsPrimaryTextPreferred__c"
+                                    meta-list={metaDataListParent}
+                                    value={member.IsPrimaryTextPreferred__c}
+                                >
+                                </c-ssp-base-component-input-toggle>
+                            </div>
+                        </div>
+                    </template>
+                </span>
+
+                <span
+                    slot="Footer"
+                    class="slds-grid slds-wrap slds-grid_align-spread ssp-myinfo-modal-footer"
+                >
+                    <lightning-button
+                        variant="base"
+                        title={label.sspCancel}
+                        class="ssp-button_base slds-size_1-of-2"
+                        onclick={initCancel}
+                        label={label.sspCancel}
+                    ></lightning-button>
+
+                    <lightning-button
+                        variant="neutral"
+                        title={label.sspSave}
+                        class="ssp-button_neutral slds-p-left_medium slds-size_1-of-2"
+                        onclick={initSave}
+                        label={label.sspSave}
+                    ></lightning-button>
+                </span>
+            </c-ssp-Detailed-Information-Modal>
+        </template>
+
+    </div>
+    <c-ssp-logging-and-error-handling-modal if:true={showErrorModal} error-id={errorMsg} onprogressvaluechange={closeError}>
+    </c-ssp-logging-and-error-handling-modal>
+</template>

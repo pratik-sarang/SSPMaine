@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Allow_Numeric_Msg__c</fullName>
+    <description>This field is used to show numeric validation error messages.</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>AllowNumericMsg</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Please enter only numerical values</fullName>
+                <default>true</default>
+                <label>Please enter only numerical values</label>
+            </value>
+            <value>
+                <fullName>NA</fullName>
+                <default>false</default>
+                <label>NA</label>
+            </value>
+            <value>
+                <fullName>Please enter a valid extension</fullName>
+                <default>false</default>
+                <label>Please enter a valid extension</label>
+            </value>
+            <value>
+                <fullName>Please enter only Numeric values</fullName>
+                <default>false</default>
+                <label>Please enter only Numeric values</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

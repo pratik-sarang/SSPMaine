@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- RAC Menu Subheader --></label>
+    <name>RAC_Menu_Subheader__c</name>
+    <picklistValues>
+        <masterLabel>(such as Phone, Email, and Address)</masterLabel>
+        <translation>(como por ejemplo teléfono, correo electrónico y dirección)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(such as child support or medical)</masterLabel>
+        <translation>(como por ejemplo, manutención infantil o médica)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(such as vehicle, bank account)</masterLabel>
+        <translation>(como por ejemplo, vehículo, cuenta bancaria)</translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,68 @@
+.ssp-reps-text {
+    font-size: 1rem;
+    padding-left: 8.75rem;
+}
+.ssp-add-auth-rep {
+    font-size: 1rem;
+}
+.ssp-add-auth-rep-header-text {
+    font-size: 2.625rem;
+}
+.ssp-horizontal-rule {
+    height: 0.313em;
+    border-radius: 0.156em;
+    border: none;
+}
+.ssp-programs {
+    margin-bottom: 1rem;
+}
+.ssp-action-btn-section {
+    margin: 100px 0 60px 0;
+}
+.ssp-action-btns {
+    display: flex;
+    justify-content: space-between;
+}
+.ssp-action-btns .ssp-saveBtn {
+    margin-left: none;
+}
+.ssp-firstGroupBtn {
+    margin-right: 30px;
+}
+.ssp-m-heading {
+    margin-bottom: 2.25rem;
+}
+.ssp-sub-heading-text {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+@media only screen and (max-width: 800px) {
+    .ssp-firstGroupBtn {
+        padding-right: 10px;
+        margin-right: 0;
+    }
+    .ssp-secondGroupBtn {
+        padding-left: 10px;
+    }
+    .ssp-firstGroupBtn,
+    .ssp-secondGroupBtn {
+        width: 50%;
+    }
+    .ssp-footerBtnNext {
+        margin-bottom: 30px;
+    }
+}
+@media only screen and (max-device-width: 768px) {
+    .ssp-reps-text {
+        padding-left: 1.875rem;
+    }
+    .ssp-add-auth-rep-header-text {
+        font-size: 1.5rem;
+    }
+    .ssp-action-btns {
+        display: block;
+    }
+    .ssp-action-btns .ssp-saveBtn {
+        margin-left: 1rem;
+    }
+}

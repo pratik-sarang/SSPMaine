@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validate_Phone_Pattern__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Validate phone pattern validation</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Validate_Phone_Pattern</label>
+    <type>Checkbox</type>
+</CustomField>

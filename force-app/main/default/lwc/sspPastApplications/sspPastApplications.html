@@ -1,0 +1,126 @@
+<template>
+    <template if:true={showSpinner}>
+        <c-ssp-spinner></c-ssp-spinner>
+    </template>
+    <template if:true={showAccessDenied}>
+      <c-ssp-access-denied></c-ssp-access-denied>
+  </template>
+  <template if:true={showScreen}>
+    <main class="ssp-past-application">
+        <div class="ssp-past-application-header-cont ssp-bodyContainer">
+          <div class="ssp-back-benefits">
+            <span class="ssp-arrow_left"></span>
+            <a tabindex="0" class="ssp-viewSummary ssp-color_monoBody ssp-fontFamily_popinBold" title={customLabels.sspBackToBenefitsAlt} onclick={backToBenefits} onkeydown={backToBenefits} >{customLabels.sspBackToBenefits}</a>
+          </div>
+          <h1 class="ssp-past-application-title ssp-fontFamily_popinBlack ssp-color_blueAlpha">{customLabels.sspPastApplications}</h1>
+        </div>
+        <div class="ssp-borderWrap ssp-dropdown-cont">
+              <div class="ssp-bodyContainer slds-is-relative">
+                <div class="ssp-menuItemDropDown slds-p-left_large">
+                  <div tabindex="0" role="button" aria-label={selectedReadableCaseNumber} class="ssp-menuItemDropDownBtn slds-grid slds-grid_vertical-align-center ssp-dropDownTitle ssp-pointerCursor" onblur={closeDropDown} onclick={toggleDropDown} onkeydown={handleKeyPress}>
+                    <div class="ssp-menuItemDropDownHeader">
+                        <p>
+                            <span class="ssp-case-number ssp-fontFamily_popinBold ssp-color_monoBody slds-m-right_large"  aria-live="polite">{customLabels.sspCaseHash}{selectedCaseNumber}</span> <span class={getStatusColor}></span> <span class="slds-m-right_large ssp-color_monoOmega ssp-status"  aria-live="polite">{displaySelectedStatus}</span>
+                        </p>
+                    </div>
+                    <div class="ssp-menuItemDropDownIcon"></div>
+                  </div>
+                </div>
+                <div class="ssp-menuItemDropDownContent ssp-boxShadow slds-grid slds-wrap" aria-label="case numbers dropdown" role="listbox">
+                    <template for:each={caseArray} for:item="currentCase" for:index="index">
+                        <a tabindex="0" role="option" aria-selected="false" class="ssp-menuItemDropDownHeader" key={currentCase} data-case={currentCase.caseNumber} data-status={currentCase.caseStatus} data-condition={currentCase.caseDisplayStatus} onmousedown={handleSelectedValue} onkeydown={handleSelectedValue}><span class="ssp-case-number ssp-color_monoBody slds-m-right_large">{customLabels.sspCaseHash}<span aria-label={currentCase.readableCaseNumber}>{currentCase.caseNumber}</span></span> <span class={currentCase.className}></span> <span class="ssp-color_monoOmega ssp-status">{currentCase.caseDisplayStatus}</span></a>
+                    </template>
+                </div>
+              </div>
+        </div>
+        <div class="ssp-bodyContainer ssp-past-applicant-container">
+        <template if:false={isMobile}>
+          <div class="ssp-past-applications-table">
+            <table class="slds-table slds-table_cell-buffer slds-no-row-hover slds-table--fixed-layout">
+                            <caption class="slds-hide">
+                                Message Caption
+                            </caption>
+              <thead>
+                <tr class="slds-line-height_reset">
+                    <template for:each={columns} for:item="col">
+                      <th class="ssp-th-styles ssp-bg_monoDelta ssp-color_monoBody ssp-fontFamily_popinBold" scope="col" key={col}>
+                        <div class="slds-truncate">{col.colName}
+                            <template if:true={col.isSorting}>
+                              <span class="ssp-action-image-container ssp-bg_monoDelta">
+                                  <a href="javascript:void(0)" role="button" aria-label="sort arrow" onclick={handleSorting} data-name={col.colName}><img class="ssp-sort-image" src={iconUrl} alt="sort icon"/></a>
+                              </span>
+                            </template>
+                          </div>
+                      </th>
+                    </template>
+                </tr>
+              </thead>
+              <tbody>
+                <template for:each={currentPageData} for:item="data" for:index="index">
+                  <tr class="slds-hint-parent" key={data}>
+                    <td class="ssp-td-styles" data-label="Application Details">
+                        <div tabindex="0" class="ssp-color_monoBody ssp-fontFamily_popinBold ssp-application-no">{customLabels.sspApplicationHash} <span aria-label={data.readableApplicationNumber}>{data.applicationNumber}</span></div>
+                        <div class="ssp-fontFamily_popinRegular ssp-color_monoOmega ssp-programs-applied">{data.programsApplied}</div>
+                    </td>
+                    <td class="ssp-td-styles ssp-color_greyAlpha ssp-fontFamily_popinRegular ssp-submitted-date" data-label="Submitted Date">
+                          {data.submittedDate}
+                    </td>
+                    <td>
+                        <lightning-button-menu icon-name="utility:threedots" class="ssp-three-dots-bg ssp-fontFamily_popinBold ssp-three-dots ssp-mail-rectangle" data-app-number={data.applicationNumber} data-metadata-id={data.dmsId} onselect={handleDropdown} alternative-text="action dropdown">
+                            <lightning-menu-item value="View" label={customLabels.sspViewAgreementSignature} title={customLabels.sspViewAgreementSignatureAlt}></lightning-menu-item>
+                        </lightning-button-menu>
+                    </td>
+                  </tr>
+                </template>
+              </tbody>
+            </table>
+          </div>
+        </template>
+        <template if:true={isMobile}>
+          <div class="ssp-past-applications-table ssp-mobile-table">
+              <table class="slds-table slds-table_cell-buffer slds-table--fixed-layout slds-no-row-hover slds-table_bordered">
+                  <thead>
+                      <tr class="slds-line-height_reset">
+                        <template for:each={mobileColumns} for:item="col">
+                            <th class="ssp-th-styles ssp-bg_monoDelta ssp-color_monoBody ssp-fontFamily_popinBold" scope="col" key={col}>
+                              <div class="slds-grid ssp-column-cont-mobile"><span class="ssp-column-text-mobile">{col.colName}</span>
+                                  <template if:true={col.isSorting}>
+                                    <span class="ssp-action-image-container ssp-bg_monoDelta">
+                                        <a href="javascript:void(0)" role="button" aria-label="sort arrow" onclick={handleSorting} data-name={col.colName}><img class="ssp-sort-image" src={iconUrl} alt="sort icon"/></a>
+                                    </span>
+                                  </template>
+                              </div>
+                            </th>
+                        </template>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <template for:each={currentPageData} for:item="data" for:index="index">
+                          <tr class="slds-hint-parent" key={data}>
+                            <td class="ssp-td-styles" data-label="Application Details">
+                                <div tabindex="0" class="ssp-color_monoBody ssp-fontFamily_popinBold ssp-application-no">{customLabels.sspApplicationHash} <span aria-label={data.readableApplicationNumber}>{data.applicationNumber}</span></div>
+                                <div class="ssp-fontFamily_popinRegular ssp-color_monoOmega ssp-programs-applied">{data.programsApplied}</div>  
+                                <lightning-button-menu icon-name="utility:threedots" class="ssp-three-dots-bg ssp-fontFamily_popinBold ssp-three-dots ssp-mail-rectangle" data-app-number={data.applicationNumber} data-metadata-id={data.dmsId} onselect={handleDropdown} alternative-text="action dropdown">
+                                    <lightning-menu-item value="View" class="sspItems" label={customLabels.sspViewAgreementSignature} title={customLabels.sspViewAgreementSignatureAlt}></lightning-menu-item>
+                                </lightning-button-menu>
+                            </td>
+                            <td class="ssp-td-styles ssp-color_greyAlpha ssp-fontFamily_popinRegular ssp-submitted-date" data-label="Submitted Date">
+                                {data.submittedDate}
+                            </td>
+                          </tr>
+                      </template>
+                  </tbody>
+              </table>
+          </div>
+        </template>
+        <div class="slds-grid slds-wrap slds-size_1-of-1 slds-m-vertical_large">
+            <div class="slds-size_1-of-1 ssp-paginationContainer">
+                <template if:true={tableData}>
+                        <c-ssp-pagination class="ssp-past-applications-pagination" per-page={perPage} page-size={pageSize} table-data={tableData} onpagedata={getCurrentPageData}></c-ssp-pagination>
+                </template>
+            </div>
+        </div>
+        </div>
+    </main>
+  </template>
+</template>

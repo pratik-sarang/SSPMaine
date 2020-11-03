@@ -1,0 +1,172 @@
+.ssp-find-assister-agent-section .ssp-search-btn .slds-button {
+    width: 270px;
+    height: 60px;
+    font-size: 1.125rem;
+}
+
+.ssp-child-care-provider-hearder-text {
+    font-size: 2.625rem;
+    line-height: 48px;
+}
+
+.ssp-child-care-margin-top {
+    margin-top: 15px;
+}
+.ssp-find-assister-agent {
+    font-size: 1rem;
+}
+.ssp-find-assister-agent > * {
+    margin-top: 30px;
+}
+.ssp-find-assister-agent > *:first-child, .ssp-find-assister-agent > *:nth-child(2) {
+    margin-top: 0;
+}
+.ssp-your-assiter {
+    margin-bottom: 60px;
+}
+.ssp-reps-text {
+    padding-left: 8.75rem;
+    font-size: 1rem;
+}
+.ssp-modal-header {
+    border-bottom: 0;
+}
+.ssp-headingText {
+    font-size: 1.125rem;
+}
+
+.ssp-horizontal-rule {
+    height: 3px;
+    border-radius: 1em;
+    border: none;
+}
+.ssp-child-care-toggle {
+    margin-bottom: 30px;
+    font-size: 1rem;
+}
+.ssp-search-btn {
+    margin: 30px 0;
+}
+.ssp-search-results-count {
+    font-size: 1.125rem;
+}
+.ssp-space-between {
+    justify-content: space-between;
+}
+.ssp-Provider-name {
+    font-size: 1rem;
+}
+.ssp-search-results {
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+.ssp-search-results .ssp-result-card {
+    margin-bottom: 30px;
+}
+
+.ssp-align-items-center {
+    align-items: center;
+}
+.ssp-showmore-btn {
+    font-size: 1rem;
+}
+
+.ssp-private-text{
+    font-family: 'Poppins-Regular';
+    font-size: 13px;
+    text-transform: uppercase; 
+}
+
+.ssp-result-card {
+    width: 100%;
+}
+
+.ssp-child-care-provider-app-header {
+    margin-bottom: 1.875rem;
+}
+
+.ssp-child-care-provider-text {
+    font-size: 1rem;
+}
+.ssp-child-care-provider-text1 {
+    font-size: 1rem;
+    padding-left: 8.75rem;
+}
+.ssp-userCurrentLoc {
+    font-size: 1rem;
+}
+.ssp-currentLocationPadding {
+    padding: 30px auto;
+    margin: 0 auto;
+}
+.ssp-child-care-provider-Padding-left {
+    padding: 10px;
+    margin: 0 auto;
+}
+.ssp-child-care-provider-Padding-right {
+    padding: 10px;
+    margin: 0 auto;
+}
+.ssp-child-care-provider-line{
+margin-bottom: auto;
+margin-top: 5px;
+}
+.star-font-awesome {
+    height: 16px;
+    width: 16px;
+    margin: 15px 4px 0px 0px;
+}
+.star-font-size {
+    font-size: 1.5rem;
+}
+@media only screen and (max-device-width: 850px) {
+    .ssp-reps-text {
+        padding-left: 30px;
+    }
+    .ssp-child-care-provider-hearder-text  {
+        font-size: 1.5rem;
+    }
+    .ssp-gutter-right {
+        padding-right: 0;
+    }
+    .ssp-gutter-left {
+        padding-left: 0;
+    }
+    .ssp-find-assister-agent > *:nth-child(2) {
+        margin-top: 30px;
+    }
+    .ssp-search-results .ssp-result-card:nth-child(odd) {
+        padding-right: 0;
+    }
+    .ssp-search-results .ssp-result-card:nth-child(even) {
+        padding-left: 0;
+    }
+
+    .ssp-result-card {
+        width: 100%;
+    }
+    .ssp-child-care-provider-line{
+        margin-bottom: auto;
+        margin-top: 5px;
+        }
+}
+@media only screen and (max-device-width: 1023px) {
+    .ssp-gutter-right {
+        padding-right: 0;
+    }
+    .ssp-gutter-left {
+        padding-left: 0;
+    }
+    .ssp-find-assister-agent > *:nth-child(2) {
+        margin-top: 30px;
+    }
+    .ssp-search-results .ssp-result-card:nth-child(odd) {
+        padding-right: 0;
+    }
+    .ssp-search-results .ssp-result-card:nth-child(even) {
+        padding-left: 0;
+    }
+    .ssp-search-btn .ssp-search-button {
+        margin-top: 30px;
+    }
+}

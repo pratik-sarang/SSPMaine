@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IllegalCharValidator_AllowNumber_Msg__c</fullName>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>IllegalCharValidator_AllowNumber_Msg</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Please enter valid characters.</fullName>
+                <default>true</default>
+                <label>Please enter valid characters.</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

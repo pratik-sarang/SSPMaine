@@ -1,0 +1,21 @@
+.ssp-theCabinetForHealth {
+    font-size: 1rem;
+    line-height: 24px;
+    letter-spacing: -0.3px;
+    text-align: left;
+    margin-top: 30px;
+}
+.ssp-childSupportEnforcement {
+    font-size: 1rem;
+    line-height: 24px;
+    letter-spacing: -0.3px;
+    text-align: left;
+}
+.ssp-additionalInformation {
+    margin-bottom: 100px;
+}
+@media only screen and (max-width: 768px) {
+    .ssp-reason-field {
+        padding-right: 0;
+    }
+}

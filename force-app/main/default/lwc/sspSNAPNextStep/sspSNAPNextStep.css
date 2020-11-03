@@ -1,0 +1,155 @@
+.ssp-paddingYThirty {
+    padding-bottom: 1.875rem;
+    padding-top: 1.875rem;
+}
+
+.ssp-paddingTopThirty {
+    padding-top: 1.5rem;
+}
+
+.ssp-mobileHorizontalPadding {
+    padding-left: 1.875rem;
+    padding-right: 1.875rem;
+}
+
+.ssp-nextBannnerImageContainer {
+    position: relative;
+}
+
+.ssp-desktopBackgroundImage {
+    position: absolute;
+    z-index: 0;
+    top: 2%;
+    right: 0;
+    height: 15rem;
+}
+
+.ssp-nextSubContainer {
+    max-width: 48.125rem;
+}
+
+.ssp-shortHeading {
+    padding-top: 1.125rem;
+    padding-bottom: 1.125rem;
+    margin-bottom: 3px;
+}
+
+
+.ssp-appCardOrangeTitle {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    text-transform: uppercase;
+}
+
+.ssp-nextBannerContainer h1 {
+    font-size: 2.265rem;
+    line-height: 3rem;
+}
+
+.ssp-nextApplication {
+    font-size: 0.8125rem;
+    line-height: 1.875rem;
+}
+
+.ssp-nextStepsDownloadBtn {
+    max-width: 29.375rem;
+    padding: 1.625rem 0 0 0;
+}
+
+.ssp-nextScheduleHeading {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    padding: 0 0 0.9375rem 0;
+}
+
+.ssp-nextScheduleContent {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.ssp-needHelpCardContainer {
+    max-width: 23.125rem;
+    width: 48.75%;
+}
+
+.ssp-marginCardRight {
+    margin-right: 2.5%;
+}
+
+.ssp-needHelpCardContainer .ssp-card_wrap {
+    border-radius: 0.375rem;
+}
+
+.ssp-nextIdentification {
+    margin-bottom: 0.9375rem;
+}
+
+.ssp-nextCardHeight {
+    height: 16.0625rem;
+}
+
+.ssp-nextdocumentPart {
+    width: 48.75%;
+    max-width: 35.625rem;
+}
+
+.ssp-documentsMainContainer {
+    padding-bottom: 3.55rem;
+}
+
+.ssp-nextGotoButtonContainer {
+    padding-top: 5.3125rem;
+}
+
+.ssp-getStartBenefitsButton {
+    width: 100%;
+    max-width: 23.125rem;
+}
+
+.ssp-actionButtons {
+    text-align: right;
+}
+
+.ssp-nextAccordionList {
+    list-style-type: disc; 
+    padding-left: 1rem;
+    padding-bottom: 1.5rem;  
+}
+
+.ssp-nextAccordionList li {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .ssp-nextBannerContainer h1 {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+
+    .ssp-nextCardHeight {
+        height: auto;
+    }
+
+    .ssp-nextCardBottomPadding {
+        padding-bottom: 1.875rem;
+    }
+
+    .ssp-nextdocumentPart,
+    .ssp-needHelpCardContainer {
+        width: 100%;
+        max-width: none;
+    }
+
+    .ssp-marginCardRight {
+        margin-right: 0;
+    }
+
+    .ssp-nextCardContainer div .ssp-needHelpCardContainer:first-child {
+        padding-bottom: 0;
+    }
+    
+    .ssp-desktopBackgroundImage {
+        height: 7.625rem;
+    }
+}

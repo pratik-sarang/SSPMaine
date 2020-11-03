@@ -1,0 +1,482 @@
+<template>
+    <template if:true={showSpinner}>
+        <c-ssp-spinner></c-ssp-spinner>
+    </template>
+    <template if:false={openModel}>
+        <template if:true={desktopShow}>
+            <div class="ssp-find-dcbs-office">
+                <div class="ssp-find-dcbs-office-header ssp-bodyContainer">
+                    <h1
+                        class="ssp-find-dcbs-office-header-text ssp-fontFamily_popinBlack ssp-color_blueAlpha"
+                    >
+                        {labels.sspFIndDCBSOffice}
+                    </h1>
+                </div>
+                <div class="ssp-horizontal-rule ssp-bg_monoBeta"></div>
+                <div class="ssp-bodyContainer">
+                <div class="ssp-find-dcbs-office-address ssp-dcbs-searchMain">
+  
+                    <div class="ssp-onFocus" tabindex="0">
+                        <div class="ssp-searchField">
+                            <lightning-input
+                                label=""
+                                onchange={handleOnChangeAddressInput}
+                                placeholder={labels.sspSearchCityCountryZipCode}
+                                type="text"
+                                variant="label-hidden"
+                                value={inputLocation}
+                                title={labels.sspSearchByAddress}
+                                class="ssp-color_monoBody"
+                                onblur={handleInputFocusOrBlur}
+                            >
+                            </lightning-input
+                            ><a
+                                ><img
+                                    src={searchIcon}
+                                    aria-hidden="true"
+                                    role="presentation"
+                                    class="ssp-searchIcon"
+                                    alt={labels.sspSearch}
+                            /></a>
+                        </div>
+                        <div tabindex="0"
+                            if:true={placeResultArray}
+                            class="slds-box"
+                        >
+                            <template
+                                for:each={placeResultArray}
+                                for:item="adResult"
+                            >
+                                <ul tabindex="0" role="listbox"
+                                    key={adResult.formatted_address}
+                                    class="city_predictions slds-m-vertical_xx-small"
+                                >
+                                    <li tabindex="0"
+                                        key={adResult.formatted_address}
+                                        class="slds-listbox__item"
+                                    >
+                                        <a tabindex="0"
+                                            key={adResult.formatted_address}
+                                            href="javascript:void(0)"
+                                            data-id={adResult.formatted_address}
+                                            onmousedown={getAddressDetails}
+                                            class="ssp-color_blueAlpha"
+                                            target="_blank"
+                                            >{adResult.formatted_address}</a
+                                        >
+                                    </li>
+                                </ul>
+                            </template>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+                <div class="ssp-bodyContainer slds-p-top_medium slds-p-bottom_large slds-m-horizontal_x-large ssp-currentLocationPadding">
+           
+                        <a
+                            href="javascript:void(0);"
+                            class="ssp-color_blueAlpha ssp-userCurrentLoc"
+                            onclick={getCurrentLocation}
+                            title={labels.sspClickUseCurrentLocation}
+                            >{labels.sspUseMyCurrentLocation}</a
+                        >
+                    </div>
+                <div class="ssp-desktopMap">
+                    <lightning-map
+                        map-markers={mapMarkers}
+                        show-footer={showFooter}
+                        list-view={listView}
+						center={centerLocation}
+                        zoom-level=7
+                        class="ssp-desktopMap"
+                    >
+                    </lightning-map>
+                </div>
+                <div class="ssp-bodyContainerGamma ssp-bg_appHeaderGradient">
+                    <div class="ssp-bodyContainer ssp-search-results">
+                        <p
+                            if:true={resultCount}
+                            class="ssp-smallTextStyling slds-p-top_medium slds-m-bottom_medium ssp-fontFamily_popinBold"
+                        >
+                            <span class="ssp-textGapping">{resultCount} </span>
+                            {labels.sspResults}
+                        </p>
+                        <div class="slds-grid slds-wrap">
+                            <template
+                                for:each={iterateResultArray}
+                                for:item="item"
+                            >
+                                <div
+                                    class="slds-grid slds-wrap slds-large-size_1-of-2 slds-size_1-of-1 slds-m-bottom_x-large"
+                                    key={item.Id}
+                                >
+                                    <c-ssp-search-card
+                                        class="ssp-results-card ssp-borderRadius ssp-cardMargin ssp-bg_whiteAlpha ssp-dcbsSearch"
+                                        ssp-search-card-title={item.Name}
+                                        ssp-search-card-dist={item.Calculated_Distance__c}
+                                    >
+                                        <div class="ssp-office-hours slds-grid slds-wrap">
+                                            <span
+                                                class="ssp-fontFamily_popinBold ssp-textGapping"
+                                                >{labels.sspMondayToFriday}</span
+                                            >
+                                            <div class="ssp-textWidth">
+                                            <span class="ssp-textGapping">
+                                                <lightning-formatted-date-time
+                                                    value={item.OfficeHoursFromText__c}
+                                                    hour="2-digit"
+                                                    minute="2-digit"
+                                                    hour12="true"
+                                                    time-zone="UTC"
+                                                >
+                                                </lightning-formatted-date-time
+                                            >
+                                        </span>
+                                            <span class="ssp-textGapping"
+                                                >-
+                                                </span>
+
+                                            <lightning-formatted-date-time
+                                                value={item.OfficeHoursToText__c}
+                                                hour="2-digit"
+                                                minute="2-digit"
+                                                hour12="true"
+                                                time-zone="UTC"
+                                            >
+                                        </lightning-formatted-date-time>
+                                    </div>
+                                        </div>
+                                        <div class="slds-grid slds-wrap">
+                                            <div class="slds-large-size_1-of-2 slds-size_1-of-1">
+                                                <a
+                                                class="ssp-color_monoBody ssp-anchor ssp-physicalAddress"
+                                                tabindex="0"
+                                                onclick={redirectToAddress}
+                                                data-address1={item.PhysicalAddressLine1__c}
+                                                data-address2={item.PhysicalAddressLine2__c}
+                                                data-addresscity={item.PhysicalCity__c}
+                                                data-addresscountycode={item.PhysicalCountyCode__c}
+                                                data-addressstatecode={item.PhysicalStateCode__c}
+                                                data-addresszipcode4={item.PhysicalZipCode4__c}
+                                                data-addresszipcode5={item.PhysicalZipCode5__c}
+                                                target="_blank"
+                                                title={item.addressAltText}
+                                                href={redirectAddress}
+                                            >
+                                                {item.PhysicalAddressLine1__c}
+                                                {item.PhysicalAddressLine2__c}
+                                                {item.PhysicalCity__c}
+                                                {item.PhysicalCountyCode__c}
+                                                {item.PhysicalStateCode__c}
+                                                {item.PhysicalZipCode4__c}
+                                                {item.PhysicalZipCode5__c}
+                                            </a>
+                                            </div>
+
+                                            <div
+                                                class="slds-large-size_1-of-2 slds-size_1-of-1 ssp-mailing-address"
+                                            >
+                                                <p
+                                                    class="ssp-fontFamily_popinBold"
+                                                >
+                                                    {labels.sspMailingAddress}
+                                                </p>
+                                                <a
+                                                    class="ssp-anchor ssp-color_monoBody"
+                                                    tabindex="0"
+                                                    onclick={redirectToMailingAddress}               
+                                                    target="_blank"
+                                                    title={mailingAltText}
+                                                    href={redirectMailingAddress}
+                                                >
+                                               
+                                                   <span class="ssp-dcbs-add ssp-textGapping ssp-anchor">{labels.sspAddMailing1}</span>
+                                                   <span>{labels.sspAddressMailing2}</span>
+                                                </a>
+                                            </div>
+                                            <div class="ssp-contactNumber">
+                                                <a class="ssp-fontFamily_popinBold ssp-anchor ssp-office-hours ssp-color_monoBody slds-m-vertical_medium"
+                                                tabindex="0"
+                                                href={phoneNumber}
+                                                onclick={redirectToPhone}
+                                                data-phone={item.OfficePhone__c}
+                                                title={item.callAltText}
+                                                >
+                                                    {item.OfficePhone__c}
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </c-ssp-search-card>
+                                </div>
+                            </template>
+                        </div>
+                        <div
+                            class="slds-p-vertical_x-large slds-grid slds-wrap"
+                        >
+                            <lightning-button
+                                if:true={doShowMore}
+                                variant="brand"
+                                label={labels.sspViewMore}
+                                title={labels.sspViewMore}
+                                class="ssp-exitModalBtn ssp-fontSize_16 ssp-button_brand ssp-buttonPadding ssp-buttonWidth"
+                                onclick={showMoreData}
+                            >
+                            </lightning-button>
+                      
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+    </template>
+        <template if:true={openModel}>
+            <div class="ssp-Overlay">
+                <c-ssp-detailed-information-modal
+                    header-value={labels.sspFIndDCBSOffice}
+                    open-model={openModel}
+                    onclosemodal={handleProp}
+                    reference={reference}
+                    class="ssp-DcbsOverlay"
+                >
+                    <div slot="contentSlot">
+                        <div class="ssp-horizontal-rule ssp-bg_monoBeta"></div>
+                        <div
+                            class="ssp-find-dcbs-office-address ssp-overlayOfficeAdd"
+                        >
+                            <div
+                                class="ssp-onFocus ssp-overlayonFocus"
+                                tabindex="0"
+                            >
+                                <div
+                                    class="ssp-searchField slds-m-horizontal_large"
+                                >
+                                    <lightning-input
+                                        label=""
+                                        onchange={handleOnChangeAddressInput}
+                                        placeholder={labels.sspSearchCityCountryZipCode}
+                                        type="text"
+                                        variant="label-hidden"
+                                        value={inputLocation}
+                                        title={labels.sspSearchByAddress}
+                                        class="ssp-color_monoBody"
+                                        onblur={handleInputFocusOrBlur}
+                                    >
+                                    </lightning-input
+                                    ><a
+                                        ><img
+                                            src={searchIcon}
+                                            aria-hidden="true"
+                                            role="presentation"
+                                            class="ssp-searchIcon"
+                                            alt={labels.sspSearch}
+                                    /></a>
+                                </div>
+                                <div
+                                    if:true={placeResultArray}
+                                    class="slds-box slds-m-horizontal_large ssp-overlayBox"
+                                >
+                                    <template
+                                        for:each={placeResultArray}
+                                        for:item="adResult"
+                                    >
+                                        <ul
+                                            key={adResult.formatted_address}
+                                            class="city_predictions slds-m-vertical_xx-small"
+                                        >
+                                            <li
+                                                key={adResult.formatted_address}
+                                                class="slds-listbox__item"
+                                            >
+                                                <a
+                                                    key={adResult.formatted_address}
+                                                    data-id={adResult.formatted_address}
+                                                    onmousedown={getAddressDetails}
+                                                    class="ssp-color_blueAlpha"
+                                                    target="_blank"
+                                                    >{adResult.formatted_address}</a
+                                                >
+                                            </li>
+                                        </ul>
+                                    </template>
+                                </div>
+                            </div>
+                 
+                        </div>
+                        <div
+                        class="slds-p-vertical_medium slds-m-horizontal_large"
+                    >
+                        <a
+                            href="javascript:void(0);"
+                            class="ssp-color_blueAlpha ssp-userCurrentLoc"
+                            onclick={getCurrentLocation}
+                            title={labels.sspClickUseCurrentLocation}
+                            >{labels.sspUseMyCurrentLocation}</a
+                        >
+                    </div>
+                        <div class="ssp-map-section">
+                            <lightning-map
+                                map-markers={mapMarkers}
+                                show-footer={showFooter}
+                                list-view={listView}
+								center={centerLocation}
+								zoom-level=7
+                                class="ssp-overlayMap"
+                            >
+                            </lightning-map>
+                        </div>
+                        <p
+                            if:true={resultCount}
+                            class="ssp-smallTextStyling ssp-color_monoBody slds-p-top_medium slds-m-bottom_medium ssp-fontFamily_popinBold slds-m-horizontal_large"
+                        >
+                            <span class="ssp-textGapping ssp-color_monoBody"
+                                >{resultCount}
+                            </span>
+                            <span class="ssp-color_monoBody"
+                                >{labels.sspResults}</span
+                            >
+                        </p>
+                        <div class="ssp-horizontal-rule ssp-bg_monoBeta"></div>
+                        <template for:each={iterateResultArray} for:item="item">
+                            <div
+                                class="slds-grid slds-wrap ssp-SearchCard ssp-searchOverlayCard"
+                                key={item.Id}
+                            >
+                                <c-ssp-search-card
+                                    class="ssp-bg_whiteAlpha ssp-componetWidth ssp-searchCardBorder"
+                                    ssp-search-card-title={item.Name}
+                                    ssp-search-card-dist={item.Calculated_Distance__c}
+                                >
+                                    <div class="ssp-office-hours ssp-office-hours-overlay ssp-fontSize_13 ssp-color_monoBody">
+                                        <span
+                                            class="ssp-fontFamily_popinBold ssp-textGapping ssp-color_monoBody "
+                                            >{labels.sspMondayToFriday}</span
+                                        >
+                                        <span>
+                                        <span class="ssp-textGapping">
+                                            <lightning-formatted-date-time
+                                                value={item.OfficeHoursFromText__c}
+                                                hour="2-digit"
+                                                minute="2-digit"
+                                                hour12="true"
+                                                time-zone="UTC"
+                                            ></lightning-formatted-date-time
+                                        ></span>
+                                        <lightning-formatted-date-time
+                                            value={item.OfficeHoursToText__c}
+                                            hour="2-digit"
+                                            minute="2-digit"
+                                            hour12="true"
+                                            time-zone="UTC"
+                                        ></lightning-formatted-date-time>
+                                        </span>
+                                    </div>
+                                    <div
+                                        class="slds-grid slds-wrap ssp-fontSize_13"
+                                    >
+                                        <div
+                                            class="slds-grid slds-wrap slds-large-size_1-of-2 slds-size_1-of-1"
+                                        >
+                                            <a
+                                                class="slds-size_1-of-2 ssp-color_monoBody ssp-anchor ssp-physicalAddress"
+                                                onclick={redirectToAddress}
+                                                data-address1={item.PhysicalAddressLine1__c}
+                                                data-address2={item.PhysicalAddressLine2__c}
+                                                data-addresscity={item.PhysicalCity__c}
+                                                data-addresscountycode={item.PhysicalCountyCode__c}
+                                                data-addressstatecode={item.PhysicalStateCode__c}
+                                                data-addresszipcode4={item.PhysicalZipCode4__c}
+                                                data-addresszipcode5={item.PhysicalZipCode5__c}
+                                                target="_blank"
+                                                title={item.addressAltText}
+                                                href={redirectAddress}
+                                            >
+                                                {item.PhysicalAddressLine1__c}
+                                                {item.PhysicalAddressLine2__c}
+                                                {item.PhysicalCity__c}
+                                                {item.PhysicalCountyCode__c}
+                                                {item.PhysicalStateCode__c}
+                                                {item.PhysicalZipCode4__c}
+                                                {item.PhysicalZipCode5__c}
+                                            </a>
+                                            <div
+                                                class="slds-size_1-of-1 ssp-office-hours"
+                                            >
+                                                <p
+                                                    class="ssp-fontFamily_popinBold ssp-color_monoBody ssp-fontSize_13"
+                                                >
+                                                    {labels.sspMailingAddress}
+                                                </p>
+
+                                                <a
+                                                    class="ssp-anchor ssp-color_monoBody ssp-fontSize_13"
+                                                    onclick={redirectToMailingAddress}
+                                                    target="_blank"
+                                                    title={mailingAltTextt}
+                                                    href={redirectMailingAddress}
+                                                >
+                                               <span class="ssp-dcbs-add ssp-textGapping ssp-anchor">{labels.sspAddMailing1}</span>
+                                                   <span>{labels.sspAddressMailing2}</span>
+                                                </a>
+                                            </div>
+
+                                            <a
+                                                class="ssp-fontFamily_popinBold ssp-anchor ssp-color_monoBody ssp-fontSize_13"
+                                                href={phoneNumber}
+                                                onclick={redirectToPhone}
+                                                data-phone={item.OfficePhone__c}
+                                                title={item.callAltText}
+                                            >
+                                                {item.OfficePhone__c}
+                                                <lightning:input
+                                                    type="tel"
+                                                    label=""
+                                                    value={item.OfficePhone__c}
+                                                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                                                ></lightning:input>
+                                            </a>
+                                        </div>
+                                        <div
+                                            class="slds-grid slds-wrap slds-large-size_1-of-2 slds-size_1-of-1 ssp-alignItem ssp-selectOfficeButton"
+                                        >
+                                            <lightning-button
+                                                variant="brand"
+                                                data-office={item.Name}
+                                                data-identity={item.Id}
+                                                data-address1={item.PhysicalAddressLine1__c}
+                                                data-address2={item.PhysicalAddressLine2__c}
+                                                data-addresscity={item.PhysicalCity__c}
+                                                data-addresscountycode={item.PhysicalCountyCode__c}
+                                                data-addressstatecode={item.PhysicalStateCode__c}
+                                                data-addresszipcode4={item.PhysicalZipCode4__c}
+                                                data-addresszipcode5={item.PhysicalZipCode5__c}
+                                                label={labels.sspSelectOffice}
+                                                class="ssp-exitModalBtn ssp-fontSize_16 ssp-button_brand ssp-componetWidth slds-m-top_medium"
+                                                title={labels.sspClickSelectOffice}
+                                                onclick={getOfficeInformation}
+                                            ></lightning-button>
+                                        </div>
+                                    </div>
+                                </c-ssp-search-card>
+                                <div
+                                    class="ssp-horizontal-rule ssp-bg_monoBeta ssp-Ruler"
+                                ></div>
+                            </div>
+                        </template>
+                        <div class="slds-grid slds-wrap slds-m-horizontal_large">
+                            <lightning-button
+                                variant="brand"
+                                if:true={doShowMore}
+                                label={labels.sspViewMore}
+                                title={labels.sspViewMore}
+                                class="ssp-exitModalBtn ssp-fontSize_16 ssp-button_brand ssp-componetWidth slds-m-top_medium"
+                                onclick={showMoreData}
+                            ></lightning-button>
+                        </div>
+                    </div>
+                </c-ssp-detailed-information-modal>
+            </div>
+        </template>
+    </template>
+
+</template>

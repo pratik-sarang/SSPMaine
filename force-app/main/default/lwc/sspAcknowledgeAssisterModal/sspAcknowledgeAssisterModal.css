@@ -1,0 +1,13 @@
+.ssp-marginBottomThirty {
+    margin-bottom: 1.875rem;
+}
+.ssp-KIHIPPConsentContentContainer p,
+.ssp-kiHIPPConsentModalContainer li {
+    margin-bottom: 20px;
+}
+.ssp-kiHIPPConsentModalContainer li {
+    list-style-type: decimal;
+}
+.ssp-kiHIPPConsentModalContainer ul {
+    padding-left: 15px;
+}

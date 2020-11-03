@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RAC_Trigger_Source__c</fullName>
+    <description>RAC Config due to which this screen will be queued.</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>RAC Trigger Source</label>
+    <referenceTo>RAC_Screen_Config__mdt</referenceTo>
+    <relationshipLabel>Navigation Flow Page Configuration</relationshipLabel>
+    <relationshipName>Navigation_Flow_Page_Configuration</relationshipName>
+    <required>false</required>
+    <type>MetadataRelationship</type>
+    <unique>false</unique>
+</CustomField>

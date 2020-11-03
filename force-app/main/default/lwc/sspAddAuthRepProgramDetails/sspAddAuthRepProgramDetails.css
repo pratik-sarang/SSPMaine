@@ -1,0 +1,11 @@
+.ssp-cbBoxBorder {
+    border-top: 0;
+    position: relative;
+    bottom: 16px;
+    border-radius: 0 0 0.25rem 0.25rem;
+    padding: 30px 24px 13px 24px;
+}
+
+.ssp-input {
+    margin-top: 1rem;
+}

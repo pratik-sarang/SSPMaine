@@ -1,0 +1,94 @@
+.ssp-main-heading {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin-bottom: 1.875rem;
+}
+
+.ssp-horizontal-rule {
+  height: 0.313em;
+  border-radius: 0.156em;
+  margin-bottom: 1.875rem;
+  border: none;
+}
+.ssp-horizontal-rule-small {
+  height: 0.063em;
+  margin: 3.75rem 0 1.875rem;
+  border: none;
+}
+
+.ssp-common-margin {
+  margin-bottom: 0.938rem;
+}
+
+.ssp-sub-heading-text {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.ssp-sub-heading {
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+}
+
+.ssp-m-heading {
+  margin-bottom: 2.25rem;
+}
+.ssp-m-heading-small {
+  margin-bottom: 1.125rem;
+}
+.ssp-m-sub-heading {
+  margin-bottom: 0.375rem;
+}
+
+.ssp-m-heading-margin {
+  margin-bottom: 0.938rem;
+}
+
+.ssp-list-numbering {
+  position: absolute;
+}
+
+.ssp-list-text {
+  padding-left: 1.5rem;
+}
+
+.ssp-contentContainer {
+  margin: 1.875rem 0 3.75rem;
+}
+
+.ssp-add-auth-rep-btns {
+  padding-top: 40px;
+}
+
+.ssp-authorize-btn {
+  width: 100%;
+  margin-bottom: 1.875rem;
+  height: 3.75rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .ssp-main-heading {
+    font-size: 2.625rem;
+    line-height: 3rem;
+  }
+  .ssp-common-right-padding {
+    padding-right: 1.875rem;
+  }
+
+  .ssp-common-left-padding {
+    padding-left: 1.875rem;
+  }
+
+  .ssp-contentContainer {
+    margin: 3.75rem 0 1.563rem;
+  }
+  .ssp-authorize-btn {
+    width: 23.125rem;
+    height: 3.75rem;
+  }
+  .ssp-m-heading-small {
+    margin-bottom: 0.938rem;
+  }
+  .ssp-add-auth-rep-btns {
+    padding-top: 85px;
+  }
+}

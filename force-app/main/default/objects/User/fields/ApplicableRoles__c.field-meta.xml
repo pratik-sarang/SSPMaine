@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ApplicableRoles__c</fullName>
+    <description>Roles returned from KOG, which this user can play. User needs to select one role to proceed accesing SSP</description>
+    <externalId>false</externalId>
+    <label>Applicable Roles</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Assister</fullName>
+                <default>false</default>
+                <label>kynector</label>
+            </value>
+            <value>
+                <fullName>Citizen_Individual</fullName>
+                <default>false</default>
+                <label>Citizen</label>
+            </value>
+            <value>
+                <fullName>Agency_Admin</fullName>
+                <default>false</default>
+                <label>Agency Admin</label>
+            </value>
+            <value>
+                <fullName>CHFS_Prod_Support</fullName>
+                <default>false</default>
+                <label>CHFS Prod Support</label>
+            </value>
+            <value>
+                <fullName>Contact_Center_View_and_Edit</fullName>
+                <default>false</default>
+                <label>Contact Center (View and Edit)</label>
+            </value>
+            <value>
+                <fullName>Contact_Center_View_Only</fullName>
+                <default>false</default>
+                <label>Contact Center (View Only)</label>
+            </value>
+            <value>
+                <fullName>DAIL_Worker</fullName>
+                <default>false</default>
+                <label>DAIL Worker</label>
+            </value>
+            <value>
+                <fullName>DCBS_View_Only</fullName>
+                <default>false</default>
+                <label>DCBS - View Only</label>
+            </value>
+            <value>
+                <fullName>DCBS_Central_Office_View_and_Edit</fullName>
+                <default>false</default>
+                <label>DCBS Central Office - View &amp; Edit</label>
+            </value>
+            <value>
+                <fullName>Department_Of_Education_Representative</fullName>
+                <default>false</default>
+                <label>Department of Education Representative</label>
+            </value>
+            <value>
+                <fullName>DJJ_Representative</fullName>
+                <default>false</default>
+                <label>DJJ Representative</label>
+            </value>
+            <value>
+                <fullName>DOC_Representative</fullName>
+                <default>false</default>
+                <label>DOC Representative</label>
+            </value>
+            <value>
+                <fullName>Eligibility_&amp;_Benefit_Inquiry_User</fullName>
+                <default>false</default>
+                <label>Eligibility &amp; Benefit Inquiry User</label>
+            </value>
+            <value>
+                <fullName>Individual_Auth_Rep</fullName>
+                <default>false</default>
+                <label>Individual Authorized Representative</label>
+            </value>
+            <value>
+                <fullName>Insurance_Agent</fullName>
+                <default>false</default>
+                <label>Agent</label>
+            </value>
+            <value>
+                <fullName>Jailor</fullName>
+                <default>false</default>
+                <label>Jailor</label>
+            </value>
+            <value>
+                <fullName>Mail_Center_Supervisor</fullName>
+                <default>false</default>
+                <label>Mail Center Supervisor</label>
+            </value>
+            <value>
+                <fullName>Mail_Center_Worker</fullName>
+                <default>false</default>
+                <label>Mail Center Worker</label>
+            </value>
+            <value>
+                <fullName>Organization_Auth_Rep</fullName>
+                <default>false</default>
+                <label>Organization Authorized Representative</label>
+            </value>
+            <value>
+                <fullName>Psychiatric_Facility_Representative</fullName>
+                <default>false</default>
+                <label>Psychiatric Facility Representative</label>
+            </value>
+            <value>
+                <fullName>QE_Hospital</fullName>
+                <default>false</default>
+                <label>QEHospital</label>
+            </value>
+            <value>
+                <fullName>QE_Pregnancy</fullName>
+                <default>false</default>
+                <label>QEPregnancy</label>
+            </value>
+            <value>
+                <fullName>APPLICATION_INITIATOR</fullName>
+                <default>false</default>
+                <label>Application Initiator</label>
+            </value>
+            <value>
+                <fullName>APPLICATION_REVIEWER</fullName>
+                <default>false</default>
+                <label>APPLICATION REVIEWER</label>
+            </value>
+            <value>
+                <fullName>CASE_MANAGEMENT_ADMINISTRATOR_INTERNAL</fullName>
+                <default>false</default>
+                <label>Case Management Administrator (Internal)</label>
+            </value>
+            <value>
+                <fullName>WAIVER_CAPACITY_REVIEWER</fullName>
+                <default>false</default>
+                <label>Waiver Capacity Reviewer</label>
+            </value>
+            <value>
+                <fullName>CASE_MANAGER</fullName>
+                <default>false</default>
+                <label>Case Manager</label>
+            </value>
+            <value>
+                <fullName>CASE_SUPERVISOR</fullName>
+                <default>false</default>
+                <label>Case Supervisor</label>
+            </value>
+            <value>
+                <fullName>CHFS_APPLICATION_INITIATOR</fullName>
+                <default>false</default>
+                <label>CHFS Application Initiator</label>
+            </value>
+            <value>
+                <fullName>LEVEL_OF_CARE_ASSESSOR</fullName>
+                <default>false</default>
+                <label>Level of Care Assessor</label>
+            </value>
+            <value>
+                <fullName>LOC_REVIEWER</fullName>
+                <default>false</default>
+                <label>LOC REVIEWER</label>
+            </value>
+            <value>
+                <fullName>POC_REVIEWER</fullName>
+                <default>false</default>
+                <label>POC REVIEWER</label>
+            </value>
+            <value>
+                <fullName>SERVICE_NEEDS_ASSESSOR</fullName>
+                <default>false</default>
+                <label>Service Needs Assessor</label>
+            </value>
+            <value>
+                <fullName>INTERNAL_LOC_ASSESSOR</fullName>
+                <default>false</default>
+                <label>Internal LOC Assessor</label>
+            </value>
+            <value>
+                <fullName>WAIVER_DIRECT_SERVICE_PROVIDER</fullName>
+                <default>false</default>
+                <label>Waiver Direct Service Provider</label>
+            </value>
+            <value>
+                <fullName>WAIVER_DIRECT_SERVICE_PROVIDER_SUPERVISOR</fullName>
+                <default>false</default>
+                <label>Waiver Direct Service Provider Supervisor</label>
+            </value>
+            <value>
+                <fullName>CAPACITY_MANAGEMENT_ADMINISTRATOR</fullName>
+                <default>false</default>
+                <label>CAPACITY MANAGEMENT ADMINISTRATOR</label>
+            </value>
+            <value>
+                <fullName>Case_Management_Administrator_Read_Only</fullName>
+                <default>false</default>
+                <label>Case Management Administrator (Read Only)</label>
+            </value>
+            <value>
+                <fullName>PROD_Support_Read_Only</fullName>
+                <default>false</default>
+                <label>PROD Support (Read Only)</label>
+            </value>
+            <value>
+                <fullName>CHFS_Internal_Reviewer</fullName>
+                <default>false</default>
+                <label>CHFS Internal Reviewer</label>
+            </value>
+            <value>
+                <fullName>Community Partner Admin</fullName>
+                <default>false</default>
+                <label>Community Partner Admin</label>
+            </value>
+            <value>
+                <fullName>Community Partner Staff</fullName>
+                <default>false</default>
+                <label>Community Partner Staff</label>
+            </value>
+            <value>
+                <fullName>Case Worker Supervisor</fullName>
+                <default>false</default>
+                <label>Case Worker Supervisor</label>
+            </value>
+            <value>
+                <fullName>Case Worker</fullName>
+                <default>false</default>
+                <label>Case Worker</label>
+            </value>
+            <value>
+                <fullName>RE United Way Staff</fullName>
+                <default>false</default>
+                <label>RE United Way Staff</label>
+            </value>
+            <value>
+                <fullName>State User</fullName>
+                <default>false</default>
+                <label>State User</label>
+            </value>
+            <value>
+                <fullName>CASE_MANAGER_IN_TRAINING</fullName>
+                <default>false</default>
+                <label>CASE MANAGER IN TRAINING</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

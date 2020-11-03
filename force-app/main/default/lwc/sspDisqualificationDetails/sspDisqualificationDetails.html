@@ -1,0 +1,74 @@
+<template>
+    <template if:true={showSpinner}>
+        <c-ssp-spinner></c-ssp-spinner>
+    </template>
+    <template if:true={showAccessDenied}>
+        <c-ssp-access-denied></c-ssp-access-denied>
+    </template>
+    <template if:true={showScreen}>
+        <main class="ssp-disqualificationDetails">
+            <div class="ssp-disqualificationHeadContainer">
+                <div class="slds-p-horizontal_xx-large ssp-mobileHorizontalPadding">
+                    <div class="ssp-container_width">
+                        <i class="ssp-arrow_left"></i
+                        ><a
+                            title={label.sspDisqualificationBackTitle}
+                            class="ssp-viewSummary ssp-color_monoBody ssp-fontFamily_popinBold"
+                            onclick={backToBenefits} onkeydown={backToBenefits}
+                            tabindex="0"
+                            >{label.sspDisqualificationBack}</a
+                        >
+                        <h1 class="ssp-individualName ssp-fontFamily_popinBlack">
+                            {label.sspDisqualificationHeading}
+                        </h1>
+                        <div
+                            class="ssp-fontFamily_ArvoRegular ssp-color_monoOmega ssp-waiverContent"
+                        >
+                            {label.sspDisqualificationContent}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ssp-bg_appHeaderGradient ssp-disqualificationBodyContainer">
+                <template for:each={mapData} for:item="mapKey">
+                    
+                
+                <div key={mapKey.id} class="slds-p-horizontal_xx-large ssp-mobileHorizontalPadding">
+                    <div class="ssp-container_width ssp-programContainer">
+                        <p class="ssp-fontFamily_popinBold ssp-color_blueAlpha ssp-disqualifyProgramName">
+                            <!-- {label.sspDisqualificationProgramsName} -->
+                            {mapKey.key}
+                        </p>
+                        <template for:each={mapKey.value} for:item="card">
+                            <div key={card.id} class="ssp-disqualificationCardContainer ssp-bg_whiteAlpha">
+                                <c-ssp-general-notice-card>
+                                    <div class="ssp-disqualificationCardContent">
+                                        <div class="ssp-fontFamily_popinBold ssp-color_monoBody ssp-disqualifySuspensionName">{card.PenaltyDisqualificationType}</div>
+                                        <div class="ssp-effectStartDate">
+                                            <p class="ssp-color_monoOmega ssp-fontFamily_popinRegular ssp-disqualifyEffectContent">{label.sspDisqualificationStartDate}</p>
+                                            <p class="ssp-fontFamily_popinRegular ssp-color_monoBody ssp-disqualifyEffectDate">{card.EffectiveStartDate}</p>
+                                        </div>
+                                        <div class="ssp-effectiveEndDate">
+                                            <p class="ssp-color_monoOmega ssp-fontFamily_popinRegular ssp-disqualifyEffectContent">{label.sspDisqualificationEndDate}</p>
+                                            <p class="ssp-fontFamily_popinRegular ssp-color_monoBody ssp-disqualifyEffectDate">{card.EffectiveEndDate}</p>
+                                        </div>
+                                    </div>
+                                    <div class="ssp-cardViewContent">
+                                        <a class="ssp-fontFamily_popinRegular ssp-learnMore ssp-color_blueAlpha"
+                                            title={label.sspDisqualificationViewTitle}
+                                            data-metadata-id={card.DMSId}
+                                            onclick={downloadTheFile}
+                                            onkeydown={downloadTheFile}>
+                                            {label.sspDisqualificationView}
+                                        </a>
+                                    </div>
+                                </c-ssp-general-notice-card>
+                            </div>
+                    </template>
+                    </div>
+                </div>
+            </template>
+            </div>
+        </main>
+    </template>
+</template>

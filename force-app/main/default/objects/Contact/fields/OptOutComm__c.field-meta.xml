@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OptOutComm__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Indicates whether user has opted out of communications</description>
+    <externalId>false</externalId>
+    <label>Opt Out of Email/Text Communications</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>

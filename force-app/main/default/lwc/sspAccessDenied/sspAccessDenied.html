@@ -1,0 +1,41 @@
+<template>
+    <div class="slds-grid slds-wrap slds-is-relative">
+        <div class="ssp-sideImage"></div>
+        <div class="ssp-bodyContainer spp-bodyMargin">
+            <div class="slds-grid slds-wrap ssp-textPosition">
+                <div
+                    class="slds-grid slds-wrap slds-align_absolute-center ssp-headerIconText"
+                >
+                    <div>
+                        <img
+                            class="ssp-reviewIcon"
+                            src={needsReviewIconUrl}
+                            alt="review_icon"
+                        />
+                    </div>
+
+                    <div
+                        class="ssp-headerText ssp-color_monoBody ssp-fontFamily_popinBold  ssp-margin-bottom_x-large"
+                    >
+                        {labels.sspAccessDenied}
+                    </div>
+                </div>
+                <div
+                    class="ssp-infoText ssp-fontFamily_popinRegular slds-m-vertical_small ssp-color_monoOmega ssp-fontFamily_ArvoRegular  slds-size_1-of-1 "
+                >
+                    {labels.sspYouDoNotHaveAccess}
+                </div>
+                <div
+                    class="ssp-infoText ssp-fontFamily_popinRegular slds-m-vertical_small ssp-color_monoOmega ssp-fontFamily_ArvoRegular slds-size_1-of-1 "
+                >
+                    {labels.sspAccessScreenFromBookmark}
+                </div>
+                <div
+                    class="ssp-infoText ssp-fontFamily_popinRegular slds-m-vertical_small ssp-color_monoOmega ssp-fontFamily_ArvoRegular slds-size_1-of-1 "
+                >
+                    {labels.sspBookmarkHomePage}
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

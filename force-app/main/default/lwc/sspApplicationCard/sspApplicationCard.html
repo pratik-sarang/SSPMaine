@@ -1,0 +1,19 @@
+<!--
+* name              :sspApplicationCard
+* @description      : This is Application result/Summary Card generic component.
+* @author           : Chaitanya Kanakia 
+* @date             : 12/11/2019
+* MODIFICATION LOG:
+* DEVELOPER           DATE                DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+-->
+<template>
+    <div class="ssp-appCard ssp-boxShadow ssp-bg_whiteAlpha">
+        <div class="ssp-appCardHeader ssp-fontFamily_popinBold ssp-color_blueAlpha ssp-bg_monoDelta">
+            <p>{cardHeaderValue}</p>
+        </div>
+        <div class="ssp-appCardBody ssp-bg_whiteAlpha">
+           <slot></slot>
+        </div>
+    </div>
+</template>

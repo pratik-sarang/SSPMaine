@@ -1,0 +1,57 @@
+<template>
+    <div class="sspHeader">
+        {userAgreementHeader}
+    </div>
+
+
+    <ol class="ssp-ol">
+        <template for:each={splitTextList} for:item="line">
+            <li class="ssp-li" key={line}>
+                <p class="ssp-bulletPoints ">
+                    {line}
+                </p>
+            </li>
+        </template>
+    </ol>
+
+    
+
+    <div class="ssp-privacyPolicyDiv">
+        <a class="ssp-privacyPolicy" tabindex="0" role="button" onclick={openOverlay}
+            >{labels.sspPrivacyPolicyLink}
+        </a>
+    </div>
+    <div class="slds-m-bottom_margin">
+        <div class="slds-grid slds-wrap ssp-buttonDiv">
+            <div class="ssp-button slds-size_1-of-2 ssp-NoReject">
+                <button
+                    class="ssp-exitModalBtn ssp-fontSize_16 ssp-button_base"
+                    onclick={handleRejectClick}
+                >
+                    {labels.sspNoReject}
+                </button>
+            </div>
+            <div class="ssp-button slds-size_1-of-2">
+                <button
+                    class="ssp-exitModalBtn ssp-fontSize_16 ssp-button_brand"
+                    onclick={handleAcceptClick}
+                >
+                    {labels.sspYesAccept}
+                </button>
+            </div>
+        </div>
+    </div>
+
+    
+    <template if:true={openModal}>
+        <c-ssp-detailed-information-modal
+            header-value="Privacy Policy & Terms of Use"
+            onclosemodal={handleProp}
+            open-model="true"
+            reference={reference}
+            ><div slot="contentSlot">
+                <c-ssp-privacy-policy></c-ssp-privacy-policy>
+            </div>
+        </c-ssp-detailed-information-modal>
+    </template>
+</template>

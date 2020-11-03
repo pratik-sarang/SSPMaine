@@ -1,0 +1,71 @@
+<template>
+    <div class="ssp-pagination slds-m-vertical_large" if:true={showPagination}>
+        <ul class="ssp-pageBtnGrop">
+            <template if:true={isFirstPage}>
+                <li class="slds-button-group-item ssp-pageButtonList">
+                    <a href="javascript:void(0)" class="ssp-pageButton ssp-fontFamily_popinBold" data-id={firstPageNumber}  onclick={onFirstPageClick}>{firstPageNumber}</a>
+                </li>
+                <template if:true={isFirstPageEllipses}>
+                    <li class="slds-button-group-item ssp-pageButtonList">
+                        <span class="ssp-pageButton-elipses ssp-fontFamily_popinBold" onclick={getPreviousPageList}>...</span>
+                    </li>
+                </template>
+            </template>
+            <template for:each={pagesList} for:item= "pageNumber">
+                <li class="slds-button-group-item ssp-pageButtonList" key={pageNumber}>
+                    <a href="javascript:void(0)" class="ssp-pageButton ssp-fontFamily_popinBold" data-id={pageNumber}  onclick={onPageClick}>{pageNumber}</a>
+                </li>
+            </template>
+            <template if:true={isLastPage}>
+                <template if:true={isPageEllipses}>
+                    <li class="slds-button-group-item ssp-pageButtonList">
+                        <span class="ssp-pageButton-elipses ssp-fontFamily_popinBold" onclick={getNextPageList}>...</span>
+                    </li>
+                </template>
+                <li class="slds-button-group-item ssp-pageButtonList">
+                    <a href="javascript:void(0)" class="ssp-pageButton ssp-fontFamily_popinBold" data-id={lastPageNumber}  onclick={onLastPageClick}>{lastPageNumber}</a>
+                </li>
+            </template>
+            <li class="slds-button-group-item ssp-desktopPagination">
+                <lightning-button 
+                label={customLabels.sspPrevious}
+                class="slds-button ssp-button_base ssp-paginationPrevious" 
+                disabled={hasPrevDisable} 
+                    onclick={onPrev}
+                    title={customLabels.goPreviousResults}
+                >
+                </lightning-button>
+            </li>
+            <li class="slds-button-group-item ssp-desktopPagination">
+                <lightning-button
+                    label={customLabels.sspNext}
+                    class="slds-button ssp-button_base ssp-paginationNext"
+                    disabled={hasNextDisable}
+                        title={customLabels.goMoreResults}
+                    onclick={onNext}
+                >
+                </lightning-button>
+            </li>
+            <li class="slds-button-group-item ssp-mobilePagination">
+                <lightning-button 
+                label={customLabels.previousIcon}
+                class="slds-button ssp-button_base ssp-paginationPreviousMobile" 
+                disabled={hasPrevDisable} 
+                    title={customLabels.goPreviousResults}
+                    onclick={onPrev}
+                >
+                </lightning-button>
+            </li>
+            <li class="slds-button-group-item ssp-mobilePagination">
+                <lightning-button
+                    label={customLabels.nextIcon}
+                    class="slds-button ssp-button_base ssp-paginationNextMobile"
+                    disabled={hasNextDisable}
+                    onclick={onNext}
+                    title={customLabels.goMoreResults}
+                >
+                </lightning-button>
+            </li>
+        </ul>
+    </div>
+</template>

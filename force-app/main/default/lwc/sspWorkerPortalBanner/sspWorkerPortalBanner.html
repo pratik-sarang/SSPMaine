@@ -1,0 +1,24 @@
+<!--
+* name          : sspWorkerPortalBanner.
+* @description  : This a component show notice for case holder
+* @author       : Chirag.
+* @date         : 05/21/2020
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName                MM/DD/YYYY               A Brief Description about the Change
+  Chirag                       05/21/2020                          Initial Version
+-->
+<template>
+    <div class="ssp-workPortalBanner">
+    <c-ssp-explicit-notice-card>
+        <div>
+            {label.sspWorkerPortalBannerContent}
+            <span><a href={callUsAt}
+                    class="ssp-color_blueAlpha slds-m-left_xx-small">
+                    {label.startBenefitsAppCallNumber}.</a>
+            </span>
+        </div>
+    </c-ssp-explicit-notice-card>
+    </div>
+</template>

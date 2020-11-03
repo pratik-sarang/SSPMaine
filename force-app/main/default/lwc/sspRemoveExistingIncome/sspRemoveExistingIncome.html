@@ -1,0 +1,69 @@
+<!--
+* name 		: sspRemoveExistingIncome
+* @description 	: This component deals with removing of income existing details
+* @author 		: Anuja and Kireeti and chirag
+* @date 		: 11/27/2019
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName	      MM/DD/YYYY	      A Brief Description 
+						       about the Change
+-->
+
+<template>
+    <template if:true={showSpinner}>
+        <c-ssp-spinner></c-ssp-spinner>
+    </template>
+    <main class="slds-m-vertical_large ssp-bodyContainer" role="main">
+        <div class="ssp-errorToast" if:true={hasSaveValidationError}>
+            <c-ssp-toast ssp-toast-title-val={label.toastErrorText} show-error-toast={trueValue}
+                onhidetoast={hideToast}></c-ssp-toast>
+        </div>
+        <!-- CD2 2.5 Security Role Matrix. -->
+        <div if:true={isPageAccessible} class="slds-p-vertical_x-large ssp-remove-income-form">
+            <div>
+                <h1
+                    class="ssp-income-details-header-text ssp-modalBlackHeaderSubText ssp-fontFamily_popinBold ssp-color_monoBody  ssp-content slds-p-bottom_large">
+                    {stoppedReceivingText}
+                </h1>
+            </div>
+
+            <template for:each={existingIncomes} for:item="income" for:index="index">
+                <!-- CD2 2.5 Security Role Matrix. -->
+                <c-ssp-remove-existing-income-details end-reasons={endReasons} key={income.Id} income-obj={income}
+                    meta-data-list-parent={MetaDataListParent} class="removeExistingIncome"
+                    onchange={handleCheckboxChange} oncancel={handleCheckboxChange} applied-programs={appliedPrograms}
+                    disabled={isRecordDisabled} time-travel-date={timeTravelDate}></c-ssp-remove-existing-income-details>
+            </template>
+
+            <div>
+                <div class="ssp-multipleCheckbox_container">
+                    <!-- CD2 2.5 Security Role Matrix. -->
+                    <c-ssp-base-component-multiline-input-checkbox onhandlemultiselectchange={handleCheckBoxValue}
+                        hide-additional-fields="true" class="removeIncome  slds-size_1-of-1" disabled={isLastCheckboxDisabled}>
+                        <div slot="labelContent"
+                            class="slds-large-size_1-of-1 slds-size_1-of-1 ssp-singleLineCheckboxLabel  ssp-labelLine1 ssp-fontFamily_popinBold">
+                            {incomeNotChangedLabel}
+                        </div>
+                    </c-ssp-base-component-multiline-input-checkbox>
+                    <!--<c-ssp-base-component-input-checkbox
+                            label={incomeNotChangedLabel}
+                            value={incomeNotChangedValue}                           
+                            title="Detail not changed question"
+                            class="removeIncome ssp-cbWithCompleteBorder slds-m-bottom_small slds-size_1-of-1"                          
+                            disabled={disabled}
+                            handle-change="true"
+                            onchange={handleCheckBoxValue}
+                        >
+                        </c-ssp-base-component-input-checkbox>-->
+                </div>
+                <span class="ssp-color_redOmega" role="alert" aria-atomic="true" if:true={noIncomeSelected}>{label.sspSelectResourceErrorMessage}</span>
+
+            </div>
+        </div>
+    </main>
+    <!-- CD2 2.5 Security Role Matrix. -->
+    <template if:true={showAccessDeniedComponent}>
+        <c-ssp-access-denied></c-ssp-access-denied>
+    </template>
+</template>

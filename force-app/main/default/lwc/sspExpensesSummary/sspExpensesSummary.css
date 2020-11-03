@@ -1,0 +1,25 @@
+.ssp-info_fontSize {
+    font-size: 1rem;
+}
+.ssp-learnMore {
+    font-size: 0.8125rem;
+}
+.ssp-learnMore:hover,
+.ssp-learnMore:focus {
+    text-decoration: none;
+}
+.ssp-existingSection {
+    width: 770px;
+    margin: 1.5rem auto 0;
+}
+.ssp-bottom-gap {
+  margin-bottom: 84px;
+}
+
+@media only screen and (max-width: 768px) {
+    .ssp-existingSection {
+        width: 100%;
+        margin: unset;
+        padding: 30px;
+    }
+}

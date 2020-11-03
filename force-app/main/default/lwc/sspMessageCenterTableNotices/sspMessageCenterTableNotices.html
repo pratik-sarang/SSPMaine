@@ -1,0 +1,169 @@
+<!--
+* name          : sspMessageCenterTableNotices
+* @description  : To Show Notices table in message center.
+* @author       : Chirag , Gunjyot, Aniket
+* @date         : 07/01/2020
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName                MM/DD/YYYY               A Brief Description about the Change
+  Chirag                       07/01/20                            Development
+-->
+
+<template>
+    <template if:true={showSpinner}>
+        <c-ssp-spinner></c-ssp-spinner>
+    </template>
+    <div class="ssp-message-table">
+        <template if:true={noSearchFound}>
+        <div class="ssp-noSearchFoundContainer"> 
+            <div class="ssp-sideImage">
+           <p class="ssp-noMatchFound ssp-color_monoBody ssp-fontFamily_popinBold">{customLabel.sspMessageCenterNoMatchFound}</p>
+              </div>
+        </div>
+        </template>
+        <template if:false={noSearchFound}>
+        <div class="ssp-message-desktop-view">
+            <table
+                class="slds-table slds-table--cell-buffer ssp-message-center-table ssp-fontFamily_popinBold"
+            >
+            <caption class="slds-hide">Notice Caption</caption>
+            <template if:false={isSearch}>
+                
+ 
+                <thead class="slds-hide">
+                    <tr>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+            </template>
+            <template if:true={isSearch}>
+                 <thead>
+                    <tr class="slds-text-heading--label" key={column}>
+                        <template for:each={tableColumns} for:item="column">
+                            <th
+                                class="ssp-bg_monoAlpha ssp-table-header-txtcolor ssp-color_monoBody "
+                                key={column}
+                                scope="col"
+                            >
+                                <span>{column.columnName}</span>
+                                <span
+                                    if:true={column.isSort}
+                                    class="ssp-action-image-container ssp-bg_monoAlpha "
+                                >
+                                    <a class={row} onclick={sortByKey}>
+                                        <img
+                                            class="ssp-sort-image"
+                                            src={iconUrl}
+                                            alt="icon"
+                                        />
+                                    </a>
+                                </span>
+                            </th>
+                        </template>
+                    </tr>
+                </thead> 
+                </template>
+                <tbody>
+                    <template for:each={messageTableData} for:item="row">
+                        <template if:false={row.readStatus}>
+                        <tr class="ssp-message-center-table-row" key={row}>
+                            <td class="ssp-app-details ssp-color_monoBody">
+                            <template if:true={row.dmsDocID}>
+                                <p class="ssp-color_blueAlpha"><a class="ssp-color_blueAlpha "  tabindex="0" data-document-name={row.subject} data-metadata-id={row.dmsId} data-extension={row.subject} onclick={downloadTheFile} onkeydown={downloadTheFile} data-id ={row.sfdcId}>{row.subject}</a></p>
+                            </template>
+                            <template if:false={row.dmsDocID}>
+                                <p class="ssp-color_blueAlpha ">{row.subject}</p>
+                            </template>
+                            </td>
+                            <td class="ssp-app-filter ssp-color_monoBody">
+                                <div>{row.createdTimeStamp}</div>
+                            </td>
+                        </tr>
+                        </template>
+                         <template if:true={row.readStatus}>
+                        <tr class="ssp-message-center-table-row ssp-message-center-table-row-read ssp-bg_monoDelta" key={row}>
+                            <td class="ssp-app-details ssp-color_monoBody">
+                            <template if:true={row.dmsDocID}>
+                                <p class="ssp-color_monoOmega"><a class="ssp-color_monoOmega ssp-fontFamily_popinRegular"  tabindex="0" data-document-name={row.subject} data-metadata-id={row.dmsId} data-extension={row.subject} onclick={downloadTheFile} onkeydown={downloadTheFile} data-id ={row.sfdcId}>{row.subject}</a></p>
+                            </template>
+                            <template if:false={row.dmsDocID}>
+                                <p class="ssp-color_monoOmega ssp-fontFamily_popinRegular">{row.subject}</p>
+                            </template>
+                            </td>
+                            <td class="ssp-app-filter ssp-color_monoBody">
+                                <div>{row.createdTimeStamp}</div>
+                            </td>
+                        </tr>
+                        </template> 
+                    </template>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="ssp-message-mobile-view ssp-fontFamily_popinBold">
+            <template if:true={isSearch}>
+             <div class="ssp-message-tbl-header ssp-bg_monoAlpha ">
+                <template for:each={tableColumns} for:item="column">
+                    <span
+                        key={column}
+                        class="ssp-tbl-header-content ssp-message-center-table-header "
+                    >
+                        <span>{column.columnName}</span>
+                        <span
+                            class="ssp-action-image-container ssp-sort-image-container ssp-color_monoBody ssp-bg_white"
+                            if:true={column.isSort}
+                        >
+                            <a class={column} onclick={sortByKey}>
+                                <img
+                                    class="ssp-sort-image"
+                                    src={iconUrl}
+                                    alt="icon"
+                                />
+                            </a>
+                        </span>
+                    </span>
+                </template>
+            </div>
+            </template>
+            <template for:each={messageTableData} for:item="row">
+                <template if:false={row.readStatus}>
+                <div key={row} class="ssp-message-center-table-row">
+                    <div class="ssp-app-manager-details">
+                    <template if:false={row.dmsDocID}>
+                        <p class="ssp-color_blueAlpha ssp-fontFamily_popinBold">{row.subject}</p>
+                    </template>
+                    <template if:true={row.dmsDocID}>
+                        <p class="ssp-color_blueAlpha"><a class="ssp-color_blueAlpha ssp-fontFamily_popinBold"  tabindex="0" data-document-name={row.subject} data-metadata-id={row.dmsId} data-extension={row.subject} onclick={downloadTheFile} onkeydown={downloadTheFile} data-id ={row.sfdcId}>{row.subject}</a></p>
+                    </template>
+                    </div>
+                    <div class="ssp-manager-filter-container">
+                        <p class="ssp-app-filter ssp-color_monoBody">
+                            {row.createdTimeStamp}
+                        </p>
+                    </div>
+                </div>
+                </template>
+                <template if:true={row.readStatus}>
+                <div key={row} class="ssp-message-center-table-row ssp-message-center-table-row-read">
+                    <div class="ssp-app-manager-details">
+                        <template if:true={row.dmsDocID}>
+                        <p class="ssp-color_monoOmega"><a class="ssp-color_monoOmega ssp-fontFamily_popinRegular"  tabindex="0" data-document-name={row.subject} data-metadata-id={row.dmsId} data-extension={row.subject} onclick={downloadTheFile} onkeydown={downloadTheFile} data-id ={row.sfdcId}>{row.subject}</a></p>
+                    </template>
+                    <template if:false={row.dmsDocID}>
+                        <p class="ssp-color_monoOmega ssp-fontFamily_popinRegular">{row.subject}</p>
+                    </template>
+                    </div>
+                    <div class="ssp-manager-filter-container">
+                        <p class="ssp-app-filter ssp-color_monoBody">
+                            {row.createdTimeStamp}
+                        </p>
+                    </div>
+                </div>
+                </template>
+            </template>
+        </div>
+        </template>
+    </div>
+</template>

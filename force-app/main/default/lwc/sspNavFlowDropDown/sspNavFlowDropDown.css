@@ -1,0 +1,49 @@
+.slds-button-group .slds-button-group-list {
+        display: block;
+    	width: 100%;
+}
+
+.slds-button-group-list .slds-button {
+    width: 100%;
+    border-width : 0px;
+    text-align : left;
+}
+
+.slds-button_icon-border-filled.slds-is-selected {
+    background: rgb(0, 112, 210);
+}   
+.ssp-navFlowDropdownCon{
+    border-top: 1.5px solid #DADEE4;
+    border-bottom: 1.5px solid #DADEE4;
+    width: 100%;
+    display: block;
+}
+.ssp-dropdownMenu{
+    border-radius: 0;
+    -webkit-appearance: none;
+    font-family: Poppins-Bold;
+    font-size: 16px;
+    letter-spacing: .3px;
+    background-image: url(../resource/sspOverviewIcons/icons/ic_dropdown/ic_dropdown@3x.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 74px;
+    background-size: 24px 24px;
+    width: 100%;
+    background-position: 46%;
+    margin: 0 auto;
+    display: block;
+    width: 770px;
+    border: 0;
+}
+.ssp-sectionDropdownSelect::-ms-expand{
+    display: none;
+}
+@media only screen and (max-width: 768px) {
+.ssp-dropdownMenu{
+    padding: 0 30px;
+    background-position: 92%;
+    width: 100%;
+    margin: unset;
+}
+}

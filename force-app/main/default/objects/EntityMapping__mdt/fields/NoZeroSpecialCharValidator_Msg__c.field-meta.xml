@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NoZeroSpecialCharValidator_Msg__c</fullName>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>NoZeroSpecialCharValidator_Msg</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Please enter a valid Alien Number with no special characters.</fullName>
+                <default>true</default>
+                <label>Please enter a valid Alien Number with no special characters.</label>
+            </value>
+            <value>
+                <fullName>Please enter a valid SEVIS ID with no special characters.</fullName>
+                <default>false</default>
+                <label>Please enter a valid SEVIS ID with no special characters.</label>
+            </value>
+            <value>
+                <fullName>Please enter a valid Number with a maximum of 12 characters.</fullName>
+                <default>false</default>
+                <label>Please enter a valid Number with a maximum of 12 characters.</label>
+            </value>
+            <value>
+                <fullName>Please enter a valid I-94 Number with no special characters.</fullName>
+                <default>false</default>
+                <label>Please enter a valid I-94 Number with no special characters.</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

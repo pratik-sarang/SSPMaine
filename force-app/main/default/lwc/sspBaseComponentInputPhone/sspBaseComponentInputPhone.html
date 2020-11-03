@@ -1,0 +1,33 @@
+<!--
+* name            : sspBaseComponentInputPhone
+* @description    : Generic component for Input Phone.
+-->
+<template>
+    <div class="ssp-genericInput">
+        <lightning-input
+            name={name}
+            label={label}
+            title={title}
+            value={value}
+            onblur={handleValidations}
+            onkeyup={maskPhoneNumber}
+            onkeypress={restrictNonNumeric}
+            onchange={handleValidations}
+            disabled={isDisabled}
+            type="tel"
+            placeholder={placeholder}
+            max-length={maxLength}
+        ></lightning-input>
+        <template for:each={ErrorMessageList} for:item="error">
+            <p
+                role="alert"
+                aria-atomic="true"
+                tabindex="0"
+                key={error}
+                class="ssp-showError ssp-color_redAlpha"
+            >
+                {error}
+            </p>
+        </template>
+    </div>
+</template>

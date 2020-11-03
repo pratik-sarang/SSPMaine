@@ -1,0 +1,29 @@
+.ssp-KIHIPPConsentContentContainer .ssp-marginBottomThirty {
+    margin-bottom: 1.875rem;
+}
+.ssp-KIHIPPConsentContentContainer .ssp-KIHIPPConsentOrderedList {
+    list-style-type: decimal;
+    padding-left: 1.2rem;
+}
+.ssp-KIHIPPConsentContentContainer .ssp-KIHIPPConsentUnOrderedMainList {
+    list-style-type: disc;
+    padding-left: 1.2rem;
+}
+.ssp-KIHIPPConsentContentContainer .ssp-KIHIPPConsentUnOrderedList li {
+    position: relative;
+    list-style: none;
+    padding-left: 1.25rem;
+}
+.ssp-KIHIPPConsentContentContainer .ssp-KIHIPPConsentUnOrderedList li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 9px;
+    width: 5px;
+    display: block;
+    border-top: 2px solid #66686d;
+}
+.ssp-focus-element:focus,
+.ssp-KIHIPPConsentUnOrderedMainList li:focus {
+    outline: none;
+}

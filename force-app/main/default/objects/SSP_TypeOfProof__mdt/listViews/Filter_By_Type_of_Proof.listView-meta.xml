@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Filter_By_Type_of_Proof</fullName>
+    <columns>MasterLabel</columns>
+    <columns>DeveloperName</columns>
+    <columns>TypeOfProof__c</columns>
+    <columns>DocumentType__c</columns>
+    <columns>IsRecommended__c</columns>
+    <columns>K_Hipp_Proof__c</columns>
+    <columns>Task_Code__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>K_Hipp_Proof__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>Filter By Type of Proof</label>
+    <language>en_US</language>
+</ListView>

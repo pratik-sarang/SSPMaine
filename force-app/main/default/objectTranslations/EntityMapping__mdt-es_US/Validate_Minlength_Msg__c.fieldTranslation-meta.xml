@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Validate_Minlength_Msg --></label>
+    <name>Validate_Minlength_Msg__c</name>
+    <picklistValues>
+        <masterLabel>Data too short</masterLabel>
+        <translation><!-- Data too short --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Please enter a valid Number with a maximum of 12 characters.</masterLabel>
+        <translation>Ingresar un número válido con un máximo de 12 caracteres.</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Please only enter 4-17 characters.</masterLabel>
+        <translation>Ingresar entre 4 y 17 caracteres.</translation>
+    </picklistValues>
+</CustomFieldTranslation>

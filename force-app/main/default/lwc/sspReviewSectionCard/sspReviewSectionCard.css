@@ -1,0 +1,28 @@
+.ssp-ReviewCard{
+    border-radius: 6px;
+    padding: 15px 30px 15px 30px;
+}
+
+.ssp-ReviewCardText{
+    font-size: 16px;	
+    letter-spacing: -0.3px;	
+    line-height: 20px;
+}
+
+.ssp-ReviewCardIcon{
+    height: 24px;
+    width: 24px;
+}
+
+@media only screen and (max-width: 768px){
+    .ssp-ReviewCard{
+        padding: 15px 24px 15px 24px;
+    }
+}
+@media only screen and (max-width: 350px){
+    .ssp-ReviewCardText{
+        font-size: 14px;		
+        letter-spacing: -0.3px;	
+        line-height: 20px;
+    }
+}

@@ -1,0 +1,28 @@
+.ssp-learnMore {
+    font-size: 0.8125rem;
+    text-decoration: underline;
+    letter-spacing: -0.01875rem;
+    line-height: 1.875rem;
+    text-underline-position: under;
+}
+.ssp-fontSize {
+    font-size: 1rem;
+}
+.ssp-completeThe {
+    letter-spacing: -0.01875rem;
+    line-height: 1.5rem;
+    margin-top: 1.875rem;
+}
+.ssp-notAll {
+    letter-spacing: -0.01875rem;
+    line-height: 1.5rem;
+}
+.ssp-bodyContainer{
+    margin-bottom: 6.25rem;
+}
+.ssp-otherresourceSelectionInputs{
+ padding-top: 1.875rem;
+}
+.ssp-borderLine{
+    height:0.0625rem;
+}

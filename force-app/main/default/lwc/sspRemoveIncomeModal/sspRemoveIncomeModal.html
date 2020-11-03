@@ -1,0 +1,72 @@
+<!-- 
+* name 		      : sspRemoveIncomeModal
+* @description 	: Modal for warn user to edit income if not then remove it.
+* @author 		   : Chirag and Shrikant
+* @date 		      : 11/19/2019
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+*       
+-->
+
+<template>
+    <template if:true={openModel}>
+    <c-ssp-detailed-information-modal
+      header-value={label.sspRemoveIncomeQuestionMark}
+      open-model={openModel} onclosemodal={closeModal} reference={reference}
+    >
+      <div slot="contentSlot">
+        <div class="ssp-content slds-p-top_bottom">
+          <p>
+            <span
+              class="ssp-modalBlackHeaderSubText ssp-fontFamily_popinRegular ssp-color_monoOmega"
+              >{lineOne}</span
+            >
+          </p>
+          <p>
+            <span
+              class="ssp-modalBlueHeaderSubText ssp-fontFamily_popinBold ssp-color_monoBody"
+              >{lineTwo}</span
+            >
+          </p>
+          <p class="ssp-contentChild slds-p-top_large">
+            <span
+              class="ssp-modalBlackHeaderSubText ssp-fontFamily_popinRegular ssp-color_monoOmega"
+              >{label.sspRemoveIncomeModalContent1} {memberName}
+              {label.sspRemoveIncomeModalContent2}</span
+            >
+          </p>
+          <p class="ssp-contentChild slds-p-top_large">
+            <span
+              class="ssp-modalBlackHeaderSubText ssp-fontFamily_popinRegular ssp-color_monoOmega"
+              >{label.sspRemoveIncomeModalContent3}</span
+            >
+          </p>
+          <p class="ssp-contentChild slds-p-top_large">
+            <span
+              class="ssp-modalBlackHeaderSubText ssp-fontFamily_popinRegular ssp-color_monoOmega"
+              >{label.sspRemoveIncomeModalContent4}</span
+            >
+          </p>
+        </div>
+      </div>
+
+      <span slot="Footer" class="ssp-modalFooter ssp-stacked-btn-width">
+        <lightning-button
+          variant="brand"
+          label={label.sspRemoveIncome}
+          class="ssp-button_brand ssp-fontFamily_popinBold "
+          onclick={removeIncome}
+        ></lightning-button>
+        <div class="ssp-buttonContainer">
+        <lightning-button
+          variant="neutral"
+          label={label.sspCancel}
+          class="ssp-button_base slds-m-top_medium ssp-fontFamily_popinBold"
+          onclick={closeModal}
+        ></lightning-button>
+        </div>
+      </span>
+    </c-ssp-detailed-information-modal>
+    </template>
+</template>

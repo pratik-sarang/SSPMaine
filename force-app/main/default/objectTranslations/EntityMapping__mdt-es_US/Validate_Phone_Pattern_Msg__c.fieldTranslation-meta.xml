@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Validate_Phone_Pattern_Msg --></label>
+    <name>Validate_Phone_Pattern_Msg__c</name>
+    <picklistValues>
+        <masterLabel>Please enter a valid 10-digit number in the following format: 123-456-7890</masterLabel>
+        <translation>Ingresar un número válido de 10 dígitos en el siguiente formato: 123-456-7890</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Please enter phone number in correct format</masterLabel>
+        <translation><!-- Please enter phone number in correct format --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

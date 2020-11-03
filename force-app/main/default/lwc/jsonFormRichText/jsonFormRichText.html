@@ -1,0 +1,67 @@
+<template>
+    <template if:true={isNoticeCard}>
+        <div
+            class="slds-col slds-size_1-of-1 ssp-warningCard ssp-appTable_borderBottom"
+        >
+            <c-ssp-general-notice-card notice-type={noticeType}>
+                <lightning-formatted-rich-text
+                    value={noticeText}
+                    class="dd-richtext"
+                >
+                </lightning-formatted-rich-text>
+            </c-ssp-general-notice-card>
+        </div>
+    </template>
+
+    <template if:true={isFormattedText}>
+        <div
+            class="ssp-fontFamily_ArvoRegular ssp-color_monoOmega ssp-formatted-richtext"
+        >
+            <lightning-formatted-rich-text
+                value={formattedText}
+                class="dd-richtext"
+            >
+            </lightning-formatted-rich-text>
+        </div>
+    </template>
+
+
+    <template if:true={isFormattedIconText}>
+        <div class="ssp-formattedIconTextContainer">
+            <div class="ssp-marginBottomFifteen ssp-formattedTextIcon">
+                <img
+                    class="ssp-iconSize"
+                    src={img}
+					alt={altImg}
+                    aria-hidden="true"
+                    role="presentation"
+                />
+            </div>
+            <div class="ssp-formattedIconTextContent">
+                <lightning-formatted-rich-text
+                    value={formattedText}
+                    class="dd-richtext"
+                >
+                </lightning-formatted-rich-text>
+            </div>
+        </div>
+    </template>
+
+    <template if:true={isResultCard}>
+        <c-json-elig-result-card
+            title={cardTitle}
+            pgm-info={cardContent}
+            elig-result={eligResult}
+            custom-labels={customLabels}
+			has-button={hasButton}
+            btn-label={btnLabel}
+            btn-title={btnTitle}
+            variant={variant}
+            goto-page-type={gotoPageType}
+            goto-url={resultCardBtnUrl}
+        ></c-json-elig-result-card>
+    </template>
+
+
+
+</template>

@@ -1,0 +1,4 @@
+:host {
+    /** make the host DOM to disappear to apply correct SLDS styles. **/ 
+    display: contents;
+}

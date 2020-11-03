@@ -1,0 +1,221 @@
+<!--
+* name 		    : sspCommunityIntegrationSupplementation
+* @description 	: This component takes information if the individual is requesting for CIS due to mental illness.
+* @author 		: Shekhar Chandra And Nikhil Shinde
+* @date 		: 22-04-2020
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* Nikhil Shinde                04/29/2020	            Implemented changes regarding coding conventions 
+
+-->
+
+<template>
+    <template if:true={showSpinner}>
+        <c-ssp-spinner></c-ssp-spinner>
+    </template>
+    <div class="ssp-bodyContainer">
+        <div
+            class="ssp-fontFamily_ArvoRegular ssp-cisQuestionsText ssp-color_monoOmega slds-m-bottom_x-large slds-m-top_x-large"
+        >
+            {label.sspCISCompleteQuestionsText}
+        </div>
+
+        <div class="ssp-cisDetailsContainer">
+            <h2
+                class="ssp-cisHeaderText ssp-fontFamily_popinBold ssp-color_blueAlpha"
+            >
+                {label.sspCISDetails}
+            </h2>
+            <div class="ssp-cisHr ssp-bg_monoAlpha"></div>
+            <div class="slds-grid slds-wrap ssp-cisWidth">
+                <template if:true={renderingMap.CISStartDate__c.renderElement}>
+                    <div
+                        class="slds-col slds-large-size_6-of-12 slds-medium-size_1-of-1 slds-small-size_1-of-1 slds-size_1-of-1 ssp-startDate"
+                    >
+                        <c-ssp-base-component-input-date
+                            data-num="0"
+                            class="ssp-applicationInputs ssp-inputStartDate ssp-cisWidth"
+                            label={label.sspCISStartDate}
+                            data-id="CISStartDate__c"
+                            entity-name="SSP_ApplicationIndividual__c"
+                            field-name="CISStartDate__c"
+                            meta-list={metaDataListParent}
+                            value={appIndividual.CISStartDate__c}
+                            onchange={handleStartDateChange}
+                            disabled={renderingMap.CISStartDate__c.isDisabled}
+                        >
+                        </c-ssp-base-component-input-date>
+                    </div>
+                </template>
+                <template if:true={renderingMap.CISEndDate__c.renderElement}>
+                    <div
+                        class="slds-col slds-large-size_6-of-12 slds-medium-size_1-of-1 slds-small-size_1-of-1 slds-size_1-of-1 ssp-endDate"
+                    >
+                        <c-ssp-base-component-input-date
+                            class="ssp-applicationInputs ssp-inputEndDate ssp-cisWidth"
+                            label={label.sspCISEndDate}
+                            data-id="CISEndDate__c"
+                            entity-name="SSP_ApplicationIndividual__c"
+                            field-name="CISEndDate__c"
+                            comparing-date={appIndividual.CISStartDate__c}
+                            meta-list={metaDataListParent}
+                            value={appIndividual.CISEndDate__c}
+                            disabled={renderingMap.CISEndDate__c.isDisabled}
+                        ></c-ssp-base-component-input-date>
+                    </div>
+                </template>
+            </div>
+            <template
+                if:true={renderingMap.MentalIllnessImpairsFunctioningToggle__c.renderElement}
+            >
+                <div class="slds-grid slds-wrap ssp-cisToggleQuestions">
+                    <c-ssp-base-component-input-toggle
+                        class="ssp-applicationInputs slds-large-size_1-of-1 slds-size_1-of-1"
+                        label={label.sspCISHasHadAMentalIllness}
+                        data-id="MentalIllnessImpairsFunctioningToggle__c"
+                        entity-name="SSP_ApplicationIndividual__c"
+                        field-name="MentalIllnessImpairsFunctioningToggle__c"
+                        meta-list={metaDataListParent}
+                        options={yesNoPicklist}
+                        value={appIndividual.MentalIllnessImpairsFunctioningToggle__c}
+                        disabled={renderingMap.MentalIllnessImpairsFunctioningToggle__c.isDisabled}
+                    >
+                    </c-ssp-base-component-input-toggle>
+                </div>
+            </template>
+            <template
+                if:true={renderingMap.MentalIllnessNeedsTreatmentToggle__c.renderElement}
+            >
+                <div class="slds-grid slds-wrap ssp-cisToggleQuestions">
+                    <c-ssp-base-component-input-toggle
+                        class="ssp-applicationInputs slds-large-size_1-of-1 slds-size_1-of-1"
+                        label={label.sspCISUnlikelyToImproveWithoutTreatment}
+                        data-id="MentalIllnessNeedsTreatmentToggle__c"
+                        entity-name="SSP_ApplicationIndividual__c"
+                        field-name="MentalIllnessNeedsTreatmentToggle__c"
+                        meta-list={metaDataListParent}
+                        options={yesNoPicklist}
+                        value={appIndividual.MentalIllnessNeedsTreatmentToggle__c}
+                        disabled={renderingMap.MentalIllnessNeedsTreatmentToggle__c.isDisabled}
+                    ></c-ssp-base-component-input-toggle>
+                </div>
+            </template>
+            <template
+                if:true={renderingMap.MentalIllnessWithoutAlzheimersToggle__c.renderElement}
+            >
+                <div class="slds-grid slds-wrap ssp-cisToggleQuestions">
+                    <c-ssp-base-component-input-toggle
+                        class="ssp-applicationInputs slds-large-size_1-of-1 slds-size_1-of-1"
+                        label={label.sspCISWhichDoesNotIncludePrimaryDiagnosis}
+                        data-id="MentalIllnessWithoutAlzheimersToggle__c"
+                        entity-name="SSP_ApplicationIndividual__c"
+                        field-name="MentalIllnessWithoutAlzheimersToggle__c"
+                        meta-list={metaDataListParent}
+                        options={yesNoPicklist}
+                        value={appIndividual.MentalIllnessWithoutAlzheimersToggle__c}
+                        disabled={renderingMap.MentalIllnessWithoutAlzheimersToggle__c.isDisabled}
+                    ></c-ssp-base-component-input-toggle>
+                </div>
+            </template>
+            <template
+                if:true={renderingMap.IsServiceStoppingInstitutalizationToggle__c.renderElement}
+            >
+                <div class="slds-grid slds-wrap ssp-cisToggleQuestions">
+                    <c-ssp-base-component-input-toggle
+                        class="ssp-applicationInputs slds-large-size_1-of-1 slds-size_1-of-1"
+                        label={label.sspCISPreventedFromBeingInstitutionalized}
+                        data-id="IsServiceStoppingInstitutalizationToggle__c"
+                        entity-name="SSP_ApplicationIndividual__c"
+                        field-name="IsServiceStoppingInstitutalizationToggle__c"
+                        meta-list={metaDataListParent}
+                        options={yesNoPicklist}
+                        value={appIndividual.IsServiceStoppingInstitutalizationToggle__c}
+                        disabled={renderingMap.IsServiceStoppingInstitutalizationToggle__c.isDisabled}
+                    >
+                    </c-ssp-base-component-input-toggle>
+                </div>
+            </template>
+        </div>
+
+        <div class="ssp-cisCareCoordinator">
+            <h2
+                class="ssp-cisHeaderText ssp-fontFamily_popinBold ssp-color_blueAlpha"
+            >
+                {label.sspCISCareCoordinatorDetails}
+            </h2>
+            <div class="ssp-cisHr ssp-bg_monoAlpha"></div>
+            <template
+                if:true={renderingMap.CareCoordinatorRelationship__c.renderElement}
+            >
+                <div
+                    class="slds-grid slds-wrap ssp-cisMarginBottom slds-large-size_1-of-2 slds-size_1-of-1 ssp-componentWidth"
+                >
+                    <c-ssp-base-component-input-picklist
+                        title={CareCoordinatorRelationship}
+                        class="ssp-applicationInputs ssp-inputExpectedCount slds-large-size_1-of-2 slds-size_1-of-1 ssp-cisComponentWidth"
+                        label={label.sspCISWhoCoordinates}
+                        data-id="CareCoordinatorRelationship__c"
+                        entity-name="SSP_ApplicationIndividual__c"
+                        field-name="CareCoordinatorRelationship__c"
+                        meta-list={metaDataListParent}
+                        option={CISRelations}
+                        value={appIndividual.CareCoordinatorRelationship__c}
+                        disabled={renderingMap.CareCoordinatorRelationship__c.isDisabled}
+                    >
+                    </c-ssp-base-component-input-picklist>
+                </div>
+            </template>
+            <template
+                if:true={renderingMap.CareCoordinatorName__c.renderElement}
+            >
+                <div
+                    class="slds-grid slds-wrap slds-size_1-of-1 slds-m-bottom_xx-small ssp-cisComponentWidth"
+                >
+                    <c-ssp-base-component-input-text
+                        class="ssp-applicationInputs slds-large-size_1-of-2 slds-size_1-of-1 ssp-cisWidth"
+                        label={label.sspCISCoordinatorName}
+                        entity-name="SSP_ApplicationIndividual__c"
+                        field-name="CareCoordinatorName__c"
+                        meta-list={metaDataListParent}
+                        data-id="CareCoordinatorName__c"
+                        value={appIndividual.CareCoordinatorName__c}
+                        disabled={renderingMap.CareCoordinatorName__c.isDisabled}
+                    ></c-ssp-base-component-input-text>
+                </div>
+            </template>
+
+            <div class="slds-grid slds-wrap slds-m-bottom_medium">
+                <c-ssp-address-auto-complete
+                    class="addressLineClass ssp-address1 ssp-applicationInputs ssp-cisWidth slds-large-size_1-of-2 slds-medium-size_1-of-2 slds-small-size_1-of-1 slds-size_1-of-1"
+                    record={addressRecord}
+                    field-map={fieldMap}
+                    meta-list={metaDataListParent}
+                    label={label.sspCISCoordinatorAddress}
+                    disabled={renderingMap.CareCoordinatorAddressLine1__c.isDisabled}
+                ></c-ssp-address-auto-complete>
+            </div>
+            <template
+                if:true={renderingMap.CareCoordinatorPhoneNumber__c.renderElement}
+            >
+                <div
+                    class="slds-grid slds-wrap slds-size_1-of-1 ssp-cisComponentWidth"
+                >
+                    <c-ssp-base-component-input-phone
+                        data-id="CareCoordinatorPhoneNumber__c"
+                        value={appIndividual.CareCoordinatorPhoneNumber__c}
+                        label={label.sspCISCaretakerPhoneNumber}
+                        class="ssp-applicationInputs contactDetails slds-large-size_1-of-2 slds-size_1-of-1 ssp-cisWidth"
+                        field-name="CareCoordinatorPhoneNumber__c"
+                        entity-name="SSP_ApplicationIndividual__c"
+                        meta-list={metaDataListParent}
+                        placeholder={label.sspPlaceholderPhoneNumber}
+                        disabled={renderingMap.CareCoordinatorPhoneNumber__c.isDisabled}
+                        max-length={phoneMaxLength}
+                    >
+                    </c-ssp-base-component-input-phone>
+                </div>
+            </template>
+        </div>
+    </div>
+</template>

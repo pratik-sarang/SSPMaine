@@ -1,0 +1,52 @@
+.ssp-requestHearingContainer {
+    padding: 60px 135px 60px 60px;
+}
+h1 {
+    font-size: 2.625rem;
+    line-height: 32px;
+    padding-bottom: 30px;
+    margin: 0 0 30px 0;
+}
+
+a {
+    text-decoration: underline;
+}
+
+p {
+    font-size: 1rem;
+}
+
+c-ssp-base-multiline-radio {
+    display: block;
+}
+
+.ssp-font-13 {
+    font-size: 0.8125rem;
+}
+
+.ssp-inputWidth {
+    width: 385px;
+}
+
+.ssp-generalCard {
+    border-radius: 6px;
+    padding: 30px;
+    font-size: 0.8125rem;
+}
+
+.ssp-generalCardContent {
+    font-size: 0.8125rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .ssp-inputWidth {
+        width: 100%;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .ssp-requestHearingContainer {
+        padding: 60px 30px;
+    }
+}

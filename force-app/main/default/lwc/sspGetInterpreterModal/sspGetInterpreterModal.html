@@ -1,0 +1,55 @@
+<!--
+* name 		: sspGetInterpreterModal
+* @description 	: This modal is shown when user selects other languages.
+* @author 		: Karthik Velu, Kochar Varun.
+* @date 		: 2/27/2020
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName	      MM/DD/YYYY	      A Brief Description 
+                  about the Change
+-->
+<template>
+    <template if:true={isComponentLoaded}>
+        <c-ssp-detailed-information-modal
+            header-value={label.sspGetInterpreterHeader}
+            open-model="true"
+            onclosemodal={closeModal}
+            reference={reference}
+            class="ssp-getInterpreterModal"
+        >
+            <span
+                class="ssp-fontFamily_ArvoRegular ssp-color_monoOmega slds-p-bottom_large"
+                slot="contentSlot"
+            >
+                <p class="ssp-margin-bottom_large">
+                    {sspGetInterpreterModalWrapper.interpreterModalContentInLocalLanguage}
+                </p>
+            </span>
+            <span
+                class="ssp-fontFamily_ArvoRegular ssp-color_monoOmega slds-p-bottom_large"
+                slot="contentSlot"
+            >
+                <template if:true={rightSideLanguage}>
+                    <p class="ssp-rightSideLanguage">
+                        {sspGetInterpreterModalWrapper.interpreterModalContentInSelectedLanguage}
+                    </p>
+                </template>
+                <template if:false={rightSideLanguage}>
+                    <p>
+                        {sspGetInterpreterModalWrapper.interpreterModalContentInSelectedLanguage}
+                    </p>
+                </template>
+            </span>
+            <span slot="Footer" class="slds-col ssp-stacked-btn-width">
+                <lightning-button
+                    variant="brand"
+                    label={sspGetInterpreterModalWrapper.continueButtonLabel}
+                    class="ssp-button_brand"
+                    onclick={closeModal}
+                >
+                </lightning-button>
+            </span>
+        </c-ssp-detailed-information-modal>
+    </template>
+</template>

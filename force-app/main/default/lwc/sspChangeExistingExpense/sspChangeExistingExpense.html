@@ -1,0 +1,87 @@
+<!--
+* name 		    : sspChangeExistingExpense
+* @description 	: The component is used edit existing expense records 
+* @author 		: Shrikant And Chirag
+* @date 		: 11/27/2019
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName	      MM/DD/YYYY	      A Brief Description 
+						       about the Change
+-->
+<template>
+    <template if:false={showSpinner}>
+        <c-ssp-spinner> </c-ssp-spinner>
+    </template>
+    <template if:true={isVisible}>
+        <!-- CD2 2.5 Security Role Matrix. -->
+        <main if:true={isPageAccessible} class="slds-m-vertical_large ssp-bodyContainer" role="main">
+            <div class="slds-p-vertical_x-large ssp-change-expense-form">
+                <p tabindex="0" class="ssp-content slds-p-bottom_large">
+                    <span
+                        class="ssp-modalBlackHeaderSubText ssp-fontFamily_popinBold ssp-color_monoBody slds-p-bottom_large"
+                        >{customLabel.sspExpenseDetailsChangeBelowExpenses}</span>
+                </p>
+                <div role="group">
+                    <template
+                        for:each={existingExpenseRecords}
+                        for:item="expenseRecord"
+                        for:index="index"
+                    >
+                    <!-- CD2 2.5 Security Role Matrix. -->
+                        <c-ssp-change-existing-expense-detail
+                            expense-frequencies={expenseFrequencies}
+                            meta-data-list-parent={MetaDataListParent}
+                            key={expenseRecord.Id}
+                            expense-obj={expenseRecord}
+                            applied-program-list={appliedPrograms}
+                            class="editExistingExpense"
+                            expense-frequency-value-to-label={expenseFrequencyValueToLabel}
+                            expense-type-value-to-label={expenseTypeValueToLabel}
+                            expense-sub-type-value-to-label={expenseSubTypeValueToLabel}
+                            ontoggle={handleExpenseToggle}
+                            is-participating-in-work-study-program={isParticipatingInWorkStudyProgram}
+                            disabled={isDisableDetailComponents}
+                        >
+                        </c-ssp-change-existing-expense-detail>
+                    </template>
+                </div>
+                <div role="group">
+                    <div class="ssp-multipleCheckbox_container">
+                        <!-- CD2 2.5 Security Role Matrix. -->
+                        <c-ssp-base-component-multiline-input-checkbox
+                            onhandlemultiselectchange={expenseNotChange}
+                            class="applicationInputs ssp-noChangeCmp ssp-cbWithCompleteBorder slds-m-bottom_small slds-size_1-of-1"
+                            hide-additional-fields="true"
+                            entity-name="SSP_Application__c"
+                            field-name="Name"
+                            custom-validation-error={customValidationError}
+                            disabled={isDisableNoChange}
+                        >
+                            <div
+                                slot="labelContent"
+                                class="ssp-checkbox-labels"
+                            >
+                                <p
+                                    class="ssp-fontFamily_popinBold ssp-color_monoBody ssp-labelLine1"
+                                >
+                                    {noChangeExpenseLabel}
+                                </p>
+                            </div>
+                        </c-ssp-base-component-multiline-input-checkbox>
+                    </div>
+                    <template if:true={isError}>
+                        <span
+                            class="slds-m-top_small ssp-errorMessage ssp-color_redOmega" role="alert" aria-atomic="true"
+                            >{customLabel.errorMessage}</span
+                        >
+                    </template>
+                </div>
+            </div>
+        </main>
+    </template>
+    <!-- CD2 2.5 Security Role Matrix. -->
+    <template if:true={showAccessDeniedComponent}>
+        <c-ssp-access-denied></c-ssp-access-denied>
+    </template>
+</template>

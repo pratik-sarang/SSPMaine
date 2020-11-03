@@ -1,0 +1,282 @@
+<!-- 
+* name 		      : sspPreferredPaymentMethod
+* @description 	  : This screen is used for KI-HIPP Preferred Payment Method
+* @author 		  : Sharon
+* @date           : 03/07/2020
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* 	      
+-->
+<template>
+    <template if:true={spinnerOn}>
+        <c-ssp-spinner></c-ssp-spinner>
+    </template>
+    <div class="ssp-bodyContainer ssp-preferredPaymentMainContainer">
+        <div class="ssp-errorToast" if:true={showToast}>
+            <c-ssp-toast
+                ssp-toast-title-val={label.toastErrorText}
+                show-error-toast={trueValue}
+                onhidetoast={handleHideToast}
+            ></c-ssp-toast>
+        </div>
+        <div
+            class="ssp-headerText ssp-fontFamily_popinBold ssp-color_blueAlpha slds-size_1-of-1"
+        >
+            {label.sspPreferredPaymentTitle}
+        </div>
+        <div class="ssp-preferredPaymentLearn">
+            <a
+                href="javascript:void(0)"
+                class="ssp-preferredPaymentLearnText ssp-color_monoBody ssp-fontFamily_popinBold"
+                onclick={openLearnMoreModal}
+                title={label.sspPreferredPaymentLearnMoreModalAltText}
+            >
+                {label.sspResourceSelectionLearnMore}
+            </a>
+            <template if:true={isLearnMoreModal}>
+                <c-ssp-detailed-information-modal
+                    reference={reference}
+                    header-value={label.sspResourceSelectionLearnMore}
+                    open-model={isLearnMoreModal}
+                    onclosemodal={closeLearnMoreModal}
+                >
+                    <p
+                        slot="contentSlot"
+                        class="ssp-learnMore ssp-fontFamily_ArvoRegular"
+                    ></p>
+                </c-ssp-detailed-information-modal>
+            </template>
+        </div>
+
+        <div
+            class="ssp-preferredPaymentHr ssp-bg_monoAlpha ssp-marginTopFifteen"
+        ></div>
+        <div class="ssp-preferredPaymentIndividualContent">
+            <!-- <div
+                class="ssp-preferredPaymentPolicy ssp-marginBottomThirty ssp-fontFamily_popinRegular"
+            >
+                <p
+                    class="ssp-color_monoOmega ssp-preferredPaymentpolicyHolderText"
+                >
+                    {label.PreferredPaymentRequiredInformationText}
+                </p>
+            </div> -->
+            <div
+                class="ssp-preferredPaymentPolicy ssp-marginBottomThirty ssp-fontFamily_popinRegular slds-m-bottom_large"
+            >
+                <p
+                    class="ssp-color_monoOmega ssp-preferredPaymentpolicyHolderText"
+                >
+                    {label.sspPreferredPaymentPolicyHolder}
+                </p>
+                <p class="ssp-color_monoBody">{policyHolderName}</p>
+            </div>
+            <div
+                class="slds-grid slds-wrap slds-max-medium-size_1-of-1 slds-size_1-of-2 ssp-fieldContainer ssp-gutter-right"
+            >
+            <!--<div class="slds-form-element">
+                <template if:true={pereferredPayementNew.data}>
+                               <div class="slds-combobox_container slds-size_small">
+                                   <select onchange={handleOnChange}>
+                                       <template for:each={pereferredPayementNew.data.values} for:item="item">
+                                           <option key={item.label}>{item.label}</option>
+                                       </template>
+                                   </select>
+                               </div>
+                           </template>
+                           </div> -->
+                <c-ssp-base-component-input-picklist
+                    class="ssp-applicationInputs  slds-size_1-of-1 ssp-member"
+                    onhandlepicklistchange={handleOnChangePreferredPaymentMethod}
+                    entity-name="SSP_Member__c"
+                    field-name="PreferredIssuanceMethod__c"
+                    title={label.sspPreferredPaymentAlternateText}
+                    label={label.sspPreferredPaymentSelectQuestion}
+                    placeholder={label.sspSelect}
+                    option={preferredPaymentOptions}
+                    value={selectedPreferredPaymentMethodLabels}
+                    meta-list={MetaDataListParent}
+                >
+                </c-ssp-base-component-input-picklist>
+            </div>
+            <!--<lightning-button label="Click Me" variant = "Brand" onclick={CallOnClick}></lightning-button>-->
+            <template if:true={checkSelected}>
+                <div
+                    class="ssp-marginTopThirty slds-large-size_1-of-2 slds-size_1-of-1 ssp-gutter-right"
+                >
+                    <div class="slds-size_1-of-1">
+                        <c-ssp-general-notice-card>
+                            <slot>
+                                <div
+                                    class="ssp-fontFamily_popinRegular ssp-preferredPaymentAddress"
+                                >
+                                    <p class="ssp-color_monoOmega">
+                                        {label.sspPreferredPaymentAddress}
+                                    </p>
+                                    <p
+                                        class="ssp-color-monoBody ssp-preferredPaymentAddressText"
+                                    >
+                                        {PaymentAddress}
+                                        {selectedMailingCountyCode}
+                                        {selectedMailingStateCode}
+                                        {MailingZipCode5}
+                                    </p>
+                                </div>
+                            </slot>
+                        </c-ssp-general-notice-card>
+                    </div>
+                </div>
+            </template>
+            <template if:false={checkSelected}>
+                <div class="slds-grid slds-wrap slds-size_1-of-1">
+                    <div
+                        class="slds-grid slds-wrap slds-max-medium-size_1-of-1 slds-size_1-of-2 ssp-marginTopThirty ssp-gutter-right"
+                    >
+                        <div class="slds-size_1-of-1 ssp-marginBottomThirty">
+                            <c-ssp-general-notice-card
+                                notice-text={label.sspDirectDepositCheckingAccountMessage}
+                            >
+                            </c-ssp-general-notice-card>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-grid slds-wrap slds-size_1-of-1">
+                    <div
+                        class="slds-grid slds-wrap slds-max-medium-size_1-of-1 slds-size_1-of-2  ssp-marginTopThirty ssp-gutter-right"
+                    >
+                        <c-ssp-base-component-input-text
+                            class="ssp-applicationInputs slds-size_1-of-1 ssp-preferredRoutingNumber"
+                            label={label.sspPreferredPaymentRouting}
+                            title=""
+                            onchange={handleValidateRoutingNumber}
+                            onhandleblur={handleVerifyRoutingNumber}
+                            handle-change="true"
+                            value={RoutingNumber}
+                            entity-name="SSP_Member__c"
+                            field-name="RoutingNumber__c"
+                            meta-list={MetaDataListParent}
+                            handl-change="true"
+                        >
+                        </c-ssp-base-component-input-text>
+                    </div>
+                    <template if:true={showBankDetails}>
+                        <div
+                            class="slds-grid slds-wrap slds-max-medium-size_1-of-1 slds-size_1-of-2  ssp-marginTopThirty ssp-gutter-left"
+                        >
+                            <c-ssp-base-component-input-text
+                                class="ssp-applicationInputs slds-size_1-of-1 ssp-checkAccountNumber"
+                                label={label.sspPreferredPaymentAccount}
+                                onchange={handleAccountNumber}
+                                max-length={maxLength}
+                                title=""
+                                min-length={minLength}
+                                value={CheckingAccountNumber}
+                                entity-name="SSP_Member__c"
+                                field-name="CheckingAccountNumber__c"
+                                meta-list={MetaDataListParent}
+                            >
+                            </c-ssp-base-component-input-text>
+                        </div>
+                    </template>
+                </div>
+                <template if:true={showBankDetails}>
+                    <div
+                        class="slds-grid slds-wrap slds-large-size_1-of-2 slds-size_1-of-1 ssp-marginTopFifteen  ssp-gutter-right"
+                    >
+                        <c-ssp-base-component-input-text
+                            class="ssp-applicationInputs slds-size_1-of-1 ssp-verifyAccountNumber"
+                            label={label.sspPreferredPaymentVerifyAccount}
+                            title=""
+                            onchange={verifyAccountValidation}
+                            max-length={maxLength}
+                            min-length={minLength}
+                            entity-name="SSP_Member__c"
+                            field-name="CheckingAccountNumber__c"
+                            meta-list={MetaDataListParent}
+                            value={verifyAccountNumberValue}
+                        >
+                        </c-ssp-base-component-input-text>
+                    </div>
+                    <div
+                        class="ssp-marginTopThirty slds-large-size_1-of-2 slds-size_1-of-1 ssp-preferredPaymentCard ssp-gutter-right"
+                    >
+                        <div class="slds-size_1-of-1">
+                            <c-ssp-general-notice-card>
+                                <slot>
+                                    <div
+                                        class="ssp-fontFamily_popinRegular ssp-preferredPaymentAddress"
+                                    >
+                                        <p class="ssp-color_monoOmega">
+                                            {bankName}<br></br>
+                                        </p>
+                                        <p
+                                            class="ssp-color-monoBody ssp-preferredPaymentAddressText"
+                                        >
+                                            {bankCompleteAddress} {bankCity} {SelectedBankCountyCode} {selectedBankStateCodeFromData} {bankZipCode}
+                                        </p>
+                                    </div>
+                                </slot>
+                            </c-ssp-general-notice-card>
+                        </div>
+                    </div>
+                </template>
+            </template>
+            <!-- <template if:true={isCheck}>
+                <div
+                    class="ssp-marginTopThirty slds-large-size_1-of-2 slds-size_1-of-1 ssp-gutter-right"
+                >
+                    <div class="slds-size_1-of-1">
+                        <c-ssp-general-notice-card>
+                            <slot>
+                                <div
+                                    class="ssp-fontFamily_popinRegular ssp-preferredPaymentAddress"
+                                >
+                                    <p class="ssp-color_monoOmega">
+                                        {label.sspPreferredPaymentAddress}
+                                    </p>
+                                    <p
+                                        class="ssp-color-monoBody ssp-preferredPaymentAddressText"
+                                    >
+                                </br>
+                                        {PaymentAddress} </br>
+                                        {selectedMailingCountyCode}  {selectedMailingStateCode} {MailingZipCode5}
+                                        
+                                    </p>
+                                </div>
+                            </slot>
+                        </c-ssp-general-notice-card>
+                    </div>
+                </div>
+            </template> -->
+        </div>
+        <div class="ssp-waiverResultsBtn">
+            <div
+                class="slds-grid slds-wrap slds-size_1-of-1 ssp-actionButtonsContainer ssp-buttonWidth ssp-uploadProofForms"
+            >
+                <div class="slds-size_1-of-1 ssp-actionButtons">
+                    <lightning-button
+                        name="cancel"
+                        class="ssp-button_base ssp-cancelButton ssp-screenFooterBlueBtn"
+                        label={label.sspCancel}
+                        title={label.sspCancel}
+                        onclick={handleCancelButton}
+                    ></lightning-button>
+                    <lightning-button
+                        name="save"
+                        class="ssp-button_neutral ssp-saveButton ssp-screenFooterNextBtn"
+                        label={label.sspSave}
+                        title={label.sspSaveKIHIPP}
+                        onclick={handleSaveButton}
+                    ></lightning-button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <c-ssp-logging-and-error-handling-modal
+    if:true={showErrorModal}
+    error-id={errorCode}
+    onprogressvaluechange={closeError}
+  >
+  </c-ssp-logging-and-error-handling-modal>
+</template>

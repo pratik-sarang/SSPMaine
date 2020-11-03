@@ -1,0 +1,219 @@
+<!--
+* name 		    : sspCareTakerServices
+* @description 	: Component for Caretaker Services screen.
+* @author 		: Shrikant And Venkata
+* @date 		: 04/09/2020
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName	      MM/DD/YYYY	      A Brief Description 
+						       about the Change
+-->
+<template>
+    <template if:false={isVisible}>
+        <c-ssp-spinner> </c-ssp-spinner>
+    </template>
+    <template if:true={isVisible}>
+        <div class="ssp-caretakersSection ssp-bodyContainer">
+            <div class="ssp-caretakersInfo slds-m-top_large">
+                <p
+                    class="slds-p-top_small ssp-fontFamily_ArvoRegular ssp-color_monoOmega ssp-info_fontSize"
+                >
+                    {customLabels.sspCompleteTheQuestionsBelowAboutCaretakerServices}
+                </p>
+            </div>
+
+            <div
+                class="slds-grid slds-wrap slds-m-bottom_xx-large sspCaretakerServicesForm"
+            >
+                <template
+                    if:true={renderingMap.ServiceStartDate__c.renderElement}
+                >
+                    <div
+                        class="slds-grid slds-wrap slds-size_1-of-1 ssp-inputaMarginTop"
+                    >
+                        <c-ssp-base-component-input-date
+                            class="ssp-applicationInputs slds-large-size_1-of-2 slds-size_1-of-1 ssp-baseFields"
+                            label={customLabels.sspServiceStartDate}
+                            entity-name="SSP_ApplicationIndividual__c"
+                            field-name="ServiceStartDate__c"
+                            meta-list={metaDataListParent}
+                            data-id="ServiceStartDate__c"
+                            value={appIndividual.ServiceStartDate__c}
+                            onchange={handleStartDateChange}
+                            disabled={renderingMap.ServiceStartDate__c.isDisabled}
+                        ></c-ssp-base-component-input-date>
+                    </div>
+                </template>
+
+                <template
+                    if:true={renderingMap.ServiceEndDate__c.renderElement}
+                >
+                    <div
+                        class="slds-grid slds-wrap slds-size_1-of-1 ssp-inputaMarginTop"
+                    >
+                        <c-ssp-base-component-input-date
+                            class="ssp-applicationInputs slds-large-size_1-of-2 slds-size_1-of-1 ssp-baseFields ssp-ServiceEndDate"
+                            label={customLabels.sspServiceEndDate}
+                            entity-name="SSP_ApplicationIndividual__c"
+                            field-name="ServiceEndDate__c"
+                            meta-list={metaDataListParent}
+                            data-id="ServiceEndDate__c"
+                            comparing-date={appIndividual.ServiceStartDate__c}
+                            value={appIndividual.ServiceEndDate__c}
+                            disabled={renderingMap.ServiceEndDate__c.isDisabled}
+                        ></c-ssp-base-component-input-date>
+                    </div>
+                </template>
+
+                <template
+                    if:true={renderingMap.IsServiceProvidedSafelyToggle__c.renderElement}
+                >
+                    <div
+                        class="slds-grid slds-wrap slds-size_1-of-1 ssp-flex-direction-col ssp-toggleQuestions"
+                    >
+                        <c-ssp-base-component-input-toggle
+                            class="ssp-applicationInputs slds-size_1-of-1"
+                            label={customLabels.sspHaveTheServicesEnabledHerToSafelyAndComfortablyLiveAtHome}
+                            options={responseOptions}
+                            onchange={manageQuestions}
+                            entity-name="SSP_ApplicationIndividual__c"
+                            field-name="IsServiceProvidedSafelyToggle__c"
+                            meta-list={metaDataListParent}
+                            data-id="IsServiceProvidedSafelyToggle__c"
+                            value={appIndividual.IsServiceProvidedSafelyToggle__c}
+                            disabled={renderingMap.IsServiceProvidedSafelyToggle__c.isDisabled}
+                        >
+                        </c-ssp-base-component-input-toggle>
+                    </div>
+                </template>
+
+                <template
+                    if:true={renderingMap.IsPreventedNursingFacilityToggle__c.renderElement}
+                >
+                    <div
+                        class="slds-grid slds-wrap slds-size_1-of-1 ssp-flex-direction-col ssp-toggleQuestions"
+                    >
+                        <c-ssp-base-component-input-toggle
+                            class="ssp-applicationInputs slds-size_1-of-1"
+                            label={customLabels.sspHaveTheProvidedServicesPreventedFromBeingPutInNursingFacility}
+                            options={responseOptions}
+                            onchange={manageQuestions}
+                            entity-name="SSP_ApplicationIndividual__c"
+                            field-name="IsPreventedNursingFacilityToggle__c"
+                            meta-list={metaDataListParent}
+                            data-id="IsPreventedNursingFacilityToggle__c"
+                            value={appIndividual.IsPreventedNursingFacilityToggle__c}
+                            disabled={renderingMap.IsPreventedNursingFacilityToggle__c.isDisabled}
+                        >
+                        </c-ssp-base-component-input-toggle>
+                    </div>
+                </template>
+
+                <template
+                    if:true={renderingMap.IsServiceReceivedRegularlyToggle__c.renderElement}
+                >
+                    <div
+                        class="slds-grid slds-wrap slds-size_1-of-1 ssp-flex-direction-col ssp-toggleQuestions"
+                    >
+                        <c-ssp-base-component-input-toggle
+                            class="ssp-applicationInputs slds-size_1-of-1"
+                            label={customLabels.sspDoesReceiveTheServicesOnRegularBasis}
+                            options={responseOptions}
+                            onchange={manageQuestions}
+                            entity-name="SSP_ApplicationIndividual__c"
+                            field-name="IsServiceReceivedRegularlyToggle__c"
+                            meta-list={metaDataListParent}
+                            data-id="IsServiceReceivedRegularlyToggle__c"
+                            value={appIndividual.IsServiceReceivedRegularlyToggle__c}
+                            disabled={renderingMap.IsServiceReceivedRegularlyToggle__c.isDisabled}
+                        >
+                        </c-ssp-base-component-input-toggle>
+                    </div>
+                </template>
+
+                <template
+                    if:true={renderingMap.CaretakerRelation__c.renderElement}
+                >
+                    <div
+                        class="slds-grid slds-wrap slds-size_1-of-1 ssp-flex-direction-col ssp-pickListQuestion"
+                    >
+                        <c-ssp-base-component-input-picklist
+                            data-id="CaretakerRelation__c"
+                            class="ssp-applicationInputs slds-size_1-of-1 ssp-baseFields"
+                            selected-value={appIndividual.CaretakerRelation__c}
+                            label={customLabels.sspHowIsThisCaretakerRelatedTo}
+                            entity-name="SSP_ApplicationIndividual__c"
+                            field-name="CaretakerRelation__c"
+                            meta-list={metaDataListParent}
+                            option={careTakerRelations}
+                            onhandlepicklistchange={handleLivingTogetherQVisibility}
+                            onchange={handleLivingTogetherQVisibility}
+                            value={appIndividual.CaretakerRelation__c}
+                            disabled={renderingMap.CaretakerRelation__c.isDisabled}
+                        ></c-ssp-base-component-input-picklist>
+                    </div>
+                </template>
+
+                <template
+                    if:true={renderingMap.IsCaretakerLivingTogetherToggle__c.renderElement}
+                >
+                    <div
+                        class="slds-grid slds-wrap slds-size_1-of-1 ssp-flex-direction-col ssp-toggleQuestions"
+                    >
+                        <c-ssp-base-component-input-toggle
+                            class="ssp-applicationInputs slds-size_1-of-1"
+                            label={customLabels.sspDoesThisCaretakerLiveWith}
+                            options={responseOptions}
+                            onchange={manageQuestions}
+                            entity-name="SSP_ApplicationIndividual__c"
+                            field-name="IsCaretakerLivingTogetherToggle__c"
+                            meta-list={metaDataListParent}
+                            data-id="IsCaretakerLivingTogetherToggle__c"
+                            value={appIndividual.IsCaretakerLivingTogetherToggle__c}
+                            disabled={renderingMap.IsCaretakerLivingTogetherToggle__c.isDisabled}
+                        >
+                        </c-ssp-base-component-input-toggle>
+                    </div>
+                </template>
+
+                <template if:true={renderingMap.CaretakerName__c.renderElement}>
+                    <div
+                        class="slds-grid slds-wrap slds-size_1-of-1 ssp-nameOfCaretaker"
+                    >
+                        <c-ssp-base-component-input-text
+                            class="ssp-applicationInputs slds-large-size_1-of-2 slds-size_1-of-1 ssp-baseFields"
+                            label={customLabels.sspNameOfCaretaker}
+                            entity-name="SSP_ApplicationIndividual__c"
+                            field-name="CaretakerName__c"
+                            meta-list={metaDataListParent}
+                            data-id="CaretakerName__c"
+                            value={appIndividual.CaretakerName__c}
+                            disabled={renderingMap.CaretakerName__c.isDisabled}
+                        ></c-ssp-base-component-input-text>
+                    </div>
+                </template>
+
+                <template
+                    if:true={renderingMap.CaretakerPhone__c.renderElement}
+                >
+                    <div
+                        class="slds-grid slds-wrap slds-size_1-of-1 ssp-inputaMarginTop"
+                    >
+                        <c-ssp-base-component-input-phone
+                            class="ssp-applicationInputs slds-large-size_1-of-2 slds-size_1-of-1 ssp-baseFields"
+                            label={customLabels.phoneNumber}
+                            placeholder="###-###-####"
+                            entity-name="SSP_ApplicationIndividual__c"
+                            field-name="CaretakerPhone__c"
+                            meta-list={metaDataListParent}
+                            data-id="CaretakerPhone__c"
+                            value={appIndividual.CaretakerPhone__c}
+                            disabled={renderingMap.CaretakerPhone__c.isDisabled}
+                        ></c-ssp-base-component-input-phone>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </template>
+</template>

@@ -1,0 +1,71 @@
+<template>
+    <div class="ssp-privacyPolicyContainer ssp-bodyContainer">
+        <h2
+            class="ssp-fontFamily_popinBlack ssp-color_blueAlpha ssp-margin-bottom_large ssp-boderBottom5X"
+        >
+            {label.privacyPolicyHeading}
+        </h2>
+
+        <nav class="ssp-boderBottom5X">
+            <template for:each={sectionObject} for:item="section">
+                <p key={section.sectionName} class="ssp-margin-bottom_small">
+                    <a
+                        href={section.idHash}
+                        class="ssp-fontFamily_popinBold ssp-color_monoBody ssp-tabList"
+                    >
+                        {section.Title}
+                    </a>
+                </p>
+            </template>
+        </nav>
+        <ul>
+            <template for:each={sectionObject} for:item="section">
+                <li
+                    key={section.sectionName}
+                    id={section.Id}
+                    class="ssp-margin-bottom_large ssp-policySection ssp-boderBottom5X"
+                >
+                    <h3
+                        class="ssp-fontFamily_popinBold ssp-color_monoBody ssp-margin-bottom_small"
+                    >
+                        {section.Title}
+                    </h3>
+                    <p
+                        class="ssp-fontFamily_ArvoRegular ssp-color_monoOmega"
+                    ></p>
+                </li>
+            </template>
+        </ul>
+
+        <div class="ssp-copyRightSection">
+            <p
+                class="ssp-margin-bottom_small ssp-fontFamily_popinRegular ssp-color_monoBody"
+            >
+                {label.copyrightInquiriesText}
+                <a
+                    href={WebsiteLink}
+                    class="ssp-color_blueAlpha slds-p-left_xx-small"
+                    >{label.WebsiteLinkText}</a
+                >
+            </p>
+            <p class="ssp-fontFamily_popinRegular ssp-color_monoBody">
+                {label.emailText}<a
+                    href={emailLink}
+                    class="ssp-color_blueAlpha slds-p-left_xx-small"
+                    >{label.copyRightAgent}</a
+                >
+            </p>
+        </div>
+    </div>
+
+    <div
+        class="ssp-scollBox ssp-bg_blueAlpha"
+        onclick={ScrollFunction}
+        title="Go to top"
+    >
+        <lightning-icon
+            icon-name="utility:chevronup"
+            alternative-text="Utility image"
+        ></lightning-icon>
+    </div>
+</template>

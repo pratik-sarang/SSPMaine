@@ -1,0 +1,34 @@
+<!--
+* name          :SspMultiselectWithAdditionalInput
+* @description  : This screen is used for multi select field.
+* @author       :Nupoor
+* @date         : 11/11/2019
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+*Nupoor         1/3/2020               HTML Structure
+-->
+<template>
+    <div class={className}>
+    <lightning-input
+      type="checkbox"
+      title={title}
+      name={name}
+      label={label}
+      class="ssp-cbWithCompleteBorder slds-m-bottom_small slds-size_1-of-1"
+      value={value}
+      checked={isChecked}
+      onchange={showHideFields}
+            disabled={disabled}
+    >
+    </lightning-input>
+
+    <template if:false={hideAdditionalSection}>
+      <template if:true={isChecked}>
+        <div class="ssp-bg_monoDelta ssp-cbBoxBorder">
+          <slot></slot>
+        </div>
+      </template>
+    </template>
+  </div>
+</template>

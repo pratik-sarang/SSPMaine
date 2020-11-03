@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>I94Validator__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This checkbox is used as I94 validator</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>I94Validator</label>
+    <type>Checkbox</type>
+</CustomField>

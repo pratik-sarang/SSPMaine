@@ -1,0 +1,9 @@
+.ssp-helptextIcon {
+  position: absolute;
+  right: 1%;
+  top: 20%;
+}
+
+.ssp-textIconError.showError {
+  font-size: 0.75rem;
+}

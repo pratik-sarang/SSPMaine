@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IsOnboardTrainingDone__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>It checks weather CP User and Assister  On-boarding training is done or not.</description>
+    <externalId>false</externalId>
+    <label>IsOnboardTrainingDone</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>

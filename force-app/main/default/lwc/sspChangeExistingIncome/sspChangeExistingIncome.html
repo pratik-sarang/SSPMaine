@@ -1,0 +1,81 @@
+<!--
+* name 		    : sspChangeExistingIncome
+* @description 	: The component is used edit existing income records 
+* @author 		: Shrikant And Chirag
+* @date 		: 11/12/2019
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName	      MM/DD/YYYY	      A Brief Description 
+						       about the Change
+-->
+<template>
+    <template if:false={showSpinner}>
+        <c-ssp-spinner>                    
+        </c-ssp-spinner>
+    </template>
+    <template if:true={isVisible}>
+      <main if:true={isPageAccessible} class="slds-m-vertical_large ssp-bodyContainer" role="main">
+        <div class="slds-p-vertical_x-large ssp-change-income-form">
+              <p class="ssp-content slds-p-bottom_large">
+                <span tabindex="0"
+                  class="ssp-modalBlackHeaderSubText ssp-fontFamily_popinBold ssp-color_monoBody slds-p-bottom_large"
+                        >{customLabel.sspChangeExistingIncome1}</span
+                >
+              </p>
+            <div role="group">
+              <template
+                for:each={existingIncomeRecords}
+                for:item="incomeRecord"
+                for:index="index"
+              >
+              <!-- CD2 2.5 Security Role Matrix. -->
+                <c-ssp-change-existing-income-detail
+                  income-frequencies={incomeFrequencies}
+                  meta-data-list-parent={MetaDataListParent}
+                  key={incomeRecord.Id} 
+                  income-obj={incomeRecord}
+                  applied-program-list={appliedPrograms}
+                  income-frequency-value-to-label={incomeFrequencyValueToLabel}
+                  income-type-value-to-label={incomeTypeValueToLabel}
+                  business-type-value-to-label={businessTypeValueToLabel}
+                  income-sub-type-value-to-label={incomeSubTypeValueToLabel}
+                  activity-type-value-to-label ={activityTypeValueToLabel}
+                  class="editExistingIncome"
+                  ontoggle={handleIncomeToggle}
+                  disabled={isDisableDetailComponents}
+                  time-travel-date={timeTravelDate}
+                >
+                </c-ssp-change-existing-income-detail>
+              </template>
+            </div>
+            <div role="group">
+              <div class="ssp-multipleCheckbox_container">
+                <!-- CD2 2.5 Security Role Matrix. -->
+                <c-ssp-base-component-multiline-input-checkbox 
+                    onhandlemultiselectchange={incomeNotChange}
+                    class="applicationInputs ssp-noChangeCmp ssp-cbWithCompleteBorder slds-m-bottom_small slds-size_1-of-1"
+                    hide-additional-fields=true
+                    entity-name="SSP_Application__c"
+                    field-name="Name"
+                    custom-validation-error={customValidationError}
+                    disabled={isDisableNoChange}>
+                    <div slot="labelContent" class="ssp-checkbox-labels">
+                        <p class="ssp-fontFamily_popinBold ssp-color_monoBody ssp-labelLine1">{customLabel.sspChangeExistingIncome2}</p>
+                    </div>
+                </c-ssp-base-component-multiline-input-checkbox>
+                <template if:true={isError}>
+                  <span role="alert" aria-atomic="true" class="slds-m-top_small ssp-errorMessage ssp-color_redOmega"
+                    >{customLabel.errorMessage}</span
+                  >
+                </template>
+              </div>
+            </div>
+        </div>
+      </main>
+    </template>
+      <!-- CD2 2.5 Security Role Matrix. -->
+      <template if:true={showAccessDeniedComponent}>
+        <c-ssp-access-denied></c-ssp-access-denied>
+    </template>
+</template>

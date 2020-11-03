@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IsAccountNameClosed__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(  ReferredAccountID__c &lt;&gt; $User.AccountId__c , FALSE , TRUE)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>IsAccountNameClosed</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

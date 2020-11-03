@@ -1,0 +1,254 @@
+<!-- 
+* name 		      : sspPreferredPaymentMethod
+* @description 	  : This screen is used for KI-HIPP Preferred Payment Method
+* @author 		  : Sharon
+* @date           : 02/01/2020
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* 	      
+-->
+<template>
+    <template if:true={showSpinner}>
+        <c-ssp-spinner></c-ssp-spinner>
+    </template>
+    <template if:true={screenRenderingStatus}>
+        <div class="ssp-bodyContainer ssp-preferredPaymentMainContainer">
+            <div class="ssp-errorToast" if:true={showToast}>
+                <c-ssp-toast
+                    ssp-toast-title-val={label.toastErrorText}
+                    show-error-toast={trueValue}
+                    onhidetoast={handleHideToast}
+                ></c-ssp-toast>
+            </div>
+            <div class="ssp-preferredPaymentLearn">
+                <a
+                    href="javascript:void(0)"
+                    class="ssp-preferredPaymentLearnText ssp-color_monoBody ssp-fontFamily_popinBold"
+                    onclick={openLearnMoreModal}
+                    title={label.sspPreferredPaymentLearnMoreModalAltText}
+                >
+                    {label.sspResourceSelectionLearnMore}
+                </a>
+            </div>
+
+            <div
+                class="ssp-preferredPaymentHr ssp-bg_monoAlpha ssp-marginTopFifteen"
+            ></div>
+
+            <template
+                for:each={preferredPaymentMethodWrapper}
+                for:item="memberWrapper"
+            >
+                <div
+                    key={memberWrapper.member.id}
+                    class="ssp-preferredPaymentIndividualContainer"
+                >
+                    <div
+                        class="ssp-preferredPaymentPolicy ssp-marginBottomThirty ssp-fontFamily_popinRegular"
+                    >
+                        <p
+                            class="ssp-color_monoOmega ssp-preferredPaymentpolicyHolderText"
+                        >
+                            {label.sspPreferredPaymentPolicyHolder}
+                        </p>
+                        <p
+                            class="ssp-color_monoBody ssp-preferredPaymentPolicyText"
+                        >
+                            {memberWrapper.memberFullName}
+                        </p>
+                    </div>
+                    <div
+                        class="slds-grid slds-wrap slds-large-size_1-of-1 slds-size_1-of-1 ssp-preferredPaymentChecklist"
+                    >
+                        <c-ssp-base-component-input-picklist
+                            class="ssp-applicationInputs  slds-size_1-of-1 ssp-member"
+                            option={preferredPaymentOptions}
+                            onhandlepicklistchange={changePreferredPaymentMethod}
+                            entity-name="SSP_Member__c"
+                            field-name="PreferredIssuanceMethod__c"
+                            meta-list={MetaDataListParent}
+                            data-id="PreferredIssuanceMethod__c"
+                            data-member={memberWrapper.member.Id}
+                            title={label.sspPreferredPaymentAlternateText}
+                            value={memberWrapper.member.PreferredIssuanceMethod__c}
+                            disabled={memberWrapper.disablePreferredMethodOfPayment}
+                            label={memberWrapper.preferredPaymentMethodLabel}
+                            placeholder="Select"
+                        >
+                        </c-ssp-base-component-input-picklist>
+                        <template
+                            if:true={memberWrapper.showDefaultRoutingNumberErrorMessage}
+                        >
+                            <span tabindex="0" role="alert" aria-atomic="true"
+                                class="ssp-color_redOmega ssp-preferredPaymentError ssp-color_redAlpha"
+                            >
+                                {memberWrapper.routingNumberErrorMessage}
+                            </span>
+                        </template>
+                    </div>
+                    <template if:true={memberWrapper.isDirectDeposit}>
+                        <div class="slds-grid slds-wrap slds-size_1-of-1">
+                            <div
+                                class="slds-grid slds-wrap slds-large-size_1-of-2 slds-size_1-of-1 ssp-marginTopThirty "
+                            >
+                                <div
+                                    class="slds-size_1-of-1 ssp-marginBottomThirty"
+                                >
+                                    <c-ssp-general-notice-card
+                                        notice-text={label.sspDirectDepositCheckingAccountMessage}
+                                    >
+                                    </c-ssp-general-notice-card>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slds-grid slds-wrap slds-size_1-of-1">
+                            <div
+                                class="slds-grid slds-wrap slds-large-size_1-of-2 slds-size_1-of-1 ssp-marginTopThirty "
+                            >
+                                <c-ssp-base-component-input-text
+                                    class="ssp-applicationInputs slds-size_1-of-1 ssp-preferredRoutingNumber"
+                                    label={label.sspPreferredPaymentRouting}
+                                    value={memberWrapper.member.RoutingNumber__c}
+                                    entity-name="SSP_Member__c"
+                                    field-name="RoutingNumber__c"
+                                    title=""
+                                    meta-list={MetaDataListParent}
+                                    data-id="RoutingNumber__c"
+                                    onchange={handleValidateRoutingNumber}
+                                    onhandleblur={handleVerifyRoutingNumber}
+                                    data-member={memberWrapper.member.Id}
+                                    handl-change="true"
+                                >
+                                </c-ssp-base-component-input-text>
+                                <template
+                                    if:true={memberWrapper.showRoutingNumberErrorMessage}
+                                >
+                                    <span tabindex="0" role="alert" aria-atomic="true"
+                                        class="ssp-color_redOmega ssp-preferredPaymentError ssp-color_redAlpha"
+                                    >
+                                        {memberWrapper.routingNumberErrorMessage}
+                                    </span>
+                                </template>
+                            </div>
+                            <template if:true={memberWrapper.showBankDetails}>
+                                <div
+                                    class="slds-grid slds-wrap slds-large-size_1-of-2 slds-size_1-of-1  ssp-marginTopThirty"
+                                >
+                                    <c-ssp-base-component-input-text
+                                        class="ssp-applicationInputs slds-size_1-of-1 ssp-checkAccountNumber"
+                                        label={label.sspPreferredPaymentAccount}
+                                        value={memberWrapper.member.CheckingAccountNumber__c}
+                                        entity-name="SSP_Member__c"
+                                        field-name="CheckingAccountNumber__c"
+                                        meta-list={MetaDataListParent}
+                                        data-id="CheckingAccountNumber__c"
+                                        onchange={handleAccountNumber}
+                                        data-member={memberWrapper.member.Id}
+                                        max-length={maxLength}
+                                        title=""
+                                        min-length={minLength}
+                                    >
+                                    </c-ssp-base-component-input-text>
+                                </div>
+                            </template>
+                        </div>
+                        <template if:true={memberWrapper.showBankDetails}>
+                            <div
+                                class="slds-grid slds-wrap slds-large-size_1-of-2 slds-size_1-of-1 ssp-marginTopFifteen"
+                            >
+                                <c-ssp-base-component-input-text
+                                    class="ssp-applicationInputs slds-size_1-of-1 ssp-verifyAccountNumber"
+                                    label={label.sspPreferredPaymentVerifyAccount}
+                                    value={memberWrapper.verifyAccountNumber}
+                                    entity-name="SSP_Member__c"
+                                    field-name="CheckingAccountNumber__c"
+                                    meta-list={MetaDataListParent}
+                                    data-id="VCheckingAccountNumber__c"
+                                    data-member={memberWrapper.member.Id}
+                                    title=""
+                                    onchange={verifyAccountValidation}
+                                    max-length={maxLength}
+                                    min-length={minLength}
+                                    disabled={memberWrapper.disableVerifyAccountNumber}
+                                >
+                                </c-ssp-base-component-input-text>
+                                <template
+                                    if:true={memberWrapper.showVerifyAccountErrorMessage}
+                                >
+                                    <span tabindex="0" role="alert" aria-atomic="true"
+                                        class="ssp-color_redOmega ssp-preferredPaymentError ssp-color_redAlpha"
+                                    >
+                                        {memberWrapper.verifyAccountErrorMessage}
+                                    </span>
+                                </template>
+                            </div>
+                            <div
+                                class="ssp-marginTopThirty slds-large-size_1-of-2 slds-size_1-of-1 ssp-preferredPaymentCard"
+                            >
+                                <div class="slds-size_1-of-1">
+                                    <c-ssp-general-notice-card>
+                                        <slot>
+                                            <div
+                                                class="ssp-fontFamily_popinRegular ssp-preferredPaymentAddress"
+                                            >
+                                                <p class="ssp-color_monoOmega">
+                                                    {memberWrapper.bankName}
+                                                </p>
+                                                <p
+                                                    class="ssp-color-monoBody ssp-preferredPaymentAddressText"
+                                                >
+                                                    {memberWrapper.bankAddress}
+                                                </p>
+                                            </div>
+                                        </slot>
+                                    </c-ssp-general-notice-card>
+                                </div>
+                            </div>
+                        </template>
+                    </template>
+                    <template if:true={memberWrapper.isCheck}>
+                        <div
+                            class="ssp-marginTopThirty slds-large-size_1-of-2 slds-size_1-of-1"
+                        >
+                            <div class="slds-size_1-of-1">
+                                <c-ssp-general-notice-card>
+                                    <slot>
+                                        <div
+                                            class="ssp-fontFamily_popinRegular ssp-preferredPaymentAddress"
+                                        >
+                                            <p class="ssp-color_monoOmega">
+                                                {memberWrapper.preferredPaymentAddress}
+                                            </p>
+                                            <p
+                                                class="ssp-color-monoBody ssp-preferredPaymentAddressText"
+                                            >
+                                                {memberWrapper.formattedAddress}
+                                            </p>
+                                        </div>
+                                    </slot>
+                                </c-ssp-general-notice-card>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+            </template>
+        </div>
+    </template>
+    <template if:true={isLearnMoreModal}>
+        <c-ssp-detailed-information-modal
+            reference={reference}
+            header-value={label.sspResourceSelectionLearnMore}
+            open-model={isLearnMoreModal}
+            onclosemodal={closeLearnMoreModal}
+        >
+            <p
+                slot="contentSlot"
+                class="ssp-learnMore ssp-fontFamily_ArvoRegular"
+            ></p>
+        </c-ssp-detailed-information-modal>
+    </template>
+     <template if:true={showAccessDeniedComponent}>
+        <c-ssp-access-denied></c-ssp-access-denied>
+    </template>
+</template>

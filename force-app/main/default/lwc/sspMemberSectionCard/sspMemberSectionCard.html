@@ -1,0 +1,141 @@
+<template>
+    <div class="ssp-MemberCardContainer ssp-boxShadow">
+        <div class={headerCssStyle}>
+            <div
+                class="slds-grid slds-grid_align-spread slds-grid_vertical-align-center"
+            >
+                <div
+                    class="slds-grid slds-col_bump-right slds-grid_vertical-align-center ssp-cardHeadingContainer"
+                >
+                    <div class="ssp-MemberCardIcon slds-m-right_small">
+                        <img if:true={cardIconUrl} src={cardIconUrl} alt={label.ProgressIcon} />
+                    </div>
+                    <div class="ssp-MemberCardText ssp-fontFamily_popinBold">
+                        <p
+                            class="ssp-selectionCardActionTitle ssp-fontFamily_popinBold ssp-color_monoBody"
+                        >
+                            {cardTitle}
+                        </p>
+                    </div>
+                </div>
+
+                <div if:true={showTileActionButton}>
+                    <lightning-button
+                        label={tileAction.label}
+                        variant={tileAction.variant}
+                        title={tileAction.altText}
+                        onclick={handleSectionAction}
+                        disabled={disabled}
+                        class={tileAction.style}
+                    >
+                    </lightning-button>
+                </div>
+            </div>
+        </div>
+        <div if:false={disabled}>
+            <div if:true={memberItems} class="sspMonoBetaBorderBottom">
+                <ul>
+                    <template for:each={memberItems} for:item="member">
+                        <li key={member.SSP_Member__c}>
+                            <div
+                                class="slds-grid_vertical-align-center ssp-bg_monodelta slds-grid slds-wrap slds-grid_align-spread sspMonoBetaBorderBottom slds-p-bottom_x-small"
+                            >
+                                <div class="slds-grid_vertical-align-center">
+                                    <span class={member.cssStyle}>
+                                        {member.SSP_Member__r.Name}
+                                    </span>
+                                </div>
+                                <div
+                                    if:false={member.action.disabled}
+                                    class="slds-grid_vertical-align-center ssp-MemberCardNextIcon"
+                                >
+                                    <span
+                                        class={member.action.cssStyle}
+                                        onclick={handleMemberAction}
+                                        title={member.action.altText}
+                                        data-page-name={member.action.pageName}
+                                        data-flow-name={member.action.flowName}
+                                        data-member-id={member.SSP_Member__c}
+                                        >{member.action.label}</span
+                                    >
+                                    <img
+                                        onclick={handleMemberAction}
+                                        data-page-name={member.action.pageName}
+                                        data-flow-name={member.action.flowName}
+                                        data-member-id={member.SSP_Member__c}
+                                        alt="Right_arrow_icon"
+                                        class="ssp-MemberCardIcon"
+                                        src={member.action.icon}
+                                    />
+                                </div>
+                            </div>
+                            <template if:false={member.action.disabled}>
+                                <div
+                                    if:true={member.subsections}
+                                class="slds-grid_vertical-align-center slds-grid slds-wrap"
+                                >
+                                    <template
+                                        for:each={member.subsections}
+                                        for:item="subsection"
+                                    >
+                                        <div
+                                            key={subsection.id}
+                                            if:false={subsection.disabled}
+                                        class="slds-size_1-of-3 slds-col ssp-member-detail-section slds-grid slds-grid_align-spread slds-p-vertical_small  slds-p-left_small"
+                                        >
+                                            <div>
+                                                <p class={subsection.cssStyle}>
+                                                    {subsection.subsectionName}
+                                                </p>
+                                                <p
+                                                    class="ssp-ReviewVariationCardBlack ssp-color_monoOmega"
+                                                >
+                                                    {subsection.statusString}
+                                                </p>
+                                            </div>
+                                            <span
+                                                if:true={subsection.action.disableArrow}
+                                            >
+                                                <a
+                                                    onclick={handleSubsectionAction}
+                                                    title={subsection.action.altText}
+                                                    data-page-name={subsection.pageName}
+                                                    data-flow-name={subsection.flowName}
+                                                    data-member-id={member.SSP_Member__c}
+                                                >
+                                                    <img
+                                                        alt="Right_arrow_icon"
+                                                        class="ssp-MemberCardIcon"
+                                                        src={subsection.action.icon}
+                                                    />
+                                                </a>
+                                            </span>
+                                            <span
+                                                if:false={subsection.action.disableArrow}
+                                            >
+                                                <img
+                                                    alt="Right_arrow_icon"
+                                                    class="ssp-MemberCardIcon"
+                                                    src={subsection.action.icon}
+                                                />
+                                            </span>
+                                        </div>
+                                    </template>
+                                </div>
+                            </template>
+                        </li>
+                    </template>
+                </ul>
+                <template if:true={isCompleted}>
+                    <div class="ssp-nonMemberNote" if:true={section.bottomNote}>
+                        <img src={needsReviewIconUrl} alt="review" />
+                        <span
+                            class="ssp-fontFamily_popinRegular ssp-color_monoBody"
+                            >{section.bottomNote}
+                        </span>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </div>
+</template>

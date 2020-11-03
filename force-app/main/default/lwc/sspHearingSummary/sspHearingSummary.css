@@ -1,0 +1,56 @@
+h1 {
+    font-size: 2.625rem;
+}
+p {
+    font-size: 1rem;
+}
+a {
+    text-decoration: underline;
+}
+.ssp-sectionHeading {
+    font-size: 1.125rem;
+    padding-top: 30px;
+}
+.ssp-cardInnerContainer {
+    padding: 15px 30px 30px 30px;
+}
+.ssp-hearingStauts {
+    font-size: 0.8125rem;
+    display: inline-block;
+}
+.ssp-cardContainer {
+    padding-bottom: 1px;
+}
+
+.ssp-hearingSummaryMainContainer {
+    padding: 60px 135px 0 60px;
+}
+
+.ssp-hearingSummaryContentContainer {
+    padding: 0 135px 0 60px;
+}
+.ssp-AnchorCall{
+    display: inline;
+}
+.ssp-learnMore {
+    display: inline;
+}
+@media only screen and (max-width: 768px) {
+    .ssp-hearingContainer {
+        padding-top: 90px;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+    .ssp-mobileSectionMargin {
+        margin-bottom: 20px;
+    }
+
+    .ssp-hearingSummaryMainContainer {
+        padding: 60px 30px 0;
+    }
+
+    .ssp-hearingSummaryContentContainer {
+        padding: 0 30px;
+    }
+}

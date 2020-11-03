@@ -1,0 +1,165 @@
+.ssp-enrollmentDetailNavBar {
+    padding: 10px 0;
+}
+.ssp-enrollmentDetailNavBar span {
+    margin-left: 14.24%;
+    font-size: 1rem;
+    line-height: 24px;
+    letter-spacing: -0.3px;
+    text-align: left;
+}
+.ssp-individualEnrollDesc {
+    font-size: 1rem;
+    line-height: 24px;
+    letter-spacing: -0.3px;
+    text-align: left;
+    margin: 30px 0;
+}
+.ssp-enrollmentDetailTitle {
+    font-size: 2.625rem;
+    line-height: 48px;
+    text-align: left;
+    margin: 60px 0 30px 0;
+}
+.ssp-enrollmentDetailHr {
+    height: 5px;
+    border-radius: 2.5px;
+    margin-bottom: 15px;
+}
+.ssp-enrollmentDetailsDesc {
+    font-size: 1rem;
+    line-height: 24px;
+    letter-spacing: -0.3px;
+    text-align: left;
+    margin: 30px 0;
+}
+.ssp-enrollmentDetailsSource {
+    margin-bottom: 60px;
+}
+.ssp-enrollmentDetailsSource p {
+    font-size: 1rem;
+    line-height: 24px;
+    letter-spacing: -0.3px;
+    text-align: left;
+    margin-bottom: 15px;
+}
+.ssp-enrollmentDetailInsurance,
+.ssp-enrollmentDetailsPlan,
+.ssp-enrollmentDetailsMemberDetails {
+    font-size: 1.125rem;
+    line-height: 24px;
+    letter-spacing: -0.3px;
+    text-align: left;
+    margin-bottom: 15px;
+}
+.ssp-enrollmentDetailCompName {
+    margin-bottom: 15px;
+    width: 370px;
+}
+.ssp-enrollmentDetailsAddress {
+    margin-bottom: 60px;
+}
+.ssp-enrollmentDetailsPlanDetails div:first-of-type {
+    margin-right: 30px;
+}
+.ssp-enrollmentDetailsPlanDetails,
+.ssp-enrollmentDetailsFirstName {
+    margin-bottom: 15px;
+}
+.ssp-enrollmentDetailsPlanDetails:last-of-type {
+    margin-bottom: 0;
+}
+.ssp-enrollmentDetailsPlanDetails div,
+/* .ssp-enrollmentDetailsAddress div, */
+.ssp-enrollmentDetailsLastName,
+.ssp-enrollmentDetailsFirstName {
+    width: 370px;
+}
+.ssp-enrollmentDetailsMemberDetails,
+.ssp-enrollmentDetailSingleCheck {
+    margin-top: 60px;
+}
+.ssp-enrollmentDetailsHolder,
+.ssp-enrollmentDetailsEnrolled {
+    font-size: 1rem;
+    line-height: 24px;
+    letter-spacing: -0.3px;
+    text-align: left;
+    margin-bottom: 15px;
+}
+.ssp-enrollmentDetailsRadio {
+    margin-bottom: 60px;
+}
+.ssp-enrollmentDetailsRadioGroup,
+.ssp-enrollmentDetailsCheckGroup {
+    width: 370px;
+    margin-bottom: 30px;
+}
+.ssp-enrollmentDetailsColumnOne {
+    width: 370px;
+    margin-right: 30px;
+}
+.ssp-enrollmentDetailsColumnTwo {
+    width: 170px;
+}
+.ssp-enrollmentDetailNoMiddleName,
+.ssp-enrollmentDetailsCheck,
+.ssp-enrollmentDetailsMemberName,
+.ssp-enrollmentDetailsMemberNameCont {
+    margin-bottom: 30px;
+}
+.ssp-enrollmentDetailsAddMember {
+    font-size: 0.8125rem;
+    line-height: 24px;
+    letter-spacing: 0.3px;
+    text-align: left;
+    text-decoration: underline;
+}
+.ssp-enrollmentDetailsFooter {
+    margin: 100px 0 60px 0;
+}
+
+@media only screen and (max-width: 768px) {
+    .ssp-enrollmentDetailTitle {
+        margin-top: 30px;
+        font-size: 1.5rem;
+        line-height: 32px;
+        text-align: left;
+    }
+    .ssp-enrollmentDetailsAddress,
+    .ssp-enrollmentDetailsPlanDetails,
+    .ssp-enrollmentDetailsMemberName,
+    .ssp-enrollmentDetailsMemberLastName {
+        display: block;
+    }
+    .ssp-enrollmentDetailCompName,
+    .ssp-enrollmentDetailsFirstName,
+    .ssp-enrollmentDetailsLastName,
+    .ssp-enrollmentDetailsRadioGroup,
+    .ssp-enrollmentDetailsCheckGroup,
+    .ssp-enrollmentDetailsAddress div,
+    .ssp-enrollmentDetailsPlanDetails div,
+    .ssp-enrollmentDetailsMemberName div,
+    .ssp-enrollmentDetailsMemberLastName div {
+        width: 100%;
+    }
+    .ssp-enrollmentDetailsPlanDetails div:first-of-type,
+    .ssp-enrollmentDetailsAddress div:first-of-type,
+    .ssp-enrollmentDetailsMemberName div:first-of-type,
+    .ssp-enrollmentDetailsMemberLastName div:first-of-type {
+        margin: 0;
+        margin-bottom: 15px;
+    }
+    .ssp-enrollmentDetailsSaveBtn {
+        width: 50%;
+        padding-left: 10px;
+    }
+    .ssp-enrollmentDetailsSaveBtn .ssp-button_neutral{
+        width: 100%;
+    }
+    
+    .ssp-enrollmentDetailsCancelBtn {
+        width: 50%;
+        padding-right: 10px;
+    }
+}

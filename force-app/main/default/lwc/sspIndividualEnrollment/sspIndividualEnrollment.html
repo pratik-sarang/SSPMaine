@@ -1,0 +1,444 @@
+<!--
+* name 		        : sspIndividualEnrollment
+* @description 	    : This screen displays the Individuals Enrollment Details.
+* @author 		    : Chaitanya Kanakia, Varun Kochar. 
+* @date 		    : 20/12/2019
+* MODIFICATION LOG:
+* DEVELOPER           DATE                DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* Chaitanya Kanakia	  20/12/2019	      Initial UI
+-->
+<template>
+  <template if:true={showSpinner}>
+    <c-ssp-spinner></c-ssp-spinner>
+  </template>
+
+  <div class="ssp-errorToast" if:true={hasSaveValidationError}>
+    <c-ssp-toast
+      ssp-toast-title-val={label.toastErrorText}
+      show-error-toast={trueValue}
+      onhidetoast={hideToast}
+    ></c-ssp-toast>
+  </div>
+
+  <template if:true={screenRenderingStatus}>
+    <div class="ssp-bodyContainer">
+      <template if:true={showEnrolledInInsurance}>
+        <div
+          class="ssp-individualEnrollTitle ssp-color_blueAlpha ssp-fontFamily_popinBlack"
+        >
+          {label.sspEnrollmentDetailsTitle}
+        </div>
+      </template>
+      <template if:false={showEnrolledInInsurance}>
+        <div
+          class="ssp-individualEnrollTitle ssp-color_blueAlpha ssp-fontFamily_popinBlack"
+        >
+          {label.sspAccessDetailsTitle}
+        </div>
+      </template>
+      <div
+        class="ssp-individualEnrollMemberFullName ssp-color_monoBody ssp-fontFamily_popinBold"
+      >
+        {memberFullName}
+      </div>
+      <div class="ssp-individualEnrollHr ssp-bg_monoAlpha"></div>
+      <div class="slds-m-vertical_large">
+        <template if:true={enrollmentVerification}>
+          <c-ssp-general-notice-card if:false={isHealthCarePolicyApprove}>
+            <p>
+              {label.sspPageInformationVerified}
+              <span><a href={callUsAt}
+                    class="ssp-color_blueAlpha slds-m-left_xx-small">
+                  {label.startBenefitsAppCallNumber}.</a>
+              </span>
+            </p>
+          </c-ssp-general-notice-card>
+          <c-ssp-general-notice-card if:true={isHealthCarePolicyApprove}>
+            <p>
+              {label.sspHealthCareApprovedMsg}            
+            <a href={callUsAtApproved}
+            class="ssp-color_blueAlpha ssp-call-dcbs">
+              {label.sspEnrollmentPhone}</a>.</p>
+          </c-ssp-general-notice-card>
+        </template>
+      </div>
+      <template if:true={isMemberPolicyHolder}>
+        <template if:true={doesMemberHaveEmploymentRecords}>
+          <div class="ssp-individualEnrollEmployerInfo">
+            <div tabindex="0"
+              class="ssp-individualEnrollEmployerTitle ssp-color_blueAlpha ssp-fontFamily_popinBold"
+            >
+              {label.sspIndividualEnrollEmployerName}
+            </div>
+            <div class="ssp-individualEnrollHr ssp-bg_monoAlpha"></div>
+            <div class="ssp-individualEnrollEmployerRadioGroup">
+              <div>
+                <c-ssp-base-component-input-radio-group
+                  onchange={handleEmployer}
+                  label={employerList.label}
+                  value={selectedEmployer}
+                  options={employerList}
+                  disabled={employerListDisabilityStatus}
+                ></c-ssp-base-component-input-radio-group>
+              </div>
+            </div>
+            <template if:true={showOther}>
+              <div class="slds-m-bottom_large">
+                <c-ssp-explicit-notice-card
+                  >{label.sspEnterIncomeNoticeMessage}</c-ssp-explicit-notice-card
+                >
+              </div>
+              <div class="ssp-individualEnrollOtherEmployer">
+                <c-ssp-base-component-input-text
+                  onchange={handleOtherEmployer}
+                  value={individualMemberDetails.SSP_InsurancePolicy__r.EmployerName__c}
+                  label={label.sspIndividualEnrollOtherEmployer}
+                  entity-name="SSP_InsurancePolicy__c"
+                  field-name="EmployerName__c"
+                  meta-list={MetaDataListParent}
+                                    class="ssp-applicationInputElement ssp-inputElement "
+                  data-id="EmployerName__c"
+                  disabled={disableEmployerName}
+                >
+                </c-ssp-base-component-input-text>
+              </div>
+            </template>
+          </div>
+        </template>
+      </template>
+
+      <template if:false={doesMemberHaveEmploymentRecords}>
+        <div class="slds-m-top_large">
+          <c-ssp-explicit-notice-card
+            >{label.sspEnterIncomeNoticeMessage}</c-ssp-explicit-notice-card
+          >
+        </div>
+        <div class="ssp-individualEnrollEmployerName">
+          <c-ssp-base-component-input-text
+            onchange={handleOtherEmployer}
+            label={label.sspIndividualEnrollNameOfEmployer}
+            value={individualMemberDetails.SSP_InsurancePolicy__r.EmployerName__c}
+            entity-name="SSP_InsurancePolicy__c"
+            field-name="EmployerName__c"
+            meta-list={MetaDataListParent}
+                        class="ssp-applicationInputElement ssp-inputElement "
+            data-id="EmployerName__c"
+            disabled={disableEmployerName}
+          >
+          </c-ssp-base-component-input-text>
+        </div>
+      </template>
+
+      <div class="ssp-individualEnrollTobacco">
+        <!-- Disabling part is removed
+                    Please refer the DDD Section 6.14
+                    modified By Sai Kiran-->
+        <c-ssp-base-component-input-toggle
+          label={sspUsesTobacco}
+          options={optList}
+          value={bUsesTobacco}
+          onchange={handleUsesTobacco}
+          disabled={tobaccoDisabilityStatus}
+        >
+        </c-ssp-base-component-input-toggle>
+      </div>
+
+      <template if:true={memberIsOutsideOfHouseHold}>
+        <div class="ssp-individualEnrollMemberDetails">
+          <div
+            class="ssp-individualEnrollMemberDetailsTitle ssp-color_blueAlpha ssp-fontFamily_popinBold"
+          >
+            {label.sspIndividualEnrollMemberDetails}
+          </div>
+          <div class="ssp-individualEnrollHr ssp-bg_monoAlpha"></div>
+
+          <template if:true={memberIsPolicyHolder}>
+            <div class="ssp-individualEnrollMemberInfo">
+              <div class="ssp-outside-policy-holder">
+                <c-ssp-address-auto-complete
+                                    class="addressLineClass ssp-applicationInputElement ssp-inputElement "
+                  entity-name="SSP_InsuranceCoveredIndiv__c"
+                  field-name="ExtAddressLine1__c"
+                  record={addressRecord}
+                  field-map={fieldMap}
+                  meta-list={MetaDataListParent}
+                  disabled={disabledAddress}
+                ></c-ssp-address-auto-complete>
+              </div>
+              <div>
+                <c-ssp-base-component-input-text
+                  onchange={handleSocialSecurityNumber}
+                  label={label.sspSocialSecurityNumber}
+                  value={individualMemberDetails.ExtPolicyHolderSsn__c}
+                  data-id="ExtPolicyHolderSsn__c"
+                  input-type="password"
+                  entity-name="SSP_InsuranceCoveredIndiv__c"
+                  field-name="ExtPolicyHolderSsn__c"
+                  meta-list={MetaDataListParent}
+                                    class="ssp-inputElement ssp-ssnField"
+                  disabled={disableSocialSecurityNumber}
+                  max-length="9"
+                >
+                </c-ssp-base-component-input-text>
+              </div>
+            </div>
+          </template>
+
+          <template if:false={memberIsPolicyHolder}>
+            <div class="ssp-individualEnrollMemberInfo">
+              <div>
+                <c-ssp-base-component-input-picklist
+                  label={label.sspGender}
+                  option={genderOptions}
+                                    selected-value={individualMemberDetailsWrapper.gender}
+                                    value={individualMemberDetailsWrapper.gender}
+                  onchange={handleGender}
+                  onhandlepicklistchange={handleGender}
+                  entity-name="SSP_InsuranceCoveredIndiv__c"
+                  field-name="Gender__c"
+                  meta-list={MetaDataListParent}
+                                    class="ssp-applicationInputElement ssp-inputElement "
+                  data-id="Gender__c"
+                  disabled={disableGender}
+                ></c-ssp-base-component-input-picklist>
+              </div>
+              <div>
+                <c-ssp-base-component-input-date
+                  onchange={handleDateOfBirth}
+                  label={label.sspDateOfBirth}
+                                    value={individualMemberDetailsWrapper.dob}
+                  entity-name="SSP_InsuranceCoveredIndiv__c"
+                  field-name="DateofBirth__c"
+                  meta-list={MetaDataListParent}
+                                    class="ssp-applicationInputElement ssp-inputElement "
+                  disabled={disableDateOfBirth}
+                ></c-ssp-base-component-input-date>
+              </div>
+
+              <div>
+                <c-ssp-base-component-input-text
+                  onchange={handleSocialSecurityNumber}
+                                    value={individualMemberDetailsWrapper.ssn}
+                  label={label.sspSocialSecurityNumber}
+                  input-type="password"
+                                    data-id="SSN__c"
+                  entity-name="SSP_InsuranceCoveredIndiv__c"
+                                    field-name="SSN__c"
+                  meta-list={MetaDataListParent}
+                                    class="ssp-inputElement ssp-ssnField"
+                  disabled={disableSocialSecurityNumber}
+                  max-length="9"
+                >
+                </c-ssp-base-component-input-text>
+              </div>
+              <div>
+                <c-ssp-base-component-input-toggle
+                  label={medicaidUser}
+                  options={optList}
+                  value={bHaveMedicaid}
+                  onchange={handleHaveMedicaid}
+                  entity-name="SSP_InsuranceCoveredIndiv__c"
+                  field-name="HasMedicaidToggle__c"
+                  meta-list={MetaDataListParent}
+                                    class="ssp-applicationInputElement ssp-inputElement "
+                  disabled={disableMedicaidToggle}
+                ></c-ssp-base-component-input-toggle>
+              </div>
+              <template if:true={memberHasMedicaid}>
+                <div>
+                  <c-ssp-base-component-input-text
+                    onchange={handleMedicaid}
+                    label={label.sspIndividualEnrollMedicaidId}
+                    value={individualMemberDetails.MedicaidId__c}
+                    entity-name="SSP_InsuranceCoveredIndiv__c"
+                    field-name="MedicaidId__c"
+                    data-id="MedicaidId__c"
+                    meta-list={MetaDataListParent}
+                                        class="ssp-applicationInputElement ssp-inputElement "
+                    disabled={disableMedicaidNumber}
+                    max-length="10"
+                  >
+                  </c-ssp-base-component-input-text>
+                </div>
+              </template>
+            </div>
+          </template>
+        </div>
+      </template>
+
+      <template if:false={isMemberPolicyHolder}>
+        <div class="ssp-individualEnrollRelationships">
+          <div
+            class="ssp-individualEnrollRelationshipsTitle ssp-color_blueAlpha ssp-fontFamily_popinBold"
+          >
+            {label.sspIndividualEnrollRelationship}
+          </div>
+          <div class="ssp-individualEnrollHr ssp-bg_monoAlpha"></div>
+          <div class="ssp-individualEnrollRelation">
+            <div>
+              <c-ssp-base-component-input-picklist
+                label={sspWhatIsTheRelation}
+                option={relationshipOptions}
+                selected-value={individualMemberDetails.RelationshipCode__c}
+                value={individualMemberDetails.RelationshipCode__c}
+                onchange={manageRelationship}
+                onhandlepicklistchange={manageRelationship}
+                entity-name="SSP_InsuranceCoveredIndiv__c"
+                field-name="RelationshipCode__c"
+                meta-list={MetaDataListParent}
+                                class="ssp-applicationInputElement ssp-inputElement "
+                title={label.sspIndividualEnrollRelationAlt}
+                disabled={disableRelationship}
+              ></c-ssp-base-component-input-picklist>
+            </div>
+          </div>
+        </div>
+      </template>
+        <template if:false={isExtPolicyHolder}>
+      <div class="ssp-individualEnrollPolicyCoverage">
+        <div
+          class="ssp-individualEnrollPolicyCoverageTitle ssp-color_blueAlpha ssp-fontFamily_popinBold"
+        >
+          {label.sspIndividualEnrollPolicyDetail}
+        </div>
+        <div class="ssp-individualEnrollHr ssp-bg_monoAlpha"></div>
+        <div
+          class="ssp-individualEnrollTypeOfCoverage ssp-color_monoBody ssp-fontFamily_popinBold"
+        >
+          {label.sspIndividualEnrollTypeOfCoverage}
+        </div>
+      </div>
+      <template for:each={policyList} for:item="policyWrapper">
+        <div
+          key={policyWrapper.policy.id}
+          class="ssp-individualEnrollPolicyCoverageCheck"
+        >
+          <c-ssp-multiselect-with-additional-input
+            custom-validation-error={selectAtleastOnePolicy}
+            onchange={selectedPolicy}
+            label={policyWrapper.facilityName}
+            value={policyWrapper.policy.FacilityType__c}
+            is-checked={policyWrapper.selected}
+            data-id="selectionCheckBox"
+            data-index={policyWrapper.index}
+                            class="ssp-applicationInputElement ssp-inputElement  ssp-individualEnrollAdditionalInput"
+            title={policyWrapper.policy.FacilityType__c}
+            disabled={policyWrapper.disablePolicySelection}
+            hide-additional-section={hideAdditionalSection}
+          >
+            <template if:true={showEnrolledInInsurance}>
+              <template if:false={policyWrapper.existingPolicy}>
+                <c-ssp-base-component-input-date
+                  onchange={handleCoverageStartDate}
+                  title={policyWrapper.policy.FacilityType__c}
+                  label={label.sspIndividualEnrollCoverageStart}
+                  value={policyWrapper.policy.CoverageStartDate__c}
+                  entity-name="SSP_HealthInsuranceFacilityType__c"
+                  field-name="CoverageStartDate__c"
+                  meta-list={MetaDataListParent}
+                                        class="ssp-applicationInputElement ssp-inputElement "
+                  data-id="CoverageStartDate__c"
+                  disabled={policyWrapper.disableStartDate}
+                ></c-ssp-base-component-input-date>
+              </template>
+
+              <template if:true={policyWrapper.existingPolicy}>
+                <div class="ssp-individualEnrollCoverageEnd">
+                  <div>
+                    <c-ssp-base-component-input-date
+                      onchange={handleCoverageStartDate}
+                      title={policyWrapper.policy.FacilityType__c}
+                      label={label.sspIndividualEnrollCoverageStart}
+                      value={policyWrapper.policy.CoverageStartDate__c}
+                      entity-name="SSP_HealthInsuranceFacilityType__c"
+                      field-name="CoverageStartDate__c"
+                      meta-list={MetaDataListParent}
+                                                class="ssp-applicationInputElement ssp-inputElement "
+                      data-id="CoverageStartDate__c"
+                      disabled={policyWrapper.disableStartDate}
+                    ></c-ssp-base-component-input-date>
+                  </div>
+                  <div>
+                    <c-ssp-base-component-input-picklist
+                      onchange={handleIndividualEnrollRemovalReason}
+                      onhandlepicklistchange={handleIndividualEnrollRemovalReason}
+                      label={label.sspIndividualEnrollRemovalReason}
+                      selected-value={policyWrapper.policy.EndReason__c}
+                      value={policyWrapper.policy.EndReason__c}
+                      option={reasonForRemovalOptions}
+                      entity-name="SSP_HealthInsuranceFacilityType__c"
+                      field-name="EndReason__c"
+                      meta-list={policyWrapper.metaList}
+                      data-index={policyWrapper.index}
+                                                class="ssp-applicationInputElement ssp-inputElement  ssp-end-reason"
+                      title={label.sspIndividualEnrollRemovalReasonAlt}
+                      disabled={disableEndReason}
+                    >
+                    </c-ssp-base-component-input-picklist>
+                  </div>
+                  <div>
+                    <c-ssp-base-component-input-date
+                      onchange={handleIndividualEnrollCoverageEndDate}
+                      title={policyWrapper.policy.FacilityType__c}
+                      label={label.sspIndividualEnrollCoverageEnd}
+                      value={policyWrapper.policy.CoverageEndDate__c}
+                      entity-name="SSP_HealthInsuranceFacilityType__c"
+                      field-name="CoverageEndDate__c"
+                      meta-list={policyWrapper.metaList}
+                      data-index={policyWrapper.index}
+                                                class="ssp-applicationInputElement ssp-inputElement  ssp-end-date"
+                      disabled={disableEndDate}
+                    ></c-ssp-base-component-input-date>
+                  </div>
+
+                  <template if:true={explainReasonOfRemoval}>
+                    <div>
+                      <c-ssp-base-component-input-text-area
+                        onchange={handleIndividualEnrollPleaseExplain}
+                        title={policyWrapper.policy.FacilityType__c}
+                        value={policyWrapper.policy.OtherReason__c}
+                        label={label.sspIndividualEnrollPleaseExplain}
+                        entity-name="SSP_HealthInsuranceFacilityType__c"
+                        field-name="OtherReason__c"
+                        meta-list={MetaDataListParent}
+                                                    class="ssp-applicationInputElement ssp-inputElement "
+                        disabled={disableOtherReason}
+                      >
+                      </c-ssp-base-component-input-text-area>
+                    </div>
+                  </template>
+                </div>
+              </template>
+            </template>
+          </c-ssp-multiselect-with-additional-input>
+        </div>
+      </template>
+      <div class="ssp-color_redOmega">
+        <span>{selectAtLeastOnePolicy}</span>
+      </div>
+            </template>
+      <div class="ssp-individualEnrollFooter slds-grid slds-grid_align-spread">
+        <div class="ssp-individualEnrollCancelBtn ssp-screenFooterBlueBtn">
+          <lightning-button
+            label={label.sspCancel}
+            class="ssp-button_base"
+            title={cancelButtonAlt}
+            onclick={cancelIndividualEnrollmentDetails}
+          ></lightning-button>
+        </div>
+        <div class="ssp-individualEnrollSaveBtn">
+          <lightning-button
+            label={label.sspSave}
+            class="ssp-button_neutral"
+            title={saveButtonAlt}
+            onclick={save}
+          ></lightning-button>
+        </div>
+      </div>
+    </div>
+  </template>
+    <template if:true={showAccessDeniedComponent}>
+        <c-ssp-access-denied></c-ssp-access-denied>
+    </template>
+</template>

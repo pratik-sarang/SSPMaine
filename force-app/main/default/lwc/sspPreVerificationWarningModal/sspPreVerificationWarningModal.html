@@ -1,0 +1,47 @@
+<!--
+* name          : sspPreVerificationWarningModal
+* @description  : This screen gives a warning Modal.
+* @author       : Suyash and Siddarth
+* @date         : 14/12/2019
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName                MM/DD/YYYY               A Brief Description about the Change
+  Suyash and Siddarth         17/12/19                          Initial Version
+-->
+<template>
+    <template if:true={openModel}>
+        <c-ssp-detailed-information-modal
+            header-value={label.sspReviewRequired}
+            open-model={openModel}
+            onclosemodal={handleProp}
+            reference={reference}
+        >
+            <p
+                class="ssp-fontFamily_ArvoRegular ssp-color_monoOmega slds-p-bottom_large"
+                slot="contentSlot"
+            >
+                {label.sspSocialSecurityNumberDoesNotMatch}
+            </p>
+            <div
+                slot="Footer"
+                class="slds-grid slds-wrap slds-grid_align-spread"
+            >
+                <lightning-button
+                    variant="brand"
+                    label={label.sspCheckMyEntries}
+                    class="ssp-exitModalBtn ssp-exitSaveBtn ssp-button_brand slds-size_1-of-2"
+                    onclick={handleProp}
+                >
+                </lightning-button>
+                <lightning-button
+                    variant="base"
+                    label={label.sspContinueAnywayButton}
+                    class="ssp-exitModalBtn ssp-cancelBtn ssp-button_base slds-size_1-of-2"
+                    onclick={continueAnyway}
+                >
+                </lightning-button>
+            </div>
+        </c-ssp-detailed-information-modal>
+    </template>
+</template>

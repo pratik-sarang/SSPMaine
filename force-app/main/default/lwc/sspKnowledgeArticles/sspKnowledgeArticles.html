@@ -1,0 +1,140 @@
+<!--
+* name 		        : SspKnowledgeArticles
+* @description 	    : This component is an accordion that displays info to the user.
+* @author 		    : Narapa Pulipati
+* @date 		    : 12/11/2019
+* MODIFICATION LOG:
+* DEVELOPER           DATE                DESCRIPTION
+* Narapa              07/28/2020          Modified for the Task 363516, 363517, 363520, 363526 - Help and FAQ pages
+* Narapa              07/28/2020          Modified for the Task 384879 - Corrected defect and also added a block to show up on Page when someone 
+                                          alters the url and no results are found on the Knowledge Articles Page
+* ---------------------------------------------------------------------------------------------
+-->
+<template>
+    <!--Spinner-->
+    <template if:true={showSpinner}>
+        <c-ssp-spinner></c-ssp-spinner>
+    </template>
+    <template if:true={isInit}>
+        <!--Back to Help and FAQ button-->
+        <template if:true={showBackButton}>
+            <div class="ssp-bodyContainer">
+                <div class="slds-grid slds-wrap">
+                    <div class="slds-size_2-of-3">
+                        <div
+                            class="ssp-fontFamily_popinBold slds-text-align_left slds-m-top_large"
+                        >
+                            <a
+                                href="javascript:void(0);"
+                                class="ssp-anchor ssp-color_monoBody"
+                                title={customLabels.sspAltBackToHelpFAQ}
+                                onclick={navigateToHelpAndFAQ}
+                                ><em
+                                    class="ssp-arrow_left slds-m-right_xx-small"
+                                ></em
+                                >{customLabels.sspBackToHelpFAQ}</a
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <!--Only when articles are available display this section-->
+        <template if:true={articlesAvailable}>
+            <!--Category Name as the title for the Page-->
+            <div class="ssp-ka-header">
+                <div class="ssp-bodyContainer ssp-ka-page-title">
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-size_1-of-1">
+                            <h1
+                                class="ssp-fontFamily_popinBlack ssp-color_blueAlpha"
+                            >
+                                {categoryName}
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Expand All and Collapse All Buttons-->
+            <div class="ssp-bodyContainer">
+                <div class="slds-grid slds-wrap">
+                    <div class="slds-size_1-of-1">
+                        <div
+                            class="ssp-fontFamily_popinBold slds-text-align_left slds-m-bottom_large"
+                        >
+                            <a
+                                href="javascript:void(0);"
+                                class="ssp-anchor ssp-color_monoBody"
+                                title={customLabels.sspExpandAll}
+                                onclick={expandAllAccordions}
+                                >{customLabels.sspExpandAll}</a
+                            >
+                            <span class="ssp-ka-separation">|</span>
+                            <a
+                                href="javascript:void(0);"
+                                class="ssp-anchor ssp-color_monoBody"
+                                title={customLabels.sspCollapseAll}
+                                onclick={collapseAllAccordions}
+                                >{customLabels.sspCollapseAll}</a
+                            >
+                        </div>
+                    </div>
+                </div>
+
+                <!--Displaying Knowledge Articles-->
+                <template for:each={articlesList} for:item="article">
+                    <template if:true={article.Question__c}>
+                        <div key={article.Id} class="slds-m-bottom_medium ">
+                            <c-ssp-accordion-card
+                                class="slds-size_1-of-1 ssp-bg_monoDelta  slds-m-bottom_large"
+                            >
+                                <div
+                                    class="ssp-fontFamily_popinBold"
+                                    slot="Title"
+                                >
+                                    <lightning-formatted-rich-text
+                                        value={article.Question__c}
+                                    ></lightning-formatted-rich-text>
+                                </div>
+                                <div
+                                    slot="contentSlot"
+                                    class="ssp-accordionSlot"
+                                >
+                                    <lightning-formatted-rich-text
+                                        value={article.Answer__c}
+                                    ></lightning-formatted-rich-text>
+                                </div>
+                            </c-ssp-accordion-card>
+                        </div>
+                    </template>
+                    <template if:false={article.Question__c}>
+                        <div
+                            key={article.Id}
+                            class="ssp-color_monoOmega ssp-fontFamily_ArvoRegular  ssp-margin-bottom_large ssp-flow-page-instr slds-m-vertical_medium "
+                        >
+                            <lightning-formatted-rich-text
+                                value={article.Answer__c}
+                                class="ssp-font_defaultSize"
+                            ></lightning-formatted-rich-text>
+                        </div>
+                    </template>
+                </template>
+            </div>
+        </template>
+
+        <!--When articles are not available show No Results-->
+        <template if:false={articlesAvailable}>
+            <div class="ssp-bodyContainer slds-p-top_xx-large">
+                <div class="slds-grid slds-wrap">
+                    <div class="slds-size_1-of-1">
+                        <h1 class="ssp-fontFamily_popinBlack ">
+                            {customLabels.sspNoResultsFound}
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </template>
+    </template>
+</template>

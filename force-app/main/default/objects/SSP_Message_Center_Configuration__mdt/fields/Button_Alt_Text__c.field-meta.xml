@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Button_Alt_Text__c</fullName>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Button Alt Text</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Click to upload documents</fullName>
+                <default>true</default>
+                <label>Click to upload documents</label>
+            </value>
+            <value>
+                <fullName>Click to renew benefits</fullName>
+                <default>false</default>
+                <label>Click to renew benefits</label>
+            </value>
+            <value>
+                <fullName>Click to call DCBS</fullName>
+                <default>false</default>
+                <label>Click to call DCBS</label>
+            </value>
+            <value>
+                <fullName>Click to pay your claim</fullName>
+                <default>false</default>
+                <label>Click to pay your claim</label>
+            </value>
+            <value>
+                <fullName>Click to continue the application</fullName>
+                <default>false</default>
+                <label>Click to continue the application</label>
+            </value>
+            <value>
+                <fullName>Click to view the notice</fullName>
+                <default>false</default>
+                <label>Click to view the notice</label>
+            </value>
+            <value>
+                <fullName>Click to Review and Consent</fullName>
+                <default>false</default>
+                <label>Click to Review and Consent</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

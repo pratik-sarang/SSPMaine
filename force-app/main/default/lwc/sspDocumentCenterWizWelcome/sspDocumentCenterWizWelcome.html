@@ -1,0 +1,106 @@
+<!--
+* name : SspDocumentCenterWizWelcome
+* @description :This screen is container for Start Uploading Forms Of Proof screen.
+* @author : Kyathi Kanumuri,Aniket
+* @date : 4/10/2020
+* MODIFICATION LOG:
+* DEVELOPER             DATE            DESCRIPTION
+* ________________________________________________________________________________
+* Kyathi                4/10/2020     Creating HTML Structure
+-->
+<template>
+    <div class="ssp-uploadProofForms" if:true={showWelcome}>
+        <c-ssp-exit-document-wizard-modal
+            open-model={openExitWizardModel}
+            onclosemodal={closeExitWizardModel}
+        ></c-ssp-exit-document-wizard-modal>
+        <div class="slds-is-relative ssp-imgContainer">
+            <div class="ssp-imgElements ssp-alignmentContainer">
+                <h1
+                    class="ssp-startUploadHeader ssp-fontFamily_popinBlack ssp-color_monoBody"
+                >
+                    {label.sspStartProofUploadHeader}
+                </h1>
+            </div>
+        </div>
+        <div
+            class="slds-grid slds-wrap ssp-alignmentContainer    ssp-documentCenterHome ssp-startUploadContainer ssp-fontFamily_ArvoRegular ssp-color_monoOmega"
+        >
+            <div class="slds-col slds-size_1-of-3 slds-max-medium-size_1-of-1">
+                <p class="ssp-startUploadContent1">
+                    {label.sspStartProofUploadContent1}
+                </p>
+                <p class="ssp-startUploadContent2">
+                    {label.sspStartProofUploadContent2}
+                </p>
+            </div>
+            <div class="slds-col slds-size_1-of-3 slds-max-medium-size_1-of-1">
+                <div class="ssp-sectionIconContainer">
+                    <img
+                        class="ssp-identifyEvidenceIcon"
+                        src={identifyEvidenceIcon}
+                        aria-hidden="true"
+                        role="presentation"
+                        alt={label.sspIdentifyEvidenceContent1}
+                    />
+                    <span
+                        class="ssp-evidenceLabel ssp-color_monoBody ssp-fontFamily_popinBold"
+                        >{label.sspIdentifyEvidenceLabel}</span
+                    >
+                </div>
+                <div class="ssp-startUploadDetails">
+                    <p class="ssp-evidenceContent1">
+                        {label.sspIdentifyEvidenceContent1}
+                    </p>
+                    <p class="ssp-evidenceContent2">
+                        {label.sspIdentifyEvidenceContent2}
+                    </p>
+                </div>
+            </div>
+            <div
+                class="slds-col slds-size_1-of-3 slds-max-medium-size_1-of-1 ssp-headerList"
+            >
+                <div class="ssp-sectionIconContainer">
+                    <img
+                        class="ssp-uploadDocumentIcon"
+                        src={uploadDocumentIcon}
+                        aria-hidden="true"
+                        role="presentation"
+                        alt={label.sspUploadDocumentContent1}
+                    /><span
+                        class="ssp-uploadDocumentLabel ssp-color_monoBody ssp-fontFamily_popinBold"
+                        >{label.sspUploadDocument}</span
+                    >
+                </div>
+                <div class="ssp-startUploadDetails">
+                    <p class="ssp-uploadContent1">
+                        {label.sspUploadDocumentContent1}
+                    </p>
+                    <ul>
+                        <li>
+                            {label.sspUploadDocumentContent2}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="slds-grid slds-wrap slds-size_1-of-1 ssp-actionButtonsContainer ssp-buttonWidth"
+            >
+                <div class="slds-size_1-of-1 ssp-actionButtons">
+                    <lightning-button
+                        class="ssp-button_base ssp-cancelButton ssp-screenFooterBlueBtn"
+                        label={label.sspExitButton}
+                        onclick={redirectDocCenterHome}
+                        title={label.sspExitWizardTitle}
+                    ></lightning-button>
+                    <lightning-button
+                        class="ssp-button_neutral ssp-saveButton ssp-screenFooterNextBtn"
+                        label={label.sspStartUploading}
+                        onclick={startUploading}
+                        title={label.sspStartUploadingTitle}
+                    ></lightning-button>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

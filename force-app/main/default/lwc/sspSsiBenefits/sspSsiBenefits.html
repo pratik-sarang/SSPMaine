@@ -1,0 +1,83 @@
+<!--
+* name 		: sspSsiBenefits
+* @description 	: This component deals with SSI Benefits details under Other Information
+* @author 		: Karthik Velu, Sai Kiran
+* @date 		: 1/13/2020
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName	      MM/DD/YYYY	      A Brief Description 
+                  about the Change
+-->
+<template>
+    <template if:true={showSpinner}>
+        <c-ssp-spinner></c-ssp-spinner>
+    </template>
+    <div class="ssp-bodyContainer" if:true={pageRenderingStatus}>
+        <div class="ssp-ssiBenefits_Container">
+            <div class="ssp-errorToast" if:true={hasSaveValidationError}>
+                <c-ssp-toast
+                    ssp-toast-title-val={label.toastErrorText}
+                    show-error-toast={trueValue}
+                    onhidetoast={hideToast}
+                ></c-ssp-toast>
+            </div>
+            <div class="slds-grid">
+                <c-ssp-base-component-input-date
+                    meta-list={MetaDataListParent}
+                    entity-name="SSP_Benefits__c"
+                    field-name="BenefitApplicationDate__c"
+                    data-id="dBenefitApplicationDate"
+                    value={sBenefitRecord.dBenefitApplicationDate}
+                    label={sspWhenDid}
+                    class="ssp-applicationInputs ssp-margin-bottom_large slds-large-size_1-of-2 slds-size_1-of-1"
+                >
+                </c-ssp-base-component-input-date>
+            </div>
+            <div class="slds-grid">
+                <c-ssp-base-component-input-radio-group
+                    meta-list-values={MetaDataListParent}
+                    entity-name="SSP_Benefits__c"
+                    field-name="StatusofApplication__c"
+                    data-id="sApplicationStatus"
+                    value={sBenefitRecord.sApplicationStatus}
+                    label={label.sspApplicationStatus}
+                    options={applicationStatusOptions}
+                    onchange={appStatusChange}
+                    class="ssp-applicationInputs ssp-margin-bottom_large slds-size_1-of-1"
+                >
+                </c-ssp-base-component-input-radio-group>
+            </div>
+            <template if:true={showDeniedSection}>
+                <div class="slds-grid">
+                    <c-ssp-base-component-input-radio-group
+                        meta-list-values={MetaDataListParent}
+                        entity-name="SSP_Benefits__c"
+                        field-name="BenefitDenialReason__c"
+                        data-id="sBenefitDenialReason"
+                        value={sBenefitRecord.sBenefitDenialReason}
+                        label={label.sspReasonDenied}
+                        options={denialStatusOptions}
+                        class="ssp-applicationInputs ssp-margin-bottom_large slds-size_1-of-1"
+                    >
+                    </c-ssp-base-component-input-radio-group>
+                </div>
+                <div class="slds-grid">
+                    <c-ssp-base-component-input-date
+                        meta-list={MetaDataListParent}
+                        entity-name="SSP_Benefits__c"
+                        field-name="BenefitDenialDate__c"
+                        data-id="dBenefitDenialDate"
+                        label={label.sspDeniedDate}
+                        value={sBenefitRecord.dBenefitDenialDate}
+                        class="ssp-applicationInputs ssp-margin-bottom_large slds-large-size_1-of-2 slds-size_1-of-1"
+                    >
+                    </c-ssp-base-component-input-date>
+                </div>
+            </template>
+        </div>
+    </div>
+    <template if:true={showAccessDeniedComponent}>
+        <c-ssp-access-denied></c-ssp-access-denied>
+    </template>
+</template>

@@ -1,0 +1,507 @@
+<!--
+* name 		: sspSignaturePage
+* @description 	: 
+* @author 		: Karthik Velu, Sai Kiran
+* @date 		: 1/21/2020
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName	      MM/DD/YYYY	      A Brief Description 
+                  about the Change
+-->
+<template>
+    <template if:true={showSpinner}>
+        <c-ssp-spinner></c-ssp-spinner>
+    </template>
+    <template if:true={pageRenderingStatus}>
+        <div class="ssp-errorToast" if:true={hasSaveValidationError}>
+            <c-ssp-toast
+                ssp-toast-title-val={toastErrorText}
+                show-error-toast={trueValue}
+                onhidetoast={hideToast}
+            ></c-ssp-toast>
+        </div>
+        <div class="ssp-bodyContainer ssp-signaturePage_Container">
+            <!-- CR Changes -->
+            <template if:true={bannerVisibility}>
+                <div class="slds-m-bottom_large">
+                    <c-ssp-general-notice-card
+                        notice-type={label.explicitText}
+                        notice-text={label.outsideDCBSMsg}
+                    ></c-ssp-general-notice-card>
+                </div>
+            </template>
+            <!-- CR Changes End -->
+            <div
+                class="ssp-fontFamily_popinBold ssp-color_monoBody ssp-termsOfAgreement ssp-margin-bottom_small"
+            >
+                {label.sspTermsOfAgreement}
+            </div>
+            <div class="slds-grid">
+                <span
+                    class="ssp-fontFamily_popinBold ssp-color_blueAlpha ssp-fontSize"
+                    >{label.sspTermOne}</span
+                >
+                <span
+                    class="slds-col slds-float_left slds-p-left_small ssp-fontFamily_ArvoRegular ssp-color_monoBody ssp-fontSize"
+                    >{label.sspHaveAnswered}</span
+                >
+            </div>
+            <div class="slds-grid">
+                <span
+                    class="ssp-fontFamily_popinBold ssp-color_blueAlpha ssp-fontSize"
+                    >{label.sspTermTwo}</span
+                >
+                <span
+                    class="slds-col slds-p-left_small ssp-fontFamily_ArvoRegular ssp-color_monoBody ssp-fontSize"
+                >
+                    {label.sspIfAnyChanges}</span
+                >
+            </div>
+            <div class="slds-grid">
+                <span
+                    class="ssp-fontFamily_popinBold ssp-color_blueAlpha ssp-fontSize"
+                    >{label.sspTermThree}</span
+                >
+                <span
+                    class="slds-col slds-p-left_small ssp-fontFamily_ArvoRegular ssp-color_monoBody ssp-fontSize"
+                    >{label.sspProvidingFalse}</span
+                >
+            </div>
+            <div class="ssp-margin-bottom_large slds-grid">
+                <span
+                    class="ssp-fontFamily_popinBold ssp-color_blueAlpha ssp-fontSize"
+                    >{label.sspTermFour}</span
+                >
+                <span
+                    class="slds-col slds-p-left_small ssp-fontFamily_ArvoRegular ssp-color_monoBody ssp-fontSize"
+                    >{label.sspPleaseReadAnd}</span
+                >
+            </div>
+            <div class="ssp-margin-bottom_small" if:false={isApplicationStatementNotAccessible}>
+                <c-ssp-selection-summary-card
+                    is-progress-started={isApplicationConsentProgressStart}
+                    is-progress-complete={isApplicationConsentProgressComplete}
+                >
+                    <slot>
+                        <a
+                            tabindex="0"
+                            title={label.sspStatementOfUnderstanding}
+                            data-type="sspStatementOfUnderstanding"
+                            onclick={openLinkModal}
+                            onkeydown={openLinkModal}
+                            class="ssp-color_monoBody"
+                        >
+                            {label.sspStatementOfUnderstanding}
+                        </a>
+                    </slot>
+                </c-ssp-selection-summary-card>
+                <template if:true={sspStatementOfUnderstanding}>
+                    <c-ssp-application-statement-understanding-modal
+                        is-selected-value={isAgreeingToApplicationConsent}
+                        additional-info-snap={additionalInfoSnap}
+                        additional-info-k-t-a-p={additionalInfoKTAP}
+                        additional-info-medicaid={additionalInfoMedicaid}
+                        onclose={updateToggleFields}
+                        scroll-function={scrollModal}
+                        is-read-only-user={isApplicationStatementReadOnly}
+                    ></c-ssp-application-statement-understanding-modal>
+                </template>
+                <template if:true={bShowHyperlinkValidation}>
+                    <p class="ssp-color_redOmega ssp-showError"
+                        >{isAgreeingToApplicationConsentErrorText}</p
+                    >
+                    <p class="ssp-color_redOmega ssp-showError"
+                        >{isAgreeingToApplicationConsentRequiredFieldError}</p
+                    >
+                </template>
+            </div>
+            <template if:true={bShowAgreeingToMedicaidPenalty}>
+                <div class="ssp-margin-bottom_small">
+                    <c-ssp-selection-summary-card
+                        is-progress-started={isMedicaidPenaltyProgressStart}
+                        is-progress-complete={isMedicaidPenaltyProgressComplete}
+                    >
+                        <slot>
+                            <a
+                                tabindex="0"
+                                title={label.sspMedicalPenaltyWarning}
+                                data-type="sspMedicaidPenaltyWarning"
+                                onclick={openLinkModal}
+                                onkeydown={openLinkModal}
+                                class="ssp-color_monoBody"
+                            >
+                                {label.sspMedicalPenaltyWarning}
+                            </a>
+                        </slot>
+                    </c-ssp-selection-summary-card>
+                    <template if:true={sspMedicaidPenaltyWarning}>
+                        <c-ssp-medicaid-penalty-warning-modal
+                            is-selected-value={isAgreeingToMedicaidPenalty}
+                            onclose={updateToggleFields}
+                            scroll-function={scrollModal}
+                            is-read-only-user={isMedicaidPenaltyReadOnly}
+                        >
+                        </c-ssp-medicaid-penalty-warning-modal>
+                    </template>
+                    <template if:true={bShowHyperlinkValidation}>
+                        <p
+                            class="ssp-color_redOmega ssp-showError"
+                            >{isAgreeingToMedicaidPenaltyErrorText}</p
+                        >
+                        <p
+                            class="ssp-color_redOmega ssp-showError"
+                            >{isAgreeingToMedicaidPenaltyRequiredFieldError}</p
+                        >
+                    </template>
+                </div>
+            </template>
+            <template if:true={bShowAgreeingToSNAPRightsConsent}>
+                <div class="ssp-margin-bottom_small">
+                    <c-ssp-selection-summary-card
+                        is-progress-started={isSNAPRightsConsentProgressStart}
+                        is-progress-complete={isSNAPRightsConsentProgressComplete}
+                    >
+                        <slot>
+                            <a
+                                tabindex="0"
+                                title={label.sspRightsAndResponsibilities}
+                                data-type="sspRightsAndResponsibilities"
+                                onclick={openLinkModal}
+                                onkeydown={openLinkModal}
+                                class="ssp-color_monoBody"
+                            >
+                                {label.sspRightsAndResponsibilities}
+                            </a>
+                        </slot>
+                    </c-ssp-selection-summary-card>
+                    <template if:true={sspRightsAndResponsibilities}>
+                        <c-ssp-snap-rights-and-responsibilities-modal
+                            is-selected-value={isAgreeingToSNAPRightsConsent}
+                            onclose={updateToggleFields}
+                            scroll-function={scrollModal}
+                            is-read-only-user={isSnapRightsReadOnly}
+                        >
+                        </c-ssp-snap-rights-and-responsibilities-modal>
+                    </template>
+                    <template if:true={bShowHyperlinkValidation}>
+                        <p
+                            class="ssp-color_redOmega ssp-showError"
+                            >{isAgreeingToSNAPRightsConsentErrorText}</p
+                        >
+                        <p
+                            class="ssp-color_redOmega ssp-showError"
+                            >{isAgreeingToSNAPRightsConsentRequiredFieldError}</p
+                        >
+                    </template>
+                </div>
+            </template>
+            <template if:true={bShowAgreeingToLTCResourceTransferConsent}>
+                <div class="ssp-margin-bottom_small">
+                    <c-ssp-selection-summary-card
+                        is-progress-started={isLTCResourceTransferConsentProgressStart}
+                        is-progress-complete={isLTCResourceTransferConsentProgressComplete}
+                    >
+                        <slot>
+                            <a
+                                tabindex="0"
+                                title={label.sspResourceTransferConsent}
+                                data-type="sspResourceTransferConsent"
+                                onclick={openLinkModal}
+                                onkeydown={openLinkModal}
+                                class="ssp-color_monoBody"
+                            >
+                                {label.sspResourceTransferConsent}
+                            </a>
+                        </slot>
+                    </c-ssp-selection-summary-card>
+                    <template if:true={sspResourceTransferConsent}>
+                        <c-ssp-l-t-c-resource-transfer-consent-modal
+                            s-house-hold-spouse-name={objApplication.sHouseHoldSpouseName}
+                            is-selected-value={isAgreeingToLTCResourceTransferConsent}
+                            onclose={updateToggleFields}
+                            scroll-function={scrollModal}
+                            is-read-only-user={isLTCReadOnly}
+                        ></c-ssp-l-t-c-resource-transfer-consent-modal>
+                    </template>
+                    <template if:true={bShowHyperlinkValidation}>
+                        <p
+                            class="ssp-color_redOmega ssp-showError"
+                            >{isAgreeingToLTCResourceTransferConsentErrorText}</p
+                        >
+                        <p
+                            class="ssp-color_redOmega ssp-showError"
+                            >{isAgreeingToLTCResourceTransferConsentRequiredFieldError}</p
+                        >
+                    </template>
+                </div>
+            </template>
+            <template if:true={annuitiesModal}>
+                <div class="ssp-margin-bottom_small">
+                    <c-ssp-selection-summary-card
+                        is-progress-started={isMA34DeclarationProgressStart}
+                        is-progress-complete={isMA34DeclarationProgressComplete}
+                    >
+                        <slot>
+                            <a
+                                tabindex="0"
+                                title={label.sspDeclarationOfAnnuities}
+                                data-type="sspDeclarationOfAnnuities"
+                                onclick={openLinkModal}
+                                onkeydown={openLinkModal}
+                                class="ssp-color_monoBody"
+                            >
+                                {label.sspDeclarationOfAnnuities}
+                            </a>
+                        </slot>
+                    </c-ssp-selection-summary-card>
+                    <template if:true={sspDeclarationOfAnnuities}>
+                        <c-ssp-declaration-of-annuities-modal
+                            application-id={appId}
+                            is-selected-value={isAgreeingToMA34Declaration}
+                            onclose={updateToggleFields}
+                            scroll-function={scrollModal}
+                            is-read-only-user={isAnnuitiesReadOnly}
+                        >
+                        </c-ssp-declaration-of-annuities-modal>
+                    </template>
+                    <template if:true={bShowHyperlinkValidation}>
+                        <p
+                            class="ssp-color_redOmega ssp-showError"
+                            >{isAgreeingToMA34DeclarationErrorText}</p
+                        >
+                        <p
+                            class="ssp-color_redOmega ssp-showError"
+                            >{isAgreeingToMA34DeclarationRequiredFieldError}</p
+                        >
+                    </template>
+                </div>
+            </template>
+            <template if:true={bShowAgreeingToKiHippConsent}>
+                <div class="ssp-margin-bottom_xlarge">
+                    <c-ssp-selection-summary-card
+                        is-progress-started={isKiHippConsentProgressStart}
+                        is-progress-complete={isKiHippConsentProgressComplete}
+                    >
+                        <slot>
+                            <a
+                                tabindex="0"
+                                title={label.sspReadAndAgreeConsent}
+                                data-type="sspReadAndAgreeConsent"
+                                onclick={openLinkModal}
+                                onkeydown={openLinkModal}
+                                class="ssp-color_monoBody"
+                            >
+                                {label.sspReadAndAgreeConsent}
+                            </a>
+                        </slot>
+                    </c-ssp-selection-summary-card>
+                    <template if:true={sspReadAndAgreeConsent}>
+                        <c-ssp-k-i-h-i-p-p-consent-modal
+                            is-selected-value={isAgreeingToKiHippConsent}
+                            onclose={updateToggleFields}
+                            scroll-function={scrollModal}
+                            is-read-only-user={isKIHIPPReadOnly}
+                        ></c-ssp-k-i-h-i-p-p-consent-modal>
+                    </template>
+                    <template if:true={bShowHyperlinkValidation}>
+                        <p
+                            class="ssp-color_redOmega ssp-showError"
+                            >{isAgreeingToKiHippConsentErrorText}</p
+                        >
+                        <p
+                            class="ssp-color_redOmega ssp-showError"
+                            >{isAgreeingToKiHippConsentRequiredFieldError}</p
+                        >
+                   </template>
+                </div>
+            </template>
+            <div
+                if:true={showGreyLine}
+                class="ssp-margin-bottom_xlarge ssp-bg_monoAlpha ssp-greyUnderlineSmall"
+            ></div>
+            <template if:true={bIsMedicaidApplication}>
+            <div class="ssp-margin-bottom_large">
+                <c-ssp-base-component-input-toggle
+                    class="ssp-applicationInputs"
+                    meta-list={MetaDataListParent}
+                    entity-name="SSP_Application__c"
+                    field-name="IsRenewalConsent__c"
+                    value={applicationWrapper.fields.IsRenewalConsent__c.value}
+                    data-id="sRenewalConsent"
+                    label={label.sspDoYouAuthorize}
+                    options={responseOptions}
+                >
+                </c-ssp-base-component-input-toggle>
+            </div>
+            </template>
+            <template if:true={bIsSnapApplication}>
+            <div class="ssp-margin-bottom_xlarge">
+                <c-ssp-base-component-input-toggle
+                    class="ssp-applicationInputs"
+                    meta-list={MetaDataListParent}
+                    entity-name="SSP_Application__c"
+                    field-name="IsApplicantAgreeToWorkRegister__c"
+                    value={applicationWrapper.fields.IsApplicantAgreeToWorkRegister__c.value}
+                    data-id="sAgreeToWork"
+                    label={label.sspDoesThePrimary}
+                    options={responseOptions}
+                    is-help-text="true"
+                    help-text-content={label.sspThePrimaryHelpText}
+                >
+                </c-ssp-base-component-input-toggle>
+            </div>
+            </template>
+            <div
+                if:true={showGreyLine}
+                class="ssp-margin-bottom_large ssp-bg_monoAlpha ssp-greyUnderlineSmall"
+            ></div>
+            <div
+                class="ssp-margin-bottom_large ssp-fontFamily_ArvoRegular ssp-color_monoBody ssp-fontSize"
+            >
+                {label.sspByEnteringYour}
+            </div>
+            <div class="slds-grid slds-wrap slds-gutters">
+                <div class="slds-col slds-large-size_6-of-12 slds-size_1-of-1">
+                    <div class="ssp-margin-bottom_small">
+                        <c-ssp-base-component-input-text
+                            class="ssp-applicationInputs"
+                            meta-list={MetaDataListParent}
+                            entity-name="SSP_Application__c"
+                            field-name="ApplicationEsignFirstName__c"
+                            value={applicationWrapper.fields.ApplicationEsignFirstName__c.value}
+                            data-id="sFirstName"
+                            match-value={objApplication.sPrimaryApplicantFirstName}
+                            label={label.sspFirstNameLabel}
+                            max-length="50"
+                        >
+                        </c-ssp-base-component-input-text>
+                    </div>
+                </div>
+                <div class="slds-col slds-large-size_3-of-12 slds-size_1-of-1">
+                    <div class="ssp-margin-bottom_small">
+                        <template if:false={isDisableMIField}>
+                        <c-ssp-base-component-input-text
+                            class="ssp-applicationInputs ssp-middleInitialField"
+                            meta-list={MetaDataListParent}
+                            entity-name="SSP_Application__c"
+                            field-name="ApplicationEsignMiddleInitial__c"
+                            value={applicationWrapper.fields.ApplicationEsignMiddleInitial__c.value}
+                            data-id="sMiddleName"
+                            match-value={objApplication.sPrimaryApplicantMiddleName}
+                            label={label.sspMiddleInitialLabel}
+                            disabled={isDisableMIField}
+                                max-length="1"
+                        >
+                        </c-ssp-base-component-input-text>
+                        </template>
+                         <template if:true={isDisableMIField}>
+                            <c-ssp-base-component-input-text
+                                class="ssp-applicationInputs ssp-middleInitialField"
+                                data-id="sMiddleName"
+                                match-value={objApplication.sPrimaryApplicantMiddleName}
+                                label={label.sspMiddleInitialLabel}
+                                disabled={isDisableMIField}
+                            >
+                            </c-ssp-base-component-input-text>
+                        </template>
+                    </div>
+                </div>
+            </div>
+            <div class="ssp-margin-bottom_small">
+                <c-ssp-base-component-input-checkbox
+                    value={isDisableMICheckbox}
+                    label={label.sspDoesNotMiddleInitialLabel}
+                    onchange={toggleMiCheckbox}
+                    disabled={middleInitialDisablingStatus}
+                ></c-ssp-base-component-input-checkbox>
+            </div>
+            <div class="slds-grid slds-wrap slds-gutters">
+                <div class="slds-col slds-large-size_6-of-12 slds-size_1-of-1">
+                    <div class="ssp-margin-bottom_small">
+                        <c-ssp-base-component-input-text
+                            class="ssp-applicationInputs"
+                            meta-list={MetaDataListParent}
+                            entity-name="SSP_Application__c"
+                            field-name="ApplicationEsignLastName__c"
+                            value={applicationWrapper.fields.ApplicationEsignLastName__c.value}
+                            data-id="sLastName"
+                            match-value={objApplication.sPrimaryApplicantLastName}
+                            label={label.sspLastNameLabel}
+                            max-length="50"
+                        >
+                        </c-ssp-base-component-input-text>
+                    </div>
+                </div>
+                <div class="slds-col slds-large-size_3-of-12 slds-size_1-of-1">
+                    <div class="ssp-margin-bottom_small">
+                        <c-ssp-base-component-input-picklist
+                            class="ssp-applicationInputs"
+                            meta-list={MetaDataListParent}
+                            entity-name="SSP_Application__c"
+                            field-name="ApplicationEsignSuffixCode__c"
+                            value={applicationWrapper.fields.ApplicationEsignSuffixCode__c.value}
+                            data-id="sSuffixCode"
+                            match-value={objApplication.sPrimaryApplicantSuffix}
+                            option={suffixCode}
+                            label={label.sspSuffixLabel}
+                        ></c-ssp-base-component-input-picklist>
+                    </div>
+                </div>
+                <div class="slds-col slds-large-size_6-of-12 slds-size_1-of-1">
+                    <div class="ssp-margin-bottom_xlarge">
+                        <c-ssp-base-component-input-date
+                            class="ssp-applicationInputs ssp-signatureDateClass"
+                            meta-list={MetaDataListParent}
+                            entity-name="SSP_Application__c"
+                            field-name="SignatureDate__c"
+                            value={timeTravelCurrentDate}
+                            label={label.sspDateLabel}
+                            is-read-only={isDateReadOnly}
+                        >
+                        </c-ssp-base-component-input-date>
+                        <div if:true={isToShows20DateValidator} class="ssp-showError ssp-color_redAlpha">
+                            {label.sspTwentyDateValidatorMessage}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="ssp-fontFamily_popinBold ssp-color_blueAlpha ssp-voterRegistration ssp-margin-bottom_small"
+            >
+                {label.sspVoterRegistration}
+            </div>
+            <div
+                class="ssp-margin-bottom_large ssp-bg_monoAlpha ssp-greyUnderline"
+            ></div>
+            <div class="ssp-margin-bottom_large">
+                <c-ssp-base-component-input-toggle
+                    class="ssp-applicationInputs"
+                    meta-list={MetaDataListParent}
+                    value={applicationWrapper.fields.IsRegisteredToVote__c.value}
+                    entity-name="SSP_Application__c"
+                    field-name="IsRegisteredToVote__c"
+                    data-id="sRegisterToVote"
+                    label={label.sspRegisterToVote}
+                    options={responseOptions}
+                    is-custom-tooltip="true"
+                    help-text-content={label.sspToVoteHelpText}
+                    handle-change = "true"
+                    onhandlechange ={toggleVoteOptions}
+                >
+                </c-ssp-base-component-input-toggle>
+            </div>
+            <div class="slds-col slds-large-size_6-of-12 slds-size_1-of-1" if:true={displayNoticeCard}
+            >
+                <c-ssp-general-notice-card
+                    notice-text={label.sspVoterRegistrationForms}
+                ></c-ssp-general-notice-card>
+            </div>
+        </div>
+        <!--<c-ssp-logging-and-error-handling-modal if:true={showErrorModal} error-id={errorMsg} onprogressvaluechange={closeError}>
+    </c-ssp-logging-and-error-handling-modal>-->
+    </template>
+    <template if:true={showAccessDeniedComponent}>
+        <c-ssp-access-denied></c-ssp-access-denied>
+    </template>
+</template>

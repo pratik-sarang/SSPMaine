@@ -1,0 +1,83 @@
+<!--
+* name 		    : sspRoleSelection
+* @description 	: Component for selecting roles from non citizen dashboard.
+* @author 		: Shrikant Raut, Nikhil Shinde
+* @date 		: 26/05/2020
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName	      MM/DD/YYYY	      A Brief Description 
+                               about the Change
+* defect 391367 -- changed the onclick event to onmousedown for profile selection
+-->
+<template>
+    <template if:false={isDataProcessed}>
+        <c-ssp-spinner> </c-ssp-spinner>
+    </template>
+    <template if:true={isDataProcessed}>
+        <div class="ssp-multipleRolesContainer ssp-fontFamily_popinRegular">
+            <h1
+                class="ssp-welcomeText ssp-fontFamily_popinBlack ssp-color_monoBody"
+            >
+                {label.sspWelcomeWithComma}
+            </h1>
+            <div
+                class="ssp-goToDashboard ssp-color_blueAlpha"
+                if:true={showCitizenDashboardLink}
+            >
+                <p onclick={navigateToCitizenDashboard}>
+                    {label.sspPersonalDashboard}
+                </p>
+            </div>
+            <div
+                class="ssp-profileDropDownContainer slds-grid slds-grid_vertical-align-center"
+            >
+                <div class="ssp-profileText">
+                    {label.sspMultipleRoleProfile}
+                </div>
+                <div class="ssp-profileContainer">
+                    <div
+                        tabindex="0"
+                        class="ssp-profileMenuDropDown slds-grid slds-grid_align-spread slds-grid_vertical-align-center"
+                        onblur={closeDropDown}
+                        onclick={toggleDropDown}
+                        onkeydown={toggleDropDown}
+                    >
+                        <div class="ssp-profileMenuDropDownHeader">
+                            <p
+                                class="ssp-selectedRoleLabel ssp-fontFamily_popinBold ssp-color_monoBody"
+                                title={selectedRoleLabel}
+                            >
+                                {selectedRoleLabel}
+                            </p>
+                        </div>
+                        <template if:false={showOneOption}>
+                        <div
+                            class="ssp-profileMenuDropDownIcon"
+                        ></div>
+                        </template>
+                    </div>
+                    <div
+                        class="ssp-profileMenuDropDownContent ssp-boxShadow slds-grid"
+                    >
+                    <template if:false={showOneOption}>
+                        <template for:each={roleOptions} for:item="role">
+                            <a
+                                class="ssp-dashboardDropDownOptions ssp-fontFamily_popinRegular ssp-color_monoBody"
+                                onmousedown={handleSelectedRole}
+                                onkeydown={handleSelectedRole}
+                                data-id={role.value}
+                                data-label={role.label}
+                                key={role.value}
+                                title={role.label}
+                            >
+                                {role.label}
+                            </a>
+                        </template>
+                    </template>    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+</template>

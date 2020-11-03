@@ -1,0 +1,107 @@
+.ssp-submittedDocumentsContainer .ssp-backgroundImage {
+    position: absolute;
+    right: 0;
+    top: 2.563rem;
+    height: 7.625rem;
+}
+.ssp-submittedDocumentsContainer {
+    overflow-x: hidden;
+}
+.ssp-submittedDocumentsContainer h1 {
+    font-size: 1.5rem;
+    margin-top: 2.5rem;
+    position: relative;
+}
+
+.ssp-submittedDocumentsContainer .ssp-headerContent,
+.ssp-submittedDocumentsContainer .ssp-cardTitle {
+    font-size: 1rem;
+}
+
+.ssp-submittedDocumentsContainer .ssp-documentName {
+    font-size: 0.813rem;
+}
+
+.ssp-submittedDocumentsContainer
+    .ssp-cardSubDetailsContainer
+    .ssp-cardSubDetails {
+    margin-bottom: 0.75rem;
+    padding-top: 0.75rem;
+}
+
+.ssp-submittedDocumentsContainer
+    .ssp-cardSubDetailsContainer
+    .ssp-cardSubDetails:nth-child(1) {
+    border-top: none;
+    padding-top: 0;
+}
+
+.ssp-submittedDocumentsContainer
+    .ssp-cardSubDetailsContainer
+    .ssp-cardSubDetails:last-child {
+    margin-bottom: 0;
+}
+
+.ssp-submittedDocumentsContainer .ssp-actionButtonsContainer {
+    margin-bottom: 3.75rem;
+}
+
+.ssp-submittedDocumentsContainer .ssp-marginBottom30 {
+    margin-bottom: 1.875rem;
+}
+
+.ssp-submittedDocumentsContainer .ssp-cardDetailsContainer {
+    margin-top: 0.938rem;
+    margin-bottom: 3.75rem;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.ssp-submittedDocumentsContainer .ssp-cardDetailsContainer .slds-col {
+    margin-top: 0.938rem;
+}
+
+.ssp-submittedDocumentsContainer .ssp-alignmentContainer {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+@media only screen and (min-width: 769px) {
+    .ssp-submittedDocumentsContainer
+        .ssp-cardDetailsContainer.slds-grid
+        .slds-col.slds-size_1-of-3:nth-of-type(3n) {
+        padding-right: 0;
+    }
+    .ssp-submittedDocumentsContainer .ssp-headerContent {
+        max-width: 770px;
+    }
+    .ssp-submittedDocumentsContainer .ssp-alignmentContainer {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+    .ssp-submittedDocumentsContainer .ssp-backgroundImage {
+        top: 3.75rem;
+        height: 15.188rem;
+    }
+    .ssp-submittedDocumentsContainer h1 {
+        font-size: 2.625rem;
+        margin-top: 3.75rem;
+    }
+    .ssp-submittedDocumentsContainer .ssp-actionButtons {
+        display: flex;
+        flex-flow: row;
+    }
+    .ssp-submittedDocumentsContainer .ssp-screenFooterNextBtn {
+        margin-left: auto;
+        order: 2;
+    }
+    .ssp-submittedDocumentsContainer .ssp-actionButtonsContainer {
+        margin-bottom: 4rem;
+    }
+    .ssp-submittedDocumentsContainer .ssp-cardDetailsContainer .slds-col {
+        padding-right: 0.938rem;
+    }
+    .ssp-submittedDocumentsContainer .ssp-cardDetailsContainer {
+        align-items: stretch;
+    }
+}

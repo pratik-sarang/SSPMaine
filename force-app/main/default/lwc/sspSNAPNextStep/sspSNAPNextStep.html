@@ -1,0 +1,329 @@
+<!--
+* name          : sspSNAPNextStep
+* @description  : This screen is developed for SNAP Next Steps.
+* @author       : Sharon
+* @date         : 16/04/2020
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName                MM/DD/YYYY               A Brief Description about the Change
+  Sharon                      16/04/20                           Development
+  Chirag                      21/05/20                  Added data in accordion cards
+-->
+<template>
+    <template if:true={spinnerOn}>
+        <c-ssp-spinner></c-ssp-spinner>
+    </template>
+    <main>
+        <div class="sspHeadingBar ssp-shortHeading slds-p-horizontal_xx-large ssp-mobileHorizontalPadding ssp-bg_appHeaderGradient slds-grid slds-wrap slds-grid_vertical-align-center">
+            <div class="ssp-container_width slds-grid slds-wrap">
+                <p class="ssp-fontFamily_popinBold ssp-appCardOrangeTitle ssp-color_monoBody">
+                    {label.sspShortSNAPApplication}
+                </p>
+            </div>
+            <div class="ssp-errorToast">
+                <c-ssp-toast
+                    if:true={onSuccessNext}
+                    condition="positive"
+                    ssp-toast-title-val={label.sspSNAPNextToast}
+                    show-error-toast={onSuccessNext}
+                >
+                </c-ssp-toast>
+            </div>
+        </div>
+        <div class="ssp-nextBannnerImageContainer">
+            <div class="slds-p-horizontal_xx-large ssp-mobileHorizontalPadding">
+                <div class="ssp-container_width">
+                    <div class="ssp-innerContainer ssp-nextBannerContainer ssp-paddingYThirty ssp-nextSubContainer">
+                        <h1
+                            class="ssp-fontFamily_popinBold ssp-color_greenAlpha"
+                        >
+                            {label.sspSNAPNextStepsHeading}
+                        </h1>
+                        <p class="ssp-fontFamily_popinBold ssp-color_monoBody ssp-nextApplication">{label.sspSNAPNextStepsApplication}</p>
+                        <div class="ssp-nextStepsDownloadBtn">
+                            <lightning-button
+                                variant="brand"
+                                title={label.sspSNAPNextStepsDownloadTitle}
+                                label={label.sspSNAPNextStepsDownloadButton}
+                                class="ssp-button_brand ssp-fontFamily_popinBold"
+                                onclick={downloadDoc}
+                            ></lightning-button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img
+                src={desktopBackgroundImg}
+                class="ssp-backgroundImage ssp-desktopBackgroundImage"
+                aria-hidden="true"
+                role="presentation"
+                alt={label.sspSNAPNextInterviewHeading}
+            />
+        </div>
+        <div class="ssp-nextScheduleInterview ssp-bg_appHeaderGradient slds-p-horizontal_xx-large ssp-mobileHorizontalPadding ssp-paddingYThirty">
+            <div class="ssp-container_width">
+                <div class="ssp-nextSubContainer">
+                    <div class="ssp-nextScheduleHeading">
+                        <p class="ssp-fontFamily_popinBold ssp-color_monoBody">{label.sspSNAPNextInterviewHeading}</p>
+                    </div>
+                    <div class="ssp-nextScheduleContent">
+                        <p class="ssp-color_monoOmega ssp-fontFamily_ArvoRegular">{label.sspSNAPNextCompleteContent}</p>
+                    </div>
+                    <div class="ssp-nextCardContainer">
+                        <div class="slds-grid slds-wrap">
+                            <div
+                                class="slds-col slds-size_1-of-1 slds-large-size_6-of-12 ssp-needHelpCardContainer ssp-paddingYThirty ssp-marginCardRight">
+                                <div class="ssp-card_wrap ssp-bg_whiteAlpha ssp-nextCardHeight">
+                                    <c-ssp-cta-card-grey
+                                        ssp-title-val={label.sspSNAPNextPhoneHeading}
+                                    >
+                                        <div slot="content" class="ssp-nextCardBottomPadding">
+                                            <p class="ssp-color_monoOmega ssp-fontFamily_ArvoRegular">
+                                                {label.sspSNAPNextPhoneContent}
+                                            </p>
+                                        </div>
+                                        <div slot="footer" class="ssp-nextScheduleBtnContainer">
+                                            <div class="ssp-nextScheduleBtnContainer ssp-button_base ssp-fontFamily_popinBold ssp-color_blueAlpha ssp-getBenefitsTelNumber">
+                                                <a
+                                                    class="slds-button slds-button_neutral"
+                                                    title={label.sspSNAPNextStepCallAlternate}
+                                                    href="tel:1(855)306-8959"
+                                                >{label.sspSNAPNextStepCallText}</a>
+                                            </div>
+                                        </div>
+                                    </c-ssp-cta-card-grey>
+                                </div>
+                            </div>
+                            <div
+                                class="slds-col slds-size_1-of-1 slds-large-size_6-of-12 ssp-needHelpCardContainer ssp-paddingYThirty">
+                                <div class="ssp-card_wrap ssp-bg_whiteAlpha ssp-nextCardHeight">
+                                    <c-ssp-cta-card-grey
+                                        ssp-title-val={label.sspSNAPNextVisitHeading}
+                                    >
+                                        <div slot="content" class="ssp-nextCardBottomPadding">
+                                            <p class="ssp-color_monoOmega ssp-fontFamily_ArvoRegular">
+                                            {label.sspSNAPNextVisitContent}
+                                            </p>
+                                        </div>
+                                        <div slot="footer">
+                                            <div class="ssp-nextScheduleBtnContainer ssp-fontFamily_popinBold ssp-color_blueAlpha ssp-getBenefitsTelNumber">
+                                                <a
+                                                    class="slds-button slds-button_neutral"
+                                                    title={label.sspSNAPNextVisitButton}
+                                                    role="button"
+                                                    target="_blank"
+                                                    href={label.sspFooterDCBSLink}
+                                                >{label.sspSNAPNextVisitButton}</a>
+                                            </div>
+                                        </div>
+                                    </c-ssp-cta-card-grey>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slds-p-horizontal_xx-large ssp-mobileHorizontalPadding">
+            <div class="ssp-container_width ssp-paddingTopThirty ssp-documentsMainContainer">
+                <div class="ssp-nextScheduleHeading">
+                    <p class="ssp-fontFamily_popinBold ssp-color_monoBody">{label.sspSNAPNextDocumentHeading}</p>
+                </div>
+                <div class="ssp-nextScheduleContent">
+                    <p class="ssp-color_monoOmega ssp-fontFamily_ArvoRegular">{label.sspSNAPNextDocumentContent}</p>
+                </div>
+                <div class="slds-grid slds-wrap ssp-paddingTopThirty">
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_6-of-12 ssp-nextdocumentPart ssp-marginCardRight">
+                        <div class="ssp-nextAccordionContainer">
+                            <div class="ssp-nextIdentification">    
+                                <c-ssp-accordion-card>
+                                    <div slot="Title">
+                                        <p class="ssp-fontFamily_popinBold ssp-color_monoBody">{label.sspSNAPNextIdentificationHeading}</p>
+                                    </div>
+                                    <div slot="contentSlot">
+                                        <ul class="ssp-fontFamily_ArvoRegular ssp-color_blueAlpha ssp-nextAccordionList">
+                                            <li>
+                                                <span class="ssp-color_monoBody">{label.sspNextStepProof4}</span>
+                                            </li>
+                                            <li>
+                                                <span class="ssp-color_monoBody">{label.sspNextStepProof11}</span>
+                                            </li>
+                                            <li>
+                                                <span class="ssp-color_monoBody">{label.sspNextStepProof2}</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </c-ssp-accordion-card>
+                            </div>
+                            <div class="ssp-nextIdentification">
+                                <c-ssp-accordion-card>
+                                    <div slot="Title">
+                                        <p class="ssp-fontFamily_popinBold ssp-color_monoBody">{label.sspSNAPNextSecurityHeading}</p>
+                                    </div>
+                                    <div slot="contentSlot">
+                                        <ul class="ssp-fontFamily_ArvoRegular ssp-color_blueAlpha ssp-nextAccordionList">
+                                            <li>
+                                                <span class="ssp-color_monoBody">{label.sspNextStepProof10}</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </c-ssp-accordion-card>
+                            </div>
+                            <div class="ssp-nextIdentification">
+                                <c-ssp-accordion-card>
+                                    <div slot="Title">
+                                        <p class="ssp-fontFamily_popinBold ssp-color_monoBody">{label.sspSNAPNextCitizenship}</p>
+                                    </div>
+                                    <div slot="contentSlot">
+                                        <ul class="ssp-fontFamily_ArvoRegular ssp-color_blueAlpha ssp-nextAccordionList">
+                                            <li>
+                                                <span class="ssp-color_monoBody">{label.sspNextStepProof1}</span>
+                                            </li>
+                                            <li>
+                                                <span class="ssp-color_monoBody">{label.sspNextStepProof3}</span>
+                                            </li>
+                                            <li>
+                                                <span class="ssp-color_monoBody">{label.sspNextStepProof2}</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </c-ssp-accordion-card>
+                            </div>
+                            <div class="ssp-nextIdentification">
+                                <c-ssp-accordion-card>
+                                    <div slot="Title">
+                                        <p class="ssp-fontFamily_popinBold ssp-color_monoBody">{label.sspSNAPNextResidencyHeading}</p>
+                                    </div>
+                                    <div slot="contentSlot">
+                                        <ul class="ssp-fontFamily_ArvoRegular ssp-color_blueAlpha ssp-nextAccordionList">
+                                            <li>
+                                                <span class="ssp-color_monoBody">{label.sspNextStepProof4}</span>
+                                            </li>
+                                            <li>
+                                                <span class="ssp-color_monoBody">{label.sspNextStepProof5}</span>
+                                            </li>
+                                            <li>
+                                                <span class="ssp-color_monoBody">{label.sspNextStepProof6}</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </c-ssp-accordion-card>
+                            </div>
+                            <div class="ssp-nextIdentification">
+                                <c-ssp-accordion-card>
+                                    <div slot="Title">
+                                        <p class="ssp-fontFamily_popinBold ssp-color_monoBody">{label.sspSNAPNextIncomeHeading}</p>
+                                    </div>
+                                    <div slot="contentSlot">
+                                        <ul class="ssp-fontFamily_ArvoRegular ssp-color_blueAlpha ssp-nextAccordionList">
+                                            <li>
+                                                <span class="ssp-color_monoBody">{label.sspNextStepProof7}</span>
+                                            </li>
+                                            <li>
+                                                <span class="ssp-color_monoBody">{label.sspNextStepProof8}</span>
+                                            </li>
+                                            <li>
+                                                <span class="ssp-color_monoBody">{label.sspNextStepProof9}</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </c-ssp-accordion-card>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_6-of-12 ssp-nextdocumentPart">
+                        <div class="ssp-nextAccordionContainer">
+                            <div class="ssp-nextIdentification">
+                                <c-ssp-accordion-card>
+                                    <div slot="Title">
+                                        <p class="ssp-fontFamily_popinBold ssp-color_monoBody">{label.sspSNAPNextExpensesHeading}</p>
+                                    </div>
+                                    <div slot="contentSlot">
+                                        <ul class="ssp-fontFamily_ArvoRegular ssp-color_blueAlpha ssp-nextAccordionList">
+                                            <li>
+                                                <span class="ssp-color_monoBody">{label.sspNextStepProof15}</span>
+                                            </li>
+                                            <li>
+                                                <span class="ssp-color_monoBody">{label.sspNextStepProof16}</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </c-ssp-accordion-card>
+                            </div>
+                            <div class="ssp-nextIdentification">
+                                <c-ssp-accordion-card>
+                                    <div slot="Title">
+                                        <p class="ssp-fontFamily_popinBold ssp-color_monoBody">{label.sspSNAPNextAssetsHeading}</p>
+                                    </div>
+                                    <div slot="contentSlot">
+                                        <ul class="ssp-fontFamily_ArvoRegular ssp-color_blueAlpha ssp-nextAccordionList">
+                                            <li>
+                                                <span class="ssp-color_monoBody">{label.sspNextStepProof17}</span>
+                                            </li>
+                                            <li>
+                                                <span class="ssp-color_monoBody">{label.sspNextStepProof20}</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </c-ssp-accordion-card>
+                            </div>
+                            <div class="ssp-nextIdentification">
+                                <c-ssp-accordion-card>
+                                    <div slot="Title">
+                                        <p class="ssp-fontFamily_popinBold ssp-color_monoBody">{label.sspSNAPNextResourcesHeading}</p>
+                                    </div>
+                                    <div slot="contentSlot">
+                                        <ul class="ssp-fontFamily_ArvoRegular ssp-color_blueAlpha ssp-nextAccordionList">
+                                            <li>
+                                                <span class="ssp-color_monoBody">{label.sspNextStepProof17}</span>
+                                            </li>
+                                            <li>
+                                                <span class="ssp-color_monoBody">{label.sspNextStepProof18}</span>
+                                            </li>
+                                            <li>
+                                                <span class="ssp-color_monoBody">{label.sspNextStepProof19}</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </c-ssp-accordion-card>
+                            </div>
+                            <div class="ssp-nextIdentification">
+                                <c-ssp-accordion-card>
+                                    <div slot="Title">
+                                        <p class="ssp-fontFamily_popinBold ssp-color_monoBody">{label.sspSNAPNextOtherHeading}</p>
+                                    </div>
+                                    <div slot="contentSlot">
+                                        <ul class="ssp-fontFamily_ArvoRegular ssp-color_blueAlpha ssp-nextAccordionList">
+                                            <li>
+                                                <span class="ssp-color_monoBody">{label.sspNextStepProof12}</span>
+                                            </li>
+                                            <li>
+                                                <span class="ssp-color_monoBody">{label.sspNextStepProof13}</span>
+                                            </li>
+                                            <li>
+                                                <span class="ssp-color_monoBody">{label.sspNextStepProof14}</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </c-ssp-accordion-card>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-grid slds-wrap slds-size_1-of-1 ssp-nextGotoButtonContainer ssp-actionButtonsContainer ssp-buttonWidth">
+                    <div class="slds-size_1-of-1 ssp-actionButtons">
+                        <lightning-button
+                            class="ssp-button_neutral ssp-saveButton ssp-screenFooterNextBtn"
+                            name={label.sspProgramPageButton}
+                            variant="neutral"
+                            label={label.sspProgramPageButton}
+                            onclick={goToProgramPage}
+                            title={label.sspProgramPageButtonAlternate}
+                        ></lightning-button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</template>

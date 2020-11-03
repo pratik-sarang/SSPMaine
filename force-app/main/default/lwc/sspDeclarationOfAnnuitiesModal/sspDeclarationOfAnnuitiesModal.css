@@ -1,0 +1,10 @@
+ul{
+    list-style-type: disc;
+    padding-left: 1rem;
+}
+.ssp-no-bullets {
+    list-style-type: none;
+}
+.ssp-mainContent li:focus {
+    outline: none;
+}

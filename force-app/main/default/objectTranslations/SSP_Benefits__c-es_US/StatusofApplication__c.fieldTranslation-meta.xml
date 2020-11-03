@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Status Of Application --></label>
+    <name>StatusofApplication__c</name>
+    <picklistValues>
+        <masterLabel>Applied</masterLabel>
+        <translation>Presentó solicitud</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Denied</masterLabel>
+        <translation>Negado</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Discontinued</masterLabel>
+        <translation>Discontinuado</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not Applied</masterLabel>
+        <translation>No presentó solicitud</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pending Appeal</masterLabel>
+        <translation>Apelación pendiente</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pending Application</masterLabel>
+        <translation>Solicitud pendiente</translation>
+    </picklistValues>
+</CustomFieldTranslation>

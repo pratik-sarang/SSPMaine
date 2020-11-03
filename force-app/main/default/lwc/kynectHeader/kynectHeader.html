@@ -1,0 +1,41 @@
+<template>
+    <header>
+        <div class="slds-p-vertical_small kynect-header kynect-bgcolor_white">
+            <div>
+                <img
+                    class="kynect-headerImage"
+                    src={bannerImage}
+                    alt="bannerImage"
+                    aria-hidden="true"
+                    role="presentation"
+                />
+            </div>
+        </div>
+        <div
+            class="slds-grid slds-wrap slds-size_12-of-12 slds-p-vertical_xx-small slds-p-horizontal_xx-large kynect-bgcolor_blue kynect-language-container"
+        >
+            <div class="kynect-container_width kynect-language-section slds-text-align_right">
+                <span
+                    class="kynect-color_white  slds-m-right_xx-small kynect-language-text"
+                    >{customLabels.sspLanguagesText}:</span
+                >
+                <div class="slds-show_inline-block kynect-horizontal-languages">
+                    <template
+                        for:each={languageOptions}
+                        for:item="languageOption"
+                    >
+                        <a
+                            tabindex="0"
+                            class="kynect-color_white"
+                            key={languageOption.name}
+                            onclick={languageChange}
+                            onkeydown={languageChange}
+                            data-value={languageOption.value}
+                            >{languageOption.name}
+                        </a>
+                    </template>
+                </div>
+            </div>
+        </div>
+    </header>
+</template>

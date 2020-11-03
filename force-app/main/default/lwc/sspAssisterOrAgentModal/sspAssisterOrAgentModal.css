@@ -1,0 +1,30 @@
+.ssp-available-hours {
+    margin-left: 30px;
+}
+.ssp-agent-modal {
+    font-size: 1rem;
+}
+.ssp-common-margin {
+    margin-bottom: 30px;
+}
+.ssp-user-info {
+    margin-bottom: 15px;
+}
+.ssp-info-header {
+    margin-bottom: 5px;
+}
+.ssp-private-text {
+    font-size: 0.8125rem;
+}
+.ssp-horizontal-rule {
+    height: 0.313rem;
+    border-radius: 0.156rem;
+    margin: 0 0 15px 0;
+    border: none;
+}
+.ssp-horizontal-rule-bottom {
+    height: 0.313rem;
+    border-radius: 0.156rem;
+    margin: 40px 0 0 0;
+    border: none;
+}

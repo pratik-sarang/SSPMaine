@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account.Resources__r.Referrals__r$Name</field>
+    </columns>
+    <columns>
+        <field>Account.Resources__r$Name</field>
+    </columns>
+    <columns>
+        <field>Account.Resources__r.Referrals__r$ReferredAccountID__c</field>
+    </columns>
+    <columns>
+        <field>Account.Resources__r.Referrals__r$DateOfReferral__c</field>
+    </columns>
+    <columns>
+        <field>Account.Resources__r.Referrals__r$DateClosed__c</field>
+    </columns>
+    <description>Referrals by SDOH</description>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account.Resources__r$SdohDomain__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Referrals by SDOH</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Account_Resource_Referral_Feedback__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Account.Resources__r.Referrals__r$DateOfReferral__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

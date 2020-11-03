@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RAC</fullName>
+    <columns>MasterLabel</columns>
+    <columns>DeveloperName</columns>
+    <columns>Based_On_Individual__c</columns>
+    <columns>RAC_Menu_Selection__c</columns>
+    <columns>RAC_Help_Text__c</columns>
+    <columns>RAC_Menu_Subheader__c</columns>
+    <columns>Order__c</columns>
+    <columns>Review_Required_Screens_for_RAC__c</columns>
+    <columns>RAC_Screen_Ids__c</columns>
+    <columns>Member_Filter__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>RAC</label>
+    <language>en_US</language>
+</ListView>

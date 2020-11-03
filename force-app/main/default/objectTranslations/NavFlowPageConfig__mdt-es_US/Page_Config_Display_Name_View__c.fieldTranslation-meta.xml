@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Page Config Display Name View --></label>
+    <name>Page_Config_Display_Name_View__c</name>
+    <picklistValues>
+        <masterLabel>Absent Parent</masterLabel>
+        <translation>Padre/madre ausente</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Access to Healthcare Coverage Summary</masterLabel>
+        <translation>Acceso a la cobertura de atención de salud</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Address Information</masterLabel>
+        <translation>Información de dirección</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Address Information - Non Primary</masterLabel>
+        <translation>Información de dirección</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Alien Sponsor</masterLabel>
+        <translation>Patrocinador de extranjero</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>American Indian Alaskan Native</masterLabel>
+        <translation>Indígena estadounidense o nativo de Alaska</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Blindness</masterLabel>
+        <translation>Ceguera</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Contact Information</masterLabel>
+        <translation>Información de contacto</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Contact Information - Non Primary</masterLabel>
+        <translation>Información de contacto</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Conviction</masterLabel>
+        <translation>Condena</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Education</masterLabel>
+        <translation>Educación</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Enrollment in Healthcare Coverage Summary</masterLabel>
+        <translation>Inscripción en cobertura de atención de salud</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Expedite your SNAP Benefits</masterLabel>
+        <translation>Acelerar sus beneficios de SNAP</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Expenses</masterLabel>
+        <translation>Gastos</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Former Foster Care</masterLabel>
+        <translation>Cuidados de Crianza</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Health</masterLabel>
+        <translation>Salud</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Health Condition</masterLabel>
+        <translation>Condición de salud</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Healthcare Coverage Selection</masterLabel>
+        <translation>Selección de cobertura de atención de salud</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Household Circumstances</masterLabel>
+        <translation>Las Circunstancias del Hogar</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Household Meal</masterLabel>
+        <translation>Comidas del hogar</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Living Arrangement</masterLabel>
+        <translation>Dónde y con quién vive</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Medical Expenses (Last 3 Months)</masterLabel>
+        <translation>Gastos médicos (últimos 3 meses)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not a U.S. Citizen</masterLabel>
+        <translation>No es ciudadano estadounidense</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other Resources</masterLabel>
+        <translation>Otros recursos</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Preferred MCO Selection</masterLabel>
+        <translation>Selección de organización de atención administrada (MCO) preferida</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pregnancy</masterLabel>
+        <translation>Embarazo</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Relationships</masterLabel>
+        <translation>Relaciones</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Resources</masterLabel>
+        <translation>Recursos</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Signature Page</masterLabel>
+        <translation>Página de firmas</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tax Filing</masterLabel>
+        <translation>Declaración de impuestos</translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Allow_Only_1_Selection_Msg --></label>
+    <name>Allow_Only_1_Selection_Msg__c</name>
+    <picklistValues>
+        <masterLabel>Please select only one option</masterLabel>
+        <translation><!-- Please select only one option --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

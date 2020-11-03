@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LightningComponentName__c</fullName>
+    <description>Page lightning component name. If this is used then the component will be dynamically rendered in the container.</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Page lightning component name. If this is used then the component will be dynamically rendered in the container.</inlineHelpText>
+    <label>Lightning Component Name</label>
+    <length>255</length>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

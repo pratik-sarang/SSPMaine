@@ -1,0 +1,95 @@
+<!--
+* name 		    : sspClientCaseNotes
+* @description 	: Component for Client Case Notes Screen
+* @author 		: Venkata Ranga Babu And Keshav
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+*  
+-->
+<template>
+    <template if:true={showSpinner}>
+        <c-ssp-spinner></c-ssp-spinner>
+    </template>
+    <main class="ssp-clientCaseNotes">
+        <div class="ssp-clientCaseNotesHeader">
+            <h1 class="ssp-clientCaseNotesHeaderText ssp-fontFamily_popinBlack ssp-color_blueAlpha">
+                {customLabels.sspClientCaseNotes}
+            </h1>
+            <p class="ssp-fontFamily_ArvoRegular ssp-color_monoOmega ssp-info_fontSize ssp-clientCaseNotesInfo">
+                {customLabels.sspViewAndManageYourPersonalNotesForThisCase}
+            </p>
+        </div>
+        <div class="slds-grid slds-wrap ssp-clientNotesSection">
+            <div class="ssp-clientNotesDropdown">
+                <div class="ssp-dashboardDropdown">
+                    <div tabindex="0" class="ssp-dashboardDropdownBtn slds-grid slds-grid_align-spread slds-grid_vertical-align-center"
+                    onmousedown={toggleDropdown} onblur={closeDropDown}>
+                        <div class="ssp-dashboardDropdownHeader slds-grid slds-grid_vertical-align-center">
+                            <p>
+                                <span class="ssp-fontFamily_popinBold ssp-color_monoBody">{customLabels.sspCase}: {selectedCase}</span>
+                                <span class="ssp-color_monoBody"> ({caseStatus})</span>
+                            </p>
+                        </div>
+                        <div class="ssp-dashboardDropdownIcon"></div>
+                    </div>
+                </div>
+                <div class="ssp-dashboardDropdownContent ssp-bg_whiteAlpha ssp-boxShadow slds-grid slds-wrap">
+                    <template for:each={caseList} for:item="caseNumber">
+                        <div key={caseNumber}><a class="ssp-dashboardDropdownOptions ssp-fontFamily_popinRegular ssp-color_monoBody"
+                            onmousedown={selectCase} data-id={caseNumber}>{customLabels.sspCase}: {caseNumber}</a></div>
+                    </template>
+                </div>
+            </div>
+            <div class="ssp-addNotes">
+                <lightning-button
+                    variant="brand"
+                    class="ssp-button_brand ssp-addNotesButton"
+                    label={customLabels.sspAddNewNote}
+                    title={customLabels.sspClickToAddNewCaseNote}
+                    onclick={addNewNote}
+                    disabled={isReadOnly}
+                >
+                </lightning-button>
+            </div>
+        </div>
+        <div class="slds-grid slds-wrap ssp-clientCaseNotesList">
+            <template for:each={notes} for:item="note">
+                <c-ssp-accordion-drop-down-card key={note} class="slds-grid slds-wrap slds-size_1-of-1 ssp-notes-accordion">
+                    <div class="slds-grid slds-wrap ssp-color_monoBody ssp-notesHeader" slot="Title">
+                        <p class="ssp-fontFamily_popinBold ssp-notesHeaderTitle">{note.noteHeader}</p>
+                        <p class="ssp-fontFamily_popinRegular ssp-notesHeaderTimeStamp">{note.LastModifiedDate}</p>
+                    </div>
+                    <div class="ssp-notesContent" slot="contentSlot">
+                        <p class="ssp-fontFamily_popinRegular ssp-color_monoBody">
+                            {note.Comments__c}
+                        </p>
+                    </div>
+                </c-ssp-accordion-drop-down-card>
+            </template>
+            <div if:true={isViewMore} class="ssp-viewMoreNotes slds-size_1-of-1">
+                <a onclick={viewMoreNotes} class="ssp-viewMoreLink ssp-color_blueAlpha">{customLabels.sspViewMore}</a>
+            </div>
+        </div>
+        <div if:true={isAddNewNote} class="ssp-addClientCaseNotes">
+            <lightning-textarea class="ssp-addNoteTextArea" maxlength="2000" label="Add New Note" variant="label-hidden" placeholder={customLabels.sspEnterYourNoteHere} onchange={addingNewNote}></lightning-textarea>
+            <div class="slds-grid slds-wrap ssp-addNoteAction">
+                <lightning-button
+                    class="ssp-button_base ssp-discardButton"
+                    label={customLabels.sspDiscard}
+                    title={customLabels.sspClickToDiscardCaseNote}
+                    onclick={discardNotes}
+                >
+                </lightning-button>
+                <lightning-button
+                    class="ssp-button_neutral ssp-saveNoteButton"
+                    label={customLabels.sspSave}
+                    title={customLabels.sspClickToSaveCaseNote}
+                    onclick={saveNewCaseNotes}
+                    disabled={isSaveButton}
+                >
+                </lightning-button>
+            </div>
+        </div>
+    </main>
+</template>

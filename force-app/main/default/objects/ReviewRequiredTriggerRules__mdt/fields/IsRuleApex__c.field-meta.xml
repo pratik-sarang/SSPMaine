@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IsRuleApex__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This Flag is used to determine whether rule has to be evaluated from apex or js</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Is Rule Apex</label>
+    <type>Checkbox</type>
+</CustomField>

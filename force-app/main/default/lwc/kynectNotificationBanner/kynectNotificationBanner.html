@@ -1,0 +1,24 @@
+<template>
+    <div class="kynect-notification-banner kynect-bgcolor_blue">
+        <div class="slds-grid slds-wrap slds-p-vertical_small">
+            <div
+                class="slds-col slds-size_1-of-1 slds-medium-size_9-of-12 slds-large-size_9-of-12  slds-align-middle"
+            >
+                <span
+                    class="kynect-text slds-p-horizontal_x-large kynect-fontFamily_breeSerifRegular"
+                    >{infoText}</span
+                >
+            </div>
+            <div
+                class="slds-col slds-size_1-of-1 slds-medium-size_3-of-12 slds-large-size_3-of-12  slds-m-vertical_small slds-align-middle"
+            >
+                <a href={linkUrl}
+                    ><span
+                        class="kynect-link kynect-color_white slds-m-right_large kynect-headline_6 kynect-fontFamily_proximaSoftBold"
+                        >{linkTitle} &rarr;</span
+                    ></a
+                >
+            </div>
+        </div>
+    </div>
+</template>

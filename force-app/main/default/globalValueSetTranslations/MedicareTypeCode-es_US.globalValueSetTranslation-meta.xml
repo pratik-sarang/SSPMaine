@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>CONDITIONAL ENROLLMENT IN MEDICARE PART A</masterLabel>
+        <translation>INSCRIPCIÓN CONDICIONAL EN MEDICARE PARTE A</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Medicare Part A</masterLabel>
+        <translation>Medicare Parte A</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Medicare Part B</masterLabel>
+        <translation>Medicare Parte B</translation>
+    </valueTranslation>
+</GlobalValueSetTranslation>

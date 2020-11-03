@@ -1,0 +1,82 @@
+<template>
+    <template if:false={hasNavButtons}>
+            <div
+            class=" dd-button-container slds-grid slds-wrap slds-grid_align-center "
+        >
+            <div
+                class="slds-grid ssp-footerBtnBackSave slds-size_1-of-2 slds-small-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2"
+            >
+                <template if:true={hasBackButton}>
+                    <div class="slds-col ssp-firstGroupBtn">
+                        <lightning-button
+                            label={backLabel}
+                            class="ssp-button_base"
+                            data-navaction="back"
+                            onclick={handleNavAction}
+                            title={backTitle}
+                        >
+                        </lightning-button>
+                    </div>
+                </template>
+
+                <div class="slds-col ssp-secondGroupBtn">
+                    <lightning-button
+                        label={exitLabel}
+                        data-navaction="exit"
+                        onclick={handleNavAction}
+                        variant="brand"
+                        class="dd-slds-nav_btn-next ssp-button_base"
+                        title={exitTitle}
+                    ></lightning-button>
+                </div>
+            </div>
+            <div
+                class="slds-col ssp-footerBtnNext slds-text-align_right slds-size_1-of-2 slds-small-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 "
+            >
+                <template if:false={isFinalSummaryPage}>
+                    <template if:false={isSubmitPage}>
+                        <lightning-button
+                            label={nextLabel}
+                            data-navaction="next"
+                            onclick={handleNavAction}
+                            variant="netural"
+                            class="dd-slds-nav_btn-next ssp-button_neutral"
+                            title={nextTitle}
+                        >
+                        </lightning-button>
+                    </template>
+
+                    <template if:true={isSubmitPage}>
+                        <lightning-button
+                            label={submitLabel}
+                            data-navaction="submit"
+                            onclick={handleNavAction}
+                            variant="netural"
+                            class="dd-slds-nav_btn-next ssp-button_neutral"
+                            title={submitTitle}
+                        >
+                        </lightning-button>
+                    </template>
+                </template>
+            </div>
+        </div>
+    </template>
+    <template if:true={hasNavButtons}>
+        <div
+            class="dd-button-container ssp-button-container slds-grid slds-grid_align-center slds-wrap"
+        >
+            <template for:each={layoutSchema.navButtons} for:item="navButton">
+                <c-json-field-container
+                    object-data={objectData}
+                    field={navButton}
+                    all-fields={allFields}
+                    rendering-cond={renderingCond}
+                    key={navButton.name}
+                    custom-labels={customLabels}
+                    disable-cond={disableCond}
+                >
+                </c-json-field-container>
+            </template>
+        </div>
+    </template>
+</template>

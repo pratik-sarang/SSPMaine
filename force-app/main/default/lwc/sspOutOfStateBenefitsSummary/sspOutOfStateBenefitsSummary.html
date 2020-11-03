@@ -1,0 +1,120 @@
+<!--
+
+* name : sspOutOfStateBenefitsSummary
+* @description :This screen appears for any individual who  plan to receive or have received Medicaid, SNAP, TANF from another state this month.
+* @author : Kyathi Kanumuri
+* @date : 11/12/2019
+* MODIFICATION LOG:
+* DEVELOPER             DATE            DESCRIPTION
+* ________________________________________________________________________________
+
+* FE: Kyathi                12/10/2019      Creating HTML Structure
+* BE: Sai Kiran             12/9/2019       Integration with BE 
+
+-->
+<template>
+    <template if:true={showSpinner}>
+        <c-ssp-spinner></c-ssp-spinner>
+    </template>
+    <template if:false={screenRenderingStatus}>
+        <div class="ssp-benefitsSummary_container  ssp-bodyContainer">
+            <div class="ssp-errorToast" if:true={hasSaveValidationError}>
+                <c-ssp-toast
+                    ssp-toast-title-val={label.sspSummaryRecordValidator}
+                    show-error-toast={trueValue}
+                    onhidetoast={hideToast}
+                ></c-ssp-toast>
+            </div>
+            <p
+                class="ssp-benefitsSummary_desc ssp-color_monoOmega ssp-fontFamily_ArvoRegular"
+            >
+                {sspOutOfStateBenefitsSummaryText}
+            </p>
+            <p class="ssp-hideContainer ssp-benefitsSummaryInputs"></p>
+            <lightning-button
+                variant="brand"
+                label={label.sspAddStateBenefitButton}
+                class="ssp-button_brand ssp-addBenefitButton"
+                onclick={handleClick}
+                disabled={getDisableStatus}
+                name={row}
+                title={label.sspAddBenefitButtonAltText}
+                if:true={buttonRenderingStatus}
+            >
+            </lightning-button>
+            <div class="ssp-card_section">
+                <template for:each={sspBenefits} for:item="benefitResult">
+                    <div
+                        class="ssp-subSection  slds-m-bottom_medium"
+                        key={benefitResult.sBenefitId}
+                    >
+                        <c-ssp-selection-card-with-remove-icon
+                            onremove={handleRemoveAction}
+                            display-edit={trueValue}
+                            obj-card={benefitResult}
+                            oncardaction={handleStartAction}
+                            remove-modal-heading={label.sspDeleteBenefitsAnotherState}
+                            button-alt-text={label.sspBenefitsEditButtonTitle}
+                            remove-alt-text={label.sspBenefitsRemoveButtonTitle}
+                            can-delete = {canDeleteStateBenefit}
+                            disabled = {disableStateBenefitDetails}
+                            is-view-button-visible={isReadOnlyUser}
+                            view-button-alt-text={label.sspBenefitsViewButtonTitle}
+                        >
+                            <div slot="cardContent">
+                                <p
+                                    class="ssp-fontFamily_popinBold ssp-clipTextWithEllipsis"
+                                >
+                                    {benefitResult.sBenefitStateLabel}
+                                </p>
+                                <p
+                                    class=" ssp-fontFamily_popinBold ssp-color_blueAlpha ssp-clipTextWithEllipsis"
+                                >
+                                    {benefitResult.sBenefitProgramLabel}
+                                </p>
+                            </div>
+                        </c-ssp-selection-card-with-remove-icon>
+                    </div>
+                </template>
+                <template if:true={disableAddButton}>
+                    <div class="ssp-subSection slds-m-bottom_medium">
+                        <c-ssp-selection-card-with-remove-icon
+                            onremove={handleRemoveAction}
+                            obj-card={benefitResult}
+                            display-edit={falseValue}
+                            oncardaction={handleStartAction}
+                            remove-modal-heading={label.sspDeleteBenefitsAnotherState}
+                            button-alt-text ={label.sspBenefitsEditButtonTitle}
+                            remove-alt-text ={label.sspBenefitsRemoveButtonTitle}
+                            can-delete = {canDeleteStateBenefit}
+                            disabled = {disableStateBenefitDetails}
+                            is-view-button-visible={isReadOnlyUser}
+                            view-button-alt-text={label.sspBenefitsViewButtonTitle}
+                        >
+                            <div slot="cardContent">
+                                <p
+                                    class="ssp-fontFamily_popinBold ssp-clipTextWithEllipsis"
+                                >
+                                    {label.sspOutOfStateBenefits}
+                                </p>
+                            </div>
+                        </c-ssp-selection-card-with-remove-icon>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </template>
+    <template if:true={showAccessDeniedComponent}>
+        <c-ssp-access-denied></c-ssp-access-denied>
+    </template>
+    <template if:true={showBenefitDetails}>
+        <c-ssp-out-of-state-benefit-details
+            onbenefitdetailbuttonaction={hideBenefitDetails}
+            benefit-obj={objBenefitData}
+            member-name={memberName}
+            action-check={actionCheck}
+            time-travel-today-date={timeTravelTodayDate}
+        >
+        </c-ssp-out-of-state-benefit-details>
+    </template>
+</template>

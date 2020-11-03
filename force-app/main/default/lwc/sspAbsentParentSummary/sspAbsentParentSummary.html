@@ -1,0 +1,99 @@
+<!--
+ * Component Name: SspAbsentParentSummary.
+ * Author: Ajay Saini, Venkat.
+ * Description: This screen takes absent parent information for an applicant.
+ * Date: DEC-20-2019.
+ *
+-->
+
+<template>
+    <!-- CD2 2.5 Security Role Matrix. -->
+  <template if:true={isPageAccessible}>
+    <div if:true={showMe} class="ssp-absent-parents-summary ssp-bodyContainer">
+        <div class="ssp-absent-parents-summary-info slds-m-vertical_x-large">
+            <p
+                class="ssp-fontFamily_ArvoRegular ssp-color_monoOmega ssp-info_fontSize"
+            >
+                {absentParentSummaryInfo}
+            </p>
+            <p>
+                <a
+                    title={label.learnMoreAltText}
+                    class="ssp-fontFamily_popinBold ssp-selectionCardIconText ssp-learnMoreLink"
+                    onclick={openLearnMoreModal}
+                    tabindex="0"
+                    role="button"
+                >
+                    {label.learnMoreLink}
+                </a>
+            </p>
+        </div>
+        <!--Absent parent tiles-->
+        <template for:each={parents} for:item="parent">
+            <div key={parent.key} class="ssp-absent-parents-summary-cards">
+                <c-ssp-selection-card-with-remove-icon
+                    hide-remove-icon="true"
+                    display-edit={parent.editable}
+                    oncardaction={handleAbsentParentEdit}
+                    button-alt-text={parent.buttonTitle}
+                    obj-card={parent.Id}
+                    disabled = {disableAbsentParentDetails}
+                    can-delete = {canDeleteAbsentParent}
+                    is-view-button-visible={isReadOnlyUser}
+                    view-button-alt-text={parent.viewButtonTitle}
+                >
+                    <span slot="cardContent" class="ssp-selectionCardTitle">
+                        <p
+                            class="ssp-clipTextWithEllipsis ssp-color_monoBody ssp-fontFamily_popinBold ssp-word-break-all"
+                        >
+                            {parent.title}
+                        </p>
+                        <p
+                            class="ssp-clipTextWithEllipsis ssp-fontFamily_popinBold ssp-color_blueAlpha ssp-word-break"
+                        >
+                            {parent.subtitle}
+                        </p>
+                    </span>
+                </c-ssp-selection-card-with-remove-icon>
+            </div>
+        </template>
+    </div>
+    </template>
+    <!--Detail component-->
+    <c-ssp-absent-parent-details
+        if:true={showDetailScreen}
+        member-id={memberId}
+        record-id={currentRecordId}
+        application-id={applicationId}
+        onsavedetail={handleAbsentParentSave}
+        oncanceldetail={handleAbsentParentCancel}
+    >
+    </c-ssp-absent-parent-details>
+
+    <!--Error message toast-->
+    <c-ssp-toast
+        if:true={showToast}
+        ssp-toast-title-val={label.toastErrorText}
+        onhidetoast={handleHideToast}
+        show-error-toast={showToast}
+    >
+    </c-ssp-toast>
+
+    <!--Learn more modal-->
+    <c-ssp-detailed-information-modal
+        if:true={showLearnMore}
+        reference={reference}
+        header-value={label.learnMoreLink}
+        open-model={showLearnMore}
+        onclosemodal={closeLearnMoreModal}
+    >
+        <p
+            slot="contentSlot"
+            class="ssp-learnMore ssp-fontFamily_ArvoRegular"
+        ></p>
+    </c-ssp-detailed-information-modal>
+  <!-- CD2 2.5 Security Role Matrix. -->
+   <template if:true={showAccessDeniedComponent}>
+    <c-ssp-access-denied></c-ssp-access-denied>
+    </template>
+</template>

@@ -1,0 +1,180 @@
+.ssp-add-auth-rep-program-header-text {
+    font-size: 2.625rem;
+}
+.ssp-common-margin-top {
+    margin-top: 0;
+}
+.ssp-auth-rep-program-form > * {
+    margin-top: 15px;
+}
+
+.ssp-modalFooter {
+    width: -webkit-fill-available;
+}
+.ssp-align-center {
+    display: flex;
+    align-items: center;
+}
+.ssp-search-btn {
+    margin: auto;
+    text-align: center;
+}
+.ssp-reps-header {
+    margin-bottom: 60px;
+}
+.ssp-reps-text {
+    font-size: 1rem;
+    padding-left: 14%;
+}
+
+.ssp-radioButtonContainer {
+    display: flex;
+    position: relative;
+    margin-bottom: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+/* Hide the browser's default radio button */
+.ssp-multilineRadioInput {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    z-index: 9;
+}
+
+/* Create a custom radio button */
+.ssp-multilineRadioChecked {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 20px;
+    width: 20px;
+    /* border: 2px solid #dadee4; */
+    border-radius: 50%;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.ssp-multilineRadioChecked:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.ssp-multilineRadioInput:checked ~ .ssp-multilineRadioChecked:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.ssp-multilineRadioChecked:after {
+    top: 2px;
+    left: 2px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+.ssp-label-name {
+    padding-left: 30px;
+    font-size: 0.8125rem;
+}
+.ssp-sectionSeperator {
+    height: 5px;
+    margin: 19px 0 12px 0;
+}
+.ssp-auth-rep-program-form .ssp-auth-rep-program-info {
+    font-size: 1rem;
+    margin-bottom: 26px;
+    margin-top: 42px;
+}
+.ssp-auth-rep-program-form .ssp-auth-rep-program-info.ssp-firstInfo {
+    margin-bottom: 5px;
+    margin-top: 7px;
+}
+.ssp-navFlowFooter {
+    margin-top: 70px;
+    margin-bottom: 60px;
+}
+.ssp-auth-rep-enter-info {
+    margin: 30px 0 30px 0;
+}
+@media only screen and (max-width: 800px) {
+    .ssp-firstGroupBtn {
+        margin-right: 0;
+    }
+    .ssp-secondGroupBtn {
+        padding-left: 10px;
+    }
+    .ssp-firstGroupBtn{
+        width: 100%;
+    }
+    .ssp-signature-page.ssp-firstGroupBtn {
+        width: 100%;
+        padding-right: 0;
+    }
+    .ssp-navFlowFooter {
+        margin-top: 45px;
+        margin-bottom: 60px;
+    }
+    .ssp-reps-text {
+        padding: 0 30px;
+    }
+}
+.ssp-toggleFieldLabel {
+    font-size: 1rem;
+    margin-bottom: 0.1875rem;
+    word-break: break-word;
+}
+@media only screen and (max-device-width: 768px) {
+    .ssp-reps-header {
+        margin-bottom: 44px;
+    }
+    .ssp-reps-text {
+        padding-left: 1.875rem;
+    }
+    .ssp-add-auth-rep-program-header-text {
+        font-size: 1.5rem;
+    }
+    .ssp-common-margin-top {
+        margin-top: 1rem;
+        padding-left: 0;
+    }
+    .ssp-optional-field {
+        width: 100%;
+    }
+    .ssp-gutter-right {
+        padding-right: 0;
+    }
+    .ssp-gutter-left {
+        padding-left: 0;
+    }
+    .ssp-search-cancel {
+        margin-bottom: 15px;
+    }
+    .ssp-footerBtnNext {
+        margin-bottom: 30px;
+    }
+}
+
+@media only screen and (min-device-width: 769px) {
+    .ssp-toggle-question .ssp-applicationInputs {
+        width: 100%;
+    }
+    .ssp-optional-field {
+        width: 170px;
+    }
+    .ssp-buttonContainer {
+        margin-top: 1rem;
+    }
+}
+.ssp-programs {
+    margin-bottom: 1rem;
+}
+.ssp-program-selection {
+    width: 100%;
+}

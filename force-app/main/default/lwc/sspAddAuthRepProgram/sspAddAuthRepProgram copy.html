@@ -1,0 +1,77 @@
+<template>
+     <template if:true={showSpinner}>
+            <c-ssp-spinner></c-ssp-spinner>
+        </template>
+           <c-ssp-toast
+        if:true={showErrorToast}
+        ssp-toast-title-val={customLabel.toastErrorText}
+        onhidetoast={handleHideToast}
+        show-error-toast={showErrorToast}>
+    </c-ssp-toast>
+    <div class="slds-m-bottom_xx-large ssp-add-auth-rep-permissions">
+        <div class="ssp-reps-app-header ssp-bg_appHeaderGradient slds-p-vertical_medium slds-m-bottom_x-large">
+            <span class="ssp-fontFamily_popinBold ssp-color_monoBody ssp-reps-text">{customLabel.sspRepsAssistAgents}</span>
+        </div>
+        <div class="slds-m-vertical_large ssp-add-auth-rep ssp-bodyContainer">
+            <div class="ssp-warning-info slds-m-bottom_medium">
+                <c-ssp-explicit-notice-card>
+                    <p class="ssp-fontFamily_popinBlack">
+                        Be sure to add the correct individual. The person you add will get access to your case information based on the permissions you select.
+                    </p>
+                </c-ssp-explicit-notice-card>
+            </div>
+            <div class="ssp-add-auth-rep-header">
+                <h1 class="ssp-add-auth-rep-header-text ssp-fontFamily_popinBlack ssp-color_blueAlpha">{customLabel.sspAddAuthorizedRepresentative}</h1>
+            </div>
+            <hr class="ssp-horizontal-rule ssp-bg_monoAlpha slds-m-vertical_x-large">
+            <p class="ssp-fontFamily_ArvoRegular ssp-color_monoOmega slds-m-bottom_x-large">{customLabel.sspPleaseIndicateTheProgramsAndLevelOfAccess}</p>
+            <template if:false={editPermissions}>
+            <div class="ssp-case-question slds-m-bottom_x-large">
+                <p class="ssp-fontFamily_popinBold ssp-color_monoBody slds-m-bottom_medium" title={customLabel.sspClickHereToSeeYourCases}>{customLabel.sspWhichCaseWouldYouLikeToAdd}</p>
+                <c-ssp-base-component-input-picklist option={caseOptions} value={selectedCaseNumber} onhandlepicklistchange={handlePicklistChange}  title={customLabel.sspClickHereToSeeYourCases}></c-ssp-base-component-input-picklist>
+            </div>
+            </template>
+            <template if:true ={showCaseError}> 
+                <p key={error} class="slds-size_1-of-1 ssp-show-error ssp-color_redOmega">{customLabel.sspRequiredErrorMessage}</p>
+            </template>
+            <template if:true={showPrograms}>
+            <div class="ssp-program-selection">
+                <p class="ssp-fontFamily_popinBold ssp-color_monoBody slds-m-bottom_medium">{customLabel.sspWhichProgramDoYouWant}</p>
+               <template for:each={programs} for:item="program">
+                    <div class="ssp-programs" key={program.programName} onchange={handleHideError}>
+                        <c-ssp-add-auth-rep-program-details checkbox-label={program.programName}
+                            radio-options={program.permissionLevel} class="ssp-applicationInputs"
+                            program-name={program.programId}
+                          ></c-ssp-add-auth-rep-program-details>
+                    </div>
+                </template>
+            </div>
+            </template>
+            <template if:true ={showError}> 
+                <p key={error} class="slds-size_1-of-1 ssp-show-error ssp-color_redOmega">{customLabel.sspPleaseSelectAtLeastOneProgram}</p>
+            </template>
+            <!-- <div class="slds-grid slds-wrap slds-size_1-of-1 ssp-action-btn-section">
+                <div class="slds-size_1-of-1 ssp-action-btns">
+                    <lightning-button class="ssp-button_base ssp-cancelBtn" label={customLabel.sspCancel} title="Cancel entering details for your authorized representative" onclick={handleCancel}></lightning-button>
+                    <lightning-button class="ssp-button_neutral ssp-saveBtn" label={customLabel.sspNext} title="Continue to next screen to enter further details on your authorized representative" onclick={saveDetails}></lightning-button>
+                </div>
+            </div> -->
+            <div class="slds-grid slds-wrap slds-grid_align-center slds-m-bottom_xx-large ssp-action-btn-section">
+                <div class="slds-grid slds-wrap ssp-footerBtnBackSave slds-size_1-of-2 slds-small-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2">
+                    <div class="slds-col ssp-firstGroupBtn">
+                        <lightning-button label={customLabel.sspBack} class="ssp-button_base" onclick={handleCancel} title={customLabel.sspReturnPreviousScreen}>
+                        </lightning-button>
+                    </div>
+                    <div class="slds-col ssp-secondGroupBtn">
+                        <lightning-button label={customLabel.sspCancel} onclick={handleCancel} variant="brand"
+                            class="dd-slds-nav_btn-next ssp-button_base" title={customLabel.sspCancelEnteringDetailsAuthorizedRepresentative}></lightning-button>
+                    </div>
+                </div>
+                <div class="slds-col ssp-footerBtnNext slds-text-align_right slds-size_1-of-2 slds-small-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2">
+                    <lightning-button label={customLabel.sspNext} onclick={saveDetails} variant="netural"
+                        class="dd-slds-nav_btn-next ssp-button_neutral" title={customLabel.sspContinueToNextScreenToEnterFurtherDetails}></lightning-button>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

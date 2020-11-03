@@ -1,0 +1,44 @@
+<!--
+* name            : sspBaseComponentInputToggle
+* @description    : This component is used to render a question with options.
+-->
+<template>
+  <div class="ssp-genericInputToggle slds-grid slds-wrap">
+    <div class="ssp-componentWidth">
+      <div class="ssp-alignHelpText slds-m-bottom_small">
+        <label class="ssp-fontFamily_popinBold"
+          >{label}
+          <template if:true={isHelpText}>
+            <lightning-helptext
+              class="ssp-helptextIcon"
+              icon-name="utility:info_alt"
+              content={helpTextContent}
+            ></lightning-helptext>
+          </template>
+        </label>
+        
+        <template if:true={isCustomTooltip}>
+          <div class="ssp-tooltip">
+            <lightning-icon icon-name="utility:info_alt" class="ssp-info-icon" size="x-small"></lightning-icon>
+            <span class="ssp-tooltiptext ssp-toolTip-content"></span>
+          </div>
+        </template>
+      </div>
+      <lightning-radio-group
+        class="ssp-genericInputTogglegroup ssp-fontFamily_popinBold"
+        data-id="inputVal"
+        label={label}
+        value={value}
+        title={title}
+        options={options}
+        disabled={isDisabled}
+        type="button"
+        onchange={handleValidations}
+        variant="label-hidden"
+      ></lightning-radio-group>
+      <template for:each={ErrorMessageList} for:item="error">
+        <p key={error} class="showError ssp-color_redOmega">{error}</p>
+      </template>
+    </div>
+  </div>
+</template>

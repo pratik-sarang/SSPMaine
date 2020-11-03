@@ -1,0 +1,34 @@
+<!--
+* name          : sspMatchFoundModal
+* @description  : This screen informs the user that a match was found, and we will be pulling that data for them to review and update if necessary
+* @author       : Suyash and P V Siddarth
+* @date         : 17/12/19  
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName                MM/DD/YYYY               A Brief Description about the Change
+  Suyash and Siddarth         17/12/19                          Initial Version
+-->
+<template>
+    <template if:true={openModel}>
+        <c-ssp-detailed-information-modal
+            header-value={label.sspExistingCaseFound}
+            onclosemodal={handleProp}
+            open-model={openModel}
+            reference={reference}
+        >
+            <p
+                class="ssp-fontFamily_ArvoRegular ssp-color_monoOmega slds-p-bottom_large"
+                slot="contentSlot"
+            >
+        {label.sspMergeCase}
+            </p>
+            <p
+                class="ssp-fontFamily_ArvoRegular ssp-color_monoOmega slds-p-bottom_large"
+                slot="contentSlot"
+            >
+        {label.sspPleaseReviewInformation}
+            </p>
+        </c-ssp-detailed-information-modal>
+    </template>
+</template>

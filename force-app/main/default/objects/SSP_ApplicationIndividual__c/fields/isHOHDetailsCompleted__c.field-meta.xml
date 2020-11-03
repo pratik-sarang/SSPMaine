@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>isHOHDetailsCompleted__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This field is used to decide whether HOH Section details gave been completed or not</description>
+    <externalId>false</externalId>
+    <label>is HOH Details Completed?</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

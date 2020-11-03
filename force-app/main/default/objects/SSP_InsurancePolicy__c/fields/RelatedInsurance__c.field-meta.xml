@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RelatedInsurance__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>This field is used to indicate the related Insurance of an Insurance Policy</description>
+    <externalId>false</externalId>
+    <label>Related Insurance</label>
+    <referenceTo>SSP_InsurancePolicy__c</referenceTo>
+    <relationshipName>SSP_InsurancePolicies</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

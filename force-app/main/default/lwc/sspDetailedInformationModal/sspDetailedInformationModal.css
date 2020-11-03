@@ -1,0 +1,81 @@
+.ssp-modalHeading {
+  padding: 30px;
+}
+.ssp-modalHeadingText {
+  height: 24px;
+  width: 224px;
+  font-size: 1.125rem;
+  letter-spacing: -0.3px;
+  line-height: 24px;
+  outline: none;
+}
+.slds-modal__content {
+  outline: none;
+}
+.ssp-modalContent {
+  padding: 30px;
+  font-size: 1rem;
+}
+
+.ssp-contentBox {
+  padding-top: 24px;
+}
+.ssp-modalBlueHeader {
+  height: 22px;
+  width: 267px;
+  font-size: 1.125rem;
+  letter-spacing: -0.3px;
+  line-height: 24px;
+}
+
+.ssp-modalBlueHeaderSubText {
+  height: 28px;
+  width: 267px;
+  font-size: 0.875rem;
+  letter-spacing: -0.26px;
+  line-height: 24px;
+}
+
+.ssp-modalBlackHeader {
+  height: 24px;
+  width: 267px;
+  font-size: 1rem;
+  line-height: 24px;
+}
+
+.ssp-modalBlackHeaderSubText {
+  height: 48px;
+  width: 267px;
+  font-size: 1rem;
+  line-height: 24px;
+}
+
+.ssp-footer-padding {
+  padding: 0.75rem 1.875rem 1.875rem 1.875rem;
+}
+
+.slds-modal__header {
+  text-align: left;
+}
+
+/* .ssp-detailedModal{
+    overflow: auto;
+    display: grid;
+}
+
+.slds-modal__content{
+    overflow: unset;
+} */
+
+@media only screen and (max-width: 768px) {
+  .ssp-modalHeading {
+    padding: 24px;
+  }
+  .ssp-modalContent {
+    padding: 24px;
+    margin: -1px 0 -1px 0;
+  }
+  .ssp-footer-padding {
+    padding: 0.75rem 1.5rem;
+  }
+}

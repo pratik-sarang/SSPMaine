@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>button_Action__c</fullName>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Button Action</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>navigate user to Find a DCBS Office page</fullName>
+                <default>true</default>
+                <label>navigate user to Find a DCBS Office page</label>
+            </value>
+            <value>
+                <fullName>navigate user to Document Center</fullName>
+                <default>false</default>
+                <label>navigate user to Document Center</label>
+            </value>
+            <value>
+                <fullName>navigate user to Renewal of Benefits screen</fullName>
+                <default>false</default>
+                <label>navigate user to Renewal of Benefits screen</label>
+            </value>
+            <value>
+                <fullName>navigate user to Claim Payments screen</fullName>
+                <default>false</default>
+                <label>navigate user to Claim Payments screen</label>
+            </value>
+            <value>
+                <fullName>navigate user to Application Summary</fullName>
+                <default>false</default>
+                <label>navigate user to Application Summary</label>
+            </value>
+            <value>
+                <fullName>navigate user to Message Center with Notice tab selected</fullName>
+                <default>false</default>
+                <label>navigate user to Message Center with Notice tab selected</label>
+            </value>
+            <value>
+                <fullName>navigate user to the assisted individual&apos;s Client View Dashboard</fullName>
+                <default>false</default>
+                <label>navigate user to the assisted individual&apos;s Client View Dashboard</label>
+            </value>
+            <value>
+                <fullName>navigate user to Renewal of assisted individual&apos;s Benefits screen</fullName>
+                <default>false</default>
+                <label>navigate user to Renewal of assisted individual&apos;s Benefits screen</label>
+            </value>
+            <value>
+                <fullName>opens Authorized Representative Access Request modal</fullName>
+                <default>false</default>
+                <label>opens Authorized Representative Access Request modal</label>
+            </value>
+            <value>
+                <fullName>opens Assister Access Request modal</fullName>
+                <default>false</default>
+                <label>opens Assister Access Request modal</label>
+            </value>
+            <value>
+                <fullName>navigate user to Hearing Summary</fullName>
+                <default>false</default>
+                <label>navigate user to Hearing Summary</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

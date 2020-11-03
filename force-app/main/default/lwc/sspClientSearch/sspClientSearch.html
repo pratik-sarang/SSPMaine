@@ -1,0 +1,706 @@
+<!--
+* name 		    : sspClientSearch
+* @description 	: This component provides search fields, search results and export to excel functionality
+* @author 		: Shekhar Chandra And Nikhil Shinde
+* @date 		: 02-06-2020
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+*  
+-->
+
+<template>
+  <template if:true={showSpinner}>
+    <c-ssp-spinner></c-ssp-spinner>
+  </template>
+  <div class="ssp-clientSearchContainer ssp-bg_monoDelta">
+    <div class="slds-grid slds-wrap">
+      <div
+        class="slds-col slds-large-size_1-of-1 slds-medium-size_1-of-1 slds-size_1-of-1  ssp-searchTitle ssp-color_blueAlpha ssp-fontFamily_popinBold"
+      >
+        {label.sspSearchButtonText}
+      </div>
+
+      <!-- 379953 START -->
+      <template if:true={hasSaveValidationError}>
+        <div
+          class="slds-col slds-large-size_1-of-1 slds-medium-size_1-of-1 slds-size_1-of-1  ssp-searchTitle ssp-color_blueAlpha ssp-fontFamily_popinBold"
+        >
+          <c-ssp-general-notice-card
+            notice-type={label.explicitText}
+            notice-text={label.toastErrorText}
+            class="ssp-fontFamily_popinRegular ssp-color_monoBody ssp-bg_redGamma"
+          ></c-ssp-general-notice-card>
+        </div>
+      </template>
+      <!-- 379953 END -->
+
+      <template if:true={selectAtLeastTwoFields}>
+        <div
+          class="slds-col slds-large-size_1-of-1 slds-medium-size_1-of-1 slds-size_1-of-1  ssp-searchTitle ssp-color_blueAlpha ssp-fontFamily_popinBold"
+        >
+          <c-ssp-general-notice-card
+            notice-type={label.explicitText}
+            notice-text={label.sspAtLeastTwoField}
+            class="ssp-fontFamily_popinRegular ssp-color_monoBody ssp-bg_redGamma"
+          ></c-ssp-general-notice-card>
+        </div>
+      </template>
+      <template if:true={roleVisibility.SSP_First_Name}
+        ><div
+          class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-size_1-of-1 ssp-clientSearchContent"
+        >
+          <c-ssp-base-component-input-text
+            class="ssp-applicationInputs slds-large-size_1-of-2 slds-size_1-of-1"
+            label={label.firstName}
+            name="clientSearchFirstName"
+            value={cFirstName}
+            onchange={handleInputText}
+            disabled={isDisabled}
+            entity-name="SSP_Member__c"
+            field-name="FirstName__c"
+            meta-list={metaDataListParent}
+            max-length="50"
+          ></c-ssp-base-component-input-text>
+        </div>
+      </template>
+      <template if:true={roleVisibility.SSP_Last_Name}>
+        <div
+          class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-size_1-of-1 ssp-clientSearchContent"
+        >
+          <c-ssp-base-component-input-text
+            class="ssp-applicationInputs slds-large-size_1-of-2 slds-size_1-of-1"
+            label={label.lastName}
+            name="clientSearchLastName"
+            value={cLastName}
+            onchange={handleInputText}
+            disabled={isDisabled}
+            entity-name="SSP_Member__c"
+            field-name="LastName__c"
+            meta-list={metaDataListParent}
+            max-length="50"
+          ></c-ssp-base-component-input-text>
+        </div>
+      </template>
+      <template if:true={roleVisibility.SSP_Case_Number}
+        ><div
+          class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-size_1-of-1 ssp-clientSearchContent"
+        >
+          <div>
+            <div class="ssp-radioButtonContainer">
+              <label for="ssp-caseNumber" class="ssp-label-name"
+                >{label.sspCaseNumber}</label
+              >
+              <input
+                id="ssp-caseNumber"
+                type="radio"
+                name="radio"
+                aria-label="radio"
+                value="clientSearchCaseNumber"
+                class="ssp-multilineRadioInput"
+                onclick={handleRadioClick}
+                title={label.sspCaseNumber}
+              />
+              <span class="ssp-multilineRadioChecked"></span>
+            </div>
+            <!-- <c-ssp-base-component-input-number
+                            class="ssp-applicationInputs ssp-disable-caseNumber ssp-case-number   ssp-offAutoFill"
+                            name="clientSearchCaseNumber"
+                            value={caseNumber}
+                            disabled={isCaseNumberDisabled}
+                            onchange={handleCaseNumberChange}
+                            label={label.sspCaseNumber}
+                            hide-label="true"
+                            case-application-field="true"
+                            entity-name=""
+                            field-name=""
+                        >
+                        </c-ssp-base-component-input-number> -->
+            <c-ssp-base-component-input-phone
+              class="ssp-applicationInputs ssp-disable-caseNumber ssp-case-number  ssp-offAutoFill"
+              name="clientSearchCaseNumber"
+              value={caseNumber}
+              disabled={isCaseNumberDisabled}
+              onchange={handleCaseNumberChange}
+              max-length="9"
+              case-application-field="true"
+              entity-name=""
+              field-name=""
+            >
+            </c-ssp-base-component-input-phone>
+          </div>
+        </div>
+      </template>
+      <template if:true={roleVisibility.SSP_Application_Number}
+        ><div
+          class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-size_1-of-1 ssp-clientSearchContent"
+        >
+          <div class="ssp-radioButtonContainer">
+            <label for="ssp-applicationNumber" class="ssp-label-name"
+              >{label.sspApplicationNumber}</label
+            >
+            <input
+              id="ssp-applicationNumber"
+              type="radio"
+              name="radio"
+              aria-label="radio"
+              value="clientSearchApplicationNumber"
+              class="ssp-multilineRadioInput"
+              onclick={handleRadioClick}
+              title={label.sspApplicationNumber}
+            />
+            <span class="ssp-multilineRadioChecked"></span>
+          </div>
+          <!-- <c-ssp-base-component-input-number
+            class="ssp-applicationInputs ssp-case-number ssp-disable-appNumber ssp-offAutoFill"
+            name="clientSearchApplicationNumber"
+            value={applicationNumber}
+            disabled={isAppNumberDisabled}
+            onchange={handleApplicationNumberChange}
+            label={label.sspApplicationNumber}
+            hide-label="true"
+            case-application-field="true"
+            entity-name=""
+            field-name=""
+          >
+          </c-ssp-base-component-input-number> -->
+          <c-ssp-base-component-input-phone
+            class="ssp-applicationInputs ssp-case-number ssp-disable-appNumber ssp-offAutoFill"
+            name="clientSearchApplicationNumber"
+            value={applicationNumber}
+            disabled={isAppNumberDisabled}
+            onchange={handleApplicationNumberChange}
+            hide-label="true"
+            case-application-field="true"
+            max-length="9"
+            entity-name=""
+            field-name=""
+          >
+          </c-ssp-base-component-input-phone>
+        </div>
+      </template>
+      <template if:true={isFieldVisible}
+        ><div
+          class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-size_1-of-1 ssp-clientSearchContent"
+        >
+          <template if:true={roleVisibility.SSP_SSN9}>
+            <c-ssp-base-component-input-text
+              class="ssp-applicationInputs slds-large-size_1-of-2 slds-size_1-of-1"
+              label={label.sspSocialSecurityNumber9Digit}
+              name="socialSecurityNumber9"
+              onchange={handleInputText}
+              value={socialSecurityDigit9}
+              onclick={showInputNineSSN}
+              onfocusout={hideFirstFiveDigits}
+              disabled={isDisabled}
+              max-length="9"
+              custom-error-messages-list={errorMessagesList}
+            >
+            </c-ssp-base-component-input-text>
+          </template>
+          <template if:true={roleVisibility.SSP_SSN4}>
+            <c-ssp-base-component-input-text
+              class="ssp-applicationInputs slds-large-size_1-of-2 slds-size_1-of-1 ssp-offAutoFill"
+              label={label.sspSocialSecurityNumber4Digit}
+              input-type={ssnInputType}
+              name="socialSecurityNumber4"
+              entity-name=""
+              field-name=""
+              data-id=""
+              onchange={handleInputText}
+              ssn-four="true"
+              value={socialSecurityDigit4}
+              disabled={isDisabled}
+            >
+            </c-ssp-base-component-input-text>
+          </template>
+        </div>
+      </template>
+      <template if:true={roleVisibility.SSP_Date_of_Birth}
+        ><div
+          class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-size_1-of-1 ssp-clientSearchContent"
+        >
+          <c-ssp-base-component-input-date
+            data-num="0"
+            class="ssp-applicationInputs ssp-inputStartDate ssp-offAutoFill"
+            label={label.dateOfBirth}
+            value={dateOfBirth}
+            onchange={handleBirthDate}
+            disabled={isDisabled}
+            entity-name="SSP_Member__c"
+            field-name="BirthDate__c"
+            meta-list={metaDataListParent}
+          >
+          </c-ssp-base-component-input-date>
+        </div>
+      </template>
+      <template if:true={showAdvanced}>
+        <template if:true={roleVisibility.SSP_Gender}
+          ><div
+            class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-size_1-of-1 ssp-clientSearchContent"
+          >
+            <c-ssp-base-component-input-picklist
+              data-id=""
+              class="ssp-applicationInputs"
+              label={label.gender}
+              entity-name=""
+              field-name=""
+              meta-list={}
+              option={genderPicklistValue}
+              disabled={isDisabled}
+              title={label.sspGenderAlternateText}
+              placeholder=""
+              name="clientSearchGender"
+              onhandlepicklistchange={handlePickListChange}
+              value={genderValue}
+            ></c-ssp-base-component-input-picklist>
+          </div>
+        </template>
+      </template>
+      <template if:true={roleVisibility.SSP_Address_Line_1}
+        ><div
+          class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-size_1-of-1 ssp-clientSearchContent"
+        >
+          <c-ssp-base-component-input-text
+            class="ssp-applicationInputs slds-large-size_1-of-2 slds-size_1-of-1"
+            label={label.sspAddressLine1}
+            name="clientSearchAddress"
+            value={addressLine}
+            onchange={handleInputText}
+            disabled={isDisabled}
+          ></c-ssp-base-component-input-text>
+        </div>
+      </template>
+
+      <template if:true={showAdvanced}>
+        <template if:true={roleVisibility.SSP_County}>
+          <div
+            class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-size_1-of-1 ssp-clientSearchContent"
+          >
+            <c-ssp-base-component-input-picklist
+              class="ssp-applicationInputs"
+              label={label.sspCounty}
+              onchange={handleChange}
+              option={countyPicklistValue}
+              disabled={isDisabled}
+              title={label.sspCountyAlternateText}
+              placeholder=""
+              name="clientSearchCounty"
+              onhandlepicklistchange={handlePickListChange}
+              value={countyValue}
+              selected-value={countyValue}
+            ></c-ssp-base-component-input-picklist>
+          </div>
+        </template>
+        <template if:true={roleVisibility.SSP_MCO_Enrollment_Status}>
+          <div
+            class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-size_1-of-1 ssp-clientSearchContent"
+          >
+            <c-ssp-base-component-input-picklist
+              class="ssp-applicationInputs"
+              label={label.sspMCOEnrollmentStatus}
+              option={applicationSearchPicklist}
+              disabled={isDisabled}
+              title={label.sspMCOEnrollmentStatusAlternateText}
+              placeholder=""
+              name="clientSearchMCO"
+              onhandlepicklistchange={handlePickListChange}
+              value={applicationSearch}
+            ></c-ssp-base-component-input-picklist>
+          </div>
+        </template>
+        <template if:true={roleVisibility.SSP_Renewal_Due}>
+          <div
+            class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-size_1-of-1 ssp-clientSearchContent"
+          >
+            <c-ssp-base-component-input-picklist
+              class="ssp-applicationInputs"
+              label={label.sspRenewalDue}
+              option={dateFilterPicklist}
+              disabled={isDisabled}
+              title={label.sspRenewalDueAlternateText}
+              placeholder=""
+              name="clientSearchRenewal"
+              onhandlepicklistchange={handlePickListChange}
+              value={dateFilter}
+            ></c-ssp-base-component-input-picklist>
+          </div>
+        </template>
+        <template if:true={roleVisibility.SSP_Case_Status}>
+          <div
+            class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-size_1-of-1 ssp-clientSearchContent"
+          >
+            <c-ssp-base-component-input-picklist
+              class="ssp-applicationInputs"
+              label={label.sspCaseStatus}
+              option={casePicklist}
+              disabled={isDisabled}
+              title={label.sspCaseStatusAlternateText}
+              placeholder=""
+              name="clientSearchCaseStatus"
+              onhandlepicklistchange={handlePickListChange}
+              value={caseValues}
+            ></c-ssp-base-component-input-picklist>
+          </div>
+        </template>
+        <template if:true={roleVisibility.SSP_RFI_Due}>
+          <div
+            class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-size_1-of-1 ssp-clientSearchContent"
+          >
+            <c-ssp-base-component-input-picklist
+              class="ssp-applicationInputs"
+              label={label.sspRFIDue}
+              option={dateFilterPicklist}
+              disabled={isDisabled}
+              title={label.sspRFIDueAlternateText}
+              placeholder=""
+              name="clientSearchRFI"
+              onhandlepicklistchange={handlePickListChange}
+              value={dueDate}
+            ></c-ssp-base-component-input-picklist>
+          </div>
+        </template>
+        <template if:true={roleVisibility.SSP_Submitted_Date}>
+          <div
+            class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-size_1-of-1 ssp-clientSearchContent"
+          >
+            <!--Use SubmittedDate in Reference Table-->
+            <c-ssp-base-component-input-picklist
+              class="ssp-applicationInputs"
+              label={label.sspSubmittedDate}
+              option={submittedDatePicklist}
+              disabled={isDisabled}
+              title={label.sspSubmittedDateAlternateText}
+              placeholder=""
+              name="clientSearchSubmittedDate"
+              onhandlepicklistchange={handlePickListChange}
+              selected-value={submittedDate}
+              value={submittedDate}
+            ></c-ssp-base-component-input-picklist>
+          </div>
+        </template>
+        <template if:true={roleVisibility.SSP_Phone_Number}>
+          <div
+            class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-size_1-of-1 ssp-clientSearchContent"
+          >
+            <c-ssp-base-component-input-phone
+              name="clientSearchPhoneNumber"
+              value={phoneNumber}
+              label={label.sspPhoneNumber}
+              class="ssp-applicationInputs slds-large-size_1-of-2 slds-size_1-of-1"
+              placeholder={label.sspPlaceholderPhoneNumber}
+              onchange={handleInputText}
+              disabled={isDisabled}
+              entity-name="SSP_Member__c"
+              field-name="PrimaryPhoneNumber__c"
+              meta-list={metaDataListParent}
+            >
+            </c-ssp-base-component-input-phone>
+          </div>
+        </template>
+        <template if:true={roleVisibility.SSP_Email_Address}>
+          <div
+            class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-size_1-of-1 ssp-clientSearchContent"
+          >
+            <c-ssp-base-component-input-email
+              class="ssp-applicationInputs"
+              name="clientSearchEmail"
+              value={email}
+              label={label.sspEmailAddress}
+              onchange={handleInputText}
+              disabled={trueValue}
+              entity-name="SSP_Member__c"
+              field-name="Email__c"
+              meta-list={metaDataListParent}
+            >
+            </c-ssp-base-component-input-email>
+          </div>
+        </template>
+        <template if:true={roleVisibility.SSP_Assisted_By}>
+          <div
+            class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-size_1-of-1 ssp-clientSearchContent"
+          >
+            <c-ssp-base-component-input-picklist
+              class="ssp-applicationInputs"
+              label={label.sspAssistedBy}
+              option={assisterPicklist}
+              disabled={isDisabled}
+              placeholder=""
+              name="clientSearchAssistedBy"
+              onhandlepicklistchange={handlePickListChange}
+              value={assistedBy}
+            ></c-ssp-base-component-input-picklist>
+          </div>
+        </template>
+        <template if:true={roleVisibility.SSP_MAID_Number}>
+          <div
+            class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-size_1-of-1 ssp-clientSearchContent"
+          >
+            <c-ssp-base-component-input-number
+              class="ssp-applicationInputs"
+              name="clientSearchMaidNumber"
+              value={maidNumber}
+              disabled={isDisabled}
+              onchange={handleInputText}
+              label={label.sspMaidNumber}
+            >
+            </c-ssp-base-component-input-number>
+          </div>
+        </template>
+        <template if:true={roleVisibility.SSP_Unsubmitted_Application}>
+          <div
+            class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-size_1-of-1 ssp-clientSearchContent"
+          >
+            <!-- Implement Toggle-->
+            <c-ssp-base-component-input-toggle
+              label={label.sspUnsubmittedApplication}
+              onchange={toggleUnsubmittedApplication}
+              options={yesNoPicklist}
+              class="ssp-applicationInputs ssp-clientSearchToggle"
+              value={applicationSubmittedToggle}
+              field-name=""
+              entity-name=""
+              meta-list={MetaDataListParent}
+              disabled={isToggleDisabled}
+            ></c-ssp-base-component-input-toggle>
+          </div>
+        </template>
+      </template>
+    </div>
+    <div class="ssp-searchFooter slds-grid slds-wrap">
+      <div
+        tabindex="0"
+        class="slds-col slds-large-size_1-of-4 slds-size_1-of-1 ssp-toggleSearch ssp-fontFamily_popinBold"
+        onclick={toggleSearchAdvanced}
+        onkeydown={toggleSearchAdvanced}
+      >
+        <template if:true={showAdvanced}
+          ><span title={label.sspSearchHideAdvanced}
+            >{label.sspSearchHideAdvanced}</span
+          >
+        </template>
+        <template if:false={showAdvanced}
+          ><span title={label.sspSearchShowAdvanced}
+            >{label.sspSearchShowAdvanced}</span
+          >
+        </template>
+      </div>
+      <div
+        class="slds-col slds-large-size_1-of-4 slds-size_1-of-1 ssp-resetButton "
+      >
+        <lightning-button
+          label={label.sspSearchResetButtonText}
+          class="ssp-button_base ssp-clientSearchFooterButton ssp-fontSize_16"
+          onclick={resetClientSearchFields}
+          title={label.sspSearchResetButtonAlternateText}
+        >
+        </lightning-button>
+      </div>
+      <div
+        class="slds-col slds-large-size_1-of-4 slds-size_1-of-1 ssp-searchButton "
+      >
+        <lightning-button
+          label={label.sspSearchButtonText}
+          variant="brand"
+          class="ssp-button_brand ssp-clientSearchFooterButton ssp-fontSize_16"
+          onclick={searchData}
+          title={label.sspSearchButtonAlternateText}
+        >
+        </lightning-button>
+      </div>
+      <div
+        class="slds-col slds-large-size_1-of-4 slds-size_1-of-1 ssp-exportToExcel"
+      >
+        <lightning-button
+          label={label.sspSearchExportToExcel}
+          variant="brand"
+          onclick={exportToCSV}
+          class="ssp-button_brand ssp-clientSearchFooterButton ssp-fontSize_16"
+          title={label.sspSearchExportToExcelAlternateText}
+        ></lightning-button>
+        <!--a
+                    tabindex="0"
+                    target="_self"
+                    download="ClientSearchResult.csv"
+                    href={hrefData}
+                    onclick={exportToCSV}
+                    onkeydown={exportToCSV}
+                    class="ssp-excelDownloadLink"
+                >
+                </a-->
+      </div>
+    </div>
+  </div>
+  <div if:true={showSearchResults} class="ssp-clientSearchResults">
+    <div class="slds-grid slds-wrap search-results ssp-flex-between">
+      <p
+        class="ssp-fontFamily_popinBold ssp-color_monoBody ssp-clientFound-label"
+      >
+        {clientResultsCount} {clientFound}
+      </p>
+    </div>
+    <div class="slds-grid slds-wrap ssp-result-table slds-m-top_large">
+      <table
+        class="slds-table slds-table_cell-buffer slds-no-row-hover slds-table_bordered"
+      >
+        <caption class="slds-hide">
+          Message Caption
+        </caption>
+        <thead>
+          <tr class="slds-line-height_reset">
+            <template if:true={isAgencyAdmin} for:each={columns} for:item="col">
+              <th
+                class="ssp-th-styles ssp-bg_monoAlpha ssp-color_monoBody ssp-fontFamily_popinBold"
+                scope="col"
+                key={col}
+              >
+                <div tabindex="0" class="ssp-columnHeader">
+                  {col.colName}
+                  <span class="ssp-action-image-container ssp-bg_monoAlpha">
+                    <img
+                      tabindex="0"
+                      class="ssp-sort-image"
+                      onclick={handleSorting}
+                      onkeydown={handleSorting}
+                      data-name={col.colName}
+                      src={iconUrl}
+                      alt="icon"
+                    />
+                  </span>
+                </div>
+              </th>
+            </template>
+            <template
+              if:false={isAgencyAdmin}
+              for:each={modifiedColumn}
+              for:item="col"
+            >
+              <th
+                class="ssp-th-styles ssp-bg_monoAlpha ssp-color_monoBody ssp-fontFamily_popinBold"
+                scope="col"
+                key={col}
+              >
+                <div tabindex="0" class="ssp-columnName">
+                  {col.colName}
+                  <span class="ssp-action-image-container ssp-bg_monoAlpha">
+                    <img
+                      tabindex="0"
+                      class="ssp-sort-image"
+                      onclick={handleSorting}
+                      onkeydown={handleSorting}
+                      data-name={col.colName}
+                      src={iconUrl}
+                      alt="icon"
+                    />
+                  </span>
+                </div>
+              </th>
+            </template>
+          </tr>
+        </thead>
+        <tbody>
+          <template
+            for:each={currentPageData}
+            for:item="data"
+            for:index="index"
+          >
+            <tr class="slds-hint-parent" key={data}>
+              <td class="ssp-td-styles" data-label={label.sspClientDetails}>
+                <div class="slds-truncate">
+                  <p>
+                    <a
+                      tabindex="0"
+                      onclick={handleCheck}
+                      onkeydown={handleCheck}
+                      title={label.sspClientDashboard}
+                      target="_blank"
+                      data-id={index}
+                      class="ssp-resultName ssp-fontFamily_popinBold ssp-color_monoBody"
+                      >{data.firstName} {data.lastName}
+                    </a>
+                  </p>
+                  <p tabindex="0" class="ssp-color_monoOmega ssp-clientDetails">
+                    {data.gender} | {label.sspAge} {data.age}
+                  </p>
+                  <p class="ssp-color_monoOmega ssp-clientDetails" tabindex="0">
+                    <template if:true={data.isCase}
+                      >{label.sspRenewalPageCase}:{data.caseNumber}
+                      <template if:true={data.isApplication}>
+                        ,</template
+                      >
+                    </template>
+                    <template if:true={data.isApplication}
+                      >{label.sspApplicationHash}:{data.applicationNumber}
+                    </template>
+                  </p>
+                </div>
+              </td>
+              <td class="ssp-td-styles" data-label={label.sspCaseStatus}>
+                <div
+                  class="slds-truncate ssp-color_monoOmega ssp-otherColumnData"
+                  tabindex="0"
+                >
+                  {data.caseApplicationStatus}
+                </div>
+              </td>
+              <td class="ssp-td-styles" data-label={label.sspSubmittedDate}>
+                <div
+                  class="slds-truncate ssp-color_monoOmega ssp-otherColumnData"
+                  tabindex="0"
+                >
+                  {data.submittedDate}
+                </div>
+              </td>
+              <td class="ssp-td-styles" data-label={label.sspLastUpdated}>
+                <div
+                  class="slds-truncate ssp-color_monoOmega ssp-otherColumnData"
+                  tabindex="0"
+                >
+                  {data.lastUpdatedDate}
+                </div>
+              </td>
+              <template if:true={isAgencyAdmin}>
+                <td class="ssp-td-styles" data-label={label.sspAssistedBy}>
+                  <div
+                    class="slds-truncate ssp-color_monoOmega ssp-otherColumnData"
+                    tabindex="0"
+                  >
+                    {data.assistedByAssister}{data.assistedByAuthRep}
+                  </div>
+                </td>
+              </template>
+            </tr>
+          </template>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="slds-grid slds-wrap slds-size_1-of-1">
+      <div class="slds-size_1-of-1 ssp-paginationContainer">
+        <template if:true={isSearchResults}>
+          <c-ssp-pagination
+            per-page={perPage}
+            page-size={pageSize}
+            table-data={tableData}
+            onpagedata={getCurrentPageData}
+          ></c-ssp-pagination>
+        </template>
+      </div>
+    </div>
+  </div>
+
+  <div
+    if:true={noResultFound}
+    class="ssp-noResultsFound slds-m-vertical_large slds-text-align_center"
+  >
+    <p class="ssp-fontFamily_ArvoRegular ssp-color_monoOmega ssp-info_fontSize">
+      {label.sspNoResultsFound}.
+    </p>
+  </div>
+  <c-ssp-logging-and-error-handling-modal
+    if:true={showErrorModal}
+    error-id={errorMsg}
+    onprogressvaluechange={closeError}
+  >
+  </c-ssp-logging-and-error-handling-modal>
+</template>

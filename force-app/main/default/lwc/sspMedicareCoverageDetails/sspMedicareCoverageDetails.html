@@ -1,0 +1,168 @@
+<!--
+* name 		        : sspMedicareCoverageDetails
+* @description 	    : Container for Medicare COverage Details Page
+* @author 		    : Kyathi Kanumuri 
+* @date 		    : 1/14/2020
+* MODIFICATION LOG:
+* DEVELOPER           DATE                DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* Kyathi	      12/16/2019	      HTML Structure Creation
+* BE: Varun       2/9/2020            Integration
+-->
+<template>
+    <template if:true={showSpinner}>
+        <c-ssp-spinner></c-ssp-spinner>
+    </template>
+    <template if:true={isComponentLoaded}>
+        <div if:true={isPageAccessible} class="ssp-medicareDetails_container ssp-bodyContainer">
+            <div class="slds-m-vertical_large">
+                <template if:true={medicareVerification}>
+                    <c-ssp-general-notice-card>
+                        <p>
+                            {label.sspPageInformationVerified}
+                            <span><a href={callUsAt}
+                                class="ssp-color_blueAlpha slds-m-left_xx-small"
+                                >{label.startBenefitsAppCallNumber}.</a>
+                        </span>
+                        </p>
+                    </c-ssp-general-notice-card>
+                </template>
+            </div>
+            <div class="ssp-errorToast" if:true={hasSaveValidationError}>
+                <c-ssp-toast
+                    ssp-toast-title-val={label.toastErrorText}
+                    show-error-toast={trueValue}
+                    onhidetoast={hideToast}
+                ></c-ssp-toast>
+            </div>
+            <div class="slds-m-top_x-large ssp-medicareDetails_header">
+                <h1
+                    class="ssp-medicareDetails_headerText ssp-fontFamily_popinBlack ssp-color_blueAlpha"
+                >
+                    {label.sspCoverageDetailHeading}
+                </h1>
+                <h2
+                    class="ssp-username ssp-color_monoBody ssp-fontFamily_popinBold"
+                >
+                    {memberName}
+                </h2>
+                <p class="ssp-section_seperator ssp-bg_monoAlpha"></p>
+            </div>
+            <div class="slds-grid slds-wrap ssp-medicareDetailsForm">
+                <div
+                    class="slds-grid slds-wrap slds-size_1-of-2 slds-max-medium-size_1-of-1 ssp-fields_container ssp-toggleOptions"
+                >
+                    <c-ssp-base-component-input-radio-group
+                        class="ssp-applicationInputs slds-m-bottom_x-large ssp-toggle_typeField
+"
+                        label={label.sspMedicareType}
+                        options={medicareTypeOptions}
+                        value={medicareType}
+                        onchange={handleMedicareType}
+                        entity-name="SSP_Benefits__c"
+                        field-name="MedicareTypeCode__c"
+                        meta-list={MetaDataListParent}
+                        data-id="MedicareTypeCode__c"
+                        disabled={disableMedicareType}
+                    >
+                    </c-ssp-base-component-input-radio-group>
+                </div>
+                <div
+                    class="slds-grid slds-wrap slds-size_1-of-1 ssp-fields_container"
+                >
+                    <c-ssp-base-component-input-date
+                        class="ssp-applicationInputs slds-max-medium-size_1-of-1 slds-size_1-of-2 slds-m-bottom_medium
+ slds-p-bottom_xx-small
+"
+                        label={label.sspStartDate}
+                        value={medicareCoverageDetail.BeginDate__c}
+                        onchange={handleStartDate}
+                        entity-name="SSP_Benefits__c"
+                        field-name="BeginDate__c"
+                        meta-list={MetaDataListParent}
+                        data-id="BeginDate__c"
+                        disabled={disableStartDate}
+                        time-travel-current-date={timeTravelTodayDate}
+                        placeholder="mm/dd/yyyy"
+                    >
+                    </c-ssp-base-component-input-date>
+                </div>
+                <div
+                    class="slds-grid slds-wrap slds-size_1-of-1 ssp-fields_container"
+                >
+                    <c-ssp-base-component-input-date
+                        class="ssp-applicationInputs slds-max-medium-size_1-of-1 slds-size_1-of-2 slds-m-bottom_medium
+ slds-p-bottom_xx-small"
+                        label={label.sspEndDate}
+                        value={medicareCoverageDetail.EndDate__c}
+                        onchange={handleEndDate}
+                        entity-name="SSP_Benefits__c"
+                        field-name="EndDate__c"
+                        meta-list={MetaDataListParent}
+                        data-id="EndDate__c"
+                        disabled={disableEndDate}
+                        placeholder="mm/dd/yyyy"
+                    >
+                    </c-ssp-base-component-input-date>
+                </div>
+                <div
+                    class="slds-grid slds-wrap slds-size_1-of-1 ssp-multipleFields_container"
+                >
+                    <c-ssp-base-component-input-text
+                        class="ssp-applicationInputs slds-m-bottom_medium slds-p-bottom_xx-small slds-max-medium-size_1-of-1 slds-size_1-of-2"
+                        label={label.sspMedicareNumber}
+                        value={medicareCoverageDetail.MedicareNumber__c}
+                        onchange={handleMedicareNumber}
+                        entity-name="SSP_Benefits__c"
+                        field-name="MedicareNumber__c"
+                        meta-list={MetaDataListParent}
+                        data-id="MedicareNumber__c"
+                        disabled={disableMedicareNumber}
+                    >
+                    </c-ssp-base-component-input-text>
+                </div>
+                <div
+                    class="slds-grid slds-wrap slds-size_1-of-1 slds-p-top_xx-small
+ slds-m-top_x-large ssp-fields_container ssp-checkbox_container"
+                >
+                <!-- CD2 2.5 Security Role Matrix. -->
+                    <c-ssp-base-component-input-checkbox
+                        class="ssp-applicationInputs"
+                        label={label.sspMedicareCheckboxLabel}
+                        title={label.sspMedicareCoverageCheckboxTitle}
+                        value={medicareCoverageDetail.HasMedicareCoverageButNoInfo__c}
+                        onchange={handleMedicareCoverageInfo}
+                        disabled={isDisableHasMedicareCoverageButNoInfo}
+                    >
+                    </c-ssp-base-component-input-checkbox>
+                </div>
+                <div
+                    class="slds-grid slds-wrap slds-size_1-of-1 ssp-actionButtonsContainer ssp-benefitDetails_container"
+                >
+                    <div class="slds-size_1-of-1 ssp-actionButtons">
+                        <lightning-button
+                            name="cancel"
+                            class="ssp-button_base ssp-cancelButton ssp-screenFooterBlueBtn"
+                            label={label.sspCancel}
+                            onclick={cancelMedicareDetails}
+                            title={label.sspCancelCoverageButtonTitle}
+                        >
+                        </lightning-button>
+                        <lightning-button
+                            name="save"
+                            class="ssp-button_neutral ssp-saveButton ssp-screenFooterNextBtn"
+                            label={label.sspSave}
+                            onclick={saveMedicareDetails}
+                            title={label.sspSaveCoverageButtonTitle}
+                        >
+                        </lightning-button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+    <!-- CD2 2.5 Security Role Matrix. -->
+    <template if:true={showAccessDeniedComponent}>
+        <c-ssp-access-denied></c-ssp-access-denied>
+    </template>
+</template>

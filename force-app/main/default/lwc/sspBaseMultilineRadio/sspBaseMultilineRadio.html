@@ -1,0 +1,15 @@
+<template>
+    <label class="slds-grid ssp-radio-container ssp-bg_monoDelta">
+        <input
+            type="radio"
+            name={name}
+            title={title}
+            onchange={onRadioValueChange}
+            value={value}
+        />
+        <span class="ssp-checkmark"></span>
+        <div class="ssp-radio-label">
+            <slot></slot>
+        </div>
+    </label>
+</template>

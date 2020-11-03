@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LOG_Log_Purge__c</fullName>
+    <defaultValue>360</defaultValue>
+    <description>Log Purge (Days) - The number of days of logs to keep</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Log Purge (Days) - The number of days of logs to keep</inlineHelpText>
+    <label>Log Purge</label>
+    <precision>3</precision>
+    <required>true</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

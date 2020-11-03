@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RuleLogic__c</fullName>
+    <description>Rule logic with simple object.field = value mapping.
+Example:
+Contact.Gender = Male
+
+The logic will be dynamically executed and if the conditions are met then returns true.</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Rule logic with simple object.field = value mapping.
+Example:
+Contact.Gender = Male
+
+The logic will be dynamically executed and if the conditions are met then returns true.</inlineHelpText>
+    <label>Rule Logic</label>
+    <length>50000</length>
+    <type>LongTextArea</type>
+    <visibleLines>50</visibleLines>
+</CustomField>

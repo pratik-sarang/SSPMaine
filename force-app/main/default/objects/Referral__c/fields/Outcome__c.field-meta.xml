@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Outcome__c</fullName>
+    <description>Outcome for the referral recorded when closing the referral</description>
+    <externalId>false</externalId>
+    <label>Outcome</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Resource Provided</fullName>
+                <default>false</default>
+                <label>Resource Provided</label>
+            </value>
+            <value>
+                <fullName>Resource Not Provided</fullName>
+                <default>false</default>
+                <label>Resource Not Provided</label>
+            </value>
+            <value>
+                <fullName>Resource Cancelled</fullName>
+                <default>false</default>
+                <label>Resource Cancelled</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,92 @@
+.ssp-benefits-text {
+  font-size: 1rem;
+  padding-left: 8.75rem;
+}
+.ssp-absent-parent-details-header-text {
+  font-size: 2.625rem;
+  line-height: 1;
+}
+.ssp-user-name {
+  font-size: 1.125rem;
+}
+.ssp-horizontal-rule {
+  height: 0.313em;
+  border-radius: 0.156em;
+  margin: 1em 0;
+  border: none;
+}
+.ssp-complete-questions {
+  font-size: 1rem;
+  margin-bottom: 1em;
+}
+.ssp-absent-parent-details-form > * {
+  margin-top: 1em;
+}
+.ssp-common-margin-top {
+  margin-top: 0;
+  padding-left: 1.5rem;
+}
+.ssp-action-btn-section {
+  margin-bottom: 60px;
+}
+.ssp-action-btn-section .ssp-cancel-btn{
+  padding-right: 12px;
+}
+.ssp-action-btn-section .ssp-next-btn{
+  padding-left: 12px;
+}
+/* .ssp-action-btns {
+  display: flex;
+  justify-content: space-between;
+}
+.ssp-action-btns .ssp-saveBtn {
+  margin-left: none;
+  margin-right: 1rem;
+} */
+.ssp-inline-block {
+  display: inline-block;
+}
+.ssp-flex-center {
+  display: flex;
+  align-items: center;
+}
+.ssp-check-option {
+  margin-top: 60px;
+  margin-bottom: 100px;
+}
+.ssp-check-question {
+  margin-left: 14px;
+}
+@media only screen and (max-device-width: 768px) {
+    .ssp-absent-parent-details-header-text {
+        font-size: 1.5rem;
+    }
+    .ssp-benefits-text {
+        padding-left: 1.875rem;
+    }
+    .ssp-common-margin-top {
+      margin-top: 1em;
+      padding-left: 0;
+    }
+    .ssp-optional-field {
+        width: 100%;
+    }
+    /* .ssp-action-btns {
+        display: block;
+    }
+    .ssp-action-btns .ssp-saveBtn {
+        margin-left: 1rem;
+        margin-right: 0;
+    } */
+}
+@media only screen and (min-device-width: 769px) {
+  .ssp-input {
+    width: 370px;
+  }
+  .ssp-check-option .ssp-input {
+    width: auto;
+  }
+  .ssp-optional-field {
+    width: 205px;
+  }
+}

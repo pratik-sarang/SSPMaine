@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RuleApexClassName__c</fullName>
+    <description>Apex to execute to determine the conditions. The Apex must implement NavFlowRule interface or extend BasicNavFlowRule.
+If rule apex class is entered then rule logic will be ignored and only the rule class will be executed.</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Apex to execute to determine the conditions. The Apex must implement NavFlowRule interface or extend BasicNavFlowRule.
+If rule apex class is entered then rule logic will be ignored and only the rule class will be executed.</inlineHelpText>
+    <label>Rule Apex Class Name</label>
+    <length>255</length>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

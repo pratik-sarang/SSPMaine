@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Page Display Name View --></label>
+    <name>Page_Display_Name_View__c</name>
+    <picklistValues>
+        <masterLabel>Absent Parent</masterLabel>
+        <translation><!-- Absent Parent --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Access to Healthcare Coverage Summary</masterLabel>
+        <translation><!-- Access to Healthcare Coverage Summary --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Address Information</masterLabel>
+        <translation>Datos del Domicilio</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Address Information - Non Primary</masterLabel>
+        <translation><!-- Address Information - Non Primary --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Alien Sponsor</masterLabel>
+        <translation><!-- Alien Sponsor --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>American Indian or Alaskan Native</masterLabel>
+        <translation><!-- American Indian Alaskan Native --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AuthRepsAssisterAgents</masterLabel>
+        <translation><!-- AuthRepsAssisterAgents --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Benefits from Another State</masterLabel>
+        <translation><!-- Benefits from Another State --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Blindness</masterLabel>
+        <translation><!-- Blindness --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Change in Existing Expense</masterLabel>
+        <translation><!-- Change in Existing Expense --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Change in Existing Income</masterLabel>
+        <translation><!-- Change in Existing Income --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Change in Existing Resource</masterLabel>
+        <translation><!-- Change in Existing Resource --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Child Support Enforcement</masterLabel>
+        <translation><!-- Child Support Enforcement --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Contact Information</masterLabel>
+        <translation><!-- Contact Information --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Conviction</masterLabel>
+        <translation><!-- Conviction --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Disability</masterLabel>
+        <translation><!-- Disability --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Education</masterLabel>
+        <translation><!-- Education Summary --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Enrollment in Healthcare Coverage Summary</masterLabel>
+        <translation><!-- Enrollment in Healthcare Coverage Summary --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Entitled Benefits</masterLabel>
+        <translation><!-- Entitled Benefits --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Expedite your SNAP Benefits</masterLabel>
+        <translation><!-- Expedite your SNAP Benefits --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Expenses</masterLabel>
+        <translation><!-- Expenses --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Expenses Summary</masterLabel>
+        <translation><!-- Expenses Summary --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Former Foster Care</masterLabel>
+        <translation><!-- Former Foster Care --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Health</masterLabel>
+        <translation><!-- Health --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Health Condition</masterLabel>
+        <translation><!-- Health Condition --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Healthcare Coverage Selection</masterLabel>
+        <translation><!-- Healthcare Coverage Selection --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Household Circumstances</masterLabel>
+        <translation><!-- Household Circumstances --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Household Meals</masterLabel>
+        <translation><!-- Household Meals --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Household Member Summary</masterLabel>
+        <translation><!-- Household Member Summary --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In Home Assistance</masterLabel>
+        <translation><!-- In Home Assistance --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Income &amp; Subsidies Selection</masterLabel>
+        <translation><!-- Income &amp; Subsidies Selection --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Income Summary</masterLabel>
+        <translation><!-- Income Summary --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>KI-HIPP Preferred Payment Method</masterLabel>
+        <translation><!-- KI-HIPP Preferred Payment Method --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Living Arrangements</masterLabel>
+        <translation><!-- Living Arrangement --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Medical Expenses (Last 3 Months)</masterLabel>
+        <translation><!-- Medical Expenses (Last 3 Months) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Medical Support Enforcement</masterLabel>
+        <translation><!-- Medical Support Enforcement --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Medicare Coverage</masterLabel>
+        <translation><!-- Medicare Coverage --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not a U.S. Citizen</masterLabel>
+        <translation><!-- Not a U.S. Citizen --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other Resources</masterLabel>
+        <translation><!-- Other Resources --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pregnancy</masterLabel>
+        <translation><!-- Pregnancy --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Relationships</masterLabel>
+        <translation><!-- Relationships --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Remove Existing Expense</masterLabel>
+        <translation><!-- Remove Existing Expense --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Remove Existing Income</masterLabel>
+        <translation><!-- Remove Existing Income --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Remove Existing Resource</masterLabel>
+        <translation><!-- Remove Existing Resource --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Resource Summary</masterLabel>
+        <translation><!-- Resource Summary --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Resources</masterLabel>
+        <translation><!-- Resources --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SSI Benefits</masterLabel>
+        <translation><!-- SSI Benefits --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Signature Page</masterLabel>
+        <translation><!-- Signature Page --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tax Filing</masterLabel>
+        <translation><!-- Tax Filing --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

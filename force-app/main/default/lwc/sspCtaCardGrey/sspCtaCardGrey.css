@@ -1,0 +1,33 @@
+.ssp-ctaCardGrey {
+  border-radius: 6px;
+  padding: 30px 24px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.ssp-ctaCardTitle {
+  font-size: 1rem;
+  line-height: 24px;
+  letter-spacing: -0.3px;
+  text-align: left;
+  margin-bottom: 5px;
+  word-break: break-word;
+}
+
+.ssp-ctaCardBody {
+  font-size: 1rem;
+  line-height: 24px;
+  text-align: left;
+  margin-bottom: 15px;
+  word-break: break-word;
+}
+
+.ssp-ctaCardButton {
+  margin-top: auto;
+}
+
+@media only screen and (max-width: 768px) {
+  .ssp-ctaCardGrey {
+    padding: 24px;
+  }
+}

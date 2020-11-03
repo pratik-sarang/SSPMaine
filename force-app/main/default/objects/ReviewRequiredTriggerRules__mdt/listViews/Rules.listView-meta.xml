@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rules</fullName>
+    <columns>MasterLabel</columns>
+    <columns>DeveloperName</columns>
+    <columns>NamespacePrefix</columns>
+    <columns>RuleName__c</columns>
+    <columns>IsActive__c</columns>
+    <columns>IsRuleApex__c</columns>
+    <columns>Screen__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>Rules</label>
+    <language>en_US</language>
+</ListView>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ResourceTileFields__c</fullName>
+    <description>This field is used to list different fields to be shown on Resource Tile</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>ResourceTile Fields</label>
+    <required>false</required>
+    <type>TextArea</type>
+</CustomField>

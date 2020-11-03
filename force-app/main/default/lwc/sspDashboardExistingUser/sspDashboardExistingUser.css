@@ -1,0 +1,504 @@
+.ssp-warning-action-link-desktop a:empty {
+    display: none;
+}
+.ssp-vertical-nav {
+  width: 100%;
+}
+.ssp-header-text {
+  font-size: 2.625rem;
+}
+.ssp-learnMore {
+  font-size: 0.8125rem;
+  text-decoration: underline;
+}
+.ssp-existing-dashboard-padding {
+  padding: 0 52px;
+}
+.ssp-message-center-card,
+.ssp-reps-assisters-card {
+  padding: 0 8px;
+}
+.ssp-dashboardTabsRow {
+  display: flex;
+}
+.ssp-dashboardTab {
+  font-size: 0.8125rem;
+  line-height: 24px;
+  letter-spacing: -0.24px;
+  text-align: center;
+  padding: 14px 0;
+  flex-grow: 1;
+  outline: none;
+}
+
+.ssp-dashboardTab:hover {
+  cursor: pointer;
+}
+
+.ssp-dashboardTabsContent {
+  border-radius: 0 0 6px 6px;
+  padding: 20px 30px 26px 30px;
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+/*ssp-dashboardDropdown*/
+
+.ssp-dashboardDropdown {
+  cursor: pointer;
+}
+
+.ssp-dashboardDropdownBtn {
+  padding: 16px 30px;
+  width: 100%;
+  border: none;
+  background: none;
+}
+
+.ssp-dashboardDropdownBtn:focus {
+  outline: none;
+}
+
+.ssp-dashboardDropdownHeader p {
+  font-size: 1rem;
+  line-height: 24px;
+  letter-spacing: -0.3px;
+  text-align: left;
+}
+
+.ssp-dashboardDropdownHeader p:first-child {
+  margin-right: 5px;
+}
+
+.ssp-dashboardDropdownIcon {
+  height: 24px;
+  width: 26px;
+  background-size: 24px;
+  background-image: url(../resource/sspOverviewIcons/icons/ic_dropdown/ic_dropdown@3x.png);
+}
+
+.ssp-dashboardDropdownContent {
+  display: none;
+}
+
+.ssp-dashboardDropdownContent a {
+  display: block;
+  text-decoration: none;
+  font-size: 1rem;
+  line-height: 22px;
+  letter-spacing: 0.3px;
+  text-align: left;
+  padding: 12px 30px;
+}
+
+.ssp-dashboardDropdownContent div:first-child {
+  padding-top: 10px;
+}
+
+.ssp-dashboardDropdownContent div:last-child {
+  padding-bottom: 10px;
+}
+
+.ssp-expandDropdown {
+  display: block;
+}
+
+.ssp-collapseDropdown {
+    background-image: url(../resource/sspOverviewIcons/icons/ic_collapsedropdown/ic_collapsedropdown@3x.png);
+}
+
+.ssp-dot,
+.ssp-dotOrange {
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  margin-right: 10px;
+  display: inline-block;
+}
+.ssp-dashboardDropdownHeader .ssp-dot,
+.ssp-dashboardDropdownHeader .ssp-dotOrange {
+  margin-right: 6px;
+  margin-left: 15px;
+}
+.ssp-bullet-points p {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.ssp-bullet-points .ssp-detailsContainer {
+  display: block;
+}
+.ssp-bullet-points p:last-child {
+  margin: 0;
+}
+.ssp-DashboardContentBody {
+  font-size: 1rem;
+}
+
+.ssp-reps-assistets {
+  padding: 20px 15px 20px 30px;
+}
+.ssp-reps-assistets:last-child {
+  border-bottom: none;
+}
+.ssp-reps-assistets img {
+  height: 24px;
+  width: 24px;
+}
+
+.ssp-todo-unread {
+    padding: 9px 30px;
+}
+.ssp-todo-unread > div {
+  justify-content: center;
+}
+.ssp-todo-count {
+    font-size: 2.625rem;
+    padding: 20px 30px;
+}
+.ssp-todo-count > div {
+  font-size: 2.625rem;
+  justify-content: center;
+}
+.ssp-specific-info {
+  padding: 20px 0;
+  font-size: 0.813rem;
+}
+.ssp-specific-info:last-child {
+  border-bottom: none;
+}
+.ssp-specific-info > div {
+    justify-content: center;
+    padding-left: 7px;
+}
+/* .ssp-specific-info > div > p {
+    padding-left: 30px;
+} */
+.ssp-want-to-text {
+  font-size: 1.125rem;
+}
+.ssp-horizontal-rule {
+  height: 0.313rem;
+  border-radius: 0.156rem;
+  margin: 20px 0;
+  border: none;
+}
+.ssp-action-links {
+  margin-bottom: 93px;
+}
+.ssp-action-links > div {
+  margin-bottom: 18px;
+}
+.ssp-action-links > div:last-child {
+  margin-bottom: 0;
+}
+.ssp-action-links > div > div:first-child {
+  padding-right: 15px;
+}
+
+.ssp-medicaid-reps-row {
+  margin-bottom: 60px;
+}
+.ssp-waring-card-section {
+  margin: 30px 0;
+}
+.ssp-waring-card-section > * {
+  width: 100%;
+}
+.ssp-dashboard-header-section {
+    padding-top: 66px;
+}
+.ssp-dashboard-action-btns {
+  font-size: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+.ssp-card-info {
+  margin: 30px 0 15px 0;
+}
+.ssp-benefits-card,
+.ssp-medicaid-card {
+  padding: 0 8px;
+}
+.ssp-count-margin {
+  margin-right: 10px;
+}
+.ssp-justify-content {
+  align-items: center;
+}
+.ssp-vertical-rule {
+  width: 2px;
+  height: 15px;
+  margin: 0 5px;
+}
+.ssp-align-items-center {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.ssp-waring-card-section a {
+  text-decoration: underline;
+}
+.ssp-action-links a:hover {
+  text-decoration: none;
+}
+.ssp-existing-dashboard-background {
+  position: absolute;
+  right: 0;
+  height: 122px;
+  width: auto;
+  z-index: -1;
+}
+.ssp-citizen-connect {
+  width: 105px;
+  height: 43px;
+}
+.ssp-add-other-benefits-btn {
+  margin-right: 30px;
+}
+.ssp-due-week {
+  width: 100%;
+}
+.ssp-trash-icon {
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  margin-bottom: 2px;
+}
+
+.ssp-iWantToContent {
+  margin-top: 15px;
+}
+.ssp-iWantToContentLink {
+  margin-top: 6px;
+}
+
+.ssp-want-to-link {
+  outline: none;
+  text-decoration: none;
+}
+.ssp-authRepReviewConsent {
+    margin-top: 0;
+}
+.ssp-mcoText {
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: -0.24px;
+    line-height: 24px;
+    margin-bottom: 6px;
+}
+/*Added By Chirag as CD2 Developement*/
+.ssp-sideImage {
+    height: 100%;
+    width: 100%;
+    background-image: url(../resource/SSP_CD2_Icons/sspIcons/img_nomessages@2x.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 215px 162px;
+    transform: translateY(4%);
+    background-position-y: 34%;
+}
+
+.ssp-noMatchFound{
+    padding: 199px 42px 42px;
+    font-size: 1rem;
+    letter-spacing: -0.3px;
+    line-height: 24px;
+    text-align: center;
+
+}
+.ssp-callPhone {
+  display: none;
+}
+.ssp-todo-count-container{
+    padding-left: 30px;
+    margin-bottom: 36px;
+}
+
+.ssp-un-read-count-container{
+    padding-right: 30px;
+   
+}
+
+.ssp-todo-count-text{
+    font-size: 1rem;
+    letter-spacing: -0.3px;
+    line-height: 24px;
+    text-align: center;
+    margin-top: 24px;
+    margin-right: 19px;
+}
+
+.ssp-un-read-count-text{
+    font-size: 1rem;
+    letter-spacing: -0.3px;
+    line-height: 24px;
+    text-align: center;
+    margin-top: 24px;
+    margin-left: 19px;
+}
+/*Added By Kyathi as part of 5.8.1.2 cd2*/
+a:focus {
+    outline: none;
+}
+.ssp-enrollmentManager {
+  position: absolute;
+  bottom: 6px;
+  right: 25px;
+  text-decoration: underline;
+}
+.ssp-medicaid-card {
+  position: relative;
+}
+.ssp-noEligibleIndividuals,
+.ssp-allEligibleIndividuals {
+  font-size: 1rem;
+  margin-top: 60px;
+  text-align: center;
+  max-width: 360px;
+}
+.ssp-individualMembers {
+  font-size: 0.813rem;
+}
+.ssp-caseStatus {
+    overflow: inherit;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.ssp-noEnrolledTab,
+.ssp-allEnrolledTab {
+  outline: none;
+}
+
+.ssp-hideAnchorNoText {
+    display: none;
+}
+.ssp-imgContainer {
+    width: 100%;
+    background-size: 100% 100%;
+
+    background-image: url(../resource/SSP_KynectImages7/Dashboard.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-position: center center;
+}
+.ssp-benefitTileSpinner {
+    position: relative;
+    width: 100%;
+    min-height: 180px;
+}
+@media only screen and (min-device-width: 1024px) {
+  .ssp-existing-dashboard-background {
+    height: 233px;
+  }
+}
+@media only screen and (max-device-width: 768px) {
+  .ssp-existing-dashboard-padding {
+        padding: 30px 30px 0 30px;
+  }
+  .ssp-header-text {
+    font-size: 1.5rem;
+  }
+  .ssp-action-links > div > div:first-child {
+    padding-right: 0;
+  }
+  .ssp-action-links > div > div:last-child {
+    padding-left: 0;
+  }
+  .ssp-action-links > div > div:first-child {
+    margin-bottom: 18px;
+  }
+  .ssp-message-center-card,
+  .ssp-reps-assisters-card {
+    padding: 0;
+  }
+  .ssp-benefits-card,
+  .ssp-medicaid-card {
+    padding: 0;
+  }
+  .ssp-report-change-btn {
+    margin-top: 15px;
+    width: 100%;
+  }
+  .ssp-add-other-benefits-btn {
+    margin-top: 20px;
+    margin-right: 0;
+    width: 100%;
+  }
+    /* .ssp-specific-info > div > p {
+        padding-left: 24px;
+    } */
+  .ssp-dashboardTab {
+    font-size: 0.875rem;
+  }
+  .ssp-reps-assisters-card {
+    margin-bottom: 60px;
+  }
+  .ssp-warning-action-link {
+    text-align: left;
+    padding-top: 10px;
+  }
+  .ssp-align-items-center {
+    justify-content: end;
+  }
+}
+@media only screen and (max-device-width: 767px) {
+    .ssp-margin18 {
+        margin-bottom: 18px;
+    }
+    .ssp-citizen-connect {
+        margin-top: 10px;
+    }
+    .ssp-warning-action-link-desktop {
+        display: none;
+    }
+    .ssp-specific-info > div {
+    padding-left: 6px;    
+    }
+    .ssp-todo-count-container{
+    padding-left: 10px;
+    }
+    .ssp-un-read-count-container{
+    padding-right: 10px;
+    }
+    .ssp-imgContainer {
+        width: 100%;
+        background-size: 100% 100%;
+        height: 600px;
+        background-image: url(../resource/SSP_KynectImages7/DashboardMobile.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        background-position: center center;
+    }
+}
+
+@media only screen and (min-device-width: 768px) {
+  .ssp-iWantToContent {
+    padding-right: 30px;
+  }
+    .ssp-warning-action-link-mobile{
+        display:none
+    }
+}
+@media only screen and (max-device-width: 374px) {
+  .ssp-dashboardDropdownIcon {
+    width: 34px;
+  }
+  .ssp-dashboardDropdownBtn {
+    word-break: break-word;
+  }
+    .ssp-specific-info > div {
+    padding-left: 0;    
+    }
+    .ssp-todo-count-container{
+    padding-left: 8px;
+    }
+    .ssp-un-read-count-container{
+    padding-right: 0;
+    }
+}

@@ -1,0 +1,53 @@
+.ssp-info_fontSize {
+  font-size: 1rem;
+}
+.ssp-learnMore {
+  font-size: 0.8125rem;
+  text-decoration: none;
+}
+.sspIcomeSubsidiesForm > div {
+  margin-top: 30px;
+  padding-bottom: 30px;
+}
+.sspMember {
+  min-width: 48%;
+}
+.ssp-flex-direction-col {
+  flex-direction: column;
+}
+.ssp-selectApplicants {
+  font-size: 0.8125rem;
+  line-height: 30px;
+  letter-spacing: 0.3px;
+  text-align: left;
+}
+.sspIcomeSubsidiesForm {
+  margin-bottom: 100px;
+}
+.member {
+  min-width: 48%;
+}
+@media only screen and (max-device-width: 896px) and (orientation: landscape) {
+    .sspMember {
+        min-width: 100%;
+    }
+    .member {
+        min-width: 100%;
+    }
+}
+@media only screen and (max-device-width: 768px) {
+    .sspMember {
+        min-width: 100%;
+    }
+    .member {
+        min-width: 100%;
+    }
+}
+@media only screen and (device-width: 1024px) and (device-height: 768px) and (orientation: landscape) {
+    .sspMember {
+        min-width: 53%;
+    }
+    .member {
+        min-width: 53%;
+    }
+}

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RE_ZipCode_Required_Citizen</fullName>
+    <active>false</active>
+    <errorConditionFormula>AND(RecordType.DeveloperName ==&apos;Citizen&apos;,ISBLANK(MailingPostalCode))</errorConditionFormula>
+    <errorMessage>Please enter zip code.</errorMessage>
+</ValidationRule>

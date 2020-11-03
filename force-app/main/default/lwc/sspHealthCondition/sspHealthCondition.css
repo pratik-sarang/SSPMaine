@@ -1,0 +1,47 @@
+.ssp-healthConditionContainer {
+    margin-bottom: 6.25rem;
+    margin-top: 1.875rem;
+}
+
+.ssp-healthConditionInfoText {
+    font-size: 1rem;
+    line-height: 24px;
+    letter-spacing: -.3px;
+    text-align: left;
+}
+
+.ssp-healthConditionHr {
+    height: 5px;
+    border-radius: 2.5px;
+    margin-bottom: 15px;
+}
+
+.ssp-healthConditionHeaderText {
+    font-size: 1.13rem;
+    line-height: 24px;
+    margin-top: 1.875rem;
+    margin-bottom: 0.9375rem;
+}
+
+.ssp-healthConditionDate .slds-form-element label.slds-form-element__label,
+.ssp-healthConditionDate .ssp-picklistLabel {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.ssp-marginTopThirty {
+    margin-top: 1.875rem;
+}
+
+.ssp-marginTopSixty {
+    margin-top: 3.75rem;
+}
+
+.ssp-MarginVertcalThirty {
+    margin-top: 1.875rem;
+    margin-bottom: 1.875rem;
+}
+
+.sspHealthConditionEmergencyContainer + .sspHealthConditionEmergencyContainer {
+    margin-top: 3.75rem;
+}

@@ -1,0 +1,96 @@
+.ssp-member-background {
+    position: absolute;
+    right: 0;
+    height: 122px;
+    width: auto;
+    margin-top: 10px;
+}
+h1 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    padding-bottom: 30px;
+    margin: 30px 0;
+}
+h2 {
+    font-size: 1.125rem;
+    letter-spacing: -0.3px;
+    line-height: 1.5rem;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    border-radius: 2.5px;
+}
+p {
+    font-size: 1rem;
+    letter-spacing: -0.3px;
+    line-height: 1.5rem;
+}
+a {
+    cursor: pointer;
+    font-size: 0.8125rem;
+    letter-spacing: -0.3px;
+    line-height: 30px;
+    text-decoration: underline;
+}
+.ssp-head-household {
+    margin: 40px 0;
+}
+
+.ssp-member-household {
+    margin: 60px 0;
+}
+.ssp-exitSaveBtn {
+    padding: 0;
+}
+
+.ssp-firstGroupBtn {
+    margin-right: 30px;
+}
+.ssp-buttonWidth {
+    max-width: 100%;
+}
+.ssp-button-container {
+    margin-top: 100px;
+}
+@media only screen and (max-width: 768px) {
+    .ssp-selectionCardIcon {
+        padding: 15px 24px;
+    }
+    p {
+        font-size: 0.8125rem;
+    }
+    .ssp-firstGroupBtn {
+        padding-right: 10px;
+        margin-right: 0;
+    }
+    .ssp-secondGroupBtn {
+        padding-left: 10px;
+    }
+    .ssp-firstGroupBtn,
+    .ssp-secondGroupBtn {
+        width: 50%;
+    }
+    .ssp-exitModalBtn {
+        width: 100%;
+        margin: 0 0 20px 0;
+    }
+    .ssp-exitSaveBtn,
+    .ssp-cancelBtn {
+        padding: 0;
+    }
+}
+@media only screen and (min-width: 1024px) {
+    h1 {
+        font-size: 2.625rem;
+    }
+    h2 {
+        margin: 15px 0 30px 0;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .ssp-member-background {
+        height: 243px;
+    }
+}

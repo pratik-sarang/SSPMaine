@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IsJSONBasedPage__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Flag to indicate if the Page Info is driven with Page Layout Schema</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Flag to indicate if the Page Info is driven with Page Layout Schema</inlineHelpText>
+    <label>Is JSON Based Page?</label>
+    <type>Checkbox</type>
+</CustomField>

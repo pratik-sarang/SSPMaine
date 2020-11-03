@@ -1,0 +1,29 @@
+.ssp-entitledBenefits_container .ssp-fieldLabel {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: -0.01875rem;
+}
+
+.ssp-entitledBenefits_container .ssp-checkbox {
+    width: 100%;
+}
+
+.ssp-entitledBenefits_container .ssp-learnMore_link {
+    font-size: 0.8125rem;
+    line-height: 1.875rem;
+    height: 1.5rem;
+    letter-spacing: -0.01875rem;
+    text-decoration: underline;
+    text-underline-position: under;
+    display: inline-block;
+}
+
+.ssp-entitledBenefits_container .ssp-completeQuestions {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: -0.01875rem;
+}
+
+.ssp-entitledBenefits_container .ssp-entitledBenefitsForm {
+    margin-bottom: 6.25rem;
+}

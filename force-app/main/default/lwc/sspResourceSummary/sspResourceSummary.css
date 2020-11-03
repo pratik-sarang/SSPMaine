@@ -1,0 +1,108 @@
+.ssp-resourceSummary_container {
+    margin-bottom: 4.375rem;
+}
+
+.ssp-resourceSummary_container .ssp-existingRecords_section .ssp-card_section {
+    width: 95%;
+}
+
+.ssp-resourceSummary_container .resourceSummaryInputs {
+    display: none;
+}
+
+.ssp-resourceSummary_container .ssp-selectionCardTitle {
+    word-break: break-word;
+}
+
+.ssp-resourceSummary_container .ssp-notRequiringDetails_section .ssp-resourceSummary_info, .ssp-resourceSummary_container .ssp-card_section .ssp-selectionCardAction {
+    margin-bottom: 0.938rem;
+}
+
+.ssp-resourceSummary_container .ssp-resourceSummary_info {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: -0.01875rem;
+}
+
+.ssp-resourceSummary_container .ssp-learnMore_link {
+    font-size: 0.8125rem;
+    line-height: 1.875rem;
+    height: 1.5rem;
+    letter-spacing: -0.01875rem;
+    text-decoration: underline;
+    text-underline-position: under;
+    margin-bottom: 1.875rem;
+    display: inline-block;
+}
+
+.ssp-resourceSummary_container .ssp-notRequiringDetails_section, .ssp-resourceSummary_container .ssp-requiringDetails_section, .ssp-resourceSummary_container .ssp-existingRecords_section {
+    padding-top: 1.875rem;
+    padding-bottom: 0.875rem;
+}
+
+.ssp-resourceSummary_container .ssp-existingRecords_section {
+    margin-bottom: 1.875rem;
+}
+
+.ssp-resourceSummary_container .ssp-requiringDetails_section {
+    padding-bottom: 0;
+}
+
+.ssp-resourceSummary_container .ssp-notRequiringDetails_section .ssp-selectionCardAction, .ssp-resourceSummary_container .ssp-notRequiringDetails_section .ssp-progressCardHead {
+    padding-top: 1.813rem;
+    padding-bottom: 1.75rem;
+}
+
+.ssp-resourceSummary_container .ssp-sectionSeperator {
+    height: 1px;
+}
+
+.ssp-resourceSummary_container .ssp-selectionCardTitle, .ssp-resourceSummary_container .ssp-existingRecords_section .ssp-existingResourceDetails {
+    font-size: 0.813rem;
+    line-height: 1.125rem;
+    letter-spacing: -0.015rem;
+}
+
+.ssp-resourceSummary_container .ssp-existingRecords_section .ssp-selectionCardAction {
+    padding-top: 1.25rem;
+    padding-bottom: 1.313rem;
+}
+a:focus {
+    outline: none;
+}
+@media (min-width: 769px) {
+    .ssp-resourceSummary_container .ssp-existingResourceValue {
+        display: inline-block;
+    }
+}
+
+.ssp-clipTextWithEllipsis {
+    position: relative;
+    line-height: 1.125rem;
+    max-height: 2.25rem;
+    text-align: inherit;
+    margin-right: -0.7em;
+    padding-right: 0.7em;
+    overflow: hidden;
+    padding-left: 0.3rem;
+    word-break: break-all;
+}
+
+.ssp-resourceDetails-cowork{
+    position: absolute;
+    right: 30px;
+    bottom: 39px;
+}
+
+@media only screen and (max-width: 768px){
+    .ssp-resourceDetails-cowork {
+        right: 15px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .ssp-existingResourceDetailsName {
+        width: 100%;
+        word-break: break-word;
+    }
+}

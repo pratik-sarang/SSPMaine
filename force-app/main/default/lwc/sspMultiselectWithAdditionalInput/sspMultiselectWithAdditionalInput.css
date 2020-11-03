@@ -1,0 +1,12 @@
+.ssp-cbBoxBorder {
+    border-top: 0;
+    position: relative;
+    bottom: 16px;
+    border-radius: 0 0 6px 6px;
+    padding: 30px;
+}
+@media only screen and (max-width: 768px) {
+    .ssp-cbBoxBorder {
+        padding: 24px;
+    }
+}

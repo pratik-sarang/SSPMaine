@@ -1,0 +1,11 @@
+.ssp-phoneNumberContainer,
+.ssp-extContainer,
+.ssp-m-field {
+    margin-bottom: 1.875rem;
+}
+
+@media only screen and (max-width: 410px) {
+    .ssp-toggle {
+        width: 100%;
+    }
+}

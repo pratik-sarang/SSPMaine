@@ -1,0 +1,57 @@
+<!-- 
+* name 		      : sspLTCResourceTransferConsentModal
+* @description 	  : This modal is used for LTC Resource Transfer Consent 
+* @author 		  : Sharon
+* @date           : 04/02/2020
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* 	      
+-->
+<template>
+    <div class="ssp-medicaidPenaltyWarning ssp-ResourceTransferModalContainer">
+        <c-ssp-detailed-information-modal 
+            reference={reference}
+            header-value={label.sspLTCResourceTransferConsentModalHeader}  
+            open-model={openModel}
+            onclosemodal={closeResourceTransferModal}
+            scroll-event={trueValue}
+            onenablemodalbuttons={enableModalButtons}
+        >
+            <span slot="contentSlot">
+                <div class="ssp-resourceTransferContentContainer">
+                    <p class="ssp-fontFamily_ArvoRegular ssp-marginBottomThirty">{sspLTCResourceTransferConsentModalContent}</p>
+                </div>
+            </span>
+            <div
+                slot="Footer"
+                class="slds-grid slds-wrap slds-grid_align-spread slds-gutters"
+            >
+            <div class="slds-col slds-size_1-of-2 slds-medium-size_1-of-2 slds-large-size_6-of-12">
+                <lightning-button
+                    name="DisAgree"
+                    variant="base"
+                    title={label.sspDisagreeButtonAlternate}
+                    label={label.sspDisagreeButton}
+                    class="ssp-exitModalBtn ssp-button_base"
+                    onclick={handleOnClick}
+                    disabled={buttonDisability}
+                >
+                </lightning-button>
+            </div>
+            <div class="slds-col slds-size_1-of-2 slds-medium-size_1-of-2 slds-large-size_6-of-12">
+                    <lightning-button
+                        name="Agree"
+                        variant="neutral"
+                        title={label.sspAgreeButtonAlternate}
+                        label={label.sspAgreeButton}
+                        class="ssp-exitModalBtn ssp-button_neutral"
+                        onclick={handleOnClick}
+                        disabled={buttonDisability}
+                    >
+                    </lightning-button>
+                </div>
+            </div>
+        </c-ssp-detailed-information-modal>
+    </div>
+</template>

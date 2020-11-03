@@ -1,0 +1,20 @@
+.ssp-exitSaveBtn {
+    padding: 0;
+}
+.ssp-cancelBtn {
+    padding: 0 0 0 15px;
+}
+.ssp-buttonWidth {
+    width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+    .ssp-exitModalBtn {
+        width: 100%;
+        margin: 0 0 20px 0;
+    }
+    .ssp-exitSaveBtn,
+    .ssp-cancelBtn {
+        padding: 0;
+    }
+}

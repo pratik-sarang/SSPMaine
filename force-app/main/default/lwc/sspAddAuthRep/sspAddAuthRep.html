@@ -1,0 +1,412 @@
+<!--
+* name 		    : sspAddAuthRep
+* @description 	: The component is used to search and add auth rep.
+* @author 		: Soumya and Shrikant
+* @date 		: 12/08/2019
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName	      MM/DD/YYYY	      A Brief Description
+						       about the Change
+-->
+<template>
+   <template if:true={showAuthRepScreen}>
+  <template if:true={showDuplicateModal}>
+    <div tabindex="0" class="ssp-search-modal">
+    <c-ssp-detailed-information-modal
+      header-value={customLabel.sspAuthorizedRepresentativeSearchResults}
+      open-model={showDuplicateModal} onclosemodal={cancelDuplicateContact}
+      reference={reference}
+    >
+      <div slot="contentSlot">
+        <div class="ssp-content slds-p-top_bottom">
+
+          <p>
+            <span
+              class="ssp-modalHeaderSubText ssp-fontFamily_ArvoRegular ssp-color_monoOmega"
+              >{customLabel.sspFoundMatchInDatabase}</span
+            >
+          </p>
+
+          <p class="ssp-PersonContainer">
+            <span
+              class="ssp-modalHeaderSubText ssp-fontFamily_ArvoRegular ssp-color_monoOmega"
+              >{customLabel.sspPersonYouWantAdd}</span
+            >
+          </p>
+          <hr class="ssp-horizontal-rule-modal ssp-bg_monoAlpha">
+
+          <p>
+            <span
+              class="ssp-modalHeaderSubText ssp-fontFamily_popinBold ssp-color_blueAlpha"
+              >{duplicateContact.Name}</span
+            >
+          </p>
+           <p>
+            <span
+              class="ssp-modalHeaderSubText ssp-fontFamily_ArvoRegular ssp-color_monoBody"
+              ><a href={duplicateEmailLink} class=" ssp-contactDetails ssp-color_monoBody">{duplicateContact.Email}</a></span
+            >
+          </p>
+          <p>
+            <span
+              class="ssp-modalHeaderSubText ssp-fontFamily_ArvoRegular ssp-color_monoBody"
+              ><a href={duplicatePhoneLink} class="ssp-contactDetails ssp-color_monoBody">{duplicateContact.Phone}</a></span
+            >
+          </p>
+          <p class="ssp-PersonContainer">
+            <span
+              class="ssp-modalHeaderSubText ssp-fontFamily_ArvoRegular ssp-color_monoBody"
+              ><a class="ssp-contactDetails ssp-color_monoBody" href={duplicateAddressURL} target="_blank">{duplicateAddress}</a></span
+            >
+          </p>
+
+        </div>
+      </div>
+
+      <span slot="Footer" class="ssp-modalFooter ssp-stacked-btn-width">
+        <lightning-button
+          variant="brand"
+          label={customLabel.sspUseMatchedRepresentative}
+          class="ssp-button_brand ssp-fontFamily_popinBold "
+          onclick={loadDuplicateContact}
+          title={customLabel.sspUseMatchedRepTitle}
+        ></lightning-button>
+        <div class="ssp-buttonContainer">
+        <lightning-button
+          variant="neutral"
+          label={customLabel.sspEnterTheInformationMyself}
+          class="ssp-button_base ssp-clicked-button slds-m-top_medium ssp-fontFamily_popinBold"
+          onclick={cancelDuplicateContact}
+          title={customLabel.sspEnterInfoMyselfTitle}
+        ></lightning-button>
+        </div>
+      </span>
+    </c-ssp-detailed-information-modal>
+    </div>
+
+</template>
+<template if:true={showNoResultPopUp}>
+  <div tabindex="0" class="ssp-search-modal">
+  <c-ssp-detailed-information-modal
+      header-value={customLabel.sspAuthorizedRepresentativeSearchResults}
+      open-model={showNoResultPopUp} onclosemodal={cancelDuplicateContact} reference={reference}
+    >
+      <div slot="contentSlot">
+        <div class="ssp-content slds-p-top_bottom">
+
+          <p>
+            <span
+              class="ssp-modalHeaderSubText ssp-fontFamily_ArvoRegular ssp-color_monoOmega"
+              >{customLabel.sspNoResultsFound}</span
+            >
+          </p>
+
+        </div>
+
+      </div>
+
+      <span slot="Footer" class="ssp-modalFooter ssp-stacked-btn-width">
+        <lightning-button
+          variant="brand"
+          label={customLabel.sspContinueEnteringInformation}
+          class="ssp-button_brand ssp-fontFamily_popinBold"
+          onclick={showContactData}
+          title={customLabel.sspContinueEnteringInfoTitle}
+        ></lightning-button>
+        <div class="ssp-buttonContainer">
+        <lightning-button
+          variant="neutral"
+          label={customLabel.sspClose}
+          class="ssp-button_base slds-m-top_medium ssp-fontFamily_popinBold"
+          onclick={cancelDuplicateContact}
+          title={customLabel.sspContinueEnteringInfoTitle}
+        ></lightning-button>
+        </div>
+      </span>
+    </c-ssp-detailed-information-modal>
+    </div>
+</template>
+    <div class="ssp-errorToast" if:true={hasSaveValidationError}>
+        <c-ssp-toast
+            ssp-toast-title-val={customLabel.toastErrorText}
+            show-error-toast={trueValue}
+            onhidetoast={hideToast}
+        ></c-ssp-toast>
+    </div>
+    <template if:true={showSpinner}>
+        <c-ssp-spinner></c-ssp-spinner>
+    </template>
+    <template if:true={isVisible}>
+        <main>
+            <div class="ssp-bg_appHeaderGradient slds-p-vertical_medium ssp-reps-header">
+                <span class="ssp-fontFamily_popinBold ssp-color_monoBody ssp-reps-text">{customLabel.sspRepsAssistAgentsTitle}</span>
+            </div>
+            <div class="slds-m-vertical_large ssp-add-auth-rep-program ssp-bodyContainer">
+                <div class="ssp-add-auth-rep-program-header">
+                    <h1 class="ssp-add-auth-rep-program-header-text ssp-fontFamily_popinBlack ssp-color_blueAlpha">
+                        {customLabel.sspAddAuthReps}
+                    </h1>
+                </div>
+                <hr class="ssp-horizontal-rule ssp-bg_monoAlpha slds-m-vertical_medium"></hr>
+                <div class="slds-grid slds-wrap ssp-auth-rep-program-form">
+                  <c-ssp-warning-notice-card class="slds-p-bottom_medium">
+                      <p>{customLabel.sspAddAuthRepsInfo1}</p>
+                  </c-ssp-warning-notice-card>
+                  <p class="ssp-auth-rep-program-info ssp-fontFamily_ArvoRegular ssp-color_monoOmega">
+                      {customLabel.sspAddAuthRepsInfo2}
+                  </p>
+                  <div class="slds-grid slds-wrap slds-size_1-of-1">
+                      <c-ssp-base-component-input-text
+                          class="ssp-applicationInputs ssp-applicationDuplicateInputs slds-large-size_1-of-2 slds-size_1-of-1 ssp-gutter-right"
+                          label={customLabel.sspFirstName}
+                          data-id="FirstName"
+                          entity-name="Contact"
+                          field-name="FirstName"
+                          meta-list={metaDataListParent}
+                          value={contact.FirstName}
+                          disabled = {isSelectedViaSearch}
+                          onchange = {handleValueChange}
+                          max-length="50"
+                      >
+                      </c-ssp-base-component-input-text>
+                      <div class="slds-grid slds-wrap slds-large-size_1-of-2 slds-size_1-of-1 ssp-gutter-left">
+                          <c-ssp-base-component-input-text
+                          class="ssp-applicationInputs ssp-applicationDuplicateInputs slds-large-size_1-of-2 slds-size_1-of-1 ssp-common-margin-top"
+                          label={customLabel.sspMiOptional}
+                          data-id="MiddleName"
+                          entity-name="Contact"
+                          field-name="MiddleName"
+                          meta-list={metaDataListParent}
+                          value={contact.MiddleName}
+                          max-length={customLabel.sspMiddleInitialMaxLength}
+                          disabled = {isSelectedViaSearch}
+                      >
+                      </c-ssp-base-component-input-text>
+                      </div>
+                  </div>
+                  <div class="slds-grid slds-wrap slds-size_1-of-1">
+                      <c-ssp-base-component-input-text
+                          class="ssp-applicationInputs ssp-applicationDuplicateInputs slds-large-size_1-of-2 slds-size_1-of-1 ssp-gutter-right"
+                          label={customLabel.sspLastName}
+                          data-id="LastName"
+                          entity-name="Contact"
+                          field-name="LastName"
+                          meta-list={metaDataListParent}
+                          value={contact.LastName}
+                          disabled = {isSelectedViaSearch}
+                          onchange = {handleValueChange}
+                          max-length="50"
+                      >
+                      </c-ssp-base-component-input-text>
+                          <div class="slds-grid slds-wrap slds-large-size_1-of-2 slds-size_1-of-1 ssp-gutter-left">
+                              <c-ssp-base-component-input-picklist
+                                  class="ssp-applicationInputs slds-large-size_1-of-2 slds-size_1-of-1 ssp-common-margin-top"
+                                  label={customLabel.sspSuffix}
+                                  title={customLabel.sspSuffixTitle}
+                                  data-id="SuffixCode__c"
+                                  entity-name="Contact"
+                                  field-name="SuffixCode__c"
+                                  meta-list={metaDataListParent}
+                                  option={suffixOptions}
+                                  selected-value={contact.SuffixCode__c}
+                                  value={contact.SuffixCode__c}
+                                  disabled = {isSelectedViaSearch}
+                              >
+                              </c-ssp-base-component-input-picklist>
+                          </div>
+                  </div>
+                  <div class="slds-grid slds-wrap slds-size_1-of-1">
+                      <c-ssp-base-component-input-email
+                          class="ssp-applicationInputs ssp-applicationDuplicateInputs slds-large-size_1-of-2 slds-size_1-of-1 ssp-gutter-right"
+                          label={customLabel.sspEmail}
+                          data-id="Email"
+                          entity-name="Contact"
+                          field-name="Email"
+                          meta-list={metaDataListParent}
+                          value={contact.Email}
+                          disabled = {isSelectedViaSearch}
+                          onchange = {handleValueChange}
+                      >
+                      </c-ssp-base-component-input-email>
+                  </div>
+                  <div class="slds-grid slds-wrap slds-size_1-of-1 slds-p-top_x-large slds-p-bottom_small ssp-align-center">
+
+                    <lightning-button
+                          class="ssp-button_neutral slds-large-size_1-of-2 slds-size_1-of-1 ssp-search-btn"
+                          label={customLabel.sspSearchAuthRep}
+                          title={customLabel.sspSearchForIndividualWithThisNameAndEmail}
+                          onclick={searchAuthRep}
+                          disabled = {disableSearch}
+                      ></lightning-button>
+                  </div>
+                  <template if:true={isSearchPerformed}>
+                  <template if:false = {isSelectedViaSearch}>
+                      <div class="slds-grid slds-wrap slds-size_1-of-1">
+                          <c-ssp-base-component-input-text
+                                  data-id="SSN__c"
+                                  entity-name="Contact"
+                                  field-name="SSN__c"
+                                  meta-list={metaDataListParent}
+                                  class="ssp-applicationInputs slds-large-size_1-of-2 slds-size_1-of-1 ssp-gutter-right"
+                                  label={customLabel.sspSSN}
+                                  value={contact.SSN__c}
+                                  input-type={inputTypePassword}
+                                  max-length="9"
+                              >
+                          </c-ssp-base-component-input-text>
+                      </div>
+                  </template>
+                  <div class="slds-grid slds-wrap slds-size_1-of-1">
+                      <div class="slds-grid slds-wrap slds-large-size_1-of-2 slds-size_1-of-1 ssp-gutter-right ">
+                          <c-ssp-base-component-input-picklist
+                          class="ssp-applicationInputs slds-large-size_1-of-2 slds-size_1-of-1 ssp-gutter-right"
+                          label={customLabel.sspGender}
+                          title={customLabel.sspGenderTitle}
+                          data-id="GenderCode__c"
+                          entity-name="Contact"
+                          field-name="GenderCode__c"
+                          meta-list={metaDataListParent}
+                          option={genderOptions}
+                          selected-value={contact.GenderCode__c}
+                          value={contact.GenderCode__c}
+                          onchange={handleGenderChange}
+                          onhandlepicklistchange={handleGenderChange}
+                          disabled = {isSelectedViaSearch}
+                      >
+                      </c-ssp-base-component-input-picklist>
+                      <template if:false = {isSelectedViaSearch}>
+                          <c-ssp-base-component-input-date
+                              class="ssp-applicationInputs slds-large-size_1-of-2 slds-size_1-of-1 ssp-gutter-left ssp-common-margin-top"
+                              label={customLabel.sspDateOfBirth}
+                              data-id="Birthdate"
+                              entity-name="Contact"
+                              field-name="Birthdate"
+                              meta-list={metaDataListParent}
+                              value={contact.Birthdate}
+                              onchange={handleBirthDateChange}
+                          >
+                          </c-ssp-base-component-input-date>
+                      </template>
+                      </div>
+                  </div>
+
+                  <div class="slds-grid slds-wrap slds-size_1-of-1">
+                      <c-ssp-base-component-input-phone
+                          class="ssp-applicationInputs slds-large-size_1-of-2 slds-size_1-of-1 ssp-gutter-right"
+                          label={customLabel.sspPhoneNumber}
+                          data-id="Phone"
+                          entity-name="Contact"
+                          field-name="Phone"
+                          meta-list={metaDataListParent}
+                          value={contact.Phone}
+                          max-length="12"
+                          disabled = {isSelectedViaSearch}
+                          placeholder={customLabel.sspPlaceholderPhoneNumber}
+                      >
+                      </c-ssp-base-component-input-phone>
+                      <div class="slds-grid slds-wrap slds-large-size_1-of-2 slds-size_1-of-1 ssp-gutter-left">
+                        <c-ssp-base-component-input-text
+                            class="ssp-applicationInputs slds-large-size_1-of-2 slds-size_1-of-1 ssp-common-margin-top"
+                            label={customLabel.sspExt}
+                            data-id="PrimaryPhoneExtension__c"
+                            entity-name="Contact"
+                            field-name="PrimaryPhoneExtension__c"
+                            meta-list={metaDataListParent}
+                            value={contact.PrimaryPhoneExtension__c}
+                            max-length={customLabel.sspMaxLength}
+                            disabled = {isSelectedViaSearch}>
+                        </c-ssp-base-component-input-text>
+                      </div>
+                  </div>
+                 
+                  <div class="slds-grid slds-wrap slds-size_1-of-1">
+                      <c-ssp-type-ahead-picklist
+                          label={customLabel.sspPreferredLanguage}
+                          class="ssp-applicationInputs slds-large-size_1-of-2 slds-size_1-of-1 ssp-gutter-right"
+                          title={customLabel.sspStartTypingOrClickHereToSeePreferredLanguageOptions}
+                          data-id="PreferredLanguageCode__c"
+                          list-values={preferredLanguageOptions}
+                          value={preferredLanguage}
+                          placeholder={customLabel.sspStartTyping}
+                          entity-name="Contact"
+                          meta-list={metaDataListParent}
+                          field-name="PreferredLanguageCode__c"
+                          disabled = {isSelectedViaSearch}
+                      ></c-ssp-type-ahead-picklist>
+                  </div>
+                 
+                  <div
+                      class="slds-grid slds-wrap slds-size_1-of-1 ssp-toggle-question"
+                  >
+                      <c-ssp-base-component-input-toggle
+                          class="ssp-applicationInputs slds-size_1-of-1 slds-m-vertical_medium"
+                          label={customLabel.sspQuestion2}
+                          options={responseOptions}
+                          data-id="DoesAuthRepHasOrg__c"
+                          value={contact.DoesAuthRepHasOrg__c}
+                          onchange={manageToggleQuestion}
+                          disabled = {isSelectedViaSearch}
+                          entity-name="Contact"
+                          field-name="DoesAuthRepHasOrg__c"
+                          meta-list={metaDataListParent}
+                      >
+                      </c-ssp-base-component-input-toggle>
+                  </div>
+                  <template if:true={worksForAnOrganizationToggleValue}>
+                      <div class="slds-grid slds-wrap slds-size_1-of-1">
+                          <c-ssp-base-component-input-text
+                              class="ssp-applicationInputs slds-large-size_1-of-2 slds-size_1-of-1 ssp-gutter-right"
+                              label={customLabel.sspOrganizationName}
+                              data-id="OrganizationName__c"
+                              entity-name="Contact"
+                              field-name="OrganizationName__c"
+                              meta-list={metaDataListParent}
+                              value={contact.OrganizationName__c}
+                              disabled = {isSelectedViaSearch}
+                          >
+                          </c-ssp-base-component-input-text>
+                      </div>
+                      <div class="slds-grid slds-wrap slds-size_1-of-1">
+                          <c-ssp-base-component-input-text
+                              class="ssp-applicationInputs slds-large-size_1-of-2 slds-size_1-of-1 ssp-gutter-right"
+                              label={customLabel.sspOrganizationId}
+                              data-id="OrgranizationIdentificationNumber__c"
+                              entity-name="Contact"
+                              field-name="OrgranizationIdentificationNumber__c"
+                              meta-list={metaDataListParent}
+                              value={contact.OrgranizationIdentificationNumber__c}
+                              disabled = {isSelectedViaSearch}
+                          >
+                          </c-ssp-base-component-input-text>
+                      </div>
+                  </template>
+                  </template>
+                </div>
+                <div class="slds-grid slds-wrap slds-grid_align-spread ssp-add-auth-rep-btns">
+                    <lightning-button
+                        label={customLabel.sspCancel}
+                        title={customLabel.sspCancelEnteringDetailsAuthorizedRepresentative}
+                        class="slds-size_1-of-2 ssp-button_base ssp-cancel-btn"
+                        onclick={handleCancel}
+                    ></lightning-button>
+                    <lightning-button
+                        label={customLabel.sspNext}
+                        title={customLabel.sspContinueToNextScreenToEnterFurtherDetails}
+                        class="slds-size_1-of-2 ssp-button_neutral ssp-next-btn slds-text-align_right"
+                        disabled={disableNext}
+                        onclick = {initSave}
+                    ></lightning-button>
+                </div>
+            </div>
+        </main>
+    </template>
+   </template>
+    <template if:true={showPermissionScreen}>
+      <div class={permissionClass}>
+      <c-ssp-add-auth-rep-program relation-id={ACRId} edit-permissions={isEdit} application-id={sspApplicationAccount}
+      contact-id={sspContactId} onclose={handleCancel} oncancel={handleShowPermissions} application-record-id={sspApplicationId}
+      permission-param={permissionParam} onsave={handleShowHomeOnSave} contact-information={contactInformation} auth-rep-request={authRepRequest}></c-ssp-add-auth-rep-program>
+      </div>
+    </template>
+</template>

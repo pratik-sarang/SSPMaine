@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Rule condition to queue/show the page. If no rule is configured then by default the page will be queued/showed. --></help>
+    <label><!-- Navigation Flow Rule --></label>
+    <name>NavFlowRule__c</name>
+    <relationshipLabel><!-- Navigation Flow Page Configuration --></relationshipLabel>
+</CustomFieldTranslation>

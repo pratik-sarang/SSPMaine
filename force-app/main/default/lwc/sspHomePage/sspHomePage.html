@@ -1,0 +1,508 @@
+<!--
+* name          :sspHomePage
+* @description  : This screen for the Home Page.
+* @author       : Fazeel
+* @date         : 24/02/2020
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* Fazeel                        24/2/2020                          HTML Structure
+* Narapa                        07/01/2020                         Defect Fix- 373140(Implemented Home Page Button Card and Styling)
+-->
+<template>
+  <!--Banner Section with Video-->
+  <main role="main">
+    <c-ssp-jaws-assist-text trigger-jaws={jawsStatus}></c-ssp-jaws-assist-text>
+    <div
+      class="slds-is-relative ssp-bg_appHeaderGradient slds-p-top_small ssp-browser-banner slds-p-horizontal_xx-large"
+      if:true={isBannerTextVisible}
+    >
+      <c-ssp-explicit-notice-card>
+        <p class="ssp-fontFamily_popinBold ssp-color_monoBody">
+          {label.sspHomePageBrowserText}
+        </p>
+      </c-ssp-explicit-notice-card>
+    </div>
+    <div
+      class="ssp-home_page_wrap ssp-bg_appHeaderGradient slds-p-horizontal_xx-large ssp-imgContainer"
+    >
+      <div class="ssp-container_width ssp-grid">
+        <div class="ssp-banner_left_section">
+          <h1
+            class="ssp-welcome_text ssp-fontFamily_popinBlack ssp-color_monoBody"
+            role="heading"
+            aria-level="1"
+          >
+            {label.sspHomePageWelcome}
+          </h1>
+          <div
+            class="ssp-fontFamily_ArvoRegular ssp-color_monoOmega ssp-welcome_content ssp-color_monoBody ssp-fontWeight_bold"
+          >
+            {label.sspHomePageWelcomeContent}
+          </div>
+          <div class="ssp-btn_wrap_left">
+            <div class="slds-m-bottom_small ssp-boxShadow">
+              <div class="slds-grid ssp-bg_whiteAlpha ssp-homeButtonCard">
+                <div class="slds-col slds-size_4-of-10">
+                  <div class="slds-m-vertical_medium slds-m-left_medium">
+                    <lightning-button
+                      class="ssp-button_neutral ssp-homeBannerButton ssp-fontSize_16"
+                      label={label.sspHomePageApplyBenefit}
+                      title={label.sspHomePageApplyBenefit}
+                      variant="neutral"
+                      onclick={navigateToCitizenLoginPage}
+                    >
+                    </lightning-button>
+                  </div>
+                </div>
+                <div
+                  class="slds-col ssp-fontFamily_popinRegular ssp-homeCardBody ssp-color_monoOmega slds-m-vertical_medium slds-m-left_medium"
+                >
+                  {applyForBenefitsCardText}
+                </div>
+              </div>
+            </div>
+
+            <div class="slds-m-bottom_small ssp-boxShadow">
+              <div class="slds-grid ssp-bg_whiteAlpha ssp-homeButtonCard">
+                <div class="slds-col slds-size_4-of-10">
+                  <div class="slds-m-vertical_medium slds-m-left_medium">
+                    <lightning-button
+                      class="ssp-button_brand ssp-homeBannerButton ssp-fontSize_16"
+                      label={label.sspHomePageCheckEligibility}
+                      title={label.sspHomePageCheckEligibility}
+                      variant="brand"
+                      onclick={navigateToPsToolPage}
+                    ></lightning-button>
+                  </div>
+                </div>
+                <div
+                  class="slds-col ssp-fontFamily_popinRegular ssp-homeCardBody ssp-color_monoOmega slds-m-vertical_medium slds-m-left_medium"
+                >
+                  {prescreeningCardText}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ssp-videoWrap">
+          <div>
+            <iframe
+              title="Benefind"
+              role="Benefind"
+              aria-label="Benefind"
+              allowfullscreen="true"
+              scrolling="no"
+              src={label.sspLMSVideoUrl}
+              class="ssp-video slds-float_right"
+            ></iframe>
+          </div>
+
+          <div class="ssp-btn_wrap_right ssp-home-stacked-btn-width">
+            <div class="slds-m-bottom_small ">
+              <div
+                class="slds-grid slds-wrap ssp-boxShadow ssp-bg_whiteAlpha ssp-homeButtonCard"
+              >
+                <div class="slds-col slds-size_1-of-1 slds-m-vertical_small">
+                  <lightning-button
+                    class="ssp-button_neutral  ssp-fontSize_16"
+                    label={label.sspHomePageApplyBenefit}
+                    title={label.sspHomePageApplyBenefit}
+                    variant="neutral"
+                    onclick={redirectToApplyBenefit}
+                  >
+                  </lightning-button>
+                </div>
+                <div
+                  class="slds-col slds-size_1-of-1 ssp-fontFamily_popinRegular ssp-homeCardBody  slds-p-left_medium ssp-color_monoOmega "
+                >
+                  {applyForBenefitsCardText}
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="slds-grid slds-wrap ssp-bg_whiteAlpha ssp-homeButtonCard ssp-boxShadow"
+            >
+              <div class="slds-col slds-size_1-of-1 slds-m-top_small">
+                <lightning-button
+                  class="ssp-button_brand ssp-homeBannerButton ssp-fontSize_16"
+                  label={label.sspHomePageCheckEligibility}
+                  title={label.sspHomePageCheckEligibility}
+                  variant="brand"
+                  onclick={navigateToPsToolPage}
+                ></lightning-button>
+              </div>
+              <div
+                class="slds-col slds-size_1-of-1 ssp-fontFamily_popinRegular ssp-homeCardBody  slds-p-left_medium ssp-color_monoOmega "
+              >
+                {prescreeningCardText}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Sign Up Section-->
+    <section
+      class="slds-p-horizontal_xx-large ssp-signUp_wrap ssp-fontFamily_ArvoRegular ssp-fontWeight_bold"
+    >
+      <section class="ssp-container_width">
+        <div>
+          <span class="ssp-color_monoBody" role="article"
+            >{label.sspHomePageNoAccount}</span
+          >&nbsp;<a
+            onclick={navigateToCitizenLoginPage}
+            class="ssp-color_blueAlpha"
+            title={label.sspHomePageSignUp}
+            >{label.sspHomePageSignUp}</a
+          >
+        </div>
+        <div>
+          <span class="ssp-color_monoBody"
+            >{label.sspHomePageApplyBenefitsOnBehalf}</span
+          >&nbsp;<a
+            onclick={navigateToIARLoginPage}
+            class="ssp-color_blueAlpha"
+            title={label.sspHomePageSignUp}
+            >{label.sspHomePageSignUp}</a
+          >
+        </div>
+      </section>
+    </section>
+
+    <!--Program Section-->
+    <section class="slds-p-horizontal_xx-large ssp-subsection_wrap">
+      <section class="ssp-container_width">
+        <h2
+          class="ssp-color_blueAlpha ssp-fontFamily_popinBlack"
+          role="heading"
+          aria-level="2"
+        >
+          {label.sspHomePageProgram}
+        </h2>
+        <section
+          class="ssp-color_monoOmega ssp-fontFamily_ArvoRegular ssp-font_defaultSize"
+        >
+          {label.sspHomePageProgramContent}
+        </section>
+        <div class="ssp-card_wrap" role="article">
+          <div>
+            <c-ssp-cta-card-blue
+              ssp-title-value={label.sspHomePageFoodAssistance}
+            >
+              <section slot="content" class="ssp-fontFamily_popinRegular">
+                <p class="ssp-card_content">
+                  {label.sspHomePageFoodAssistanceContent1}
+                </p>
+                <p>{label.sspHomePageFoodAssistanceContent2}</p>
+              </section>
+              <div
+                slot="footer"
+                class="ssp-card_footer_wrap ssp-card_footer_wrap_margin_small"
+                role="button"
+              >
+                <lightning-button
+                  class="ssp-button_brand ssp-fontFamily_popinBold"
+                  variant="brand"
+                  label={label.sspHomePageLearnMore}
+                  title={label.sspHomePageLearnMore}
+                  role="button"
+                  onclick={redirectToSNAP}
+                ></lightning-button>
+              </div>
+            </c-ssp-cta-card-blue>
+          </div>
+          <div>
+            <c-ssp-cta-card-blue
+              ssp-title-value={label.sspHomePageFinancialAssist}
+            >
+              <section slot="content" class="ssp-fontFamily_popinRegular">
+                <p class="ssp-card_content">
+                  {label.sspHomePageFinancialAssistContent1}
+                </p>
+                <p>
+                  {label.sspHomePageFinancialAssistContent2}
+                </p>
+              </section>
+              <div
+                slot="footer"
+                class="ssp-card_footer_wrap ssp-card_footer_wrap_margin_small"
+                role="button"
+              >
+                <lightning-button
+                  class="ssp-button_brand ssp-fontFamily_popinBold"
+                  variant="brand"
+                  label={label.sspHomePageLearnMore}
+                  title={label.sspHomePageLearnMore}
+                  role="button"
+                  onclick={redirectToKTAP}
+                ></lightning-button>
+              </div>
+            </c-ssp-cta-card-blue>
+          </div>
+          <div>
+            <c-ssp-cta-card-blue
+              ssp-title-value={label.sspHomePageHealthAssist}
+            >
+              <section slot="content" class="ssp-fontFamily_popinRegular">
+                <p class="ssp-card_content">
+                  {label.sspHomePageHealthAssistContent1}
+                </p>
+                <p>
+                  {label.sspHomePageHealthAssistContent2}
+                </p>
+              </section>
+              <div
+                slot="footer"
+                class="ssp-card_footer_wrap ssp-card_footer_wrap_margin_small"
+                role="button"
+              >
+                <lightning-button
+                  class="ssp-button_brand ssp-fontFamily_popinBold"
+                  variant="brand"
+                  label={label.sspHomePageLearnMore}
+                  title={label.sspHomePageLearnMore}
+                  role="button"
+                  onclick={redirectToMedicaid}
+                ></lightning-button>
+              </div>
+            </c-ssp-cta-card-blue>
+          </div>
+          <div>
+            <c-ssp-cta-card-blue
+              ssp-title-value={label.sspHomePagePremiumAssist}
+            >
+              <section slot="content" class="ssp-fontFamily_popinRegular">
+                <p class="ssp-card_content">
+                  {label.sspHomePagePremiumAssistContent1}
+                </p>
+                <p>
+                  {label.sspHomePagePremiumAssistContent2}
+                </p>
+              </section>
+              <div slot="footer" class="ssp-card_footer_wrap" role="button">
+                <lightning-button
+                  class="ssp-button_brand ssp-fontFamily_popinBold"
+                  variant="brand"
+                  label={label.sspHomePageLearnMore}
+                  title={label.sspHomePageLearnMore}
+                  role="button"
+                  onclick={redirectToKHIPP}
+                ></lightning-button>
+              </div>
+            </c-ssp-cta-card-blue>
+          </div>
+          <div>
+            <c-ssp-cta-card-blue ssp-title-value={label.sspHomePageChildAssist}>
+              <section slot="content" class="ssp-fontFamily_popinRegular">
+                <p class="ssp-card_content">
+                  {label.sspHomePageChildAssistContent1}
+                </p>
+                <p>
+                  {label.sspHomePageChildAssistContent2}
+                </p>
+              </section>
+              <div slot="footer" class="ssp-card_footer_wrap" role="button">
+                <lightning-button
+                  class="ssp-button_brand ssp-fontFamily_popinBold"
+                  variant="brand"
+                  label={label.sspHomePageLearnMore}
+                  title={label.sspHomePageLearnMore}
+                  role="button"
+                  onclick={redirectToChildAssistance}
+                ></lightning-button>
+              </div>
+            </c-ssp-cta-card-blue>
+          </div>
+          <div>
+            <c-ssp-cta-card-blue ssp-title-value={label.sspLowCostHealthInsure}>
+              <section slot="content" class="ssp-fontFamily_popinRegular">
+                <p class="ssp-card_content">
+                  {label.sspAdvancedPremiumTaxCredit}
+                </p>
+                <p>
+                  {label.sspFindOutCoverageYouQualify}
+                </p>
+              </section>
+              <div slot="footer" class="ssp-card_footer_wrap" role="button">
+                <lightning-button
+                  class="ssp-button_brand ssp-fontFamily_popinBold"
+                  variant="brand"
+                  label={label.sspHealthBenefitExchange}
+                  title={label.sspHealthBenefitExchange}
+                  role="button"
+                  href="https://healthbenefitexchange.ky.gov/Pages/index.aspx"
+                  onclick={navigateHealthBenefits}
+                  target="_blank"
+                ></lightning-button>
+              </div>
+            </c-ssp-cta-card-blue>
+          </div>
+        </div>
+      </section>
+    </section>
+
+        <section class="slds-p-horizontal_xx-large ssp-imgContainerBeta">
+            <div class="ssp-imgElements">
+                <div
+                    class="ssp-width75  slds-grid slds-wrap slds-p-top_x-large ssp-autoMargin"
+                >
+                    <div
+                        class="slds-size_1-of-1 slds-max-medium-size_1-of-1 ssp-centerImage slds-m-bottom_large"
+                    >
+                        <img
+                            src={bannerKynectLogo}
+                            class="ssp-kynectImage"
+                            alt="kynect logo"
+                        />
+                    </div>
+                    <div
+                        class="slds-size_1-of-1 slds-max-medium-size_1-of-1  slds-grid slds-wrap slds-m-bottom_large"
+                    >
+                        <div
+                            class="slds-size_1-of-1 ssp-fontFamily_popinBold ssp-homePageBannerTextOne ssp-textCenter slds-m-bottom_large"
+                        >
+                            {label.sspHomePageBannerTextOne}
+                        </div>
+                        <div
+                            class="slds-size_1-of-1 ssp-color_monoOmega ssp-fontFamily_popinBold ssp-font_defaultSize ssp-textCenter slds-m-bottom_large"
+                        >
+                            {label.sspHomePageBannerTextTwo}
+                        </div>
+                        
+                    </div>
+                </div>
+                <div
+                    class="slds-col slds-size_1-of-1 slds-m-vertical_small ssp-centerImage ssp-autoMargin"
+                >
+                    <lightning-button
+                        class="ssp-button_neutral  ssp-fontSize_16"
+                        label={label.sspHomePageBannerButtonText}
+                        title={label.sspHomePageBannerButtonText}
+                        variant="neutral"
+                        role="button"
+                        onclick={handleBackyardNavigation}
+                    >
+                    </lightning-button>
+                </div>
+                
+            </div>
+        </section>
+
+    <!--Help Sections-->
+    <div
+      class="slds-p-horizontal_xx-large ssp-subsection_wrap ssp-help_section"
+      role="article"
+    >
+      <div class="ssp-container_width">
+        <h2
+          class="ssp-color_blueAlpha ssp-fontFamily_popinBlack ssp-medium_lheight"
+          role="heading"
+          aria-level="2"
+        >
+          {label.sspHomePageNeedHelp}
+        </h2>
+        <div class="ssp-color_monoOmega ssp-fontFamily_ArvoRegular">
+          {label.sspHomePageNeedHelpContent}
+        </div>
+        <div class="ssp-card_wrap" role="article">
+          <div>
+            <c-ssp-cta-card-grey
+              ssp-title-val={label.sspHomePageMeetInsuranceAgent}
+            >
+              <div slot="content">
+                <p class="ssp-min_height">
+                  {label.sspHomePageMeetInsuranceAgentContent}
+                </p>
+              </div>
+              <div slot="footer" role="button">
+                <lightning-button
+                  class="ssp-button_base ssp-fontFamily_popinBold ssp-color_monoBody"
+                  label={label.sspHomePageMeetInsuranceAgentButton}
+                  title={label.sspHomePageMeetInsuranceAgentButton}
+                  role="button"
+                  data-page="authRepsAssisters__c"
+                  onclick={redirectToFindAgent}
+                ></lightning-button>
+              </div>
+            </c-ssp-cta-card-grey>
+          </div>
+
+          <div>
+            <c-ssp-cta-card-grey ssp-title-val={label.sspHomePageMeetDCBSRep}>
+              <div slot="content">
+                <p>
+                  {label.sspHomePageMeetDCBSRepContent}
+                </p>
+                <ul>
+                  <li>{label.sspHomePageMeetDCBSRepContent1}</li>
+                  <li>{label.sspHomePageMeetDCBSRepContent2}</li>
+                  <li>{label.sspHomePageMeetDCBSRepContent3}</li>
+                </ul>
+                <a href={phoneNumberDCBS} class="ssp-phone_number"
+                  >{phoneNumberDCBS}</a
+                >
+              </div>
+              <div slot="footer">
+                <lightning-button
+                  class="ssp-button_base ssp-fontFamily_popinBold ssp-color_monoBody"
+                  label={label.sspHomePageMeetDCBSRepButton}
+                  title={label.sspHomePageMeetDCBSRepButton}
+                  role="button"
+                  onclick={callDCBSOfficeTelephone}
+                ></lightning-button>
+              </div>
+            </c-ssp-cta-card-grey>
+          </div>
+
+          <div>
+            <c-ssp-cta-card-grey
+              ssp-title-val={label.sspHomePageMeetDCBSOffice}
+            >
+              <div slot="content">
+                <p>
+                  {label.sspHomePageMeetDCBSOfficeContent}
+                </p>
+                <ul class="ssp-min_height">
+                  <li>{label.sspHomePageMeetDCBSOfficeContent1}</li>
+                  <li>{label.sspHomePageMeetDCBSOfficeContent2}</li>
+                  <li>{label.sspHomePageMeetDCBSOfficeContent3}</li>
+                </ul>
+              </div>
+              <div slot="footer">
+                <lightning-button
+                  class="ssp-button_base ssp-fontFamily_popinBold ssp-color_monoBody"
+                  label={label.sspHomePageMeetDCBSOfficeButton}
+                  title={label.sspHomePageMeetDCBSOfficeButton}
+                  role="button"
+                  onclick={redirectToDCBS}
+                ></lightning-button>
+              </div>
+            </c-ssp-cta-card-grey>
+          </div>
+
+          <div>
+            <c-ssp-cta-card-grey ssp-title-val={label.sspHomePageReprint1095B}>
+              <div slot="content">
+                <p class="ssp-min_height">
+                  {label.sspHomePageReprint1095BContent}
+                </p>
+              </div>
+              <div slot="footer">
+                <lightning-button
+                  class="ssp-button_base ssp-fontFamily_popinBold ssp-color_monoBody"
+                  label={label.sspHomePageReprint1095BButton}
+                  title={label.sspHomePageReprint1095BButton}
+                  role="button"
+                  onclick={redirectTo1095Portal}
+                ></lightning-button>
+              </div>
+            </c-ssp-cta-card-grey>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</template>

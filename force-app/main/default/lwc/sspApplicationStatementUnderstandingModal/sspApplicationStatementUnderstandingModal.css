@@ -1,0 +1,45 @@
+.ssp-applicationStatementContentContainer .ssp-marginBottomThirty {
+    margin-bottom: 1.875rem;
+}
+
+.ssp-applicationStatementContentContainer .ssp-applicationStatementOrderedList {
+    list-style-type: decimal;
+    padding-left: 1.2rem;
+}
+
+.ssp-applicationStatementContentContainer .ssp-applicationStatementUnOrderedMainList {
+    list-style-type: disc;
+    padding-left: 1.2rem;
+}
+
+.ssp-applicationStatementContentContainer .ssp-applicationStatementUnOrderedList li {
+    position: relative;
+    list-style: none;
+    padding-left: 1.25rem;
+}
+
+.ssp-applicationStatementContentContainer .ssp-applicationStatementUnOrderedList li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 9px;
+    width: 5px;
+    display: block;
+    border-top: 2px solid #66686d;
+}
+
+.ssp-applicationStatementContentContainer .ssp-marginTopThirty {
+    margin-top: 1.875rem;
+}
+
+.ssp-applicationStatementLink {
+    padding-left: 1px;
+    overflow-wrap: break-word;
+}
+.ssp-request-hearing {
+    margin-top: 1.875rem;
+}
+.ssp-focus-element:focus,
+.ssp-applicationStatementContentContainer li:focus {
+    outline: none;
+}

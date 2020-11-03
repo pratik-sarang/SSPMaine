@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SSP_Asset__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>This field is used to indicate the related Asset to an Insurance Covered Individual</description>
+    <externalId>false</externalId>
+    <label>SSP_Asset</label>
+    <referenceTo>SSP_Asset__c</referenceTo>
+    <relationshipName>SSP_InsuranceCoveredIndiv</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

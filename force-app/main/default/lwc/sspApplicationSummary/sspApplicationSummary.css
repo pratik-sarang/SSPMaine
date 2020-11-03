@@ -1,0 +1,56 @@
+.ssp-application-summary {
+    display: block;
+}
+
+h1 {
+    font-size: 2.625rem;
+    line-height: 3rem;
+    white-space: nowrap;
+}
+
+p {
+    font-size: 1rem;
+    letter-spacing: -0.3px;
+    line-height: 1.5rem;
+}
+.ssp-application-id {
+    font-size: 0.8125rem;
+}
+.ssp-progress-section {
+    font-size: 1.125rem;
+}
+.slds-progress-bar {
+    width: 100px;
+    height: 15px;
+    background-color: rgba(0, 35, 98, 0.1);
+    border-radius: 100px;
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.slds-progress-bar__value {
+    width: 100%;
+    border-radius: 100px;
+}
+
+.ssp-button-container {
+    margin: 100px 0 55px 0;
+}
+
+@media only screen and (max-width: 767px) {
+    h1 {
+        font-size: 1.5rem;
+        line-height: 1.875rem;
+    }
+    .slds-progress-bar {
+        float: right;
+        margin-left: 0;
+        margin-top: 5px;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .slds-progress-bar {
+        width: 90px;
+    }
+}

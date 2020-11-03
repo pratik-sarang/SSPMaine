@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Pages that are listening to this page during flow navigation. In other words, the pages that are depending on the values/conditions from this page. The flow rules of those listening pages will be triggered after this page&apos;s process is completed. --></help>
+    <label><!-- Listener Page Names --></label>
+    <name>ListenerPageNames__c</name>
+</CustomFieldTranslation>

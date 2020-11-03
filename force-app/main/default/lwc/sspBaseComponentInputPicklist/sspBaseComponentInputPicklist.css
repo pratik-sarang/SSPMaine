@@ -1,0 +1,26 @@
+.ssp-picklistDropdown:focus {
+  outline: none;
+}
+
+.showError {
+  font-size: 0.75rem;
+}
+
+.ssp-helptextIcon {
+  margin-left: 10px;
+  position: relative;
+  bottom: 2px;
+  margin-bottom: 0.313rem;
+}
+
+.ssp-alignHelpText {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.ssp-alignHelpText label {
+  width: 85%;
+  word-break: break-word;
+}

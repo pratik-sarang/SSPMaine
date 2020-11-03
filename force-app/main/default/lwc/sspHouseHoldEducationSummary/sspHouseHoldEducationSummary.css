@@ -1,0 +1,80 @@
+.ssp-member-background {
+    position: absolute;
+    right: 0;
+    height: 122px;
+    width: auto;
+    margin-top: 10px;
+}
+h2 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    padding-bottom: 30px;
+    margin: 30px 0;
+}
+.ssp-h3 {
+    font-size: 1.125rem;
+    letter-spacing: -0.3px;
+    line-height: 1.5rem;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    border-radius: 2.5px;
+}
+p {
+    font-size: 1rem;
+    letter-spacing: -0.3px;
+    line-height: 1.5rem;
+}
+a {
+    cursor: pointer;
+    font-size: 0.8125rem;
+    letter-spacing: -0.3px;
+    line-height: 30px;
+    text-decoration: underline;
+}
+.ssp-head-household {
+    margin: 30px 0;
+}
+
+.ssp-member-household {
+    margin: 60px 0;
+}
+
+.ssp-next-button {
+    width: 100%;
+}
+
+.ssp-add-button {
+    margin-bottom: 15px;
+}
+
+@media only screen and (max-width: 768px) {
+    .ssp-selectionCardIcon {
+        padding: 15px 24px;
+    }
+    p {
+        font-size: 0.8125rem;
+    }
+}
+@media only screen and (min-width: 1024px) {
+    h2 {
+        margin: 15px 0 30px 0;
+    }
+    .container-block {
+        width: 770px;
+    }
+    .ssp-next-button-container {
+        order: 2;
+        text-align: right;
+        margin: 32px 0;
+    }
+    p {
+        font-size: 1rem;
+    }
+    .ssp-h3,
+    .ssp-add-button {
+        margin-bottom: 15px;
+    }
+    .ssp-member-background {
+        height: 243px;
+    }
+}

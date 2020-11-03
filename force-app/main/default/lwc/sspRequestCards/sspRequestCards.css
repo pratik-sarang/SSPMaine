@@ -1,0 +1,218 @@
+.ssp-requestCardsHeader {
+    line-height: 2rem;
+    text-align: left;
+    letter-spacing: normal;
+    font-size: 1.5rem;
+    margin-top: 2.438rem;
+}
+
+.ssp-medicaidRequestHeader {
+    font-size: 1.5rem;
+}
+.ssp-requestEBTHeader {
+    font-size: 1.5rem;
+}
+
+.ssp-requestCardsHr {
+    height: 0.313rem;
+    border-radius: 0.156rem;
+    margin: 1.875rem 0;
+}
+
+.ssp-requestCardsHrTwo {
+    height: 0.063rem;
+    margin-bottom: 1.875rem;
+}
+
+.ssp-noteMCO {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: normal;
+    text-align: left;
+    margin-bottom: 1.875rem;
+}
+
+.ssp-noteDCBS {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: normal;
+    text-align: left;
+    margin-bottom: 0.625rem;
+}
+
+.ssp-requestPickList {
+    margin-bottom: 3.75rem;
+}
+
+.ssp-requestPickListTwo {
+    margin-bottom: 1.875rem;
+}
+
+.ssp-requestPickListQuestion {
+    font-size: 1rem;
+    text-align: left;
+    letter-spacing: -0.019rem;
+    line-height: 1.5rem;
+    margin-bottom: 1.188rem;
+}
+
+.ssp-additionalInformation {
+    margin-bottom: 3.75rem;
+}
+
+.ssp-requestCardTextArea {
+    font-size: 1rem;
+    text-align: left;
+    letter-spacing: -0.019rem;
+    line-height: 1.5rem;
+}
+
+.ssp-additionalInformationText {
+    width: 100%;
+    font-size: 1rem;
+    line-height: 1.375rem;
+    text-align: left;
+    letter-spacing: 0.019rem;
+}
+
+.ssp-whereToSend {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: -0.019rem;
+    text-align: left;
+    margin-bottom: 0.938rem;
+}
+
+.ssp-addressToggle {
+    margin-bottom: 1.875rem;
+}
+
+.ssp-sentToMailingAddress {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: normal;
+    text-align: left;
+    margin-bottom: 0.938rem;
+}
+
+.ssp-addressBox {
+    padding: 1.5rem;
+    margin-bottom: 3.75rem;
+    position: relative;
+}
+
+.ssp-addressOfficeBox {
+    padding: 1.5rem;
+    margin-bottom: 0.938rem;
+}
+
+.ssp-iUnderstand {
+    margin-bottom: 6.25rem;
+}
+
+.ssp-requestCardButtons {
+    display: flex;
+    flex-flow: column-reverse wrap;
+    margin-bottom: 3.75rem;
+}
+
+.ssp-reportAChangeLink {
+    font-size: 0.813rem;
+    line-height: 1.5rem;
+    letter-spacing: -0.015rem;
+    text-align: left;
+    text-decoration: underline;
+}
+
+.ssp-requestAddressContainer {
+    position: relative;
+    width: 100%;
+    word-wrap: break-word;
+}
+
+.ssp-requestAddressTitle {
+    font-size: 0.813rem;
+    line-height: 1.875rem;
+    letter-spacing: 0.019rem;
+    text-align: left;
+    margin-bottom: 0.188rem;
+}
+
+.ssp-requestAddressContent {
+    font-size: 1rem;
+    line-height: 1.375rem;
+    letter-spacing: 0.019rem;
+    text-align: left;
+    word-wrap: normal;
+    margin-bottom: 1.875rem;
+}
+
+.ssp-submitButton {
+    margin-bottom: 0.938rem;
+}
+
+.ssp-validId {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: normal;
+    text-align: left;
+    margin-bottom: 3.75rem;
+}
+
+a:focus {
+    outline: none;
+}
+
+.ssp-learnMoreMCO {
+    font-size: 1rem;
+    letter-spacing: normal;
+    line-height: 1.5rem;
+    text-align: left;
+}
+
+@media only screen and (min-width: 769px) {
+    .ssp-requestCardsHeader {
+        line-height: 3rem;
+        text-align: left;
+        letter-spacing: normal;
+        font-size: 2.625rem;
+        margin-top: 3.75rem;
+    }
+    .ssp-medicaidRequestHeader {
+        font-size: 2.625rem;
+    }
+    .ssp-requestEBTHeader {
+        font-size: 2.625rem;
+    }
+
+    .ssp-requestPickListTwo {
+        margin-bottom: 3.75rem;
+    }
+
+    .ssp-desktopRequestWidth {
+        padding-right: 0.938rem;
+    }
+    .ssp-requestCardButtons {
+        justify-content: space-between;
+        flex-flow: row;
+    }
+
+    .ssp-requestCardContainer .ssp-screenFooterNextBtn {
+        margin-left: auto;
+        order: 2;
+    }
+
+    .ssp-addressBox {
+        padding: 1.875rem;
+        margin-bottom: 3.75rem;
+        position: relative;
+    }
+    .ssp-requestAddressContainer {
+        position: relative;
+        width: 19.375rem;
+        word-wrap: break-word;
+    }
+    .ssp-submitButton {
+        margin-bottom: 0rem;
+    }
+}

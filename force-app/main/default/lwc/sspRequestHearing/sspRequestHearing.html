@@ -1,0 +1,399 @@
+<template>
+    <template if:true={showAccessDeniedComponent}>
+        <c-ssp-access-denied></c-ssp-access-denied>
+    </template>
+    <template if:true={isScreenAccessible}>
+    <template if:true={showSpinner}>
+        <c-ssp-spinner></c-ssp-spinner>
+    </template>
+    <div if:true={showErrorToast} role="alert">
+        <c-ssp-toast
+            ssp-toast-title-val={label.toastErrorText}
+            onhidetoast={handleHideToast}
+            show-error-toast={showErrorToast}
+        ></c-ssp-toast>
+    </div>
+    <div class="ssp-requestHearingContainer">
+        <h1
+            class="ssp-fontFamily_popinBlack ssp-color_blueAlpha ssp-boderBottom5X"
+        >
+            {label.requestHearing}
+        </h1>
+        <div class="ssp-margin-bottom_xlarge">
+            <template if:true={showCaseNumberPicklist}>
+                <div class="ssp-margin-bottom_large ssp-inputWidth">
+                    <c-ssp-base-component-input-picklist
+                        data-id="DCCaseNumber"
+                        class="ssp-applicationInput"
+                        label={label.cases}
+                        entity-name="SSP_Member__c"
+                        field-name="MatchType__c"
+                        option={casePicklist}
+                        meta-list={metaDataListParent}
+                        title={label.programOptionsTitle}
+                        placeholder={label.chooseOneMissing}
+                        onhandlepicklistchange={handleCaseChange}
+                    ></c-ssp-base-component-input-picklist>
+                </div>
+            </template>
+            <div class="ssp-margin-bottom_large ssp-inputWidth">
+                <c-ssp-base-component-input-picklist
+                    data-id="HearingProgram"
+                    class="ssp-applicationInput"
+                    label={label.programAppealingFor}
+                    entity-name="SSP_Member__c"
+                    field-name="MatchType__c"
+                    meta-list={metaDataListParent}
+                    option={programPicklist}
+                    title={label.programOptionsTitle}
+                    placeholder={label.chooseOneMissing}
+                    onhandlepicklistchange={handleProgramChange}
+                ></c-ssp-base-component-input-picklist>
+            </div>
+            <div
+                if:true={reasonPicklist}
+                class="ssp-margin-bottom_large ssp-inputWidth"
+            >
+                <c-ssp-base-component-input-picklist
+                    data-id="HearingReason"
+                    class="ssp-applicationInput"
+                    label={label.reasonForAppeal}
+                    entity-name="SSP_Member__c"
+                    field-name="GenderCode__c"
+                    option={reasonPicklist}
+                    meta-list={metaDataListParent}
+                    title={label.appealReasonsTitle}
+                    placeholder={label.chooseOneMissing}
+                ></c-ssp-base-component-input-picklist>
+            </div>
+            <div class="ssp-margin-bottom_large">
+                <c-ssp-base-component-input-toggle
+                    data-id="HealthInDanger"
+                    entity-name="SSP_Member__c"
+                    field-name="HasRealEstatePropertyToggle__c"
+                    label={label.healthImmediateDanger}
+                    options={toggleButtonOptions}
+                    onchange={handleSsnToggle}
+                    meta-list={metaDataListParent}
+                    class="ssp-applicationInput"
+                >
+                </c-ssp-base-component-input-toggle>
+            </div>
+            <div class="ssp-margin-bottom_large">
+                <c-ssp-base-component-input-toggle
+                    data-id="ContinueBenefits"
+                    entity-name="SSP_Member__c"
+                    field-name="HasHouseholdPaidChildSupportToggle__c"
+                    label={label.continueBenefitsRepayText}
+                    options={toggleButtonOptions}
+                    meta-list={metaDataListParent}
+                    onchange={handleSsnToggle}
+                    class="ssp-applicationInput"
+                >
+                </c-ssp-base-component-input-toggle>
+            </div>
+            <div class="ssp-margin-bottom_large ssp-inputWidth">
+                <c-ssp-base-component-input-text-area
+                    class="ssp-applicationInput slds-max-medium-size_1-of-1 slds-size_1-of-2"
+                    label={label.commentsText}
+                    data-id="Comments"
+                    entity-name="SSP_Member__c"
+                    meta-list={metaDataListParent}
+                >
+                </c-ssp-base-component-input-text-area>
+            </div>
+            <p tabindex ="0" class="ssp-fontFamily_popinBold">{label.requireAccommodation}</p>
+            <div class="ssp-margin-bottom_large">
+                <c-ssp-base-component-input-toggle
+                    data-id="RequireAccommodation"
+                    entity-name="SSP_Member__c"
+                    field-name="HasShelterExpenseToggle__c"
+                    label={label.hearingAccommodation}
+                    options={toggleButtonOptions}
+                    meta-list={metaDataListParent}
+                    onchange={handleAccommodationToggle}
+                    class="ssp-applicationInput"
+                >
+                </c-ssp-base-component-input-toggle>
+            </div>
+            <div
+                if:true={specialAccommodationCheck}
+                class="ssp-margin-bottom_large"
+            >
+                <c-ssp-base-component-input-checkbox-group
+                    data-id="AccommodationList"
+                    class="ssp-applicationInput"
+                    label={label.specialAccommodationList}
+                    entity-name="SSP_Member__c"
+                    field-name="MatchType__c"
+                    options={accommodationPicklist}
+                    meta-list={metaDataListParent}
+                    onchange={handleRaceSelect}
+                ></c-ssp-base-component-input-checkbox-group>
+            </div>
+            <div class="ssp-margin-bottom_large">
+                <p class="ssp-margin-bottom_medium ssp-fontFamily_popinBold">
+                    {label.referencingSpecificNotice}
+                </p>
+                <p
+                    class="ssp-fontFamily_ArvoRegular ssp-color_monoOmega ssp-margin-bottom_large"
+                >
+                    {label.adverseActionNote}
+                </p>
+                <lightning-button
+                    if:false={selectedNotice}
+                    variant="neutral"
+                    label={label.selectOfficialNotice}
+                    title={label.selectOfficialNotice}
+                    onclick={handleOfficialNotice}
+                    class="ssp-button_neutral ssp-cardButton ssp-add-income-btn ssp-addHouseHoldButtonWrap"
+                ></lightning-button>
+                <div if:true={selectedNotice}>
+                    <c-ssp-selection-card-with-remove-icon
+                        display-edit={label.changeText}
+                        oncardaction={handleOfficialNotice}
+                        remove-modal-heading={label.removeMember}
+                        onremove={removeNotice}
+                        obj-card={selectedNotice}
+                        button-alt-text={label.changeDocument}
+                        can-delete={canDeleteMembers}
+                        edit-button-text={label.changeText}
+                        hide-delete-modal={exitModal}
+                    >
+                        <div slot="cardContent">
+                            <p
+                                class="ssp-fontFamily_popinBold ssp-color_monoBody ssp-labelLine1 ssp-word-break-all"
+                            >
+                                <a
+                                    title={label.relatedNoticeTitle}
+                                    data-metadata-id={selectedNotice.dmsDocumentId__c}
+                                    onclick={downloadTheFile}
+                                    class="ssp-fontFamily_popinRegular ssp-color_blueAlpha"
+                                >
+								<!--DEFECT 389999: Removing the ES check since documents do not have spanish translations and always only English Name should be shown-->
+								{selectedNotice.messageSubject__c}
+                                </a>
+                            </p>
+                            <p
+                                class="ssp-fontFamily_popinRegular ssp-color_monoBody ssp-word-break-all"
+                            >
+                                {selectedNotice.MessageCreateDate__c}
+                            </p>
+                        </div>
+                    </c-ssp-selection-card-with-remove-icon>
+                </div>
+            </div>
+            <p
+                if:true={caseAuthRepList}
+                class="slds-form-element__label ssp-picklistLabel"
+            >
+                {label.appealWithIndividual}
+            </p>
+            <div
+                if:true={caseAuthRepList}
+                class="ssp-margin-bottom_large ssp-inputWidth"
+            >
+                <c-ssp-base-component-input-picklist
+                    data-id="DCContactId"
+                    class="ssp-applicationInput"
+                    label=""
+                    entity-name="SSP_Member__c"
+                    meta-list={metaDataListParent}
+                    field-name="appealWithIndividual"
+                    option={caseAuthRepList}
+                    title={label.individualOptionsTitle}
+                    placeholder={label.chooseOneMissing}
+                    onhandlepicklistchange={handleAuthChange}
+                ></c-ssp-base-component-input-picklist>
+            </div>
+            <div if:true={someOneOther}>
+                <div
+                    class="ssp-generalCard ssp-boxShadow slds-m-top_x-large ssp-margin-bottom_large"
+                >
+                    <div class="ssp-fontFamily_popinRegular ssp-color_monoBody">
+                        <p class="ssp-generalCardContent">
+                            {label.addressRepresentativeNote}
+                        </p>
+                    </div>
+                </div>
+                <p
+                    class="ssp-margin-bottom_large ssp-fontFamily_ArvoRegular ssp-color_monoOmega"
+                >
+                    {label.contactInfoRepresentative}
+                </p>
+                <div class="ssp-margin-bottom_large ssp-inputWidth">
+                    <c-ssp-base-component-input-text
+                        data-id="RepresentativeFirstName"
+                        entity-name="SSP_Member__c"
+                        field-name="FirstName__c"
+                        meta-list={metaDataListParent}
+                        class="ssp-applicationInputs"
+                        label={label.firstName}
+                        disabled={selectedAuth.RepresentativeFirstName}
+                        value={selectedAuth.RepresentativeFirstName}
+                            max-length="50"
+                    >
+                    </c-ssp-base-component-input-text>
+                </div>
+                <div class="ssp-margin-bottom_large ssp-inputWidth">
+                    <c-ssp-base-component-input-text
+                        data-id="RepresentativeLastName"
+                        entity-name="SSP_Member__c"
+                        meta-list={metaDataListParent}
+                        field-name="LastName__c"
+                        class="ssp-applicationInputs"
+                        label={label.lastName}
+                        value={selectedAuth.RepresentativeLastName}
+                        disabled={selectedAuth.RepresentativeLastName}
+                            max-length="50"
+                    >
+                    </c-ssp-base-component-input-text>
+                </div>
+                <div class="ssp-margin-bottom_large ssp-inputWidth">
+                    <c-ssp-base-component-input-text
+                        data-id="RepresentativeOrganisationName"
+                        entity-name="SSP_Member__c"
+                        meta-list={metaDataListParent}
+                        field-name="organizationName"
+                        class="ssp-applicationInputs"
+                        label={label.organizationName}
+                        value={selectedAuth.RepresentativeOrganisationName}
+                        disabled={selectedAuth.RepresentativeOrganisationName}
+                    >
+                    </c-ssp-base-component-input-text>
+                </div>
+                <div class="ssp-margin-bottom_large ssp-inputWidth">
+                    <c-ssp-base-component-input-phone
+                        data-id="RepresentativePhoneNo"
+                        label={label.phoneNumber}
+                        class="ssp-applicationInputs"
+                        field-name="PrimaryPhoneNumber__c"
+                        entity-name="SSP_Member__c"
+                        meta-list={metaDataListParent}
+                        placeholder="###-###-####"
+                        onchange={customValidation}
+                        max-length="12"
+                        disabled={selectedAuth.RepresentativePhoneNo}
+                        value={selectedAuth.RepresentativePhoneNo}
+                    >
+                    </c-ssp-base-component-input-phone>
+                </div>
+                <div class="ssp-margin-bottom_large ssp-inputWidth">
+                    <c-ssp-base-component-input-email
+                        class="ssp-applicationInputs"
+                        data-id="RepresentativeEmail"
+                        label={label.email}
+                        meta-list={metaDataListParent}
+                        field-name="Email__c"
+                        entity-name="SSP_Member__c"
+                        disabled={selectedAuth.RepresentativeEmail}
+                        value={selectedAuth.RepresentativeEmail}
+                    >
+                    </c-ssp-base-component-input-email>
+                </div>
+                <div class="ssp-margin-bottom_medium ssp-inputWidth">
+                    <c-ssp-address-auto-complete
+                        class="addressLineClass slds-size_1-of-1 ssp-request_hearing_address_align"
+                        record={addressRecord}
+                        field-map={fieldMap}
+                        meta-list={metaDataListParent}
+                        disabled={selectedAuth.Street}
+                    >
+                    </c-ssp-address-auto-complete>
+                </div>
+            </div>
+        </div>
+        <div class="ssp-button-container slds-grid slds-grid_align-spread">
+            <lightning-button
+                variant="neutral"
+                label={label.cancelButton}
+                title={label.requestHearingCancelTitle}
+                onclick={handleCancel}
+                class="ssp-button_base ssp-cardButton ssp-screenFooterBlueBtn ssp-addHouseHoldButtonWrap"
+            ></lightning-button>
+            <lightning-button
+                variant="neutral"
+                label={label.submitAppealText}
+                title={label.submitAppealTitle}
+                onclick={handleSubmitHearing}
+                disabled={isReadOnlyUser}
+                class="ssp-button_neutral ssp-cardButton ssp-screenFooterSaveBtn ssp-addHouseHoldButtonWrap"
+            ></lightning-button>
+        </div>
+    </div>
+
+    <c-ssp-detailed-information-modal
+        header-value={label.noticeNegativeAction}
+        open-model={showNoticeModal}
+        onclosemodal={handleCancelNoticeModal}
+        reference={reference}
+    >
+        <div slot="contentSlot">
+            <p
+                class="ssp-fontFamily_ArvoRegular ssp-color_monoOmega slds-p-bottom_small"
+            >
+                {label.noticeNegativeActionNote}
+            </p>
+            <p
+                tabindex="0"
+                class="ssp-fontFamily_popinRegular ssp-color_monoBody ssp-margin-bottom_small"
+            >
+                {label.documents}
+            </p>
+            <template for:each={noticeData} for:item="currentNotice">
+                <c-ssp-base-multiline-radio
+                    key={currentNotice.Id}
+                    onchange={handleNoticeChange}
+                    name="notice"
+                    class="ssp-margin-bottom_small"
+                    value={currentNotice.Id}
+                >
+                    <p
+                        class="ssp-fontFamily_popinRegular ssp-font-13 ssp-color_monoBody ssp-labelLine1"
+                    >
+                        <a
+                            title={label.viewDocument}
+                            data-metadata-id={currentNotice.dmsDocumentId__c}
+                            onclick={downloadTheFile}
+                            class="ssp-fontFamily_popinRegular ssp-color_blueAlpha"
+                            >
+							<!--DEFECT 389999: Removing the ES check since documents do not have spanish translations and always only English Name should be shown-->
+							{currentNotice.messageSubject__c}
+							</a
+                        >
+                    </p>
+                    <p
+                        class="ssp-fontFamily_popinRegular ssp-color_monoBody ssp-font-13"
+                    >
+                        {label.received} {currentNotice.MessageCreateDate__c}
+                    </p>
+                </c-ssp-base-multiline-radio>
+            </template>
+        </div>
+        <div slot="Footer" class="slds-grid slds-wrap slds-grid_align-spread">
+            <lightning-button
+                variant="brand"
+                label={label.continueText}
+                class="ssp-exitModalBtn ssp-exitSaveBtn ssp-button_brand slds-size_1-of-1 ssp-margin-bottom_small"
+                onclick={handleContinueNoticeModal}
+                title={label.finalDocumentSelection}
+            >
+            </lightning-button>
+            <lightning-button
+                variant="base"
+                label={label.cancel}
+                class="ssp-exitModalBtn ssp-cancelBtn ssp-button_base slds-size_1-of-1"
+                onclick={handleCancelNoticeModal}
+                title={label.closePopUpTitle}
+            >
+            </lightning-button>
+        </div>
+    </c-ssp-detailed-information-modal>
+    <c-ssp-logging-and-error-handling-modal
+        if:true={showErrorModal}
+        error-id={errorMsg}
+        onprogressvaluechange={closeError}
+    >
+    </c-ssp-logging-and-error-handling-modal>
+</template>
+</template>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MemberProgramsApplied__c</fullName>
+    <description>This field is used to store different types of programs member has applied on a particular application</description>
+    <externalId>false</externalId>
+    <label>Member Programs Applied</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>BenefitPrograms</valueSetName>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

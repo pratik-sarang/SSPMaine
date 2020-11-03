@@ -1,0 +1,30 @@
+.ssp-coverageSummary_container .ssp-coverageSummary_desc {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: -0.019rem;
+    margin-bottom: 1.875rem;
+    padding-top: 1.875rem;
+}
+
+.ssp-coverageSummary_container .ssp-card_section {
+    padding-top: 1.875rem;
+    margin-bottom: 6.25rem;
+}
+
+.ssp-coverageSummary_container .ssp-coverageSummary_Inputs {
+    display: none;
+}
+
+.ssp-coverageSummary_container .ssp-coverage_StartDate {
+    display: block;
+}
+
+.ssp-coverageSummary_container .ssp-medicareDetails {
+    font-size: 0.813rem;
+}
+
+@media only screen and (min-width: 769px) {
+    .ssp-coverageSummary_container .ssp-coverage_StartDate {
+        display: inline-block;
+    }
+}

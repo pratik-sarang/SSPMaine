@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- RAC Menu Selection --></label>
+    <name>RAC_Menu_Selection__c</name>
+    <picklistValues>
+        <masterLabel>Contact Information</masterLabel>
+        <translation>Información de contacto</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Education</masterLabel>
+        <translation>Educación</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Emergency Medical Condition and Disability</masterLabel>
+        <translation>Condición médica de emergencia y discapacidad</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Expense</masterLabel>
+        <translation>Gastos</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Healthcare Coverage</masterLabel>
+        <translation>Cobertura de salud</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Income</masterLabel>
+        <translation>Ingreso</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Living Arrangement</masterLabel>
+        <translation>Dónde y con quién vive</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Medicare Coverage</masterLabel>
+        <translation>Cobertura Medicare</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Member Information</masterLabel>
+        <translation>Información de Miembros</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pregnancy</masterLabel>
+        <translation>Embarazo</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Relationship and Tax filing Status</masterLabel>
+        <translation>Estatus de relación y de declaración de impuestos</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Resources</masterLabel>
+        <translation>Recursos</translation>
+    </picklistValues>
+</CustomFieldTranslation>

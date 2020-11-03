@@ -1,0 +1,752 @@
+<!--
+* name : ssp-DashboardExistingUser
+* @description :This screen is main dashboard.
+* @author : Venkat,Gora kireeti.
+* @date :3/5/2020.
+* MODIFICATION LOG:
+* DEVELOPER             DATE            DESCRIPTION
+* ________________________________________________________________________________
+* Chirag                5/18/2020     Added Head of Household Conditions-->
+<template>
+    <template if:true={showSpinner}>
+        <c-ssp-spinner class="ssp-existDashboard"></c-ssp-spinner>
+    </template>
+
+    <!--392529-->
+    <template if:true={showAccessDeniedComponent}>
+        <c-ssp-access-denied></c-ssp-access-denied>
+    </template>
+
+    <div if:true={showErrorToast} role="alert">
+        <c-ssp-toast
+            ssp-toast-title-val={toastMessage}
+            onhidetoast={handleHideToast}
+            show-error-toast={showErrorToast}
+            condition="positive"
+        ></c-ssp-toast>
+    </div>
+    <div class="ssp-dashboard-wrapper" if:true = {isScreenAccessible}>
+        <template if:true={isExistingUser}>
+            <div class="slds-grid slds-wrap ssp-existing-user-dashboard">
+                <div class="ssp-existing-dashboard-container slds-grid slds-wrap slds-large-size_1-of-1 slds-size_1-of-1">
+                    <div class="ssp-dashboard-header-section ssp-existing-dashboard-padding slds-grid slds-wrap slds-size_1-of-1 ssp-imgContainer">
+                        <img src={backgroundImg} class="ssp-existing-dashboard-background" alt={customLabels.sspWelcome}/>
+                        <h1 class="slds-size_1-of-1 ssp-header-text ssp-fontFamily_popinBlack ssp-color_monoBody">{customLabels.sspWelcome}, {contactName}</h1>
+                        <template if:true={isHeadOfHouseHold}>
+                            <template if:false={isDAILOrCBW}>
+                                <div if:true={isNotTeamMember} class="slds-grid slds-wrap slds-size_1-of-1">
+                                    <p class="slds-p-top_small slds-large-size_1-of-3 slds-size_1-of-1"><a if:true={renderingMap.myInformation.isAccessible} onclick={navigateMyInformation} tabindex="0" title={customLabels.sspMyInformation} class="ssp-fontFamily_popinBold ssp-learnMore ssp-color_blueAlpha">{customLabels.sspMyInformation}</a></p>
+                                    <div class="slds-grid slds-wrap slds-large-size_2-of-3 slds-size_1-of-1 ssp-dashboard-action-btns slds-text-align_right">
+                                        <template if:true={notDependent}>
+                                            <template if:true={showApplyOtherBenefits}>
+                                                <lightning-button
+                                                    label={benefitButtonLabel}
+                                                    title={benefitButtonLabel}
+                                                    onclick={handleBenefitNavigation}
+                                                    variant="brand"
+                                                    class="ssp-button_brand ssp-add-other-benefits-btn"
+                                                    if:true={renderingMap.addBenefitsButton.isAccessible}
+                                                    >
+                                                </lightning-button>
+                                            </template>
+                                        </template>
+                                        <template if:true={hasActiveCase}>
+                                            <lightning-button
+                                                label={racButtonLabel}
+                                                title={racButtonLabel}
+                                                onclick={handleRac}
+                                                variant="brand"
+                                                class="ssp-button_brand ssp-report-change-btn"
+                                                if:true={renderingMap.reportAChangeLink.isAccessible}
+                                                >
+                                            </lightning-button>
+                                        </template>
+                                    </div>
+                                </div>
+                            </template>
+                        </template>
+                        <template if:true={notDependent}>
+                            <template if:true={showApplyForBenefits}>
+                                <template if:false={isDAILOrCBW}>
+                                    <div if:true={isNotTeamMember} class="slds-grid slds-wrap slds-size_1-of-1 slds-m-bottom_large">                  
+                                        <div class="slds-grid slds-wrap slds-size_1-of-1 ssp-dashboard-action-btns slds-text-align_right">
+                                            <lightning-button
+                                                label={customLabels.sspApplyForBenefitsDashboard}
+                                                title={customLabels.sspApplyForBenefitsDashboard}
+                                                onclick={navigateToBenefitsScreen}
+                                                variant="brand"
+                                                class="slds-large-size_1-of-2 slds-size_1-of-1 ssp-button_base ssp-report-change-btn"
+                                                if:true={renderingMap.addBenefitsButton.isAccessible}
+                                                >
+                                            </lightning-button>                      
+                                        </div>
+                                    </div>
+                                </template>
+                            </template>
+                        </template>
+                        <template if:true={isHeadOfHouseHold}>
+                            <div class="slds-grid slds-wrap slds-size_1-of-1 ssp-waring-card-section">
+                                <!-- <template for:each={medicaidRenewalList} for:item=medicaid>  
+                                    <div key={medicaid.CaseInfoNumber} id ={medicaid.CaseInfoNumber}                      >                      
+                                        <c-ssp-explicit-notice-card key={medicaid.CaseInfoNumber}>
+                                            <div class="slds-grid slds-wrap slds-size_1-of-1 ssp-justify-content">
+                                                <div class="slds-large-size_5-of-6 slds-medium-size_5-of-6 slds-size_1-of-1">
+                                                    <p class="ssp-fontFamily_popinBold ssp-color_monoBody" >
+                                                        {medicaid.infoLabel} 
+                                                    </p>  
+                                                </div>
+                                                <div class="slds-large-size_1-of-6 slds-medium-size_1-of-6 slds-size_1-of-1 slds-text-align_right ssp-warning-action-link">
+                                                    <a onclick={handleRac} tabindex="0" class="ssp-fontFamily_popinRegular ssp-color_blueAlpha">{customLabels.sspRenewBenefits}</a>
+                                                </div>
+                                            </div>
+                                        </c-ssp-explicit-notice-card>
+                                    </div>
+                                </template> -->
+                                <!-- <template for:each={otherRenewalList} for:item=renewal>  
+                                    <div key={renewal.CaseInfoNumber} id ={renewal.CaseInfoNumber}>                      
+                                        <c-ssp-explicit-notice-card key={renewal.CaseInfoNumber}>
+                                            <div class="slds-grid slds-wrap slds-size_1-of-1 ssp-justify-content">
+                                                <div class="slds-large-size_5-of-6 slds-medium-size_5-of-6 slds-size_1-of-1">
+                                                    <p class="ssp-fontFamily_popinBold ssp-color_monoBody">
+                                                        {customLabels.sspYouMustCompleteAnInterviewToRenewYourSNAPBenefits}
+                                                    </p> 
+                                                    <p class="ssp-fontFamily_popinBold ssp-color_monoBody">
+                                                        {renewal.infoLabel}
+                                                    </p> 
+                                                </div>
+                                                <div class="slds-large-size_1-of-6 slds-medium-size_1-of-6 slds-size_1-of-1 slds-text-align_right ssp-warning-action-link">
+                                                    <a href="tel:+8553068959" tabindex="0" class="ssp-fontFamily_popinRegular ssp-color_blueAlpha">{customLabels.sspCallDCBS}</a>
+                                                </div>
+                                            </div> 
+                                        </c-ssp-explicit-notice-card>
+                                    </div>
+                                </template> -->
+                        <!--         <template if:true={renderingMap.addBenefitsButton.isAccessible}>
+                                    <template for:each={lstExpiringApplications} for:item=application>  
+                                        <div key={application.applicationId} id ={application.applicationId}>                      
+                                            <c-ssp-explicit-notice-card key={application.applicationId}>
+                                                <div class="slds-grid slds-wrap slds-size_1-of-1 ssp-justify-content">
+                                                    <div class="slds-large-size_5-of-6 slds-medium-size_5-of-6 slds-size_1-of-1">
+                                                        <p class="ssp-fontFamily_popinBold ssp-color_monoBody">
+                                                            {application.primaryInfoLabel}
+                                                        </p>
+                                                        <template if:false={application.isToday}>
+                                                            <p class="ssp-fontFamily_popinBold ssp-color_monoBody">{application.infoLabel}</p>
+                                                        </template>
+                                                        <template if:true={application.isToday}>
+                                                            <p class="ssp-fontFamily_popinBold ssp-color_monoBody">{application.infoLabel}</p>
+                                                        </template>
+                                                    </div>
+                                                    <div class="slds-large-size_1-of-6 slds-medium-size_1-of-6 slds-size_1-of-1 ssp-warning-action-link">
+                                                        <p class="ssp-align-items-center">
+                                                            <a onclick={handleBenefitNavigation} tabindex="0" class="ssp-fontFamily_popinRegular ssp-color_blueAlpha">{customLabels.sspContinue}</a>
+                                                            <span class="ssp-vertical-rule"></span>
+                                                            <a href="javascript:void(0)" tabindex="0" onclick={handleDeleteApplication}><img src={trashIcon}  class="ssp-trash-icon"/></a>
+
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </c-ssp-explicit-notice-card>
+                                        </div>
+                                    </template>
+                                </template> -->
+                                <!-- <template for:each={pendingInterviewApplications} for:item=interview>  
+                                    <div key={interview.applicationId} id ={interview.applicationId}>                      
+                                        <c-ssp-explicit-notice-card key={interview.applicationId}>
+                                            <p class="ssp-fontFamily_popinBold ssp-color_monoBody" >
+                                                {interview.primaryInfoLabel}
+                                            </p>
+                                            <template if:false={interview.isToday}>
+                                                <p class="ssp-fontFamily_popinBold ssp-color_monoBody">{interview.infoLabel}</p>
+                                            </template>
+                                            <template if:true={interview.isToday}>
+                                                <p class="ssp-fontFamily_popinBold ssp-color_monoBody">{interview.infoLabel}</p>
+                                            </template>
+                                        </c-ssp-explicit-notice-card>
+                                    </div>
+                                </template> -->
+                                <template if:true={showWorkerPortalBanner}>
+                                    <div class="ssp-WorkerPortal">
+                                        <c-ssp-worker-portal-banner>
+                                        </c-ssp-worker-portal-banner>   
+                                    </div>
+                                </template>
+                                <!-- <template for:each={lstNotifications} for:item=notification>                          
+                                    <template if:true={notification.hasSnapAmount}>  
+                                        <div key={notification.CaseInfoNumber} id ={notification.CaseInfoNumber}>                  
+                                            <c-ssp-explicit-notice-card key={notification.CaseInfoNumber}>
+                                                <div class="slds-grid slds-wrap slds-size_1-of-1 ssp-justify-content">
+                                                    <div class="slds-large-size_5-of-6 slds-medium-size_5-of-6 slds-size_1-of-1">
+                                                        <p class="ssp-fontFamily_popinBold ssp-color_monoBody" >
+                                                            {notification.primaryInfoLabel}
+                                                        </p> 
+                                                    </div>
+                                                    <div class="slds-large-size_1-of-6 slds-medium-size_1-of-6 slds-size_1-of-1 slds-text-align_right ssp-warning-action-link">
+                                                        <a href="#" tabindex="0" class="ssp-fontFamily_popinRegular ssp-color_blueAlpha">{customLabels.sspPayBalance}</a>
+                                                    </div>
+                                                </div>
+                                            </c-ssp-explicit-notice-card> 
+                                        </div>
+                                    </template>
+                                    <template if:true={notification.hasRFI}>
+                                        <div key={notification.CaseInfoNumber} id ={notification.CaseInfoNumber}>
+                                            <c-ssp-explicit-notice-card>
+                                                <div class="slds-grid slds-wrap slds-size_1-of-1 ssp-justify-content">
+                                                    <div class="slds-large-size_5-of-6 slds-medium-size_5-of-6 slds-size_1-of-1">
+                                                        <p class="ssp-fontFamily_popinBold ssp-color_monoBody">
+                                                            {notification.infoLabel}
+                                                        </p> 
+                                                    </div>
+                                                    <div class="slds-large-size_1-of-6 slds-medium-size_1-of-6 slds-size_1-of-1 slds-text-align_right ssp-warning-action-link">
+                                                        <a href="#" tabindex="0" class="ssp-fontFamily_popinRegular ssp-color_blueAlpha">{customLabels.sspUploadDocuments}</a>
+                                                        <template if:true={row.trashAction}>
+                                                        <a href="javascript:void(0)" tabindex="0" onclick={handleDeleteApplication}><img src={trashIcon}  class="ssp-trash-icon"/></a>
+                                                        </template>
+                                                    </div>
+                                                </div>                             
+                                            </c-ssp-explicit-notice-card>
+                                        </div>
+                                    </template>
+                                </template> -->
+                            </div>
+                        </template>
+                        <!--Added by Kyathi as a part of CD2 5.8.1.2 section-->
+                        <!-- <template if:true={falseValue}>
+                            <div class="slds-grid slds-wrap slds-size_1-of-1 ssp-waring-card-section ssp-authRepReviewConsent">
+                                <c-ssp-explicit-notice-card>
+                                    <div class="slds-grid slds-wrap slds-size_1-of-1 ssp-justify-content">
+                                        <div class="slds-max-medium-size_1-of-1 slds-size_5-of-6">
+                                            <p class="ssp-fontFamily_popinBold ssp-color_monoBody">
+                                                {customLabels.sspAuthRepAccessModalContentOne}
+                                            </p> 
+                                        </div>
+                                        <div if:true={renderingMap.reviewConsentLink.isAccessible} class="slds-max-medium-size_1-of-1 slds-size_1-of-6 slds-text-align_right ssp-warning-action-link">
+                                            <a onclick={openConsentModal} onkeydown={openConsentModal} class="ssp-fontFamily_popinRegular ssp-color_blueAlpha" tabindex="0" title={customLabels.sspReviewAndConsentTitle} data-type="auth">{customLabels.sspReviewAndConsent}</a>
+                                        </div>
+                                    </div>                             
+                                </c-ssp-explicit-notice-card>   
+                            </div>
+                        </template> -->
+                        <template if:true={displayAuthConsentModal}>
+                            <c-ssp-authorized-representative-access-request-modal onhideaccessrequestmodal ={hideAuthConsentModal} notification-id={authAssisterNotificationId} ></c-ssp-authorized-representative-access-request-modal>
+                        </template>
+                         <!--Added by Chirag as a part of CD2 Message Center-->
+                             <template for:each={criticalMessageNotifications} for:item="row">
+                            <div if:true={row.isVisible} class="slds-grid slds-wrap slds-size_1-of-1 ssp-waring-card-section ssp-authRepReviewConsent" key={row.sfdcId}>                                
+                                <c-ssp-explicit-notice-card>
+                                    <div class="slds-grid slds-wrap slds-size_1-of-1 ssp-justify-content">
+                                        <div class="slds-max-medium-size_1-of-1 slds-size_4-of-6">
+                                            <p class="ssp-fontFamily_popinBold ssp-color_monoBody">
+                                                {row.details}
+                                            </p> 
+                                        </div>
+                                        <template if:true={row.isToDo}>
+                                            <template if:false={row.isReadOnly}> <!-- 386073 only if false condition -->
+                                        <!-- For Desktop -->
+                                        <div if:true = {row.showActionButton} class="slds-max-medium-size_1-of-1 slds-size_2-of-6 slds-text-align_right ssp-warning-action-link ssp-warning-action-link-desktop">
+                                            <a onclick={handleClick} name={row.buttonAction} class="ssp-fontFamily_popinRegular ssp-color_blueAlpha ssp-message-center-button" tabindex="0" title={row.buttolAltText} data-id={row.sfdcId} data-application={row.linkedId}>{row.buttonName}</a>
+                                            <template if:true={row.trashAction}><span class="ssp-vertical-rule"></span><a href="javascript:void(0)" tabindex="0" onclick={handleDeleteApplication} data-application={row.linkedId}><img src={trashIcon} alt={row.buttonName}  class="ssp-trash-icon"/></a></template>
+                                        </div>
+                                        <!-- For Mobile -->
+                                        <div if:true = {row.showActionButton} class="slds-max-medium-size_1-of-1 slds-size_2-of-6 slds-text-align_right ssp-warning-action-link ssp-warning-action-link-mobile">
+                                            <a onclick={handleClick} name={row.mobileButtonAction} class="ssp-fontFamily_popinRegular ssp-color_blueAlpha" tabindex="0" title={row.mobileButtonAltText} data-application={row.linkedId}>{row.mobileButtonName}</a>
+                                            <a href={customLabels.sspNoticeCardPhoneNumberLink}  aria-hidden="true" tabindex="-1" class="ssp-callPhone ssp-hideAnchorNoText">{customLabels.sspNoticeCardPhoneNumberLink}</a>
+                                            <template if:true={row.trashAction}><span class="ssp-vertical-rule"></span><a href="javascript:void(0)" tabindex="0" onclick={handleDeleteApplication} data-application={row.linkedId}><img src={trashIcon}  class="ssp-trash-icon" alt="trash-icon"/></a></template>
+                                        </div>
+                                    </template>
+                                        </template>
+                                    </div>                             
+                                </c-ssp-explicit-notice-card>   
+                            </div>
+                            </template>
+
+                        <!--Added by Kyathi as a part of CD2 5.8.2 section-->
+                        <!-- <template if:true={falseValue}>
+                            <div class="slds-grid slds-wrap slds-size_1-of-1 ssp-waring-card-section ssp-authRepReviewConsent">
+                                <c-ssp-explicit-notice-card>
+                                    <div class="slds-grid slds-wrap slds-size_1-of-1 ssp-justify-content">
+                                        <div class="slds-max-medium-size_1-of-1 slds-size_5-of-6">
+                                            <p class="ssp-fontFamily_popinBold ssp-color_monoBody">
+                                                {customLabels.sspWantsToBeAssister}
+                                            </p> 
+                                        </div>
+                                        <div class="slds-max-medium-size_1-of-1 slds-size_1-of-6 slds-text-align_right ssp-warning-action-link">
+                                            <a onclick={openConsentModal} onkeydown={openConsentModal} class="ssp-fontFamily_popinRegular ssp-color_blueAlpha" tabindex="0" title={customLabels.sspReviewAndConsentTitle} data-type="assister">{customLabels.sspReviewAndConsent}</a>
+                                        </div>
+                                    </div>                             
+                                </c-ssp-explicit-notice-card>   
+                            </div>
+                        </template> -->
+                        <template if:true={displayAssisterConsentModal}>
+                            <c-ssp-assister-access-request-modal notification-id={authAssisterNotificationId} onhideaccessrequestmodal ={hideAssisterConsentModal}>
+                            </c-ssp-assister-access-request-modal>
+                        </template>
+                    </div>
+                    <div class="slds-grid slds-wrap slds-size_1-of-1 ssp-bg_monoAlpha">
+                        <div class="slds-grid slds-wrap slds-large-size_1-of-1 ssp-existing-dashboard-padding ssp-medicaid-reps-row">
+                            <template if:true={showBenefitsWidget}>
+                                <div if:true={renderingMap.benefitsWidget.isAccessible} class="slds-large-size_3-of-5 slds-size_1-of-1 ssp-benefits-card">
+                                    <div class="slds-size_1-of-1">
+                                        <p class="ssp-fontFamily_popinRegular ssp-color_monoOmega ssp-card-info">{customLabels.sspViewDetailsOnYourBenefitsApplicationCasesAndBenefits}</p>
+                                        <c-ssp-generic-dashboard-card card-header={customLabels.sspBenefits} show-arrow=true icon-url={nextArrow} link-url="javascript:void(0)" oniconclick={navigateToBenefitsPage} >
+                                            <div class="ssp-dashboardDropdown">
+                                                <div class="ssp-dashboardDropdownBtn slds-grid slds-grid_align-spread slds-grid_vertical-align-center" tabindex="0"
+                                                    onclick={toggleDropdown}>
+                                                    <div class="ssp-dashboardDropdownHeader slds-grid slds-grid_vertical-align-center">
+                          <template if:false={isUnderReview}>
+                                                        <p class="ssp-fontFamily_popinBold ssp-color_monoBody">{customLabels.sspCase}: {selectedCase}</p>
+                                                        <p class="ssp-caseStatus"><span class="ssp-dot"></span><span title={caseStatus}>{caseStatus}</span></p>
+                          </template>
+                          <template if:true={isUnderReview}>
+                            <p
+                              class="ssp-fontFamily_popinBold ssp-color_monoBody"
+                            >
+                            {customLabels.sspApplication} {selectedCase}
+                            </p>
+                            <p class="ssp-caseStatus">
+                              <span class="ssp-dot"></span
+                              ><span  title={caseStatus}>{caseStatus}</span>
+                            </p>
+                            </template>
+                                                    </div>
+                                                    <div if:true={showOptionDropDown} class="ssp-dashboardDropdownIcon"></div>
+                                                </div>
+                                            </div>
+                                            <div if:true={showOptionDropDown} class="ssp-dashboardDropdownContent ssp-boxShadow slds-grid slds-wrap">
+                                                <template for:each={options} for:item=choice>
+                                                    <div key={link}><a class="ssp-dashboardDropdownOptions ssp-fontFamily_popinRegular ssp-color_monoBody"
+                                                            onclick={selectCase} id={choice} tabindex="0">
+															 <template if:false={isUnderReview}>
+                              {customLabels.sspCase}: {choice}
+                            </template>
+                            <template if:true={isUnderReview}>
+                              {customLabels.sspApplication} {choice}
+                            </template>
+															</a></div>
+                                                </template>
+                                            </div>
+                                            <div class="ssp-dashboardTabsRow">
+                                                <div class="ssp-dashboardTab ssp-benefitsTab ssp-bg_monoDelta ssp-fontFamily_popinBold ssp-color_monoOmega active"
+                                                    onclick={openSelected} tabindex="0" id="tabContent1">
+                        <template if:false={isUnderReview}>
+                          {customLabels.sspApproved}
+                        </template>
+                        <template if:true={isUnderReview}>
+                          {customLabels.sspUnderReview}
+                        </template>
+                                                </div>
+                        <template if:false={isUnderReview}>
+                                                <div class="ssp-dashboardTab ssp-benefitsTab ssp-bg_monoDelta ssp-fontFamily_popinBold ssp-color_monoOmega"
+                                                    onclick={openSelected} tabindex="0">
+                                                    {customLabels.sspPendingInterview}
+                                                </div>
+                      </template>
+                      <template if:false={isUnderReview}>
+                                                <div class="ssp-dashboardTab ssp-benefitsTab ssp-bg_monoDelta ssp-fontFamily_popinBold ssp-color_monoOmega"
+                                                    onclick={openSelected} tabindex="0">
+                                                    {customLabels.sspPendingVerification}
+                                                </div>
+                        </template>
+                                            </div>
+                                            <div class="ssp-dashboardTabsContent ssp-benefitsContent show">
+                                                <template if:true={showBenefitTileSpinner}>
+                                                <div class="ssp-benefitTileSpinner">
+                                                    <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+                                                </div>
+                                            </template>
+                                                <div class="slds-grid">
+                                                    <div class="ssp-DashboardContentBody ssp-fontFamily_popinBold ssp-bullet-points">
+                                                        <template for:each={lstActiveBenefits} for:item="program">
+                                                            <p key={program}>
+                                                                <span class="ssp-dot"></span>
+                                                                <span>{program}</span>
+                                                            </p>
+                                                        </template>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="ssp-dashboardTabsContent ssp-benefitsContent">
+                                                <div class="ssp-DashboardContentBody ssp-fontFamily_popinBold ssp-bullet-points">
+                                                <template for:each={lstPendingInterviewBenefits} for:item="program">
+                                                    <p key={program}>
+                                                        <span class="ssp-dot"></span>
+                                                        <span>{program}</span>
+                                                    </p>
+                                                </template>
+                                                </div>
+                                            </div>
+                                            <div class="ssp-dashboardTabsContent ssp-benefitsContent">
+                                                <div class="ssp-DashboardContentBody ssp-fontFamily_popinBold ssp-bullet-points">
+                                                <template for:each={lstPendingVerificationBenefits} for:item="program">
+                                                    <p key={program}>
+                                                        <span class="ssp-dot"></span>
+                                                        <span>{program}</span>
+                                                    </p>
+                                                </template>
+                                                </div>
+                                            </div>
+                                        </c-ssp-generic-dashboard-card>
+                                
+                                    </div>
+                                </div>
+                            </template>
+                            <template if:true={hideMessageCenter}>
+                            <div if:true={showMessageCenter} class="slds-grid slds-wrap slds-large-size_2-of-5 slds-size_1-of-1">
+                                <div class="slds-size_1-of-1 ssp-message-center-card">
+                                    <p class="ssp-fontFamily_popinRegular ssp-color_monoOmega ssp-card-info">{customLabels.sspViewYourToDoListAndMessages}</p>
+                                    <c-ssp-generic-dashboard-card card-header={customLabels.sspMessageCenter} show-arrow=true icon-url={nextArrow} link-url="javascript:void(0)" oniconclick={navigateMessageCenter}>
+                                        <div class="slds-grid slds-wrap ssp-message-center-content ssp-bg_monoDelta">
+                                            <div class="slds-grid slds-wrap slds-size_1-of-1 ssp-todo-unread">
+                                                <div class="slds-grid slds-wrap slds-size_1-of-2">
+                                                    <p class="ssp-color_blueAlpha ssp-fontFamily_popinBold slds-text-align_center">{customLabels.sspToDos}</p>
+                                                </div>
+                                                <div class="slds-grid slds-wrap slds-size_1-of-2">
+                                                    <p class="ssp-color_blueAlpha ssp-fontFamily_popinBold slds-text-align_center">{customLabels.sspUnread}</p>
+                                                </div>
+                                            </div>
+                                            <template if:true={noMessage}>
+                                                    <div class="ssp-noSearchFoundContainer"> 
+                                                        <div class="ssp-sideImage">
+                                                            <p class="ssp-noMatchFound ssp-color_monoOmega ssp-fontFamily_popinRegular">{customLabels.sspMessageCenterCurrentlyNoData}</p>
+                                                         </div>
+                                                    </div>
+                                            </template>
+                                            <template if:false={noMessage}>
+                                            <div class="slds-grid slds-wrap slds-size_1-of-1 ssp-todo-count ssp-bg_whiteAlpha">
+                                                <div class="slds-grid slds-wrap slds-size_1-of-2">
+                                                    <p class="ssp-color_blueAlpha ssp-fontFamily_popinBold">{totalToDos}</p>
+                                                </div>
+                                                <div class="slds-grid slds-wrap slds-size_1-of-2">
+                                                    <p class="ssp-color_blueAlpha ssp-fontFamily_popinBold">{msgCenterSummary}</p>
+                                                </div>
+                                            </div>
+                                            <div class="slds-grid slds-wrap slds-size_1-of-2 ssp-todo-count-container">
+                                                <template if:true={noTodo}>
+                                                    <div><p class="ssp-color_monoOmega ssp-todo-count-text">{customLabels.sspMessageCenterNoToDo}</p></div>
+                                                </template>
+
+                                                <!--Added showMessageCenterColumnOne condition #372375 fix-->
+                                                <template if:true={showMessageCenterColumnOnePrimary}>
+                                                    <div class="slds-grid slds-wrap slds-size_1-of-1 ssp-specific-info">
+                                                        <div class="slds-grid slds-wrap slds-size_1-of-1">
+                                                            <p class="ssp-fontFamily_popinBold slds-grid ssp-due-week">
+                                                                <span class="ssp-count-margin ssp-color_redAlpha">{dueToDos}</span>
+                                                                <span>{customLabels.sspDueThisWeek}</span>
+                                                            </p>
+                                                        </div>
+                                                        
+                                                    </div>
+                                                    <div class="slds-grid slds-wrap slds-size_1-of-1 ssp-specific-info">
+                                                        <div class="slds-grid slds-wrap slds-size_1-of-1">
+                                                            <p class="slds-grid slds-wrap slds-size_1-of-1 ssp-fontFamily_popinBold">
+                                                                <span class="ssp-count-margin">{msgCenterToDos}</span>
+                                                                <span>{customLabels.sspNew}</span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="slds-grid slds-wrap slds-size_1-of-1 ssp-specific-info">
+                                                        <div class="slds-grid slds-wrap slds-size_1-of-1">
+                                                        </div>
+                                                    </div>
+                                                </template>
+
+                                                <!-- Added for dependent login #372375 fix-->
+                                                <template if:true={showMessageCenterColumnOneNonPrimary}>
+                                                    <div class="slds-grid slds-wrap slds-size_1-of-1 ssp-specific-info">                                                    
+                                                        <div class="slds-grid slds-wrap slds-size_1-of-1">
+                                                            <p class="slds-grid slds-wrap slds-size_1-of-1 ssp-fontFamily_popinBold">
+                                                                <span class="ssp-count-margin">{msgCenterAnnouncementsCount}</span>
+                                                                <span>{customLabels.sspAnnouncements}</span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </template>
+                                            </div>
+                                            <!---->
+                                            <div class="slds-grid slds-wrap slds-size_1-of-2 ssp-un-read-count-container">
+                                                <template if:true={noUnread}>
+                                                    <div><p class="ssp-color_monoOmega ssp-un-read-count-text">{customLabels.sspMessageCenterNoMessage}</p></div>
+                                                </template>
+
+                                                <!--Added showMessageCenterColumnOne condition #372375 fix-->
+                                                <template if:true={showMessageCenterColumnTwoPrimary}>
+                                                    <div class="slds-grid slds-wrap slds-size_1-of-1 ssp-specific-info">
+                                                        <div class="slds-grid slds-wrap slds-size_1-of-1">
+                                                            <p class="slds-grid slds-wrap slds-size_1-of-1 ssp-fontFamily_popinBold">
+                                                                <span class="ssp-count-margin">{msgCenterNotices}</span>
+                                                                <span>{customLabels.sspNotice}</span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="slds-grid slds-wrap slds-size_1-of-1 ssp-specific-info">
+                                                    
+                                                        <div class="slds-grid slds-wrap slds-size_1-of-1">
+                                                            <p class="slds-grid slds-wrap slds-size_1-of-1 ssp-fontFamily_popinBold">
+                                                                <span class="ssp-count-margin">{msgCenterAnnouncementsCount}</span>
+                                                                <span>{customLabels.sspAnnouncements}</span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="slds-grid slds-wrap slds-size_1-of-1 ssp-specific-info">
+                                                        
+                                                        <div class="slds-grid slds-wrap slds-size_1-of-1">
+                                                            <p class="slds-grid slds-wrap slds-size_1-of-1 ssp-fontFamily_popinBold">
+                                                                <span class="ssp-count-margin">{msgCenterNotifications}</span>
+                                                                <span>{customLabels.sspNotifications}</span>
+                                                            </p>
+                                                        </div>
+                                                    
+                                                    </div>
+                                            </template>
+                                            </div>
+                                            
+                                            </template>
+                                        </div>
+                                    </c-ssp-generic-dashboard-card>
+                                </div>
+                            </div>
+                        </template>
+                                <div if:true={renderingMap.medicaidPlansWidget.isAccessible} class="slds-large-size_3-of-5 slds-size_1-of-1 ssp-medicaidWidget slds-hide">
+                                    <div class="slds-size_1-of-1 ssp-medicaid-card">
+                                        <p class="ssp-fontFamily_popinRegular ssp-color_monoOmega ssp-card-info">{customLabels.sspViewAndShopForYourCurrentMedicaidPlansAndMCOs}</p>
+                                        <!-- change done by kyathi as part of Addendum-->
+                                        <c-ssp-generic-dashboard-card card-header={customLabels.sspHealthPlans} show-arrow=true icon-url={nextArrow} link-url="javascript:void(0)" oniconclick={iconClick}>
+                                            <div class="ssp-dashboardTabsRow">
+                                                <div class="ssp-dashboardTab ssp-medicaidTab ssp-bg_monoDelta ssp-fontFamily_popinBold ssp-color_monoOmega ssp-noEnrolledTab"
+                                                    onclick={openSelectedTab} tabindex="0">
+                                                    {customLabels.sspNotEnrolled}
+                                                </div>
+                                                <div class="ssp-dashboardTab ssp-medicaidTab ssp-bg_monoDelta ssp-fontFamily_popinBold ssp-color_monoOmega ssp-allEnrolledTab"
+                                                    onclick={openSelectedTab} tabindex="0">
+                                                    {customLabels.sspEnrolled}
+                                                </div>
+                                            </div>
+                                            <div class="ssp-dashboardTabsContent ssp-medicaidContent ssp-noEligibleContent">
+                                                <div class="slds-grid">
+                                                    <div class="ssp-DashboardContentBody ssp-fontFamily_popinBold ssp-bullet-points">
+                                                        <template for:each={lstNonEnrolledMedicaidPrograms} for:item="program">
+                                                            <p key={program}>
+                                                                <span class="ssp-dotOrange ssp-bg_orangeAlpha"></span>
+                                                                <span>{program}</span>
+                                                            </p>
+                                                        </template>
+                                                    </div>
+                                                    <template if:true={isHohNotEnrolled}>
+                                                    <p class="ssp-noEligibleIndividuals ssp-fontFamily_popinRegular ssp-color_monoOmega slds-align_absolute-center">{customLabels.sspAllEligibleIndividuals}</p>
+                                                    </template>
+                                                </div>
+                                            </div>
+                                            <div class="ssp-dashboardTabsContent ssp-medicaidContent ssp-allEligibleContent">
+                                                <!-- 391302-->                                             
+                                                <template if:true={enrolledMember}>
+                                                    <div class="ssp-fontFamily_popinBold ssp-color_blueAlpha ssp-mcoText">{customLabels.sspMedicaidPlansMCO}</div>
+                                                  </template>
+                                                  <!-- 391302-->
+                                                <div class="ssp-DashboardContentBody ssp-fontFamily_popinBold ssp-bullet-points">
+                                                <template for:each={lstEnrolledMedicaidPrograms} for:item="program">
+                                                    <p key={program.planName} class="ssp-detailsContainer">
+                                                        <span class="ssp-dot"></span>
+                                                        <span class="ssp-color_monoBody">{program.planName}</span>
+                                                        <span class="ssp-individualMembers ssp-fontFamily_popinRegular ssp-color_monoBody">{program.members}</span>
+                                                    </p>
+                                                </template>
+                                                </div>
+                                                
+                                                <template if:true={isHohEnrolled}>
+                                                <p class="ssp-allEligibleIndividuals ssp-fontFamily_popinRegular ssp-color_monoOmega slds-align_absolute-center">{customLabels.sspNoEligibleIndividuals}</p>
+                                                </template>
+                                            </div>
+                                            <template if:true={isHeadOfHouseHold}>
+                                                <a onclick={iconClick} onkeydown={iconClick} title={customLabels.sspEnrollmentManagerTitle} tabindex="0" class="ssp-enrollmentManager ssp-color_blueAlpha">{customLabels.sspEnrollmentManager}</a>
+                                            </template>
+                                            <template if:false={isHeadOfHouseHold}>
+                                                <a onclick={iconClick} onkeydown={iconClick} title={customLabels.sspMCOHistoryTitle} tabindex="0" class="ssp-enrollmentManager ssp-color_blueAlpha">{customLabels.sspViewMCOHistory}</a>
+                                            </template>
+                                        </c-ssp-generic-dashboard-card>
+                                    </div>
+                                </div>
+                            <template if:true={isHeadOfHouseHold}>
+                                <div if:true={renderingMap.repsWidget.isAccessible} class="slds-grid slds-wrap slds-large-size_2-of-5 slds-size_1-of-1">
+                                    <div class="slds-size_1-of-1 ssp-reps-assisters-card">
+                                        <p class="ssp-fontFamily_popinRegular ssp-color_monoOmega ssp-card-info">{customLabels.sspManageAndViewDetailsAboutYourSupportTeam}</p>
+                                        <c-ssp-generic-dashboard-card card-header={customLabels.sspRepsAssistersAgents} show-arrow={isHeadOfHouseHold} icon-url={nextArrow} link-url="javascript:void(0)" oniconclick={navigateToRepsAssisters}>
+                                                <div  class="ssp-reps-assistets slds-grid slds-grid_vertical-align-center">
+                                                    <div class="ssp-reps-assistets-content slds-size_11-of-12">
+                                                        <p class="ssp-fontFamily_popinBold ssp-color_monoBody">{customLabels.sspAuthorizedRepresentative}</p>
+                                                        <p class="ssp-color_monoOmega">{strAuthRep}</p>
+                                                    </div>
+                                                    <a href={authorizedRepresentativeURL} class="slds-size_1-of-12"><img src={nextArrowPrimary} alt="right_Arrow"></a>
+                                                </div>
+                                                <div class="ssp-reps-assistets slds-grid slds-grid_vertical-align-center">
+                                                    <div class="ssp-reps-assistets-content slds-size_11-of-12">
+                                                        <p class="ssp-fontFamily_popinBold ssp-color_monoBody">{customLabels.sspAssister}</p>
+                                                        <p class="ssp-color_monoOmega">{strAssister}</p>
+                                                    </div>
+                                                    <a href={authorizedRepresentativeURL} class="slds-size_1-of-12"><img src={nextArrowPrimary} alt="right_Arrow"></a>
+                                                </div>
+                                                <div class="ssp-reps-assistets slds-grid slds-grid_vertical-align-center">
+                                                    <div class="ssp-reps-assistets-content slds-size_11-of-12">
+                                                        <p class="ssp-fontFamily_popinBold ssp-color_monoBody">{customLabels.sspInsuranceAgent}</p>
+                                                        <p class="ssp-color_monoOmega">{strAgent}</p>
+                                                    </div>
+                                                    <a href={authorizedRepresentativeURL} class="slds-size_1-of-12"><img src={nextArrowPrimary} alt="right_Arrow"></a>
+                                                </div>
+                                            
+                                        </c-ssp-generic-dashboard-card>
+                                    </div>
+                                </div>
+                            </template>
+                        </div>
+                    </div>
+          <div
+            class="slds-grid slds-wrap slds-large-size_1-of-1 ssp-existing-dashboard-padding ssp-action-links"
+          >
+            <p
+              class="slds-size_1-of-1 ssp-fontFamily_popinBold ssp-color_blueAlpha ssp-want-to-text slds-m-top_large"
+            >
+              {customLabels.sspIWantTo}
+            </p>
+            <hr class="slds-size_1-of-1 ssp-bg_monoAlpha ssp-horizontal-rule" ></hr>
+            <div class="slds-grid slds-wrap slds-size_1-of-1">
+              <div if:true={renderingMap.navigateToCitizenConnect.isAccessible} class="slds-large-size_1-of-2 slds-size_1-of-1">
+                <a
+                  class="ssp-fontFamily_popinBold ssp-color_monoBody ssp-want-to-link"
+                  tabindex="0"
+                  href="https://citizenconnect.ky.gov/s/"
+                  target="_blank"
+                  >{customLabels.sspNavigateToCitizenConnect}</a
+                >
+                                <div class="slds-grid slds-wrap slds-size_1-of-1">
+                  <div
+                    class="slds-large-size_8-of-12 slds-medium-size_8-of-12 slds-size_1-of-1"
+                  >
+                    <p class="ssp-iWantToContentLink">
+                      {customLabels.sspCompleteSNAPAndMedicaidWorkParticipationRequirementsApplyForWorkforce}
+                    </p>
+                                </div>
+                  <div
+                    class="slds-large-size_4-of-12 slds-size_1-of-1"
+                  >
+                    <img
+                      src={citizenConnect}
+                      class="ssp-citizen-connect"
+                      alt="Kentucky Citizen Connect"
+                    />
+                            </div>
+                </div>
+              </div>
+              <div if:true={renderingMap.navigateToBackyard.isAccessible} class="slds-large-size_1-of-2 slds-size_1-of-1 ssp-iWantToContent ssp-margin18">
+                <a class="ssp-fontFamily_popinBold ssp-color_monoBody ssp-want-to-link" alt={customLabels.sspGoToKynectResources} tabindex="0" onclick={handleBackyardNavigation}
+                    title={customLabels.sspGoToKynectResources}  
+                >{customLabels.sspNavigateToBackyard}</a
+                >
+                <!-- <p class="ssp-iWantToContentLink">{customLabels.sspTheBackYardConnectsKentuckyResidents}</p> -->
+                
+                                <div class="slds-grid slds-wrap slds-size_1-of-1">
+                  <div
+                    class="slds-large-size_8-of-12 slds-medium-size_8-of-12 slds-size_1-of-1"
+                  >
+                    <p class="ssp-iWantToContentLink">
+                      {customLabels.sspTheBackYardConnectsKentuckyResidents}
+                    </p>
+                                </div>
+                  <div
+                    class="slds-large-size_4-of-12 slds-size_1-of-1"
+                  >
+                    <img
+                      src={kynectImage}
+                      class="ssp-citizen-connect"
+                      alt="Kentucky Citizen Connect"
+                    />
+                            </div>
+                </div>
+              </div>
+
+              <template if:false={isJORITWIST}>
+                    <div if:true={isEBTRequestVisibility} class="slds-large-size_1-of-2 slds-size_1-of-1 ssp-iWantToContent">
+                        <a class="ssp-fontFamily_popinBold ssp-color_monoBody ssp-want-to-link" tabindex="0" 
+                        name="EBT" onclick={handleRequestACard} onkeydown={handleRequestACard}
+                        >{customLabels.sspRequestAnEBTCard}</a
+                        >
+                        <p class="ssp-iWantToContentLink">{customLabels.sspSubmitRequestForNewEBTCard}</p>
+                    </div>
+                </template>
+             
+               <template if:false={isJORITWIST}>
+                    <div if:true={isMedicaidRequestVisibility} class="slds-large-size_1-of-2 slds-size_1-of-1 ssp-iWantToContent">
+                        <a class="ssp-fontFamily_popinBold ssp-color_monoBody ssp-want-to-link" tabindex="0"
+                        name="Medicaid" onclick={handleRequestACard} onkeydown={handleRequestACard}
+                            >{customLabels.sspRequestMedicaidCard}</a
+                        >
+                        <p class="ssp-iWantToContentLink">
+                            {customLabels.sspSubmitRequestForReplacementMedicaidCard}
+                        </p>
+                     </div> 
+                    </template>
+              <div if:true={renderingMap.requestTaxForms.isAccessible} class="slds-large-size_1-of-2 slds-size_1-of-1 ssp-iWantToContent">
+                <a class="ssp-fontFamily_popinBold ssp-color_monoBody ssp-want-to-link" tabindex="0" onclick={navigateToRequestTaxForms}
+                  >{customLabels.sspRequestTaxForms}</a
+                >
+                <p class="ssp-iWantToContentLink">
+                  {customLabels.sspCreateRequestForUsToSendYourDetailsForYourTaxReturnFiling}
+                </p>
+              </div>
+              <div class="slds-large-size_1-of-2 slds-size_1-of-1 ssp-iWantToContent">
+                <a class="ssp-fontFamily_popinBold ssp-color_monoBody ssp-want-to-link" tabindex="0"
+                  onclick = {navigateToPreScreeningToolPage} >{customLabels.sspHomePageCheckEligibility}</a
+                >
+                <p class="ssp-iWantToContentLink">{customLabels.sspUseTheScreeningTool}</p>
+              </div>
+              <div class="slds-large-size_1-of-2 slds-size_1-of-1 ssp-iWantToContent">
+                <a class="ssp-fontFamily_popinBold ssp-color_monoBody ssp-want-to-link" tabindex="0"
+                onclick={reportFraud} onkeydown={reportFraud}
+                  >{customLabels.sspReportFraud}</a
+                >
+                <p class="ssp-iWantToContentLink">
+                  {customLabels.sspHelpTheCommonwealthOfKentuckyStopScammers}
+                </p>
+              </div>
+              <div if:true={renderingMap.searchChildCareProviders.isAccessible} class="slds-large-size_1-of-2 slds-size_1-of-1 ssp-iWantToContent">
+                <a class="ssp-fontFamily_popinBold ssp-color_monoBody ssp-want-to-link" tabindex="0" onclick={navigateToCCProviderSearchPage}
+                  >{customLabels.sspSearchChildCareProviders}</a
+                >
+                <p class="ssp-iWantToContentLink">
+                  {customLabels.sspSearchForStateApprovedChildCareProvidersWithinTheCCAPNetwork}
+                </p>
+              </div>
+              <div if:true={showKIHIPPSummaryLink} class="slds-large-size_1-of-2 slds-size_1-of-1 ssp-iWantToContent">
+                <a class="ssp-fontFamily_popinBold ssp-color_monoBody ssp-want-to-link" tabindex="0"
+                onclick = {redirectToKIHIPPSummary}  >{customLabels.sspKIHIPPPaymentSummary}</a
+                >
+                <p class="ssp-iWantToContentLink">
+                  {customLabels.sspViewHistoryOfKIHIPPPaymentsForThisHousehold}
+                </p>
+                            </div>
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <template if:true={showDeletePopUp}>
+                <c-ssp-delete-application-modal application-id={applicationId} show-popup={showDeletePopUp}
+                oncancel={handleDeleteCancel} onsuccess={handleDeleteSuccess}></c-ssp-delete-application-modal>
+            </template>
+        </template>
+        <template if:true={isFirstTimeUser}>
+            <c-ssp-first-time-user-dashboard  member-name={contactName}></c-ssp-first-time-user-dashboard>
+        </template>
+    </div>
+    <template if:true={showRACPopUp}>
+        <c-ssp-report-a-change-modal onclose={handleClose} application-list={strActiveCases}></c-ssp-report-a-change-modal>
+    </template>
+    <!--Driver Navigation-->
+    <template if:true={showMadeProgressModal}>
+        <c-ssp-another-user-made-progress-modal open-model={showMadeProgressModal} onprogressvaluechange={progressValueUpdated}></c-ssp-another-user-made-progress-modal>
+    </template>
+    <template if:true={showAnotherUserInProgress}>
+        <c-ssp-another-user-already-here-modal open-model={showAnotherUserInProgress} onprogressvaluechange={progressValueUpdated}></c-ssp-another-user-already-here-modal>
+    </template>
+    <template if:true={programAccessCheck}>
+        <c-ssp-cannot-apply-all-program-modal open-model={programAccessCheck} onprogressvaluechange={progressValueUpdated}></c-ssp-cannot-apply-all-program-modal>
+    </template>
+</template>

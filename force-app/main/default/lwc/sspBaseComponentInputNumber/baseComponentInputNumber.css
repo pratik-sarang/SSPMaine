@@ -1,0 +1,14 @@
+.showError{
+    color : rgb(194, 57, 52);
+    font-size: .75rem;
+    margin-top: 0.125rem;
+    background: transparent;
+    font-family: Lato;
+}
+.ssp-genericInput .slds-form-element{
+    display: inline;
+}
+.ssp-genericInput .ssp-genericRequired{
+    display: inline;
+    color: red;
+}

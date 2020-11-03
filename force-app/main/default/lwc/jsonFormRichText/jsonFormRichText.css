@@ -1,0 +1,74 @@
+:host {
+  /** make the host DOM to disappear to apply correct SLDS styles. **/ 
+  display: contents;
+}
+.ssp-appDiscOrange {
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    margin-right: 6px;
+  }
+
+.ssp-marginBottom30{
+  margin-bottom: 1.875rem;
+}
+
+.ssp-warningCard{
+  padding-bottom: 1.875rem;
+  padding-top: 15px;
+}
+
+.ssp-formatted-richtext{
+    font-size: 1rem;
+    line-height: 1.5rem; 
+}
+
+.ssp-marginBottomFifteen{
+  margin-bottom: .9375rem;
+}
+
+.ssp-iconSize{
+  width: 4rem;
+  height: 4rem;
+}
+
+.ssp-formatted-richtext .dd-formattedtext-list {
+  background-color: red;
+}
+
+.dd-formattedtext-list ol{
+  list-style-type: decimal;
+  padding-left: 1rem;
+  font-size: 1rem;
+}
+
+
+.dd-formattedtext-list li{
+  padding-bottom: .3125rem;
+}
+
+.ssp-formattedTextIcon .ssp-iconSize {
+  width: 4rem;
+  height: 4rem;
+}
+
+
+@media only screen and (max-width: 768px) {
+.ssp-formattedTextIcon {
+      float: left;
+      width: 11.43%;
+  }
+
+.ssp-formattedTextIcon .ssp-iconSize {
+      width: 2.25rem;
+      height: 2.25rem;
+      margin-top: 0.275rem;
+  }
+
+.ssp-formattedIconTextContent{
+  float: right;
+  width: 88.57%;
+  padding-left: 1rem;
+}
+  
+}

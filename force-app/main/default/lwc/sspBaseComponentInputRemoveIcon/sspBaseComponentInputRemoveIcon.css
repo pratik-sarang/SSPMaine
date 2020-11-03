@@ -1,0 +1,19 @@
+.showError {
+    font-size: 0.75rem;
+    margin-top: 0.125rem;
+    background: transparent;
+}
+.ssp-genericInput .slds-form-element {
+    display: inline;
+}
+.ssp-inputText {
+    width: 99%;
+    position: relative;
+}
+.ssp-removeIcon {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 49%;
+    margin-right: 0.625rem;
+}

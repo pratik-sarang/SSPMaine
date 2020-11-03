@@ -1,0 +1,42 @@
+<template>
+  <div class="slds-m-vertical_medium">
+    <div class="ssp-genericInputToggle slds-grid slds-wrap">
+      <div class="ssp-componentWidth">
+        <div class="ssp-alignHelpText slds-m-bottom_small">
+                    <label for={fieldInfo.name} class="ssp-fontFamily_popinBold"
+                        >{label}</label
+                    >
+          <template if:true={isHelpText}>
+                        <lightning-helptext
+                            class="ssp-helptextIcon"
+                            icon-name="utility:info_alt"
+                            content={helpTextContent}
+                        >
+            </lightning-helptext>
+          </template>
+        </div>
+                <lightning-radio-group
+                    class="ssp-genericInputTogglegroup ssp-fontFamily_popinBold"
+                    data-id={name}
+					id={fieldInfo.name}
+                    label={label}
+                    value={value}
+                    title={title}
+                    options={radiogroupOptions}
+                    disabled={disabled}
+                    required={requiredVar}
+                    type="button"
+                    variant="label-hidden"
+                    onchange={handleChange}
+                    message-when-value-missing={missValueMsg}
+                >
+        </lightning-radio-group>
+        <template for:each={errorMessages} for:item="error">
+                    <p key={error} class="showError ssp-color_redOmega">
+                        {error}
+                    </p>
+        </template>
+      </div>
+    </div>
+  </div>
+</template>

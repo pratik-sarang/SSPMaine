@@ -1,0 +1,142 @@
+.ssp-bodyPadding {
+    padding: 0 165px 0 60px;
+}
+.ssp-claimsAndPaymentsHeader {
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+.ssp-claimsAndPaymentsHeaderText {
+    font-size: 2.625rem;
+    line-height: 48px;
+}
+.ssp-payInstructions {
+    font-size: 1rem;
+    padding-bottom: 30px;
+}
+.ssp-repaymentInstructions {
+    margin: 30px 0;
+}
+
+.ssp-horizontal-rule {
+    height: 0.313em;
+    border-radius: 0.156em;
+    margin: 30px 0;
+    border: none;
+}
+.ssp-amountOwedheading {
+    margin: 20px 0;
+    font-size: 1rem;
+}
+.ssp-claimProgramStatus:last-child {
+    padding-bottom: 115px;
+}
+.ssp-programName {
+    font-size: 1.125rem;
+    padding: 18px 0;
+}
+.ssp-claimCardSection {
+    padding-bottom: 15px;
+}
+.ssp-claimStatus {
+    font-size: 1rem;
+    padding: 15px 30px;
+}
+.ssp-statusInfo{
+    padding: 0 30px 30px 30px;
+}
+.ssp-statusInfoAmount {
+    align-items: stretch;
+}
+.ssp-buttonPayNowSection {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding-top: 15px;
+}
+.ssp-buttonPayNow {
+    width: 267px;
+}
+.ssp-dueDateSection {
+    padding: 14px 0 15px 0;
+}
+.ssp-claimId {
+    font-size: 1rem;
+    display: inline-block;
+    width: 240px;
+}
+.ssp-dueDate {
+    font-size: 0.8125rem;
+}
+.ssp-currentAmountSection {
+    margin: 15px 0 0 0;
+}
+.ssp-paymentWarning {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+}
+.ssp-currentAmountText {
+    font-size: 0.8125rem;
+    display: inline-block;
+    width: 240px;
+}
+.ssp-currentAmountOwned {
+    font-size: 1rem;
+}
+.ssp-payAlert {
+    font-size: 0.8125rem;
+}
+.ssp-reviewIcon {
+    height: 24px;
+    width: 24px;
+}
+.ssp-cancel-button {
+    margin-top: 15px;
+}
+.ssp-remainingAmountOwed {
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 30px;
+}
+.ssp-remainingAmountOwedText {
+    font-size: 13px;
+}
+.ssp-choosePaymentInfo {
+    margin-bottom: 30px;
+}
+.ssp-amountTypeList {
+    padding-bottom: 30px;
+    margin-bottom: 16px;
+}
+.ssp-contactNumber {
+    outline: none;
+    text-decoration: underline;
+}
+@media only screen and (max-device-width: 768px) {
+    .ssp-bodyPadding {
+        padding: 0 30px;
+    }
+    .ssp-claimsAndPaymentsHeaderText {
+        font-size: 1.5rem;
+    }
+    .ssp-payInstructions {
+        padding-bottom: 30px;
+    }
+    .ssp-claimId {
+        width: 100%;
+    }
+    .ssp-dueDate {
+        width: 100%;
+    }
+    .ssp-currentAmountText {
+        width: 70%;
+    }
+    .ssp-currentAmountOwned {
+        display: inline-block;
+        width: 30%;
+        text-align: right;
+    }
+    .ssp-buttonPayNow {
+        width: 100%;
+    }
+}

@@ -1,0 +1,104 @@
+.ssp-MemberCardContainer {
+    margin: 0px;
+    border-radius: 0.5rem;
+    border: 0;
+}
+.ssp-MemberCard {
+    padding: 15px 30px;
+    border-radius: 6px 6px 0 0;
+}
+
+.reviewRequired {
+    border-color: darkred;
+    border: 2px;
+}
+
+.ssp-cardHeadingContainer {
+    padding: 10px 0;
+}
+
+li {
+    margin: 20px 30px;
+}
+
+.ssp-MemberCardText {
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: -0.3px;
+    line-height: 20px;
+}
+
+.ssp-ReviewVariationCardBlack {
+    font-size: 0.8125rem;
+    letter-spacing: 0.3px;
+    line-height: 18px;
+}
+
+.ssp-MemberCardIcon {
+    height: 24px;
+    width: 24px;
+}
+
+.ssp-MemberCardNextIcon {
+    height: 24px;
+    cursor: pointer;
+}
+
+.ssp-MemberCardNextIcon span {
+    text-decoration: underline;
+    padding-right: 10px;
+}
+
+.ssp-member-detail-section {
+    padding-right: 20px;
+}
+.ssp-member-detail-section:nth-child(3n + 0) {
+    padding-right: 0px;
+}
+.ssp-nonMemberNote {
+    margin: 0px 30px 30px 30px;
+    position: relative;
+}
+
+.ssp-nonMemberNote img {
+    width: 24px;
+    height: 24px;
+}
+.ssp-nonMemberNote span {
+    position: absolute;
+    left: 35px;
+    top: 3px;
+}
+
+.ssp-nonMemberNote a {
+    text-decoration: underline;
+    margin-left: 15px;
+}
+
+@media only screen and (max-width: 768px) {
+    .ssp-MemberCard {
+        padding: 15px 24px 15px 24px;
+    }
+    .ssp-member-detail-section {
+        width: 100%;
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .ssp-nonMemberNote a {
+        font-size: 0.8125rem;
+        display: block;
+        margin-left: 0;
+    }
+    .ssp-nonMemberNote span {
+        top: 0;
+        font-size: 0.8125rem;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .ssp-MemberCardText {
+        font-size: 0.8125rem;
+        letter-spacing: -0.3px;
+        line-height: 20px;
+    }
+}

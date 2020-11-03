@@ -1,0 +1,531 @@
+<!--
+* name 		    : SspAssisterAccessRequest
+* @description 	: The component is used for Assister Access Request.
+* @author 		: Kyathi
+* @date 		: 5/20/2020
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* Kyathi	                     5/28/2020	                        HTML Structure
+-->
+<template>
+  <template if:true={showSpinner}>
+    <c-ssp-spinner></c-ssp-spinner>
+  </template>
+  <template if:true={showErrorToast}>
+    <c-ssp-toast
+      ssp-toast-title-val={label.toastErrorText}
+      onhidetoast={handleHideToast}
+      show-error-toast={toastTrueValue}
+    >
+    </c-ssp-toast>
+  </template>
+  <c-ssp-logging-and-error-handling-modal
+    if:true={showErrorModal}
+    error-id=""
+    onprogressvaluechange={closeError}
+  >
+  </c-ssp-logging-and-error-handling-modal>
+  <main class="ssp-assisterAccessRequest" if:false={showNextStepScreen}>
+    <div
+      class="ssp-bg_appHeaderGradient slds-p-vertical_medium ssp-reps-header"
+    >
+      <span class="ssp-fontFamily_popinBold ssp-color_monoBody ssp-reps-text"
+        >{label.sspBenefitsApplication}</span
+      >
+    </div>
+    <div
+      class="slds-m-vertical_large ssp-add-auth-rep-program ssp-bodyContainer"
+    >
+      <div class="ssp-add-auth-rep-program-header">
+        <h1
+          class="ssp-add-auth-rep-program-header-text ssp-fontFamily_popinBlack ssp-color_blueAlpha"
+        >
+          {label.sspAssisterAccessRequest}
+        </h1>
+        <a
+          tabindex="0"
+          onclick={displayLearnMoreModelMethod}
+          onkeydown={displayLearnMoreModelMethod}
+          title={label.sspLearnMoreAltText}
+          class="ssp-learnMore_link slds-m-top_xx-small ssp-color_monoBody ssp-fontFamily_popinBold"
+        >
+          {label.sspLearnMoreLink}</a
+        >
+        <span>|</span>
+                <template if:false={languageSpanish}>
+                    <a
+                        class="ssp-downloadAddendum_link slds-m-top_xx-small ssp-color_monoBody ssp-fontFamily_popinBold"
+                        onclick={openConsentFormAppendix}
+                        onkeydown={openConsentFormAppendix}
+                        tabindex="0"
+                        data-document-name="ConsentFormAppendix"
+                        data-resource-url={consentFormAppendix}
+                        >{label.sspDownloadAppendixForm}</a
+                    >
+                </template>
+                <template if:true={languageSpanish}>
+                    <a
+                        class="ssp-downloadAddendum_link slds-m-top_xx-small ssp-color_monoBody ssp-fontFamily_popinBold"
+                        onclick={openConsentFormAppendixSpanish}
+                        onkeydown={openConsentFormAppendixSpanish}
+                        tabindex="0"
+                        data-document-name="ConsentFormAppendixSpanish"
+                        data-resource-url={consentFormAppendixSpanish}
+                        >{label.sspDownloadAppendixForm}</a
+                    >
+                </template>
+        <template if:true={openLearnMoreModel}>
+          <c-ssp-detailed-information-modal
+            reference={reference}
+            header-value={label.sspLearnMoreLink}
+            open-model={openLearnMoreModel}
+            onclosemodal={hideLearnMoreModelMethod}
+          >
+            <span
+              slot="contentSlot"
+              class="ssp-learnMore ssp-fontFamily_ArvoRegular"
+            >
+            </span>
+          </c-ssp-detailed-information-modal>
+        </template>
+      </div>
+      <p class="ssp-sectionSeperator ssp-bg_monoBeta slds-m-top_x-large"></p>
+      <div>
+        <div class="ssp-authRepAccessRequest" if:true={showSearchIndividual}>
+          <div class="slds-m-vertical_large ssp-add-auth-rep-program">
+            <div class="slds-grid slds-wrap ssp-auth-rep-program-form">
+              <div class="slds-grid slds-wrap slds-size_1-of-1">
+                <!-- <c-ssp-base-component-input-text
+                        class="ssp-applicationInputs ssp-inputElement ssp-applicationDuplicateInputs slds-max-medium-size_1-of-1 slds-size_1-of-2 ssp-gutter-right"
+                        label={label.sspFirstName}
+                        data-id="FirstName"
+                    > 
+                    </c-ssp-base-component-input-text> -->
+                <c-ssp-base-component-input-text
+                  class="ssp-inputElement ssp-applicationInputs ssp-applicationDuplicateInputs slds-max-medium-size_1-of-1 slds-size_1-of-2 ssp-gutter-right"
+                  label={label.sspFirstName}
+                  data-id="FirstName"
+                  entity-name="Contact"
+                  field-name="FirstName"
+                  meta-list={metaDataListParent}
+                  onchange={getFirstName}
+                  max-length="50"
+                >
+                </c-ssp-base-component-input-text>
+                <div
+                  class="slds-grid slds-wrap slds-max-medium-size_1-of-1 slds-size_1-of-2 ssp-gutter-left"
+                >
+                  <c-ssp-base-component-input-text
+                    class="ssp-applicationInputs ssp-applicationDuplicateInputs slds-max-medium-size_1-of-1 slds-size_1-of-2 ssp-common-margin-top"
+                    label={label.sspMiOptional}
+                    data-id="MiddleName"
+                    entity-name="Contact"
+                    field-name="MiddleName"
+                    meta-list={metaDataListParent}
+                    max-length={label.sspMiddleInitialMaxLength}
+                  >
+                  </c-ssp-base-component-input-text>
+                </div>
+              </div>
+
+              <div class="slds-grid slds-wrap slds-size_1-of-1">
+                <c-ssp-base-component-input-text
+                  class="ssp-inputElement ssp-applicationInputs ssp-applicationDuplicateInputs slds-max-medium-size_1-of-1 slds-size_1-of-2 ssp-gutter-right"
+                  label={label.sspLastName}
+                  data-id="LastName"
+                  entity-name="Contact"
+                  field-name="LastName"
+                  meta-list={metaDataListParent}
+                  onchange={pushAssisterDetails}
+                  max-length="50"
+                >
+                </c-ssp-base-component-input-text>
+                <div
+                  class="slds-grid slds-wrap slds-max-medium-size_1-of-1 slds-size_1-of-2 ssp-gutter-left"
+                >
+                  <c-ssp-base-component-input-picklist
+                    class="ssp-inputElement ssp-applicationInputs slds-max-medium-size_1-of-1 slds-size_1-of-2 ssp-common-margin-top"
+                    label={label.sspSuffix}
+                    title={label.sspSuffixTitle}
+                    option={suffixOptions}
+                    data-id="SuffixCode__c"
+                    entity-name="Contact"
+                    field-name="SuffixCode__c"
+                    meta-list={metaDataListParent}
+                  >
+                  </c-ssp-base-component-input-picklist>
+                </div>
+              </div>
+              <div class="slds-grid slds-wrap slds-size_1-of-1">
+                <div
+                  class="slds-grid slds-wrap slds-max-medium-size_1-of-1 slds-size_1-of-2 ssp-gutter-right "
+                >
+                  <c-ssp-base-component-input-picklist
+                    class="ssp-inputElement ssp-applicationInputs slds-max-medium-size_1-of-1 slds-size_1-of-2 ssp-gutter-right"
+                    label={label.sspGender}
+                    title={label.sspGenderTitle}
+                    data-id="GenderCode__c"
+                    entity-name="Contact"
+                    field-name="GenderCode__c"
+                    meta-list={metaDataListParent}
+                    option={genderOptions}
+                    selected-value=""
+                    value=""
+                    onchange={handleGenderChange}
+                    onhandlepicklistchange={handleGenderChange}
+                  >
+                  </c-ssp-base-component-input-picklist>
+                  <c-ssp-base-component-input-date
+                    class="ssp-inputElement ssp-applicationInputs slds-max-medium-size_1-of-1 slds-size_1-of-2 ssp-gutter-left ssp-common-margin-top ssp-offAutoFill"
+                    label={label.sspDateOfBirth}
+                    value=""
+                    data-id="Birthdate"
+                    entity-name="Contact"
+                    field-name="Birthdate"
+                    meta-list={metaDataListParent}
+                    onchange={handleBirthDateChange}
+                  >
+                  </c-ssp-base-component-input-date>
+                </div>
+              </div>
+
+              <div class="slds-grid slds-wrap slds-size_1-of-1">
+                <c-ssp-base-component-input-text
+                  class="ssp-inputElement ssp-applicationInputs slds-max-medium-size_1-of-1 slds-size_1-of-2 ssp-gutter-right ssp-offAutoFill"
+                  label={label.sspSSN}
+                  input-type={inputTypePassword}
+                  class-name="ssn-addPasswordMark"
+                  meta-list={metaDataListParent}
+                  name="socialSecurityNumber9"
+                  data-id="SSN__c"
+                  field-name="SSN__c"
+                  entity-name="Contact"
+                  is-assister-or-auth="true"
+                >
+                </c-ssp-base-component-input-text>
+              </div>
+              <div
+                class="slds-grid slds-wrap slds-max-medium-size_1-of-1 slds-size_1-of-2 ssp-textBox-right ssp-agency-management ssp-gutter-right ssp-clientSearchContent"
+              >
+                <div class="ssp-radioButtonContainer">
+                  <label class="ssp-label-name" for="ssp-appNumber"
+                    >{label.sspSearchApplicationNumber}</label
+                  >
+                  <input
+                    type="radio"
+                    name="radio"
+                    class="ssp-multilineRadioInput"
+                    value="Application Number"
+                    onclick={handleRadioClick}
+                    id="ssp-appNumber"
+                  />
+                  <span class="ssp-multilineRadioChecked"></span>
+                </div>
+                <!-- <c-ssp-base-component-input-number
+                  class="ssp-inputElement ssp-applicationInputs slds-size_1-of-1 ssp-application-number ssp-offAutoFill"
+                  disabled={isAppNumberDisabled}
+                  field-name="applicationNumber"
+                  onchange={handleAppNumberChange}
+                  hide-label="true"
+                  label={label.sspSearchApplicationNumber}
+                >
+                </c-ssp-base-component-input-number> -->
+                <c-ssp-base-component-input-phone
+                  class="ssp-inputElement ssp-applicationInputs slds-size_1-of-1 ssp-application-number ssp-case-number ssp-offAutoFill"
+                  name="clientSearchApplicationNumber"
+                  disabled={isAppNumberDisabled}
+                  onchange={handleAppNumberChange}
+                  case-application-field="true"
+                  max-length="9"
+                  entity-name=""
+                  field-name="applicationNumber"
+                  hide-label="true"
+                >
+                </c-ssp-base-component-input-phone>
+              </div>
+              <div
+                class="slds-grid slds-wrap slds-max-medium-size_1-of-1 slds-size_1-of-2 ssp-textBox-left ssp-agency-management ssp-gutter-left ssp-clientSearchContent"
+              >
+                <div class="ssp-radioButtonContainer">
+                  <label class="ssp-label-name" for="ssp-caseNumber"
+                    >{label.sspSearchCaseNumber}</label
+                  >
+                  <input
+                    type="radio"
+                    name="radio"
+                    value="Case Number"
+                    class="ssp-multilineRadioInput"
+                    onclick={handleRadioClick}
+                    id="ssp-caseNumber"
+                  />
+                  <span class="ssp-multilineRadioChecked"></span>
+                </div>
+                <!-- <c-ssp-base-component-input-number
+                                    class="ssp-inputElement ssp-applicationInputs slds-size_1-of-1 ssp-case-number"
+                                    onchange={handleCaseNumberChange}
+                                    field-name="caseNumber"
+                                    disabled={isCaseNumberDisabled}
+                                    hide-label="true"
+                                    label={label.sspSearchApplicationNumber}
+                                >
+                                </c-ssp-base-component-input-number> -->
+                <c-ssp-base-component-input-phone
+                  class="ssp-inputElement ssp-applicationInputs slds-size_1-of-1 ssp-case-number"
+                  name="clientSearchCaseNumber"
+                  disabled={isCaseNumberDisabled}
+                  onchange={handleCaseNumberChange}
+                  case-application-field="true"
+                  max-length="9"
+                  entity-name=""
+                  field-name="caseNumber"
+                  hide-label="true"
+                >
+                </c-ssp-base-component-input-phone>
+              </div>
+              <div
+                class="slds-grid slds-wrap slds-size_1-of-1 slds-p-top_x-large slds-p-bottom_medium slds-m-bottom_x-large ssp-align-center ssp-uploadProofForms ssp-resourceSummary_container slds-text-align_center"
+              >
+                <lightning-button
+                  class="ssp-actionButtons ssp-button_neutral slds-max-medium-size_1-of-1 slds-size_1-of-2 ssp-search-btn ssp-searchClickButton ssp-addResourceButton"
+                  label={label.sspSearchAuthRep}
+                  title={label.sspSearchBasedOnTheEnteredCriteria}
+                  onclick={searchIndividualClick}
+                ></lightning-button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <template if:true={RequestType}>
+        <div
+          class="ssp-requestConsentSection ssp-color_monoOmega ssp-fontFamily_ArvoRegular"
+        >
+          <template if:true={anotherAssisterPresent}>
+            <p class="slds-m-bottom_x-large">
+              {label.sspIndividualHasAssister}
+            </p>
+          </template>
+          <p class="slds-m-bottom_x-large">
+            {sspNoAssisterRelationTextLabel}
+          </p>
+          <p class="slds-m-bottom_xx-large">
+            {label.sspClickContentSendNotificationText}
+          </p>
+          <div>
+            <div
+              class="slds-text-align_center ssp-uploadProofForms ssp-requestConsentButtonContainer"
+            >
+              <lightning-button
+                class="ssp-actionButtons ssp-button_neutral ssp-requestElectronicConsentBtn ssp-search-btn"
+                label={label.sspRequestElectronicConsent}
+                title={label.sspRequestElectronicConsentTitle}
+                onclick={handleTimer}
+                disabled={disableRequestButton}
+              ></lightning-button>
+            </div>
+
+            <div class="ssp-timerContainer slds-text-align_center slds-hide">
+              <p class="slds-m-bottom_medium" if:true={assisterMatchFound}>
+                {label.sspPleaseReviewContact}
+              </p>
+              <div
+                class="ssp-timerSection slds-text-align_center ssp-fontFamily_popinBold ssp-color_monoOmega"
+              ></div>
+              <p class="ssp-waitingConsent slds-hide">
+                {label.sspWaitingClientConsent}
+              </p>
+            </div>
+            <div
+              if:true={clientAgreed}
+              class="slds-text-align_center ssp-consentRecievedContainer"
+            >
+              <div class="ssp-consentReceived">
+                <img
+                  src={checkedIconUrl}
+                  aria-hidden="true"
+                  role="presentation"
+                  alt={label.sspClientConsentReceived}
+                />
+                <p class="ssp-fontFamily_popinBold ssp-consentStatus">
+                  {label.sspClientConsentReceived}
+                </p>
+              </div>
+              <p>{label.sspContinueClientCaseText}</p>
+            </div>
+            <div
+              if:true={clientDisagreed}
+              class="slds-text-align_center ssp-consentDisagreedContainer"
+            >
+              <div class="ssp-consentDisagreed">
+                <img
+                  src={disagreeIconUrl}
+                  aria-hidden="true"
+                  role="presentation"
+                  alt={label.sspClientDidNotConsent}
+                />
+                <p
+                  class="ssp-fontFamily_popinBold ssp-consentStatus ssp-didNotConsentText"
+                >
+                  {label.sspClientDidNotConsent}
+                </p>
+              </div>
+              <p>{label.sspNotGivenConsentAccess}</p>
+              <p if:false={hideConsentAgainButton}>
+                {label.sspRequestConsentOneMoreTime}
+              </p>
+              <div
+                class="ssp-uploadProofForms"
+                if:false={hideConsentAgainButton}
+              >
+                <lightning-button
+                  class="ssp-actionButtons ssp-requestConsentAgainBtn ssp-button_neutral ssp-search-btn"
+                  label={label.sspRequestConsentAgain}
+                  title={label.sspRequestConsentAgainTitle}
+                  onclick={handleTimer}
+                ></lightning-button>
+              </div>
+            </div>
+            <div if:true={clientDidNotRespond} class="slds-text-align_center">
+              <p
+                class="ssp-fontFamily_popinBold ssp-consentStatus ssp-didNotRespondContainer"
+              >
+                {label.sspClientDidNotRespond}
+              </p>
+              <div class="ssp-uploadProofForms">
+                <lightning-button
+                  class="ssp-actionButtons ssp-button_neutral ssp-search-btn ssp-confirmVerbalConsentBtn"
+                  label={label.sspConfirmVerbalConsent}
+                  title={label.sspConfirmVerbalConsentTitle}
+                  onclick={handleVerbalConsent}
+                ></lightning-button>
+              </div>
+            </div>
+            <div class="ssp-verbalConsentSection" if:true={showVerbalConsent}>
+              <h2 class="ssp-fontFamily_popinBlack ssp-color_blueAlpha">
+                {label.sspVerbalConsent}
+              </h2>
+              <p class="ssp-agreeConsentText">
+                {label.sspAgreeConsentToContinueApplication}
+              </p>
+              <div class="ssp-margin-bottom_small">
+                <c-ssp-selection-summary-card
+                  is-progress-started={isAckStart}
+                  is-progress-complete={isActComplete}
+                >
+                  <slot>
+                    <a
+                      tabindex="0"
+                      title={ackItemTitle}
+                      data-type="sspAcknowledgeRoles"
+                      onclick={openLinkModal}
+                      onkeydown={openLinkModal}
+                      class="ssp-color_monoBody"
+                    >
+                      {label.sspAcknowledgeAssisterRoles}
+                    </a>
+                  </slot>
+                </c-ssp-selection-summary-card>
+                <template if:true={sspAcknowledgeRoles}>
+                  <c-ssp-acknowledge-assister-modal
+                    is-selected-value={selectedAcknowledgeRoles}
+                    onclose={updateToggleFields}
+                  >
+                  </c-ssp-acknowledge-assister-modal>
+                </template>
+              </div>
+              <div class="ssp-margin-bottom_small">
+                <c-ssp-selection-summary-card
+                  is-progress-started={isAuthStart}
+                  is-progress-complete={isAuthComplete}
+                >
+                  <slot>
+                    <a
+                      tabindex="0"
+                      title={authItemTitle}
+                      data-type="sspAuthorizationType"
+                      onclick={openLinkModal}
+                      onkeydown={openLinkModal}
+                      class="ssp-color_monoBody"
+                    >
+                      {label.sspAuthorizations}
+                    </a>
+                  </slot>
+                </c-ssp-selection-summary-card>
+                <template if:true={sspAuthorizationType}>
+                  <c-ssp-authorization-modal
+                    is-selected-value={selectedAuthorizationConsent}
+                    onclose={updateToggleFields}
+                  >
+                  </c-ssp-authorization-modal>
+                </template>
+              </div>
+              <div class="ssp-margin-bottom_small">
+                <c-ssp-selection-summary-card
+                  is-progress-started={isAdditionalInfoStart}
+                  is-progress-complete={isAdditionalInfoComplete}
+                >
+                  <slot>
+                    <a
+                      tabindex="0"
+                      title={addInfoItemTitle}
+                      data-type="sspAdditionalInfo"
+                      onclick={openLinkModal}
+                      onkeydown={openLinkModal}
+                      class="ssp-color_monoBody"
+                    >
+                      {label.sspAdditionalImportantInformation}
+                    </a>
+                  </slot>
+                </c-ssp-selection-summary-card>
+                <template if:true={sspAdditionalInfo}>
+                  <c-ssp-additional-information-modal
+                    is-selected-value={selectedAdditionalInfoConsent}
+                    onclose={updateToggleFields}
+                  >
+                  </c-ssp-additional-information-modal>
+                </template>
+              </div>
+              <p class="ssp-agreeConsentFooterText">
+                {label.sspClientWillReceiveConfirmation}
+              </p>
+            </div>
+          </div>
+        </div>
+      </template>
+      <div
+        class="slds-grid slds-wrap slds-size_1-of-1 ssp-actionButtonsContainer ssp-buttonWidth ssp-uploadProofForms"
+      >
+        <div class="slds-size_1-of-1 ssp-actionButtons">
+          <lightning-button
+            class="ssp-button_base ssp-cancelButton ssp-screenFooterBlueBtn"
+            label={label.sspCancel}
+            title={label.sspAssisterCancelTitle}
+            onclick={handleCancelButton}
+          ></lightning-button>
+          <lightning-button
+            class="ssp-button_neutral ssp-saveButton ssp-screenFooterNextBtn"
+            label={label.sspNextButton}
+            title={label.sspGoToNextScreenTitle}
+            onclick={handleNextButton}
+            disabled={disableNextButton}
+          ></lightning-button>
+        </div>
+      </div>
+    </div>
+  </main>
+  <template if:true={showNextStepScreen}>
+    <c-ssp-auth-rep-next-step-updates
+      no-case-match={noMatchOrCaseInactive}
+      auth-assister-have-access={isAccessPresent}
+      auth-request-partial-match={isPartialMatch}
+      consent-not-fully-given={clientDisagreed}
+      auth-full-match-sent-notification={clientNoResponse}
+      client-no-communication-pref={medicaidOnlyApplication}
+      any-program-no-communication-pref={medicaidOtherApplication}
+      auth-request-non-medicaid-access={nonMedicaidApplication}
+      consent-fully-given={fullyConsentGiven}
+      access-pending-request={isPendingRequest}
+    ></c-ssp-auth-rep-next-step-updates>
+  </template>
+</template>

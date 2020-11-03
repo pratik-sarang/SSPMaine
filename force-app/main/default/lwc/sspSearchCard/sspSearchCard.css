@@ -1,0 +1,50 @@
+.ssp-searchCard {
+    border-radius: 6px;
+    padding: 30px;
+}
+
+.ssp-searchCardBody {
+    line-height: 24px;
+    margin-bottom: 25px;
+}
+
+.ssp-searchCardTitle > a {
+    font-size: 1rem;
+    line-height: 24px;
+    letter-spacing: -0.27px;
+}
+
+.ssp-searchCardTitle > p {
+    font-size: 0.8125rem;
+    line-height: 24px;
+}
+.ssp-searchCardTitle > div {
+    font-size: 1rem;
+    line-height: 24px;
+}
+.ssp-searchCardContent p {
+    font-size: 0.8125rem;
+    line-height: 20px;
+    letter-spacing: -0.24px;
+}
+
+.ssp-searchCardContent span {
+    font-size: 0.8125rem;
+    line-height: 20px;
+    letter-spacing: -0.24px;    
+    margin-left: 5px;
+}
+.ssp-textGapping {
+    padding-right: 6px;
+}
+.ssp-headerWidth {
+    width: 65%;
+}
+.ssp-alignText {
+    text-align: right;
+}
+@media only screen and (max-width: 768px) {
+    .ssp-searchCard {
+        padding: 24px;
+    }
+}

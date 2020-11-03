@@ -1,0 +1,200 @@
+.ssp-find-dcbs-office-header-text {
+    font-size: 42px;
+    margin-top: 45px;
+    margin-bottom: 33px;
+}
+.ssp-dcbsSearch {
+    height: 264px;
+}
+.ssp-horizontal-rule {
+    height: 1px;
+    border-radius: 0.156rem;
+    margin: 0;
+    border: none;
+}
+
+.ssp-find-dcbs-office-address {
+    margin: 8px auto;
+}
+.ssp-map-section lightning-map {
+    height: 330px;
+}
+.ssp-results-card {
+    width: 370px;
+}
+.ssp-office-hours {
+    margin: 15px 0;
+}
+.ssp-mailing-address {
+    padding-left: 10px;
+    margin: 0;
+}
+.ssp-smallTextStyling {
+    font-size: 13px;
+    letter-spacing: -0.24px;
+    line-height: 24px;
+}
+.ssp-textGapping {
+    padding-right: 6px;
+}
+.ssp-borderRadius {
+    border-radius: 6px;
+}
+.ssp-cardMargin {
+    margin-right: 30px;
+}
+.ssp-buttonPadding {
+    padding-right: 30px;
+}
+.ssp-userCurrentLoc {
+    font-size: 1rem;
+}
+.city_predictions {
+    font-size: 14px;
+}
+.ssp-searchIcon {
+    height: 24px;
+    width: 24px;
+    position: absolute;
+    bottom: 11px;
+    left: 5px;
+}
+.ssp-searchField {
+    position: relative;
+}
+.ssp-Hide {
+    display: none;
+}
+.ssp-show {
+    display: Block;
+}
+.ssp-buttonWidth {
+    width: 100%;
+}
+.ssp-desktopMap {
+    height: 330px;
+}
+.ssp-overlayMap {
+    height: 200px;
+}
+.ssp-currentLocationPadding {
+    padding: 30px auto;
+    margin: 0 auto;
+}
+
+.ssp-office-hours-overlay {
+    display: flex;
+}
+.ssp-dcbs-add {
+    display: inline-block;
+}
+@media only screen and (max-device-width: 769px) {
+    .ssp-results-card {
+        width: 100%;
+    }
+    .ssp-cardMargin {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    .ssp-buttonPadding {
+        padding-right: 0;
+    }
+    .ssp-selectOfficeButton {
+        margin-top: 0;
+    }
+    .ssp-dcbsSearch {
+        height: auto;
+    }
+    .ssp-mailing-address {
+        padding-left: 0;
+    }
+    .ssp-dcbs-searchMain {
+        padding: 0;
+    }
+    .ssp-find-dcbs-office-header-text {
+        font-size: 32px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .ssp-currentLocationPadding {
+        padding: 30px 30px;
+    }
+    .ssp-mailing-address {
+        margin: 15px 0;
+    }
+}
+@media only screen and (max-device-width: 377px) {
+    .ssp-textWidth {
+        width: 100%;
+    }
+}
+@media only screen and (max-device-width: 767px) {
+    .ssp-office-hours-overlay {
+        flex-wrap: wrap;
+    }
+    .ssp-dcbs-add {
+        display: inline-block;
+    }
+}
+@media only screen and (min-device-width: 769px) and (max-device-width: 1023px) {
+    .ssp-mailing-address {
+        padding-left: 0;
+    }
+    .ssp-results-card {
+        margin: 0 auto;
+    }
+}
+.ssp-horizontal-rule {
+    height: 1px;
+    border-radius: 0.156rem;
+    margin: 0;
+    border: none;
+}
+.ssp-find-dcbs-office-address {
+    margin: 8px auto;
+}
+.ssp-map-section lightning-map {
+    height: 200px;
+}
+.ssp-office-hours {
+    margin: 15px 0;
+}
+.ssp-textGapping {
+    padding-right: 6px;
+}
+.ssp-smallTextStyling {
+    font-size: 13px;
+    letter-spacing: -0.24px;
+    line-height: 24px;
+}
+.ssp-componetWidth {
+    width: 100%;
+}
+.ssp-alignItem {
+    align-self: flex-end;
+}
+.ssp-selectOfficeButton {
+    margin-top: 21px;
+}
+.ssp-fontSize_13 {
+    font-size: 13px;
+}
+.ssp-find-dcbs-office-address {
+    position: relative;
+    height: 45px;
+    width: 100%;
+    z-index: 99;
+}
+.ssp-overlayOfficeAdd {
+    position: relative;
+    height: 45px;
+}
+.ssp-overlayonFocus {
+    position: absolute;
+    z-index: 9999;
+    width: 100%;
+    outline: none;
+}
+.ssp-onFocus {
+    outline: none;
+}

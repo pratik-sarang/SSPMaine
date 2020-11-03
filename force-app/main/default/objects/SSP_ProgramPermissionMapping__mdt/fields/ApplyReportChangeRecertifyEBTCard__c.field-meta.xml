@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ApplyReportChangeRecertifyEBTCard__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Contains Apply, Report Changes, Recertify, and use EBT Card Permission</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Contains Apply, Report Changes, Recertify, and use EBT Card Permission</inlineHelpText>
+    <label>Apply,ReportChange,Recertify,EBT Card</label>
+    <type>Checkbox</type>
+</CustomField>

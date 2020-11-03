@@ -1,0 +1,32 @@
+.ssp-genericInput .slds-form-element {
+    display: inline;
+}
+.ssp-genericInput .ssp-genericRequired {
+    display: inline;
+    color: red;
+}
+.ssp-inputText {
+    width: 100%;
+    position: relative;
+}
+.ssp-helptextIcon {
+    margin-left: 10px;
+    position: relative;
+    bottom: 2px;
+}
+.ssp-alignHelpText {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2px 0;
+}
+.ssp-alignHelpText label {
+    width: 85%;
+    word-break: break-word;
+    font-size: 13px;
+}
+.ssn-addPasswordMark {
+    -webkit-text-security: disc;
+    -moz-text-security: disc;
+}

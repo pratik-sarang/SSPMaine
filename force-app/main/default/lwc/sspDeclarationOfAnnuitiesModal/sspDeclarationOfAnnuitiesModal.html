@@ -1,0 +1,114 @@
+<!--
+* name 		: sspDeclarationOfAnnuitiesModal
+* @description 	: This component opens the Declaration Of Annuities Modal.
+* @author 		: Karthik Velu, Sai Kiran.
+* @date 		: 2/5/2020
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName	      MM/DD/YYYY	      A Brief Description 
+                  about the Change
+-->
+<template>
+  <template if:true={isFieldValuesLoaded}>
+    <div class="ssp-medicaidPenaltyWarning">
+      <div class="ssp-errorToast" if:true={hasSaveValidationError}>
+        <c-ssp-toast
+          ssp-toast-title-val={label.toastErrorText}
+          show-error-toast={trueValue}
+          onhidetoast={hideToast}
+        ></c-ssp-toast>
+      </div>
+      <template if:true={hasMetadataListValues}>
+        <c-ssp-detailed-information-modal
+          header-value={label.sspAnnuitiesModalHeader}
+          onclosemodal={closeAnnuitiesModal}
+          reference={reference}
+          open-model={openModel}
+          scroll-event={trueValue}
+          onenablemodalbuttons={enableModalButtons}
+          class="ssp-DeclarationOfAnnuitiesModal"
+        >
+          <span
+            class="ssp-mainContent ssp-fontFamily_ArvoRegular ssp-color_monoOmega ssp-margin-bottom_large"
+            slot="contentSlot"
+          >
+            <ul>
+              <li class="ssp-margin-bottom_large" tabindex="0">
+                {label.sspTheDeficitReduction}
+              </li>
+              <li class="ssp-margin-bottom_large" tabindex="0">
+                {label.sspPurchasedOn}
+              </li>
+              <li class="ssp-margin-bottom_large" tabindex="0">
+                {label.sspDMSWillOnly}
+              </li>
+              <li class="ssp-margin-bottom_large" tabindex="0">
+                {label.sspFailureToComply}
+              </li>
+              <li class="ssp-margin-bottom_large ssp-no-bullets">
+                <span class="ssp-color_monoBody">
+                  <c-ssp-base-component-input-toggle
+                    value={applicationWrap.fields.DeclrtnfAnnuitiesAcceptanceCode__c.value}
+                    meta-list={MetaDataListParent}
+                    entity-name="SSP_Application__c"
+                    field-name="DeclrtnfAnnuitiesAcceptanceCode__c"
+                    data-id="IsAnnutiesDeclarationCode"
+                    label={label.sspHaveDisclosed}
+                    options={responseOptions}
+                    class="ssp-applicationInputs"
+                    disabled={toggleDisability}
+                  >
+                  </c-ssp-base-component-input-toggle>
+                </span>
+              </li>
+              <li class="ssp-margin-bottom_large ssp-no-bullets">
+                <span class="ssp-color_monoBody">
+                  <c-ssp-base-component-input-toggle
+                    value={applicationWrap.fields.IsDMSAnnuitiesBeneficiary__c.value}
+                    meta-list={MetaDataListParent}
+                    entity-name="SSP_Application__c"
+                    field-name="IsDMSAnnuitiesBeneficiary__c"
+                    data-id="IsDMSAnnuitiesBeneficiary"
+                    label={label.sspHaveAgreed}
+                    options={responseOptions}
+                    class="ssp-applicationInputs"
+                    disabled={toggleDisability}
+                  >
+                  </c-ssp-base-component-input-toggle>
+                </span>
+              </li>
+              <li tabindex="0">
+                {label.sspAmSigningThis}
+              </li>
+            </ul>
+          </span>
+          <span slot="Footer" class="slds-grid slds-gutters">
+            <div class="slds-col slds-size_1-of-2">
+              <lightning-button
+                name="DisAgree"
+                variant="base"
+                title={label.sspDisagreeAlternate}
+                class="ssp-button_base"
+                label={label.sspDisagreeButton}
+                disabled={buttonDisability}
+                onclick={handleOnClick}
+              ></lightning-button>
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+              <lightning-button
+                name="Agree"
+                variant="neutral"
+                title={label.sspAgreeAlternate}
+                class="ssp-button_neutral"
+                label={label.sspAgreeButton}
+                disabled={buttonDisability}
+                onclick={handleOnClick}
+              ></lightning-button>
+            </div>
+          </span>
+        </c-ssp-detailed-information-modal>
+      </template>
+    </div>
+  </template>
+</template>

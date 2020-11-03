@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SSP_InsurancePolicy__c</fullName>
+    <description>This field is used to indicate Insurance Policy of an Insurance Covered Individual</description>
+    <externalId>false</externalId>
+    <label>SSP_InsurancePolicy</label>
+    <referenceTo>SSP_InsurancePolicy__c</referenceTo>
+    <relationshipName>SSP_InsuranceCoveredIndiv</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>true</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

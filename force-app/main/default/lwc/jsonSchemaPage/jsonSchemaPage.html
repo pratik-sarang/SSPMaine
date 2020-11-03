@@ -1,0 +1,18 @@
+<template>
+    <template if:true={isInit}>
+        <div class="slds-grid slds-wrap">
+            <template for:each={layoutSchema.fields} for:item="field">
+                <c-json-field-container
+                    object-data={objectData}
+                    field={field}
+                    all-fields={allFields}
+                    custom-labels={customLabels}
+                    rendering-cond={renderingCond}
+                    disable-cond={disableCond}
+                    key={field.name}
+                >
+                </c-json-field-container>
+            </template>
+        </div>
+    </template>
+</template>

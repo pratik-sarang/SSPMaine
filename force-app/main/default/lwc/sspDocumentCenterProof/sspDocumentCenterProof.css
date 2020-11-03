@@ -1,0 +1,79 @@
+.ssp-proofContainer h1 {
+    margin-top: 2.5rem;
+    margin-bottom: 0.313rem;
+    font-size: 1.5rem;
+}
+.ssp-writtenStatementLink {
+    font-size: 0.813rem;
+    text-decoration: underline;
+}
+.ssp-proofContainer .ssp-proofType {
+    margin-top: 0.625rem;
+}
+
+.ssp-proofContainer .ssp-fontSize13 {
+    font-size: 0.813rem;
+}
+
+.ssp-proofContainer .ssp-headerList {
+    font-size: 1rem;
+}
+
+.ssp-proofContainer .ssp-viewProofLink {
+    margin-bottom: 30px;
+    margin-top: 15px;
+    text-decoration: underline;
+    display: inline-block;
+}
+
+.ssp-proofContainer .ssp-proofForms {
+    margin-top: 1rem;
+    padding-top: 1.875rem;
+}
+
+.ssp-proofContainer ul li::before {
+    content: "\2022";
+    display: inline-block;
+    width: 0.8rem;
+    line-height: 1rem;
+    font-size: 1.1rem;
+    vertical-align: middle;
+}
+
+.ssp-proofContainer .ssp-actionButtonsContainer {
+    margin-top: 6.25rem;
+    margin-bottom: 3.75rem;
+}
+
+.ssp-proofContainer .ssp-actionButtons .ssp-cancelButton {
+    margin-top: 1.563rem;
+}
+
+.ssp-proofContainer .ssp-actionButtons .slds-button {
+    height: 3.75rem;
+}
+
+.ssp-proofContainer .ssp-actionButtons {
+    display: flex;
+    flex-flow: column-reverse wrap;
+}
+
+@media only screen and (min-width: 769px) {
+    .ssp-proofContainer h1 {
+        font-size: 2.625rem;
+        margin-top: 3.75rem;
+    }
+    .ssp-proofContainer .ssp-actionButtonsContainer {
+        margin-bottom: 6.25rem;
+    }
+    .ssp-proofContainer .ssp-actionButtons {
+        flex-flow: row;
+    }
+    .ssp-proofContainer .ssp-screenFooterNextBtn {
+        margin-left: auto;
+        order: 2;
+    }
+    .ssp-proofContainer .ssp-actionButtons .ssp-cancelButton {
+        margin-top: 0;
+    }
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Common template for all Email Alerts</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>RE_Centralized Email Template</name>
+    <style>none</style>
+    <subject>{!CommunicationLog__c.EmailSubject__c}</subject>
+    <textOnly>{!CommunicationLog__c.TemplateBody__c}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

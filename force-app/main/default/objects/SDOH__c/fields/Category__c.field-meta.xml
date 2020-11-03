@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Category__c</fullName>
+    <description>Indicates whether the category is Access to Services, Career Resiliency/Training, Childcare, Clothing, Education, Employment Stability, English Language Skills, Food, Functional Ability, Housing, Income (Area Median Income), Income (Federal Poverty Level), Income (Self-Sufficiency Standard), Legal, Life Skills (Financial Matters), Life Skills (Household Management), Life Skills (Human Relations), Life Skills (Setting Goals &amp; Resourcefulness), Mental Health, Parenting, Physical Health, Safety, Substance Abuse, Support System or Transportation</description>
+    <externalId>false</externalId>
+    <label>Category</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>SDOHCategory</valueSetName>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,51 @@
+:host {
+    /** make the host DOM to disappear to apply correct SLDS styles. **/ 
+    display: contents;
+}
+.ssp-captchaParent {
+    position: relative;
+    /*right: 60px;*/
+    bottom: 5px;
+}
+
+.ssp-getBenefitCaptcha {
+    border: none;
+    position: absolute;
+    height: 495px;
+    z-index: 9;
+    width: 318px;
+    /*right: 0;*/
+}
+
+
+.dd-captchabuttonpadding{
+    padding-left: 3rem;
+    padding-right: 3rem;
+	margin-bottom: 22.313rem;
+}
+
+
+@media only screen and (max-width: 768px) {
+    
+    .ssp-mobileHorizontalPaddingHeading {       
+        padding: 0 30px 0 30px;
+    }
+
+    .dd-captchabuttonpadding{
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    
+     .ssp-captchaParent {
+        order: 2;
+        margin: 30px auto;
+        height: 60px;
+    }
+
+    .ssp-captchaParent  .ssp-getBenefitCaptcha {
+        right: auto;
+        z-index: 0;
+    }
+    
+}

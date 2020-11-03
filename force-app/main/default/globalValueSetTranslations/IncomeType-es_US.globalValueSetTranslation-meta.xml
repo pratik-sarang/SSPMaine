@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Dividends, Interest &amp; Royalties</masterLabel>
+        <translation>Dividendos, intereses y regalías</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Insurance Settlements &amp; Benefits Income</masterLabel>
+        <translation>Beneficios y acuerdos de seguros</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Job income from employer</masterLabel>
+        <translation>Ingreso de empleo del empleador</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Other Goods, Payments, &amp; Services</masterLabel>
+        <translation>Otros bienes, pagos y servicios</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Self employment income</masterLabel>
+        <translation>Ingreso por trabajo por cuenta propia</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Social Security, Retirement, &amp; Pension</masterLabel>
+        <translation>Seguro Social, jubilación y pensión</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Support &amp; Maintenance Income</masterLabel>
+        <translation>Ingreso de mantenimiento y manutención</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Unpaid income</masterLabel>
+        <translation>Ingreso no pagado</translation>
+    </valueTranslation>
+</GlobalValueSetTranslation>

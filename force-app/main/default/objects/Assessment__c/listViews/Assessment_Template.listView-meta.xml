@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Assessment_Template</fullName>
+    <columns>NAME</columns>
+    <columns>AssessmentTitle__c</columns>
+    <columns>AssessmentTemplate__c</columns>
+    <columns>Partner__c</columns>
+    <columns>Resident__c</columns>
+    <columns>RECORDTYPE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Assessment__c.Assessment_Template</value>
+    </filters>
+    <label>Assessment Template</label>
+</ListView>

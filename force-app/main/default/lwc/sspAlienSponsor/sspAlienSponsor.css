@@ -1,0 +1,30 @@
+.ssp-infoText {
+    font-size: 1rem;
+    letter-spacing: -0.0187rem;
+    line-height: 1.5rem;
+}
+
+.ssp-hyperlinkPadding {
+    padding-left: 4px;
+}
+.ssp-inputFieldWidth {
+    width: 48.1%;
+}
+.ssp-fullWidth {
+    width: 100%;
+}
+.ssp-bodyfooterMargin {
+    margin-bottom: 66px;
+}
+.ssp-containersMiddlePadding {
+    margin-right: 29px;
+}
+@media only screen and (max-width: 768px) {
+    .ssp-inputFieldWidth {
+        width: 100%;
+    }
+    .ssp-containersMiddlePadding {
+        margin-right: 0;
+        margin-top: 15px;
+    }
+}

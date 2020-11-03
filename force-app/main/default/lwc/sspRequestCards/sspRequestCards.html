@@ -1,0 +1,309 @@
+<!--
+* name          : sspRequestCards.html
+* @description  : Request a/an Medicaid/EBT card screen.
+* @author       : Nikhil Shinde
+* @date         : 10/07/2020
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName                MM/DD/YYYY               A Brief Description about the Change
+  
+-->
+<template>
+    <!--2.5 Security Role Matrix and Program Access-->
+    <template if:true={showAccessDeniedComponent}>
+        <c-ssp-access-denied></c-ssp-access-denied>
+    </template>
+    <c-ssp-logging-and-error-handling-modal
+        if:true={showErrorModal}
+        error-id={errorMsg}
+        onprogressvaluechange={closeError}
+    >
+    </c-ssp-logging-and-error-handling-modal>
+    <template if:true={isEditable}>
+        <div class="ssp-bodyContainer ssp-requestCardContainer">
+            <template if:true={showSpinner}>
+                <c-ssp-spinner></c-ssp-spinner>
+            </template>
+            <div if:true={showErrorToast} role="alert">
+                <c-ssp-toast
+                    ssp-toast-title-val={toastMessage}
+                    onhidetoast={handleHideToast}
+                    show-error-toast={showErrorToast}
+                ></c-ssp-toast>
+            </div>
+            <!-- Medicaid -->
+            <div if:true={isMedicaidRequest} class="ssp-requestCardsHeader">
+                <h1
+                    class="ssp-medicaidRequestHeader ssp-fontFamily_popinBold ssp-color_blueAlpha"
+                >
+                    {label.sspMedicaidCardHeader}
+                </h1>
+            </div>
+            <!-- EBT -->
+            <div if:false={isMedicaidRequest} class="ssp-requestCardsHeader">
+                <h1
+                    class="ssp-requestEBTHeader ssp-fontFamily_popinBold ssp-color_blueAlpha"
+                >
+                    {label.sspEBTCardHeader}
+                </h1>
+            </div>
+
+            <div class="ssp-requestCardsHr ssp-bg_monoAlpha"></div>
+
+            <div
+                if:true={isMedicaidRequest}
+                class="ssp-noteMCO ssp-fontFamily_ArvoRegular ssp-color_monoOmega"
+            >
+                {label.sspMedicaidCardNote}&nbsp;
+                <a
+                    tabindex="0"
+                    role="button"
+                    class="ssp-color_blueAlpha"
+                    onclick={openLearnMoreModal}
+                    onkeydown={openLearnMoreModal}
+                    title={sspMCOLinkAlternate}
+                    >{label.sspMCOLearnMoreLink}</a
+                >
+            </div>
+
+            <template if:true={showWhoNeedsPicklist}>
+                <div
+                    class="slds-grid slds-wrap slds-size_1-of-2 slds-max-medium-size_1-of-1 ssp-requestPickList
+            ssp-desktopRequestWidth"
+                >
+                    <div
+                        class="ssp-requestPickListQuestion ssp-fontFamily_popinBold"
+                    >
+                        {label.sspWhoNeeds}
+                    </div>
+                    <c-ssp-base-component-input-picklist
+                        class="ssp-requestCardInput slds-size_1-of-1 ssp-desktopPaddingRight15"
+                        label=""
+                        name="whoNeedsCard"
+                        title={label.sspWhoNeedsAlternateText}
+                        option={whoNeedsPickListOptions}
+                        selected-value={whoNeedsPickListValue}
+                        value={whoNeedsPickListValue}
+                        onhandlepicklistchange={onChangeWhoNeedsPickList}
+                        has-truncated-labels="true"
+                    >
+                    </c-ssp-base-component-input-picklist>
+                </div>
+            </template>
+
+            <div
+                class="slds-grid slds-wrap slds-size_1-of-2 slds-max-medium-size_1-of-1 ssp-requestPickListTwo
+            ssp-desktopRequestWidth"
+            >
+                <div
+                    class="ssp-requestPickListQuestion ssp-fontFamily_popinBold"
+                >
+                    {label.sspWhyReplace}
+                </div>
+                <c-ssp-base-component-input-picklist
+                    class="ssp-requestCardInput slds-size_1-of-1"
+                    label=""
+                    name="whyReplaceReason"
+                    title={label.sspWhyReplaceAlternateText}
+                    option={reasonPickListOptions}
+                    value={replaceReason}
+                    onhandlepicklistchange={onChangeWhyReplaceReason}
+                    has-truncated-labels="true"
+                >
+                </c-ssp-base-component-input-picklist>
+            </div>
+
+            <div
+                class="slds-grid slds-wrap slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-size_1-of-1 ssp-additionalInformation ssp-desktopRequestWidth"
+            >
+                <div class="ssp-requestCardTextArea ssp-fontFamily_popinBold">
+                    {label.sspAdditionalInformation}
+                </div>
+                <c-ssp-base-component-input-text-area
+                    class="ssp-applicationInputs ssp-additionalInformationText"
+                    label=" "
+                    value={addInfoText}
+                    onchange={handleAdditionalInfoChange}
+                    entity-name=""
+                    field-name=""
+                    meta-list={metaDataListParent}
+                    max-length="500"
+                ></c-ssp-base-component-input-text-area>
+            </div>
+
+            <div class="ssp-requestCardsHrTwo ssp-bg_monoBeta"></div>
+
+            <!-- Where to send section in request medicaid card -->
+            <div if:true={isMedicaidRequest}>
+                <div class="ssp-whereToSend ssp-fontFamily_popinBold">
+                    {label.sspWhereToSend}
+                </div>
+                <div
+                    class="ssp-noteDCBS ssp-fontFamily_ArvoRegular ssp-color_monoOmega"
+                >
+                    {label.sspChooseDCBSNote}
+                </div>
+                <div class="ssp-addressToggle">
+                    <c-ssp-base-component-input-toggle
+                        label=""
+                        name="requestAddressToggle"
+                        onchange={onChangeAddressToggle}
+                        options={addressToggleOptions}
+                        class="ssp-requestCardInput ssp-applicationInputs"
+                        value={selectedAddressOption}
+                        field-name=""
+                        entity-name=""
+                        disabled={isAddressToggleDisabled}
+                        meta-list={MetaDataListParent}
+                    ></c-ssp-base-component-input-toggle>
+                </div>
+            </div>
+            <!-- Mailing Address toggle selected -->
+            <div if:true={isMailingAddress}>
+                <div
+                    class="ssp-sentToMailingAddress ssp-fontFamily_ArvoRegular ssp-color_monoOmega"
+                >
+                    {label.sspSendToMailingAddress}
+                </div>
+                <div class="ssp-addressBox ssp-boxShadow">
+                    <div class="ssp-requestAddressContainer">
+                        <p class="ssp-requestAddressTitle ssp-color_monoOmega">
+                            {label.sspMailingAddress}
+                        </p>
+                        <p class="ssp-requestAddressContent">
+                            {mailingAddress.mailingAddressLine1}<br />
+                            {mailingAddress.mailingAddressCity},
+                            {mailingAddress.mailingAddressState},
+                            {mailingAddress.mailingAddressZipCodeFive},
+                            {mailingAddress.mailingAddressZipCodeFour}
+                        </p>
+                        <div if:true={isRacCase}>
+                            <a
+                                if:false={hideRACSpecialAccess}
+                                tabindex="0"
+                                role="button"
+                                class="ssp-reportAChangeLink ssp-fontFamily_popinBold ssp-color_monoBody"
+                                title={label.sspRACLinkAlternateText}
+                                onclick={navigateToRAC}
+                                onkeydown={navigateToRAC}
+                            >
+                                {label.sspRACLink}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DCBS office toggle selected -->
+            <div if:true={isDCBSOffice}>
+                <div
+                    class="ssp-sentToMailingAddress ssp-fontFamily_ArvoRegular ssp-color_monoOmega"
+                >
+                    {label.sspSendToDCBSOffice}
+                </div>
+                <div class="ssp-addressOfficeBox ssp-boxShadow">
+                    <div class="ssp-requestAddressContainer">
+                        <p class="ssp-requestAddressTitle ssp-color_monoOmega">
+                            {label.sspPickUp}
+                        </p>
+                        <p class="ssp-requestAddressContent">
+                            {officeAddress.officeName}
+                            <template if:true={isOfficeAddressAvailable}>
+                                <br />
+                                {addressDCBSOffice}
+                            </template>
+                        </p>
+                        <a
+                            tabindex="0"
+                            role="button"
+                            class="ssp-reportAChangeLink ssp-fontFamily_popinBold ssp-color_monoBody"
+                            title={label.sspChangeLocationAlternateText}
+                            onclick={openDCBSOverlay}
+                            onkeydown={openDCBSOverlay}
+                        >
+                            {label.sspChangeLocation}
+                        </a>
+                    </div>
+                </div>
+                <div
+                    class="ssp-validId ssp-fontFamily_ArvoRegular ssp-color_monoOmega"
+                >
+                    {label.sspBringValidID}
+                </div>
+            </div>
+
+            <div class="ssp-iUnderstand">
+                <c-ssp-base-component-input-checkbox
+                    class="ssp-requestCardInput ssp-identityCheckBox"
+                    data-id=""
+                    field-name=""
+                    entity-name=""
+                    name="iUnderstandCheckbox"
+                    meta-list={MetaDataListParent}
+                    label={label.sspIUnderstand}
+                    value={iUnderstand}
+                    onchange={handleCheckboxChange}
+                    title={label.sspIUnderstandAlternateText}
+                >
+                </c-ssp-base-component-input-checkbox>
+            </div>
+
+            <!-- RAC Modal -->
+            <template if:true={showRACPopUp}>
+                <c-ssp-report-a-change-modal
+                    onclose={handleClose}
+                    application-list={caseNumberRAC}
+                    origin={pageOrigin}
+                ></c-ssp-report-a-change-modal>
+            </template>
+
+            <!-- DCBS overlay -->
+            <template if:true={isOpenDCBSOverLay}>
+                <c-ssp-find-dcbs-office
+                    open-model={isOpenDCBSOverLay}
+                    is-medicaid-request={isMedicaidRequest}
+                    onselectoffice={selectedOfficeEvent}
+                    onclosemodal={closeDCBSOverlay}
+                ></c-ssp-find-dcbs-office
+            ></template>
+
+            <!-- Learn More Modal -->
+            <template if:true={isMCOLearnMore}>
+                <c-ssp-detailed-information-modal
+                    reference={reference}
+                    header-value={label.sspMedicaidCardHeader}
+                    open-model={isMCOLearnMore}
+                    onclosemodal={closeLearnMoreModal}
+                >
+                    <div
+                        slot="contentSlot"
+                        class="ssp-learnMoreMCO ssp-fontFamily_ArvoRegular ssp-color_monoOmega"
+                    ></div>
+                </c-ssp-detailed-information-modal>
+            </template>
+
+            <div
+                class="slds-grid slds-wrap slds-size_1-of-1 ssp-actionButtonsContainer ssp-buttonWidth ssp-uploadProofForms"
+            >
+                <div class="slds-size_1-of-1 ssp-requestCardButtons">
+                    <lightning-button
+                        class="ssp-button_base ssp-cancelButton ssp-screenFooterBlueBtn"
+                        label={label.sspCancel}
+                        onclick={handleCancelRequest}
+                        title={label.sspCancelAlternateText}
+                    >
+                    </lightning-button>
+                    <lightning-button
+                        class="ssp-button_neutral ssp-submitButton ssp-screenFooterNextBtn"
+                        label={label.sspSubmitRequest}
+                        onclick={handleSubmitRequest}
+                        disabled={isDisabledUploadNext}
+                        title={label.sspSubmitRequestAlternateText}
+                    >
+                    </lightning-button>
+                </div>
+            </div>
+        </div>
+    </template>
+</template>

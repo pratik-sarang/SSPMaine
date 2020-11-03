@@ -1,0 +1,66 @@
+.ssp-ReviewCardContainer{
+    margin: 0px;
+    border-radius: .5rem;
+    border: 0;
+}
+.ssp-ReviewCard{
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    padding: 15px 30px 15px 30px;
+
+}
+
+.ssp-ReviewVariationCard{ 
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    padding: 15px 24px 15px 24px;
+    margin-left: 15px;
+    
+}
+
+.ssp-ReviewCardText{
+	font-size: 16px;	
+    font-weight: bold;	
+    letter-spacing: -0.3px;	
+    line-height: 20px;
+   
+}
+.ssp-ReviewVariationCardRed{
+    font-size: 16px;	
+    font-weight: bold;	
+    letter-spacing: -0.3px;	
+    line-height: 24px;
+}
+
+.ssp-ReviewVariationCardBlack{
+    font-size: 13px;	
+    letter-spacing: 0.3px;	
+    line-height: 18px;
+}
+
+.ssp-ReviewCardIcon{
+    height: 24px;
+    width: 24px;
+}
+
+.ssp-ReviewCardNextIcon{
+	height: 24px;
+	width: 24px;
+}
+
+@media only screen and (max-width: 768px){
+    .ssp-ReviewCard{
+        padding: 15px 24px 15px 24px;
+    }
+    .ssp-ReviewVariationCard{
+        padding: 15px 24px 15px 24px;
+    }
+}
+
+@media only screen and (max-width: 350px){
+    .ssp-ReviewCardText{
+        font-size: 14px;		
+        letter-spacing: -0.3px;	
+        line-height: 20px;
+    }
+}

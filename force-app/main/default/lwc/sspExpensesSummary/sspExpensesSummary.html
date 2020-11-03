@@ -1,0 +1,213 @@
+<!--
+* name 		    : sspExpenseSummary
+* @description 	: The component give summary of all the expense
+* @author 		: Shrikant And Chirag
+* @date 		: 12/14/2019
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName	      MM/DD/YYYY	      A Brief Description 
+						       about the Change
+-->
+
+<template>
+    <!--This component is the modal which will popup upon reaching the screen.-->
+    <template if:true={showAddExpenseModal}>
+        <div class="ssp-expense-modal">
+            <c-ssp-Adding-Expense> </c-ssp-Adding-Expense>
+        </div>
+    </template>
+    <template if:true={showExpenseDetails}>
+        <c-ssp-expense-details
+            s-id={expenseIdToBeUpdated}
+            mode={operationMode}
+            onclose={completeAddingExpense}
+            expense-name={expenseName}
+            ssp-member-id={sspMemberId}
+            ssp-application-id={sspApplicationId}
+            member-name={memberName}
+        ></c-ssp-expense-details>
+    </template>
+    <template if:false={showExpenseDetails}>
+        <!-- CD2 2.5 Security Role Matrix. -->
+        <main if:true={isPageAccessible} class="ssp-bottom-gap" role="main">
+            <div class="ssp-errorToast" if:true={hasSaveValidationError}>
+                <c-ssp-toast
+                    ssp-toast-title-val={customLabel.summaryValidatorErrorMessage}
+                    show-error-toast={trueValue}
+                    onhidetoast={hideToast}
+                ></c-ssp-toast>
+            </div>
+
+            <p class="ssp-expenseSummaryInputs"></p>
+            <div class="ssp-bodyContainer">
+                <template if:false={isVisible}>
+                    <c-ssp-spinner> </c-ssp-spinner>
+                </template>
+                <p
+                    class="ssp-fontFamily_ArvoRegular ssp-color_monoOmega ssp-info_fontSize slds-p-top_x-large" aria-live="polite"
+                >
+                    {customLabel.sspExpenseSummarySubText}
+                </p>
+                <div
+                    class="slds-p-top_medium slds-p-bottom_large sspIncomeSubsidiesSection"
+                >
+                    <div class="slds-p-vertical_small">
+                        <a
+                            tabindex="0"
+                            role="button"
+                            onclick={displayLearnMoreModelMethod}
+                            onkeydown={displayLearnMoreModelMethod}
+                            title={customLabel.sspExpenseSummaryContent4}
+                            class="ssp-fontFamily_popinBold ssp-selectionCardIconText ssp-learnMore"
+                            >{customLabel.sspLearnMoreLink}</a
+                        >
+                        <template if:true={openLearnMoreModel}>
+                            <c-ssp-detailed-information-modal
+                                header-value={customLabel.sspExpenseSummaryTitle}
+                                open-model={openLearnMoreModel}
+                                onclosemodal={hideLearnMoreModelMethod}
+                                reference={reference}
+                            >
+                               <span slot="contentSlot" class="ssp-learnMoreModal"> </span>
+
+                            </c-ssp-detailed-information-modal>
+                        </template>
+                    </div>
+                </div>
+            </div>
+            <p class="ssp-hideContainer ssp-expenseSummaryInputs"></p>
+            <div class="ssp-bg_monoSigma" if:true = {isExistingSection}>
+                <div class="ssp-existingSection slds-p-vertical_large">
+                    <p
+                        class="ssp-fontFamily_ArvoRegular ssp-color_monoOmega ssp-info_fontSize slds-p-bottom_large"
+                    >
+                        {customLabel.sspExpenseSummaryContent2}
+                        {memberName}{customLabel.sspExpenseSummaryContent3}
+                    </p>
+
+                    <template for:each={reportedExpenses} for:item="expense">
+                        <div key={expense.Id} class="slds-p-bottom_medium">
+                            <c-ssp-selection-card-without-remove-icon
+                                class="ssp-withoutIconCard"
+                                hide-buttons={trueValue}
+                            >
+                                <span
+                                    slot="cardContent"
+                                    class="ssp-fontFamily_popinBold"
+                                >
+                                    <p
+                                        class="ssp-color_monoBody ssp-word-break-all"
+                                    >
+                                        {expense.lineOne}
+                                    </p>
+                                    <p
+                                        class="ssp-color_blueAlpha ssp-word-break-all"
+                                    >
+                                        {expense.lineTwo}
+                                    </p>
+                                </span>
+                            </c-ssp-selection-card-without-remove-icon>
+                        </div>
+                    </template>
+                </div>
+            </div>
+            <div class="ssp-bodyContainer">
+                <div class="slds-p-vertical_large">
+                    <!-- CD2 2.5 Security Role Matrix. -->
+                    <lightning-button
+                        class="ssp-button_brand"
+                        variant="brand"
+                        onclick={addExpenseFlow}
+                        label={customLabel.sspAddExpense}
+                        title={customLabel.sspAddExpenseRecord}
+                        if:true={isAllowToAddExpense}
+                    ></lightning-button>
+                    <lightning-button
+                        disabled
+                        variant="brand"
+                        class="ssp-button_brand"
+                        label={customLabel.sspAddExpense}
+                        title={customLabel.sspAddExpenseRecord}
+                        if:false={isAllowToAddExpenseDefault}
+                    ></lightning-button>
+                </div>
+                <template for:each={nonReportedExpenses} for:item="expense">
+                    <template if:false={expense.showStart}>
+                        <div key={expense.Id} class="slds-p-bottom_medium">
+                            <!-- CD2 2.5 Security Role Matrix. -->
+                            <c-ssp-selection-card-with-remove-icon
+                                obj-card={expense}
+                                onremove={handleRemoveAction}
+                                card-id={expense.Id}
+                                display-edit={trueValue}
+                                oncardaction={initStartFlow}
+                                remove-modal-heading={expense.removeModalHeading}
+                                data-item-id={expense.Id}
+                                data-position={expense.position}
+                                data-mode="Edit"
+                                data-name={expense.ExpenseTypeCode__c}
+                                data-member-id={expense.SSP_Member__c}
+                                button-alt-text={customLabel.sspEditButton}
+                                remove-alt-text={customLabel.removeExpenseAlText}
+                                can-delete={canDeleteExpense}
+                                disabled = {disableExpenseDetails}
+                                is-view-button-visible={isReadOnlyDetails}
+                                view-button-alt-text={customLabel.sspView}
+                            >
+                                <span
+                                    slot="cardContent"
+                                    class="ssp-fontFamily_popinBold"
+                                >
+                                    <p class="ssp-color_monoBody ssp-word-break-all">
+                                        {expense.lineOne}
+                                    </p>
+                                    <p class="ssp-color_blueAlpha ssp-word-break-all">
+                                        {expense.lineTwo}
+                                    </p>
+                                </span>
+                            </c-ssp-selection-card-with-remove-icon>
+                        </div>
+                    </template>
+                    <template if:true={expense.showStart}>
+                        <div key={expense.key} class="slds-p-bottom_medium">
+                            <!-- CD2 2.5 Security Role Matrix. -->
+                            <c-ssp-selection-card-with-remove-icon
+                                obj-card={expense}
+                                onremove={handleRemoveAction}
+                                card-id={expense.Id}
+                                display-edit={falseValue}
+                                oncardaction={initStartFlow}
+                                remove-modal-heading={expense.removeModalHeading}
+                                data-item-id={expense.Id}
+                                data-position={expense.position}
+                                data-mode="Start"
+                                data-name={expense.ExpenseTypeCode__c}
+                                data-memberid={expense.SSP_Member__c}
+                                button-alt-text={customLabel.sspStartButton}
+                                remove-alt-text={customLabel.removeExpenseAlText}
+                                can-delete = {canDeleteExpense}
+                                disabled = {disableExpenseDetails}
+                                is-view-button-visible={isReadOnlyDetails}
+                                view-button-alt-text={customLabel.sspView}
+                            >
+                                <span
+                                    slot="cardContent"
+                                    class="ssp-fontFamily_popinBold"
+                                >
+                                    <p class="ssp-color_monoBody ssp-word-break-all">
+                                        {expense.lineOne}
+                                    </p>
+                                </span>
+                            </c-ssp-selection-card-with-remove-icon>
+                        </div>
+                    </template>
+                </template>
+            </div>
+        </main>
+    </template>
+    <!-- CD2 2.5 Security Role Matrix. -->
+    <template if:true={showAccessDeniedComponent}>
+        <c-ssp-access-denied></c-ssp-access-denied>
+    </template>
+</template>

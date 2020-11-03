@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IsActive__c</fullName>
+    <defaultValue>true</defaultValue>
+    <description>Flag to indicate if the page is active i.e., part of the flow. Use this flag to mark the pages which become no longer needed in the flow as per new configuration.</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Flag to indicate if the page is active i.e., part of the flow. Use this flag to mark the pages which become no longer needed in the flow as per new configuration.</inlineHelpText>
+    <label>Is Active</label>
+    <type>Checkbox</type>
+</CustomField>

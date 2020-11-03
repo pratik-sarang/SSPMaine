@@ -1,0 +1,24 @@
+<!--
+* name 		        : sspAccordionCard
+* @description 	    : This component is an accordion that displays info to the user.
+* @author 		    : Chaitanya Kanakia 
+* @date 		    : 12/11/2019
+* MODIFICATION LOG:
+* DEVELOPER           DATE                DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+-->
+<template>
+    <div class="ssp-accordion">
+        <button class="ssp-accordionButton slds-grid slds-grid_align-spread">
+            <slot name="Title"></slot>
+            <img
+                class="ssp-accordionIcon"
+                src={expandIconUrl}
+                alt="accordionIcon"
+            />
+        </button>
+        <div class="ssp-accordionPanel" id="accordion-content-id-1">
+            <slot name="contentSlot"></slot>
+        </div>
+    </div>
+</template>

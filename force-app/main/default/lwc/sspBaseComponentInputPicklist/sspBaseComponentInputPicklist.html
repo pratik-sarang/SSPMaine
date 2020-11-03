@@ -1,0 +1,43 @@
+<!--
+* name            : sspBaseComponentInputPicklist
+* @description    : Generic component for Picklist.
+-->
+<template>
+    <div class="genericInput">
+        <div class="ssp-alignHelpText">
+            <label
+                class="ssp-picklistLabel slds-form-element__label slds-no-flex ssp-color_monoBody"
+                for="ssp-pickList"
+                >{label}</label
+            >
+            <template if:true={isHelpText}>
+                <lightning-helptext
+                    class="ssp-helptextIcon"
+                    icon-name="utility:info_alt"
+                    content={helpTextContent}
+                ></lightning-helptext>
+            </template>
+        </div>
+        <select
+            name="Select"
+            title={title}
+            disabled={isDisabled}
+            class="ssp-picklistDropdown"
+            onchange={handleValidations}
+            onblur={handleValidations}
+            id="ssp-pickList"
+        >
+            <option value="">{select}</option>
+            <template if:true={option}>
+                <template for:each={option} for:item="item">
+                    <option key={item.value} value={item.value}
+                        >{item.label}</option
+                    >
+                </template>
+            </template>
+        </select>
+        <template for:each={ErrorMessageList} for:item="error">
+            <p tabindex="0"  role="alert" aria-atomic="true" key={error} class="showError ssp-color_redOmega">{error}</p>
+        </template>
+    </div>
+</template>

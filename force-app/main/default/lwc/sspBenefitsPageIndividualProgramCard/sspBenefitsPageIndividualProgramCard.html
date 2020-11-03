@@ -1,0 +1,471 @@
+<template>
+    <template if:true={showSpinner}>
+        <c-ssp-spinner></c-ssp-spinner>
+    </template>
+    <div if:true={showErrorToast} role="alert">
+        <c-ssp-toast
+            ssp-toast-title-val={toastMessage}
+            onhidetoast={handleHideToast}
+            show-error-toast={showErrorToast}
+            condition="positive"
+        ></c-ssp-toast>
+    </div>
+
+    <!-- PROGRAM CARD -->
+    <div class="slds-grid slds-wrap ssp-bg_monoAlpha">
+        <div class=" ssp-CardOuterDOM slds-size_1-of-1">
+            <div class="ssp-card slds-m-bottom_x-large">
+                <div
+                    class="ssp-leftpadding30 slds-grid slds-wrap slds-p-top_medium"
+                >
+                    <div
+                        class="ssp-fontFamily_popinBold slds-size_1-of-1 ssp-infoText"
+                    >
+                        {individualName}
+                    </div>
+                    <div class="slds-grid slds-wrap slds-size_1-of-1">
+                        <div if:true={showGreenDisc} class="ssp-Disc"></div>
+                        <div if:true={showRedDisc} class="ssp-redDisc"></div>
+                        <div
+                            if:true={showOrangeDisc}
+                            class="ssp-orangeDisc"
+                        ></div>
+                        <div
+                            class="ssp-infoText13 ssp-fontFamily_popinRegular ssp-color_monoOmega "
+                        >
+                            {programStatus}
+                        </div>
+                    </div>
+                    <!--FOR Medicaid/KCHIP Program only-->
+                    <div class="slds-grid slds-wrap slds-p-bottom_medium">
+                        <div class="slds-grid slds-wrap slds-p-bottom_medium">
+                            <div
+                                if:true={showMedicaidType}
+                                class="ssp-cardElement"
+                            >
+                                <div
+                                    class="ssp-infoText13 ssp-fontFamily_popinRegular ssp-color_monoOmega slds-size_1-of-1"
+                                >
+                                    {labels.sspType}
+                                </div>
+                                <div
+                                    class="ssp-infoText ssp-renewalText ssp-color_monoBody ssp-fontFamily_popinRegular"
+                                >
+                                    {medicaidType}
+                                </div>
+                            </div>
+
+                            <template if:true={showBenefitPeriod}>
+                                <div class="ssp-cardElement">
+                                    <div
+                                        class="ssp-infoText13 ssp-fontFamily_popinRegular ssp-color_monoOmega slds-size_1-of-1"
+                                    >
+                                        {labels.sspBenefitPeriod}
+                                    </div>
+                                    <div
+                                        class="ssp-infoText ssp-renewalText ssp-color_monoBody ssp-fontFamily_popinRegular"
+                                    >
+                                        {benefitPeriod}
+                                    </div>
+                                </div>
+                            </template>
+
+                            <div
+                                if:true={showPolicyHolderName}
+                                class="ssp-cardElement"
+                            >
+                                <div
+                                    class="ssp-infoText13 ssp-fontFamily_popinRegular ssp-color_monoOmega slds-size_1-of-1"
+                                >
+                                    {labels.sspPreferredPaymentPolicyHolder}
+                                </div>
+                                <div
+                                    class="ssp-infoText ssp-renewalText ssp-color_monoBody ssp-fontFamily_popinRegular"
+                                >
+                                    {policyHolderName}
+                                </div>
+                            </div>
+
+                            <div
+                                if:true={showInsuranceCompanyName}
+                                class="ssp-cardElement"
+                            >
+                                <div
+                                    class="ssp-infoText13 ssp-fontFamily_popinRegular ssp-color_monoOmega slds-size_1-of-1"
+                                >
+                                    {labels.sspInsuranceCompany}
+                                </div>
+                                <div
+                                    class="ssp-infoText ssp-renewalText ssp-color_monoBody ssp-fontFamily_popinRegular"
+                                >
+                                    {insuranceCompanyName}
+                                </div>
+                            </div>
+
+                            <div
+                                if:true={showInsurancePlanName}
+                                class="ssp-cardElement"
+                            >
+                                <div
+                                    class="ssp-infoText13 ssp-fontFamily_popinRegular ssp-color_monoOmega slds-size_1-of-1"
+                                >
+                                    {labels.sspPlanName}
+                                </div>
+                                <div
+                                    class="ssp-infoText ssp-renewalText ssp-color_monoBody ssp-fontFamily_popinRegular"
+                                >
+                                    {insurancePlanName}
+                                </div>
+                            </div>
+
+                            <div if:true={showPolicyId} class="ssp-cardElement">
+                                <div
+                                    class="ssp-infoText13 ssp-fontFamily_popinRegular ssp-color_monoOmega slds-size_1-of-1"
+                                >
+                                    {labels.sspPolicyId}
+                                </div>
+                                <div
+                                    class="ssp-infoText ssp-renewalText ssp-color_monoBody ssp-fontFamily_popinRegular"
+                                >
+                                    {policyId}
+                                </div>
+                            </div>
+
+                            <div
+                                if:true={showEBTFundLoadDate}
+                                class="ssp-cardElement"
+                            >
+                                <div
+                                    class="ssp-infoText13 ssp-fontFamily_popinRegular ssp-color_monoOmega slds-size_1-of-1"
+                                >
+                                    {labels.sspCardFundsLoadedOn}
+                                </div>
+                                <div
+                                    class="ssp-infoText ssp-renewalText ssp-color_monoBody ssp-fontFamily_popinRegular"
+                                >
+                                    {EBTFundLoadDate}
+                                </div>
+                            </div>
+
+                            <div
+                                if:true={showRenewalDueDate}
+                                class="ssp-cardElement"
+                            >
+                                <div
+                                    class="ssp-infoText13 ssp-fontFamily_popinRegular ssp-color_monoOmega slds-size_1-of-1"
+                                >
+                                    {labels.sspRenewalDate}
+                                </div>
+                                <div
+                                    class="ssp-infoText ssp-renewalText ssp-color_monoBody ssp-fontFamily_popinRegular"
+                                >
+                                    {renewalDueDate}
+                                </div>
+                            </div>
+                            <div if:true={showPatientLiability}>
+                                <div class="ssp-allotmentCard">
+                                    <div
+                                        class="ssp-infoText13 ssp-fontFamily_popinRegular ssp-color_monoOmega slds-size_1-of-1"
+                                    >
+                                        {labels.sspPatientLiability}
+                                    </div>
+                                    <div
+                                        class="slds-grid_align-spread slds-grid slds-wrap"
+                                    >
+                                        <template
+                                            for:each={patientLiabilityMonthVSAmount}
+                                            for:item="item"
+                                        >
+                                            <div
+                                                key={item}
+                                                class="ssp-allotmentElements"
+                                            >
+                                                <div
+                                                    key={month}
+                                                    class="ssp-fontFamily_popinBold ssp-color_greenAlpha ssp-months ssp-infoText"
+                                                >
+                                                    {item.month}
+                                                </div>
+                                                <div
+                                                    key={amounts}
+                                                    class="ssp-infoText ssp-renewalText ssp-color_monoBody ssp-fontFamily_popinRegular ssp-amounts ssp-infoText"
+                                                >
+                                                    {labels.sspDollarSign}{item.amount}
+                                                </div>
+                                            </div>
+                                        </template>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <template if:true={showPenalty}>
+                            <span class="ssp-textPadding_6"
+                                >{labels.sspOneActivePenalty}</span
+                            >
+                            {penaltyPeriod}. &nbsp;
+                            <a
+                                if:true={renderingMap.showViewPenalty.isAccessible}
+                                class="ssp-color_blueAlpha ssp-anchor"
+                                onclick={handleSuspensionClick}
+                                tabindex="0"
+                            >
+                                {labels.sspViewPenalty}
+                            </a>
+                        </template>
+
+                        <div
+                            if:true={showAdditionalVerificationNeeded}
+                            class="slds-grid slds-wrap slds-p-bottom_medium slds-size_1-of-1 slds-grid_vertical-align-center"
+                        >
+                            <div>
+                                <img
+                                    class="ssp-reviewIcon"
+                                    src={needsReviewIconUrl}
+                                    alt="review_icon"
+                                />
+                            </div>
+                            <div class="ssp-additionalInfoContainer">
+                                <span
+                                    class="ssp-infoText13 ssp-color_monoBody ssp-fontFamily_popinRegular "
+                                >
+                                    {labels.sspAdditionalVerification} &nbsp;
+                                </span>
+                                <span
+                                    if:true={renderingMap.showUploadDoc.isAccessible}
+                                >
+                                    <span if:false={isTMember}>
+                                        <a
+                                            onclick={handleDocumentClick}
+                                            tabindex="0"
+                                            if:true={isHeadOfHousehold}
+                                            class="ssp-infoText13 ssp-fontFamily_popinRegular ssp-anchor ssp-color_blueAlpha"
+                                        >
+                                            {labels.sspUploadDocuments}
+                                        </a>
+                                    </span>
+                                </span>
+                                <br />
+                                <div>
+                                    {labels.sspDocumentsDueBy}&nbsp;{documentUploadDueDate}
+                                </div>
+                            </div>
+                        </div>
+
+                        <template if:true={showAskForInterview}>
+                            <div>
+                                {labels.sspCompleteInterviewDCBS} &nbsp;
+                                <a
+                                    class="ssp-color_blueAlpha ssp-anchor"
+                                    href={labels.sspPhoneNumber}
+                                    tabindex="0"
+                                >
+                                    {labels.sspPhoneNumber}
+                                </a>
+                            </div>
+                        </template>
+
+                        <template if:true={showReviewDate}>
+                            <div>
+                                <span class="ssp-textPadding_6">
+                                    {labels.sspYourEligibilityDetermination}</span
+                                >
+                                {reviewDate}
+                            </div>
+                        </template>
+
+                        <template if:true={showApplicationSubmissionDate}>
+                            <div class="slds-size_1-of-1">
+                                <span class="ssp-textPadding_6"
+                                    >{labels.sspApplicationSubmitted}</span
+                                >
+                                {applicationSubmissionDate}.
+                            </div>
+                        </template>
+
+                        <template if:true={showEffectiveDate}>
+                            <div class="slds-size_1-of-1">
+                                <span class="ssp-textPadding_6"
+                                    >{labels.sspEffectiveDate}</span
+                                >
+                                {effectiveDate}.
+                            </div>
+                        </template>
+
+                        <template if:true={showDenialReason}>
+                            <div>
+                                <span class="ssp-textPadding_6"
+                                    >{labels.sspReason}</span
+                                >
+                                <span class="ssp-textPadding_6">-</span>{reason}
+                            </div>
+                        </template>
+
+                        <template if:true={ReferredToFFM}>
+                            <div class="ssp-textPadding_6">
+                                {labels.sspReferralMadeToFFM}
+                            </div>
+                            <a
+                                if:true={renderingMap.showVisitHealthcare.isAccessible}
+                                class="ssp-color_blueAlpha ssp-anchor"
+                                href="http://healthcare.gov"
+                                target="_blank"
+                                tabindex="0"
+                            >
+                                {labels.sspVisitHealthCare}
+                            </a>
+                        </template>
+
+                        <template if:true={showActiveSuspension}>
+                            {labels.sspProgramSuspended} &nbsp;
+                            <a
+                                if:true={renderingMap.showViewSuspension.isAccessible}
+                                class="ssp-color_blueAlpha ssp-anchor slds-p-vertical_medium"
+                                onclick={handleSuspensionClick}
+                                tabindex="0"
+                            >
+                                {labels.sspViewSuspension}
+                            </a>
+                        </template>
+
+                        <template if:true={showSNAPClaimAmount}>
+                            <span>
+                                <img
+                                    class="ssp-reviewIcon"
+                                    src={needsReviewIconUrl}
+                                    alt="review_icon"
+                                />
+                            </span>
+                            <!-- You owe {SNAPClaimAmount} for SNAP Benefits.&nbsp; -->
+                            {labels.sspYouOweForSnapBenefits}
+                            <a
+                                class="ssp-color_blueAlpha ssp-anchor slds-p-vertical_medium"
+                            >
+                                {labels.sspPayBalance}
+                            </a>
+
+                            <div>
+                                <span>
+                                    <img
+                                        class="ssp-reviewIcon"
+                                        src={needsReviewIconUrl}
+                                        alt="review_icon"
+                                    />
+                                </span>
+                                {labels.sspYouMaySetupRepaymentAgreement} &nbsp;
+                                <a
+                                    class="ssp-color_blueAlpha ssp-anchor"
+                                    href="tel:{labels.sspPhoneNumber2}"
+                                    tabindex="0"
+                                >
+                                    {labels.sspPhoneNumber2}
+                                </a>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+                <div
+                    class="ssp-hrRuler ssp-color_monoBeta slds-size_1-of-1"
+                ></div>
+                <div class="ssp-leftpadding30 slds-p-top_medium">
+                    <template if:true={showRequestMedicaidCard}>
+                        <div
+                            if:true={isHeadOfHousehold}
+                            class="slds-p-bottom_medium"
+                        >
+                            <span if:false={isJORITWIST}>
+                                <span if:false={isTMember}>
+                                    <a
+                                        tabindex="0"
+                                        name="Medicaid"
+                                        if:true={renderingMap.showReqMedCard.isAccessible}
+                                        class="ssp-color_blueAlpha ssp-anchor"
+                                        onclick={handleRequestACard}
+                                        onkeydown={handleRequestACard}
+                                    >
+                                        {labels.sspRequestMedicaidCard}
+                                    </a>
+                                </span>
+                            </span>
+                        </div>
+                    </template>
+
+                    <template if:true={showWaiverProgramLink}>
+                        <div class="slds-p-bottom_medium">
+                            <a
+                                if:true={renderingMap.showWaiverReq.isAccessible}
+                                id={individualId}
+                                key={individualId}
+                                class="ssp-color_blueAlpha ssp-anchor"
+                                onclick={handleWaiverProgramClick}
+                                tabindex="0"
+                            >
+                                {labels.sspEligibilityWaiverPrograms}
+                            </a>
+                        </div>
+                    </template>
+
+                    <template if:true={showManagePreferredPayment}>
+                        <div class="slds-p-bottom_medium">
+                            <a
+                                class="ssp-color_blueAlpha ssp-anchor"
+                                data-individual-id={individualId}
+                                data-policy-holder-id={policyHolderId}
+                                data-policy-holder-name={policyHolderName}
+                                onclick={handlePreferredPaymentClick}
+                                tabindex="0"
+                            >
+                                {labels.sspManagePreferredPayment}
+                            </a>
+                        </div>
+                    </template>
+
+                    <template if:true={showEligibilityNotice}>
+                        <div
+                            if:true={isHeadOfHousehold}
+                            class="slds-p-bottom_medium"
+                        >
+                            <a
+                                if:true={showEligibilitySecurityMatrix}
+                                class="ssp-color_blueAlpha ssp-anchor"
+                                data-dms-id={DMSId}
+                                onclick={downloadDocumentOnClick}
+                                tabindex="0"
+                            >
+                                {labels.sspViewEligibilityNotice}
+                            </a>
+                        </div>
+                    </template>
+                    <template if:true={showPaymentSummary}>
+                        <div class="slds-p-bottom_medium">
+                            <a
+                                if:true={renderingMap.showViewPaySummary.isAccessible}
+                                class="ssp-color_blueAlpha ssp-anchor"
+                                id={individualId}
+                                key={individualId}
+                                onclick={handlePaymentSummaryClick}
+                                tabindex="0"
+                            >
+                                {labels.sspViewPaymentSummary}
+                            </a>
+                        </div>
+                    </template>
+
+                    <template if:true={showDenialNotice}>
+                        <div class="slds-p-bottom_medium">
+                            <a
+                                if:true={showDenialSecurityMatrix}
+                                class="ssp-color_blueAlpha ssp-anchor"
+                                data-dms-id={DMSId}
+                                onclick={downloadDocumentOnClick}
+                                tabindex="0"
+                            >
+                                {labels.sspViewDenialNotice}
+                            </a>
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

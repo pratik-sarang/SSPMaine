@@ -1,0 +1,78 @@
+:host {
+    /** make the host DOM to disappear to apply correct SLDS styles. **/ 
+    display: contents;
+}
+.showError {
+    font-size: 0.75rem;
+    margin-top: 0.125rem;
+    background: transparent;
+}
+.ssp-genericInput .slds-form-element {
+    display: inline;
+}
+.ssp-genericInput .ssp-genericRequired {
+    display: inline;
+}
+.ssp-helptextIcon {
+    margin-left: 10px;
+    position: relative;
+    bottom: 3px;
+    margin-bottom: 0.313rem;
+}
+.ssp-alignHelpText {
+    display: inline-block;
+}
+.ssp-alignHelpText label {
+    font-size: 16px;
+    margin-bottom: 0.1875rem;
+    word-break: break-word;
+}
+/*Custom Tooltip css*/
+.ssp-tooltip {
+    position: relative;
+    display: inline-block;
+    bottom: 2px;
+    left: 12px;
+}
+.ssp-tooltip .ssp-tooltiptext {
+    text-align: left;
+    font-size: 0.75rem;
+    visibility: hidden;
+    min-width: 320px;
+    border-radius: 6px;
+    padding: 12px;
+    position: absolute;
+    z-index: 999999;
+    bottom: 30px;
+    left: 42px;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.ssp-tooltip .ssp-tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 20px;
+    margin-left: -5px;
+    border-width: 10px;
+    border-style: solid;
+}
+.ssp-tooltip:hover .ssp-tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+.ssp-info-icon {
+    cursor: pointer;
+}
+@media only screen and (max-width: 768px) {
+    .ssp-componentWidth {
+        width: 100%;
+    }
+    .ssp-tooltip .ssp-tooltiptext {
+        left: -220px;
+    }
+    .ssp-tooltip .ssp-tooltiptext::after {
+        left: 88%;
+    }
+}

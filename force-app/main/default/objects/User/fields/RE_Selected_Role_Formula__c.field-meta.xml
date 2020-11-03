@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RE_Selected_Role_Formula__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( 
+    OR(INCLUDES(ApplicableRoles__c, &apos;Community Partner Admin&apos;),
+       INCLUDES(ApplicableRoles__c, &apos;Community Partner Staff&apos;)) , &apos;Community Partner&apos;,  
+IF( OR(INCLUDES(ApplicableRoles__c, &apos;Case Worker Supervisor&apos;),
+       INCLUDES(ApplicableRoles__c, &apos;Case Worker&apos;)) ,&apos;Agency Users&apos; ,  
+IF(INCLUDES(ApplicableRoles__c, &apos;Assister&apos;), &apos;Assister&apos;,  
+IF(INCLUDES(ApplicableRoles__c, &apos;Citizen_Individual&apos;), &apos;Citizen&apos;,  
+IF(INCLUDES(ApplicableRoles__c, &apos;RE United Way Staff&apos;), &apos;UW Staff&apos;, &apos;&apos;) ) ) ) )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Role</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

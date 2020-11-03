@@ -1,0 +1,30 @@
+.ssp-collateralContactHeader {
+    margin-top: 60px;
+    margin-bottom: 15px;
+}
+.ssp-collateralContactHeaderText {
+    font-size: 2.625rem;
+    line-height: 48px;
+}
+.ssp-horizontal-rule {
+    height: 0.313em;
+    border-radius: 0.156em;
+    border: none;
+}
+.ssp-info_fontSize {
+    font-size: 1rem;
+}
+.ssp-collateralContactForm > div {
+    margin-bottom: 15px;
+}
+.ssp-collateral-footer-text {
+    margin-bottom: 100px;
+}
+@media only screen and (max-device-width: 896px) {
+    .ssp-collateralContactHeaderText {
+        font-size: 1.5rem;
+    }
+    .ssp-collateral-footer-text {
+        margin-bottom: 24px;
+    }
+}

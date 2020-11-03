@@ -1,0 +1,621 @@
+<template>
+    <div
+        if:true={isMetaDataLoaded}
+        class="ssp-bodyContainer ssp-reportFraudContainer"
+    >
+        <template if:true={showSpinner}>
+            <c-ssp-spinner></c-ssp-spinner>
+        </template>
+        <div if:true={showErrorToast} role="alert">
+            <c-ssp-toast
+                ssp-toast-title-val={label.toastErrorText}
+                onhidetoast={handleHideToast}
+                show-error-toast={showErrorToast}
+            ></c-ssp-toast>
+        </div>
+        <c-ssp-logging-and-error-handling-modal
+            if:true={showErrorModal}
+            error-id={errorMsg}
+            onprogressvaluechange={closeError}
+        >
+        </c-ssp-logging-and-error-handling-modal>
+        <div class="ssp-errorToast" if:true={showToast}>
+            <c-ssp-toast
+                ssp-toast-title-val={toastText}
+                show-error-toast={trueValue}
+                onhidetoast={hideToast}
+                condition={toastCondition}
+            ></c-ssp-toast>
+        </div>
+        <template if:false={isNextSteps}>
+            <div
+                class="ssp-reportFraudHeader ssp-fontFamily_popinBold ssp-color_blueAlpha"
+            >
+                <h1
+                    class="ssp-reportFraudHeader ssp-fontFamily_popinBold ssp-color_blueAlpha"
+                >
+                    {label.sspFooterReportFraud}
+                </h1>
+            </div>
+            <div class="ssp-reportFraudHr ssp-bg_monoAlpha"></div>
+
+            <div
+                class="ssp-reportFraudWhoCommitted ssp-reportFraudRightPadding"
+            >
+                <div
+                    class="ssp-reportFraudWhoCommittedQuestion ssp-fontFamily_popinBold"
+                >
+                    {label.sspWhoCommitted}
+                </div>
+                <c-ssp-base-component-input-picklist
+                    data-id="WhoCommittedFraud"
+                    class="applicationInputs"
+                    label=""
+                    entity-name="SSP_Member__c"
+                    field-name="FirstName__c"
+                    meta-list={metaDataListParent}
+                    option={optionsList}
+                    title={label.sspWhoCommittedAlternateText}
+                    value={fraudRecord.whoCommittedFraud}
+                    onhandlepicklistchange={showSelectiveFields}
+                ></c-ssp-base-component-input-picklist>
+            </div>
+            <div class="ssp-reportFraudWhatHappened">
+                <div class="ssp-requestCardTextArea ssp-fontFamily_popinBold">
+                    {label.sspFraudLetUsKnow}
+                </div>
+                <c-ssp-base-component-input-text-area
+                    data-id="WhatHappened"
+                    class="applicationInputs ssp-additionalInformationText ssp-requiredField"
+                    label=""
+                    value={fraudRecord.WhatHappened}
+                    entity-name="SSP_Member__c"
+                    field-name="FirstName__c"
+                    meta-list={metaDataListParent}
+                    onchange={handleInputFields}
+                    max-length="500"
+                    title={label.sspFraudLetUsKnow}
+                ></c-ssp-base-component-input-text-area>
+            </div>
+            <template if:true={showFields}>
+                <div class="ssp-reportFraudHr ssp-bg_monoAlpha"></div>
+
+                <!-- provide info -->
+                <div
+                    class="ssp-reportFraudProvideInfoText ssp-color_monoOmega ssp-fontFamily_ArvoRegular"
+                >
+                    {label.sspProvideInfoToIdentify}&nbsp;{selectedFraud}
+                </div>
+                <template if:true={showBothFields}>
+                    <div class="slds-grid slds-wrap ssp-reportFraudProvideInfo">
+                        <div
+                            class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-size_1-of-1 ssp-reportFraudCommonMargin ssp-reportFraudRightPadding"
+                        >
+                            <c-ssp-base-component-input-text
+                                data-id="IndividualFraudFirstName"
+                                class="applicationInputs ssp-requiredField slds-large-size_1-of-2 slds-size_1-of-1"
+                                label={label.firstName}
+                                entity-name="SSP_Member__c"
+                                field-name="FirstName__c"
+                                meta-list={metaDataListParent}
+                                onchange={handleInputFields}
+                                value={fraudRecord.IndividualFraudFirstName}
+                                max-length="50"
+                            ></c-ssp-base-component-input-text>
+                        </div>
+                        <div
+                            class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-size_1-of-1 ssp-reportFraudCommonMargin ssp-reportFraudLeftPadding"
+                        >
+                            <c-ssp-base-component-input-text
+                                data-id="IndividualFraudLastName"
+                                class="applicationInputs ssp-requiredField slds-large-size_1-of-2 slds-size_1-of-1"
+                                label={label.lastName}
+                                entity-name="SSP_Member__c"
+                                field-name="FirstName__c"
+                                meta-list={metaDataListParent}
+                                onchange={handleInputFields}
+                                value={fraudRecord.IndividualFraudLastName}
+                                max-length="50"
+                            ></c-ssp-base-component-input-text>
+                        </div>
+                        <!-- middle name -->
+                        <div
+                            class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-size_1-of-1 ssp-reportFraudCommonMargin ssp-reportFraudRightPadding"
+                        >
+                            <c-ssp-base-component-input-text
+                                data-id="IndividualFraudMiddleName"
+                                class="applicationInputs slds-large-size_1-of-2 slds-size_1-of-1"
+                                label={label.sspMiddleName}
+                                meta-list={metaDataListParent}
+                                value={fraudRecord.IndividualFraudMiddleName}
+                                onchange={handleInputFields}
+                                max-length={mIMaxLength}
+                            ></c-ssp-base-component-input-text>
+                        </div>
+
+                        <!-- suffix -->
+                        <div
+                            class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-size_1-of-1 ssp-reportFraudCommonMargin ssp-reportFraudLeftPadding"
+                        >
+                            <c-ssp-base-component-input-picklist
+                                data-id="IndividualFraudSuffix"
+                                class="applicationInputs"
+                                label={label.suffix}
+                                entity-name=""
+                                field-name=""
+                                meta-list={metaDataListParent}
+                                option={suffixCodes}
+                                placeholder={label.sspSelectAnOption}
+                                title={label.suffixOptionsTitleText}
+                                onhandlepicklistchange={handleInputFields}
+                                value={fraudRecord.IndividualFraudSuffix}
+                            ></c-ssp-base-component-input-picklist>
+                        </div>
+
+                        <!-- gender -->
+                        <div
+                            class="slds-col slds-large-size_1-of-1 slds-medium-size_1-of-1 slds-size_1-of-1 ssp-reportFraudCommonMargin"
+                        >
+                            <div
+                                class="slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-size_1-of-1 ssp-reportFraudRightPadding"
+                            >
+                                <c-ssp-base-component-input-picklist
+                                    data-id="IndividualFraudGender"
+                                    class="applicationInputs ssp-requiredFieldTwo"
+                                    label={label.gender}
+                                    entity-name="SSP_Member__c"
+                                    field-name="FirstName__c"
+                                    meta-list={metaDataListParent}
+                                    option={genderOptions}
+                                    placeholder={label.sspSelectAnOption}
+                                    title={label.genderOptionsTitleText}
+                                    value={fraudRecord.IndividualFraudGender}
+                                    onhandlepicklistchange={handleInputFields}
+                                ></c-ssp-base-component-input-picklist>
+                            </div>
+                        </div>
+
+                        <!-- SSN -->
+                        <div
+                            class="slds-col slds-large-size_1-of-1 slds-medium-size_1-of-1 slds-size_1-of-1 ssp-reportFraudCommonMargin"
+                        >
+                            <div
+                                class="slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-size_1-of-1 ssp-reportFraudRightPadding"
+                            >
+                                <c-ssp-base-component-input-text
+                                    data-id="IndividualFraudSSN"
+                                    entity-name="SSP_Member__c"
+                                    field-name="SSN__c"
+                                    meta-list={metaDataListParent}
+                                    class="applicationInputs"
+                                    label={label.socialSecurityNumber}
+                                    value={fraudRecord.IndividualFraudSSN}
+                                    onchange={handleInputFields}
+                                    input-type={ssnInputType}
+                                    max-length="9"
+                                >
+                                </c-ssp-base-component-input-text>
+                            </div>
+                        </div>
+                        <!-- DOB -->
+                        <div
+                            class="slds-col slds-large-size_1-of-1 slds-medium-size_1-of-1 slds-size_1-of-1 ssp-reportFraudCommonMargin"
+                        >
+                            <div
+                                class="slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-size_1-of-1 ssp-reportFraudRightPadding"
+                            >
+                                <c-ssp-base-component-input-date
+                                    data-id="IndividualFraudDOB"
+                                    meta-list={metaDataListParent}
+                                    class="applicationInputs ssp-reportFraudDOB"
+                                    label={label.dateOfBirth}
+                                    value={fraudRecord.IndividualFraudDOB}
+                                    onchange={handleInputFields}
+                                >
+                                </c-ssp-base-component-input-date>
+                            </div>
+                        </div>
+
+                        <!-- Address -->
+                        <div
+                            class="slds-col slds-large-size_1-of-1 slds-medium-size_1-of-1 slds-size_1-of-1 ssp-reportFraudCommonMargin"
+                        >
+                            <c-ssp-address-auto-complete
+                                class="addressLineClass ssp-requiredFieldTwo ssp-fraudAddress"
+                                field-map={fieldMap}
+                                meta-list={addressMetadata}
+                                onchange={handleInputFields}
+                            ></c-ssp-address-auto-complete>
+                        </div>
+
+                        <!-- PhoneNumberField -->
+                        <div
+                            class="slds-col slds-grid slds-large-size_1-of-1 slds-medium-size_1-of-1 slds-size_1-of-1 ssp-reportFraudCommonMargin "
+                        >
+                            <div
+                                class="slds-col slds-large-size_1-of-2 slds-medium-size_2-of-3 slds-size_2-of-3 ssp-reportFraudPhoneRight ssp-reportFraudRightPadding "
+                            >
+                                <c-ssp-base-component-input-phone
+                                    data-id="FraudPhoneNumber"
+                                    name="clientSearchPhoneNumber"
+                                    value={phoneNumber}
+                                    label={label.sspPhoneNumber}
+                                    class="applicationInputs slds-large-size_1-of-2 slds-size_1-of-1"
+                                    placeholder={label.sspPlaceholderPhoneNumber}
+                                    onchange={handleInputFields}
+                                    disabled={isDisabled}
+                                    entity-name="SSP_Member__c"
+                                    field-name="PrimaryPhoneNumber__c"
+                                    meta-list={metaDataListParent}
+                                    max-length={primaryPhoneNumberMaxLength}
+                                >
+                                </c-ssp-base-component-input-phone>
+                            </div>
+                            <div
+                                class="slds-col slds-grid slds-large-size_1-of-2 slds-medium-size_1-of-3 slds-size_1-of-3  ssp-reportFraudLeftPadding "
+                            >
+                                <div
+                                    class="slds-large-size_1-of-2 ssp-reportFraudPhoneLeft ssp-reportFraudRightPadding"
+                                >
+                  <c-ssp-base-component-input-text
+                    data-id="FraudExt"
+                    value=""
+                    field-name="PrimaryPhoneExtension__c"
+                    entity-name="SSP_Member__c"
+                    label={label.sspPhoneExtension}
+                    class="applicationInputs"
+                    max-length={extMaxLength}
+                    meta-list={metaDataListParent}
+                    onchange={handleInputFields}
+                    onkeypress={restrictNonNumeric}
+                  >
+                  </c-ssp-base-component-input-text>
+                </div>
+              </div>
+            </div>
+
+                        <!-- Case Number -->
+						<!--Defect 393001: Restricting max length of Case Number to 9 digits-->
+                        <div
+                            class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-size_1-of-1 ssp-reportFraudCommonMargin ssp-reportFraudRightPadding"
+                        >
+                            <c-ssp-base-component-input-text
+                                data-id="FraudCaseNumber"
+                                class="applicationInputs"
+                                label={label.sspCaseNumber}
+                                name="clientSearchFirstName"
+                                value={fraudRecord.FraudCaseNumber}
+                                onchange={handleInputFields}
+                                field-name="FederalCaseNumber__c"
+                                entity-name="SSP_Member__c"
+                                meta-list={metaDataListParent}
+                                max-length="9"
+                            ></c-ssp-base-component-input-text>
+                        </div>
+                    </div>
+
+                    <!-- Employer Info -->
+
+                    <div
+                        class="ssp-letUsKnowEmployerInfo ssp-color_blueAlpha ssp-fontFamily_popinBold"
+                    >
+                        {label.sspLetUsKnowEmployer}
+                    </div>
+                    <div class="ssp-reportFraudHrTwo ssp-bg_monoAlpha"></div>
+
+                    <div
+                        class="ssp-reportFraudEmployerInfo slds-grid slds-wrap"
+                    >
+                        <!-- Emp Name -->
+                        <div
+                            class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-size_1-of-1 ssp-reportFraudCommonMargin ssp-reportFraudRightPadding"
+                        >
+                            <c-ssp-base-component-input-text
+                                data-id="IndividualFraudEmployerName"
+                                class="applicationInputs"
+                                label={label.sspEmployerName}
+                                name="clientSearchFirstName"
+                                onchange={handleInputFields}
+                                disabled={isDisabled}
+                                entity-name=""
+                                field-name=""
+                                meta-list={metaDataListParent}
+                            ></c-ssp-base-component-input-text>
+                        </div>
+                        <!-- Emp Address -->
+                        <div
+                            class="slds-col slds-large-size_1-of-1 slds-medium-size_1-of-1 slds-size_1-of-1 ssp-reportFraudCommonMargin"
+                        >
+                            <c-ssp-address-auto-complete
+                                class="addressLineClass ssp-employerAddress"
+                                field-map={fieldMapThree}
+                                meta-list={addressMetadata}
+                                onchange={handleInputFields}
+                            ></c-ssp-address-auto-complete>
+                        </div>
+                    </div>
+                </template>
+
+                <!-- For Business Option -->
+                <template if:true={showBusinessFields}>
+                    <div class="slds-grid slds-wrap ssp-reportFraudProvideInfo">
+                        <!-- Name -->
+                        <div
+                            class="slds-col--padded slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-size_1-of-1 ssp-reportFraudCommonMargin ssp-reportFraudRightPadding"
+                        >
+                            <c-ssp-base-component-input-text
+                                data-id="BusinessFraudName"
+                                class="applicationInputs ssp-requiredField slds-large-size_1-of-2 slds-size_1-of-1"
+                                label={label.sspName}
+                                entity-name="SSP_Member__c"
+                                field-name="FirstName__c"
+                                meta-list={metaDataListParent}
+                                onchange={handleInputFields}
+                            ></c-ssp-base-component-input-text>
+                        </div>
+                        <!-- Case Number -->
+						<!--Defect 393001: Restricting max length of Case Number to 9 digits-->
+                        <div
+                            class="slds-col slds-large-size_1-of-2 slds-medium-size_1-of-1 slds-size_1-of-1 ssp-reportFraudCommonMargin ssp-reportFraudLeftPadding"
+                        >
+                            <c-ssp-base-component-input-text
+                                data-id="FraudCaseNumber"
+                                class="applicationInputs"
+                                label={label.sspCaseNumber}
+                                name="clientSearchFirstName"
+                                value={fraudRecord.FraudCaseNumber}
+                                onchange={handleInputFields}
+                                field-name="FederalCaseNumber__c"
+                                entity-name="SSP_Member__c"
+                                meta-list={metaDataListParent}
+                                max-length="9"
+                            ></c-ssp-base-component-input-text>
+                        </div>
+                        <!-- Address -->
+                        <div
+                            class="slds-col--padded slds-large-size_1-of-1 slds-medium-size_1-of-1 slds-size_1-of-1 ssp-reportFraudCommonMargin"
+                        >
+                            <c-ssp-address-auto-complete
+                                class="addressLineClass ssp-requiredFieldTwo ssp-businessAddress"
+                                field-map={fieldMap}
+                                meta-list={addressMetadata}
+                                onchange={handleInputFields}
+                            ></c-ssp-address-auto-complete>
+                        </div>
+
+                        <!-- PhoneNumberField -->
+                        <div
+                            class="slds-col slds-grid slds-large-size_1-of-1 slds-medium-size_1-of-1 slds-size_1-of-1 ssp-reportFraudCommonMargin "
+                        >
+                            <div
+                                class="slds-col slds-large-size_1-of-2 slds-medium-size_2-of-3 slds-size_2-of-3 ssp-reportFraudPhoneRight ssp-reportFraudRightPadding "
+                            >
+                                <c-ssp-base-component-input-phone
+                                    data-id="FraudPhoneNumber"
+                                    name="clientSearchPhoneNumber"
+                                    value={phoneNumber}
+                                    label={label.sspPhoneNumber}
+                                    class="applicationInputs slds-large-size_1-of-2 slds-size_1-of-1"
+                                    placeholder={label.sspPlaceholderPhoneNumber}
+                                    onchange={handleInputFields}
+                                    disabled={isDisabled}
+                                    entity-name="SSP_Member__c"
+                                    field-name="PrimaryPhoneNumber__c"
+                                    meta-list={metaDataListParent}
+                                    max-length={primaryPhoneNumberMaxLength}
+                                >
+                                </c-ssp-base-component-input-phone>
+                            </div>
+                            <div
+                                class="slds-col slds-grid slds-large-size_1-of-2 slds-medium-size_1-of-3 slds-size_1-of-3 ssp-reportFraudLeftPadding"
+                            >
+                                <div
+                                    class="slds-large-size_1-of-2 ssp-reportFraudPhoneLeft ssp-reportFraudRightPadding  "
+                                >
+                                    <c-ssp-base-component-input-Number
+                                        data-id="FraudExt"
+                                        value={fraudRecord.FraudExt}
+                                        field-name="PrimaryPhoneExtension__c"
+                                        entity-name="SSP_Member__c"
+                                        label={label.sspPhoneExtension}
+                                        class="contactDetails applicationInputs"
+                                        max-length={extMaxLength}
+                                        meta-list={metaDataListParent}
+                                        onchange={handleInputFields}
+                                    >
+                                    </c-ssp-base-component-input-Number>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </template>
+                <!-- OIG -->
+                <div class="ssp-reportFraudCanOIGContact">
+                    <c-ssp-base-component-input-toggle
+                        class="applicationInputs ssp-requiredField slds-large-size_1-of-1 slds-size_1-of-1"
+                        label={label.sspCanOIGContactYou}
+                        data-id="CanOIGContactYou"
+                        entity-name="SSP_Member__c"
+                        field-name="FirstName__c"
+                        meta-list={metaDataListParent}
+                        options={yesNoPicklist}
+                        onchange={handleInputFields}
+                        value={fraudRecord.CanOIGContactYou}
+                    ></c-ssp-base-component-input-toggle>
+                </div>
+                <template if:true={ifOIGCanContact}>
+                    <div
+                        class="ssp-reportFraudYourInformation ssp-color_blueAlpha ssp-fontFamily_popinBold"
+                    >
+                        {label.sspYourContactInfo}
+                    </div>
+                    <div class="ssp-reportFraudHrThree ssp-bg_monoAlpha"></div>
+
+                    <div class="ssp-reportFraudHowCanOIG">
+                        <div class="ssp-reportFraudMultiLineCheckBox">
+                            <c-ssp-base-component-input-checkbox-group
+                                data-id="HowOIGContactYou"
+                                class="applicationInputs ssp-requiredField"
+                                label={label.sspHowCanOIGContact}
+                                entity-name="SSP_Member__c"
+                                field-name="FirstName__c"
+                                meta-list={MetaDataListParent}
+                                options={howCanOIGOptions}
+                                value={fraudRecord.HowOIGContactYou}
+                                onchange={handleInputFields}
+                                title={label.sspHowCanOIGContactAlt}
+                            ></c-ssp-base-component-input-checkbox-group>
+                        </div>
+                        <div class="ssp-reportFraudCheckedOption">
+                            <!-- Your Email -->
+                            <template if:true={isYourEmail}>
+                                <div
+                                    class="slds-large-size_1-of-2 slds-size_1-of-1 ssp-reportFraudCommonMargin ssp-reportFraudRightPadding"
+                                >
+                                    <c-ssp-base-component-input-email
+                                        data-id="UserEmail"
+                                        class="applicationInputs ssp-requiredField"
+                                        value={userEmail}
+                                        label={label.sspYourEmail}
+                                        onchange={handleInputFields}
+                                        entity-name="SSP_Member__c"
+                                        field-name="Email__c"
+                                        meta-list={metaDataListParent}
+                                    >
+                                    </c-ssp-base-component-input-email>
+                                </div>
+                            </template>
+                            <!-- Your Address -->
+                            <template if:true={isYourMail}>
+                                <c-ssp-address-auto-complete
+                                    data-id="UserAddressLine1"
+                                    class="addressLineClass ssp-requiredFieldTwo ssp-userAddress"
+                                    record={addressRecord}
+                                    field-map={fieldMapTwo}
+                                    meta-list={metaDataListParent}
+                                    onchange={handleInputFields}
+                                    entity-name="SSP_Member__c"
+                                    field-name="MailingAddressLine1__c"
+                                ></c-ssp-address-auto-complete>
+                            </template>
+                            <template if:true={isYourPhone}>
+                                <!-- PhoneNumberField -->
+                                <div
+                                    class="slds-col slds-grid slds-large-size_1-of-1 slds-medium-size_1-of-1 slds-size_1-of-1 ssp-reportFraudCommonMargin "
+                                >
+                                    <div
+                                        class="slds-col slds-large-size_1-of-2 slds-medium-size_2-of-3 slds-size_2-of-3 ssp-reportFraudPhoneRight ssp-reportFraudRightPadding"
+                                    >
+                                        <c-ssp-base-component-input-phone
+                                            data-id="UserPhoneNumber"
+                                            name="clientSearchPhoneNumber"
+                                            value={userPhone}
+                                            label={label.sspPhoneNumber}
+                                            class="applicationInputs ssp-requiredField ssp-reportFraudPhoneRight slds-large-size_1-of-2 slds-size_1-of-1"
+                                            placeholder={label.sspPlaceholderPhoneNumber}
+                                            onchange={handleInputFields}
+                                            entity-name="SSP_Asset__c"
+                                            field-name="PrimaryPhoneNumber__c"
+                                            meta-list={metaDataListParent}
+                                        >
+                                        </c-ssp-base-component-input-phone>
+                                    </div>
+                                    <div
+                                        class="slds-col slds-grid slds-large-size_1-of-2 slds-medium-size_1-of-3 slds-size_1-of-3 ssp-reportFraudLeftPadding"
+                                    >
+                                        <div
+                                            class="slds-large-size_1-of-2 ssp-reportFraudPhoneLeft ssp-reportFraudRightPadding  "
+                                        >
+                                            <c-ssp-base-component-input-text
+                                                data-id="UserExt"
+                                                value={userPhoneExt}
+                                                field-name="PrimaryPhoneExtension__c"
+                                                entity-name="SSP_Member__c"
+                                                label={label.sspPhoneExtension}
+                                                class="contactDetails ssp-requiredField applicationInputs"
+                                                max-length={extMaxLength}
+                                                meta-list={metaDataListParent}
+                                                onchange={handleInputFields}
+                                            >
+                                            </c-ssp-base-component-input-text>
+                                        </div>
+                                    </div>
+                                </div>
+                            </template>
+                        </div>
+                    </div>
+                </template>
+            </template>
+
+            <div class="slds-size_1-of-1 ssp-reportFraudCaptchaContainer">
+                <iframe
+                    src={vFPage}
+                    id="recaptchaIframe"
+                    title="frame"
+                    class="iframe-captcha ssp-getBenefitCaptcha"
+                    scrolling="no"
+                    width="100%"
+                    height="90px"
+                ></iframe>
+            </div>
+            <div
+                class="slds-grid slds-wrap slds-size_1-of-1 ssp-actionButtonsContainer ssp-buttonWidth ssp-uploadProofForms"
+            >
+                <div class="slds-size_1-of-1 ssp-requestCardButtons">
+                    <lightning-button
+                        class="ssp-button_base ssp-cancelButton ssp-screenFooterBlueBtn"
+                        label={label.sspCancel}
+                        onclick={handleCancel}
+                        title={label.sspCancelAlternateText}
+                    >
+                    </lightning-button>
+                    <lightning-button
+                        class="ssp-button_neutral ssp-submitButton ssp-screenFooterNextBtn"
+                        label={label.sspSubmitFeedback}
+                        onclick={handleSubmitFraud}
+                        disabled={isDisabledSubmitButton}
+                        title={label.sspSubmitFeedbackAlternateText}
+                    >
+                    </lightning-button>
+                </div>
+            </div>
+        </template>
+        <template if:true={isNextSteps}>
+            <div
+                class="ssp-reportFraudNextHeader ssp-fontFamily_popinBold ssp-color_blueAlpha"
+            >
+                <h1
+                    class="ssp-reportFraudNextHeader ssp-fontFamily_popinBold ssp-color_blueAlpha"
+                >
+                    {label.sspNextSteps}
+                </h1>
+            </div>
+            <div class="ssp-reportFraudConfirmation ssp-fontFamily_popinBold">
+                {label.sspConfirmationNumber}{fraudId}
+            </div>
+            <template if:true={canOIGContact}>
+                <div
+                    class="ssp-reportFraudNextText ssp-fontFamily_ArvoRegular ssp-color_monoOmega"
+                >
+                    {label.sspOIGReachOutText}
+                </div>
+            </template>
+            <template if:false={canOIGContact}>
+                <div
+                    class="ssp-reportFraudNextText ssp-fontFamily_ArvoRegular ssp-color_monoOmega"
+                >
+                    {label.sspAnonymouslyText}
+                </div>
+            </template>
+            <div class="ssp-reportFraudReturnButton">
+                <lightning-button
+                    class="ssp-button_base ssp-cancelButton ssp-screenFooterBlueBtn"
+                    label={label.sspReturnToKentuckyHome}
+                    onclick={handleReturnHome}
+                    title={label.sspReturnToKentuckyHomeAlternate}
+                >
+                </lightning-button>
+            </div>
+        </template>
+    </div>
+</template>

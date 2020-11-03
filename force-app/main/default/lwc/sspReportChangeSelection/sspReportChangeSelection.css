@@ -1,0 +1,88 @@
+.ssp-reportChange_container .ssp-learnMore_link {
+    font-size: 0.8125rem;
+    line-height: 1.875rem;
+    height: 1.5rem;
+    letter-spacing: -0.01875rem;
+    text-decoration: underline;
+    text-underline-position: under;
+    margin-bottom: 1.875rem;
+    display: inline-block;
+}
+
+.ssp-reportChange_container .ssp-reportChangeHeaderText {
+    font-size: 1.5rem;
+    line-height: 1.875rem;
+    letter-spacing: normal;
+}
+
+.ssp-reportChange_container .ssp-reportChangeForm .ssp-actionButtonsContainer {
+    margin-top: 6.25rem;
+    margin-bottom: 3.75rem;
+}
+
+.ssp-reportChange_container .ssp-actionButtons .ssp-cancelButton {
+    margin-left: none;
+    margin-right: 1.438rem;
+}
+
+.ssp-reportChange_container .ssp-actionButtons .slds-button {
+    height: 3.75rem;
+}
+
+.ssp-reportChange_container .ssp-checkboxLabels {
+    font-size: 0.813rem;
+}
+
+.ssp-reportChange_container .ssp-contactSupport, .ssp-question {
+    font-size: 1rem;
+}
+
+.ssp-reportChange_container .ssp-contactSupport {
+    margin-top: 1.438rem;
+}
+
+.ssp-reportChange_container .ssp-helptextIcon {
+    margin-left: 0.313rem;
+    vertical-align: text-bottom;
+}
+
+.ssp-reportChange_container .ssp-resourceLabel1 {
+    vertical-align: middle;
+}
+
+.ssp-reportChange_container .ssp-reportChangeHeaderText {
+    padding-top: 1.25rem;
+}
+
+.ssp-reportChange_container .ssp-customerCareNumber {
+    text-decoration: underline;
+}
+
+@media only screen and (min-width: 769px) {
+    .ssp-reportChange_container.ssp-actionButtonsContainer {
+        display: flex;
+        justify-content: space-between;
+    }
+    .ssp-reportChange_container .ssp-reportChangeHeaderText {
+        font-size: 2.625rem;
+        line-height: 3rem;
+        letter-spacing: normal;
+        padding-top: 1.875rem;
+        margin-bottom: 0.375rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .ssp-reportChange_container {
+        width: 100%;
+    }
+    .ssp-screenFooterBlueBtn {
+        order: 2;
+        width: 100%;
+    }
+
+    .ssp-screenFooterNextBtn {
+        order: 1;
+        width: 100%;
+    }
+}

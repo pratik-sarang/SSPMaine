@@ -1,0 +1,330 @@
+.kynect-link:hover .kynect-hyperlink {
+    color: #156e96;
+}
+.kynect-hclink:hover .kynect-hyperlink {
+    color: #156e96;
+}
+.kynect-home-section_1 {
+    background-image: url(../resource/kynectHomePageAssets/banner1.png);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-position: 50%;
+    background-size: 100% 100%;
+    height: 1080px;
+}
+
+.kynect-home-section1-container {
+    margin-top: -180px;
+}
+
+.kynect-video-container {
+    height: 271px;
+}
+
+.kynect-video {
+    height: 100%;
+    width: 100%;
+    border: 0;
+    border-radius: 6px;
+    box-shadow: 0 15px 25px -12px rgba(0, 35, 98, 0.1);
+}
+
+.kynect-home-section_2 {
+    background-image: url(../resource/kynectHomePageAssets/background_banner2.jfif);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-position: 50%;
+    background-size: 100% 100%;
+    height: auto;
+}
+
+.kynect-home-section_3 {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-position: 50%;
+    background-size: 100% 100%;
+    height: 800px;
+}
+
+.kynect-home-section_4 {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-position: 50%;
+    background-size: 100% 100%;
+    height: 800px;
+}
+
+.kynect-link {
+    font-size: 1.25rem;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+.kynect-hclink {
+    font-size: 1.1rem;
+    font-weight: normal;
+    text-decoration: underline;
+}
+
+.kynect-subsection_wrap {
+    padding-top: 30px;
+    padding-bottom: 62px;
+}
+
+.kynect-container_width {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.kynect-card_wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.kynect-card_wrap > div {
+    width: 33%;
+    padding: 30px 15px;
+}
+
+.kynect-help_section .kynect-card_wrap > div {
+    width: 25%;
+    padding-bottom: 0;
+}
+
+.kynect-help_section .kynect-card_wrap > div:nth-child(1),
+.kynect-card_wrap > div:nth-child(1) {
+    padding-left: 0;
+}
+
+.kynect-card_wrap > div:nth-child(1n + 4) {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+}
+
+.kynect-card_wrap > div:last-child {
+    padding-left: 15px;
+}
+
+.kynect-card_wrap > div:nth-child(3n) {
+    padding-right: 0;
+}
+
+.kynect-help_section .kynect-card_wrap > div:nth-child(3n) {
+    padding-right: 15px;
+}
+
+.kynect-help_section .kynect-card_wrap > div:nth-child(1n + 4) {
+    padding-top: 30px;
+    padding-bottom: 0;
+    padding-right: 0;
+    padding-left: 15px;
+}
+
+.kynect-card-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.kynect-home-banner1 {
+    position: relative;
+    top: 25px;
+    z-index: 9999;
+}
+
+.kynectlink-lineheight {
+    line-height: 1.5rem;
+}
+
+.kynectlink-decoration {
+    text-decoration: underline;
+}
+
+.kynect-hclink-margin {
+    margin-top: 1rem;
+}
+
+.kynect-link .kynect-hpcard-button-arrow {
+    width: 45px;
+}
+
+@media only screen and (max-width: 768px) {
+    .kynect-home-section_1 {
+        background-image: url(../resource/kynectHomePageBanner/KynectBannerMobile.png);
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        background-position: 50%;
+        background-size: 100% 100%;
+        height: 480px;
+    }
+
+    .kynect-home-section1-container {
+        margin-top: 200px;
+    }
+
+    .kynect-home-section_2 {
+        min-height: 400px;
+    }
+
+    .kynect-card_wrap > div,
+    .kynect-help_section .kynect-card_wrap > div,
+    .kynect-card_wrap > div:nth-child(1n + 4),
+    .kynect-help_section .kynect-card_wrap > div:nth-child(1n + 4) {
+        width: 100%;
+        padding: 50px 0 50px 0;
+    }
+
+    .kynect-card_wrap > div:first-child,
+    .kynect-help_section .kynect-card_wrap > div:first-child {
+        padding-top: 30px;
+    }
+
+    .kynect-card_wrap > div:last-child,
+    .kynect-help_section .kynect-card_wrap > div:last-child {
+        padding-top: 50px;
+        padding-bottom: 30px;
+        padding-left: 0px;
+    }
+
+    .kynect-help_section .kynect-card_wrap > div:nth-child(3n) {
+        padding-right: 0;
+    }
+
+    .kynect-card-container {
+        height: 420px;
+    }
+
+    .kynect-link .kynect-hpcard-button-arrow {
+        width: 50px;
+    }
+
+    .kynect-link {
+        margin-top: -15px;
+        font-size: 0.9rem;
+        font-weight: normal;
+    }
+
+    .kynect-hclink {
+        margin-top: -15px;
+        font-size: 0.9rem;
+        font-weight: normal;
+        text-decoration: underline;
+    }
+
+    .kynectlink-lineheight {
+        line-height: 0.9rem;
+    }
+
+    .kynect-hclink-margin {
+        margin-top: 0.5rem;
+    }
+    .kynect-video {
+        height: 50%;
+        width: 100%;
+        border: 0;
+        border-radius: 6px;
+        box-shadow: 0 15px 25px -12px rgba(0, 35, 98, 0.1);
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .kynect-home-section_1 {
+        background-image: url(../resource/kynectHomePageAssets/banner1_ipad.png);
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        background-position: 50%;
+        background-size: 100% 100%;
+        height: 1024px;
+    }
+
+    .kynect-home-section1-container {
+        margin-top: -150px;
+    }
+
+    .kynect-link .kynect-hpcard-button-arrow {
+        width: 45px;
+    }
+
+    .kynect-link {
+        font-size: 0.9rem;
+        font-weight: normal;
+    }
+
+    .kynect-hclink {
+        font-size: 0.9rem;
+        font-weight: normal;
+        text-decoration: underline;
+    }
+
+    .kynectlink-lineheight {
+        line-height: 0.9rem;
+    }
+
+    .kynect-hclink-margin {
+        margin-top: 0.5rem;
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+    .kynect-home-section_1 {
+        background-image: url(../resource/kynectHomePageAssets/banner1_laptop.png);
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        background-position: 50%;
+        background-size: 100% 100%;
+        height: 1024px;
+    }
+
+    .kynect-home-section1-container {
+        margin-top: -150px;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .kynect-link {
+        margin-top: -15px;
+        font-size: 0.7rem;
+        font-weight: normal;
+    }
+
+    .kynect-hclink {
+        font-size: 0.7rem;
+        font-weight: normal;
+        text-decoration: underline;
+    }
+
+    .kynect-link .kynect-hpcard-button-arrow {
+        width: 30px;
+    }
+    .kynect-home-section_1 {
+        background-image: url(../resource/kynectHomePageBanner/KynectBannerMobile.png);
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        background-position: 50%;
+        background-size: 100% 100%;
+        height: 450px;
+    }
+    .kynect-home-section1-container {
+        margin-top: 220px;
+    }
+    .kynectlink-lineheight {
+        line-height: 0.85rem;
+    }
+}

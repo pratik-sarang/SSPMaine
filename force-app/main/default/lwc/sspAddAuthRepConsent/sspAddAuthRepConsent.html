@@ -1,0 +1,190 @@
+<!--
+* name 		    : sspAddAuthRepConsent
+* @description 	: The component is to take consent for adding auth rep.
+* @author 		: Shrikant And Chirag
+* @date 		: 1/23/2020
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName	      MM/DD/YYYY	      A Brief Description 
+						       about the Change
+-->
+<template>
+    <div class="ssp-errorToast" if:true={hasSaveValidationError}>
+        <c-ssp-toast
+            ssp-toast-title-val={customLabel.toastErrorText}
+            show-error-toast={trueValue}
+            onhidetoast={hideToast}
+        ></c-ssp-toast>
+    </div>
+    <c-ssp-logging-and-error-handling-modal if:true={showErrorModal} error-id={errorCode} onprogressvaluechange={closeError}>
+    </c-ssp-logging-and-error-handling-modal>
+    <template if:true={showSpinner}>
+        <c-ssp-spinner></c-ssp-spinner>
+    </template>
+    <template if:true={isVisible}>
+        <main class="ssp-bodyContainer">
+            <div class="ssp-contentContainer">
+                <h1
+                    class="ssp-fontFamily_popinBold ssp-color_blueAlpha slds-m-bottom_large ssp-main-heading"
+                >
+                    {customLabel.sspAuthorizedRepresentativeConsent}
+                </h1>
+                <hr class="ssp-horizontal-rule ssp-bg_monoAlpha" >
+
+                <p
+                    class="ssp-fontFamily_ArvoRegular ssp-color_monoBody ssp-sub-heading-text ssp-m-heading"
+                >
+                    {customLabel.sspContentAuthorizeRepresentativeConsent1}
+                </p>
+
+                <p
+                    class="ssp-fontFamily_popinBold ssp-color_monoBody ssp-sub-heading ssp-m-heading-small"
+                >
+                    {customLabel.sspTermsOfAgreement}
+                </p>
+                <div>
+                    <ol>
+                        <li>
+                            <span
+                                class="ssp-fontFamily_popinBold ssp-color_blueAlpha ssp-list-numbering ssp-sub-heading-text"
+                                >{customLabel.sspOneDot}</span
+                            >
+                            <p
+                                class="ssp-fontFamily_ArvoRegular ssp-color_monoBody ssp-sub-heading-text ssp-m-sub-heading ssp-list-text"
+                            >
+                                {customLabel.sspContentAuthorizedRepresentativeConsent2}
+                            </p>
+                        </li>
+                        <li>
+                            <span
+                                class="ssp-fontFamily_popinBold ssp-color_blueAlpha ssp-list-numbering ssp-sub-heading-text"
+                                >{customLabel.sspTwoDot}</span
+                            >
+                            <p
+                                class="ssp-fontFamily_ArvoRegular ssp-color_monoBody ssp-sub-heading-text ssp-list-text"
+                            >
+                                {customLabel.sspContentAuthorizedRepresentativeConsent3}
+                            </p>
+                        </li>
+                    </ol>
+                </div>
+                <hr class="ssp-horizontal-rule-small ssp-bg_monoBeta" >
+
+                <p
+                    class="ssp-fontFamily_ArvoRegular ssp-color_monoBody ssp-sub-heading-text ssp-m-heading-margin"
+                >
+                    {customLabel.sspContentAuthorizedRepresentativeConsent4}
+                </p>
+
+                <div class="slds-grid slds-wrap">
+                    <div
+                        class="slds-col slds-size_1-of-1 slds-large-size_6-of-12 ssp-common-margin ssp-common-right-padding"
+                    >
+                        <c-ssp-base-component-input-text
+                            class="ssp-applicationInputs"
+                            label={customLabel.sspFirstName}
+                            data-id="FirstName__c"
+                            entity-name="AccountContactRelation"
+                            field-name="FirstName__c"
+                            meta-list={metaDataListParent}
+                            value={actContactRelationObj.FirstName__c}
+                            match-value={headOfHousehold.FirstName}
+                            max-length="50"
+                        >
+                        </c-ssp-base-component-input-text>
+                    </div>
+                    <div
+                        class="slds-col slds-size_1-of-1 slds-large-size_3-of-12 ssp-common-margin"
+                    >
+                        <c-ssp-base-component-input-text
+                            class="ssp-applicationInputs"
+                            label={customLabel.sspMI}
+                            data-id="MiddleName__c"
+                            entity-name="AccountContactRelation"
+                            field-name="MiddleName__c"
+                            meta-list={metaDataListParent}
+                            value={actContactRelationObj.MiddleName__c}
+                            match-value={headOfHousehold.MI}
+                            max-length={customLabel.sspMiddleInitialMaxLength}
+                        >
+                        </c-ssp-base-component-input-text>
+                    </div>
+                    <div
+                        class="slds-col slds-size_1-of-1 slds-large-size_6-of-12 ssp-common-margin ssp-common-right-padding"
+                    >
+                        <c-ssp-base-component-input-text
+                            class="ssp-applicationInputs"
+                            label={customLabel.sspLastName}
+                            data-id="LastName__c"
+                            entity-name="AccountContactRelation"
+                            field-name="LastName__c"
+                            meta-list={metaDataListParent}
+                            value={actContactRelationObj.LastName__c}
+                            match-value={headOfHousehold.LastName}
+                            max-length="50"
+                        >
+                        </c-ssp-base-component-input-text>
+                    </div>
+                    <div
+                        class="slds-col slds-size_1-of-1 slds-large-size_3-of-12 ssp-common-margin"
+                    >
+                        <c-ssp-base-component-input-picklist
+                            class="ssp-applicationInputs"
+                            label={customLabel.sspSuffix2}
+                            title={customLabel.sspSuffixOptionsTitleText}
+                            data-id="SuffixCode__c"
+                            entity-name="AccountContactRelation"
+                            field-name="SuffixCode__c"
+                            meta-list={metaDataListParent}
+                            option={suffixOptions}
+                            selected-value={actContactRelationObj.SuffixCode__c}
+                            value={actContactRelationObj.SuffixCode__c}
+                            match-value={headOfHousehold.SuffixCode}
+                        >
+                        </c-ssp-base-component-input-picklist>
+                    </div>
+                    <div
+                        class="slds-col slds-size_1-of-1 slds-large-size_3-of-12 ssp-common-margin ssp-common-left-padding"
+                    >
+                        <c-ssp-base-component-input-date
+                            class="ssp-applicationInputs"
+                            label={customLabel.sspDate}
+                            data-id="ConsentDate__c"
+                            entity-name="AccountContactRelation"
+                            field-name="ConsentDate__c"
+                            meta-list={metaDataListParent}
+                            value={actContactRelationObj.ConsentDate__c}
+                            onchange={handleBirthDateChange}
+                        >
+                        </c-ssp-base-component-input-date>
+                    </div>
+                </div>
+
+                <div
+                    class="slds-grid slds-wrap slds-grid_align-spread ssp-add-auth-rep-btns slds-grid_reverse"
+                >
+                    <lightning-button
+                        label={customLabel.sspSubmitAuthorizedRepresentative}
+                        title={customLabel.sspSubmitAuthorizedRepresentativeInformation}
+                        class="ssp-button_neutral ssp-authorize-btn ssp-submit-authrep-info"
+                        onclick={initSave}
+                    ></lightning-button>
+
+                    <lightning-button
+                        label={customLabel.sspBack}
+                        title={customLabel.sspReturnPreviousScreen}
+                        class="ssp-button_base ssp-cancel-btn"
+                        onclick={handleBack}
+                    ></lightning-button>
+                    <lightning-button
+                        label={customLabel.sspCancel}
+                        title={customLabel.sspCancelEnteringDetailsAuthorizedRepresentative}
+                        class="ssp-button_base ssp-cancel-btn"
+                        onclick={handleCancel}
+                    ></lightning-button>
+                </div>
+            </div>
+        </main>
+    </template>
+</template>

@@ -1,0 +1,121 @@
+<!--
+
+* name : sspMedicareCoverageSummary
+* @description :The Medicare Coverage summary screen displays the coverage details as tiles.
+* @author : Kyathi Kanumuri
+* @date : 1/14/2020
+* MODIFICATION LOG:
+* DEVELOPER             DATE            DESCRIPTION
+* ________________________________________________________________________________
+
+* FE: Kyathi                12/10/2019      Creating HTML Structure
+* BE: Varun                 2/9/2020      Integration
+-->
+<template>
+    <template if:true={showSpinner}>
+        <c-ssp-spinner></c-ssp-spinner>
+    </template>
+    <template if:false={showMedicareDetails}>
+        <!-- CD2 2.5 Security Role Matrix. -->
+        <div if:true={isPageAccessible} class="ssp-coverageSummary_container  ssp-bodyContainer">
+            <div class="ssp-errorToast" if:true={hasSaveValidationError}>
+                <c-ssp-toast
+                    ssp-toast-title-val={label.sspSummaryRecordValidator}
+                    show-error-toast={trueValue}
+                    onhidetoast={hideToast}
+                ></c-ssp-toast>
+            </div>
+            <p
+                class="ssp-coverageSummary_desc ssp-color_monoOmega ssp-fontFamily_ArvoRegular"
+            >
+                {label.sspMedicareCoverageSummaryText}
+            </p>
+            <p class="ssp-hideContainer ssp-coverageSummaryInputs"></p>
+            <!-- CD2 2.5 Security Role Matrix. -->
+            <lightning-button
+                variant="brand"
+                label={label.sspAddCoverageButton}
+                class="ssp-button_brand ssp-addCoverageButton"
+                onclick={handleAddCoverageAction}
+                disabled={isDisableAddButton}
+                name={row}
+                title={label.sspAddCoverageButtonAltText}
+                if:true={isAddButton}
+            >
+            </lightning-button>
+            <div class="ssp-card_section">
+                <div>
+                    <template
+                        for:each={medicareCoverageSummaryWrapper}
+                        for:item="benefitWrapper"
+                    >
+                        <div
+                            key={benefitWrapper.id}
+                            class="ssp-subSection  slds-m-bottom_medium"
+                        >
+                        <!-- CD2 2.5 Security Role Matrix. -->
+                            <c-ssp-selection-card-with-remove-icon
+                                onremove={handleRemoveAction}
+                                display-edit={benefitWrapper.displayEdit}
+                                obj-card={benefitWrapper.benefit}
+                                oncardaction={handleStartAction}
+                                remove-modal-heading={label.sspRemoveModalHeading}
+                                button-alt-text={benefitWrapper.editButtonAltText}
+                                remove-alt-text={benefitWrapper.removeButtonAltText}
+                                hide-remove-icon={benefitWrapper.hideRemoveIcon}
+                                can-delete = {canDeleteMedicareCoverage}
+                                disabled = {disableMedicareCoverageDetails}
+                                is-view-button-visible={isReadOnlyDetails}
+                                view-button-alt-text={benefitWrapper.viewButtonAltText}
+                            >
+                                <div
+                                    slot="cardContent"
+                                    class="ssp-medicareDetails"
+                                >
+                                    <p
+                                        class="ssp-fontFamily_popinBold slds-m-left_x-small ssp-color_monoBody ssp-word-break-all"
+                                    >
+                                        {benefitWrapper.medicareType}
+                                    </p>
+                                    <div if:true={benefitWrapper.displayEdit}>
+                                        <p
+                                            class=" ssp-fontFamily_popinBold ssp-color_blueAlpha slds-m-left_x-small ssp-word-break-all"
+                                        >
+                                            <template
+                                                if:true={benefitWrapper.benefit.BeginDate__c}
+                                            >
+                                                <span
+                                                    >{label.sspStartDate}:&nbsp;</span
+                                                >
+                                                <span
+                                                    class="ssp-coverage_StartDate"
+                                                >
+                                                    {benefitWrapper.formattedBeginDate}
+                                                </span>
+                                            </template>
+                                        </p>
+                                    </div>
+                                </div>
+                            </c-ssp-selection-card-with-remove-icon>
+                        </div>
+                    </template>
+                    <span class="ssp-color_redOmega" if:true={hasEmptyTiles}>
+                        {label.sspSummaryRecordValidator}</span
+                    >
+                </div>
+            </div>
+        </div>
+    </template>
+    <template if:true={showMedicareDetails}>
+        <c-ssp-medicare-coverage-details
+            ssp-benefit-id={sspBenefitId}
+            onmedicaredetailbuttonaction={hideCoverageDetails}
+            member-id={memberId}
+            page-to-load={pageName}
+        ></c-ssp-medicare-coverage-details>
+    </template>
+    <!-- CD2 2.5 Security Role Matrix. -->
+    <template if:true={showAccessDeniedComponent}>
+        <c-ssp-access-denied></c-ssp-access-denied>
+    </template>
+</template>

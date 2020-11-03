@@ -1,0 +1,21 @@
+.ssp-fontSize {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+.ssp-signaturePage_Container{
+    margin-bottom: 6.25rem;
+    margin-top: 1.875rem;
+}
+.ssp-termsOfAgreement, .ssp-voterRegistration {
+    font-size: 1.125rem;
+    font-weight: bold;
+    letter-spacing: -0.01875rem;
+    line-height: 1.5rem;
+}
+.ssp-greyUnderline{
+    height: 0.3125rem;
+    border-radius: 0.15625rem;
+}
+.ssp-greyUnderlineSmall{
+    height: 0.0625rem;
+}

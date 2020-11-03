@@ -1,0 +1,205 @@
+<!-- 
+* name 		      : sspApplicationStatementUnderstandingModal
+* @description 	  : This modal is used for Application Statement of Understanding 
+* @author 		  : Sharon
+* @date           : 01/26/2020
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* 	      
+-->
+<template>
+    <div
+        class="ssp-medicaidPenaltyWarning ssp-applicationStatementModalContainer"
+    >
+        <c-ssp-detailed-information-modal
+            reference={reference}
+            header-value={label.sspApplicationStatementHeader}
+            open-model={openModel}
+            onclosemodal={closeApplicationStatementModal}
+            scroll-event={trueValue}
+            onenablemodalbuttons={enableModalButtons}
+            class="ssp-applicationStatementModal"
+        >
+            <span class="ssp-mainContent" slot="contentSlot">
+                <div
+                    class="ssp-applicationStatementContentContainer ssp-fontFamily_ArvoRegular ssp-color_monoOmega"
+                >
+                    <div class="ssp-applicationStatementMainContaner">
+                        <p class="ssp-marginBottomThirty ssp-focus-element" tabindex="0">
+                            {label.sspKIHIPPConsentContentOne}
+                        </p>
+                        <ul class="ssp-applicationStatementUnOrderedMainList">
+                            <li class="ssp-marginBottomThirty" tabindex="0">
+                                {label.sspKIHIPPConsentListOne}
+                            </li>
+                            <li class="ssp-marginBottomThirty" tabindex="0">
+                                {label.sspKIHIPPConsentListTwo}
+                            </li>
+                            <li class="ssp-marginBottomThirty" tabindex="0">
+                                {label.sspKIHIPPConsentListThree}
+                            </li>
+                            <li class="ssp-marginBottomThirty" tabindex="0">
+                                {label.sspKIHIPPConsentListFour}
+                                <ul
+                                    class="ssp-applicationStatementUnOrderedList ssp-marginBottomThirty ssp-request-hearing"
+                                >
+                                    <li tabindex="0">{label.sspKIHIPPConsentListFive}</li>
+                                    <li tabindex="0">{label.sspKIHIPPConsentListSix}</li>
+                                    <li tabindex="0">{label.sspKIHIPPConsentListSeven}</li>
+                                    <li tabindex="0">{label.sspKIHIPPConsentListEight}</li>
+                                </ul>
+                            </li>
+                            <li class="ssp-marginBottomThirty" tabindex="0">
+                                {label.sspKIHIPPConsentContentNineList}
+                            </li>
+                            <li class="ssp-marginBottomThirty" tabindex="0">
+                                {label.sspKIHIPPConsentContentListTen}
+                            </li>
+                        </ul>
+                        <p class="ssp-marginBottomThirty ssp-focus-element" tabindex="0">
+                            {label.sspKIHIPPConsentHeading}
+                        </p>
+                        <p class="ssp-marginBottomThirty ssp-focus-element" tabindex="0">
+                            {label.sspKIHIPPConsentContentTwo}
+                        </p>
+                        <p class="ssp-marginBottomThirty ssp-focus-element" tabindex="0">
+                            {label.sspKIHIPPConsentContentThree}
+                        </p>
+                        <p class="ssp-marginBottomThirty ssp-focus-element" tabindex="0">
+                            {label.sspKIHIPPConsentContentFour}
+                            <a class="ssp-applicationStatementLink"
+                                href={label.sspApplicationStatementLinkOne}
+                                target="_blank"
+                            >
+                                {label.sspApplicationStatementLinkOne}</a
+                            >
+                            {label.sspApplicationStatementLinkNextContent}
+                        </p>
+                        <ol
+                            class="ssp-applicationStatementOrderedList ssp-marginBottomThirty"
+                        >
+                            <li tabindex="0">{label.sspKIHIPPConsentOrderListOne}</li>
+                            <li tabindex="0">{label.sspKIHIPPConsentOrderListTwo}</li>
+                            <li tabindex="0">{label.sspKIHIPPConsentOrderListThree}</li>
+                        </ol>
+
+                        <p class="ssp-marginBottomThirty ssp-focus-element" tabindex="0">
+                            {label.sspKIHIPPConsentContentFive}
+                            <a
+                                class="ssp-applicationStatementLink slds-m-left_xx-small"
+                                href={label.sspKIHIPPConsentContentSix}
+                                target="_blank"
+                            >
+                                {label.sspKIHIPPConsentContentSix}</a
+                            >
+                        </p>
+                        <p class="ssp-marginBottomThirty ssp-focus-element" tabindex="0">
+                            {label.sspKIHIPPConsentContentSeven}
+                        </p>
+                        <p tabindex="0" class="ssp-focus-element">
+                            {label.sspKIHIPPConsentContentEight}
+                        </p>
+                    </div>
+                    <template if:true={additionalInfoSnap}>
+                        <p class="ssp-marginTopThirty ssp-focus-element" tabindex="0">
+                            {label.sspApplicationStatementSnapHeading}
+                        </p>
+                        <p class="ssp-marginBottomThirty ssp-focus-element" tabindex="0">
+                            {label.sspApplicationStatementUnderstandingText}
+                        </p>
+                        <ul class="ssp-applicationStatementUnOrderedMainList">
+                            <li class="ssp-marginBottomThirty" tabindex="0">
+                                {label.sspApplicationSnapOne}
+                            </li>
+                            <li class="ssp-marginBottomThirty" tabindex="0">
+                                {label.sspApplicationSnapTwo}
+                            </li>
+                            <li class="ssp-marginBottomThirty" tabindex="0">
+                                {label.sspApplicationSnapThree}
+                            </li>
+                            <li class="ssp-marginBottomThirty" tabindex="0">
+                                {label.sspApplicationSnapFour}
+                            </li>
+                            <li class="ssp-marginBottomThirty" tabindex="0">
+                                {label.sspApplicationSnapFive}
+                            </li>
+                            <li tabindex="0">
+                                {label.sspApplicationSnapSix}
+                            </li>
+                        </ul>
+                    </template>
+                    <template if:true={additionalInfoKTAP}>
+                        <p class="ssp-marginTopThirty ssp-focus-element" tabindex="0">
+                            {label.sspApplicationStatementKTAPHeading}
+                        </p>
+                        <p class="ssp-marginBottomThirty ssp-focus-element" tabindex="0">
+                            {label.sspApplicationStatementUnderstandingText}
+                        </p>
+                        <ul class="ssp-applicationStatementUnOrderedMainList">
+                            <li class="ssp-marginBottomThirty" tabindex="0">
+                                {label.sspApplicationKTAPOne}
+                            </li>
+                            <li tabindex="0">
+                                {label.sspApplicationKTAPTwo}
+                            </li>
+                        </ul>
+                    </template>
+                    <template if:true={additionalInfoMedicaid}>
+                        <p class="ssp-marginTopThirty ssp-focus-element" tabindex="0">
+                            {label.sspApplicationStatementMedicaidHeading}
+                        </p>
+                        <p class="ssp-marginBottomThirty ssp-focus-element" tabindex="0">
+                            {label.sspApplicationStatementUnderstandingText}
+                        </p>
+                        <ul class="ssp-applicationStatementUnOrderedMainList">
+                            <li class="ssp-marginBottomThirty" tabindex="0">
+                                {label.sspApplicationMedicaidOne}
+                            </li>
+                            <li tabindex="0">
+                                {label.sspApplicationMedicaidTwo}
+                            </li>
+                        </ul>
+                    </template>
+                </div>
+            </span>
+            <div
+                slot="Footer"
+                class="slds-grid slds-wrap slds-grid_align-spread slds-gutters"
+            >
+                <div
+                    class="slds-col slds-size_1-of-2 slds-medium-size_1-of-2 slds-large-size_6-of-12"
+                >
+                   <!--  Removed I DISAGREE button  -->     
+            </div>
+                <div
+                    class="slds-col slds-size_1-of-2 slds-medium-size_1-of-2 slds-large-size_6-of-12"
+                >
+                    <!--CD2 2.5 Security Role Matrix change isReadOnlyUser -->
+                    <lightning-button
+                        if:false={isReadOnlyUser}
+                        name="Agree"
+                        variant="neutral"
+                        title={label.sspApplicationStatementAgreeButtonAlternate}
+                        label={label.sspAgreeButton}
+                        class="ssp-exitModalBtn ssp-button_neutral"
+                        onclick={handleOnClick}
+                        disabled={disabled}
+                    >
+                    </lightning-button>
+                    <!--CD2 2.5 Security Role Matrix change isReadOnlyUser -->
+                    <lightning-button
+                        if:true={isReadOnlyUser}
+                        name="Agree"
+                        variant="neutral"
+                        title={label.sspApplicationStatementAgreeButtonAlternate}
+                        label={label.sspAgreeButton}
+                        class="ssp-exitModalBtn ssp-button_neutral"
+                        disabled
+                    >
+                    </lightning-button>
+                </div>
+            </div>
+        </c-ssp-detailed-information-modal>
+    </div>
+</template>

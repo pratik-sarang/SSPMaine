@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>COBRA Ended</masterLabel>
+        <translation>Finalizó COBRA</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Job Loss</masterLabel>
+        <translation>Pérdida de empleo</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Non-Payment</masterLabel>
+        <translation>No pago</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Other</masterLabel>
+        <translation>Otro</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Parent Stopped Providing Coverage</masterLabel>
+        <translation>Padre/Madre dejó de brindar cobertura</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Too Expensive</masterLabel>
+        <translation>Demasiado costoso</translation>
+    </valueTranslation>
+</GlobalValueSetTranslation>

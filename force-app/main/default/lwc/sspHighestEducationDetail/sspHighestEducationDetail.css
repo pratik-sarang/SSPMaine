@@ -1,0 +1,45 @@
+h1.ssp-highest-education-header-text {
+    font-size: 2.625rem;
+    line-height: 1;
+    border: 0;
+}
+.ssp-user-name {
+    font-size: 1.125rem;
+}
+.ssp-complete-questions {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+.ssp-horizontal-rule {
+    height: 0.313em;
+    border-radius: 0.156em;
+    margin: 1rem 0;
+    border: none;
+}
+.ssp-highest-education-form {
+    margin-bottom: 60px;
+}
+.ssp-highest-education-form > * {
+    margin-top: 15px;
+}
+.ssp-highest-education-form .ssp-action-btn-section {
+    margin-top: 4rem;
+}
+.ssp-action-btns {
+    display: flex;
+    justify-content: space-between;
+}
+.ssp-action-btns .ssp-saveBtn {
+    margin-left: none;
+    margin-right: 1rem;
+}
+@media only screen and (max-device-width: 768px) {
+    h1.ssp-highest-education-header-text {
+        font-size: 1.5rem;
+    }
+    
+    .ssp-action-btns .ssp-saveBtn {
+        margin-left: 1rem;
+        margin-right: 0;
+    }
+}

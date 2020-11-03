@@ -1,0 +1,54 @@
+.ssp-appCardOrange {
+    border-radius: 6px;
+}
+
+.ssp-appCardOrangeHeader {
+    padding: 15px 30px;
+    border-radius: 6px 6px 0 0;
+    font-size: 1rem;
+    line-height: 24px;
+    letter-spacing: -0.3px;
+}
+.ssp-componentWidth {
+    width: 100%;
+}
+
+.ssp-appCardOrangeBody {
+    padding: 15px 30px 30px 30px;
+}
+
+.ssp-appCardOrangeTitle {
+    font-size: 1rem;
+    line-height: 24px;
+    letter-spacing: -0.3px;
+    text-align: left;
+}
+
+.ssp-appDiscOrange {
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+
+.ssp-appCardOrangeHr {
+    height: 1px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.ssp-appCardOrangeAdditional {
+    font-size: 0.8125rem;
+    line-height: 18px;
+    text-align: left;
+}
+
+@media only screen and (max-width: 768px) {
+    .ssp-appCardOrangeHeader {
+        padding: 15px 24px;
+    }
+
+    .ssp-appCardOrangeBody {
+        padding: 15px 24px 24px 24px;
+    }
+}

@@ -1,0 +1,34 @@
+<!--
+* name          : sspSelectionSummaryCard.
+* @description  : This a component which shows summary information in a card.
+* @author       : Siddarth.
+* @date         : 12/11/2019
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName                MM/DD/YYYY               A Brief Description about the Change
+  Chaitanya                     12/11/2019                          Initial Version
+-->
+<template>
+    <div class="slds-box ssp-selectionSummaryCard ssp-bg_white  ssp-boxShadow">
+        <div class="slds-grid slds-grid_vertical-align-center">
+            <div class="ssp-IconSize">
+                <template if:false={isProgressStarted}>
+                    <img src={progressNotStartedIconUrl} alt="Progress not started Icon">
+                </template>
+                <template if:true={isProgressStarted}>
+                    <template if:true={isProgressComplete}>
+                        <img src={progressCheckedIconUrl} alt="Progress Icon">
+                    </template>
+                    <template if:false={isProgressComplete}>
+                        <img src={disagreeIconUrl} alt="Disagree Icon">
+                    </template>
+                </template>
+            </div>
+            <div class="ssp-selectionCardIconText  ssp-fontFamily_popinBold">
+                <slot></slot>
+                <div class="ssp-iconColour"></div>
+            </div>
+        </div>
+    </div>
+</template>

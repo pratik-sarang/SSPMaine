@@ -1,0 +1,221 @@
+.ssp-documentCenterHome ul li::before {
+    content: "\2022";
+    display: inline-block;
+    width: 1rem;
+    font-size: 1.375rem;
+    vertical-align: middle;
+}
+.ssp-documentCenterHome .ssp-headerList ul li:before {
+    width: 0;
+    text-indent: -15px;
+}
+.ssp-documentCenterHome .ssp-headerList ul li {
+    padding-left: 15px;
+}
+.ssp-documentCenterHome .ssp-documentNeeded::before,
+.ssp-documentCenterHome .ssp-pendingReview::before,
+.ssp-documentCenterHome .ssp-documentStatusAccepted::before {
+    content: "\2022";
+    display: inline-block;
+    vertical-align: bottom;
+    font-size: 1.875rem;
+}
+
+.ssp-documentCenterHome .ssp-header {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-top: 50px;
+}
+
+.ssp-documentCenterHome .ssp-headerContent1,
+.ssp-documentCenterHome .ssp-ReadyToUploadContent {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.ssp-documentCenterHome .ssp-ReadyToUploadContent {
+    letter-spacing: -0.019rem;
+    padding-bottom: 1.875rem;
+}
+
+.ssp-documentCenterHome .ssp-documentLink a {
+    text-decoration: underline;
+}
+
+.ssp-documentCenterHome .ssp-dashboardTab {
+    font-size: 0.8125rem;
+    line-height: 1.5rem;
+    letter-spacing: -0.015rem;
+    padding: 0.938rem 1.5rem 0 1.5rem;
+}
+
+.ssp-documentCenterHome .ssp-documentUploadRequestText,
+.ssp-documentCenterHome .ssp-tabRowHeader {
+    font-size: 1rem;
+}
+
+.ssp-documentCenterHome .ssp-readyToUploadText {
+    margin-bottom: 0.938rem;
+    font-size: 1.125rem;
+}
+
+.ssp-documentCenterHome .ssp-documentLink,
+.ssp-documentCenterHome .ssp-documentDates {
+    font-size: 0.813rem;
+    line-height: 1.125rem;
+    letter-spacing: 0.019rem;
+    word-break: break-all;
+}
+
+.ssp-documentCenterHome .ssp-dashboardTab {
+    display: block;
+    padding-top: 0;
+}
+
+.ssp-documentCenterHome .ssp-warningCard {
+    padding-bottom: 1.875rem;
+}
+
+.ssp-documentCenterHome .ssp-marginBottom30 {
+    margin-bottom: 1.875rem;
+}
+
+.ssp-documentCenterHome .ssp-documentWizardButton {
+    margin-bottom: 3.563rem;
+    margin-top: 0.938rem;
+}
+
+.ssp-documentCenterHome .ssp-uploadDocumentButton {
+    margin-top: 0.938rem;
+}
+
+.ssp-documentCenterHome .ssp-dashboardTabsRow {
+    display: flex;
+    padding-bottom: 0.938rem;
+}
+.ssp-documentCenterContainer .ssp-dashboardTabsRow:last-child {
+    border-radius: 6px;
+}
+.ssp-documentCenterHome .ssp-dashboardTabsRow:last-child {
+    border-bottom: none;
+}
+.ssp-documentCenterHome .ssp-documentLink {
+    padding-top: 0;
+    word-break: break-all;
+}
+
+.ssp-documentCenterHome .ssp-dashboardTab:nth-child(1) {
+    padding-top: 0.938rem;
+}
+
+.ssp-documentCenterHome .ssp-submittedTab .ssp-tabRowHeader {
+    margin-bottom: 0.313rem;
+}
+
+.ssp-documentCenterHome .ssp-documentTabsetContainer {
+    padding-bottom: 0;
+}
+
+.ssp-documentCenterHome .ssp-submittedTab,
+.ssp-documentCenterHome .ssp-documentsNeededTab {
+    padding-bottom: 100px;
+}
+
+.ssp-documentCenterHome .ssp-documentsNeededTab .ssp-documentLink {
+    margin-top: 10px;
+}
+.ssp-documentCenterHome .ssp-documentsNeededTab .ssp-documentsSection2 {
+    margin-top: 15px;
+}
+.ssp-documentCenterHome .ssp-submittedTab .ssp-documentLink,
+.ssp-documentCenterHome .ssp-submittedTab .ssp-documentsSection2 {
+    margin-top: 0.625rem;
+}
+.ssp-submittedDetails {
+    padding-bottom: 10px;
+}
+.ssp-documentCenterHome .ssp-documentTabsetContainer a:focus {
+    outline: none;
+}
+.ssp-documentCenterHome .ssp-submittedTab .ssp-genericDashboardCard {
+    margin-bottom: 1.875rem;
+}
+@media only screen and (min-width: 769px) {
+    .ssp-documentCenterHome .ssp-bodyContainer {
+        width: 100%;
+        padding: 0 52px;
+    }
+    .ssp-documentCenterContainer {
+        overflow-x: hidden;
+    }
+    .ssp-documentCenterHome .ssp-documentTabsetContainer {
+        margin-left: 1px;
+    }
+    .ssp-dashboardTab .ssp-documentDates:last-child,
+    .ssp-dashboardTab .ssp-documentLink:last-child {
+        margin-top: 4px;
+    }
+    .ssp-documentCenterHome .ssp-dashboardTab {
+        display: inline-block;
+        padding: 0.938rem 1.875rem 0 1.875rem;
+        vertical-align: top;
+    }
+    .ssp-documentCenterHome .ssp-header {
+        font-size: 2.625rem;
+        line-height: 3rem;
+        margin-top: 3.75rem;
+    }
+    .ssp-documentCenterHome .ssp-dashboardTabsRow .slds-grid {
+        width: 100%;
+    }
+    .ssp-documentCenterContainer
+        .ssp-documentCenterHome.slds-grid
+        .ssp-nullPaddingLeft {
+        padding-left: 0;
+    }
+    .ssp-documentCenterHome .ssp-documentsNeededTab .ssp-documentLink,
+    .ssp-documentCenterHome .ssp-documentsNeededTab .ssp-documentsSection2,
+    .ssp-documentCenterHome .ssp-submittedTab .ssp-documentLink,
+    .ssp-documentCenterHome .ssp-submittedTab .ssp-documentsSection2 {
+        margin-top: 0;
+    }
+    .ssp-submittedDetails {
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+        padding-bottom: 0;
+    }
+    .ssp-submittedTab .ssp-documentLink {
+        display: inline-block;
+        width: 50%;
+        padding-left: 50px;
+    }
+    .ssp-documentCenterContainer .ssp-genericDashboardHead,
+    .ssp-documentCenterContainer .ssp-dashboardTab {
+        padding-left: 24px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .ssp-documentCenterHome
+        .ssp-submittedTab
+        .ssp-dashboardTab.ssp-documentStatusTab {
+        display: inline-block;
+        width: 32%;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 0.938rem;
+    }
+    .ssp-documentCenterHome .ssp-submittedTab .ssp-dashboardTab {
+        display: inline-block;
+        width: 68%;
+        padding-right: 0;
+    }
+}
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+    .ssp-documentCenterHome .slds-tabs_default__link {
+        width: 300px;
+        line-height: 2.5rem;
+    }
+}
+

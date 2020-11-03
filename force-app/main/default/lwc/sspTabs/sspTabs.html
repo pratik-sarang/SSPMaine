@@ -1,0 +1,32 @@
+<!--
+* name          : sspTabs.
+* @description  : This a component which shows user information depending on the screen.
+* @author       : Chaitanya.
+* @date         : 12/11/2019
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName                MM/DD/YYYY               A Brief Description about the Change
+  Chaitanya                     12/11/2019                          Initial Version
+-->
+<template>
+    <div class="ssp-TabsRow">
+        <template for:each={tabsList} for:item="tabName">
+            <div
+                class="ssp-Tab ssp-fontFamily_popinBold ssp-color_monoOmega"
+                onclick={openSelected}
+                key={tabName}
+            >
+                {tabName}
+            </div>
+        </template>
+    </div>
+
+    <div class="ssp-TabsContent show" key={tabName}>
+        <slot name="tabsFirstSlot"></slot>
+        <span>checking: {tabsList}</span>
+    </div>
+    <div class="ssp-TabsContent" key={tabName}>
+        <slot name="tabsSecondSlot"></slot>
+    </div>
+</template>

@@ -1,0 +1,288 @@
+<!--
+* name : sspResourceSummary
+* @description :This screen is a summary of all resources reported for an individual household member.
+* @author : Kyathi Kanumuri
+* @date : 11/12/2019
+* MODIFICATION LOG:
+* DEVELOPER             DATE            DESCRIPTION
+* ________________________________________________________________________________
+* Kyathi                11/21/2019      Creating HTML Structure
+* Karthik               11/25/2019      Integration of Salesforce with HTML
+-->
+<template>
+    <template if:true={showSpinner}>
+        <c-ssp-spinner></c-ssp-spinner>
+    </template>
+    <template if:false={showResourceDetails}>
+        <div if:true={isPageAccessible} class="ssp-resourceSummary_container slds-m-top_x-large">
+            <div class="ssp-errorToast" if:true={hasSaveValidationError}>
+                <c-ssp-toast
+                    ssp-toast-title-val={label.sspSummaryRecordValidator}
+                    show-error-toast={trueValue}
+                    onhidetoast={hideToast}
+                ></c-ssp-toast>
+            </div>
+            <template if:false={showResourceDetails}>
+                <template if:true={openModel}>
+                    <c-ssp-detailed-information-modal
+                        reference={reference}
+                        header-value={label.sspAddResourceModalHeading}
+                        open-model={openModel}
+                        onclosemodal={closeAddResourceModel}
+                    >
+                        <span slot="contentSlot">
+                            <p class="slds-m-bottom_medium">
+                                {label.sspAddResourceModalContent}
+                            </p>
+                            <p class="slds-m-bottom_medium">
+                                {label.sspAddResourceModalContent2}
+                            </p>
+                            <p>{label.sspAddResourceModalContent3}</p>
+                        </span>
+                        <div
+                            slot="Footer"
+                            class="slds-col ssp-adding-income-btns"
+                        >
+                            <lightning-button
+                                variant="brand"
+                                label={label.sspNextButton}
+                                class="ssp-button_brand"
+                                onclick={closeAddResourceModel}
+                                title={label.sspGoToResourceSummary}
+                            >
+                            </lightning-button>
+                        </div>
+                    </c-ssp-detailed-information-modal>
+                </template>
+
+                <p class="ssp-hideContainer ssp-resourceSummaryInputs"></p>
+                <p
+                    class="ssp-bodyContainer ssp-resourceSummary_info ssp-color_monoOmega ssp-fontFamily_ArvoRegular slds-m-bottom_xx-small"
+                >
+                    {sspRequireResourceDetailsInfo}
+                </p>
+                <p class="ssp-bodyContainer">
+                    <a
+                        tabindex="0"
+                        role="button"
+                        onclick={displayLearnMoreModelMethod}
+                        onkeydown={displayLearnMoreModelMethod}
+                        title={label.sspLearnMoreAltText}
+                        class="ssp-learnMore_link slds-m-top_xx-small ssp-color_monoBody ssp-fontFamily_popinBold"
+                    >
+                        {label.sspLearnMoreLink}</a
+                    >
+                </p>
+                <template if:true={openLearnMoreModel}>
+                    <c-ssp-detailed-information-modal
+                        reference={reference}
+                        header-value={label.sspLearnMoreLink}
+                        open-model={openLearnMoreModel}
+                        onclosemodal={hideLearnMoreModelMethod}
+                    >
+                        <span
+                            slot="contentSlot"
+                            class="ssp-learnMore ssp-fontFamily_ArvoRegular"
+                        >
+                        </span>
+                    </c-ssp-detailed-information-modal>
+                </template>
+                <template if:true={hasResExDetails}>
+                    <div class="ssp-existingRecords_section ssp-bg_monoSigma">
+                        <div
+                            class="ssp-existingRecords_innerSection ssp-bodyContainer"
+                        >
+                            <p
+                                class="ssp-resourceSummary_info slds-m-bottom_medium ssp-color_monoOmega ssp-fontFamily_ArvoRegular"
+                            >
+                                {sspExistingResourceRecordsText1}
+                            </p>
+                            <template
+                                for:each={existResources}
+                                for:item="exResult"
+                            >
+                                <div
+                                    class="ssp-card_section"
+                                    key={exResult.strResourceId}
+                                >
+                                    <div
+                                        class="ssp-subSection slds-m-bottom_medium"
+                                    >
+                                        <!-- Sharon Security Matrix-->
+                                        <c-ssp-selection-card-without-remove-icon
+                                            hide-buttons={trueValue}
+                                            disabled = {disableResourceDetails}
+                                        >
+                                            <span slot="cardContent">
+                                                <p
+                                                    class="ssp-existingResourceDetails  ssp-color_monoBody ssp-fontFamily_popinBold ssp-existingResourceDetailsName ssp-word-break-all"
+                                                >
+                                                    {exResult.strResTileLineOneValue}
+                                                </p>
+                                                <span
+                                                    class="ssp-existingResourceDetails  ssp-fontFamily_popinBold ssp-color_blueAlpha"
+                                                >
+                                                </span>
+                                                <p
+                                                    class="ssp-existingResourceDetails ssp-existingResourceValue ssp-resourceCurrency ssp-fontFamily_popinBold ssp-color_blueAlpha ssp-word-break-all"
+                                                >
+                                                    {exResult.strResTileLineTwoValue}
+                                                </p>
+                                                <!-- Coworker text for existing resource detials. -->
+                                                <p class="ssp-existingResourceDetails ssp-existingResourceValue ssp-resourceCurrency ssp-fontFamily_popinBold ssp-color_blueAlpha ssp-resourceDetails-cowork ssp-word-break-all" if:true={exResult.bIsCoownerResource}>
+                                                    {label.sspResourceCoOwner}
+                                                </p>
+                                            </span>
+                                        </c-ssp-selection-card-without-remove-icon>
+                                    </div>
+                                </div>
+                            </template>
+                        </div>
+                    </div>
+                </template>
+                <div class="ssp-addButtonContainer ssp-bodyContainer">
+                    <lightning-button
+                        variant="brand"
+                        name="addresource"
+                        label={label.sspAddResourceButton}
+                        class="ssp-button_brand ssp-addResourceButton"
+                        onclick={openResourceDetails}
+                        title={label.sspAddResourceButtonAltText}
+                        disabled={isDisableResourceDetails}
+                        if:true={isAddResource}
+                    >
+                    </lightning-button>
+                </div>
+                <template if:true={hasResourceRequiredDetails}>
+                    <div class="ssp-requiringDetails_section ssp-bodyContainer">
+                        <template
+                            for:each={resRequiredResources}
+                            for:item="rqResult"
+                        >
+                            <div
+                                class="ssp-card_section"
+                                key={rqResult.strTempResId}
+                            >
+                                <div
+                                    class="ssp-subSection slds-m-bottom_medium"
+                                >
+                                    <c-ssp-selection-card-with-remove-icon
+                                        onremove={handleRemoveAction}
+                                        obj-card={rqResult}
+                                        display-edit={rqResult.isResourceEditable}
+                                        oncardaction={openResourceDetails}
+                                        remove-modal-heading={rqResult.removeModalHeader}
+                                        button-alt-text={label.sspResourceEditButtonTitle}
+                                        remove-alt-text={label.sspResourceRemoveAltText}
+                                        show-trash-icon={isTrashIconVisible}
+                                        disabled = {disableResourceDetails}
+                                        can-delete = {canDeleteResource}
+                                        delete-button-title={label.sspDeleteResourceTitle}
+                                        cancel-button-title={label.sspCancelGoToResourceSummary}
+                                        is-view-button-visible={isReadOnlyDetails}
+                                        view-button-alt-text={label.sspResourceViewButtonTitle}
+                                    >
+                                        <span
+                                            slot="cardContent"
+                                            class="ssp-selectionCardTitle"
+                                        >
+                                            <p
+                                                class="ssp-clipTextWithEllipsis ssp-color_monoBody ssp-fontFamily_popinBold ssp-word-break-all"
+                                            >
+                                                {rqResult.strResTileLineOneValue}
+                                            </p>
+                                            <p
+                                                class="ssp-clipTextWithEllipsis  ssp-fontFamily_popinBold ssp-color_blueAlpha"
+                                            >
+                                                {rqResult.strResTileLineTwoValue}
+                                                <lightning-formatted-number
+                                                    value={rqResult.strResTileLineTwoValue}
+                                                    format-style="currency"
+                                                    currency-code="USD"
+                                                ></lightning-formatted-number>
+                                            </p>
+                                        </span>
+                                    </c-ssp-selection-card-with-remove-icon>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                </template>
+                <template if:true={headOfHousehold}>
+                    <template if:true={MedicaidNonMAGI}>
+                        <template if:true={hasResNRDetails}>
+                            <div class="ssp-bodyContainer">
+                                <p
+                                    class="ssp-sectionSeperator ssp-bg_monoBeta slds-m-top_x-large"
+                                ></p>
+                            </div>
+                            <div
+                                class="ssp-notRequiringDetails_section ssp-bodyContainer"
+                            >
+                                <p
+                                    class="ssp-resourceSummary_info ssp-color_monoOmega ssp-fontFamily_ArvoRegular"
+                                >
+                                    {label.sspNoResourceDetailsRequiredText}
+                                </p>
+                                <template
+                                    for:each={resNotRequiredResources}
+                                    for:item="nrResult"
+                                >
+                                    <div
+                                        class="ssp-card_section"
+                                        key={nrResult.strResourceType}
+                                    >
+                                        <div
+                                            class="ssp-subSection slds-m-bottom_medium"
+                                        >
+                                            <c-ssp-selection-card-with-remove-icon
+                                                onremove={handleRemoveAction}
+                                                obj-card={nrResult}
+                                                hide-buttons={trueValue}
+                                                display-checkmark={trueValue}
+                                                remove-modal-heading={label.sspRemoveModalHeading}
+                                                button-alt-text={label.sspResourceEditButtonTitle}
+                                                remove-alt-text={label.sspResourceRemoveAltText}
+                                                show-trash-icon={isTrashIconVisible}
+                                                disabled = {disableResourceDetails}
+                                                can-delete = {canDeleteResource}
+                                                is-view-button-visible={isReadOnlyDetails}
+                                                view-button-alt-text={label.sspResourceViewButtonTitle}
+                                            >
+                                                <p
+                                                    slot="cardContent"
+                                                    class="ssp-clipTextWithEllipsis ssp-selectionCardTitle ssp-color_monoBody ssp-fontFamily_popinBold ssp-word-break-all"
+                                                >
+                                                    {nrResult.strResourceTypeLabel}
+                                                </p>
+                                            </c-ssp-selection-card-with-remove-icon>
+                                        </div>
+                                    </div>
+                                </template>
+                            </div>
+                        </template>
+                    </template>
+                </template>
+            </template>
+        </div>
+    </template>
+    <template if:true={showResourceDetails}>
+        <c-ssp-resource-details
+            details={resourceDetails}
+            ondetailbuttonaction={hideResourceDetails}
+            application-id={applicationId}
+            member-id={memberId}
+            member-name={memberName}
+            resources-not-required={resourceTypes}
+            head-of-household={headOfHousehold}
+            medicaid-non-magi={MedicaidNonMAGI}
+            member-programs={applicablePrograms}
+            time-travel-date={timeTravelDate}
+        >
+        </c-ssp-resource-details>
+    </template>
+    <!-- CD2 2.5 Security Role Matrix. -->
+    <template if:true={showAccessDeniedComponent}>
+        <c-ssp-access-denied></c-ssp-access-denied>
+    </template>
+</template>

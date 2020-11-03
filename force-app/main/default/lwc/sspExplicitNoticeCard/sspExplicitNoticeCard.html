@@ -1,0 +1,21 @@
+<!--
+* name          : SspExplicitNoticeCard.
+* @description  : This a component which shows a warning to the user.
+* @author       :Nupoor.
+* @date         : 11/11/2019
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName                MM/DD/YYYY               A Brief Description about the Change
+  Nupoor                     11/11/2019                          Initial Version
+-->
+<template>
+    <div class="ssp-explicitNoticeCard slds-grid slds-grid_vertical-align-center ssp-fontFamily_popinRegular ssp-color_monoBody ssp-bg_redGamma ssp-boxShadow">
+        <div class="slds-grid slds-grid_vertical-align-center slds-size_1-of-1">
+            <img class="ssp-explicitNoticeCardIcon slds-m-right_medium" src={needReviewIcon} alt="review_icon">
+            <div class="ssp-notice-content">
+                <slot></slot>
+            </div>
+        </div>
+    </div>
+</template>

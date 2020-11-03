@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>FlowPageStatus__c</columns>
+    <columns>Contact__c</columns>
+    <columns>InitiatedUser__c</columns>
+    <columns>Member__c</columns>
+    <columns>SSPApplication__c</columns>
+    <columns>User__c</columns>
+    <columns>NavFlowName__c</columns>
+    <columns>SSP_Member__c</columns>
+    <columns>FlowDupStatus__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All</label>
+</ListView>

@@ -1,0 +1,39 @@
+.ssp-infoText {
+    font-size: 1rem;
+    letter-spacing: -0.0187rem;
+    line-height: 1.5rem;
+}
+.ssp-toggelQuestionText {
+    font-size: 1rem;
+    letter-spacing: -0.0187rem;
+    line-height: 1.5rem;
+}
+.ssp-typeAheadWidth {
+    width: 49%;
+}
+.ssp-componentWidth {
+    width: 100%;
+}
+.ssp-dateWidth {
+    width: 100%;
+}
+.ssp-frameworkPadding {
+    padding-bottom: 60px;
+}
+.ssp-componentMargin {
+    margin-right: 15px;
+}
+.ssp-alignItems {
+    align-items: stretch;
+}
+@media only screen and (max-width: 768px) {
+    .ssp-date-expected-section {
+        display: block;
+    }
+    .ssp-typeAheadWidth {
+        width: 100%;
+    }
+    .ssp-componentPadding {
+        padding: 0;
+    }
+}

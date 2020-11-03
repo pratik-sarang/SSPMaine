@@ -1,0 +1,27 @@
+<!--
+* name          :sspGeneralNoticeCard.
+* @description  : This is a generic card called the Generic Notice Card.
+* @author       : Chaitanya.
+* @date         : 12/11/2019
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName                MM/DD/YYYY               A Brief Description about the Change
+-->
+<template>
+    <div class="ssp-noticeCard slds-grid slds-grid_vertical-align-center ssp-fontFamily_popinRegular ssp-color_monoBody ssp-boxShadow">
+        <div class="slds-grid slds-grid_vertical-align-center">
+            <img if:true={isWarning} class="ssp-warningNoticeCardIcon slds-m-right_medium" src={infoIconUrl}
+                alt="info_icon" />
+            <img if:true={isExplicit} class="ssp-explicitNoticeCardIcon slds-m-right_medium" src={needsReviewIconUrl}
+                alt="review_icon" />
+            <div class="ssp-explicitNoticeCardBody">
+                <lightning-formatted-rich-text value={noticeText}>
+                </lightning-formatted-rich-text>
+            </div>
+            <div>
+                <slot></slot>
+            </div>
+        </div>
+    </div>
+</template>

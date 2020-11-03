@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IsClaimed__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This field is used to indicate if an Account partner is a KY Partner or not.</description>
+    <externalId>false</externalId>
+    <label>Is Claimed?</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>

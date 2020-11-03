@@ -1,0 +1,63 @@
+.ssp-signaturePage_Container {
+    margin-bottom: 6.25rem;
+    margin-top: 1.875rem;
+}
+
+.ssp-headerText {
+    font-size: 42px;
+    font-weight: 900;
+    letter-spacing: 0;
+    line-height: 48px;
+}
+.ssp-ruler {
+    height: 5px;
+    width: 100%;
+    border-radius: 2.5px;
+}
+.ssp-infoText {
+    font-size: 16px;
+    letter-spacing: 0.3px;
+    line-height: 22px;
+}
+.ssp-navigationLink {
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: -0.3px;
+    line-height: 30px;
+}
+.ssp-buttonWidth {
+    width: 170px;
+    float: right;
+}
+.ssp-componentWidth {
+    width: 100%;
+}
+.ssp-accordionHeader {
+    width: 93%;
+}
+.ssp-infotText18 {
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: -0.3px;
+    line-height: 24px;
+}
+.ssp-elements {
+    justify-content: space-between;
+    width: 100%;
+}
+@media only screen and (max-width: 768px) {
+    .ssp-headerText {
+        font-size: 24px;
+        font-weight: 900;
+        letter-spacing: 0;
+        line-height: 32px;
+    }
+    .ssp-buttonWidth {
+        width: 100%;
+        float: none;
+    }
+    .ssp-signaturePage_Container {
+        margin-bottom: 0;
+        margin-top: 1.875rem;
+    }
+}

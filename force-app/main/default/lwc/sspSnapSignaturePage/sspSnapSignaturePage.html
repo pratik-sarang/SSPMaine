@@ -1,0 +1,257 @@
+<!--
+* name 		: sspSnapSignaturePage
+* @description 	: Sign and Submit Page for Short SNAP Application.
+* @author 		: Chirag Garg, Shivam
+* @date 		: 4/23/2020
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName	              MM/DD/YYYY	             A Brief Description about the Change
+-->
+<template>
+    <template if:true={spinnerOn}>
+        <c-ssp-spinner></c-ssp-spinner>
+    </template>
+    <div class="ssp-errorToast" if:true={hasSaveValidationError}>
+        <c-ssp-toast
+            ssp-toast-title-val={label.toastErrorText}
+            show-error-toast={trueValue}
+            onhidetoast={hideToast}
+        ></c-ssp-toast>
+    </div>
+    <c-ssp-logging-and-error-handling-modal
+        if:true={showErrorModal}
+        error-id={errorMsg}
+        onprogressvaluechange={closeError}>
+    </c-ssp-logging-and-error-handling-modal>
+    <main role="main">
+        <div
+            class="ssp-semiHeader ssp-bg_appHeaderGradient slds-p-vertical_medium "
+        >
+            <p
+                class="ssp-semiHeaderText ssp-container_width ssp-color_monoBody ssp-fontFamily_popinBold"
+            >
+                {label.sspShortSNAPApplication}
+            </p>
+        </div>
+        <img
+            src={backgroundImg}
+            class="ssp-backgroundImage ssp-mobileBackgroundImage"
+            aria-hidden="true"
+            role="presentation"
+            alt={label.sspShortSNAPApplication}
+        />
+        <img
+            src={desktopBackgroundImg}
+            class="ssp-backgroundImage ssp-desktopBackgroundImage"
+            aria-hidden="true"
+            role="presentation"
+            alt={label.sspShortSNAPApplication}
+        />
+        <div class="ssp-bodyContainer ssp-SnapsignaturePage_Container">
+            
+            <!-- CR Changes -->
+            <template if:true={timeFlag}>
+                <div class="slds-m-bottom_large">
+                    <c-ssp-general-notice-card
+                        notice-type={label.explicitText}
+                        notice-text={label.outsideDCBSMsg}
+                    ></c-ssp-general-notice-card>
+                </div>
+            </template>
+            <!-- CR Changes End -->
+            <h1
+                class="ssp-fontFamily_popinBlack ssp-color_blueAlpha ssp-headingSignaturePage ssp-marginHeading"
+            >
+                {label.sspSignaturePageHeader}
+            </h1>
+            <div
+                class="ssp-margin-bottom_large ssp-bg_monoAlpha ssp-greyUnderline"
+            ></div>
+            <div
+                class="ssp-fontFamily_popinBold ssp-color_monoBody ssp-termsOfAgreement ssp-margin-bottom_small"
+            >
+                {label.sspTermsOfAgreement}
+            </div>
+            <div class="slds-grid">
+                <span
+                    class="ssp-fontFamily_popinBold ssp-color_blueAlpha ssp-fontSize"
+                    >{label.sspTermOne}</span
+                >
+                <span
+                    class="slds-col slds-float_left slds-p-left_small ssp-fontFamily_ArvoRegular ssp-color_monoBody ssp-fontSize"
+                    >{label.sspHaveAnswered}</span
+                >
+            </div>
+            <div class="slds-grid">
+                <span
+                    class="ssp-fontFamily_popinBold ssp-color_blueAlpha ssp-fontSize"
+                    >{label.sspTermTwo}</span
+                >
+                <span
+                    class="slds-col slds-p-left_small ssp-fontFamily_ArvoRegular ssp-color_monoBody ssp-fontSize"
+                >
+                    {label.sspIfAnyChanges}</span
+                >
+            </div>
+            <div class="slds-grid ssp-margin-bottom_large">
+                <span
+                    class="ssp-fontFamily_popinBold ssp-color_blueAlpha ssp-fontSize"
+                    >{label.sspTermThree}</span
+                >
+                <span
+                    class="slds-col slds-p-left_small ssp-fontFamily_ArvoRegular ssp-color_monoBody ssp-fontSize"
+                    >{label.sspProvidingFalse}</span
+                >
+            </div>
+            <div class="ssp-margin-card">
+                <c-ssp-selection-summary-card
+                    is-progress-started={isTermsAgreementProgressStarted}
+                    is-progress-complete={isTermsAgreementProgressComplete}
+                >
+                    <slot>
+                        <a
+                            tabindex="0"
+                            class="ssp-color_monoBody"
+                            label={label.sspReadAgreeTermsAgreement}
+                            title={label.sspClickReadAgreeTermsAgreement}
+                            data-type="sspStatementOfUnderstanding"
+                            onclick={openLinkModal}
+                            onkeydown={openLinkModal}
+                        >
+                            {label.sspReadAgreeTermsAgreement}
+                        </a>
+                    </slot>
+                </c-ssp-selection-summary-card>
+                <template for:each={ErrorMessageList} for:item="error">
+                    <div
+                        role="alert"
+                        aria-atomic="true"
+                        key={error}
+                        class="ssp-showError ssp-color_redAlpha"
+                    >
+                        {error}
+                    </div>
+                </template>
+                <template if:true={sspTermsAgreement}>
+                    <c-ssp-terms-agreement-modal
+                        is-selected-value={isAgreeingToApplicationConsent}
+                        onclose={updateToggleFields}
+                    >
+                    </c-ssp-terms-agreement-modal>
+                </template>
+            </div>
+            <div
+                class="ssp-margin-bottom_large ssp-bg_monoAlpha ssp-greyUnderlineSmall"
+            ></div>
+            <div
+                class="ssp-margin-bottom_large ssp-fontFamily_ArvoRegular ssp-color_monoBody ssp-fontSize"
+            >
+                {label.sspByEnteringYour}
+            </div>
+            <div class="slds-grid slds-wrap slds-gutters">
+                <div class="slds-col slds-large-size_6-of-12 slds-size_1-of-1">
+                    <div class="ssp-margin-bottom_small">
+                        <c-ssp-base-component-input-text
+                            label={label.sspFirstNameLabel}
+                            value={signPageInfo.firstName}
+                            onchange={handleFirstNameChange}
+                            meta-list={metaDataListParent}
+                            entity-name="SSP_Application__c"
+                            field-name="ApplicationEsignFirstName__c"
+                            match-value={objApplication.ShortSnapFirstName__c}
+                            class="snapSign snapSignSubmit"
+                            max-length="50"
+                        >
+                        </c-ssp-base-component-input-text>
+                    </div>
+                </div>
+                <div class="slds-col slds-large-size_3-of-12 slds-size_1-of-1">
+                    <div class="ssp-margin-bottom_small">
+                        <c-ssp-base-component-input-text
+                            label={label.sspMiddleInitialLabel}
+                            value={signPageInfo.middleName}
+                            onchange={handleMIChange}
+                            disabled={isDisableMIField}
+                            meta-list={metaDataListParent}
+                            entity-name="SSP_Application__c"
+                            field-name="ApplicationEsignMiddleInitial__c"
+                            match-value={objApplication.ShortSnapMiddleInitial__c}
+                            max-length={middleNameMaxLength}
+                            class="snapMI snapSign snapSignSubmit"
+                        >
+                        </c-ssp-base-component-input-text>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-grid slds-wrap slds-gutters">
+                <div class="slds-col slds-large-size_6-of-12 slds-size_1-of-1">
+                    <div class="ssp-margin-bottom_small">
+                        <c-ssp-base-component-input-text
+                            label={label.sspLastNameLabel}
+                            value={signPageInfo.lastName}
+                            onchange={handleLastNameChange}
+                            meta-list={metaDataListParent}
+                            entity-name="SSP_Application__c"
+                            field-name="ApplicationEsignLastName__c"
+                            match-value={objApplication.ShortSnapLastName__c}
+                            class="snapSign snapSignSubmit"
+                            max-length="50"
+                        >
+                        </c-ssp-base-component-input-text>
+                    </div>
+                </div>
+                <div class="slds-col slds-large-size_3-of-12 slds-size_1-of-1">
+                    <div class="ssp-margin-bottom_small">
+                        <c-ssp-base-component-input-picklist
+                            label={label.sspSuffixLabel}
+                            value={signPageInfo.suffix}
+                            option={suffixOptions}
+                            onchange={handleSuffixChange}
+                            meta-list={metaDataListParent}
+                            entity-name="SSP_Application__c"
+                            field-name="ApplicationEsignSuffixCode__c"
+                            match-value={objApplication.ShortSnapSuffixCode__c}
+                            class="snapSign snapSignSubmit"
+                        >
+                        </c-ssp-base-component-input-picklist>
+                    </div>
+                </div>
+
+                <div class="slds-col slds-large-size_3-of-12 slds-size_1-of-1">
+                    <div class="ssp-margin-bottom_xlarge">
+                        <c-ssp-base-component-input-date
+                            value={timeTravelCurrentDate}
+                            label={label.sspDateLabel}
+                            is-read-only="true"
+                        >
+                        </c-ssp-base-component-input-date>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="slds-grid slds-wrap slds-grid_align-spread ssp-add-auth-rep-btns slds-grid_reverse"
+            >
+                <lightning-button
+                    label={label.sspSubmitShortSnapLabel}
+                    title={label.sspClickSubmitShortSNAPApplication}
+                    class="ssp-button_neutral ssp-authorize-btn"
+                    onclick={initSave}
+                ></lightning-button>
+
+                <lightning-button
+                    label={label.sspExitButton}
+                    title={label.sspExitShortSNAPApplication}
+                    class="ssp-button_base ssp-cancel-btn"
+                    onclick={handleExit}
+                ></lightning-button>
+                <lightning-button
+                    label={label.sspBack}
+                    title={label.sspBackAltText}
+                    class="ssp-button_base ssp-cancel-btn"
+                    onclick={handleBack}
+                ></lightning-button>
+            </div>
+        </div>
+    </main>
+</template>

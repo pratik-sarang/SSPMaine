@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Mobile Button Action  --></label>
+    <name>Mobile_Button_Action__c</name>
+    <picklistValues>
+        <masterLabel>Tel 8553068959</masterLabel>
+        <translation><!-- Tel 8553068959 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>call to dcbs</masterLabel>
+        <translation><!-- call to dcbs --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>navigate user to Application Summary</masterLabel>
+        <translation><!-- navigate user to Application Summary --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>navigate user to Claim Payments screen</masterLabel>
+        <translation><!-- navigate user to Claim Payments screen --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>navigate user to Document Center</masterLabel>
+        <translation><!-- navigate user to Document Center --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>navigate user to Hearing Summary</masterLabel>
+        <translation><!-- navigate user to Hearing Summary --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>navigate user to Message Center with Notice tab selected</masterLabel>
+        <translation><!-- navigate user to Message Center with Notice tab selected --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>navigate user to Renewal of Benefits screen</masterLabel>
+        <translation><!-- navigate user to Renewal of Benefits screen --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>navigate user to Renewal of assisted individual&apos;s Benefits screen</masterLabel>
+        <translation><!-- navigate user to Renewal of assisted individual&apos;s Benefits screen --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>navigate user to the assisted individual&apos;s Client View Dashboard</masterLabel>
+        <translation><!-- navigate user to the assisted individual&apos;s Client View Dashboard --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>opens Assister Access Request modal</masterLabel>
+        <translation><!-- opens Assister Access Request modal --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>opens Authorized Representative Access Request modal</masterLabel>
+        <translation><!-- opens Authorized Representative Access Request modal --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

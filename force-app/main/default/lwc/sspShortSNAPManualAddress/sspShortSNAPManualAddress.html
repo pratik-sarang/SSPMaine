@@ -1,0 +1,116 @@
+<!--
+* @name 		    : sspShortSNAPManualAddress
+* @description 	    : Manual address entry screen in Short SNAP.
+* @author 		    : Chirag, Shivam 
+* @date 		    : 29/4/2020
+-->
+
+<template>
+    <div
+        class="slds-col slds-size_1-of-1 slds-large-size_12-of-12 slds-m-vertical_medium slds-grid_align-center slds-m-bottom_none"
+        onchange={handleChange}
+    >
+        <!--Line 1-->
+        <div class="slds-m-vertical_medium">
+            <c-ssp-base-component-input-text
+                class="address-input manual-line1"
+                data-id={fieldMap.addressLine1.fieldApiName}
+                field-name={fieldMap.addressLine1.fieldApiName}
+                entity-name={fieldMap.addressLine1.objectApiName}
+                value={value.addressLine1}
+                label={fieldMap.addressLine1.label}
+                meta-list={metaList}
+                onchange={handleLine1Change}
+            ></c-ssp-base-component-input-text>
+        </div>
+        <!--Line 2-->
+        <div class="slds-m-vertical_medium">
+            <c-ssp-base-component-input-text
+                class="address-input manual-line2"
+                pattern="^[\s\w\.\/,#'&amp;-]+$"
+                data-id={fieldMap.addressLine2.fieldApiName}
+                field-name={fieldMap.addressLine2.fieldApiName}
+                entity-name={fieldMap.addressLine2.objectApiName}
+                value={value.addressLine2}
+                label={fieldMap.addressLine2.label}
+                meta-list={metaList}
+                placeholder={label.addressLineTwoAltText}
+                onchange={handleLine2Change}
+            ></c-ssp-base-component-input-text>
+        </div>
+        <!--City-->
+        <div class="slds-m-vertical_medium">
+            <c-ssp-base-component-input-text
+                class="address-input manual-city"
+                data-id={fieldMap.city.fieldApiName}
+                field-name={fieldMap.city.fieldApiName}
+                entity-name={fieldMap.city.objectApiName}                
+                label={fieldMap.city.label}
+                meta-list={metaList}
+                onchange={handleCityChange}
+            ></c-ssp-base-component-input-text>
+        </div>
+        <!--State-->
+        <div class="slds-m-vertical_medium">
+            <c-ssp-type-ahead-picklist
+                data-id={fieldMap.state.fieldApiName}
+                class="address-input manual-state"
+                placeholder={label.statePlaceholder}
+                label={fieldMap.state.label}
+                entity-name={fieldMap.state.objectApiName}
+                field-name={fieldMap.state.fieldApiName}
+                meta-list={metaList}
+                list-values={statePicklist}
+                onselectedval={handleStateChange}
+                value={stateDisplayValue}>
+            </c-ssp-type-ahead-picklist>
+        </div>
+        <!--Postal Code-->
+        <div class="slds-m-vertical_medium">
+            <c-ssp-base-component-input-text
+                class="address-input manual-postal_code"
+                data-id={fieldMap.postalCode.fieldApiName}
+                field-name={fieldMap.postalCode.fieldApiName}
+                entity-name={fieldMap.postalCode.objectApiName}
+                label={fieldMap.postalCode.label}
+                meta-list={metaList}
+                max-length='5'
+                onkeydown={preventNonNumericInput}
+                onchange={handlePostalCodeChange}
+            ></c-ssp-base-component-input-text>
+        </div>
+        <!--County-->
+        <div class="slds-m-vertical_medium">
+             <c-ssp-type-ahead-picklist
+                class="address-input manual-county"
+                list-values={countyPicklist}
+                data-id={fieldMap.county.fieldApiName}
+                field-name={fieldMap.county.fieldApiName}
+                entity-name={fieldMap.county.objectApiName}
+                label={fieldMap.county.label}
+                disabled={countyDisabled}
+                meta-list={metaList}
+                onselectedval={handleCountyChange}
+                value={countyDisplayValue}>
+            </c-ssp-type-ahead-picklist>
+        </div>
+        <div
+            class="slds-grid slds-gutters slds-m-top_x-large slds-p-top_large slds-border_top ssp-manualAddressButton"
+        >
+            <lightning-button
+                variant="neutral"
+                label={label.cancelButton}
+                title={label.cancelButton}
+                onclick={handleCancel}
+                class="slds-col slds-size_1-of-2 ssp-button_base ssp-cardButton"
+            ></lightning-button>
+            <lightning-button
+                variant="neutral"
+                label={label.saveButton}
+                title={label.saveButton}
+                onclick={handleSave}
+                class="slds-col slds-size_1-of-2  ssp-button_neutral ssp-cardButton"
+            ></lightning-button>
+        </div>
+    </div>
+</template>

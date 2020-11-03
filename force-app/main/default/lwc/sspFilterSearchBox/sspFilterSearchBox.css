@@ -1,0 +1,72 @@
+.ssp-searchBox-child {
+    width: 100%;
+}
+
+.targetOption,
+.ssp-searchBox-outer {
+    position: relative;
+}
+
+.ssp-searchBox-outer {
+    margin-left: 5px;
+}
+.ssp-filterSeachChevron {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 5px;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.search-result_left-pad {
+    padding-left: 35px !important;
+}
+
+.slds-input-has-border_padding {
+    padding: 3px;
+}
+.ssp-close-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 94%;
+    cursor: pointer;
+}
+
+.ssp-lookup-option-container {
+    border-width: 0 1px 1px 1px;
+    max-height: 202px;
+    cursor: pointer;
+    z-index: 999;
+    font-size: 1rem;
+    padding: 0 1rem 0 0.75rem;
+    width: 100%;
+}
+
+.ssp-typeahead-items {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.ssp-message-center-table-tag {
+    padding-left: 10px;
+    border-radius: 10px;
+    padding-right: 10px;
+    font-size: 0.9rem;
+    line-height: 18px;
+    display:inline;
+}
+
+
+.ssp-typeahead-items:focus {
+    outline: none;
+}
+
+
+.ssp-tag-image {
+  width: 24px;
+  height: 24px;
+  margin-left: 12px;
+  margin-right: 10px;
+}

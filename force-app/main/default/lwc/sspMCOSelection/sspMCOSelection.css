@@ -1,0 +1,17 @@
+.ssp-topParagraphContainer {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-bottom: 6.25rem;
+    margin-top: 1.875rem;
+    display: inline-block;
+}
+
+.ssp-blueHeader {
+    height: auto;
+    font-size: 1.125rem;
+    letter-spacing: -.0187rem;
+    line-height: 1.5rem;
+    border-bottom: 5px solid #eeeff2;
+    padding-bottom: 1rem;
+    margin: 2rem 0 1rem 0;
+}

@@ -1,0 +1,209 @@
+<!--
+* name 		        : sspOutOfStateBenefitDetails
+* @description 	    : Container for Benefit Detail Page
+* @author 		    : Kyathi Kanumuri 
+* @date 		    : 11/23/2019
+* MODIFICATION LOG:
+* DEVELOPER           DATE                DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* Kyathi	      12/16/2019	      HTML Structure Creation
+* Kiran           12/16/2019            BE Integration
+-->
+<template>
+    <template if:true={showSpinner}>
+        <c-ssp-spinner></c-ssp-spinner>
+    </template>
+    <main class="ssp-benefitDetails_container ssp-bodyContainer" if:false={screenRenderingStatus}>
+        <div class="slds-m-top_x-large ssp-benefitDetails_header">
+            <h1
+                class="ssp-benefitDetailsHeaderText ssp-fontFamily_popinBlack ssp-color_blueAlpha"
+            >
+                {label.sspOutOfStateBenefitDetailHeading}
+            </h1>
+            <h2
+                class="ssp-username ssp-color_monoBody ssp-fontFamily_popinBold"
+            >
+
+                {memberName}
+            </h2>
+        </div>
+        <p class="ssp-sectionSeperator ssp-bg_monoAlpha"></p>
+        <div class="ssp-errorToast" if:true={hasSaveValidationError}>
+            <c-ssp-toast
+                ssp-toast-title-val={toastErrorText}
+                show-error-toast={trueValue}
+                onhidetoast={hideToast}
+            ></c-ssp-toast>
+        </div>
+        <div class="slds-grid slds-wrap ssp-benefitDetailsForm">
+            <p
+                class="ssp-completeQuestions ssp-color_monoOmega ssp-fontFamily_ArvoRegular"
+            >
+                {label.sspCompleteBenefitDetailQuestions}
+            </p>
+            <div
+                class="slds-grid slds-wrap slds-size_1-of-1   ssp-multipleFieldsContainer"
+            >
+                <template if:true={benefitObj.sBenefitStateLabel}>
+                    <c-ssp-type-ahead-picklist
+                        label={label.sspState}
+                        placeholder={label.sspStartTypingPlaceholder}
+                        class="ssp-applicationInputs  slds-m-bottom_medium slds-p-bottom_xx-small slds-large-size_1-of-2 slds-size_1-of-1"
+                        title={label.sspStateAltText}
+                        list-values={lstState}
+                        data-id="State__c"
+                        value={benefitObj.sBenefitStateLabel}
+                        entity-name="SSP_Benefits__c"
+                        onselectedval={assignValues}
+                        meta-list={MetaDataListParent}
+                        field-name="State__c"
+                        onchangetypeaheadpicklistvalue={populateStateValue}
+                    ></c-ssp-type-ahead-picklist>
+                </template>
+                <template if:false={benefitObj.sBenefitStateLabel}>
+                    <c-ssp-type-ahead-picklist
+                        label={label.sspState}
+                        placeholder={label.sspStartTypingPlaceholder}
+                        class="ssp-applicationInputs  slds-m-bottom_medium slds-p-bottom_xx-small slds-large-size_1-of-2 slds-size_1-of-1"
+                        title={label.sspStateAltText}
+                        list-values={lstState}
+                        data-id="State__c"
+                        value={benefitObj.sBenefitStateLabel}
+                        entity-name="SSP_Benefits__c"
+                        onselectedval={assignValues}
+                        meta-list={MetaDataListParent}
+                        field-name="State__c"
+                        onchangetypeaheadpicklistvalue={populateStateValue}
+                    ></c-ssp-type-ahead-picklist>
+                </template>
+            </div>
+            <template if:true={isStatePopulated}>
+                <div
+                    class="slds-grid slds-wrap slds-size_1-of-1  ssp-multipleFieldsContainer"
+                >
+                    <template if:true={benefitObj.sBenefitCounty}>
+                        <c-ssp-base-component-input-text
+                            class="ssp-applicationInputs slds-large-size_1-of-2 slds-size_1-of-1"
+                            label={label.sspCounty}
+                            value={benefitObj.sBenefitCounty}
+                            data-id="BenefitInfoCounty__c"
+                            entity-name="SSP_Benefits__c"
+                            field-name="BenefitInfoCounty__c"
+                            meta-list={MetaDataListParent}
+                        >
+                        </c-ssp-base-component-input-text>
+                    </template>
+                    <template if:false={benefitObj.sBenefitCounty}>
+                        <c-ssp-base-component-input-text
+                            class="ssp-applicationInputs slds-large-size_1-of-2 slds-size_1-of-1"
+                            data-id="BenefitInfoCounty__c"
+                            entity-name="SSP_Benefits__c"
+                            field-name="BenefitInfoCounty__c"
+                            meta-list={MetaDataListParent}
+                            label={label.sspCounty}
+                        >
+                        </c-ssp-base-component-input-text>
+                    </template>
+                </div>
+                <div
+                    class="slds-grid slds-wrap slds-size_1-of-1 ssp-multipleFieldsContainer"
+                >
+                    <p
+                        class="ssp-fieldLabel ssp-fontFamily_popinBold ssp-color_monoBody slds-m-bottom_medium slds-p-top_xx-large"  tabindex="0"
+                    >
+                        {label.sspTypeOfBenefitProgramsLabel}
+                    </p>
+                    <template
+                        for:each={lstPrograms}
+                        for:item="program"
+                        for:index="index"
+                    >
+                        <div key={program.value} class="ssp-checkbox">
+                            <lightning-input
+                                type="checkbox"
+                                label={program.label}
+                                class="ssp-applicationInputs ssp-cbWithCompleteBorder slds-m-bottom_small slds-size_1-of-1 ssp-checkboxInputs"
+                                value={program.value}
+                                data-id="BenefitPrograms__c"
+                                checked={program.checked}
+                                onclick={showHideFields}
+                                disabled={isReadOnlyUser}
+                            >
+                            </lightning-input>
+                            <div if:true={program.checked}>
+                                <div
+                                    class="slds-p-around_large slds-grid slds-wrap ssp-cbBoxBorder ssp-bg_greyBeta"
+                                >
+                                    <c-ssp-base-component-input-date
+                                        name="BeginDate"
+                                        class="ssp-applicationInputs slds-size_1-of-2 slds-max-medium-size_1-of-1 slds-p-horizontal_small slds-p-vertical_x-small ssp-date"
+                                        label={label.sspBenefitStartDate}
+                                        time-travel-current-date={timeTravelTodayDate}
+                                        value={program.startDate}
+                                        field-name="BeginDate__c"
+                                        entity-name="SSP_Benefits__c"
+                                        data-id="BeginDate"
+                                        data-index={index}
+                                        meta-list={MetaDataListParent}
+                                        onblur={compareDate}
+                                        onchange={compareDate}
+                                    >
+                                    </c-ssp-base-component-input-date>
+                                    <div class="slds-size_1-of-2 slds-max-medium-size_1-of-1 slds-p-horizontal_small slds-p-vertical_x-small ssp-date">
+                                        <c-ssp-base-component-input-date
+                                            name="EndDate"
+                                            class="ssp-applicationInputs"
+                                            label={label.sspBenefitEndDate}
+                                            comparing-date={program.startDate}
+                                            value={program.endDate}
+                                            field-name="EndDate__c"
+                                            data-id="EndDate"
+                                            data-index={index}
+                                            entity-name="SSP_Benefits__c"
+                                            meta-list={MetaDataListParent}
+                                            onblur={compareDate}
+                                            onchange={compareDate}
+                                        >
+                                        </c-ssp-base-component-input-date>
+                                        <span
+                                            class="ssp-color_redOmega ssp-endDateError slds-hide" role="alert" aria-atomic="true"
+                                            >{label.sspEndDateValidatorMessage}</span
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                    <span class="ssp-color_redOmega" role="alert" aria-atomic="true"
+                        >{customValidationError}</span
+                    >
+                    <span class="ssp-color_redOmega" role="alert" aria-atomic="true"
+                        >{programValidationError}</span
+                    >
+                </div>
+            </template>
+
+            <div
+                class="slds-grid slds-wrap slds-size_1-of-1 ssp-actionButtonsContainer"
+            >
+                <div class="slds-size_1-of-1 ssp-actionButtons">
+                    <lightning-button
+                        class="ssp-screenFooterBlueBtn ssp-button_base ssp-cancelButton"
+                        label={label.sspCancel}
+                        onclick={cancelBenefitDetails}
+                        title={label.sspBenefitDetailCancelAltText}
+                    ></lightning-button>
+                    <lightning-button
+                        class="ssp-screenFooterNextBtn ssp-button_neutral ssp-saveButton"
+                        label={label.sspSave}
+                        onclick={saveBenefitDetails}
+                        title={label.sspBenefitDetailSaveAltText}
+                    ></lightning-button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <template if:true={showAccessDeniedComponent}>
+        <c-ssp-access-denied></c-ssp-access-denied>
+    </template>
+</template>

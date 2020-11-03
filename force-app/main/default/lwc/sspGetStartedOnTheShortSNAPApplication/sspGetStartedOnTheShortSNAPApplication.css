@@ -1,0 +1,252 @@
+.ssp-marginTopFifteen {
+    margin-top: 0.9375rem;
+}
+
+.ssp-getStartedSnapApp{
+    padding-bottom: 250px;
+}
+.ssp-marginBottomFifteen {
+    margin-bottom: 0.9375rem;
+}
+
+.ssp-marginBottomThirty {
+    margin-bottom: 1.875rem;
+}
+
+.ssp-paddingLeftFifteen {
+    padding-left: 1rem;
+}
+
+.ssp-getStartedSnapAppContentContainer {
+    padding-top: 2.5rem;
+    padding-bottom: 60px;
+}
+.ssp-getStartedSnapAppBanner {
+    position: relative;
+    padding: 3.125rem 0 6.6875rem 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 30% 30%;
+    background-image: url(../resource/SSP_KynectImages9/SSP_KynectImages9/ShortSnapApplicationMobile.jpg);
+}
+
+.ssp-getStartedSnapAppBgOverlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.5;
+    background: linear-gradient(
+        155.22deg,
+        #4b515c 0%,
+        rgba(38, 39, 41, 0) 100%
+    );
+}
+
+.ssp-getStartedSnapAppText {
+    font-size: 2.625rem;
+    letter-spacing: normal;
+    line-height: 3rem;
+    position: relative;
+    z-index: 6;
+}
+
+.ssp-getStartedSnapAppContent {
+    position: relative;
+}
+.getStartedAppSubContainer {
+    margin-right: 1.875rem;
+    max-width: 270px;
+}
+
+.ssp-getStartedSnapAppContent:last-child {
+    margin-right: 0;
+}
+
+.ssp-getSNAPNum {
+    position: absolute;
+    top: 0;
+    font-size: 18px;
+}
+
+.ssp-displayInlineBlock {
+    display: inline-block;
+}
+
+.ssp-getSNAPContentTitle {
+    font-size: 1.125rem;
+    line-height: 24px;
+    letter-spacing: -0.3px;
+}
+
+.ssp-getSNAPSubContent {
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 6px;
+}
+.ssp-getStartSNAPButtonContiner {
+    margin-top: 5.75rem;
+    padding-bottom: 100px;
+}
+.ssp-footerBtnBackSave,
+.ssp-footerBtnNext {
+    margin-top: 0.5rem;
+}
+.ssp-captchaParent {
+    position: relative;
+}
+.ssp-getBenefitCaptcha {
+    border: none;
+    position: absolute;
+    height: 495px;
+    z-index: 9;
+    width: 324px;
+    right: 0;
+}
+
+.ssp-backgroundImage {
+    position: absolute;
+    right: 0;
+    height: 7.625rem;
+    width: auto;
+}
+
+.ssp-polygongroundImage {
+    position: absolute;
+}
+
+.ssp-desktopBackgroundImage {
+    display: none;
+}
+
+@media only screen and (min-width: 768px) {
+    .ssp-desktopBackgroundImage {
+        display: block;
+        position: absolute;
+        height: 368px;
+        margin-top: 11.25rem;
+        width: 225px;
+        z-index: 5;
+    }
+
+    .ssp-getStartedSnapAppBanner {
+        position: relative;
+        padding: 3.125rem 0 6.6875rem 0;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 30% 30%;
+        background-image: url(../resource/SSP_KynectImages9/SSP_KynectImages9/ShortSnapApplication.png);
+    }
+    .ssp-getStartedSnapAppText {
+        font-size: 3.75rem;
+        letter-spacing: normal;
+        line-height: 3.75rem;
+        position: relative;
+    }
+    .ssp-backgroundPolygonBlue {
+        display: none;
+    }
+
+    .ssp-backgroundPolygonYellow {
+        display: block;
+        position: absolute;
+        height: 18px;
+        margin-top: 269px;
+        width: 18px;
+        z-index: 5;
+        right: 880px;
+    }
+    .ssp-backgroundPolygonPurple {
+        display: block;
+        position: absolute;
+        height: 8px;
+        margin-top: 147px;
+        width: 8px;
+        z-index: 5;
+        right: 853px;
+    }
+    .ssp-PaddingButtonContainer{
+    padding: 0 30px;
+}
+}
+
+@media only screen and (max-width: 768px) {
+    .ssp-getStartedSnapAppBanner {
+        margin-top: -46px;
+        padding-top: 6.25rem;
+    }
+
+    .ssp-marginBottomThirty {
+        margin-bottom: 30px;
+    }
+
+    .ssp-getStartedSnapAppContentContainer {
+        padding-bottom: 30px;
+    }
+
+    .ssp-backgroundPolygonBlue {
+        display: block;
+        position: absolute;
+        height: 36px;
+        margin-top: 78px;
+        width: 36px;
+        z-index: 5;
+        right: 0px;
+    }
+    .ssp-backgroundPolygonYellow {
+        display: block;
+        position: absolute;
+        height: 18px;
+        margin-top: 156px;
+        width: 18px;
+        z-index: 5;
+        right: 162px;
+    }
+    .ssp-backgroundPolygonPurple {
+        display: none;
+    }
+
+    .ssp-mobileHorizontalPaddingHeading {
+        padding: 0 30px 0 30px;
+    }
+
+    .ssp-getStartSNAPButtonContiner {
+        padding-bottom: 60px;
+    }
+
+    .ssp-getStartSNAPButtonContiner .ssp-footerBtnBackSave {
+        order: 1;
+    }
+    
+    .ssp-getStartSNAPButtonContiner .ssp-captchaParent {
+        order: 2;
+        margin: 30px auto;
+        height: 60px;
+    }
+
+    .ssp-getStartSNAPButtonContiner .ssp-captchaParent  .ssp-getBenefitCaptcha {
+        right: auto;
+    }
+    .ssp-getStartSNAPButtonContiner .ssp-footerBtnNext {
+        order: 3;
+    }
+
+    .ssp-getBenefitCaptcha {
+        width:100%
+    }
+
+    .ssp-paddingMobileThirty {
+    padding: 0 30px;
+}
+    .ssp-paddingMobileThirtyCaptcha {
+    padding: 0 30px;
+}
+}
+
+@media only screen and (max-width: 320px) { 
+    .ssp-paddingMobileThirtyCaptcha {
+    padding: 0 0 0 30px;
+    }
+}

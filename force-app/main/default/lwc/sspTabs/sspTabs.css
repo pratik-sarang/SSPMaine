@@ -1,0 +1,56 @@
+.ssp-TabsRow {
+    display: flex;
+}
+
+.ssp-Tab {
+    font-size: 0.8125rem;
+    line-height: 18px;
+    letter-spacing: -0.3px;
+    text-align: left;
+    padding: 16px 0 17px 30px;
+    width: 187px;
+    word-spacing: 100vw;
+    border-bottom: 4px solid #dadee4;
+    border-top: 1px solid #dadee4;
+}
+
+.ssp-Tab:hover {
+    cursor: pointer;
+}
+
+.ssp-TabsContent {
+    border-radius: 0 0 6px 6px;
+    padding: 20px 30px 26px 30px;
+    display: none;
+}
+
+.ssp-ContentDisc {
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    margin-right: 9px;
+}
+
+.ssp-ContentTitle {
+    font-size: 1rem;
+    line-height: 24px;
+    letter-spacing: -0.3px;
+    text-align: left;
+}
+
+.ssp-ContentLink {
+    font-size: 0.8125rem;
+    line-height: 20px;
+    letter-spacing: -0.3px;
+    text-align: left;
+    text-decoration: underline;
+    margin-left: 18px;
+}
+
+.ssp-active {
+    border-bottom: 4px solid #0044be;
+}
+
+.ssp-show {
+    display: block;
+}

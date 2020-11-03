@@ -1,0 +1,44 @@
+<!--
+* name          : sspCannotApplyAllProgramsModal
+* @description  : This modal appears when a user attempts to initiate or continue an application on behalf of a client who already has an application in-progress which includes programs which the user does not have access to.
+* @author       : Chirag
+* @date         : 05/07/2020
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName                MM/DD/YYYY               A Brief Description about the Change
+-->
+<template>
+    <c-ssp-detailed-information-modal
+        header-value={label.sspCannotApplyAllPrograms}
+        open-model={openModel}
+        onclosemodal={closeModal}
+        reference={reference}
+        class="ssp-CannotApplyAllProgram"
+    >
+        <div slot="contentSlot">
+            <div>
+                {label.sspCannotApplyAllProgramsContent}
+            </div>
+        </div>
+
+        <span slot="Footer" class="ssp-modalFooter ssp-stacked-btn-width">
+            <lightning-button
+                variant="brand"
+                label={label.sspContinue}
+                class="ssp-button_brand ssp-fontFamily_popinBold "
+                onclick={continueSummary}
+                title={label.sspContinueTheApplication}
+            ></lightning-button>
+            <div class="ssp-buttonContainer">
+                <lightning-button
+                    variant="neutral"
+                    label={label.sspExitApplication}
+                    class="ssp-button_base slds-m-top_medium ssp-fontFamily_popinBold"
+                    onclick={closeModal}
+                    title={label.sspExitTheApplication}
+                ></lightning-button>
+            </div>
+        </span>
+    </c-ssp-detailed-information-modal>
+</template>

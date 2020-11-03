@@ -1,0 +1,49 @@
+<!--
+* name            : sspBaseComponentInputText
+* @description    : Generic component for Input text box.
+-->
+<template>
+    <div class="ssp-genericInput slds-grid slds-wrap">
+        <div class="ssp-inputText">
+            <div class="ssp-alignHelpText">
+                <label>{label}</label>
+                <template if:true={isHelpText}>
+                    <lightning-helptext
+                        class="ssp-helptextIcon"
+                        icon-name="utility:info_alt"
+                        content={helpTextContent}
+                    ></lightning-helptext>
+                </template>
+            </div>
+
+            <lightning-input
+                data-id="inpValue"
+                label={label}
+                value={value}
+                class={className}
+                title={title}
+                onblur={handleValidations}
+                onchange={handleValidations}
+                disabled={isDisabled}
+                placeholder={placeholder}
+                type={inputType}
+                variant="label-hidden"
+                max-length={maxLength}
+                pattern="[0-9]+"
+                message-when-pattern-mismatch={labels.sspEnterValidZipCode}
+            >
+            </lightning-input>
+
+            <template for:each={ErrorMessageList} for:item="error">
+                <div
+                    role="alert"
+                    aria-atomic="true"
+                    key={error}
+                    class="ssp-showError ssp-color_redAlpha"
+                >
+                    {error}
+                </div>
+            </template>
+        </div>
+    </div>
+</template>

@@ -1,0 +1,57 @@
+.ssp-healthSelectionInstruction,
+.ssp-healthSelectionNote {
+    font-size: 1rem;
+    line-height: 24px;
+    letter-spacing: -0.3px;
+    text-align: left;
+}
+.ssp-healthSelectionLearnMore {
+    margin-top: 30px;
+    display: inline-block;
+}
+.ssp-healthSelectionNote {
+    margin-top: 15px;
+}
+.ssp-healthSelectionLearnMore {
+    font-size: 0.8125rem;
+    line-height: 30px;
+    letter-spacing: -0.3px;
+    text-align: left;
+    text-decoration: underline;
+}
+.ssp-healthSelectionOptions {
+    margin-top: 30px;
+}
+.ssp-healthSelectionOptions:last-of-type {
+    margin-bottom: 100px;
+}
+.ssp-healthSelectionToggle {
+    margin-bottom: 30px;
+}
+.ssp-healthSelectionMembers {
+    display: none;
+    margin-bottom: 30px;
+    width: 370px;
+}
+.ssp-healthSelectionSelectApplicants {
+    font-size: 0.8125rem;
+    line-height: 30px;
+    letter-spacing: 0.3px;
+    text-align: left;
+    margin-bottom:10px;
+}
+.ssp-healthSelectionHr {
+    height: 1px;
+    width: 100%;
+}
+.ssp-showMembers {
+    display: block;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    .ssp-healthSelectionMembers {
+        width: 315px;
+    }
+}

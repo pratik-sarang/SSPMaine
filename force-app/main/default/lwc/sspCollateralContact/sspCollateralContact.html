@@ -1,0 +1,87 @@
+<template>
+    <template if:true={showSpinner}>
+        <c-ssp-spinner></c-ssp-spinner>
+    </template>
+    <div class="ssp-collateralContact ssp-bodyContainer">
+        <hr class="ssp-horizontal-rule ssp-bg_monoAlpha slds-m-top_large" ></hr>
+        <div class="ssp-collateralContactInfo slds-m-top_large">
+            <h1 class="ssp-fontFamily_ArvoRegular ssp-color_monoOmega ssp-info_fontSize slds-m-vertical_large">
+                {label.sspCollateralContactInfo}
+            </h1>
+        </div>
+        <div class="ssp-collateralContactForm">
+            <div class="slds-grid slds-wrap slds-size_1-of-1">
+                <div class="slds-large-size_1-of-2 slds-size_1-of-1">
+                   <c-ssp-base-component-input-text
+                      class={contactNameHighlighter}
+                      label={label.sspContactName}
+                      handle-change="true"
+                      onhandlechange={handleContactName}
+                      value={contactName}
+                   ></c-ssp-base-component-input-text>
+                   <div
+                      role="alert"
+                      aria-atomic="true"
+                      class="ssp-showError ssp-color_redAlpha"
+                      if:true={contactNameError}
+                    >
+                      {contactNameError}
+                   </div>
+                </div>
+            </div>
+            <div class="slds-grid slds-wrap slds-size_1-of-1">
+                <div class="slds-large-size_1-of-2 slds-size_1-of-1">
+                   <c-ssp-base-component-input-phone
+                      class={contactPhoneHighlighter}
+                      label={label.sspContactPhoneNumber}
+                      meta-list={metaDataList}
+                      handle-change="true"
+                      max-length="12"
+                      onhandlechange={handleContactPhone}
+                      value={contactPhone}
+                   >
+                </c-ssp-base-component-input-phone>
+                   <div
+                      role="alert"
+                      aria-atomic="true"
+                      class="ssp-showError ssp-color_redAlpha"
+                      if:true={contactPhoneError}
+                    >
+                      {contactPhoneError}
+                    </div>
+                </div>
+            </div>
+            <div class="slds-grid slds-wrap slds-size_1-of-1">
+                <div class="slds-large-size_1-of-2 slds-size_1-of-1">
+                   <c-ssp-base-component-input-text
+                      class={contactRelationHighlighter}
+                      label={label.sspRelationshipToYou}
+                      handle-change="true"
+                      onhandlechange={handleRelation}
+                      value={relationshipToYou}
+                   ></c-ssp-base-component-input-text>
+                   <div
+                      role="alert"
+                      aria-atomic="true"
+                      class="ssp-showError ssp-color_redAlpha"
+                      if:true={relationshipError}
+                    >
+                      {relationshipError}
+                   </div>
+                </div>
+            </div>
+        </div>
+        <div class="ssp-collateralContactInfo ssp-collateral-footer-text slds-m-top_large">
+            <p class="ssp-fontFamily_ArvoRegular ssp-color_monoOmega ssp-info_fontSize">
+                {label.sspCollateralSubmit} <a if:false={showTargetAnchorTag} href="javascript:void(0)" onclick={openPDF}>{label.sspCollateralForm}</a> <a if:true={showTargetAnchorTag} target="_blank" href={PAFS76DocUrl}>{label.sspCollateralForm}</a> {label.sspCollateralWhoLives}
+            </p>
+        </div>
+    </div>
+    <c-ssp-toast 
+        if:true={showToast}
+        ssp-toast-title-val={label.toastErrorText}
+        onhidetoast={handleHideToast}
+        show-error-toast={showToast}
+    >
+    </c-ssp-toast>
+</template>

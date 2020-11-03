@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IsSearchEnabled__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Indicates if Agent is registered. Registered Agent, if set to &apos;1&apos; else not registered.</description>
+    <externalId>false</externalId>
+    <label>Is search enabled</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>

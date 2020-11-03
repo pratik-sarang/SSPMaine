@@ -1,0 +1,28 @@
+<!--
+* name            : sspBaseComponentInputCheckbox
+* @description    : Generic component for Input check box
+-->
+<template>
+  <div class="ssp-ssp-genericInput slds-grid slds-wrap ssp-singleCheckbox">
+    <div class="ssp-checkboxContainer">
+      <lightning-input
+        type="checkbox"
+        data-id="inpValue"
+        name={name}
+        label={label}
+        title={title}
+        value={inputValue}
+        onblur={handleValidations}
+        onchange={handleValidations}
+        checked={value}
+        disabled={disabled}
+                class="ssp-checkbox"
+      ></lightning-input>
+      <template for:each={ErrorMessageList} for:item="error">
+                <p role="alert" aria-atomic="true" key={error} class="ssp-showError ssp-color_redOmega">
+                    {error}
+                </p>
+      </template>
+    </div>
+  </div>
+</template>

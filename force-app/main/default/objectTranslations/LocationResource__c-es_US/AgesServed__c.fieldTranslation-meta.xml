@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Ages Served --></label>
+    <name>AgesServed__c</name>
+    <picklistValues>
+        <masterLabel>Adults (20-55)</masterLabel>
+        <translation>Adultas (20-55)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Children (6-12)</masterLabel>
+        <translation>Niñas (6-12)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Infants (0-1)</masterLabel>
+        <translation>Infantes (0-1)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pre-K (1-5)</masterLabel>
+        <translation>Pre-K (1-5)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Seniors (55+)</masterLabel>
+        <translation>Personas mayores (55+)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Teenagers (13-19)</masterLabel>
+        <translation>Adolescentes (13-19)</translation>
+    </picklistValues>
+</CustomFieldTranslation>

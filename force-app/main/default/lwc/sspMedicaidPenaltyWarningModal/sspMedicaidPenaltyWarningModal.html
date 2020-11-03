@@ -1,0 +1,80 @@
+<!--
+* name 		: sspMedicaidPenaltyWarningModal
+* @description 	: This component opens the Medicaid Penalty Warning Modal.
+* @author 		: Karthik Velu, Sai Kiran.
+* @date 		: 1/29/2020
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName	      MM/DD/YYYY	      A Brief Description 
+                  about the Change
+-->
+<template>
+    <div class="ssp-medicaidPenaltyWarning">
+        <c-ssp-detailed-information-modal
+            header-value={label.sspMedicaidPenaltyTitle}
+            open-model={openModel}
+            onclosemodal={closeMedicaidModal}
+            reference={reference}
+            scroll-event={trueValue}
+            onenablemodalbuttons={enableModalButtons}
+            class="ssp-MedicaidPenaltyWarningModal"
+        >
+            <span
+                class="ssp-mainContent ssp-fontFamily_ArvoRegular ssp-color_monoOmega ssp-margin-bottom_large"
+                slot="contentSlot"
+            >
+                <div class="ssp-margin-bottom_large ssp-focus-element" tabindex="0">
+                    {label.sspMedicaidPenaltyTitle}
+                </div>
+                <ul class="ssp-margin-bottom_large">
+                    <li tabindex="0">
+                        {label.sspMedicaidRecipients}{label.sspMedicaidRecipients2}
+                    </li>
+                </ul>
+                <div class="ssp-margin-bottom_large ssp-focus-element" tabindex="0">{label.sspTheRules}</div>
+                <ul>
+                    <li class="ssp-margin-bottom_large" tabindex="0">
+                        {label.sspDoNotGive}
+                    </li>
+                    <li class="ssp-margin-bottom_large" tabindex="0">
+                        {label.sspDoNotLet}
+                    </li>
+                    <li class="ssp-margin-bottom_large" tabindex="0">
+                        {label.sspDoNotAbuse}
+                    </li>
+                    <li class="ssp-margin-bottom_large" tabindex="0">
+                        {label.sspAllApplications}
+                    </li>
+                </ul>
+                <div tabindex="0" class="ssp-focus-element">
+                    {label.sspUnderstandThat}
+                </div>
+            </span>
+            <span slot="Footer" class="slds-grid slds-gutters">
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-button
+                        name="DisAgree"
+                        variant="base"
+                        title={label.sspDisagreeButtonAlternate}
+                        class="ssp-button_base"
+                        label={label.sspDisagreeButton}
+                        disabled={buttonDisability}
+                        onclick={handleOnClick}
+                    ></lightning-button>
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-button
+                        name="Agree"
+                        variant="neutral"
+                        title={label.sspAgreeButtonAlternate}
+                        class="ssp-button_neutral"
+                        label={label.sspAgreeButton}
+                        disabled={buttonDisability}
+                        onclick={handleOnClick}
+                    ></lightning-button>
+                </div>
+            </span>
+        </c-ssp-detailed-information-modal>
+    </div>
+</template>

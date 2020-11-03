@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This Meta data is used to set the program and its permission mapping</description>
+    <label>SSP_ProgramPermissionMapping</label>
+    <pluralLabel>SSP_ProgramPermissionMappings</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

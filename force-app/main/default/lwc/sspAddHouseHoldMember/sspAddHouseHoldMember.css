@@ -1,0 +1,110 @@
+h1 {
+    font-size: 1.5rem;
+    line-height: 32px;
+    padding-bottom: 30px;
+    margin: 30px 0;
+}
+h2 {
+    font-size: 1.125rem;
+    letter-spacing: -0.3px;
+    line-height: 1.5rem;
+    padding-bottom: 15px;
+}
+p {
+    font-size: 1rem;
+    letter-spacing: -0.3px;
+    line-height: 1.5rem;
+}
+
+.ssp-head-household,
+.ssp-member-household {
+    margin: 40px 0;
+}
+
+.ssp-button-container {
+    padding: 30px 0;
+}
+
+.ssp-generalCard {
+    border-radius: 6px;
+    padding: 30px;
+    font-size: 0.8125rem;
+}
+
+.ssp-generalCardContent {
+    font-size: 0.8125rem;
+}
+
+.ssp-generalCardTitle {
+    line-height: 1.5rem;
+    letter-spacing: -0.3px;
+}
+
+.ssp-generalCard li {
+    list-style: disc;
+    list-style-position: inside;
+}
+
+.ssp-gutter-right,
+.ssp-gutter-left {
+    padding: 0;
+}
+
+.ssp-button-container .ssp-cardButton {
+    font-size: 1.125rem;
+}
+.ssp-alignHelpText {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row;
+    justify-content: start;
+}
+
+.ssp-helptextIcon {
+    margin-left: 10px;
+    position: relative;
+    margin-bottom: 0.313rem;
+    top: 2px;
+}
+.ssp-errorMessage {
+    font-size: 12px;
+}
+.ssp-exitSaveBtn {
+    width: 100%;
+    margin: 0 0 15px 0;
+}
+.ssp-cancelBtn {
+    width: 100%;
+    margin: 0 0 14px 0;
+}
+.ssp-healthSelectionMembersTitle .ssp-healthSelectionHelpText {
+    top: -3px;
+}
+
+@media only screen and (min-width: 1024px) {
+    h1 {
+        font-size: 2.625rem;
+    }
+
+    .ssp-gutter-right {
+        padding-right: 15px;
+    }
+
+    .ssp-gutter-left {
+        padding-left: 15px;
+    }
+    .ssp-helptextIcon {
+        top: 0;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .ssp-button-container .ssp-cardButton {
+        width: 50%;
+    }
+    .ssp-button-container .ssp-cardButton:first-child {
+        padding-right: 10px;
+    }
+    .ssp-button-container .ssp-cardButton:last-child {
+        padding-left: 10px;
+    }
+}

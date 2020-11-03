@@ -1,0 +1,383 @@
+<!--
+  @File Name          : sspChildCareProviderDetails.html
+  @Description        : 
+  @Author             : ChangeMeIn@UserSettingsUnder.SFDoc
+  @Group              : 
+  @Last Modified By   : ChangeMeIn@UserSettingsUnder.SFDoc
+  @Last Modified On   : 09-18-2020
+  @Modification Log   : 
+  Ver       Date            Author      		    Modification
+  1.0    6/8/2020   ChangeMeIn@UserSettingsUnder.SFDoc     Initial Version
+-->
+<template> 
+    <c-ssp-spinner if:true={showSpinner}>
+    
+    </c-ssp-spinner>
+    <template if:true={showSelectedData}>
+        <div class="ssp-bodyContainer">
+            <div class="slds-grid slds-wrap">
+                <div class="slds-size_2-of-3">
+                    <template if:true= {pageSearchNav}>
+                    <div class="ssp-fontFamily_popinBold slds-text-align_left">
+                        <a
+                        href="javascript:void(0);"
+                        class="ssp-anchor ssp-color_monoBody"
+                        title={customLabels.sspBackToSearchProvidersAlt}
+                        onclick={backToSearch}
+                        data-id={data.ProviderId}
+                        >{customLabels.sspBackToSearchProviders}</a
+                        >
+                    </div>
+                   </template>
+                   <template if:false= {pageSearchNav}>
+                    <div class="ssp-fontFamily_popinBold slds-text-align_left">
+                        <a
+                        href="javascript:void(0);"
+                        class="ssp-anchor ssp-color_monoBody"
+                        title={customLabels.sspBackFavProvidersAlrt}
+                        onclick={backToSearch}
+                        data-id={data.ProviderId}
+                        >{customLabels.sspChildCareBackToFav}</a
+                        >
+                    </div>
+                   </template>
+                </div>
+                <div class="slds-size_1-of-3">
+                    <template if:true ={data.citizenLogin}>
+                        <div class="ssp-color_blueAlpha slds-text-align_right  ssp-color_blueAlpha">
+                            <a href="javascript:void(0);" class="ssp-anchor ssp-color_blueAlpha"
+                            title={customLabels.sspFavoritesLinkalt} onclick={viewToFavoritesList}>{customLabels.favoritesLink}
+                            ({ShowFavoriteCount})</a>
+                        </div>
+                    </template> 
+                </div>
+            </div>
+          <div key={data.ProviderId}>
+            <div class="ssp-child-care-provider-hearder slds-m-top_large">
+                <h1 class="ssp-child-care-provider-hearder-text ssp-fontFamily_popinBlack ssp-color_blueAlpha">
+                    {data.ProviderName}
+                </h1>
+                <div class="slds-grid slds-size_1-of-1 slds-grid_align-end ssp-fontFamily_popinBold ssp-userCurrentLoc ssp-child-care-provider-hearder-text ssp-color_monoBody">
+                    <img
+                    src={providerRateIcon}
+                    alt={customLabels.sspLearnMore}
+                    class="star-font-awesome"
+                    /><span class= "star-font-size ssp-color_monoOmega">{data.NumberOfStars} </span>                  
+                </div>
+                <div class="slds-grid slds-size_1-of-1 slds-grid_align-end ssp-color_blueAlpha ssp-margin-bottom_medium">
+                    <a href="javascript:void(0);" class="ssp-color_blueAlpha ssp-userCurrentLoc ssp-anchor"
+                         title={customLabels.sspAllstarLinkAlt} onclick={allStarLinkClick}>{customLabels.sspLearnMore}</a>
+                </div>
+            </div>
+            <div class="ssp-desktopMap slds-map_container">
+                <lightning-map map-markers={mapMarkers} show-footer={showFooter} list-view={listView}
+                    class="ssp-desktopMap">
+                </lightning-map>
+            </div>
+            <div class =" slds-grid slds-wrap ssp-margin-top_large">
+                <div class="slds-small-size_12-of-12 slds-large-size_1-of-3 slds-medium-size_12-of-12 ssp-anchor ssp-child-care-results-text ssp-fontFamily_Regular ssp-child-care-color_monoBody">
+                    <a href={data.mapsLink} target="_blank" title={data.addressAlt}>
+                        {data.Address1}<br/>
+                        {data.Address2}
+                    </a>
+                  </div>
+                  <div class="slds-small-size_12-of-12 slds-large-size_1-of-3 slds-medium-size_12-of-12 ssp-anchor slds-size_1-of-1 ssp-fontFamily_popinBold ssp-child-care-color_monoBody ssp-child-care-results-text">
+                    <a
+                    href={data.phoneHref}
+                    title={data.phoneTitle}
+                    class="ssp-underline ssp-fontFamily_popinBold"
+                    >{data.PhoneNumber}</a
+                  >
+                  </div>
+              <div class="slds-small-size_12-of-12 slds-large-size_1-of-3 slds-medium-size_12-of-12 slds-size_1-of-1">
+                        <span class ="ssp-child-care-results-text slds-m-right_x-small ssp-color_monoBody ssp-fontFamily_popinBold"> 
+                         {customLabels.sspOpenNow}
+                        </span>
+                        <span class="ssp-child-care-results-text ssp-color_monoBody ssp-fontFamily_Regular"> {data.OpenNow}</span>
+               </div>
+              </div>
+            <div class="ssp-margin-top_large">
+                <template if:true ={data.citizenLogin}>
+                    <template if:false={data.ShowFavorite}>
+                        <lightning-button title={customLabels.sspAddToFavoritesAlt} label={customLabels.sspAddToFavorites} value = "AddToFavorites" data-id={data.ProviderId} data-name ={data.ProviderName} variant="brand"
+                            class="ssp-button_base ssp-stacked-btn-width ssp-button_brand" onclick={handleFavorites}>
+                        </lightning-button>
+                    </template>
+                    <template if:true ={data.ShowFavorite}>
+                        <lightning-button title={customLabels.sspRemoveToFavoritesalt} label={customLabels.sspRemoveFromFavorites}  value = "RemoveFromFavorites" data-id={data.ProviderId}  data-name ={data.ProviderName} variant="brand"
+                            class="ssp-button_base ssp-stacked-btn-width ssp-button_brand" onclick={handleFavorites}>
+                        </lightning-button>
+                    </template>
+                </template> 
+            </div>
+            <div class="slds-grid slds-wrap ssp-paddingTopThirty">
+                <div class="slds-col slds-size_1-of-1 slds-large-size ssp-nextdocumentPart ssp-marginCardRight">
+                    <div class="ssp-nextAccordionContainer">
+                        <div class="ssp-nextIdentification">    
+                            <c-ssp-accordion-card>
+                                <div slot="Title">
+                                    <p class="ssp-fontFamily_popinBold ssp-color_monoBody">{customLabels.sspGeneral}
+                                    </p>
+                                </div>
+                                <div slot="contentSlot" class="slds-m-bottom_x-large">
+                                    <ul class="ssp-fontFamily_ArvoRegular ssp-color_blueAlpha ssp-more-details-list">
+                                        <li>
+                                            <span class="ssp-color_monoBody ssp-fontFamily_popinBold">{customLabels.sspChildCareProviderType}</span>
+                                            <span class="ssp-color_monoBody">{data.ProviderType}</span>
+                                        </li>
+                                        <li>
+                                            <span class="ssp-color_monoBody ssp-fontFamily_popinBold">{customLabels.sspProviderStatus}</span>
+                                            <span class="ssp-color_monoBody">{data.ProviderStatus}</span>
+                                        </li>
+                                        <li>
+                                            <span class="ssp-color_monoBody ssp-fontFamily_popinBold">{customLabels.sspCounty}</span>
+                                            <span class="ssp-color_monoBody">{data.LocationCountyDescription}</span>
+                                        </li>
+                                    </ul> 
+                                </div>
+                            </c-ssp-accordion-card>
+                        </div>
+                        <div class="ssp-nextIdentification">
+                            <c-ssp-accordion-card>
+                                <div slot="Title">
+                                    <p class="ssp-fontFamily_popinBold ssp-color_monoBody">{customLabels.sspOprHours}
+                                    </p>
+                                </div>
+                                <div slot="contentSlot" class="slds-m-bottom_x-large">
+                                    <ul class="ssp-fontFamily_ArvoRegular ssp-nextAccordionList">
+                                        <table class="ssp-accordion_table_styles">
+                                            <caption class="slds-hide">Message Caption</caption>
+                                            <tr>
+                                            <th scope="col"> 
+                                                <span class="ssp-color_monoBody">{customLabels.sspDay}</span>
+                                            </th>
+                                            <th scope="col">
+                                               <span class="ssp-color_monoBody">{customLabels.SSP_TIME}</span>
+                                            </th>
+                                            </tr>
+                                            <template for:each={data.HoursOfOperationList} for:item="date">
+                                                <tr key={date.ProviderId}>
+                                                    <td>
+                                                        <span class="ssp-color_monoBody">{date.Day}</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="ssp-color_monoBody">{date.ServiceTime}</span>
+                                                    </td>
+                                                </tr>
+                                            </template>
+                                        </table>
+                                    </ul>
+                                </div>
+                            </c-ssp-accordion-card>
+                        </div>
+                        <div class="ssp-nextIdentification">
+                            <c-ssp-accordion-card>
+                                <div slot="Title">
+                                    <p class="ssp-fontFamily_popinBold ssp-color_monoBody">{customLabels.sspCost}
+                                    </p>
+                                </div>
+                                <div slot="contentSlot" class="slds-m-bottom_x-large">
+                                    <template if:false= {data.ServiceCostList}>
+                                        <p class="ssp-fontFamily_popinBold ssp-color_monoBody"> {customLabels.sspChildcareNoInfo}
+                                        </p>
+                                    </template>
+                                    <template if:true= {data.ServiceCostList}>
+                                    <ul class="ssp-fontFamily_ArvoRegular ssp-color_blueAlpha ssp-nextAccordionList">
+                                        <table class="ssp-accordion_table_styles">
+                                           <tr>
+                                            <th scope="col">
+                                               <span class="ssp-color_monoBody">{customLabels.sspChildCareServices}</span>
+                                            </th>
+                                            <th scope="col">
+                                               <span class="ssp-color_monoBody">{customLabels.sspFullTime}</span>
+                                            </th>
+                                            <th scope="col">
+                                               <span class="ssp-color_monoBody">{customLabels.sspPartTime}</span>
+                                            </th>
+                                           </tr>
+                                            <template for:each={data.ServiceCostList} for:item="service">
+                                                <tr key={service.ProviderId}>
+                                                    <td>
+                                                        <span class="ssp-color_monoBody">{service.AgeGroup}</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="ssp-color_monoBody">{service.FullTimeCost}</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="ssp-color_monoBody">{service.PartTimeCost}</span>
+                                                    </td>
+                                                </tr>
+                                            </template>
+                                        </table>
+                                    </ul>
+                                  </template>
+                                </div>
+                            </c-ssp-accordion-card>
+                        </div>
+                        <div class="ssp-nextIdentification">
+                            <c-ssp-accordion-card>
+                                <div slot="Title">
+                                    <p class="ssp-fontFamily_popinBold ssp-color_monoBody">{customLabels.sspMoreDetails}
+                                    </p>
+                                </div>
+                                <div slot="contentSlot" class="slds-m-bottom_x-large">
+                                    <div class="ssp-fontFamily_ArvoRegular ">
+                                        <div class="slds-grid slds-wrap">
+                                            <div class="ssp-color_monoBody ssp-fontFamily_popinBold slds-col slds-size_3-of-12">{customLabels.sspCapacity}</div>
+                                            <div class="ssp-color_monoBody slds-col slds-size_9-of-12">{data.Capacity} {customLabels.sspChildren}  </div>
+                                        </div>
+                                        <div class="slds-grid slds-wrap">
+                                            <div class="ssp-color_monoBody ssp-fontFamily_popinBold slds-col slds-size_3-of-12">{customLabels.sspCcapSubsidy}</div>
+                                            <div class="ssp-color_monoBody slds-col slds-size_9-of-12">{data.IsSubsidyAccepted}</div>
+                                        </div>
+                                        <div class="slds-grid slds-wrap">
+                                            <div class="ssp-color_monoBody ssp-fontFamily_popinBold slds-col slds-size_3-of-12">{customLabels.sspAcceditations}</div>
+                                            <div class="ssp-color_monoBody slds-col slds-size_9-of-12">{data.IsAcceditationsAvailable}</div>
+                                        </div>
+                                        <div class="slds-grid slds-wrap">
+                                            <div class="ssp-color_monoBody ssp-fontFamily_popinBold slds-col slds-size_3-of-12">{customLabels.sspFoodPermit}</div>
+                                            <div class="ssp-color_monoBody slds-col slds-size_9-of-12">{data.IsFoodPermitAvailable}</div>
+                                        </div>
+                                        <div class="slds-grid slds-wrap">
+                                            <div class="ssp-color_monoBody ssp-fontFamily_popinBold slds-col slds-size_3-of-12">{customLabels.sspTransportation}</div>
+                                            <div class="ssp-color_monoBody slds-col slds-size_9-of-12">{data.Transportation}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </c-ssp-accordion-card>
+                        </div>
+                        <div class="ssp-nextIdentification">
+                            <c-ssp-accordion-card>
+                                <div slot="Title">
+                                    <p class="ssp-fontFamily_popinBold ssp-color_monoBody">{customLabels.sspInspection}
+                                    </p>
+                                </div> 
+                                <div slot="contentSlot" class="slds-m-bottom_x-large lgc-bg">
+                                    <template if:true={data.IsOngoingProcess}>
+                                        <div class="ssp-alignHelpText">
+                                            <p
+                                                class="ssp-color_monoBody ssp-fontFamily_popinBold slds-m-bottom_x-large"
+                                            >
+                                            <img
+                                            src={providerNotificationIcon}
+                                            alt={customLabels.sspChildCareInspectionHelp}
+                                            />
+                                            <span class="slds-m-left_xx-small">{data.ProcessText}</span>
+                                            <lightning-helptext
+                                                class="ssp-helptextIcon ssp-child-care-custom-icon"
+                                                icon-name="utility:info_alt"
+                                                content={customLabels.sspChildCareInspectionHelp}
+                                            ></lightning-helptext>   
+                                            </p>
+                                        </div>
+                                    </template>
+                                    <template if:true={data.IsProviderStatus}>
+                                        <p class="ssp-fontFamily_popinBold ssp-color_monoBody slds-m-bottom_x-large">
+                                            <img
+                                            src={providerNotificationIcon}
+                                            alt={customLabels.sspChildcareSuspendedHelp}
+                                            />
+                                            <span class="slds-m-left_xx-small">{data.SuspendText}</span>
+                                            <lightning-helptext 
+                                                class="ssp-helptextIcon ssp-child-care-custom-icon"
+                                                icon-name="utility:info_alt" 
+                                                content={customLabels.sspChildcareSuspendedHelp}>
+                                            </lightning-helptext>
+                                        </p>
+                                    </template>
+                                    <template if:true={data.OnGoingProcessList}>
+                                        <table class="ssp-fontFamily_ArvoRegular ssp-color_blueAlpha ssp-nextAccordionList slds-m-bottom_medium">
+                                            <tr>
+                                                <th>
+                                                    <p>
+                                                        <span class="ssp-fontFamily_popinBold ssp-color_monoBody"> {customLabels.sspChildCareOngoing} </span>
+                                                        <br />
+                                                    </p>
+                                                </th>
+                                            </tr>
+                                            <template for:each={data.OnGoingProcessList} for:item="OnGoingProcess" for:index="index">
+                                                <tr key={OnGoingProcess.index}>
+                                                    <td><span class="ssp-anchor">{OnGoingProcess.ProcessType}</span></td>
+                                                </tr>
+                                            </template>
+                                        </table>
+                                    </template>
+                                    <template if:false={data.InspectionHistoryList}>
+                                        <p class="ssp-fontFamily_popinBold ssp-color_monoBody"> {customLabels.sspChildcareNoInfo}
+                                        </p>
+                                    </template>
+                                    <template if:true={data.InspectionHistoryList}>
+                                        <span class="ssp-color_monoBody ssp-fontFamily_popinBold">{customLabels.sspChildCareInspectionHistory}</span>
+                                            <template for:each={data.InspectionHistoryList} for:item="InspectionHistory" for:index="index">
+                                                <div  key={InspectionHistory.InspectionId} class="slds-grid slds-wrap ssp-inspection-table slds-grid--vertical-align-end ssp-child-care-margin-top ssp-child-care-margin-bottom">
+                                                   <div class ="slds-small-size_12-of-12 slds-large-size_1-of-4 slds-medium-size_12-of-12 slds-size_1-of-1">
+                                                        <span class="ssp-color_monoBody">
+                                                            <a tabindex="0" data-document-name={InspectionHistory.ReportName}
+                                                                data-document-type="Inspection"
+                                                                data-inspection-id={InspectionHistory.InspectionId}
+                                                                data-plan-of-correction-id={InspectionHistory.PlanOfCorrectionID}
+                                                                data-source={InspectionHistory.Source} onclick={handleDocumentDownload}
+                                                                onkeydown={handleDocumentDownload} class="ssp-color_blueAlpha ssp-fontFamily_popinRegular ssp-anchor"
+                                                                title={customLabels.sspViewdocAlt}>{InspectionHistory.InspectionType}</a>
+                                                        </span>
+                                                    </div>
+                                                    <div class ="slds-small-size_12-of-12 slds-large-size_1-of-4 slds-medium-size_12-of-12 slds-size_1-of-1">
+                                                        <span class="ssp-color_monoBody ssp-fontFamily_popinBold">{customLabels.sspChildCareStart}:</span> <br/>
+                                                        <span class="ssp-color_monoBody">{InspectionHistory.FormatedStartDate}</span>
+                                                    </div>
+                                                    <div class ="slds-small-size_12-of-12 slds-large-size_1-of-4 slds-medium-size_12-of-12 slds-size_1-of-1">
+                                                        <span class="ssp-color_monoBody ssp-fontFamily_popinBold">{customLabels.sspChildCareEnd}:</span> <br />
+                                                        <span class="ssp-color_monoBody">{InspectionHistory.FormatedEndDate}</span>
+                                                    </div>
+                                                 <template if:true= {InspectionHistory.PlanOfCorrectionID}>
+                                                    <div class ="slds-small-size_12-of-12 slds-large-size_1-of-4 slds-medium-size_12-of-12 slds-size_1-of-1">
+                                                        <span class="ssp-color_monoBody">
+                                                            <a tabindex="0" data-document-name={InspectionHistory.ReportName}
+                                                            data-document-type="Planofcorrection"
+                                                            data-inspection-id={InspectionHistory.InspectionId}
+                                                            data-plan-of-correction-id={InspectionHistory.PlanOfCorrectionID}
+                                                            data-source={InspectionHistory.Source} onclick={handleDocumentDownload}
+                                                            onkeydown={handleDocumentDownload} class="ssp-color_blueAlpha ssp-fontFamily_popinRegular ssp-anchor"
+                                                            title={customLabels.sspViewdocAlt}>{InspectionHistory.PlanOfCorrectionText}</a></span>
+                                                        </div>
+                                                 </template>
+                                                </div>
+                                                <ul key={InspectionHistory.index}>
+                                                    <li class ="ssp-cloumns_4">
+                                                        <hr key={InspectionHistory.ReportName} class="ssp-horizontal-rule ssp-bg_monoAlpha ssp-child-care-provider-line"></hr>
+                                                    </li>
+                                                </ul>
+                                            </template>
+                                    </template>
+                                    <br/>
+                                </div>
+                            </c-ssp-accordion-card>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+    <div>
+        <template if:true= {FavoriteDetails}>
+          <c-ssp-child-care-favorites
+          onbacktosearchprovider={handleBackToSearchProvider}
+          >
+          </c-ssp-child-care-favorites>
+        </template>
+        <template if:true={showModalWindow}>
+            <c-ssp-detailed-information-modal
+                open-model={showModalWindow}
+                header-value={modalHeader}
+                onclosemodal={handleCloseModal}
+            >
+                <span slot="contentSlot">
+                    <lightning-formatted-rich-text value={modalBody}>
+                    </lightning-formatted-rich-text>
+                </span>
+                <span slot="Footer">{modalFooter}</span>
+            </c-ssp-detailed-information-modal>
+        </template>
+      </div>
+</template>

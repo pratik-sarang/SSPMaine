@@ -1,0 +1,232 @@
+<!-- 
+* name 		      : sspIncomeSummary
+* @description 	  : This screen will show the existing incomes and the incomes which are added by the user for the member.
+* @author 		  : Yathansh Sharma
+* @date           : 11/12/2019
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* Yathansh Sharma               11/12/2019                         Developed	      
+-->
+<template>
+  <!--This component is the modal which will popup upon reaching the screen.-->
+  <template if:true={showAddIncomeModal}>
+    <c-ssp-Adding-Income> </c-ssp-Adding-Income>
+  </template>
+  <c-ssp-spinner if:true={showSpinner}></c-ssp-spinner>
+  <!--The income details screen, which will be rendered upon clicking the add income, start or edit button.-->
+  <template if:true={showIncomeDetails}>
+    <c-ssp-income-details
+      s-id={incomeUpdateId}
+      mode-income={incomeDetailMode}
+      onincomesuccess={completeAddIncome}
+      income-name={incomeName}
+      ssp-member-id={sspMemberId}
+      member-name={memberName}
+      ssp-application-id={sspApplicationId}
+    ></c-ssp-income-details>
+  </template>
+
+  <!--The actual component which shows the list of income for the member.-->
+  <!-- CD2 2.5 Security Role Matrix. -->
+  <template if:true={isPageAccessible}>
+    <template if:false={showIncomeDetails}>
+      <div class="ssp-bodyContainer">
+        <p
+          class="ssp-fontFamily_ArvoRegular ssp-color_monoOmega ssp-info_fontSize slds-p-top_x-large"
+          aria-live="polite"
+        >
+          {label.sspIncomeSummarySubText}
+        </p>
+        <div
+          class="slds-p-top_medium slds-p-bottom_large sspIncomeSubsidiesSection"
+        >
+          <a
+            tabindex="0"
+            role="button"
+            href="javascript:void(0)"
+            title={label.learnMoreIncomeTitleText}
+            class="ssp-fontFamily_popinBold ssp-selectionCardIconText ssp-learnMore"
+            onclick={openLearnMoreModal}
+            onkeydown={openLearnMoreModal}
+            >{label.sspLearnMoreLink}</a
+          >
+        </div>
+      </div>
+      <template if:true={hasIncomes}>
+        <div class="ssp-bg_monoSigma ">
+          <div class="ssp-existingSection slds-p-vertical_large">
+            <p
+              class="ssp-fontFamily_ArvoRegular ssp-color_monoOmega ssp-info_fontSize slds-p-bottom_large ssp-break-word"
+            >
+              {label.sspExistingIncomeInfo1} {memberName}
+              {label.sspExistingIncomeInfo2}
+            </p>
+            <template for:each={incomeList} for:item="income">
+              <div key={income.Id} class="slds-p-bottom_medium">
+                <c-ssp-selection-card-without-remove-icon
+                  class="ssp-withoutIconCard"
+                  hide-buttons={trueValue}
+                >
+                                    <span
+                                        slot="cardContent"
+                                        class="ssp-fontFamily_popinBold"
+                                    >
+                                        <p
+                                            class="ssp-color_monoBody ssp-wordBreak"
+                                        >
+                      {income.lineOne}
+                    </p>
+                                        <p
+                                            class="ssp-color_blueAlpha ssp-wordBreak"
+                                        >
+                      {income.lineTwo}<span
+                        class="ssp-color_blueAlpha"
+                        if:true={income.lineThree}
+                      >
+                        {income.lineThree}
+                      </span>
+                    </p>
+                  </span>
+                </c-ssp-selection-card-without-remove-icon>
+              </div>
+            </template>
+          </div>
+        </div>
+      </template>
+      <div class="ssp-bodyContainer">
+        <div class="slds-m-vertical_x-large ssp-add-income-btn">
+          <!-- CD2 2.5 Security Role Matrix. -->
+          <lightning-button
+            class="ssp-button_brand"
+            variant="brand"
+            onclick={addIncomeFlow}
+            label={label.sspAddIncome}
+            title={label.sspAddIncomeAlt}
+            if:true={isIncomeNewAdd}
+          ></lightning-button>
+          <lightning-button
+            disabled
+            variant="brand"
+            class="ssp-button_brand"
+            label={label.sspAddIncome}
+            title={label.sspAddIncomeAlt}
+            if:false={isIncomeNewAddDefault}
+          ></lightning-button>
+        </div>
+        <!-- For looping list created by button click -->
+        <div class="ssp-income-list">
+          <template for:each={incomeAddList} for:item="income">
+            <template if:false={income.showStart}>
+              <div key={income.Id} class="slds-p-bottom_medium">
+                <!-- CD2 2.5 Security Role Matrix. -->
+                <c-ssp-selection-card-with-remove-icon
+                  obj-card={income}
+                  onremove={handleRemoveAction}
+                  card-id={income.Id}
+                  display-edit={trueValue}
+                  oncardaction={initStartFlow}
+                  remove-modal-heading={income.modalHeaderValue}
+                  data-item-id={income.Id}
+                  data-position={income.position}
+                  data-mode="Edit"
+                  data-name={income.IncomeTypeCode__c}
+                  data-member-id={income.SSP_Member__c}
+                  remove-alt-text={label.removeIncomeAlText}
+                  button-alt-text={label.tileEditButtonAltText}
+                  class="applicationInputs"
+                  show-trash-icon={isTrashIconVisible}
+                  can-delete={canDeleteIncome}
+                  disabled={disableIncomeDetails}
+                  delete-button-title={label.sspDeleteIncomeTitle}
+                  cancel-button-title={label.sspCancelGoToIncomeSummary}
+                  is-view-button-visible={isReadOnlyDetails}
+                  view-button-alt-text={label.sspTileViewButtonAltText}
+                >
+                                    <span
+                                        slot="cardContent"
+                                        class="ssp-fontFamily_popinBold"
+                                    >
+                                        <p
+                                            class="ssp-color_monoBody ssp-wordBreak"
+                                        >
+                      {income.lineOne}
+                    </p>
+                                        <p
+                                            class="ssp-color_blueAlpha ssp-wordBreak"
+                                        >
+                      {income.lineTwo}<span
+                        class="ssp-color_blueAlpha"
+                        if:true={income.lineThree}
+                      >
+                        {income.lineThree}
+                      </span>
+                    </p>
+                  </span>
+                </c-ssp-selection-card-with-remove-icon>
+              </div>
+            </template>
+            <template if:true={income.showStart}>
+              <div key={income.Id} class="slds-p-bottom_medium">
+                <!-- CD2 2.5 Security Role Matrix. -->
+                <c-ssp-selection-card-with-remove-icon
+                  obj-card={income}
+                  onremove={handleRemoveAction}
+                  card-id={income.Id}
+                  display-edit={falseValue}
+                  oncardaction={initStartFlow}
+                  remove-modal-heading={income.modalHeaderValue}
+                  data-item-id={income.Id}
+                  data-position={income.position}
+                  data-mode="Start"
+                  data-name={income.IncomeTypeCode__c}
+                  data-member-id={income.SSP_Member__c}
+                  remove-alt-text={label.removeIncomeAlText}
+                  button-alt-text={label.tileStartButtonAltText}
+                  class="applicationInputs"
+                  show-trash-icon={isTrashIconVisible}
+                  can-delete={canDeleteIncome}
+                  disabled={disableIncomeDetails}
+                  delete-button-title={label.sspDeleteIncomeTitle}
+                  cancel-button-title={label.sspCancelGoToIncomeSummary}
+                  is-view-button-visible={isReadOnlyDetails}
+                  view-button-alt-text={label.sspTileViewButtonAltText}
+                >
+                  <span slot="cardContent" class="ssp-fontFamily_popinBold">
+                    <p class="ssp-color_monoBody ssp-word-break-all">
+                      {income.lineOne}
+                    </p>
+                  </span>
+                </c-ssp-selection-card-with-remove-icon>
+              </div>
+            </template>
+          </template>
+        </div>
+      </div>
+    </template>
+  </template>
+  <c-ssp-toast
+    if:true={showIncompleteIncomeError}
+    ssp-toast-title-val={label.sspIncomeSummaryError}
+    onhidetoast={handleHideToast}
+    show-error-toast={showIncompleteIncomeError}
+  >
+  </c-ssp-toast>
+  <template if:true={isLearnMoreModal}>
+    <c-ssp-detailed-information-modal
+      reference={reference}
+      header-value={label.sspIncomeSummary}
+      open-model={isLearnMoreModal}
+      onclosemodal={closeLearnMoreModal}
+    >
+      <p
+        slot="contentSlot"
+        class="ssp-learnMoreModal ssp-fontFamily_ArvoRegular"
+      ></p>
+    </c-ssp-detailed-information-modal>
+  </template>
+  <!-- CD2 2.5 Security Role Matrix. -->
+  <template if:true={showAccessDeniedComponent}>
+    <c-ssp-access-denied></c-ssp-access-denied>
+  </template>
+</template>

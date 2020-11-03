@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Program__c</fullName>
+    <description>Contains program</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Contains program</inlineHelpText>
+    <label>Program</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>MA</fullName>
+                <default>true</default>
+                <label>Medicaid/KCHIP</label>
+            </value>
+            <value>
+                <fullName>KT</fullName>
+                <default>false</default>
+                <label>KTAP (Cash Assistance)</label>
+            </value>
+            <value>
+                <fullName>SN</fullName>
+                <default>false</default>
+                <label>SNAP (Food Assistance)</label>
+            </value>
+            <value>
+                <fullName>SS</fullName>
+                <default>false</default>
+                <label>State Supplementation</label>
+            </value>
+            <value>
+                <fullName>DS</fullName>
+                <default>false</default>
+                <label>DSNAP</label>
+            </value>
+            <value>
+                <fullName>CC</fullName>
+                <default>false</default>
+                <label>Child Care Assistance</label>
+            </value>
+            <value>
+                <fullName>KP</fullName>
+                <default>false</default>
+                <label>KI-HIPP (Health Insurance Premium Payments)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

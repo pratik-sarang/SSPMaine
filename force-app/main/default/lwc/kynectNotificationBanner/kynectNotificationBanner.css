@@ -1,0 +1,27 @@
+.kynect-notification-banner {
+    min-height: 65px;
+    color: #fff;
+    border-radius: 100px;
+    opacity: 1;
+    transition: opacity 0.6s;
+    font-size: 20px;
+    line-height: 27px;
+    text-align: -webkit-auto;
+    margin: 0 3rem;
+}
+
+.kynect-text {
+    margin-left: 4%;
+    float: left;
+}
+
+.kynect-link {
+    margin-right: 12%;
+    float: right;
+}
+
+@media only screen and (max-width: 768px) {
+    .kynect-notification-banner {
+        margin: 0 2rem;
+    }
+}

@@ -1,0 +1,73 @@
+<!--
+* name 		        : sspOpenDropDown
+* @description 	  : Custom Drop down implementation
+* @author 		    : Fazeel Ahmed & Shikha
+* @date 		      : 02/18/2020
+* MODIFICATION LOG:
+* DEVELOPER           DATE                DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* Fazeel              18/02/2020          Front end completed.
+* Shikha              17/02/2020          Back end mapping completed.
+-->
+<template>
+  <template if:true={retExp1}>
+    <div class="ssp-borderWrap">
+      <div class="ssp-bodyContainer ssp-pos_relative">
+        <div class="ssp-menuItemDropDown">
+          <div tabindex="0" aria-label={selectedLabel} class="ssp-menuItemDropDownBtn slds-grid slds-grid_vertical-align-center ssp-dropDownTitle ssp-pointerCursor" onblur={closeDropDown} onkeydown={handleKeyPress} onclick={toggleDropDown}>
+            <div class="ssp-menuItemDropDownHeader">
+              <p class="ssp-fontFamily_popinBold ssp-color_monoBody">
+                {selectedLabel}
+              </p>
+            </div>
+            <div class="ssp-menuItemDropDownIcon"></div>
+          </div>
+        </div>
+        <div
+          class="ssp-menuItemDropDownContent ssp-boxShadow slds-grid slds-wrap"
+        >
+          <template for:each={pageOptionsValue} for:item="choice">
+            <template key={choice.key} if:true={retExp2}>
+              <a
+                tabindex="0"
+                class="ssp-menuItemDropDownOptions ssp-fontFamily_popinRegular ssp-color_monoBody ssp-inProgress"
+                key={choice.key}
+                data-id={choice.value}
+                data-label={choice.key}
+                onmousedown={handleSelectedValue}
+                onkeydown={handleSelectedValue}
+              >
+                {choice.key}</a
+              >
+            </template>
+            <template key={choice.key} if:true={retExp3}>
+              <a
+                tabindex="0"
+                class="ssp-menuItemDropDownOptions ssp-fontFamily_popinRegular ssp-color_monoBody ssp-progressChecked"
+                key={choice.key}
+                data-id={choice.value}
+                data-label={choice.key}
+                onmousedown={handleSelectedValue}
+                onkeydown={handleSelectedValue}
+                >{choice.key}
+              </a>
+            </template>
+            <template key={choice.key} if:true={retExp4}>
+              <a
+                tabindex="0"
+                class="ssp-menuItemDropDownOptions ssp-fontFamily_popinRegular ssp-color_monoBody ssp-lockedProgress"
+                key={choice.key}
+                data-id={choice.value}
+                data-label={choice.key}
+                onmousedown={handleSelectedValue}
+                onkeydown={handleSelectedValue}
+              >
+                {choice.key}
+              </a>
+            </template>
+          </template>
+        </div>
+      </div>
+    </div>
+  </template>
+</template>

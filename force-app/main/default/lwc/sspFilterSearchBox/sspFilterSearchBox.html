@@ -1,0 +1,91 @@
+<!--
+* name          : sspSearchBox.
+* @description  : This is component is used to filter search data in message Center.
+* @author       : Sharon and Chirag
+* @date         : 07/01/2020
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName                MM/DD/YYYY               A Brief Description about the Change
+  Sharon                    30/04/2020                          Initial Version
+  Chirag                    7/1/2020                            Initial Version
+-->
+<template>
+    <div class="ssp-filterSearchBox">
+        <div class="ssp-searchBox-outer">
+            <div class="slds-grid slds-wrap">
+                <lightning-input
+                    class="ssp-searchBox-child"
+                    placeholder={customLabel.sspMessageCenterSearch}
+                    name="sspSearch"
+                    type="search"
+                    onkeypress={handleKeyUp}
+                    onclick={handleSearchInput}
+                    onchange={handleSearchInput}
+                    onblur={handleTag}
+                    autocomplete="off"
+                    value={searchValue}
+                ></lightning-input>
+                <div
+                    if:true={showBackIcon}
+                    class="ssp-chevronleft-icon ssp-filterSeachChevron ssp-bg_whiteAlpha"
+                >
+                    <lightning-icon
+                        icon-name="utility:chevronleft"
+                        onclick={emptySearchField}
+                        onmousedown={emptySearchField}
+                        size="xx-small"
+                    ></lightning-icon>
+                </div>
+                <div
+                    if:true={showBackIcon}
+                    class="ssp-close-icon ssp-filterSeachClose ssp-bg_whiteAlpha"
+                >
+                    <lightning-icon
+                        icon-name="utility:close"
+                        onclick={emptySearchField}
+                        onmousedown={emptySearchField}
+                        size="xx-small"
+                    ></lightning-icon>
+                </div>
+            </div>
+            
+        </div>
+        <template if:true={showAutocomplete}>
+                <div>
+                    <ul class="ssp-lookup-option-container">
+                        <li
+                            class="ssp-typeahead-items"
+                            onmousedown={handleToDo}
+                        >
+                            <img
+                                class="ssp-tag-image"
+                                src={iconUrlToDo}
+                                alt="icon"
+                            />
+                            <p
+                                class="ssp-color_monoOmega ssp-bg_monoAlpha ssp-message-center-table-tag ssp-fontFamily_popinBold"
+                            >
+                                {customLabel.sspMessageCenterToDos}
+                            </p>
+                        </li>
+                        <li
+                            class="ssp-typeahead-items"
+                            onmousedown={handleAnnouncement}
+                        >
+                            <img
+                                class="ssp-tag-image"
+                                src={iconUrlAnnouncement}
+                                alt="icon"
+                            />
+                            <p
+                                class="ssp-color_monoOmega ssp-bg_monoAlpha ssp-message-center-table-tag ssp-fontFamily_popinBold"
+                            >
+                                {customLabel.sspMessageCenterAnnouncements}
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </template>
+    </div>
+</template>

@@ -1,0 +1,148 @@
+<!--
+* name          :sspGetStartedOntheShortSNAPApplication.
+* @description  : This is a Generic modal called the General Information Modal.
+* @author       : Chirag,Sharon, Shivam
+* @date         : 4/16/2020
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName                MM/DD/YYYY               A Brief Description about the Change
+-->
+
+
+<template>
+    <main class="ssp-getStartedSnapApp">
+        <div
+            class="ssp-getStartedSnapAppBanner ssp-getStartedSnapAppBgOverlay"
+        >
+            <div class="slds-p-horizontal_xx-large ssp-mobileHorizontalPaddingHeading">
+                <div class="ssp-container_width slds-grid slds-wrap">
+                    <div
+                        class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-large-size_4-of-12"
+                    >
+                        <h1
+                            class="ssp-getStartedSnapAppText ssp-fontFamily_popinBold  ssp-color_monoBody"
+                        >
+                            {label.sspSNAPGetStartedHeading}
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div
+            class="slds-p-horizontal_xx-large ssp-mobileHorizontalPaddingHeading"
+        >
+            <div class="ssp-container_width slds-grid slds-wrap">
+                <div class="slds-col slds-size_1-of-1 slds-large-size_9-of-12 ssp-getStartedSnapAppContentContainer">
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-col slds-size_1-of-1 slds-large-size_4-of-12 ssp-getStartedSnapAppContent slds-medium-size_4-of-12 ssp-marginBottomThirty">
+                            <div class="ssp-getStartedAppSubContainer">
+                                <div
+                                    class="ssp-fontFamily_popinBold ssp-color_blueAlpha ssp-displayInlineBlock ssp-getSNAPNum"
+                                >
+                                    <span>{label.sspSignaturePageTermOne}</span>
+                                </div>
+                                <div class="ssp-displayInlineBlock">
+                                    <p
+                                        class="slds-col ssp-paddingLeftFifteen ssp-fontFamily_popinBold ssp-color_monoBody ssp-getSNAPContentTitle"
+                                    >
+                                        {label.sspSNAPGetStartedCompleteHeading}
+                                    </p>
+                                    <p
+                                        class="slds-col ssp-paddingLeftFifteen ssp-color_monoOmega ssp-getSNAPSubContent ssp-fontFamily_ArvoRegular ssp-color_monoOmega"
+                                    >
+                                        {label.sspSNAPGetStartedCompleteContent}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slds-col slds-size_1-of-1 slds-large-size_4-of-12 ssp-getStartedSnapAppContent slds-medium-size_4-of-12 ssp-marginBottomThirty">
+                            <div class="ssp-getStartedAppSubContainer">
+                                <div
+                                    class="ssp-fontFamily_popinBold ssp-color_blueAlpha ssp-displayInlineBlock ssp-getSNAPNum"
+                                >
+                                    <span>{label.sspSignaturePageTermTwo}</span>
+                                </div>
+                                <div class="ssp-displayInlineBlock">
+                                    <p
+                                        class="slds-col ssp-paddingLeftFifteen ssp-fontFamily_popinBold ssp-color_monoBody ssp-getSNAPContentTitle"
+                                    >
+                                        {label.sspSNAPGetStartedScheduleInterview}
+                                    </p>
+                                    <p
+                                        class="slds-col ssp-paddingLeftFifteen ssp-color_monoOmega ssp-getSNAPSubContent ssp-fontFamily_ArvoRegular ssp-color_monoOmega"
+                                    >
+                                        {label.sspStartSNAPGetStartedScheduleContent}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slds-col slds-size_1-of-1 slds-large-size_4-of-12 ssp-getStartedSnapAppContent slds-medium-size_4-of-12">
+                            <div class="ssp-getStartedAppSubContainer">
+                                <div
+                                    class="ssp-fontFamily_popinBold ssp-color_blueAlpha ssp-displayInlineBlock ssp-getSNAPNum"
+                                >
+                                    <span>{label.sspSignaturePageTermThree}</span>
+                                </div>
+                                <div class="ssp-displayInlineBlock">
+                                    <p
+                                        class="slds-col ssp-paddingLeftFifteen ssp-fontFamily_popinBold ssp-color_monoBody ssp-getSNAPContentTitle"
+                                    >
+                                    {label.sspSNAPGetStartedPrepareHeading}
+                                    </p>
+                                    <p
+                                        class="slds-col ssp-paddingLeftFifteen ssp-color_monoOmega ssp-getSNAPSubContent ssp-fontFamily_ArvoRegular ssp-color_monoOmega"
+                                    >
+                                        {label.sspSNAPGetStartedPrepareContent}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_1-of-1 ssp-getStartedSnapAppWarningContainer">
+                    <c-ssp-warning-notice-card class="slds-p-bottom_medium">
+                        <p>{label.sspSNAPGetStartedWarning}</p>
+                    </c-ssp-warning-notice-card>
+                </div>
+            </div>
+        </div>
+        <div class="ssp-PaddingButtonContainer">
+            <div class="slds-grid slds-wrap slds-size_1-of-1 ssp-container_width">
+                <!-- <div class="slds-large-size_2-of-7 slds-size_1-of-1 ssp-captchaParent">
+                    <iframe src={vFPage} id="recaptchaIframe" title="frame" class="iframe-captcha ssp-getBenefitCaptcha" scrolling="no" width="100%" height="90px" ></iframe>
+                </div>  -->
+            </div>
+            <div class="ssp-container_width slds-grid slds-wrap ssp-getStartSNAPButtonContiner slds-grid_align-spread">
+                <div
+                    class="slds-col slds-size_1-of-1  slds-medium-size_2-of-12 ssp-footerBtnBackSave slds-large-size_2-of-12 ssp-paddingMobileThirty"
+                >
+                    <lightning-button
+                        name="Exit"
+                        variant="base"
+                        label={label.sspSNAPGetStartedExitButton}
+                        class="ssp-exitModalBtn ssp-button_base ssp-getStartBenefitsButton"
+                        title={label.sspSNAPGetStartedExitAlt}
+                        onclick={handleExit}
+                    ></lightning-button>
+                </div>
+                <div class="slds-large-size_6-of-12 slds-size_1-of-1 ssp-captchaParent ssp-paddingMobileThirtyCaptcha">
+                    <iframe src={vFPage} id="recaptchaIframe" title="frame" class="iframe-captcha ssp-getBenefitCaptcha" scrolling="no" width="100%" height="90px" ></iframe>
+                </div> 
+                <div
+                    class="slds-col slds-size_1-of-1 slds-medium-size_4-of-12 slds-large-size_4-of-12 ssp-footerBtnNext slds-text-align_right ssp-paddingMobileThirty"
+                >
+                    <lightning-button
+                        name="Start"
+                        variant="neutral"
+                        label={label.sspSNAPGetStartedStartButton}
+                        disabled={isButtonDisabled}
+                        class="ssp-button_neutral ssp-exitModalBtn ssp-getStartBenefitsButton ssp-getStartBenefitsNeutralButton"
+                        onclick={HandleGetStarted}
+                        title={label.sspSNAPGetStartedStartAlt}
+                    ></lightning-button>
+                </div>
+            </div>
+        </div>
+    </main>
+</template>

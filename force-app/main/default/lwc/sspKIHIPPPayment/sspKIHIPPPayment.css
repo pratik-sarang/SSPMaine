@@ -1,0 +1,122 @@
+.ssp-marginTopFifteen {
+    margin-top: 0.9375rem;
+}
+
+.ssp-marginBottomThirty {
+    margin-bottom: 1.875rem;
+}
+
+.ssp-marginTopThirty {
+    margin-top: 1.875rem;
+}
+
+.ssp-preferredPaymentMainContainer {
+    margin-bottom: 60px;
+}
+
+.ssp-preferredPaymentLearnText {
+    font-size: 0.8125rem;
+    margin-top: 0.3125rem;
+    letter-spacing: -0.3px;
+    line-height: 1.875rem;
+    text-decoration: underline;
+    text-underline-position: under;
+}
+
+.ssp-preferredPaymentHr {
+    height: 0.3125rem;
+    border-radius: 2.5px;
+}
+
+.ssp-preferredPaymentIndividualContent {
+    margin: 1.875rem auto;
+}
+
+.ssp-preferredPaymentpolicyHolderText {
+    line-height: 1.875rem;
+    letter-spacing: 0.3px;
+}
+
+.ssp-preferredPaymentDesc {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: -0.3px;
+    text-align: left;
+    margin: 1.875rem 0;
+}
+
+.ssp-preferredPaymentPolicyText,
+.ssp-preferredPaymentAddressText {
+    font-size: 1rem;
+}
+
+.ssp-preferredPaymentError {
+    font-size: 0.75rem;
+}
+
+.ssp-headerText {
+    font-size: 2.625rem;
+    letter-spacing: 0;
+    line-height: 3rem;
+    margin-top: 60px;
+}
+
+.ssp-waiverResultsBtn {
+    margin-top: 6.25rem;
+}
+
+.ssp-actionButtonsContainer {
+    margin-top: 6.25rem;
+    margin-bottom: 3.75rem;
+}
+
+.ssp-actionButtons .ssp-cancelButton {
+    margin-top: 1.563rem;
+}
+
+.ssp-actionButtons .slds-button {
+    height: 3.75rem;
+}
+
+.ssp-actionButtons {
+    display: flex;
+    flex-flow: column-reverse wrap;
+}
+@media only screen and (max-width: 768px) {
+    .ssp-footerBtnNext {
+        margin-bottom: 30px;
+    }
+    .ssp-checkAccountNumber {
+        margin-left: 0;
+    }
+    .ssp-preferredRoutingNumber{
+        margin-right: 15px;
+    }
+
+    .ssp-headerText {
+        font-size: 1.5rem;
+        letter-spacing: 0;
+        line-height: 2rem;
+        font-weight: 900;
+        margin-top: 30px;
+    }
+    .ssp-preferredPaymentMainContainer .ssp-gutter-left,
+    .ssp-preferredPaymentMainContainer .ssp-gutter-right {
+        padding: 0;
+    }
+}
+@media only screen and (min-width: 769px) {
+     .ssp-actionButtonsContainer {
+        margin-bottom: 6.25rem;
+    }
+     .ssp-actionButtons {
+        flex-flow: row;
+    }
+     .ssp-screenFooterNextBtn {
+        margin-left: auto;
+        order: 2;
+    }
+     .ssp-actionButtons .ssp-cancelButton {
+        margin-top: 0;
+    }
+}

@@ -1,0 +1,14 @@
+:host {
+    /** make the host DOM to disappear to apply correct SLDS styles. **/ 
+    display: contents;
+}
+
+.dd-form-element.slds-form-element_stacked {
+    padding : 0px;
+}
+
+.dd-form-element .slds-form-element__label {
+    width: 85%;
+    word-break: break-word;
+    font-size: 13px;
+}

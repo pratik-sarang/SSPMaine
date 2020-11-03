@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Adoption Subsidy Payments</masterLabel>
+        <translation>Pagos de subsidio para adopción</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Alimony/Spousal Support</masterLabel>
+        <translation>Pensión para ex cónyuge</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Americorp</masterLabel>
+        <translation>Americorp</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Annuity Payments</masterLabel>
+        <translation>Pagos de anualidades</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Black Lung</masterLabel>
+        <translation>Pulmón negro</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Capital Gains</masterLabel>
+        <translation>Aumentos de capital</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Child Support</masterLabel>
+        <translation>Manutención infantil</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Clinical</masterLabel>
+        <translation>Clínica</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Contributions</masterLabel>
+        <translation>Contribuciones</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Dividends</masterLabel>
+        <translation>Dividendos</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Foster Care Income</masterLabel>
+        <translation>Ingreso de cuidados de crianza</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Friend or Family Contribution</masterLabel>
+        <translation>Contribución de amigo o familia</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>IRA Distribution (Traditional)</masterLabel>
+        <translation>Distribución de IRA (tradicional)</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>In-Kind Income</masterLabel>
+        <translation>Ingreso en especie</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Income Supplementation (Bureau of Rehabilitation Services)</masterLabel>
+        <translation>Ingreso suplementario (Oficina de Servicios de Rehabilitación)</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Indemnity Policy</masterLabel>
+        <translation>Póliza para indemnizaciones</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Insurance Settlement Payments</masterLabel>
+        <translation>Pagos por acuerdos de seguros</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Interest</masterLabel>
+        <translation>Intereses</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Internship</masterLabel>
+        <translation>Pasantía</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Job Training</masterLabel>
+        <translation>Capacitación laboral</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>LTC Insurance Payments - Individual</masterLabel>
+        <translation>Pagos de seguro de cuidados a largo plazo - Individual</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>LTC Insurance Payments - Vendor</masterLabel>
+        <translation>Pagos de seguro de cuidados a largo plazo - Proveedor</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Loans</masterLabel>
+        <translation>Préstamos</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Lottery Payments</masterLabel>
+        <translation>Pagos por lotería</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Military Retirement</masterLabel>
+        <translation>Jubilación militar</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Mineral Rights/Royalties</masterLabel>
+        <translation>Derechos mineros/Regalías</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Other</masterLabel>
+        <translation>Otro</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Out of State TANF</masterLabel>
+        <translation>TANF (Ayuda Temporal para Familias Necesitadas) de fuera del estado</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Pension/Retirement Payments</masterLabel>
+        <translation>Pagos por pensión/jubilación</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Practicum</masterLabel>
+        <translation>Jubilación para trabajadores ferroviarios</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>RSDI Income</masterLabel>
+        <translation>Ingreso por Seguro para Jubilación, Supervivencia y Discapacidad (RSDI)</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Railroad Retirement</masterLabel>
+        <translation>Jubilación para trabajadores ferroviarios</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Reverse Mortgage Payments</masterLabel>
+        <translation>Pagos por hipoteca revertida</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>SSI Income</masterLabel>
+        <translation>Ingreso por Seguridad de Ingreso Suplementario (SSI)</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Student Teaching</masterLabel>
+        <translation>Enseñanza práctica</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Trust Income</masterLabel>
+        <translation>Ingreso por fideicomiso</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>U.S. Refugee Program</masterLabel>
+        <translation>Programa de refugiados de EE. UU.</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Unemployment Insurance Benefits</masterLabel>
+        <translation>Beneficios de seguro por desempleo</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>VA Aid &amp; Attendance</masterLabel>
+        <translation>Ayuda y Asistencia de VA (Asuntos para Veteranos)</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>VA Compensation</masterLabel>
+        <translation>Indemnización de VA (Asuntos para Veteranos)</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>VA Pension</masterLabel>
+        <translation>Pensión de Asuntos para Veteranos (VA)</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>VA Unreimbursed Medical Expenses</masterLabel>
+        <translation>Gastos médicos no reembolsados de VA (Asuntos para Veteranos)</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Wilson Fish</masterLabel>
+        <translation>Wilson Fish</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Worker&apos;s Compensation</masterLabel>
+        <translation>Indemnización laboral</translation>
+    </valueTranslation>
+</GlobalValueSetTranslation>

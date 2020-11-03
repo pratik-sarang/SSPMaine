@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Archetype__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>This field is use to link Goal with multiple Archetype</description>
+    <externalId>false</externalId>
+    <label>Archetype</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>RE_Archetype__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Sub-Archetype</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>RE_Archetype__c</referenceTo>
+    <relationshipLabel>Config</relationshipLabel>
+    <relationshipName>Config</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,100 @@
+.ssp-ProgressCardContainer {
+    position: relative;
+}
+
+.ssp-ProgressCard {
+    width: 95%;
+    border-radius: 6px;
+}
+
+.ssp-progressCardHead {
+    width: 100%;
+    padding: 15px 30px 15px 30px;
+    border-top-right-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.ssp-progresCardText {
+    height: 18px;
+    font-size: 13px;
+    letter-spacing: -0.24px;
+    line-height: 18px;
+}
+
+.ssp-progressCardCloseIcon {
+    width: 5%;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    background: none;
+    margin: auto;
+    text-align: center;
+    bottom: 50%;
+}
+
+.progresSelectionCardIconSize {
+    height: 24px;
+    width: 24px;
+}
+
+.ssp-trashIcon {
+    height: 24px;
+    width: 24px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+    .ssp-cardContentContainer {
+        width: 85%;
+        padding-left: 7px;
+    }
+    .ssp-progressCardHead {
+        padding: 16px 12px;
+    }
+    .ssp-ProgressCard {
+        width: 92%;
+        border-radius: 6px;
+    }
+    .ssp-progressCardCloseIcon {
+        width: 8%;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        background: none;
+        margin: auto;
+        text-align: center;
+        bottom: 50%;
+    }
+    .ssp-leftContent {
+        width: 66%;
+    }
+
+    .ssp-trashIcon {
+        height: 20px;
+        width: 20px;
+        cursor: pointer;
+    }
+}
+
+@media only screen and (max-width: 374px) {
+    .ssp-cardContentContainer {
+        width: 76%;
+    }
+    .ssp-leftContent {
+        width: 62%;
+    }
+    .ssp-ProgressCard {
+        width: 91%;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    .ssp-leftContent {
+        width: 70%;
+        word-break: break-all;
+    }
+    .ssp-cardContentContainer {
+        width: 90%;
+        padding-left: 10px;
+    }
+}

@@ -1,0 +1,33 @@
+<template>
+    <template if:true={openModal}>
+        <c-ssp-detailed-information-modal
+            reference={reference}
+            open-model={openModal}
+            onclosemodal={closeModal}
+            header-value={customLabels.sspAlreadyReceivingBenefits}
+        >
+        <div slot="contentSlot" class="ssp-fontFamily_ArvoRegular ssp-color_monoOmega">
+            <p>
+                {customLabels.sspMciMatchModalInfo}
+            </p>
+        </div>
+        <div slot="Footer" class="slds-grid slds-wrap slds-size_1-of-1 ssp-stacked-btn-width">
+            <lightning-button
+            title={customLabels.sspContinue}
+            label={customLabels.sspContinue}
+            variant="brand"
+            class="ssp-button_brand slds-size_1-of-1"
+            onclick={onContinue}
+            >
+            </lightning-button>
+            <lightning-button
+            title={customLabels.sspExitApplication}
+            label={customLabels.sspExitApplication}
+            class="ssp-button_base slds-size_1-of-1 ssp-cancel-button"
+            onclick={exitApplication}
+            >
+            </lightning-button>
+        </div>
+        </c-ssp-detailed-information-modal>
+    </template>
+</template>

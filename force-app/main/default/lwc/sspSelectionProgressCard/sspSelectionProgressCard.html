@@ -1,0 +1,173 @@
+<!--
+* name          : sspSelectionProgressCard.
+* @description  : This a component which shows the status of progress in a card.
+* @author       : Kyathi.
+* @date         : 12/11/2019
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName                MM/DD/YYYY               A Brief Description about the Change
+  Chaitanya                    12/11/2019                          Initial Version
+-->
+<template>
+    <div class="ssp-ProgressCardContainer">
+        <div
+            class="ssp-ProgressCard ssp-boxShadow slds-grid slds-wrap slds-grid_align-spread slds-grid_vertical-align-center"
+        >
+            <div
+                class="ssp-bg_white ssp-progressCardHead slds-grid slds-wrap slds-grid_align-spread slds-grid_vertical-align-center"
+            >
+                <div
+                    class="slds-grid slds-wrap slds-grid_vertical-align-center slds-grid_align-spread"
+                >
+                    <div class="progresSelectionCardIconSize">
+                        <template if:false={progressChecked}>
+                            <img
+                                alt="Progress_inProgress_icon"
+                                src={inProgressIconUrl}
+                            />
+                        </template>
+                        <template if:true={progressChecked}>
+                            <img
+                                alt="Progress_inProgress_icon"
+                                src={ProgressCheckedIconUrl}
+                            />
+                        </template>
+                    </div>
+                    <div>
+                        <div
+                            class="ssp-progresCardText ssp-fontFamily_popinBold"
+                        >
+                            {titleValue}
+                            <slot name="titleValue"></slot>
+                            <slot name="subtitleValue"></slot>
+                        </div>
+                    </div>
+                </div>
+                <div if:false={isViewButtonVisible}>
+                    <template if:true={editButton}>
+                        <!-- CD2 2.5 Security Role Matrix and Program Access - Added disabled attribute -->
+                        <lightning-button
+                            variant="base"
+                            name={policyData}
+                            label={label.sspEditButton}
+                            title={editButtonAlt}
+                            aria-label={editButtonAlt}
+                            data-handle-click="edit"
+                            onclick={handleButton}
+                            class="ssp-button_base ssp-cardItemsButton"
+                            disabled={disabled}
+                        >
+                        </lightning-button>
+                    </template>
+                    <template if:true={startButton}>
+                        <!-- CD2 2.5 Security Role Matrix and Program Access - Added disabled attribute -->
+                        <lightning-button
+                            variant="neutral"
+                            label={label.sspStartButton}
+                            title={startButtonAlt}
+                            aria-label={startButtonAlt}
+                            data-handle-click="start"
+                            onclick={handleButton}
+                            class="ssp-button_neutral ssp-cardItemsButton"
+                            disabled={disabled}
+                        >
+                        </lightning-button>
+                    </template>
+                </div>
+                <template if:true={isViewButtonVisible}>
+                    <template if:true={editButton}>
+                        <!-- CD2 2.5 Security Role Matrix and Program Access - Added disabled attribute -->
+                        <lightning-button
+                            variant="base"
+                            name={policyData}
+                            label={label.sspView}
+                            title={viewButtonAltText}
+                            aria-label={editButtonAlt}
+                            data-handle-click="edit"
+                            onclick={handleButton}
+                            class="ssp-button_base ssp-cardItemsButton"
+                        >
+                        </lightning-button>
+                    </template>
+                    <template if:true={startButton}>
+                        <!-- CD2 2.5 Security Role Matrix and Program Access - Added disabled attribute -->
+                        <lightning-button
+                            variant="neutral"
+                            label={label.sspView}
+                            title={viewButtonAltText}
+                            aria-label={startButtonAlt}
+                            data-handle-click="start"
+                            onclick={handleButton}
+                            class="ssp-button_neutral ssp-cardItemsButton"
+                        >
+                        </lightning-button>
+                    </template>
+                </template>
+            </div>
+            <div
+                class="ssp-progressCardFoot ssp-color_monoOmega ssp-bg_whiteAlpha"
+            >
+                <p class="ssp-fontFamily_popinRegular">
+                    <slot name="sspAdditionalNotes"></slot>
+                </p>
+            </div>
+        </div>
+        <div>
+            <!--<lightning-button-icon
+                id="closeIconId"
+                icon-name="utility:close"
+                size="x-small"
+                onclick={displayRemoveModal}
+                aria-label={removeIconAlt}
+                alternative-text={removeIconAlt}
+                title={removeIconAlt}
+                class="ssp-progressCardCloseIcon"
+            ></lightning-button-icon>-->
+            <img if:false={hideTrash} src={removeIconUrl} alt={removeIconAlt} aria-label={removeIconAlt} onclick={displayRemoveModal} title={removeIconAlt} class="ssp-progressCardCloseIcon ssp-trashIcon"/>
+        </div>
+
+        <template if:true={showModelForExist}>
+            <c-ssp-remove-coverage-modal
+            application-id={applicationId}
+                member-id={memberId}
+            policy-data={policyData}
+                covered-ind-data={coveredIndData}
+            is-covered-ind-deletion={isCoveredIndDeletion}
+                open-model-for-exist={showModelForExist}
+                onremovemodalclose={closeRemoveModal}
+            >
+            </c-ssp-remove-coverage-modal>
+        </template>
+        <template if:false={openModelForExist}>
+            <c-ssp-detailed-information-modal
+                header-value={removeModalHeading}
+            open-model={showModel}
+            reference={reference}
+        >
+            <span slot="contentSlot">
+                <p class="slds-m-bottom_large">
+                    {label.sspRemoveModalContent}
+                </p>
+            </span>
+           <div slot="Footer" class="ssp-remove-income-modal slds-grid slds-wrap slds-grid_align-spread">
+                <lightning-button
+                    title={label.sspDelete}
+                    name={objCard}
+                    variant="brand"
+                    label={label.sspDelete}
+                    class="ssp-deleteButton ssp-button_brand slds-size--1-of-1 slds-p-bottom_medium ssp-fontFamily_popinBold "
+                    onclick={removeCard}
+                ></lightning-button>
+                <lightning-button
+                    variant="neutral"
+                    label={label.cancelButton}
+                    title={label.cancelButton}
+                    class="ssp-cancelButton ssp-button_base slds-size--1-of-1 ssp-fontFamily_popinBold"
+                    onclick={closeModal}
+                ></lightning-button>
+           </div>
+        </c-ssp-detailed-information-modal>
+        </template>
+    </div>
+</template>

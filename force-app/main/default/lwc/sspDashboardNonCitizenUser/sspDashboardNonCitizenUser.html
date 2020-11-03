@@ -1,0 +1,79 @@
+<template>
+    <template if:true={showSpinner}>
+        <c-ssp-spinner></c-ssp-spinner>
+    </template>
+    <c-ssp-logging-and-error-handling-modal
+        if:true={showErrorModal}
+        error-id={errorCode}
+        onprogressvaluechange={closeError}
+    >
+    </c-ssp-logging-and-error-handling-modal> 
+    <div class="slds-grid slds-wrap ssp-nonCitizenDashboard">
+        <div class="ssp-imgContainer">
+            <div
+                class="slds-col slds-size_1-of-1 ssp-nonCitizenDashboardContent"
+            >
+                <div class="slds-grid slds-wrap ssp-nonCitizenDashboardHeader">
+                    <div
+                        class="slds-col  slds-large-size_1-of-2 slds-size_1-of-1 ssp-roleSelection"
+                    >
+                        <c-ssp-role-selection
+                            onroleselection={handleRoleSelection}
+                        ></c-ssp-role-selection>
+                    </div>
+                    <!-- 2.5 Security Role Matrix and Program Access. Added rendering condition -->
+                    <div
+                        if:true={renderingMap.addBenefitsLink.isAccessible}
+                        class="slds-col slds-large-size_1-of-2 slds-size_1-of-1 ssp-getStartedButton"
+                    >
+                        <lightning-button
+                            label={customLabels.sspStartBenefitApplication}
+                            title={benefitButtonLabel}
+                            onclick={navigateToBenefitsScreen}
+                            variant="brand"
+                            class="ssp-button_brand ssp-startBenefitApplication"
+                        >
+                        </lightning-button>
+                    </div>
+                </div>
+                <img
+                    src={backgroundImg}
+                    class="ssp-existing-dashboard-background"
+                    alt={customLabels.sspStartBenefitApplication}
+                />
+            </div>
+            <template if:true={isRoleChosen}>
+                <div class="slds-col ssp-informationCard slds-size_1-of-1">
+                <!--Non citizen dashboard load time fix-->
+                <c-ssp-my-information-card
+                        access={access}
+                        non-citizen-user-data={nonCitizenUserData}
+                        role-visibility={roleVisibility}
+                        user-role={userRole}
+                        rendering-map={renderingMap}
+                        ontriggergetinfo={triggerGetInfo}
+                        export-data-for-my-information={dataToExportForMyInformation}
+                    ></c-ssp-my-information-card>
+                </div>
+            </template>
+        </div>
+        <template if:true={isRoleChosen}>
+            <div class="slds-col slds-size_1-of-1">
+                <template if:true={showSearchResult}>
+                    <c-ssp-client-search
+                        dashboard-search-result={searchResultData}
+                        user-role={userRole}
+                    ></c-ssp-client-search>
+                </template>
+            </div>
+        </template>
+
+        <div class="slds-col slds-size_1-of-1">
+            <c-ssp-want-to
+                link-role-visibility={linkRoleVisibility}
+                show-request-access={showRequestAccessLink}
+                is-auth-rep-role={isAuthRep}
+            ></c-ssp-want-to>
+        </div>
+    </div>
+</template>

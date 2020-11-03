@@ -1,0 +1,54 @@
+.ssp-radio-label {
+    padding: 24px 24px 24px 15px;
+    display: inline-block;
+}
+/* The container */
+.ssp-radio-container {
+    border-radius: 6px;
+    display: block;
+    position: relative;
+    padding-left: 45px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 1rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+/* Hide the browser's default radio button */
+.ssp-radio-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+/* Create a custom radio button */
+.ssp-checkmark {
+    position: absolute;
+    top: 42%;
+    left: 14px;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.ssp-checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.ssp-radio-container input:checked ~ .ssp-checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.ssp-radio-container .ssp-checkmark:after {
+    top: 3px;
+    left: 3px;
+    width: 8px;
+    height: 8px;
+    border-radius: 10rem;
+}

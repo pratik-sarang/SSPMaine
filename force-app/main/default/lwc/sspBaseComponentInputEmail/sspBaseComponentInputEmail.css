@@ -1,0 +1,9 @@
+.showError {
+  font-size: 0.75rem;
+  margin-top: 0.125rem;
+  background: transparent;
+}
+.ssp-genericInput .slds-form-element,
+.ssp-genericInput .ssp-genericRequired {
+  display: inline;
+}

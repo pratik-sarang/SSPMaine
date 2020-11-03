@@ -1,0 +1,24 @@
+.ssp-info_fontSize {
+    font-size: 1rem;
+}
+.sspCaretakerServicesForm > .ssp-toggleQuestions {
+    margin-top: 30px;
+    padding-bottom: 30px;
+}
+.sspCaretakerServicesForm .ssp-pickListQuestion {
+    margin-top: 30px;
+}
+.ssp-flex-direction-col {
+    flex-direction: column;
+}
+.ssp-inputaMarginTop {
+    margin-top: 15px;
+}
+.ssp-nameOfCaretaker {
+    margin-top: 30px;
+}
+@media only screen and (min-device-width: 769px) {
+    .ssp-baseFields {
+      width: 370px;
+    }
+  }

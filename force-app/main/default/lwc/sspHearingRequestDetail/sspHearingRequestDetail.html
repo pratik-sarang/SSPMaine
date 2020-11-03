@@ -1,0 +1,805 @@
+<!-- 
+* name 		      : sspHearingRequestDetails
+* @description 	  : This screen is used for Hearing Request Details 
+* @author 		  : Sharon
+* @date           : 09/07/2020
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* --------------------------------------------------------------------------------------------
+-->
+<template>
+    <template if:true={showAccessDeniedComponent}>
+        <c-ssp-access-denied></c-ssp-access-denied>
+    </template>
+    <template if:true={isScreenAccessible}>
+        <template if:true={showSpinner}>
+            <c-ssp-spinner></c-ssp-spinner>
+        </template>
+        <div class="ssp-hearingRequestContainer">
+            <div class="ssp-hearingHeadContainer">
+                <div class="ssp-hearingHeadingContainer">
+                    <div class="ssp-container_width">
+                        <i class="ssp-arrow_left"></i>
+                        <a
+                            title={label.sspHearingsRequestBackAltText}
+                            class="ssp-viewSummary ssp-color_monoBody ssp-fontFamily_popinBold"
+                            onclick={backToHearings}
+                            tabindex="0"
+                        >
+                            {label.sspHearingsRequestBack}
+                        </a>
+                        <h1
+                            class="ssp-individualName ssp-hearingRequestHeading ssp-fontFamily_popinBlack"
+                        >
+                            {label.sspHearingRequestHeading}
+                        </h1>
+                        <div
+                            class="slds-grid slds-wrap slds-size_1-of-1 ssp-pendingContainer"
+                        >
+                            <div
+                                class="ssp-infoText13 ssp-fontFamily_popinRegular ssp-color_monoOmega"
+                            >
+                                {hearingSummary.hearingStatus}
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="ssp-hearingGreyLine ssp-bg_monoAlpha ssp-greyUnderline"
+                    ></div>
+                </div>
+
+                <div class="ssp-hearingCaseContainer">
+                    <div class="slds-grid slds-wrap">
+                        <div
+                            class="slds-col slds-size_1-of-2 slds-large-size_3-of-12 ssp-hearingCaseIndividualContainer"
+                        >
+                            <div
+                                class="ssp-fontFamily_popinRegular ssp-color_monoOmega ssp-hearingCaseTitle"
+                            >
+                                {label.sspHearingRequestCaseNumber}
+                            </div>
+                            <div
+                                class="ssp-fontFamily_popinRegular ssp-color_monoBody ssp-hearingCaseContent"
+                            >
+                                {hearingSummary.caseNumber}
+                            </div>
+                        </div>
+                        <div
+                            class="slds-col slds-size_1-of-2 slds-large-size_3-of-12 ssp-hearingCaseIndividualContainer"
+                        >
+                            <div
+                                class="ssp-fontFamily_popinRegular ssp-color_monoOmega ssp-hearingCaseTitle"
+                            >
+                                {label.sspHearingRequestCaseName}
+                            </div>
+                            <div
+                                class="ssp-fontFamily_popinRegular ssp-color_monoBody ssp-hearingCaseContent"
+                            >
+                                {hearingSummary.caseName}
+                            </div>
+                        </div>
+                        <div
+                            class="slds-col slds-size_1-of-2 slds-large-size_3-of-12 ssp-hearingCaseIndividualContainer p-r-0"
+                        >
+                            <div
+                                class="ssp-fontFamily_popinRegular ssp-color_monoOmega ssp-hearingCaseTitle"
+                            >
+                                {label.sspHearingRequestCaseRequester}
+                            </div>
+                            <div
+                                class="ssp-fontFamily_popinRegular ssp-color_monoBody ssp-hearingCaseContent"
+                            >
+                                {hearingSummary.requester}
+                            </div>
+                        </div>
+                        <div
+                            class="slds-col slds-size_1-of-2 slds-large-size_3-of-12 ssp-hearingCaseIndividualContainer"
+                        >
+                            <div
+                                class="ssp-fontFamily_popinRegular ssp-color_monoOmega ssp-hearingCaseTitle"
+                            >
+                                {label.sspHearingRequestType}
+                            </div>
+                            <div
+                                class="ssp-fontFamily_popinRegular ssp-color_monoBody ssp-hearingCaseContent"
+                            >
+                                {hearingSummary.hearingType}
+                            </div>
+                        </div>
+
+                        <div
+                            class="slds-col slds-size_1-of-2 slds-large-size_3-of-12 ssp-hearingCaseIndividualContainer"
+                        >
+                            <div
+                                class="ssp-fontFamily_popinRegular ssp-color_monoOmega ssp-hearingCaseTitle"
+                            >
+                                {label.sspHearingRequestSubmission}
+                            </div>
+                            <div
+                                class="ssp-fontFamily_popinRegular ssp-color_monoBody ssp-hearingCaseContent"
+                            >
+                                {hearingSummary.hearingDate}
+                            </div>
+                        </div>
+                        <div
+                            class="slds-col slds-size_1-of-2 slds-large-size_3-of-12 ssp-hearingCaseIndividualContainer"
+                        >
+                            <div
+                                class="ssp-fontFamily_popinRegular ssp-color_monoOmega ssp-hearingCaseTitle"
+                            >
+                                {label.sspHearingRequestReason}
+                            </div>
+                            <div
+                                class="ssp-fontFamily_popinRegular ssp-color_monoBody ssp-hearingCaseContent"
+                            >
+                                {hearingSummary.hearingReason}
+                            </div>
+                        </div>
+                        <div
+                            class="slds-col slds-size_1-of-2 slds-large-size_3-of-12 ssp-hearingCaseIndividualContainer p-r-0"
+                        >
+                            <div
+                                class="ssp-fontFamily_popinRegular ssp-color_monoOmega ssp-hearingCaseTitle"
+                            >
+                                {label.sspHearingRequestProgramTitle}
+                            </div>
+                            <div
+                                class="ssp-fontFamily_popinRegular ssp-color_monoBody ssp-hearingCaseContent"
+                            >
+                                {hearingSummary.hearingProgram}
+                            </div>
+                        </div>
+                        <div
+                            class="slds-col slds-size_1-of-2 slds-large-size_3-of-12 ssp-hearingCaseIndividualContainer"
+                        >
+                            <div
+                                class="ssp-fontFamily_popinRegular ssp-color_monoOmega ssp-hearingCaseTitle"
+                            >
+                                {label.sspHearingRequestOfficer}
+                            </div>
+                            <div
+                                class="ssp-fontFamily_popinRegular ssp-color_monoBody ssp-hearingCaseContent"
+                            >
+                                {hearingSummary.hearingOfficer}
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="slds-grid slds-wrap slds-size_1-of-1 ssp-hearingCaseButtonContainer ssp-actionButtonsContainer ssp-buttonWidth"
+                    >
+                        <div
+                            if:false={hearingWithdrawn}
+                            class="slds-size_1-of-1 ssp-actionButtons"
+                        >
+                            <lightning-button
+                                class="ssp-button_base slds-float_right ssp-saveButton ssp-cardButton"
+                                variant="base"
+                                title={label.sspHearingRequestWithdrawAlt}
+                                label={label.sspHearingRequestWithdraw}
+                                onclick={withdrawHearingRequest}
+                                disabled={isReadOnlyUser}
+                            ></lightning-button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="ssp-bg_appHeaderGradient ssp-documentsMainContainer ssp-hearingContentMainContainer "
+            >
+                <div
+                    class="ssp-nextAccordionContainer ssp-hearingAccordionMainContainer"
+                >
+                    <div
+                        class="ssp-nextIdentification ssp-hearingAccordionContainer"
+                    >
+                        <div class="ssp-bg_whiteAlpha">
+                            <c-ssp-accordion-card>
+                                <div slot="Title">
+                                    <p
+                                        class="ssp-fontFamily_popinBold ssp-color_monoBody"
+                                    >
+                                        {label.sspHearingRequestHistory}
+                                    </p>
+                                </div>
+                                <div slot="contentSlot">
+                                    <div
+                                        if:true={historyListLength}
+                                        class="ssp-hearingAccordionContentContainer"
+                                    >
+                                        <template
+                                            for:each={hearingHistoryList}
+                                            for:item="hearingHistory"
+                                        >
+                                            <div
+                                                key={hearingHistory.Id}
+                                                class="ssp-hearingAccordionDivision"
+                                            >
+                                                <div
+                                                    class="slds-grid slds-wrap ssp-hearingHistoryDateContainer"
+                                                >
+                                                    <div
+                                                        class="ssp-fontFamily_popinRegular ssp-color_monoOmega slds-col slds-size_1-of-2 slds-large-size_2-of-12 ssp-hearingAccordionContentTitle"
+                                                    >
+                                                        {label.sspHearingRequestDate}
+                                                    </div>
+                                                    <div
+                                                        class="ssp-fontFamily_popinRegular ssp-color_monoBody slds-col slds-size_1-of-2 slds-large-size_10-of-12 ssp-hearingAccordionContentText"
+                                                    >
+                                                        {hearingHistory.hearingHistoryDate}
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="slds-grid slds-wrap ssp-hearingHistoryDateContainer"
+                                                >
+                                                    <div
+                                                        class="ssp-fontFamily_popinRegular ssp-color_monoOmega slds-col slds-size_1-of-2 slds-large-size_2-of-12 ssp-hearingAccordionContentTitle"
+                                                    >
+                                                        {label.sspHearingRequestAction}
+                                                    </div>
+                                                    <div
+                                                        class="ssp-fontFamily_popinRegular ssp-color_monoBody slds-col slds-size_1-of-2 slds-large-size_10-of-12 ssp-hearingAccordionContentText"
+                                                    >
+                                                        {hearingHistory.hearingHistoryAction}
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="slds-grid slds-wrap ssp-hearingHistoryDateContainer"
+                                                >
+                                                    <div
+                                                        class="ssp-fontFamily_popinRegular ssp-color_monoOmega slds-col slds-size_1-of-2 slds-large-size_2-of-12 ssp-hearingAccordionContentTitle"
+                                                    >
+                                                        {label.sspHearingRequestActionBy}
+                                                    </div>
+                                                    <div
+                                                        class="ssp-fontFamily_popinRegular ssp-color_monoBody slds-col slds-size_1-of-2 slds-large-size_10-of-12 ssp-hearingAccordionContentText"
+                                                    >
+                                                        {hearingHistory.hearingHistoryActionBy}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </template>
+                                    </div>
+                                </div>
+                            </c-ssp-accordion-card>
+                        </div>
+                    </div>
+                    <div
+                        class="ssp-nextIdentification ssp-hearingAccordionContainer"
+                    >
+                        <div class="ssp-bg_whiteAlpha">
+                            <c-ssp-accordion-card>
+                                <div slot="Title">
+                                    <p
+                                        class="ssp-fontFamily_popinBold ssp-color_monoBody"
+                                    >
+                                        {label.sspHearingRequestAppointment}
+                                    </p>
+                                </div>
+                                <div slot="contentSlot">
+                                    <div
+                                        if:true={prehearingAppointmentListLength}
+                                        class="ssp-hearingAccordionContentContainer"
+                                    >
+                                        <template
+                                            for:each={prehearingAppointmentList}
+                                            for:item="prehearingAppointment"
+                                        >
+                                            <div
+                                                key={prehearingAppointment.Id}
+                                                class="slds-grid slds-wrap ssp-hearingAccordionDivision"
+                                            >
+                                                <div
+                                                    class="slds-col slds-size_1-of-1 slds-large-size_4-of-12 ssp-hearingHistoryDateContainer"
+                                                >
+                                                    <div
+                                                        class="ssp-fontFamily_popinRegular ssp-color_monoOmega ssp-hearingAccordionContentTitle"
+                                                    >
+                                                        {label.sspHearingRequestConference}
+                                                    </div>
+                                                    <div
+                                                        class="ssp-fontFamily_popinRegular ssp-color_monoBody ssp-hearingAccordionContentText"
+                                                    >
+                                                        {prehearingAppointment.conferenceLine}
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="slds-col slds-size_1-of-1 slds-large-size_4-of-12 ssp-hearingHistoryDateContainer"
+                                                >
+                                                    <div
+                                                        class="ssp-fontFamily_popinRegular ssp-color_monoOmega ssp-hearingAccordionContentTitle"
+                                                    >
+                                                        {label.sspHearingRequestParticipant}
+                                                    </div>
+                                                    <div
+                                                        class="ssp-fontFamily_popinRegular ssp-color_monoBody ssp-hearingAccordionContentText"
+                                                    >
+                                                        {prehearingAppointment.prehearingParticipantCode}
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="slds-col slds-size_1-of-1 slds-large-size_4-of-12 ssp-hearingHistoryDateContainer"
+                                                >
+                                                    <div
+                                                        class="ssp-fontFamily_popinRegular ssp-color_monoOmega ssp-hearingAccordionContentTitle"
+                                                    >
+                                                        {label.sspHearingRequestLocation}
+                                                    </div>
+                                                    <div
+                                                        class="ssp-fontFamily_popinRegular ssp-color_monoBody ssp-hearingAccordionContentText"
+                                                    >
+                                                        {prehearingAppointment.conferenceLine}
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="slds-col slds-size_1-of-1 slds-large-size_4-of-12 ssp-hearingHistoryDateContainer"
+                                                >
+                                                    <div
+                                                        class="ssp-fontFamily_popinRegular ssp-color_monoOmega ssp-hearingAccordionContentTitle"
+                                                    >
+                                                        {label.sspHearingRequestDate}
+                                                    </div>
+                                                    <div
+                                                        class="ssp-fontFamily_popinRegular ssp-color_monoBody ssp-hearingAccordionContentText"
+                                                    >
+                                                        {prehearingAppointment.prehearingDate}
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="slds-col slds-size_1-of-1 slds-large-size_4-of-12 ssp-hearingHistoryDateContainer"
+                                                >
+                                                    <div
+                                                        class="ssp-fontFamily_popinRegular ssp-color_monoOmega ssp-hearingAccordionContentTitle"
+                                                    >
+                                                        {label.sspHearingRequestMeeting}
+                                                    </div>
+                                                    <div
+                                                        class="ssp-fontFamily_popinRegular ssp-color_monoBody ssp-hearingAccordionContentText"
+                                                    >
+                                                        {prehearingAppointment.meetingType}
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="slds-col slds-size_1-of-1 slds-large-size_4-of-12 ssp-hearingHistoryDateContainer"
+                                                >
+                                                    <div
+                                                        class="ssp-fontFamily_popinRegular ssp-color_monoOmega ssp-hearingAccordionContentTitle"
+                                                    >
+                                                        {label.sspHearingRequestTime}
+                                                    </div>
+                                                    <div
+                                                        class="ssp-fontFamily_popinRegular ssp-color_monoBody ssp-hearingAccordionContentText"
+                                                    >
+                                                        {prehearingAppointment.prehearingtime}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </template>
+                                    </div>
+                                </div>
+                            </c-ssp-accordion-card>
+                        </div>
+                    </div>
+                    <div
+                        class="ssp-nextIdentification ssp-hearingAccordionContainer"
+                    >
+                        <div class="ssp-bg_whiteAlpha">
+                            <c-ssp-accordion-card>
+                                <div slot="Title">
+                                    <p
+                                        class="ssp-fontFamily_popinBold ssp-color_monoBody"
+                                    >
+                                        {label.sspHearingRequestHearAppointment}
+                                    </p>
+                                </div>
+                                <div slot="contentSlot">
+                                    <div
+                                        if:true={hearingAppointmentListLength}
+                                        class="ssp-hearingAccordionContentContainer"
+                                    >
+                                        <template
+                                            for:each={hearingAppointmentList}
+                                            for:item="hearingAppointment"
+                                        >
+                                            <div
+                                                key={hearingAppointment.Id}
+                                                class="slds-grid slds-wrap ssp-hearingAccordionDivision"
+                                            >
+                                                <div
+                                                    class=" slds-col slds-size_1-of-1 slds-large-size_4-of-12 ssp-hearingHistoryDateContainer"
+                                                >
+                                                    <div
+                                                        class="ssp-fontFamily_popinRegular ssp-color_monoOmega ssp-hearingAccordionContentTitle"
+                                                    >
+                                                        {label.sspHearingRequestConference}
+                                                    </div>
+                                                    <div
+                                                        class="ssp-fontFamily_popinRegular ssp-color_monoBody ssp-hearingAccordionContentText"
+                                                    >
+                                                        {hearingAppointment.conferenceLine}
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="slds-col slds-size_1-of-1 slds-large-size_4-of-12 ssp-hearingHistoryDateContainer"
+                                                >
+                                                    <div
+                                                        class="ssp-fontFamily_popinRegular ssp-color_monoOmega ssp-hearingAccordionContentTitle"
+                                                    >
+                                                        {label.sspHearingRequestParticipant}
+                                                    </div>
+                                                    <div
+                                                        class="ssp-fontFamily_popinRegular ssp-color_monoBody ssp-hearingAccordionContentText"
+                                                    >
+                                                        {hearingAppointment.hearingParticipantCode}
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="slds-col slds-size_1-of-1 slds-large-size_4-of-12 ssp-hearingHistoryDateContainer"
+                                                >
+                                                    <div
+                                                        class="ssp-fontFamily_popinRegular ssp-color_monoOmega ssp-hearingAccordionContentTitle"
+                                                    >
+                                                        {label.sspHearingRequestLocation}
+                                                    </div>
+                                                    <div
+                                                        class="ssp-fontFamily_popinRegular ssp-color_monoBody ssp-hearingAccordionContentText"
+                                                    >
+                                                        {hearingAppointment.location}
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="slds-col slds-size_1-of-1 slds-large-size_4-of-12 ssp-hearingHistoryDateContainer"
+                                                >
+                                                    <div
+                                                        class="ssp-fontFamily_popinRegular ssp-color_monoOmega ssp-hearingAccordionContentTitle"
+                                                    >
+                                                        {label.sspHearingRequestDate}
+                                                    </div>
+                                                    <div
+                                                        class="ssp-fontFamily_popinRegular ssp-color_monoBody ssp-hearingAccordionContentText"
+                                                    >
+                                                        {hearingAppointment.hearingDate}
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="slds-col slds-size_1-of-1 slds-large-size_4-of-12 ssp-hearingHistoryDateContainer"
+                                                >
+                                                    <div
+                                                        class="ssp-fontFamily_popinRegular ssp-color_monoOmega ssp-hearingAccordionContentTitle"
+                                                    >
+                                                        {label.sspHearingRequestMeeting}
+                                                    </div>
+                                                    <div
+                                                        class="ssp-fontFamily_popinRegular ssp-color_monoBody ssp-hearingAccordionContentText"
+                                                    >
+                                                        {hearingAppointment.meetingType}
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="slds-col slds-size_1-of-1 slds-large-size_4-of-12 ssp-hearingHistoryDateContainer"
+                                                >
+                                                    <div
+                                                        class="ssp-fontFamily_popinRegular ssp-color_monoOmega ssp-hearingAccordionContentTitle"
+                                                    >
+                                                        {label.sspHearingRequestTime}
+                                                    </div>
+                                                    <div
+                                                        class="ssp-fontFamily_popinRegular ssp-color_monoBody ssp-hearingAccordionContentText"
+                                                    >
+                                                        {hearingAppointment.timeOfHearing}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </template>
+                                    </div>
+                                </div>
+                            </c-ssp-accordion-card>
+                        </div>
+                    </div>
+                    <div
+                        class="ssp-nextIdentification ssp-hearingAccordionContainer"
+                    >
+                        <div class="ssp-bg_whiteAlpha">
+                            <c-ssp-accordion-card>
+                                <div slot="Title">
+                                    <p
+                                        class="ssp-fontFamily_popinBold ssp-color_monoBody"
+                                    >
+                                        {label.sspHearingRequestParties}
+                                    </p>
+                                </div>
+                                <div
+                                    if:true={partiesInvolvedListLength}
+                                    slot="contentSlot"
+                                >
+                                    <div
+                                        class="ssp-hearingAccordionContentContainer"
+                                    >
+                                        <template
+                                            for:each={partiesInvolvedList}
+                                            for:item="partiesInvolved"
+                                        >
+                                            <div
+                                                key={partiesInvolved.Id}
+                                                class="slds-grid slds-wrap ssp-hearingAccordionDivision"
+                                            >
+                                                <div
+                                                    class=" slds-col slds-size_1-of-1 slds-large-size_4-of-12 ssp-hearingHistoryDateContainer"
+                                                >
+                                                    <div
+                                                        class="ssp-fontFamily_popinRegular ssp-color_monoOmega ssp-hearingAccordionContentTitle"
+                                                    >
+                                                        {label.sspHearingRequestContactName}
+                                                    </div>
+                                                    <div
+                                                        class="ssp-fontFamily_popinRegular ssp-color_monoBody ssp-hearingAccordionContentText"
+                                                    >
+                                                        {partiesInvolved.contactName}
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="slds-col slds-size_1-of-1 slds-large-size_4-of-12 ssp-hearingHistoryDateContainer"
+                                                >
+                                                    <div
+                                                        class="ssp-fontFamily_popinRegular ssp-color_monoOmega ssp-hearingAccordionContentTitle"
+                                                    >
+                                                        {label.sspHearingRequestPhoneNumber}
+                                                    </div>
+                                                    <div
+                                                        class="ssp-fontFamily_popinRegular ssp-color_monoBody ssp-hearingAccordionContentText"
+                                                    >
+                                                        {partiesInvolved.phoneNumber}
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="slds-col slds-size_1-of-1 slds-large-size_4-of-12 ssp-hearingHistoryDateContainer"
+                                                >
+                                                    <div
+                                                        class="ssp-fontFamily_popinRegular ssp-color_monoOmega ssp-hearingAccordionContentTitle"
+                                                    >
+                                                        {label.sspHearingRequestCompanyName}
+                                                    </div>
+                                                    <div
+                                                        class="ssp-fontFamily_popinRegular ssp-color_monoBody ssp-hearingAccordionContentText"
+                                                    >
+                                                        {partiesInvolved.companyName}
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="slds-col slds-size_1-of-1 slds-large-size_4-of-12 ssp-hearingHistoryDateContainer"
+                                                >
+                                                    <div
+                                                        class="ssp-fontFamily_popinRegular ssp-color_monoOmega ssp-hearingAccordionContentTitle"
+                                                    >
+                                                        {label.sspHearingRequestRole}
+                                                    </div>
+                                                    <div
+                                                        class="ssp-fontFamily_popinRegular ssp-color_monoBody ssp-hearingAccordionContentText"
+                                                    >
+                                                        {partiesInvolved.role}
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="slds-col slds-size_1-of-1 slds-large-size_4-of-12 ssp-hearingHistoryDateContainer"
+                                                >
+                                                    <div
+                                                        class="ssp-fontFamily_popinRegular ssp-color_monoOmega ssp-hearingAccordionContentTitle"
+                                                    >
+                                                        {label.sspHearingRequestEmail}
+                                                    </div>
+                                                    <div
+                                                        class="ssp-fontFamily_popinRegular ssp-color_monoBody ssp-hearingAccordionContentText"
+                                                    >
+                                                        {partiesInvolved.email}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </template>
+                                    </div>
+                                </div>
+                            </c-ssp-accordion-card>
+                        </div>
+                    </div>
+                    <div
+                        class="ssp-nextIdentification ssp-hearingAccordionContainer"
+                    >
+                        <div class="ssp-bg_whiteAlpha">
+                            <c-ssp-accordion-card>
+                                <div slot="Title">
+                                    <p
+                                        class="ssp-fontFamily_popinBold ssp-color_monoBody"
+                                    >
+                                        {label.sspHearingRequestUploadTitle}
+                                    </p>
+                                </div>
+                                <div slot="contentSlot">
+                                    <div
+                                        class="ssp-hearingAccordionContentContainer"
+                                    >
+                                        <div
+                                            if:true={documentsUploadListLength}
+                                        >
+                                            <template
+                                                for:each={documentsUploadList}
+                                                for:item="documentsUpload"
+                                            >
+                                                <div
+                                                    key={documentsUpload.Id}
+                                                    class="slds-grid slds-wrap ssp-hearingAccordionDivision"
+                                                >
+                                                    <div
+                                                        class=" slds-col slds-size_1-of-1 slds-large-size_4-of-12 ssp-hearingHistoryDateContainer"
+                                                    >
+                                                        <div
+                                                            class="ssp-fontFamily_popinRegular ssp-color_monoOmega ssp-hearingAccordionContentTitle"
+                                                        >
+                                                            {label.sspHearingRequestDocumentType}
+                                                        </div>
+                                                        <div
+                                                            class="ssp-fontFamily_popinRegular ssp-color_monoBody ssp-hearingAccordionContentText"
+                                                        >
+                                                            {documentsUpload.documentType}
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="slds-col slds-size_1-of-1 slds-large-size_4-of-12 ssp-hearingHistoryDateContainer"
+                                                    >
+                                                        <div
+                                                            class="ssp-fontFamily_popinRegular ssp-color_monoOmega ssp-hearingAccordionContentTitle"
+                                                        >
+                                                            {label.sspHearingRequestUploadDate}
+                                                        </div>
+                                                        <div
+                                                            class="ssp-fontFamily_popinRegular ssp-color_monoBody ssp-hearingAccordionContentText"
+                                                        >
+                                                            {documentsUpload.dateOfUpload}
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="slds-col slds-size_1-of-1 slds-large-size_4-of-12 ssp-hearingHistoryDateContainer"
+                                                    >
+                                                        <div
+                                                            class="ssp-fontFamily_popinRegular ssp-color_monoOmega ssp-hearingAccordionContentTitle"
+                                                        >
+                                                            {label.sspHearingRequestUploadBy}
+                                                        </div>
+                                                        <div
+                                                            class="ssp-fontFamily_popinRegular ssp-color_monoBody ssp-hearingAccordionContentText"
+                                                        >
+                                                            {documentsUpload.uploadedBy}
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="slds-col slds-size_1-of-1"
+                                                    >
+                                                        <div
+                                                            class="ssp-hearingOrderProofLink"
+                                                        >
+                                                            <a
+                                                                title={label.viewDocument}
+                                                                class="ssp-color_blueAlpha ssp-fontFamily_popinBold"
+                                                                data-metadata-id={documentsUpload.dmsDocumentId}
+                                                                data-document-name={documentsUpload.documentName}
+                                                                data-content-id={documentsUpload.contentDocumentId}
+                                                                data-extension={documentsUpload.extension}
+                                                                onclick={downloadHearingDocuments}
+                                                            >
+                                                                {documentsUpload.documentName}
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </template>
+                                        </div>
+                                        <div
+                                            class="ssp-hearingUploadDocumnetContainer"
+                                        >
+                                            <div class="slds-grid slds-wrap">
+                                                <div
+                                                    class="slds-col slds-size_1-of-1"
+                                                >
+                                                    <lightning-button
+                                                        class="ssp-button_brand ssp-remove-coverage-footer ssp-saveButton"
+                                                        variant="brand"
+                                                        title={label.sspHearingRequestUploadNewTitle}
+                                                        label={label.sspHearingRequestUploadNew}
+                                                        onclick={uploadDocuments}
+                                                        disabled={isReadOnlyUser}
+                                                    ></lightning-button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </c-ssp-accordion-card>
+                        </div>
+                    </div>
+                    <div
+                        class="ssp-nextIdentification ssp-hearingAccordionContainer"
+                    >
+                        <div class="ssp-bg_whiteAlpha">
+                            <c-ssp-accordion-card>
+                                <div slot="Title">
+                                    <p
+                                        class="ssp-fontFamily_popinBold ssp-color_monoBody"
+                                    >
+                                        {label.sspHearingRequestAdverse}
+                                    </p>
+                                </div>
+                                <div slot="contentSlot">
+                                    <div
+                                        if:true={NegativeActionDocumentsListLength}
+                                        class="ssp-hearingAccordionContentContainer"
+                                    >
+                                        <template
+                                            for:each={NegativeActionDocumentsList}
+                                            for:item="NegativeActionDocuments"
+                                        >
+                                            <div
+                                                key={NegativeActionDocuments.Id}
+                                                class="slds-grid slds-wrap ssp-hearingAccordionDivision"
+                                            >
+                                                <div
+                                                    class="slds-col slds-size_1-of-1"
+                                                >
+                                                    <div
+                                                        class="ssp-hearingOrderProofLink"
+                                                    >
+                                                        <a
+                                                            title={label.viewDocument}
+                                                            class="ssp-color_blueAlpha ssp-fontFamily_popinBold"
+                                                            data-metadata-id={NegativeActionDocuments.negativeDmsDocumentId}
+                                                            data-document-name={NegativeActionDocuments.negativeDocumentName}
+                                                            data-negative-document-name={NegativeActionDocuments.negativeDocumentName}
+                                                            data-extension={NegativeActionDocuments.extension}
+                                                            onclick={downloadHearingDocuments}
+                                                        >
+                                                            {NegativeActionDocuments.negativeDocumentName}
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class=" slds-col slds-size_1-of-1 slds-large-size_4-of-12 ssp-hearingHistoryDateContainer"
+                                                >
+                                                    <div
+                                                        class="ssp-fontFamily_popinRegular ssp-color_monoOmega ssp-hearingAccordionContentTitle"
+                                                    >
+                                                        {label.sspHearingRequestAdverseDocument}
+                                                    </div>
+                                                    <div
+                                                        class="ssp-fontFamily_popinRegular ssp-color_monoBody ssp-hearingAccordionContentText"
+                                                    >
+                                                        {NegativeActionDocuments.negativeDocumentType}
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="slds-col slds-size_1-of-1 slds-large-size_4-of-12 ssp-hearingHistoryDateContainer"
+                                                >
+                                                    <div
+                                                        class="ssp-fontFamily_popinRegular ssp-color_monoOmega ssp-hearingAccordionContentTitle"
+                                                    >
+                                                        {label.sspHearingRequestSendDate}
+                                                    </div>
+                                                    <div
+                                                        class="ssp-fontFamily_popinRegular ssp-color_monoBody ssp-hearingAccordionContentText"
+                                                    >
+                                                        {NegativeActionDocuments.negativeSentDate}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </template>
+                                    </div>
+                                </div>
+                            </c-ssp-accordion-card>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <c-ssp-logging-and-error-handling-modal
+            if:true={showErrorModal}
+            error-id={errorMsg}
+            onprogressvaluechange={closeError}
+        >
+        </c-ssp-logging-and-error-handling-modal>
+    </template>
+</template>

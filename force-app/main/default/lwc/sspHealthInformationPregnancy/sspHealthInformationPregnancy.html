@@ -1,0 +1,147 @@
+
+<!--
+* name          : sspHealthInformationPregnancy
+* @description  : This component is used to take information on pregnancy
+* @author       : Shivam Tiwari and P V Siddarth
+* @date         : 19/12/2019 
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName                MM/DD/YYYY               A Brief Description about the Change
+  Shivam and Siddarth             19/12/2019                      Initial Version
+-->
+<template>
+    <template if:true={showSpinner}>
+        <c-ssp-spinner></c-ssp-spinner>
+    </template>
+    <div class="ssp-errorToast" if:true={hasSaveValidationError}>
+        <c-ssp-toast
+            ssp-toast-title-val={label.toastErrorText}
+            show-error-toast={trueValue}
+            onhidetoast={hideToast}
+        ></c-ssp-toast>
+    </div>
+    <div if:true={isPageAccessible} class="ssp-bodyContainer">
+        <template if:true={pregnancyVerification}>
+            <div class="slds-m-vertical_large">
+                <c-ssp-general-notice-card>
+                    <p>
+                        {label.sspPageInformationVerified}
+                        <span
+                            ><a
+                                href={callUsAt}
+                                class="ssp-color_blueAlpha slds-m-left_xx-small"
+                                >{label.startBenefitsAppCallNumber}.</a
+                            ></span
+                        >
+                    </p>
+                </c-ssp-general-notice-card>
+            </div>
+        </template>
+        <div
+            class="ssp-infoText slds-m-top_large slds-m-bottom_x-large ssp-color_monoOmega ssp-fontFamily_ArvoRegular"
+        >
+            {sspCompleteQuestionsAboutPregnancyReplaced}
+        </div>
+        <div class="slds-grid slds-wrap slds-m-bottom_xx-large">
+            <div
+                class="slds-grid slds-wrap slds-m-top_small slds-m-bottom_medium ssp-componentWidth "
+            >
+                <c-ssp-base-component-input-toggle
+                    class="ssp-input ssp-inputIsPregnant"
+                    options={optList}
+                    field-name="IsPregnantToggle__c"
+                    label={sspIsPregnantReplaced}
+                    onchange={handleIsPregnantChange}
+                    value={isPregnantValue}
+                    entity-name="SSP_Member__c"
+                    data-id="IsPregnantToggle__c"
+                    meta-list={MetaDataListParent}                    
+                ></c-ssp-base-component-input-toggle>
+            </div>
+            <div class="slds-grid ssp-dateWidth ssp-date-expected-section ssp-alignItems">
+                <div
+                    class="slds-grid slds-wrap slds-m-bottom_small ssp-componentWidth ssp-componentMargin"
+                >
+                    <c-ssp-base-component-input-picklist
+                        title={label.sspAltChildrenOptions}
+                        class="ssp-input ssp-inputExpectedCount ssp-componentWidth"
+                        label={label.sspBirthsExpected}
+                        value={populateExpectedBirths}
+                        option={expectedBirthCountPicklistValues}
+                        data-id="NumberOfBirthsExpected__c"
+                        field-name="NumberOfBirthsExpected__c"
+                        entity-name="SSP_Member__c"
+                        onchange={handleExpectedBirthCountChange}
+                        meta-list={MetaDataListParent}
+                        disabled={pregnancyVerification}
+                    ></c-ssp-base-component-input-picklist>
+                </div>
+
+                <div
+                    class="slds-grid slds-wrap slds-m-bottom_small ssp-dateWidth ssp-componentMargin"
+                >
+                    <template if:true={showExpectedDueDate}>
+                        <div class="slds-grid slds-wrap ssp-dateWidth">
+                            <c-ssp-base-component-input-date
+                                class="ssp-input ssp-inputDueDate ssp-dateWidth"
+                                field-name="PregnancyDueDate__c"
+                                label={label.sspExpectedDueDate}
+                                value={expectedDueDate}
+                                onchange={handleDueDateChange}
+                                onfocusout={pregnancyDueDateValidator}
+                                entity-name="SSP_Member__c"
+                                data-id="PregnancyDueDate__c"
+                                meta-list={MetaDataListParent}
+                                time-travel-current-date={currentMonthValue}
+                            ></c-ssp-base-component-input-date>
+                        </div>
+                    </template>
+                    <template if:true={showLastPregnancyDate}>
+                        <div class="slds-grid slds-wrap  ssp-dateWidth">
+                            <c-ssp-base-component-input-date
+                                class="ssp-input ssp-inputTermDate ssp-dateWidth"
+                                field-name="PregnancyTerminationDate__c"
+                                label={label.sspKnownDatePregnancy}
+                                value={expectedTerminationDate}
+                                onchange={handleTermDateChange}
+                                onfocusout={RACPregnancyValidator}
+                                entity-name="SSP_Member__c"
+                                data-id="PregnancyTerminationDate__c"
+                                meta-list={MetaDataListParent}
+                            ></c-ssp-base-component-input-date>
+                        </div>
+                    </template>
+                </div>
+            </div>
+
+            <div class="ssp-color_redOmega" role="alert" aria-atomic="true">
+                {sOverlappingDateErroMsg}
+            </div>
+        </div>
+        <div
+            class="slds-grid slds-wrap slds-m-top_small ssp-fontFamily_popinBold ssp-toggelQuestionText"
+        >
+            {sspReferralForWomenReplaced}
+        </div>
+        <div
+            class="slds-grid slds-wrap slds-m-bottom_xx-large ssp-frameworkPadding "
+        >
+            <c-ssp-base-component-input-toggle
+                class="ssp-input ssp-inputWIC ssp-inputToggleText"
+                field-name="IsToBeReferredToWicToggle__c"
+                label={label.sspWICProgram}
+                options={optList}
+                value={isReferredToWIC}
+                entity-name="SSP_Member__c"
+                data-id="IsToBeReferredToWicToggle__c"
+                meta-list={MetaDataListParent}
+                disabled={pregnancyVerification}
+            ></c-ssp-base-component-input-toggle>
+        </div>
+    </div>
+    <!-- CD2 2.5 Security Role Matrix. -->
+    <template if:true={showAccessDeniedComponent}>
+        <c-ssp-access-denied></c-ssp-access-denied>
+    </template>
+</template>

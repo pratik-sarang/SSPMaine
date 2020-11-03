@@ -1,0 +1,424 @@
+<template>
+    <template if:true={showSpinner}>
+        <c-ssp-spinner></c-ssp-spinner>
+    </template>
+    <template if:true={showAccessDenied}>
+        <c-ssp-access-denied></c-ssp-access-denied>
+    </template>
+    <template if:true={showScreen}>
+        <div class="slds-is-relative">
+            <img src={backgroundImg} class="ssp-backgroundImage" alt={label.sspAgreementSignature} />
+            <div
+                class="ssp-bodyContainer ssp-signaturePage_Container slds-is-relative"
+            >
+                <div
+                    class="ssp-navigationLink ssp-margin-bottom_large ssp-fontFamily_popinBold"
+                >
+                    <a class="ssp-anchor" onclick={returnToPastApplication} tabindex="0">
+                        <span class="ssp-color_magentaAlpha">&lt;</span>
+                        <span class="ssp-color_monoBody"
+                            >{label.sspPastApplications}</span
+                        ></a
+                    >
+                </div>
+                <div
+                    class="ssp-headerText ssp-color_blueAlpha ssp-fontFamily_popinBold ssp-margin-bottom_large"
+                >
+                    {label.sspAgreementSignature}
+                </div>
+                <div
+                    class="ssp-ruler ssp-bg_monoAlpha ssp-margin-bottom_large"
+                ></div>
+                <div class="slds-grid slds-wrap ssp-bottomMargin ">
+                    <div class="ssp-elements slds-grid slds-wrap">
+                        <div class="ssp-childElement">
+                            <div
+                                class="slds-size_1-of-1 ssp-navigationLink ssp-color_monoOmega"
+                            >
+                                {label.sspApplicationHash}
+                            </div>
+                            <div
+                                class="slds-size_1-of-1 ssp-infoText ssp-color_monoBody"
+                            >
+                                {applicationNumber}
+                            </div>
+                        </div>
+                        <div class=" ssp-childElement">
+                            <div
+                                class="slds-size_1-of-1 ssp-navigationLink ssp-color_monoOmega"
+                            >
+                                {label.sspSignedBy}
+                            </div>
+                            <div
+                                class="slds-size_1-of-1 ssp-infoText ssp-color_monoBody"
+                            >
+                                {signedBy}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ssp-childElement">
+                        <div
+                            class="slds-size_1-of-1 ssp-navigationLink ssp-color_monoOmega"
+                        >
+                            {label.sspDateSigned}
+                        </div>
+                        <div
+                            class="slds-size_1-of-1 ssp-infoText ssp-color_monoBody"
+                        >
+                            {dateSigned}
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="ssp-rulerBeta ssp-bg_monoBeta ssp-margin-bottom_large"
+                ></div>
+
+                <div
+                    class="ssp-fontFamily_popinBold ssp-color_monoBody ssp-termsOfAgreement ssp-margin-bottom_small"
+                >
+                    {label.sspTermsOfAgreement}
+                </div>
+                <div class="slds-grid">
+                    <span
+                        class="ssp-fontFamily_popinBold ssp-color_blueAlpha ssp-fontSize"
+                        >{label.sspTermOne}</span
+                    >
+                    <span
+                        class="slds-col slds-float_left slds-p-left_small ssp-fontFamily_ArvoRegular ssp-color_monoBody ssp-fontSize"
+                        >{label.sspHaveAnswered}</span
+                    >
+                </div>
+                <div class="slds-grid">
+                    <span
+                        class="ssp-fontFamily_popinBold ssp-color_blueAlpha ssp-fontSize"
+                        >{label.sspTermTwo}</span
+                    >
+                    <span
+                        class="slds-col slds-p-left_small ssp-fontFamily_ArvoRegular ssp-color_monoBody ssp-fontSize"
+                    >
+                        {label.sspIfAnyChanges}</span
+                    >
+                </div>
+                <div class="slds-grid">
+                    <span
+                        class="ssp-fontFamily_popinBold ssp-color_blueAlpha ssp-fontSize"
+                        >{label.sspTermThree}</span
+                    >
+                    <span
+                        class="slds-col slds-p-left_small ssp-fontFamily_ArvoRegular ssp-color_monoBody ssp-fontSize"
+                        >{label.sspProvidingFalse}</span
+                    >
+                </div>
+                <div class="ssp-margin-bottom_large slds-grid">
+                    <span
+                        class="ssp-fontFamily_popinBold ssp-color_blueAlpha ssp-fontSize"
+                        >{label.sspTermFour}</span
+                    >
+                    <span
+                        class="slds-col slds-p-left_small ssp-fontFamily_ArvoRegular ssp-color_monoBody ssp-fontSize"
+                        >{label.sspPleaseReadAnd}</span
+                    >
+                </div>
+                <template if:true={bShowStatementOfUnderstanding}>
+                    <div class="ssp-margin-bottom_small">
+                        <c-ssp-selection-summary-card
+                            is-progress-started={isApplicationConsentProgressStart}
+                            is-progress-complete={isApplicationConsentProgressComplete}
+                        >
+                            <slot>
+                                <a
+                                    tabindex="0"
+                                    title={label.sspStatementOfUnderstanding}
+                                    data-type="sspStatementOfUnderstanding"
+                                    onclick={openLinkModal}
+                                    onkeydown={openLinkModal}
+                                    class="ssp-color_monoBody"
+                                    role="button"
+                                >
+                                    {label.sspStatementOfUnderstanding}
+                                </a>
+                            </slot>
+                        </c-ssp-selection-summary-card>
+                    </div>
+                    <template if:true={sspStatementOfUnderstanding}>
+                        <c-ssp-application-statement-understanding-modal
+                            is-selected-value={isAgreeingToApplicationConsent}
+                            additional-info-snap={additionalInfoSnap}
+                            additional-info-k-t-a-p={additionalInfoKTAP}
+                            additional-info-medicaid={additionalInfoMedicaid}
+                            onclose={updateToggleFields}
+                            disabled={buttonDisabled}
+                            scroll-funtion={buttonDisabled}
+                        ></c-ssp-application-statement-understanding-modal>
+                    </template>
+                </template>
+                <template if:true={bShowAgreeingToMedicaidPenalty}>
+                    <div class="ssp-margin-bottom_small">
+                        <c-ssp-selection-summary-card
+                            is-progress-started={isMedicaidPenaltyProgressStart}
+                            is-progress-complete={isMedicaidPenaltyProgressComplete}
+                        >
+                            <slot>
+                                <a
+                                    tabindex="0"
+                                    title={label.sspMedicalPenaltyWarning}
+                                    data-type="sspMedicaidPenaltyWarning"
+                                    onclick={openLinkModal}
+                                    onkeydown={openLinkModal}
+                                    class="ssp-color_monoBody"
+                                    role="button"
+                                >
+                                    {label.sspMedicalPenaltyWarning}
+                                </a>
+                            </slot>
+                        </c-ssp-selection-summary-card>
+                        <template if:true={sspMedicaidPenaltyWarning}>
+                            <c-ssp-medicaid-penalty-warning-modal
+                                is-selected-value={isAgreeingToMedicaidPenalty}
+                                onclose={updateToggleFields}
+                                scroll-funtion={buttonDisabled}
+                            >
+                            </c-ssp-medicaid-penalty-warning-modal>
+                        </template>
+                    </div>
+                </template>
+
+                <template if:true={bShowAgreeingToSNAPRightsConsent}>
+                    <div class="ssp-margin-bottom_small">
+                        <c-ssp-selection-summary-card
+                            is-progress-started={isSNAPRightsConsentProgressStart}
+                            is-progress-complete={isSNAPRightsConsentProgressComplete}
+                        >
+                            <slot>
+                                <a
+                                    tabindex="0"
+                                    title={label.sspRightsAndResponsibilities}
+                                    data-type="sspRightsAndResponsibilities"
+                                    onclick={openLinkModal}
+                                    onkeydown={openLinkModal}
+                                    class="ssp-color_monoBody"
+                                    role="button"
+                                >
+                                    {label.sspRightsAndResponsibilities}
+                                </a>
+                            </slot>
+                        </c-ssp-selection-summary-card>
+                        <template if:true={sspRightsAndResponsibilities}>
+                            <c-ssp-snap-rights-and-responsibilities-modal
+                                is-selected-value={isAgreeingToSNAPRightsConsent}
+                                onclose={updateToggleFields}
+                                scroll-funtion={buttonDisabled}
+                            >
+                            </c-ssp-snap-rights-and-responsibilities-modal>
+                        </template>
+                    </div>
+                </template>
+                <template if:true={bShowAgreeingToLTCResourceTransferConsent}>
+                    <div class="ssp-margin-bottom_small">
+                        <c-ssp-selection-summary-card
+                            is-progress-started={isLTCResourceTransferConsentProgressStart}
+                            is-progress-complete={isLTCResourceTransferConsentProgressComplete}
+                        >
+                            <slot>
+                                <a
+                                    tabindex="0"
+                                    title={label.sspResourceTransferConsent}
+                                    data-type="sspResourceTransferConsent"
+                                    onclick={openLinkModal}
+                                    onkeydown={openLinkModal}
+                                    class="ssp-color_monoBody"
+                                    role="button"
+                                >
+                                    {label.sspResourceTransferConsent}
+                                </a>
+                            </slot>
+                        </c-ssp-selection-summary-card>
+                        <template if:true={sspResourceTransferConsent}>
+                            <c-ssp-l-t-c-resource-transfer-consent-modal
+                                s-house-hold-spouse-name={LTCConsentName}
+                                is-selected-value={isAgreeingToLTCResourceTransferConsent}
+                                onclose={updateToggleFields}
+                                scroll-function={buttonDisabled}
+                            ></c-ssp-l-t-c-resource-transfer-consent-modal>
+                        </template>
+                    </div>
+                </template>
+                <template if:true={sspDeclarationAnnuities}>
+                    <div class="ssp-margin-bottom_small">
+                        <c-ssp-selection-summary-card
+                            is-progress-started={isMA34DeclarationProgressStart}
+                            is-progress-complete={isMA34DeclarationProgressComplete}
+                        >
+                            <slot>
+                                <a
+                                    tabindex="0"
+                                    title={label.sspDeclarationOfAnnuities}
+                                    data-type="sspModalDeclarationOfAnnuities"
+                                    onclick={openLinkModal}
+                                    onkeydown={openLinkModal}
+                                    class="ssp-color_monoBody"
+                                    role="button"
+                                >
+                                    {label.sspDeclarationOfAnnuities}
+                                </a>
+                            </slot>
+                        </c-ssp-selection-summary-card>
+                        <template if:true={sspModalDeclarationOfAnnuities}>
+                            <c-ssp-declaration-of-annuities-modal
+                                application-id={application.Id}
+                                is-selected-value={isAgreeingToMA34Declaration}
+                                onclose={updateToggleFields}
+                                scroll-funtion={buttonDisabled}
+                                toggle-disabled={fieldDisabled}
+                            >
+                            </c-ssp-declaration-of-annuities-modal>
+                        </template>
+                    </div>
+                </template>
+                <template if:true={bShowAgreeingToKIHIPPConsent}>
+                    <div class="ssp-margin-bottom_xlarge">
+                        <c-ssp-selection-summary-card
+                            is-progress-started={isKIHIPPConsentProgressStart}
+                            is-progress-complete={isKIHIPPConsentProgressComplete}
+                        >
+                            <slot>
+                                <a
+                                    tabindex="0"
+                                    title={label.sspReadAndAgreeConsent}
+                                    data-type="sspReadAndAgreeConsent"
+                                    onclick={openLinkModal}
+                                    onkeydown={openLinkModal}
+                                    class="ssp-color_monoBody"
+                                    role="button"
+                                >
+                                    {label.sspReadAndAgreeConsent}
+                                </a>
+                            </slot>
+                        </c-ssp-selection-summary-card>
+                        <template if:true={sspReadAndAgreeConsent}>
+                            <c-ssp-k-i-h-i-p-p-consent-modal
+                                is-selected-value={isAgreeingToKIHIPPConsent}
+                                onclose={updateToggleFields}
+                                scroll-funtion={buttonDisabled}
+                            ></c-ssp-k-i-h-i-p-p-consent-modal>
+                        </template>
+                    </div>
+                </template>
+
+                <div
+                    class="ssp-rulerBeta ssp-bg_monoBeta ssp-margin-bottom_large"
+                ></div>
+                <div class="ssp-margin-bottom_xlarge">
+                    <template if:true={bRenewal}>
+                        <div class="ssp-toggleQuestion">
+                            <c-ssp-base-component-input-toggle
+                                class="ssp-applicationInputs"
+                                label={label.sspDoYouAuthorize}
+                            >
+                            </c-ssp-base-component-input-toggle>
+                        </div>
+                        <template if:true={sspDoYouAuthorizeYesBtn}>
+                            <div
+                                class="slds-grid slds-wrap ssp-buttonAlignment ssp-componentWidth "
+                            >
+                                <lightning-button
+                                    label={label.sspYes}
+                                    class="ssp-exitModalBtn ssp-button_brand ssp-buttonWidth"
+                                    onclick={openModal}
+                                    variant="brand"
+                                ></lightning-button>
+                            </div>
+                        </template>
+                        <template if:true={sspDoYouAuthorizeNoBtn}>
+                            <div
+                                class="slds-grid slds-wrap ssp-buttonAlignment ssp-componentWidth "
+                            >
+                                <lightning-button
+                                    label="NO"
+                                    class="ssp-exitModalBtn ssp-button_base ssp-buttonWidth"
+                                    onclick={openModal}
+                                    variant="base"
+                                ></lightning-button>
+                            </div>
+                        </template>
+                    </template>
+                </div>
+                <div class="ssp-margin-bottom_xlarge">
+                    <template if:true={bWorkRegister}>
+                        <div class="ssp-toggleQuestion">
+                            <c-ssp-base-component-input-toggle
+                                class="ssp-applicationInputs"
+                                label={label.sspDoesThePrimary}
+                                is-help-text="true"
+                                help-text-content={label.sspThePrimaryHelpText}
+                            >
+                            </c-ssp-base-component-input-toggle>
+                        </div>
+                        <template if:true={sspDoesThePrimaryYesBtn}>
+                            <div
+                                class="slds-grid slds-wrap ssp-buttonAlignment ssp-componentWidth "
+                            >
+                                <lightning-button
+                                    label={label.sspYes}
+                                    class="ssp-exitModalBtn ssp-button_brand ssp-buttonWidth"
+                                    onclick={openModal}
+                                    variant="brand"
+                                    disabled
+                                ></lightning-button>
+                            </div>
+                        </template>
+                        <template if:true={sspDoesThePrimaryNoBtn}>
+                            <div
+                                class="slds-grid slds-wrap ssp-buttonAlignment ssp-componentWidth "
+                            >
+                                <lightning-button
+                                    label="No"
+                                    class="ssp-exitModalBtn ssp-button_base ssp-buttonWidth"
+                                    onclick={openModal}
+                                    variant="base"
+                                    disabled
+                                ></lightning-button>
+                            </div>
+                        </template>
+                    </template>
+                </div>
+                <div class="ssp-margin-bottom_xlarge">
+                    <template if:true={bRegisterToVote}>
+                        <div class="ssp-toggleQuestion">
+                            <c-ssp-base-component-input-toggle
+                                label={label.sspRegisterToVote}
+                            >
+                            </c-ssp-base-component-input-toggle>
+                        </div>
+                        <template if:true={sspRegisterToVoteYesBtn}>
+                            <div
+                                class="slds-grid slds-wrap ssp-buttonAlignment ssp-componentWidth "
+                            >
+                                <lightning-button
+                                    label={label.sspYes}
+                                    class="ssp-exitModalBtn ssp-button_brand ssp-buttonWidth"
+                                    onclick={openModal}
+                                    variant="brand"
+                                    disabled
+                                ></lightning-button>
+                            </div>
+                        </template>
+                        <template if:true={sspRegisterToVoteNoBtn}>
+                            <div
+                                class="slds-grid slds-wrap ssp-buttonAlignment ssp-componentWidth "
+                            >
+                                <lightning-button
+                                    label="No"
+                                    class="ssp-exitModalBtn ssp-button_base ssp-buttonWidth"
+                                    onclick={openModal}
+                                    variant="base"
+                                    disabled
+                                ></lightning-button>
+                            </div>
+                        </template>
+                    </template>
+                </div>
+            </div>
+        </div>
+    </template>
+</template>

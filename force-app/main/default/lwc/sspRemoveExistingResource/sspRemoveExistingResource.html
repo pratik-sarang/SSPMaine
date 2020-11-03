@@ -1,0 +1,100 @@
+<!--
+* name 		        : sspRemoveExistingResource
+* @description 	    : Container for Remove Existing Resource Page
+* @author 		    : Kyathi Kanumuri 
+* @date 		    : 11/25/2019
+* MODIFICATION LOG:
+* DEVELOPER           DATE                DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* Kyathi Kanumuri	  11/25/2019	      HTML Structure Creation
+* Karthik Gulla       11/25/2019	      Backend Integration 
+* 
+-->
+<template>
+    <template if:true={showSpinner}>
+        <c-ssp-spinner></c-ssp-spinner>
+    </template>
+    <div class="ssp-removeResource_container ssp-bodyContainer">
+        <div class="ssp-errorToast" if:true={hasSaveValidationError}>
+            <c-ssp-toast
+                ssp-toast-title-val={label.toastErrorText}
+                show-error-toast={trueValue}
+                onhidetoast={hideToast}
+            ></c-ssp-toast>
+        </div>
+
+        <div
+            class="slds-grid slds-wrap ssp-removeResourceForm slds-m-vertical_x-large"
+        >
+            <div
+                class="slds-grid slds-wrap slds-size_1-of-1 ssp-fieldsContainer"
+            >
+                <p
+                    class="ssp-fieldLabel ssp-fontFamily_popinBold ssp-color_monoBody slds-m-bottom_medium" tabindex="0"
+                >
+                    {sspNoResourcesQuestionLabelText} 
+                </p>
+            </div>
+            <div class="slds-grid slds-wrap slds-size_1-of-1">
+                <template for:each={existResources} for:item="exResource">
+                    <div
+                        key={exResource.strResourceId}
+                        class="slds-size_1-of-1 ssp-fieldsContainer"
+                    >
+                        <c-ssp-base-component-multiline-input-checkbox onhandlemultiselectchange={handleCheckboxAction} object-data={exResource} hide-additional-fields={exResource.bHideAdditionalDetails} class="ssp-removeResourceCheckbox">
+                            <div slot="labelContent" class="ssp-checkbox-labels">
+                                <p class="ssp-fontFamily_popinBold ssp-color_monoBody ssp-labelLine1">{exResource.strResTileLineOneValue}</p>
+                                <p class="ssp-fontFamily_popinBold ssp-color_blueAlpha">{exResource.strResTileLineTwoValue}</p>
+                            </div>
+                            <div
+                                class="slds-grid slds-wrap"
+                                slot="buttonContainer"
+                            >
+                                <c-ssp-base-component-input-date
+                                    name={label.sspResourceEndDate}
+                                    class="slds-size_1-of-1 slds-large-size_1-of-2 slds-p-horizontal_small slds-p-vertical_x-small ssp-date ssp-removeExResourceEndDate"
+                                    label={label.sspResourceEndDate}
+                                    data-id="EndDate__c"
+                                    value={exResource.dtResourceEndDate}
+                                    entity-name="SSP_Asset__c"
+                                    field-name="EndDate__c"
+                                    meta-list={MetaDataListParent}
+                                    data-record={exResource.strResourceId}
+                                    time-travel-current-date={timeTravelDate}
+                                >
+                                </c-ssp-base-component-input-date>
+                                <c-ssp-base-component-input-picklist
+                                    class="slds-size_1-of-1 slds-large-size_1-of-2 slds-p-horizontal_small slds-p-vertical_x-small ssp-removeExResourceEndReason"
+                                    option={exResource.resourceEndReasonOptions}
+                                    title={label.sspEndReasonAlternate}
+                                    selected-value={exResource.strResourceEndReason} 
+                                    value={exResource.strResourceEndReason}
+                                    label={label.sspEndReason}
+                                    placeholder={label.sspSelectOption}
+                                    data-id="ResourceEndReason__c"
+                                    entity-name="SSP_Asset__c"
+                                    field-name="ResourceEndReason__c"
+                                    meta-list={MetaDataListParent}
+                                    data-record={exResource.strResourceId}
+                                >
+                                </c-ssp-base-component-input-picklist>
+                            </div>
+                        </c-ssp-base-component-multiline-input-checkbox>
+                    </div>
+                </template>
+            </div>
+            <div
+                class="slds-grid slds-wrap slds-size_1-of-1 ssp-fieldsContainer"
+            >
+                <c-ssp-base-component-multiline-input-checkbox onhandlemultiselectchange={handleOwnResourcesAction} hide-additional-fields={trueValue} class="ssp-ownsResourceCheckbox  slds-size_1-of-1"
+                    
+                >
+                    <div slot="labelContent" class="ssp-applicationInputs slds-large-size_1-of-1 slds-size_1-of-1 ssp-singleLineCheckboxLabel  ssp-labelLine1 ssp-fontFamily_popinBold">
+                        {sspOwnsResourceText}
+                    </div>
+                </c-ssp-base-component-multiline-input-checkbox>
+            </div>
+             <span class="ssp-color_redOmega" role="alert" aria-atomic="true" if:true={noResourceSelected}>{label.sspSelectResourceErrorMessage}</span>
+        </div>
+    </div>
+</template>

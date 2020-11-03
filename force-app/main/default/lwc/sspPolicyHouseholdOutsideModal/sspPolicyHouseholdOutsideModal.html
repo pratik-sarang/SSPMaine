@@ -1,0 +1,32 @@
+<template>
+    
+    <c-ssp-detailed-information-modal
+        reference={reference}
+        header-value={customLabel.sspPolicyHolderOutsideHousehold}
+        open-model={openModel}
+        onclosemodal={closeHouseholdOutsidePolicyModel}
+    >
+        <span slot="contentSlot">
+            <p
+                class="ssp-complete-questions ssp-fontFamily_ArvoRegular ssp-color_monoOmega slds-m-top_small"
+            >
+                {customLabel.sspPolicyHouseholdOutsideContentOne}
+            </p>
+            <p
+                class="ssp-complete-questions ssp-fontFamily_ArvoRegular ssp-color_monoOmega slds-m-top_small"
+            >
+                {customLabel.sspPolicyHouseholdOutsideContentTwo}
+            </p>
+        </span>
+        <div slot="Footer" class="slds-col ssp-remove-coverage-footer">
+            <lightning-button
+                variant="brand"
+                label={customLabel.sspPolicyHouseholdOutsideNext}
+                class="ssp-button_brand"
+                onclick={closeHouseholdOutsidePolicyModel}
+                disabled={isReadOnlyUser}
+            ></lightning-button>
+        </div>
+    </c-ssp-detailed-information-modal>
+
+</template>

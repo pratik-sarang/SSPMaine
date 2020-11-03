@@ -1,0 +1,48 @@
+.ssp-infotext {
+    font-size: 1rem;
+    letter-spacing: -0.0187rem;
+    line-height: 1.5rem;
+}
+
+.ssp-inputFieldLarge {
+    width: 48.1%;
+}
+.ssp-input-container {
+    align-items: baseline;
+}
+.ssp-inputFieldSmall {
+    width: 26.1%;
+}
+.ssp-phoneNumber {
+    width: 48.1%;
+}
+.ssp-extOptional {
+    width: 26.1%;
+    padding-left: 4%;
+}
+.ssp-singleCheckBox {
+    width: 100%;
+}
+.ssp-nonApplicantContactContainer {
+    margin-bottom: 4.75rem;
+}
+@media only screen and (max-width: 768px) {
+    .ssp-inputFieldLarge {
+        width: 100%;
+        padding: 0px;
+    }
+    .ssp-inputFieldSmall {
+        width: 100%;
+        padding: 0px;
+    }
+    .ssp-extOptional {
+        width: 40%;
+        padding-left: 6%;
+    }
+    .ssp-phoneNumber {
+        width: 60%;
+    }
+    .ssp-mobileComponentWidth {
+        width: 100%;
+    }
+}

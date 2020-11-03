@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Input_Required_Msg --></label>
+    <name>Input_Required_Msg__c</name>
+    <picklistValues>
+        <masterLabel>Please answer all required fields.</masterLabel>
+        <translation>Responder a todos los campos obligatorios</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Please enter both the end date and reason for removal if you&apos;d like to end this type of coverage.</masterLabel>
+        <translation>Ingrese la fecha de finalización y el motivo de la eliminación si desea finalizar este tipo de cobertura.</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Please select at least one Policy Holder</masterLabel>
+        <translation><!-- Please select at least one Policy Holder --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Please select at least one Preferred Contact Method.</masterLabel>
+        <translation>Seleccionar al menos un Método de contacto que prefiere</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Please select at least one household member.</masterLabel>
+        <translation>Seleccionar al menos un miembro del hogar</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Please select at least one member.</masterLabel>
+        <translation><!-- Please select at least one member. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>The address you selected is not a valid address. Please select a street address with valid Address Line 1, Zip Code and City</masterLabel>
+        <translation>La dirección que usted seleccionó no es una dirección válida. Por favor, seleccione una dirección con Línea de dirección 1, Código postal y Ciudad válidos</translation>
+    </picklistValues>
+</CustomFieldTranslation>

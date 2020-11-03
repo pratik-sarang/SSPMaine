@@ -1,0 +1,49 @@
+.ssp-lookup-option-container {
+    border-width: 0 1px 1px 1px;
+    border-style: solid;
+    border-radius: 0 0 0.375rem 0.375rem;
+    max-height: 202px;
+    overflow: auto;
+    cursor: pointer;
+    position: absolute;
+    z-index: 999;
+    font-size: 1rem;
+    background: #f8f9fa;
+    padding: 0 1rem 0 0.75rem;
+    width: 100%;
+}
+.ssp-typeAheadMainContainer {
+    width: 100%;
+    position: relative;
+}
+.ssp-Hide {
+    display: none;
+}
+.ssp-show {
+    display: Block;
+}
+.ssp-helptextIcon {
+    margin-left: 10px;
+    position: relative;
+    bottom: 2px;
+}
+.ssp-alignHelpText {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2px 0;
+}
+.ssp-alignHelpText label {
+    width: 85%;
+    word-break: break-word;
+    font-size: 0.8125rem;
+}
+.ssp-typeahead-items:focus {
+    outline: none;
+}
+@media only screen and (max-width: 800px) {
+    .ssp-alignHelpText label {
+        width: 100%;
+    }
+}

@@ -1,0 +1,15 @@
+.ssp-benefitsSummary_container .ssp-benefitsSummary_desc {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: -0.019rem;
+    margin-bottom: 1.875rem;
+    padding-top: 1.875rem;
+}
+
+.ssp-benefitsSummary_container .ssp-card_section {
+    padding-top: 1.875rem;
+    margin-bottom: 6.25rem;
+}
+.ssp-benefitsSummary_container .resourceSummaryInputs {
+    display: none;
+}

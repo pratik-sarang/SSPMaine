@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CreatedByName__c</fullName>
+    <description>Name of the user creating the referral</description>
+    <externalId>false</externalId>
+    <formula>CreatedBy.Contact.FirstName+&apos; &apos;+CreatedBy.Contact.LastName</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>CreatedBy Name</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

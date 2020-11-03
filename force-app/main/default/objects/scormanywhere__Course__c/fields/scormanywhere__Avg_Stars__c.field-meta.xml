@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>scormanywhere__Avg_Stars__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <formula>scormanywhere__Total_Stars__c /  IF(scormanywhere__Total_Votes__c != 0, scormanywhere__Total_Votes__c , 1)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Avg Stars</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

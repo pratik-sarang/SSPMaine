@@ -1,0 +1,83 @@
+<template>
+    <div
+        class="slds-grid slds-wrap slds-grid_align-center slds-m-bottom_xx-large ssp-bodyContainer ssp-navFlowFooter" if:true={nextButtonLabel}
+    >
+        <div
+            class="slds-grid ssp-footerBtnBackSave slds-size_1-of-2 slds-small-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-m-bottom_xx-large"
+        >
+            <div class={btnClassName}>
+                <lightning-button
+                    label={label.sspBack}
+                    class="ssp-button_base"
+                    onclick={backJs}
+                    title={label.sspBackAltText}
+                >
+                </lightning-button>
+              </div>
+<template if:false={isSignSubmitPage}>
+<template if:false={retExp1}>
+                <div class="slds-col ssp-secondGroupBtn">
+                    <lightning-button
+                        label={label.sspSaveAndExit}
+                        onclick={saveExit}
+                        variant="brand"
+                        class="dd-slds-nav_btn-next ssp-button_base"
+                            title={label.sspSaveAndExitAltText}
+                    ></lightning-button>
+                </div>
+            </template>
+            <template if:true={retExp1}>
+                <div class="slds-col ssp-secondGroupBtn">
+                    <lightning-button
+                        label={label.sspExitButton}
+                        onclick={onExit}
+                        variant="brand"
+                        class="dd-slds-nav_btn-next ssp-button_base"
+                        title={label.sspExitButton}
+                    ></lightning-button>
+                </div>
+            </template>
+              <!--<template if:true={retexp1}>
+                     <div class="slds-col">
+                            <lightning-button label={label.sspSaveAndExit} onclick={saveExit} variant="brand"
+                                   class="dd-slds-nav_btn-next ssp-button_base" title="Save & Exit"></lightning-button>
+                     </div>
+              </template>-->
+			  </template>
+             </div>
+        <div
+            class="slds-col ssp-footerBtnNext slds-text-align_right slds-size_1-of-2 slds-small-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-m-bottom_xx-large"
+        >
+                <lightning-button
+                        label={nextButtonLabel}
+                        onclick={nextJs}
+                        variant="netural"
+                        class="dd-slds-nav_btn-next ssp-button_neutral"
+                title={label.sspNextAltText}
+                    ></lightning-button>
+              </div>
+       </div>
+    <c-ssp-detailed-information-modal
+        header-value={label.applicationSubmittedHeading}
+        open-model={applicationSubmittedPopUp}
+        reference={reference}
+        hide-cross-icon={hideCross}
+    >
+        <p
+            class="ssp-fontFamily_ArvoRegular ssp-color_monoOmega slds-p-bottom_large"
+            slot="contentSlot"
+        >
+            {applicationAlreadySubmitted}
+        </p>
+        <div slot="Footer" class="slds-grid slds-wrap slds-grid_align-spread">
+            <lightning-button
+                variant="base"
+                label={label.goToDashboard}
+                class="ssp-exitModalBtn ssp-cancelBtn ssp-button_base slds-size_1-of-1"
+                onclick={onExit}
+                title={label.goToDashboard}
+            >
+            </lightning-button>
+        </div>
+    </c-ssp-detailed-information-modal>
+</template>

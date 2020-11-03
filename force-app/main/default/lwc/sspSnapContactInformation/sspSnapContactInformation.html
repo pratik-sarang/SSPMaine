@@ -1,0 +1,346 @@
+<!--
+* name          : SspSnapContactInformation.
+* @description  : This is Contact information screen for Short SNAP Application.
+* @author       : Chirag, Shivam
+* @date         : 4/23/2020
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName                MM/DD/YYYY               A Brief Description about the Change
+-->
+
+<template>
+    <template if:true={spinnerOn}>
+        <c-ssp-spinner></c-ssp-spinner>
+    </template>
+    <template if:true={retMemberObjectExpr}>
+        <main role="main">
+            <div
+                class="ssp-semiHeader ssp-bg_appHeaderGradient slds-p-vertical_medium"
+            >
+                <p
+                    class="ssp-semiHeaderText ssp-container_width ssp-color_monoBody ssp-fontFamily_popinBold"
+                >
+                    {label.sspShortSNAPApplication}
+                </p>
+            </div>
+            <div class="ssp-errorToast" if:true={hasSaveValidationError}>
+                <c-ssp-toast
+                    ssp-toast-title-val={label.toastErrorText}
+                    show-error-toast={trueValue}
+                    onhidetoast={hideToast}
+                ></c-ssp-toast>
+            </div>
+            <template if:true={isVisible}>
+                <div
+                    class="ssp-bodyContainer ssp-SnapContactInformationContainer"
+                >
+                    <h1
+                        class="ssp-fontFamily_popinBlack ssp-color_blueAlpha ssp-headingSignaturePage ssp-marginHeading"
+                    >
+                        {label.sspContactInformation}
+                    </h1>
+                    <div
+                        class="ssp-margin-bottom_large ssp-bg_monoAlpha ssp-greyUnderline"
+                    ></div>
+                    <div
+                        class="ssp-margin-bottom_large ssp-fontFamily_ArvoRegular ssp-color_monoBody ssp-fontSize"
+                    >
+                        {label.sspContactInformationPageText}
+                    </div>
+                    <div class="slds-grid slds-wrap slds-gutters">
+                        <div
+                            class="slds-col slds-large-size_6-of-12 slds-size_1-of-1 slds-medium-size_6-of-12 ssp-snapContactInput"
+                        >
+                            <div class="ssp-margin-bottom_small">
+                                <c-ssp-base-component-input-text
+                                    label={label.sspSnapContactFirstName}
+                                    value={applicationObject.ShortSnapFirstName__c}
+                                    data-id="ShortSnapFirstName__c"
+                                    field-name="ShortSnapFirstName__c"
+                                    entity-name="SSP_Application__c"
+                                    meta-list={metaDataListParent}
+                                    onchange={handleFirstNameChange}
+                                    class="snapInputs"
+                                    max-length="50"
+                                >
+                                </c-ssp-base-component-input-text>
+                            </div>
+                        </div>
+                        <div
+                            class="slds-col slds-large-size_6-of-12 slds-size_1-of-1 slds-medium-size_6-of-12"
+                        >
+                            <div class="ssp-margin-bottom_small">
+                                <c-ssp-base-component-input-text
+                                    label={label.sspSnapContactMiddleInitial}
+                                    class="snapInputs ssp-snapContactMi"
+                                    data-id="ShortSnapMiddleInitial__c"
+                                    field-name="ShortSnapMiddleInitial__c"
+                                    entity-name="SSP_Application__c"
+                                    meta-list={metaDataListParent}
+                                    max-length={middleNameMaxLength}
+                                    value={applicationObject.ShortSnapMiddleInitial__c}
+                                >
+                                </c-ssp-base-component-input-text>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-wrap slds-gutters">
+                        <div
+                            class="slds-col slds-large-size_6-of-12 slds-size_1-of-1 slds-medium-size_6-of-12 ssp-snapContactInput"
+                        >
+                            <div class="ssp-margin-bottom_small">
+                                <c-ssp-base-component-input-text
+                                    label={label.sspSnapContactLastName}
+                                    class="snapInputs"
+                                    data-id="ShortSnapLastName__c"
+                                    field-name="ShortSnapLastName__c"
+                                    entity-name="SSP_Application__c"
+                                    meta-list={metaDataListParent}
+                                    value={applicationObject.ShortSnapLastName__c}
+                                    max-length="50"
+                                >
+                                </c-ssp-base-component-input-text>
+                            </div>
+                        </div>
+                        <div
+                            class="slds-col slds-large-size_3-of-12 slds-medium-size_6-of-12 slds-size_1-of-1 ssp-snapContactSuffix"
+                        >
+                            <div class="ssp-margin-bottom_small">
+                                <c-ssp-base-component-input-picklist
+                                    label={label.sspSuffixLabel}
+                                    title={label.sspNotUSCitizenSuffixTitle}
+                                    option={suffixOptions}
+                                    class="snapInputs"
+                                    data-id="ShortSnapSuffixCode__c"
+                                    field-name="ShortSnapSuffixCode__c"
+                                    entity-name="SSP_Application__c"
+                                    meta-list={metaDataListParent}
+                                    value={applicationObject.ShortSnapSuffixCode__c}
+                                ></c-ssp-base-component-input-picklist>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-wrap slds-gutters">
+                        <div
+                            class="slds-col slds-large-size_6-of-12 slds-size_1-of-1 slds-medium-size_6-of-12 ssp-snapContactInput"
+                        >
+                            <div class="ssp-margin-bottom_small">
+                                <c-ssp-base-component-input-text
+                                    label={label.sspSocialSecurityNumber}
+                                    input-type="password"
+                                    class="snapInputs"
+                                    data-id="ShortSnapReportedSsn__c"
+                                    field-name="ShortSnapReportedSsn__c"
+                                    entity-name="SSP_Application__c"
+                                    meta-list={metaDataListParent}
+                                    value={applicationObject.ShortSnapReportedSsn__c}
+                                    max-length="9"
+                                    onchange={handleSSNChange}
+                                >
+                                </c-ssp-base-component-input-text>
+                            </div>
+                            <div class="ssp-learnMoreLink">
+                                <a
+                                    class="ssp-color_blueAlpha ssp-learnMoreText test"
+                                    title={label.sspLearnWhyAltText}
+                                    onclick={openLearnMoreModal}
+                                    href="javascript:void(0)"
+                                    >{label.sspLearnWhy}</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="slds-col slds-large-size_6-of-12 slds-size_1-of-1 slds-medium-size_6-of-12 ssp-snapContactInput"
+                        >
+                            <div class="ssp-margin-bottom_small">
+                                <c-ssp-base-component-input-text
+                                    label={label.sspConfirmSocialSecurity}
+                                    input-type="password"
+                                    class="snapInputs ssnInputMatch"
+                                    value={confirmSSNValue}
+                                    max-length="9"
+                                >
+                                </c-ssp-base-component-input-text>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-wrap slds-m-vertical_small">
+                        <div class="ssp-inputFieldLarge ssp-snapContactInput">
+                            <c-ssp-base-component-input-email
+                                label={label.sspEmail}
+                                class="snapInputs emailInput"
+                                data-id="ShortSnapEmail__c"
+                                field-name="ShortSnapEmail__c"
+                                entity-name="SSP_Application__c"
+                                meta-list={metaDataListParent}
+                                value={applicationObject.ShortSnapEmail__c}
+				onchange={handleEmailChange}
+                            >
+                            </c-ssp-base-component-input-email>
+                        </div>
+                    </div>
+                    <div
+                        class="slds-grid slds-wrap slds-m-vertical_small ssp-input-container"
+                    >
+                        <div class="ssp-phoneNumber ssp-snapContactInput">
+                            <c-ssp-base-component-input-phone
+                                label={label.sspPrimaryPhoneNumber}
+                                placeholder={label.sspPlaceholderPhoneNumber}
+                                class="snapInputs phoneInput"
+                                data-id="ShortSnapPrimaryPhoneNumber__c"
+                                field-name="ShortSnapPrimaryPhoneNumber__c"
+                                entity-name="SSP_Application__c"
+                                meta-list={metaDataListParent}
+                                value={applicationObject.ShortSnapPrimaryPhoneNumber__c}
+                                onchange={handlePhoneNumberChange}
+                                max-length="12"
+                            >
+                            </c-ssp-base-component-input-phone>
+                        </div>
+                        <div class="ssp-extOptional ssp-snapContactExtension">
+                            <c-ssp-base-component-input-text
+                                label={label.sspExtOptional}
+                                data-id="ShortSnapPrimaryPhoneExetnsion__c"
+                                field-name="ShortSnapPrimaryPhoneExetnsion__c"
+                                entity-name="SSP_Application__c"
+                                meta-list={metaDataListParent}
+                                max-length={extMaxLength}
+                                class="snapInputs extensionInput"
+                                disabled={disableExtension}
+                                value={applicationObject.ShortSnapPrimaryPhoneExetnsion__c}
+                            >
+                            </c-ssp-base-component-input-text>
+                        </div>
+                    </div>
+
+                    <div
+                        class="slds-grid slds-wrap slds-m-top_x-large  slds-m-bottom_x-large"
+                    >
+                        <div class="ssp-componentWidth ssp-snapContactInput" if:true={showPhoneType}>
+                            <c-ssp-base-component-input-toggle
+                                options={phoneTypeCode}
+                                label={label.sspPrimaryPhoneType}
+                                data-id="ShortSnapPrimaryPhoneTypeCode__c"
+                                field-name="ShortSnapPrimaryPhoneTypeCode__c"
+                                entity-name="SSP_Application__c"
+                                meta-list={metaDataListParent}
+                                class="snapInputs"
+                                onchange={handlePhoneTypeChange}
+                                value={applicationObject.ShortSnapPrimaryPhoneTypeCode__c}
+                            >
+                            </c-ssp-base-component-input-toggle>
+                        </div>
+                    </div>
+                    <template if:true={showSendMessageToggle}>
+                        <div
+                            class="slds-grid slds-wrap slds-m-vertical_x-large"
+                        >
+                            <div class="slds-m-top_x-large">
+                                <c-ssp-base-component-input-toggle
+                                    options={primaryTextPreferred}
+                                    label={label.sspCanSendTextMessagesMobileDevice}
+                                    data-id="ShortSnapIsPrimaryTextPreferred__c"
+                                    field-name="ShortSnapIsPrimaryTextPreferred__c"
+                                    entity-name="SSP_Application__c"
+                                    meta-list={metaDataListParent}
+                                    class="snapInputs"
+                                    value={applicationObject.ShortSnapIsPrimaryTextPreferred__c}
+                                >
+                                </c-ssp-base-component-input-toggle>
+                            </div>
+                        </div>
+                    </template>
+                    <template if:true={notificationMethodList}>
+                        <div
+                            class="ssp-checkBoxPrefferedContactMethod slds-grid slds-wrap ssp-componentWidth ssp-snapContactInput"
+                        >
+                            <c-ssp-base-component-input-radio-group
+                                class="contactDetails ssp-componentWidth snapInputs preferredContactMethod"
+                                label={label.sspPreferredContactMethod}
+                                title={label.sspContactMethodAltText}
+                                options={notificationMethodList}
+                                data-id="ShortSnapPreferredNotificationMethodCode__c"
+                                field-name="ShortSnapPreferredNotificationMethodCode__c"
+                                entity-name="SSP_Application__c"
+                                meta-list={metaDataListParent}
+                                value={applicationObject.ShortSnapPreferredNotificationMethodCode__c}
+                            ></c-ssp-base-component-input-radio-group>
+                        </div>
+                    </template>
+                    <div
+                        class="slds-grid slds-wrap slds-m-vertical_small ssp-input-container  ssp-BottomPadding"
+                    >
+                        <div
+                            class="ssp-dropDownSpokenLang slds-m-vertical_medium"
+                        >
+                            <c-ssp-type-ahead-picklist
+                                class="contactDetails conSpokenLang snapInputs"
+                                list-values={spokenLanguageOptions}
+                                label={label.sspPreferredSpokenLanguage}
+                                title={label.sspPreferredSpokenLanguageAltText}
+                                onchange={handleSpokenChange}
+                                data-id="ShortSnapPreferredSpokenLanguageCode__c"
+                                field-name="ShortSnapPreferredSpokenLanguageCode__c"
+                                entity-name="SSP_Application__c"
+                                meta-list={metaDataListParent}
+                                value={applicationObject.ShortSnapPreferredSpokenLanguageCode__c}
+                                placeholder={label.sspNotUSCitizenPlaceHolder}
+                            >
+                            </c-ssp-type-ahead-picklist>
+                        </div>
+                        <div
+                            class="ssp-dropDownWrittenLang ssp-tempPadding slds-m-vertical_medium ssp-snapContactInput"
+                        >
+                            <c-ssp-base-component-input-picklist
+                                class="contactDetails snapInputs"
+                                label={label.sspPreferredWrittenLang}
+                                option={writtenLanguageOptions}
+                                title={label.sspPreferredWrittenLanguageAltText}
+                                data-id="ShortSnapPreferredWrittenLanguageCode__c"
+                                field-name="ShortSnapPreferredWrittenLanguageCode__c"
+                                entity-name="SSP_Application__c"
+                                meta-list={metaDataListParent}
+                                value={applicationObject.ShortSnapPreferredWrittenLanguageCode__c}
+                            >
+                            </c-ssp-base-component-input-picklist>
+                        </div>
+                    </div>
+                    <div
+                        class="slds-grid slds-wrap slds-grid_align-spread ssp-add-auth-rep-btns slds-grid_reverse"
+                    >
+                        <lightning-button
+                            label={label.sspNext}
+                            title={label.sspNextButtonAltText}
+                            class="ssp-button_neutral ssp-authorize-btn"
+                            onclick={initSave}
+                        ></lightning-button>
+
+                        <lightning-button
+                            label={label.sspExitButton}
+                            title={label.sspExitShortSNAPApplication}
+                            class="ssp-button_base ssp-cancel-btn"
+                            onclick={handleExit}
+                        ></lightning-button>
+                        <lightning-button
+                            label={label.sspBack}
+                            title={label.sspGoBackPreviousPage}
+                            class="ssp-button_base ssp-cancel-btn"
+                            onclick={handleBack}
+                        ></lightning-button>
+                    </div>
+                </div>
+            </template>
+            <template if:true={isLearnMoreModal}>
+                <c-ssp-detailed-information-modal
+                    reference={reference}
+                    header-value={label.sspSNAPContactLearnHeading}
+                    open-model={isLearnMoreModal}
+                    onclosemodal={closeLearnMoreModal}
+                >
+                    <p slot="contentSlot">{label.sspSNAPContactLearnContent}</p>
+                </c-ssp-detailed-information-modal>
+            </template>
+        </main>
+    </template>
+</template>

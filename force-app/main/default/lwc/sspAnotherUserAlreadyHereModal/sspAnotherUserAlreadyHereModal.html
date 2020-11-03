@@ -1,0 +1,35 @@
+<!--
+* name          : sspAnotherUserAlreadyHere
+* @description  : This modal appears when a user tries to enter the application flow while another user is already logged in.
+* @author       : Chirag
+* @date         : 05/07/2020
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+*Chirag         05/07/2020               HTML Structure
+-->
+<template>
+    <c-ssp-detailed-information-modal
+        header-value={label.sspAnotherUserAlreadyHere}
+        open-model={openModel}
+        onclosemodal={closeModal}
+        reference={reference}
+        class="ssp-AnotherUserAlreadyHere"
+    >
+        <div slot="contentSlot">
+            <div>
+                {label.sspAnotherUserAlreadyHereContent}
+            </div>
+        </div>
+
+        <span slot="Footer" class="ssp-modalFooter ssp-stacked-btn-width">
+            <lightning-button
+                variant="brand"
+                label={label.sspExitApplication}
+                class="ssp-button_brand slds-m-top_medium ssp-fontFamily_popinBold"
+                onclick={closeModal}
+                title={label.sspExitTheApplication}
+            ></lightning-button>
+        </span>
+    </c-ssp-detailed-information-modal>
+</template>

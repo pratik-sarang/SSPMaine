@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Mapping to hold respective WHERE Clause mappings for building SSP-DC Requests.
+Use variable names: sApplicationId for application Id and setMemberIds for member ids</description>
+    <label>SSPDC Filter Mapping</label>
+    <pluralLabel>SSPDC Filter Mappings</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

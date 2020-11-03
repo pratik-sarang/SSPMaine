@@ -1,0 +1,47 @@
+<!-- 
+* name 		      : sspMCOSelection
+* @description 	  : This component for selecting MCO. 
+* @author 		  : Fazeel Ahmed/Vishakha Verma/Sanchita Tibrewala
+* @date           : 05 August 2020
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* 	      
+-->
+<template>
+    <div class="ssp-bodyContainer" if:false={isNotAccessible}>
+        <template if:true={showSpinner}>
+            <c-ssp-spinner></c-ssp-spinner>
+        </template>
+        <div class="ssp-topParagraphContainer">
+            <div class="ssp-fontFamily_ArvoRegular ssp-color_monoOmega">
+                <div if:true={showOldMCOPara} class="slds-m-bottom_medium">
+                    <c-ssp-general-notice-card notice-type="warning"> <div><p class="slds-m-bottom_medium" if:true={showOldMCOPara}>{oldMCOParaFormatted}</p></div></c-ssp-general-notice-card>
+                </div>
+                <div if:true={showNewMCOPara} class="slds-m-bottom_medium">
+                    <c-ssp-general-notice-card notice-type="warning"> <div>  <p class="slds-m-bottom_medium" if:true={showNewMCOPara}>{newMCOParaFormatted}</p></div></c-ssp-general-notice-card> 
+                </div>
+                <p>{label.sspMCOPara}</p>
+                <p class="slds-m-top_medium">{label.sspMCOParaTwo} <a target="_blank" href={sspComparisonChart} class="ssp-color_blueAlpha" title={label.sspMCOHereTitle}><u>{label.sspMCOHere}</u></a>.</p> 
+            </div>
+            <div class="ssp-color_blueAlpha ssp-fontFamily_popinBold ssp-blueHeader">
+                {label.sspBrowsePlan}
+            </div>
+            <c-ssp-base-component-input-radio-group
+                label={preferredPlanFormattedLabel}
+                value={memberObject.PreferredMCOName__c}
+                data-id="PreferredMCOName__c"
+                entity-name="SSP_Member__c"
+                field-name="PreferredMCOName__c"
+                class="preferredDetails"
+                meta-list={metaDataListParent}
+                options={planOptions}
+                handle-change="true"
+                onupdate={handleValueChange}
+            ></c-ssp-base-component-input-radio-group>
+        </div> 
+    </div>
+    <template if:true={showAccessDeniedComponent}>
+        <c-ssp-access-denied></c-ssp-access-denied>
+    </template>
+</template>

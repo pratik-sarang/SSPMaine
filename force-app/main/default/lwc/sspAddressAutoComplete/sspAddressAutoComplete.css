@@ -1,0 +1,52 @@
+.ssp-address-one-container {
+    position: relative;
+}
+
+.ssp-address-dropdown {
+    border: 1px solid #97a1b6;
+    border-radius: 0px 0px 6px 6px;
+    border-top: 0;
+    background-color: #f8f9fa;
+    box-shadow: 0 15px 25px -7px rgba(0, 35, 98, 0.1),
+        0 3px 6px 0 rgba(0, 35, 98, 0.1);
+    width: calc(100% - 15px);
+    position: absolute;
+    z-index: 999;
+}
+
+li {
+    font-size: 1rem;
+    letter-spacing: 0.3px;
+    line-height: 45px;
+}
+a {
+    text-decoration: underline;
+}
+.ssp-no-address {
+    background-color: #eeeff2;
+}
+
+@media only screen and (max-width: 767px) {
+    .ssp-gutter-right {
+        padding-right: 0;
+    }
+
+    .ssp-gutter-left {
+        padding-left: 0;
+    }
+
+    .ssp-address-dropdown {
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 1023px) {
+    .ssp-gutter-right {
+        padding-right: 0;
+    }
+    .ssp-gutter-left {
+        padding-left: 0;
+    }
+    .ssp-address-dropdown {
+        width: 100%;
+    }
+}

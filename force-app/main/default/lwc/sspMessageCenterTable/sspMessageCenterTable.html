@@ -1,0 +1,862 @@
+<!--
+* name          : sspMessageCenterTable
+* @description  : Message Center  child Component.
+* @author       : Chirag, Gunjyot, Aniket
+* @date         : 07/01/2020
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName                MM/DD/YYYY               A Brief Description about the Change
+  Chirag                       07/01/20                            Development
+-->
+<template>
+    <template if:true={showSpinner}>
+        <c-ssp-spinner></c-ssp-spinner>
+    </template>
+    <div class="ssp-message-table">
+        <template if:true={noSearchFound}>
+        <div class="ssp-noSearchFoundContainer"> 
+            <div class="ssp-sideImage">
+           <p class="ssp-noMatchFound ssp-color_monoBody ssp-fontFamily_popinBold"  role="alert">{customLabel.sspMessageCenterNoMatchFound}</p>
+              </div>
+        </div>
+        </template>
+        <template if:false={noSearchFound}>
+        <div class="ssp-message-desktop-view">
+            <table aria-label="Message Center Table"
+                class="slds-table slds-table--cell-buffer ssp-message-center-table ssp-fontFamily_popinBold"
+            >
+            <caption class="slds-hide">Message Caption</caption>
+                <thead>
+                    <tr class="slds-text-heading--label" key={column}>
+                        <template for:each={tableColumns} for:item="column">
+                            <th
+                                class="ssp-bg_monoAlpha ssp-table-header-txtcolor ssp-color_monoBody "
+                                key={column}
+                                scope="col"
+                            >
+                                <span>{column.columnName}</span>
+                                <span
+                                    if:true={column.isSort}
+                                    class="ssp-action-image-container ssp-bg_monoAlpha "
+                                >
+                                    <a class={row} onclick={sortByKey}>
+                                        <img
+                                            class="ssp-sort-image"
+                                            src={iconUrl}
+                                            alt="icon"
+                                        />
+                                    </a>
+                                </span>
+                            </th>
+                        </template>
+                    </tr>
+                </thead>
+                <tbody>
+                    <template for:each={msgTableData} for:item="row">
+                        <template if:false={row.readStatus}>
+                        <tr class="ssp-message-center-table-row" key={row.sfdcId}>
+                            <!-- For Announcement -->
+                            <template if:true={row.isAnnouncement}>
+                                <td class="ssp-app-details ssp-color_monoBody">
+                                    <p
+                                        class="ssp-color_monoOmega ssp-bg_monoAlpha ssp-message-center-table-tag ssp-fontFamily_popinBold"
+                                    >
+                                        {customLabel.sspMessageCenterAnnouncement}
+                                    </p>
+                                    <!-- if expiring -->
+                                    <template if:true={row.isExpiring}>
+                                        <p
+                                            class="ssp-color_blueAlpha ssp-fontFamily_popinBold ssp-italic"
+                                        >
+                                            {row.subject}
+                                        </p>
+                                    </template>
+                                   <!--  if not expiring -->
+                                    <template if:false={row.isExpiring}>
+                                        <p
+                                            class="ssp-color_blueAlpha ssp-fontFamily_popinBold"
+                                        >
+                                            {row.subject}
+                                        </p>
+                                    </template>
+                                    <p
+                                        class="ssp-app-details-child ssp-fontFamily_popinRegular"
+                                    >
+                                        {row.details}
+                                    </p>
+                                    <p
+                                        class="ssp-app-details-child ssp-fontFamily_popinRegular"
+                                    >
+                                        {customLabel.sspMessageCenterDateMessageReceived} {row.createdTimeStamp}
+                                    </p>
+                                </td>
+                                <td class="ssp-app-filter ssp-color_monoBody">
+                                    <!-- <div>{row.createdTimeStamp}</div> -->
+                                </td>
+                                <td
+                                    class="ssp-app-filter ssp-color_monoBody"
+                                ></td>
+                                <td class="ssp-app-action-trash">
+                                </td>
+                            </template>
+
+                            <!-- For System notifications -->
+                            <template if:true={row.isNotification}>
+                                <td class="ssp-app-details ssp-color_monoBody">
+                                    <!-- if expiring -->
+                                    <template if:true={row.isExpiring}>
+                                        <!-- if critical -->
+                                        <template if:true={row.isCritical}
+                                            ><p
+                                                class="ssp-color_redAlpha ssp-fontFamily_popinBold ssp-italic"
+                                            >
+                                                {row.subject}
+                                            </p>
+                                        </template>
+                                        <!-- if Not critical -->
+                                        <template if:false={row.isCritical}
+                                            ><p
+                                                class="ssp-color_blueAlpha ssp-fontFamily_popinBold ssp-italic"
+                                            >
+                                                {row.subject}
+                                            </p>
+                                        </template>
+                                    </template>
+                                    <!-- if not expiring -->
+                                    <template if:false={row.isExpiring}>
+                                        <!-- if critical -->
+                                        <template if:true={row.isCritical}
+                                            ><p
+                                                class="ssp-color_redAlpha ssp-fontFamily_popinBold "
+                                            >
+                                                {row.subject}
+                                            </p>
+                                        </template>
+                                        <!-- if Not critical -->
+                                        <template if:false={row.isCritical}
+                                            ><p
+                                                class="ssp-color_blueAlpha ssp-fontFamily_popinBold"
+                                            >
+                                                {row.subject}
+                                            </p>
+                                        </template>
+                                    </template>
+                                    <p
+                                        class="ssp-app-details-child ssp-fontFamily_popinRegular"
+                                    >
+                                        {row.details}
+                                    </p>
+                                    <p
+                                        class="ssp-app-details-child ssp-fontFamily_popinRegular"
+                                    >
+                                        {customLabel.sspMessageCenterDateMessageReceived} {row.createdTimeStamp}
+                                    </p>
+                                </td>
+                                <td class="ssp-app-filter ssp-color_monoBody">
+                                    <!-- <div>{row.createdTimeStamp}</div> -->
+                                </td>
+                                <td
+                                    class="ssp-app-filter ssp-color_monoBody"
+                                ></td>
+                                <td class="ssp-app-action-trash">
+                                </td>
+                            </template>
+                            <!-- For To do -->
+                            <template if:true={row.isToDo}>
+                                <!-- <p> read status {row.readStatus} true blue one</p> -->
+                                <td class="ssp-app-details ssp-color_monoBody">
+                                    <p
+                                        class="ssp-color_monoOmega ssp-bg_monoAlpha ssp-message-center-table-tag ssp-fontFamily_popinBold"
+                                    >
+                                        {customLabel.sspMessageCenterToDo}
+                                    </p>
+                                    <!-- if expiring -->
+                                    <template if:true={row.isExpiring}>
+                                        <!-- if critical -->
+                                        <template if:true={row.isCritical}
+                                            ><p
+                                                class="ssp-color_redAlpha ssp-fontFamily_popinBold ssp-italic"
+                                            >
+                                                {row.subject}
+                                            </p>
+                                        </template>
+                                        <!-- if Not critical -->
+                                        <template if:false={row.isCritical}
+                                            ><p
+                                                class="ssp-color_blueAlpha ssp-fontFamily_popinBold ssp-italic"
+                                            >
+                                                {row.subject}
+                                            </p>
+                                        </template>
+                                    </template>
+                                    <!-- if not expiring -->
+                                    <template if:false={row.isExpiring}>
+                                        <!-- if critical -->
+                                        <template if:true={row.isCritical}
+                                            ><p
+                                                class="ssp-color_redAlpha ssp-fontFamily_popinBold "
+                                            >
+                                                {row.subject}
+                                            </p>
+                                        </template>
+                                        <!-- if Not critical -->
+                                        <template if:false={row.isCritical}
+                                            ><p
+                                                class="ssp-color_blueAlpha ssp-fontFamily_popinBold"
+                                            >
+                                                {row.subject}
+                                            </p>
+                                        </template>
+                                    </template>
+                                    <p
+                                        class="ssp-app-details-child ssp-fontFamily_popinRegular"
+                                    >
+                                        {row.details}
+                                    </p>
+                                    <p
+                                        class="ssp-app-details-child ssp-fontFamily_popinRegular"
+                                    >
+                                        {customLabel.sspMessageCenterDateMessageReceived} {row.createdTimeStamp}
+                                    </p>
+                                </td>
+                                <td class="ssp-app-filter ssp-color_monoBody">
+                                    <div>{row.dueDate}</div>
+                                </td>
+                                
+                                <td class="ssp-app-action">
+                                    <template if:false={row.isReadOnly}>  <!-- 386073 only if false condition -->
+                                    <lightning-button
+                                        title={row.buttolAltText}
+                                        variant="base"
+                                        label={row.buttonName}
+                                        class="ssp-sort-table-btn ssp-button_base"
+                                        value={row.sfdcId}
+                                        onclick={handleClick}
+                                        name={row.buttonAction}
+                                    >
+                                    </lightning-button>
+                                    </template>
+                                </td>
+                                <td class="ssp-app-action-trash">
+                                    <template if:false={row.isReadOnly}>  <!-- 386073 only if false condition -->
+                                    <template if:true={row.trashAction}>
+                                    <img src={trashIcon} alt="delete"  class="ssp-trash-icon" onclick={handleThrashClick} data-id={row.sfdcId}/>
+                                    </template>
+                                    </template>
+                                </td>
+                               
+                            </template>
+                        </tr>
+                        </template>
+                        <template if:true={row.readStatus}>
+                        <tr class="ssp-message-center-table-row ssp-message-center-table-row-read ssp-bg_monoDelta" key={row.sfdcId}>
+                            <!-- For Announcement -->
+                            <template if:true={row.isAnnouncement}>
+                                <td class="ssp-app-details ssp-color_monoBody">
+                                    <p
+                                        class="ssp-color_monoOmega ssp-bg_monoAlpha ssp-message-center-table-tag ssp-fontFamily_popinBold"
+                                    >
+                                        {customLabel.sspMessageCenterAnnouncement}
+                                    </p>
+                                    <!-- if expiring -->
+                                    <template if:true={row.isExpiring}>
+                                        <p
+                                            class="ssp-color_monoOmega ssp-fontFamily_popinRegular ssp-italic"
+                                        >
+                                            {row.subject}
+                                        </p>
+                                    </template>
+                                    <!-- if not expiring -->
+                                    <template if:false={row.isExpiring}>
+                                        <p
+                                            class="ssp-color_monoOmega ssp-fontFamily_popinRegular"
+                                        >
+                                            {row.subject}
+                                        </p>
+                                    </template>
+                                    <p
+                                        class="ssp-app-details-child ssp-fontFamily_popinRegular"
+                                    >
+                                        {row.details}
+                                    </p>
+                                    <p
+                                        class="ssp-app-details-child ssp-fontFamily_popinRegular"
+                                    >
+                                        {customLabel.sspMessageCenterDateMessageReceived} {row.createdTimeStamp}
+                                    </p>
+                                </td>
+                                <td class="ssp-app-filter ssp-color_monoBody">
+                                    <!-- <div>{row.createdTimeStamp}</div> -->
+                                </td>
+                                <td
+                                    class="ssp-app-filter ssp-color_monoBody"
+                                ></td>
+                                <td class="ssp-app-action-trash">
+                                </td>
+                            </template>
+
+                            <!-- For System notifications -->
+                            <template if:true={row.isNotification}>
+                                <td class="ssp-app-details ssp-color_monoBody">
+                                    <!-- if expiring -->
+                                    <template if:true={row.isExpiring}>
+                                        <!-- if critical -->
+                                        <template if:true={row.isCritical}
+                                            ><p
+                                                class="ssp-color_redAlpha ssp-fontFamily_popinRegular ssp-italic"
+                                            >
+                                                {row.subject}
+                                            </p>
+                                        </template>
+                                        <!-- if Not critical -->
+                                        <template if:false={row.isCritical}
+                                            ><p
+                                                class="ssp-color_monoOmega ssp-fontFamily_popinRegular ssp-italic"
+                                            >
+                                                {row.subject}
+                                            </p>
+                                        </template>
+                                    </template>
+                                    <!-- if not expiring -->
+                                    <template if:false={row.isExpiring}>
+                                        <!-- if critical -->
+                                        <template if:true={row.isCritical}
+                                            ><p
+                                                class="ssp-color_redAlpha ssp-fontFamily_popinRegular "
+                                            >
+                                                {row.subject}
+                                            </p>
+                                        </template>
+                                        <!-- if Not critical -->
+                                        <template if:false={row.isCritical}
+                                            ><p
+                                                class="ssp-color_monoOmega ssp-fontFamily_popinRegular"
+                                            >
+                                                {row.subject}
+                                            </p>
+                                        </template>
+                                    </template>
+                                    <p
+                                        class="ssp-app-details-child ssp-fontFamily_popinRegular"
+                                    >
+                                        {row.details}
+                                    </p>
+                                    <p
+                                        class="ssp-app-details-child ssp-fontFamily_popinRegular"
+                                    >
+                                        {customLabel.sspMessageCenterDateMessageReceived} {row.createdTimeStamp}
+                                    </p>
+                                </td>
+                                <td class="ssp-app-filter ssp-color_monoBody">
+                                    <!-- <div>{row.createdTimeStamp}</div> -->
+                                </td>
+                                <td
+                                    class="ssp-app-filter ssp-color_monoBody"
+                                ></td>
+                                <td class="ssp-app-action-trash">
+                                </td>
+                            </template>
+                            <!-- For To do -->
+                            <template if:true={row.isToDo}>
+                               <!--  <p>read status {row.readStatus} false black one</p> -->
+                                <td class="ssp-app-details ssp-color_monoBody">
+                                    <p
+                                        class="ssp-color_monoOmega ssp-bg_monoAlpha ssp-message-center-table-tag ssp-fontFamily_popinBold"
+                                    >
+                                        {customLabel.sspMessageCenterToDo}
+                                    </p>
+                                    <!-- if expiring -->
+                                    <template if:true={row.isExpiring}>
+                                        <!-- if critical -->
+                                        <template if:true={row.isCritical}
+                                            ><p
+                                                class="ssp-color_redAlpha ssp-fontFamily_popinRegular ssp-italic"
+                                            >
+                                                {row.subject}
+                                            </p>
+                                        </template>
+                                        <!-- if Not critical -->
+                                        <template if:false={row.isCritical}
+                                            ><p
+                                                class="ssp-color_monoOmega ssp-fontFamily_popinRegular ssp-italic"
+                                            >
+                                                {row.subject}
+                                            </p>
+                                        </template>
+                                    </template>
+                                    <!-- if not expiring -->
+                                    <template if:false={row.isExpiring}>
+                                        <!-- if critical -->
+                                        <template if:true={row.isCritical}
+                                            ><p
+                                                class="ssp-color_redAlpha ssp-fontFamily_popinRegular "
+                                            >
+                                                {row.subject}
+                                            </p>
+                                        </template>
+                                        <!-- if Not critical -->
+                                        <template if:false={row.isCritical}
+                                            ><p
+                                                class="ssp-color_monoOmega ssp-fontFamily_popinRegular"
+                                            >
+                                                {row.subject}
+                                            </p>
+                                        </template>
+                                    </template>
+                                    <p
+                                        class="ssp-app-details-child ssp-fontFamily_popinRegular"
+                                    >
+                                        {row.details}
+                                    </p>
+                                    <p
+                                        class="ssp-app-details-child ssp-fontFamily_popinRegular"
+                                    >
+                                        {customLabel.sspMessageCenterDateMessageReceived} {row.createdTimeStamp}
+                                    </p>
+                                </td>
+                                <td class="ssp-app-filter ssp-color_monoBody">
+                                    <div>{row.dueDate}</div>
+                                </td>
+                               
+                               <td class="ssp-app-action">
+							   <template if:false={row.isReadOnly}> <!-- 386073 only if false condition -->
+                                   <div if:true = {row.showActionButton}>
+                                        <lightning-button
+                                            title={row.buttolAltText}
+                                            variant="base"
+                                            label={row.buttonName}
+                                            class="ssp-sort-table-btn ssp-button_base"
+                                            value={row.sfdcId}
+                                            onclick={handleClick}
+                                            name={row.buttonAction}
+                                        >
+                                        </lightning-button>
+                                    </div>
+									</template>
+                                </td>
+                                <td class="ssp-app-action-trash">
+                                    <template if:false={row.isReadOnly}> <!-- 386073 only if false condition -->
+                                    <template if:true={row.trashAction}>
+                                    <img src={trashIcon} alt="delete" class="ssp-trash-icon" onclick={handleThrashClick} data-id={row.sfdcId}/>
+                                    </template>
+                                  </template>
+                                </td>
+                            </template>
+                        </tr>
+                        </template>
+                    </template>
+                </tbody>
+            </table>
+        </div>
+        <!-- Mobile View -->
+        <div class="ssp-message-mobile-view s sp-fontFamily_popinBold">
+            <div class="ssp-message-tbl-header ssp-bg_monoAlpha ">
+                <template for:each={tableColumns} for:item="column">
+                    <span
+                        key={column}
+                        class="ssp-tbl-header-content ssp-message-center-table-header "
+                    >
+                        <span>{column.columnName}</span>
+                        <span
+                            class="ssp-action-image-container ssp-sort-image-container ssp-color_monoBody ssp-bg_white"
+                            if:true={column.isSort}
+                        >
+                            <a class={column} onclick={sortByKey}>
+                                <img
+                                    class="ssp-sort-image"
+                                    src={iconUrl}
+                                    alt="icon"
+                                />
+                            </a>
+                        </span>
+                    </span>
+                </template>
+            </div>
+            <template for:each={messageTableData} for:item="row">
+                <template if:false={row.readStatus}>
+                <div key={row.sfdcId} class="ssp-message-center-table-row">
+                    <!-- For Announcement -->
+                    <template if:true={row.isAnnouncement}>
+                        <div class="ssp-app-manager-details">
+                            <!-- For Expiring -->
+                            <p
+                                        class="ssp-color_monoOmega ssp-bg_monoAlpha ssp-message-center-table-tag ssp-fontFamily_popinBold"
+                                    >
+                                        {customLabel.sspMessageCenterAnnouncement}
+                                    </p>
+                            <template if:true={row.isExpiring}>
+                                
+                                <p
+                                    class="ssp-color_blueAlpha ssp-fontFamily_popinBold ssp-italic"
+                                >
+                                    {row.subject}
+                                </p>
+                            </template>
+                            <!-- For not Expiring -->
+                            <template if:false={row.isExpiring}>
+                                
+                                <p
+                                    class="ssp-color_blueAlpha ssp-fontFamily_popinBold"
+                                >
+                                    {row.subject}
+                                </p>
+                            </template>
+                            <p
+                                class="ssp-app-details-child2 ssp-color_monoBody ssp-fontFamily_popinRegular"
+                            >
+                                {row.details}
+                            </p>
+                            <p class="ssp-app-filter ssp-color_monoBody">
+                                {customLabel.sspMessageCenterDateMessageReceived} {row.createdTimeStamp}
+                            </p>
+                        </div>
+                        <div class="ssp-manager-filter-container">
+                            <p class="ssp-app-filter ssp-color_monoBody">
+                                <!-- {row.createdTimeStamp} -->
+                            </p>
+                        </div>
+                    </template>
+                    <!-- For System Notification -->
+                    <template if:true={row.isNotification}>
+                        <div class="ssp-app-manager-details">
+                            
+                            <!-- if expiring -->
+                            <template if:true={row.isExpiring}>
+                                <!-- if critical -->
+                                <template if:true={row.isCritical}
+                                    ><p
+                                        class="ssp-color_redAlpha ssp-fontFamily_popinBold ssp-italic"
+                                    >
+                                        {row.subject}
+                                    </p></template
+                                >
+                                <!-- if Not critical -->
+                                <template if:false={row.isCritical}
+                                    ><p
+                                        class="ssp-color_blueAlpha ssp-fontFamily_popinBold ssp-italic"
+                                    >
+                                        {row.subject}
+                                    </p></template
+                                >
+                            </template>
+                            <!-- if not expiring -->
+                            <template if:false={row.isExpiring}>
+                                <!-- if critical -->
+                                <template if:true={row.isCritical}
+                                    ><p
+                                        class="ssp-color_redAlpha ssp-fontFamily_popinBold"
+                                    >
+                                        {row.subject}
+                                    </p></template
+                                >
+                                <!-- if Not critical -->
+                                <template if:false={row.isCritical}
+                                    ><p
+                                        class="ssp-color_blueAlpha ssp-fontFamily_popinBold"
+                                    >
+                                        {row.subject}
+                                    </p></template
+                                >
+                            </template>
+                            <p
+                                class="ssp-app-details-child2 ssp-color_monoBody ssp-fontFamily_popinRegular"
+                            >
+                                {row.details}
+                            </p>
+                            <p
+                                class="ssp-app-details-child ssp-color_monoBody ssp-fontFamily_popinRegular"
+                            >
+                                {customLabel.sspMessageCenterDateMessageReceived} {row.createdTimeStamp}
+                            </p>
+                        </div>
+                        <div class="ssp-manager-filter-container">
+                            <p class="ssp-app-filter ssp-color_monoBody">
+                                <!-- {row.createdTimeStamp} -->
+                            </p>
+                        </div>
+                    </template>
+                    <!-- For To dO -->
+                    <template if:true={row.isToDo}>
+                        <div class="ssp-app-manager-details">
+                            <p
+                                        class="ssp-color_monoOmega ssp-bg_monoAlpha ssp-message-center-table-tag ssp-fontFamily_popinBold"
+                                    >
+                                        {customLabel.sspMessageCenterToDo}
+                                    </p>
+                            <!-- if expiring -->
+                            <template if:true={row.isExpiring}>
+                                <!-- if critical -->
+                                <template if:true={row.isCritical}
+                                    ><p
+                                        class="ssp-color_redAlpha ssp-fontFamily_popinBold ssp-italic"
+                                    >
+                                        {row.subject}
+                                    </p></template
+                                >
+                                <!-- if Not critical -->
+                                <template if:false={row.isCritical}
+                                    ><p
+                                        class="ssp-color_blueAlpha ssp-fontFamily_popinBold ssp-italic"
+                                    >
+                                        {row.subject}
+                                    </p></template
+                                >
+                            </template>
+                            <!-- if not expiring -->
+                            <template if:false={row.isExpiring}>
+                                <!-- if critical -->
+                                <template if:true={row.isCritical}
+                                    ><p
+                                        class="ssp-color_redAlpha ssp-fontFamily_popinBold"
+                                    >
+                                        {row.subject}
+                                    </p></template
+                                >
+                                <!-- if Not critical -->
+                                <template if:false={row.isCritical}
+                                    ><p
+                                        class="ssp-color_blueAlpha ssp-fontFamily_popinBold"
+                                    >
+                                        {row.subject}
+                                    </p></template
+                                >
+                            </template>
+                            <p
+                                class="ssp-app-details-child ssp-color_monoBody ssp-fontFamily_popinRegular"
+                            >
+                                {row.details}
+                            </p>
+                            <p
+                                class="ssp-app-details-child ssp-color_monoBody ssp-fontFamily_popinRegular"
+                            >
+                                {customLabel.sspMessageCenterDateMessageReceived} {row.createdTimeStamp}
+                            </p>
+                        </div>
+                        <div class="ssp-manager-filter-container">
+                            <p class="ssp-app-filter ssp-margin-top-twenty-two ssp-fontFamily_popinBold ssp-color_monoBody">
+                                {row.dueDate}
+                            </p>
+                        </div>
+                        <div class="ssp-sort-table-btn-container slds-grid slds-wrap">
+                            <template if:false={row.isReadOnly}>  <!-- 386073 only if false condition -->
+                            <lightning-button
+                                variant="base"
+                                label={row.mobileButtonName}
+                                name={row.mobileButtonAction}
+                                onclick={handleClick}
+                                value={row.sfdcId}
+                                class="ssp-sort-table-btn ssp-button_base ssp-message-table-button ssp-tableAction_button slds-size--10-of-12"
+                                title={row.mobileButtonAltText}
+                            ></lightning-button>
+                            <template if:true={row.trashAction}>
+                            <img src={trashIcon} alt="delete"  class="ssp-trash-icon-mobile slds-size--2-of-12" onclick={handleThrashClick} data-id={row.sfdcId} />
+                            </template>
+                            </template>
+                        </div>
+                    </template>
+                </div>
+                </template>
+                <template if:true={row.readStatus}>
+                <div key={row.sfdcId} class="ssp-message-center-table-row ssp-message-center-table-row-read ssp-bg_monoDelta">
+                    <!-- For Announcement -->
+                    <template if:true={row.isAnnouncement}>
+                        <div class="ssp-app-manager-details">
+                            <!-- For Expiring -->
+                            <p
+                                        class="ssp-color_monoOmega ssp-bg_monoAlpha ssp-message-center-table-tag ssp-fontFamily_popinBold"
+                                    >
+                                        {customLabel.sspMessageCenterAnnouncement}
+                                    </p>
+                            <template if:true={row.isExpiring}>
+                                
+                                <p
+                                    class="ssp-color_monoOmega ssp-fontFamily_popinRegular ssp-italic"
+                                >
+                                    {row.subject}
+                                </p>
+                            </template>
+                            <!-- For not Expiring -->
+                            <template if:false={row.isExpiring}>
+                                
+                                <p
+                                    class="ssp-color_monoOmega ssp-fontFamily_popinRegular"
+                                >
+                                    {row.subject}
+                                </p>
+                            </template>
+                            <p
+                                class="ssp-app-details-child2 ssp-color_monoBody ssp-fontFamily_popinRegular"
+                            >
+                                {row.details}
+                            </p>
+                            <p class="ssp-app-filter ssp-color_monoBody">
+                                {customLabel.sspMessageCenterDateMessageReceived} {row.createdTimeStamp}
+                            </p>
+                        </div>
+                        <div class="ssp-manager-filter-container">
+                            <p class="ssp-app-filter ssp-color_monoBody">
+                                <!-- {row.createdTimeStamp} -->
+                            </p>
+                        </div>
+                    </template>
+                    <!-- For System Notification -->
+                    <template if:true={row.isNotification}>
+                        <div class="ssp-app-manager-details">
+                            
+                            <!-- if expiring -->
+                            <template if:true={row.isExpiring}>
+                                <!-- if critical -->
+                                <template if:true={row.isCritical}
+                                    ><p
+                                        class="ssp-color_redAlpha ssp-fontFamily_popinRegular ssp-italic"
+                                    >
+                                        {row.subject}
+                                    </p></template
+                                >
+                                <!-- if Not critical -->
+                                <template if:false={row.isCritical}
+                                    ><p
+                                        class="ssp-color_monoOmega ssp-fontFamily_popinRegular ssp-italic"
+                                    >
+                                        {row.subject}
+                                    </p></template
+                                >
+                            </template>
+                            <!-- if not expiring -->
+                            <template if:false={row.isExpiring}>
+                                <!-- if critical -->
+                                <template if:true={row.isCritical}
+                                    ><p
+                                        class="ssp-color_redAlpha ssp-fontFamily_popinRegular"
+                                    >
+                                        {row.subject}
+                                    </p></template
+                                >
+                                <!-- if Not critical -->
+                                <template if:false={row.isCritical}
+                                    ><p
+                                        class="ssp-color_monoOmega ssp-fontFamily_popinRegular"
+                                    >
+                                        {row.subject}
+                                    </p></template
+                                >
+                            </template>
+                            <p
+                                class="ssp-app-details-child2 ssp-color_monoBody ssp-fontFamily_popinRegular"
+                            >
+                                {row.details}
+                            </p>
+                            <p
+                                class="ssp-app-details-child ssp-color_monoBody ssp-fontFamily_popinRegular"
+                            >
+                                {customLabel.sspMessageCenterDateMessageReceived} {row.createdTimeStamp}
+                            </p>
+                        </div>
+                        <div class="ssp-manager-filter-container">
+                            <p class="ssp-app-filter ssp-color_monoBody">
+                                <!-- {row.createdTimeStamp} -->
+                            </p>
+                        </div>
+                    </template>
+                    <!-- For To dO -->
+                    <template if:true={row.isToDo}>
+                        <div class="ssp-app-manager-details">
+                            <p
+                                        class="ssp-color_monoOmega ssp-bg_monoAlpha ssp-message-center-table-tag ssp-fontFamily_popinBold"
+                                    >
+                                        {customLabel.sspMessageCenterToDo}
+                                    </p>
+                            <!-- if expiring -->
+                            <template if:true={row.isExpiring}>
+                                <!-- if critical -->
+                                <template if:true={row.isCritical}
+                                    ><p
+                                        class="ssp-color_redAlpha ssp-fontFamily_popinRegular ssp-italic"
+                                    >
+                                        {row.subject}
+                                    </p></template
+                                >
+                                <!-- if Not critical -->
+                                <template if:false={row.isCritical}
+                                    ><p
+                                        class="ssp-color_monoOmega ssp-fontFamily_popinRegular ssp-italic"
+                                    >
+                                        {row.subject}
+                                    </p></template
+                                >
+                            </template>
+                            <!-- if not expiring -->
+                            <template if:false={row.isExpiring}>
+                                <!-- if critical -->
+                                <template if:true={row.isCritical}
+                                    ><p
+                                        class="ssp-color_redAlpha ssp-fontFamily_popinRegular"
+                                    >
+                                        {row.subject}
+                                    </p></template
+                                >
+                                <!-- if Not critical -->
+                                <template if:false={row.isCritical}
+                                    ><p
+                                        class="ssp-color_monoOmega ssp-fontFamily_popinRegular"
+                                    >
+                                        {row.subject}
+                                    </p></template
+                                >
+                            </template>
+                            <p
+                                class="ssp-app-details-child ssp-color_monoBody ssp-fontFamily_popinRegular"
+                            >
+                                {row.details}
+                            </p>
+                            <p
+                                class="ssp-app-details-child ssp-color_monoBody ssp-fontFamily_popinRegular"
+                            >
+                                {customLabel.sspMessageCenterDateMessageReceived} {row.createdTimeStamp}
+                            </p>
+                        </div>
+                        <div class="ssp-manager-filter-container">
+                            <p class="ssp-app-filter ssp-margin-top-twenty-two ssp-fontFamily_popinBold ssp-color_monoBody">
+                                {row.dueDate}
+                            </p>
+                        </div>
+                        <div class="ssp-sort-table-btn-container slds-grid slds-wrap">
+                            <template if:false={row.isReadOnly}>  <!-- 386073 only if false condition -->
+                            <lightning-button
+                                variant="base"
+                                label={row.mobileButtonName}
+                                name={row.mobileButtonAction}
+                                value={row.sfdcId}
+                                onclick={handleClick}
+                                class="ssp-sort-table-btn ssp-button_base ssp-message-table-button ssp-tableAction_button slds-size--10-of-12"
+                                title={row.mobileButtonAltText}
+                            ></lightning-button>
+                            <template if:true={row.trashAction}>
+                            <img src={trashIcon} alt="delete"  class="ssp-trash-icon-mobile slds-size--2-of-12" onclick={handleThrashClick} data-id={row.sfdcId} /></template>
+                    </template>
+                        </div>
+                    </template>
+                </div>
+                </template>
+                
+            </template>
+        </div>
+        </template>
+    </div>
+        <c-ssp-delete-application-modal application-id={applicationId} show-popup={showDeletePopUp} oncancel={handleDeleteCancel} onsuccess={handleDeleteSuccess}></c-ssp-delete-application-modal>
+    
+        <template if:true={authorizedRepresentativeAccessRequest}>
+                            <c-ssp-authorized-representative-access-request-modal onhideaccessrequestmodal ={hideAuthConsentModal} notification-id={authAssisterNotificationId}></c-ssp-authorized-representative-access-request-modal>
+                        </template>
+        <template if:true={AssisterAccessRequest}>
+
+                            <c-ssp-assister-access-request-modal 
+                            notification-id = {authAssisterNotificationId}
+                            onhideaccessrequestmodal ={hideAssisterConsentModal}>
+                            </c-ssp-assister-access-request-modal>
+                        </template>
+        <a href={customLabel.sspNoticeCardPhoneNumberLink}  aria-hidden="true" tabindex="-1" class="ssp-callPhone ssp-hideAnchorNoText" alt="Phone Number">{customLabel.sspNoticeCardPhoneNumberLink}</a>
+    </template>
+    
+</template>

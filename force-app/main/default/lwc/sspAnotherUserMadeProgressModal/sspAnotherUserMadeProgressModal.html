@@ -1,0 +1,45 @@
+<!--
+* name          : sspAnotherMadeProgressModal
+* @description  : This modal appears when a user enters the application flow after another user has accessed the application.
+* @author       : Chirag
+* @date         : 05/07/2020
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName                MM/DD/YYYY               A Brief Description about the Change
+-->
+
+<template>
+    <c-ssp-detailed-information-modal
+        header-value={label.sspAnotherUserHasMadeProgress}
+        open-model={openModel}
+        onclosemodal={closeModal}
+        reference={reference}
+        class="ssp-AnotherUserMadeProgress"
+    >
+        <div slot="contentSlot">
+            <div>
+                {label.sspAnotherUserHasMadeProgressContent}
+            </div>
+        </div>
+
+        <span slot="Footer" class="ssp-modalFooter ssp-stacked-btn-width">
+            <lightning-button
+                variant="brand"
+                label={label.sspContinue}
+                class="ssp-button_brand ssp-fontFamily_popinBold "
+                onclick={continueSummary}
+                title={label.sspContinueTheApplication}
+            ></lightning-button>
+            <div class="ssp-buttonContainer">
+                <lightning-button
+                    variant="neutral"
+                    label={label.sspExitApplication}
+                    class="ssp-button_base slds-m-top_medium ssp-fontFamily_popinBold"
+                    onclick={closeModal}
+                    title={label.sspExitTheApplication}
+                ></lightning-button>
+            </div>
+        </span>
+    </c-ssp-detailed-information-modal>
+</template>

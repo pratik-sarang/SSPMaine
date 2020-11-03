@@ -1,0 +1,139 @@
+<template>
+    <main role="main" class="ssp-flowcontainer">
+        <template if:true={showSpinner}>
+            <c-ssp-spinner></c-ssp-spinner>
+        </template>
+        <template if:true={isInit}>
+            <div class="ssp-flow-header">
+                <div
+                    class="sspHeadingBar slds-p-horizontal_xx-large slds-p-vertical_medium ssp-bg_appHeaderGradient slds-grid slds-wrap slds-grid_vertical-align-center"
+                >
+                    <div class="ssp-container_width slds-grid slds-wrap">
+                        <span
+                            class="ssp-fontFamily_popinBold ssp-color_monoBody ssp-flow-title"
+                        >
+                            {flowTitle}
+                        </span>
+                    </div>
+                </div>
+                <div class="ssp-errorToast" if:true={validationFailed}>
+                    <c-ssp-toast
+                        ssp-toast-title-val={labelPrescreening.toastErrorText}
+                        show-error-toast={trueValue}
+                        onhidetoast={hideToast}
+                    ></c-ssp-toast>
+                </div>
+
+                <template if:true={isImgTitle}>
+                    <div
+                        class="ssp-imgContainerHeading"
+                        style={imgContainerStyle}
+                    >
+                        <div
+                            class="ssp-imgElementsMargin ssp-container_width slds-grid slds-wrap"
+                        >
+                            <div class="ssp-imgElements">
+                                <div
+                                    class="ssp-imgElementsBigHeader ssp-color_monoBody slds-m-bottom_x-large ssp-fontFamily_popinBold"
+                                >
+                                    {pageTitle}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </template>
+
+                <div class="ssp-bodyContainer ssp-flow-page-title">
+                    <template if:false={isImgTitle}>
+                        <h1
+                            class="ssp-fontFamily_popinBlack ssp-color_blueAlpha ssp-margin-top_large"
+                        >
+                        {pageTitle}
+                    </h1>
+                    </template>
+                    <template if:false={isExcludedInProgress}>
+                        <div
+                            class="ssp-fontFamily_popinBold ssp-color_greenAlpha ssp-margin-bottom_large ssp-flow-progress-section"
+                        >
+                            <span>{progressSummary}</span>
+                            <div
+                                class="slds-progress-bar ssp-flow-progress-bar"
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                                aria-valuenow={progressPercent}
+                                role="progressbar"
+                            >
+                                <span
+                                    class="slds-progress-bar__value ssp-bg_greenAlpha ssp-flow-progress-bar-value"
+                                    style={progressBarStyle}
+                                >
+                                    <span class="slds-assistive-text"
+                                        >Progress: {progressPercent}%</span
+                                    >
+                                </span>
+                            </div>
+                        </div>
+                    </template>
+                    <p
+                        class="ssp-fontFamily_ArvoRegular ssp-color_monoOmega slds-m-top_x-large ssp-margin-bottom_large ssp-flow-page-instr"
+                    >
+                        {pageSubtitle}
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="ssp-bodyContainer ssp-flow-body">
+                <template if:true={isNewPageLoad}>
+                    <div
+                        onlinkclick={handleLinkClick}
+                        onfieldchange={handleFieldChange}
+                    >
+                        <c-json-schema-page
+                            nav-flow-page-config={navFlowPageConfig}
+                            object-schema={objectSchema}
+                            layout-schema={layoutSchema}
+                            all-fields={allFields}
+                            object-data={objectData}
+                            custom-labels={labelPrescreening}
+                            rendering-cond={renderingCond}
+                            disable-cond={disableCond}
+                        >
+                        </c-json-schema-page>
+                    </div>
+                </template>
+            </div>
+
+            <div class="ssp-bodyContainer ssp-flow-footer">
+                <div onnavbuttonclick={handleNavButtonClick}>
+                    <c-json-flow-nav-buttons
+                        cur-page-index={curPageIndex}
+                        nav-flow-page-config={navFlowPageConfig}
+                        custom-labels={labelPrescreening}
+                        layout-schema={layoutSchema}
+                        object-data={objectData}
+                        all-fields={allFields}
+                        rendering-cond={renderingCond}
+                        disable-cond={disableCond}
+                    >
+                    </c-json-flow-nav-buttons>
+                </div>
+
+            </div>
+
+            <template if:true={showModalWindow}>
+                <c-ssp-detailed-information-modal
+                    open-model={showModalWindow}
+                    header-value={modalHeader}
+                    onclosemodal={handleCloseModal}
+                >
+                    <span slot="contentSlot">
+                        <lightning-formatted-rich-text value={modalBody}>
+                        </lightning-formatted-rich-text>
+                    </span>
+                    <span slot="Footer">{modalFooter}</span>
+                </c-ssp-detailed-information-modal>
+            </template>
+        </template>
+    </main>
+</template>

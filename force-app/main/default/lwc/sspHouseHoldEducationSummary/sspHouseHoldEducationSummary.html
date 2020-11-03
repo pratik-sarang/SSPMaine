@@ -1,0 +1,194 @@
+<!--
+* Name : SspHouseHoldEducationSummary. 
+* Description : Template show and add education details about house hold members. 
+* Author : Ajay Saini.
+* Date : 11/12/2019.
+-->
+<template>
+    <template if:true={showSpinner}>
+        <c-ssp-spinner></c-ssp-spinner>
+    </template>
+    <template if:true={isDataLoaded}>
+    <div if:true={isPageAccessible} class="ssp-education-summary-container ssp-bodyContainer">
+        <template if:true={showSummaryScreen}>
+            <div class="slds-m-top_medium slds-m-bottom_x-large">
+                <p
+                    class="ssp-fontFamily_ArvoRegular ssp-color_monoOmega slds-m-top_x-large"
+                >
+                    {educationSummaryLabel}
+                </p>
+                <a
+                    class="ssp-fontFamily_popinBold ssp-color_monoBody"
+                    href="javascript:void(0)"
+                    onclick={learnMoreModal}
+                    title={label.learnMoreEducationTitleText}
+                    role="button"
+                    tabindex="0"
+                >
+                    {label.learnMoreLink}
+                </a>
+                <div class="ssp-head-household">
+                    <div class="ssp-fontFamily_popinBold ssp-color_blueAlpha ssp-h3">
+                        {label.highestLevelEducationCompleted}
+                    </div>
+                    <div class="slds-m-top_medium ssp-highest-education" if:false={hideHighestEducationTile}>
+                        <!--CD2 2.5 Security Role Matrix and Program Access - adding disabled and canDelete property-->
+                        <c-ssp-selection-card-with-remove-icon
+                            button-alt-text={highestEducationTileTitle}
+                            remove-modal-heading={label.highestEducationDeleteModalHeading}
+                            display-edit={isHighestEducationDataPresent}
+                            hide-remove-icon={hideHighestEducationDelete}
+                            onremove={handleHighestEducationDelete}
+                            oncardaction={handleHighestEducationEdit}
+                            disabled = {disableHighestEducationDetails}
+                            can-delete = {canDeleteHighestEducation}
+                            is-view-button-visible={isHighestDetailScreenReadOnly}
+                            view-button-alt-text={viewButtonAltText1}
+                        >
+                            <div slot="cardContent">
+                                <p
+                                    class="ssp-selectionCardActionTitle ssp-fontFamily_popinBold ssp-word-break-all"
+                                >
+                                    {highestEducationCardTitle}
+                                </p>
+                                <p
+                                    class="ssp-selectionCardActionBlue ssp-fontFamily_popinBold ssp-color_blueAlpha ssp-word-break-all"
+                                >
+                                    {highestEducationCardSubtitle}
+                                </p>
+                            </div>
+                        </c-ssp-selection-card-with-remove-icon>
+                    </div>
+                    <template if:true={isEnrolledInSchool}>
+                    <div class="ssp-member-household">
+                        <h3
+                            class="ssp-fontFamily_popinBold ssp-color_blueAlpha slds-m-bottom_medium"
+                        >
+                            {label.currentEducation}
+                        </h3>
+                            <template if:false={showCurrentEducationStartTileGetter}>
+                            
+                        <!--CD2 2.5 Security Role Matrix and Program Access - adding disabled and canDelete property-->
+                        <div class="ssp-add-button">
+                            <lightning-button
+                                variant="brand"
+                                label={label.addCurrentEducation}
+                                title={label.addEducationButtonTitleText}
+                                onclick={handleAttendanceAdd}
+                                class="ssp-button_brand ssp-cardButton"
+                                disabled = {disableCurrentEducationDetails}
+                            ></lightning-button>
+                        </div>
+                            </template>
+                            <template if:true={showCurrentEducationStartTileGetter}>
+                            <div class="slds-p-right_x-large">
+                                <!--CD2 2.5 Security Role Matrix and Program Access - adding disabled and canDelete property-->
+                                <c-ssp-selection-card-without-remove-icon
+                                            display-edit={isCurrentEducationDataPresent}
+                                            onbuttonclick={handleAttendanceAdd}
+                                            button-alt-text={currentEducationTileTitle}
+                                            disabled = {disableCurrentEducationDetails}
+                                            is-view-button-visible={isCurrentDetailScreenReadOnly}
+                                            view-button-alt-text={currentEducationViewButtonTitle}
+                                >
+                                 <div slot="cardContent">
+                                                <p
+                                                    class="ssp-selectionCardActionTitle ssp-fontFamily_popinBold slds-m-left_xx-small ssp-word-break-all"
+                                                >
+                                                    {label.currentEducation}
+                                                </p>
+                                 </div>
+                            </c-ssp-selection-card-without-remove-icon>
+                            </div>
+                            </template>
+                            <template if:false={showCurrentEducationStartTileGetter}
+                            for:each={attendanceRecords}
+                            for:item="attendanceRecord"
+                        >
+                            <div
+                                key={attendanceRecord.Id}
+                                class="ssp-selectionCardActionContainer slds-m-vertical_medium"
+                            >
+                            <!--CD2 2.5 Security Role Matrix and Program Access - adding disabled and canDelete property-->
+                                <c-ssp-selection-card-with-remove-icon
+                                    display-edit={displayAttendanceEdit}
+                                    oncardaction={handleAttendanceEdit}
+                                    onremove={handleAttendanceDelete}
+                                    button-alt-text={attendanceRecord.buttonAltText}
+                                    remove-alt-text={attendanceRecord.deleteAltText}
+                                    remove-modal-heading={label.currentEducationDeleteModalHeading}
+                                    obj-card={attendanceRecord.Id}
+                                    data-record={attendanceRecord.DCId__c}
+                                    disabled = {disableCurrentEducationDetails}
+                                    can-delete = {canDeleteCurrentEducation}
+                                    is-view-button-visible={isCurrentDetailScreenReadOnly}
+                                    view-button-alt-text={attendanceRecord.viewButtonAltText}
+                                >
+                                    <div slot="cardContent">
+                                        <p
+                                            class="ssp-selectionCardActionTitle ssp-fontFamily_popinBold ssp-word-break-all"
+                                        >
+                                            {attendanceRecord.title}
+                                        </p>
+                                        <p
+                                            class="ssp-selectionCardActionBlue ssp-fontFamily_popinBold ssp-color_blueAlpha ssp-word-break-all"
+                                        >
+                                            {attendanceRecord.subtitle}
+                                        </p>
+                                    </div>
+                                </c-ssp-selection-card-with-remove-icon>
+                            </div>
+                        </template>
+                    </div>
+                    </template>
+                </div>
+            </div>
+        </template>
+        <template if:true={showHighestEducationScreen}>
+            <c-ssp-highest-education-detail
+                programs-applied={programsApplied}
+                member-id={memberId}
+                    is-teen-parent={isTeenParent}
+                today={today}
+                onsavedetail={handleHighestEducationSave}
+                oncanceldetail={handleHighestEducationCancel}
+            ></c-ssp-highest-education-detail>
+        </template>
+        <template if:true={showCurrentEducationScreen}>
+            <c-ssp-current-education-detail
+                programs-applied={programsApplied}
+                is-teen-parent={isTeenParent}
+                member-id={memberId}
+                application-id={applicationId}
+                today={today}
+                record-id={currentAttendanceRecordId}
+                onsavedetail={handleAttendanceSave}
+                oncanceldetail={handleAttendanceCancel} 
+                onreviewworkstudyprog = {handleReviewRequiredRules}               
+            >
+            </c-ssp-current-education-detail>
+        </template>
+    </div>
+    </template>
+    <c-ssp-detailed-information-modal
+        if:true={showLearnMore}
+        header-value={label.learnMoreLink}
+        open-model={showLearnMore}
+        onclosemodal={closeLearnMoreModal}
+        reference={reference}
+    >
+        <p slot="contentSlot" class="ssp-learnMore"></p>
+    </c-ssp-detailed-information-modal>
+
+    <c-ssp-toast
+        if:true={showToast}
+        ssp-toast-title-val={label.toastErrorText}
+        onhidetoast={handleHideToast}
+        show-error-toast={showToast}
+    >
+    </c-ssp-toast>
+    <!-- CD2 2.5 Security Role Matrix. -->
+    <template if:true={showAccessDeniedComponent}>
+        <c-ssp-access-denied></c-ssp-access-denied>
+    </template>
+</template>

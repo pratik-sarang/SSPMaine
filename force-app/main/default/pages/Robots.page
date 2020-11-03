@@ -1,0 +1,61 @@
+<!--***************************************************************************************** * 
+NAME : Robots * 
+DESCRIPTION : This VF page is used only for PROD – For site to appear on google search....** 
+@DATE 03/14/2010 
+***********************************************************************************************-->
+<apex:page contentType="text/plain">
+User-agent: *
+Disallow: */activity-dashboard
+Disallow: */add-location-resource
+Disallow: */archetype
+Disallow: */assessment
+Disallow: */assessment-results
+Disallow: */citizen-assessment
+Disallow: */client-one-view
+Disallow: */clients
+Disallow: */confirm-status
+Disallow: */consent
+Disallow: */consent-update
+Disallow: */create-referral
+Disallow: */edit-resource
+Disallow: */edit-resource-location
+Disallow: */feedbackmodal
+Disallow: */gacookiepolicy
+Disallow: */get-started
+Disallow: */Guest Assessment
+Disallow: */Help
+Disallow: */locationdetails
+Disallow: */login-redirect
+Disallow: */map
+Disallow: */my-account
+Disallow: */my-learning
+Disallow: */my-favorites
+Disallow: */my-plan
+Disallow: */newlocation
+Disallow: */onboarding-training
+Disallow: */organization-details
+Disallow: */our-resources
+Disallow: */our-team
+Disallow: */privacy-policy
+Disallow: */referraldashboard
+Disallow: */referral-inbox
+Disallow: */referral-outbox
+Disallow: */report
+Disallow: */report-concern
+Disallow: */search-results
+Disallow: */searchorganization
+Disallow: */suggest-edit
+Disallow: */tabnavigation
+Disallow: */terms-of-use
+Disallow: */user-agreement
+Disallow: */verbal-consent
+Disallow: */viewdatatable
+Allow: /
+Allow: /s
+Allow: /s/claimsiterequest
+Allow: /s/landing-page
+Allow: /s/resource-details
+
+Sitemap: http://resources.ky.gov/s/sitemap.xml
+
+</apex:page>

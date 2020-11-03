@@ -1,0 +1,4 @@
+<apex:page showheader="false" sidebar="false" >
+    <br/>
+    <h1 class="slds-text-align_center">Access Denied</h1>
+</apex:page>

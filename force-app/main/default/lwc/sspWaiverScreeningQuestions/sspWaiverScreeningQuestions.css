@@ -1,0 +1,67 @@
+.ssp-shortHeading {
+    padding: 1.25rem 1.875rem;
+    margin-bottom: 3px;
+}
+
+.ssp-appCardOrangeTitle {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    text-transform: uppercase;
+}
+
+.ssp-headingSignaturePage {
+    font-size: 2.625rem;
+    line-height: 3rem;
+}
+
+.ssp-greyUnderline {
+    height: .3125rem;
+    border-radius: .15625rem;
+}
+
+.ssp-margin-bottom_thirty {
+    margin-bottom: 1.875rem;
+}
+
+.ssp-waiverContent {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.ssp-waiverScreenQuestContainer {
+    margin: 60px auto;
+}
+
+.ssp-add-auth-rep-btns {
+    margin-top: 4.675rem;
+}
+
+.ssp-learnMore_link {
+    font-size: 0.8125rem;
+    line-height: 1.875rem;
+    height: 1.5rem;
+    letter-spacing: -0.01875rem;
+    text-decoration: underline;
+    text-underline-position: under;
+    margin-bottom: 1.875rem;
+    display: inline-block;
+}
+
+@media only screen and (max-width: 768px) {
+    .ssp-SnapContactInformationContainer .ssp-cancel-btn {
+        width: 100%;
+    } 
+
+    .ssp-headingSignaturePage {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+
+    .ssp-waiverOrder_1 {
+        order: 1;
+    }
+
+    .ssp-waiverOrder_2 {
+        order: 2;
+    }
+}

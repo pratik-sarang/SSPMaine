@@ -1,0 +1,30 @@
+.ssp-generalCard {
+    border-radius: 6px;
+    padding: 30px;
+}
+
+.ssp-generalCardTitle {
+    font-size: 1.125rem;
+    line-height: 24px;
+    letter-spacing: -0.3px;
+    margin-bottom: 15px;
+}
+
+.ssp-generalCardContent {
+    font-size: 1rem;
+    line-height: 24px;
+    margin-bottom: 50px;
+}
+
+.ssp-generalCardFooter>a {
+    font-size: 1rem;
+    line-height: 24px;
+    letter-spacing: -0.3px;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .ssp-generalCard {
+        padding: 24px;
+    }
+}

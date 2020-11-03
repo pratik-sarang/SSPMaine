@@ -1,0 +1,679 @@
+<!-- 
+* name 		      : sspGetStartedBenefitsApplication
+* @description 	  : This screen is used to Get Started on the Benefits Application 
+* @author 		  : Sharon
+* @date           : 02/13/2020
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* Kyathi                        5/15/2020                           Program changes
+-->
+<template>
+    <!--Added by Shrikant - Multiple Roles 4.1.2 - CD2-->
+    <template if:true={showSpinner}>
+        <c-ssp-spinner> </c-ssp-spinner>
+    </template>
+    <main class="ssp-getStartedBenefits">
+        <div
+            class="ssp-getStartedBenefitsBanner ssp-getStartedBenefitsBgOverlay"
+        >
+            <div class="slds-p-horizontal_xx-large ssp-mobileHorizontalPadding">
+                <div class="ssp-container_width slds-grid slds-wrap">
+                    <div
+                        class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-large-size_4-of-12"
+                    >
+                        <h1
+                            class="ssp-getStartedBenefitsText ssp-fontFamily_popinBold ssp-color_monoBody ssp-color_monoBody"
+                        >
+                            {label.sspGetStartedBenefitsApplicationHeading}
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div
+            class="slds-p-horizontal_xx-large ssp-mobileHorizontalPadding ssp-applyFollowContainer"
+        >
+            <div class="ssp-container_width slds-grid slds-wrap">
+                <div
+                    class="slds-col ssp-applyFollowCardContainer slds-size_1-of-1"
+                >
+                    <c-ssp-general-notice-card>
+                        <div
+                            class="ssp-cardContentContainer ssp-fontFamily_popinRegular"
+                        >
+                            <p
+                                if:true={isToShowIfAlreadyAssociatedText}
+                                class="ssp-fontFamily_popinBold ssp-color_blueAlpha  ssp-startBenefitsAppYouApplyTitle"
+                            >
+                                {label.sspGetStartedBenefitsContent1}
+                            </p>
+                            <p
+                                class="ssp-fontFamily_popinBold ssp-color_monoBody ssp-startBenefitsAppYouApplyTitle ssp-marginTopFifteen"
+                            >
+                                {label.sspStartBenefitsAppYouApply}
+                            </p>
+                            <div
+                                class="ssp-card_content ssp-marginTopFifteen ssp-ctaCardTitleMarginMob"
+                            >
+                                <div class="slds-grid slds-wrap">
+                                    <ul
+                                        class="slds-col slds-size_1-of-1 ssp-programWrapperContainer"
+                                    >
+                                        <li
+                                            class="ssp-getBenefitsList"
+                                            if:true={roleProgramAccess.MA.renderElement}
+                                        >
+                                            <div
+                                                class="ssp-fontFamily_popinBold ssp-color_blueAlpha ssp-displayInlineBlock ssp-getBenefitsNum"
+                                            >
+                                                <span
+                                                    >{roleProgramAccess.MA.sequence}</span
+                                                >
+                                            </div>
+                                            <div class="ssp-displayInlineBlock">
+                                                <p
+                                                    class="slds-col ssp-paddingLeftFifteen ssp-fontFamily_ArvoRegular ssp-color_monoBody ssp-getBenefitApplyTitle"
+                                                >
+                                                    {label.sspStartBenefitsAppHealthAssistanceTitle}
+                                                </p>
+                                                <p
+                                                    class="slds-col ssp-paddingLeftFifteen ssp-color_monoOmega ssp-getBenefitSubContent"
+                                                >
+                                                    {label.sspStartBenefitsAppHealthAssistanceText}
+                                                    <span
+                                                        class="ssp-fontFamily_popinBold ssp-color_monoBody"
+                                                        >{label.sspStartBenefitsAppKCHIP}</span
+                                                    >
+                                                    {label.sspStartBenefitsAppCloseParenthesis}
+                                                </p>
+                                            </div>
+                                        </li>
+                                        <li
+                                            class="ssp-getBenefitsList"
+                                            if:true={roleProgramAccess.KP.renderElement}
+                                        >
+                                            <div
+                                                class="ssp-fontFamily_popinBold ssp-color_blueAlpha ssp-displayInlineBlock ssp-getBenefitsNum"
+                                            >
+                                                <span
+                                                    >{roleProgramAccess.KP.sequence}</span
+                                                >
+                                            </div>
+                                            <div class="ssp-displayInlineBlock">
+                                                <p
+                                                    class="slds-col ssp-paddingLeftFifteen ssp-fontFamily_ArvoRegular ssp-color_monoBody ssp-getBenefitApplyTitle"
+                                                >
+                                                    {label.sspStartBenefitsAppHealthInsuranceTitle}
+                                                </p>
+                                                <p
+                                                    class="slds-col ssp-paddingLeftFifteen ssp-color_monoOmega ssp-getBenefitSubContent"
+                                                >
+                                                    {label.sspStartBenefitsAppHealthInsuranceText}
+                                                    <span
+                                                        class="ssp-fontFamily_popinBold ssp-color_monoBody"
+                                                        >{label.sspStartBenefitsAppHealthAssistanceKIHIP}</span
+                                                    >
+                                                    {label.sspStartBenefitsAppCloseParenthesis}
+                                                </p>
+                                            </div>
+                                        </li>
+                                        <li
+                                            class="ssp-getBenefitsList"
+                                            if:true={roleProgramAccess.SN.renderElement}
+                                        >
+                                            <div
+                                                class="ssp-fontFamily_popinBold ssp-color_blueAlpha ssp-displayInlineBlock ssp-getBenefitsNum"
+                                            >
+                                                <span
+                                                    >{roleProgramAccess.SN.sequence}</span
+                                                >
+                                            </div>
+                                            <div class="ssp-displayInlineBlock">
+                                                <p
+                                                    class="slds-col ssp-paddingLeftFifteen ssp-fontFamily_ArvoRegular ssp-color_monoBody ssp-getBenefitApplyTitle"
+                                                >
+                                                    {label.sspStartBenefitsAppFoodAssistanceTitle}
+                                                </p>
+                                                <p
+                                                    class="slds-col ssp-paddingLeftFifteen ssp-color_monoOmega ssp-getBenefitSubContent"
+                                                >
+                                                    {label.sspStartBenefitsAppFoodAssistanceText}
+                                                    <span
+                                                        class="ssp-fontFamily_popinBold ssp-color_monoBody"
+                                                        >{label.sspStartBenefitsAppSNAP}</span
+                                                    >
+                                                    {label.sspStartBenefitsAppCloseParenthesis}
+                                                </p>
+                                            </div>
+                                        </li>
+                                        <li
+                                            class="ssp-getBenefitsList"
+                                            if:true={roleProgramAccess.KT.renderElement}
+                                        >
+                                            <div
+                                                class="ssp-fontFamily_popinBold ssp-color_blueAlpha ssp-displayInlineBlock ssp-getBenefitsNum"
+                                            >
+                                                <span
+                                                    >{roleProgramAccess.KT.sequence}</span
+                                                >
+                                            </div>
+                                            <div class="ssp-displayInlineBlock">
+                                                <p
+                                                    class="slds-col ssp-paddingLeftFifteen ssp-fontFamily_ArvoRegular ssp-color_monoBody ssp-getBenefitApplyTitle"
+                                                >
+                                                    {label.sspStartBenefitsAppFinanceAssistanceTitle}
+                                                </p>
+                                                <p
+                                                    class="slds-col ssp-paddingLeftFifteen ssp-color_monoOmega ssp-getBenefitSubContent"
+                                                >
+                                                    {label.sspStartBenefitsAppFinanceAssistanceText}
+                                                    <span
+                                                        class="ssp-fontFamily_popinBold ssp-color_monoBody"
+                                                        >{label.sspStartBenefitsAppKTAP}</span
+                                                    >
+                                                    {label.sspStartBenefitsAppCloseParenthesis}
+                                                </p>
+                                            </div>
+                                        </li>
+                                        <li
+                                            class="ssp-getBenefitsList"
+                                            if:true={roleProgramAccess.CC.renderElement}
+                                        >
+                                            <div
+                                                class="ssp-fontFamily_popinBold ssp-color_blueAlpha ssp-displayInlineBlock ssp-getBenefitsNum"
+                                            >
+                                                <span
+                                                    >{roleProgramAccess.CC.sequence}</span
+                                                >
+                                            </div>
+                                            <div class="ssp-displayInlineBlock">
+                                                <p
+                                                    class="slds-col ssp-paddingLeftFifteen ssp-fontFamily_ArvoRegular ssp-color_monoBody ssp-getBenefitApplyTitle"
+                                                >
+                                                    {label.sspStartBenefitsAppChildAssistanceTitle}
+                                                </p>
+                                                <p
+                                                    class="slds-col ssp-paddingLeftFifteen ssp-color_monoOmega ssp-getBenefitSubContent"
+                                                >
+                                                    {label.sspStartBenefitsAppChildAssistanceText}
+                                                    <span
+                                                        class="ssp-fontFamily_popinBold ssp-color_monoBody"
+                                                        >{label.sspStartBenefitsAppCCAP}</span
+                                                    >
+                                                    {label.sspStartBenefitsAppCloseParenthesis}
+                                                </p>
+                                            </div>
+                                        </li>
+                                        <li
+                                            if:true={roleProgramAccess.SS.renderElement}
+                                            class="ssp-getBenefitsList"
+                                        >
+                                            <div
+                                                class="ssp-fontFamily_popinBold ssp-color_blueAlpha ssp-displayInlineBlock ssp-getBenefitsNum"
+                                            >
+                                                <span
+                                                    >{roleProgramAccess.SS.sequence}</span
+                                                >
+                                            </div>
+                                            <div class="ssp-displayInlineBlock">
+                                                <p
+                                                    class="slds-col ssp-paddingLeftFifteen ssp-fontFamily_ArvoRegular ssp-color_monoBody ssp-getBenefitApplyTitle"
+                                                >
+                                                    {label.sspStateSupplementation}
+                                                </p>
+                                            </div>
+                                        </li>
+                                        <li
+                                            if:true={roleProgramAccess.PE.renderElement}
+                                            class="ssp-getBenefitsList ssp-height30"
+                                        >
+                                            <div
+                                                class="ssp-fontFamily_popinBold ssp-color_blueAlpha ssp-displayInlineBlock ssp-getBenefitsNum"
+                                            >
+                                                <span
+                                                    >{roleProgramAccess.PE.sequence}</span
+                                                >
+                                            </div>
+                                            <div class="ssp-displayInlineBlock">
+                                                <p
+                                                    class="slds-col ssp-paddingLeftFifteen ssp-fontFamily_ArvoRegular ssp-color_monoBody ssp-getBenefitApplyTitle"
+                                                >
+                                                    {label.sspPresumptiveEligibility}
+                                                </p>
+                                            </div>
+                                        </li>
+                                        <li
+                                            if:true={roleProgramAccess.BCCTP.renderElement}
+                                            class="ssp-getBenefitsList ssp-height30"
+                                        >
+                                            <div
+                                                class="ssp-fontFamily_popinBold ssp-color_blueAlpha ssp-displayInlineBlock ssp-getBenefitsNum"
+                                            >
+                                                <span
+                                                    >{roleProgramAccess.BCCTP.sequence}</span
+                                                >
+                                            </div>
+                                            <div class="ssp-displayInlineBlock">
+                                                <p
+                                                    class="slds-col ssp-paddingLeftFifteen ssp-fontFamily_ArvoRegular ssp-color_monoBody ssp-getBenefitApplyTitle"
+                                                >
+                                                    {label.sspCancerTreatmentProgram}
+                                                </p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="ssp-getStartedBenefitsLearn">
+                                        <a
+                                            href="javascript:void(0)"
+                                            class="ssp-getStartedBenefitsLearnText ssp-color_blueAlpha ssp-fontFamily_popinBold"
+                                            onclick={openLearnMoreModal}
+                                            title={label.sspStartBenefitsAppAlternateText}
+                                        >
+                                            {label.sspResourceSelectionLearnMore}
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </c-ssp-general-notice-card>
+                </div>
+                <div class="slds-col slds-size_1-of-1">
+                    <div class="ssp-getBenefitsThreeFourthContainer">
+                        <!-- Added by kyathi for defect 397691-->
+                        <div if:true={showMWMABanner} class="ssp-getStartedBenefitsBannerText slds-p-top_xx-large">
+                            <c-ssp-warning-notice-card >
+                                <p>{label.sspGetStartedBannerText}</p>
+                            </c-ssp-warning-notice-card>
+                        </div>
+                        <div class="ssp-getBenefitsVideoMainContainer">
+                            <div class="ssp-videoContainerSubText">
+                                <p
+                                    class="ssp-fontFamily_popinBold ssp-color_monoBody"
+                                >
+                                    {label.sspStartBenefitsAppKnowVideo}
+                                </p>
+                            </div>
+                            <div class="ssp-getBenefitsVideoContainer">
+                                <iframe
+                                    title="Benefind"
+                                    role="Benefind"
+                                    aria-label="Benefind"
+                                    allowfullscreen="true"
+                                    scrolling="no"
+                                    src={label.sspLMSVideoUrl}
+                                    class="ssp-video"
+                                ></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_1-of-1">
+                    <div
+                        class="ssp-getBenefitsThreeFourthContainer ssp-getBenefitsPaddingVSixty ssp-beforeStartedMainContainer"
+                    >
+                        <div class="ssp-beforeStartedContainer">
+                            <!-- <h4 class="ssp-color_blueAlpha ssp-fontFamily_popinBold ssp-marginBottomFifteen ssp-beforeStartedTitle">Before you get started</h4> -->
+                            <p
+                                if:true={allProgramExceptPAAndBCCPT}
+                                class="ssp-marginBottomThirty ssp-fontFamily_ArvoRegular ssp-color_monoOmega ssp-beforeStartedContent"
+                            >
+                                {label.sspStartBenefitsAppBeforePartOne}
+                            </p>
+                            <p
+                                if:true={allProgramExceptPAAndBCCPT}
+                                class="ssp-marginBottomThirty ssp-fontFamily_ArvoRegular ssp-color_monoOmega ssp-beforeStartedContent"
+                            >
+                                {label.sspStartBenefitsAppBeforePartTwo}
+                            </p>
+                            <div
+                                class="slds-grid slds-wrap ssp-beforeStartedContentContainer"
+                            >
+                                <div
+                                    if:true={allProgramExceptPAAndBCCPT}
+                                    class="slds-col slds-size_1-of-1 slds-large-size_4-of-12 ssp-beforeStartOneThirdContainer"
+                                >
+                                    <div
+                                        class="ssp-marginBottomFifteen ssp-beforeStartContentIcon"
+                                    >
+                                        <img
+                                            class="ssp-iconSize"
+                                            src={icFileIcon}
+                                            aria-hidden="true"
+                                            role="presentation"
+                                            alt="get started benefits Application"
+                                        />
+                                    </div>
+                                    <div class="ssp-beforeStartIconContent">
+                                        <p
+                                            class="ssp-fontFamily_popinBold ssp-color_monoBody ssp-beforeStartCardTitle"
+                                        >
+                                            {label.sspStartBenefitsAppGatherTitle}
+                                        </p>
+                                        <ol class="ssp-color_blueAlpha">
+                                            <li
+                                                class="ssp-fontFamily_popinBold"
+                                            >
+                                                <span
+                                                    class="ssp-fontFamily_ArvoRegular ssp-color_monoBody"
+                                                    >{label.sspStartBenefitsAppGatherTextOne}</span
+                                                >
+                                            </li>
+                                            <li
+                                                class="ssp-fontFamily_popinBold"
+                                            >
+                                                <span
+                                                    class="ssp-fontFamily_ArvoRegular ssp-color_monoBody"
+                                                    >{label.sspStartBenefitsAppGatherTextTwo}</span
+                                                >
+                                            </li>
+                                            <li
+                                                class="ssp-fontFamily_popinBold"
+                                            >
+                                                <span
+                                                    class="ssp-fontFamily_ArvoRegular ssp-color_monoBody"
+                                                    >{label.sspStartBenefitsAppGatherTextThree}</span
+                                                >
+                                            </li>
+                                            <li
+                                                class="ssp-fontFamily_popinBold"
+                                            >
+                                                <span
+                                                    class="ssp-fontFamily_ArvoRegular ssp-color_monoBody"
+                                                    >{label.sspStartBenefitsAppGatherTextFour}</span
+                                                >
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </div>
+                                <div
+                                    class="slds-col slds-size_1-of-1 slds-large-size_4-of-12 ssp-beforeStartOneThirdContainer"
+                                >
+                                    <div
+                                        class="ssp-marginBottomFifteen ssp-beforeStartContentIcon"
+                                    >
+                                        <img
+                                            class="ssp-iconSize"
+                                            src={icPencilIcon}
+                                            aria-hidden="true"
+                                            role="presentation"
+                                            alt="get started benefits Application"
+                                        />
+                                    </div>
+                                    <div class="ssp-beforeStartIconContent">
+                                        <p
+                                            class="ssp-fontFamily_popinBold ssp-color_monoBody ssp-beforeStartCardTitle"
+                                        >
+                                            {label.sspStartBenefitsAppFillTitle}
+                                        </p>
+                                        <ol
+                                            if:true={allProgramExceptPAAndBCCPT}
+                                            class="ssp-color_blueAlpha"
+                                        >
+                                            <li
+                                                class="ssp-fontFamily_popinBold"
+                                            >
+                                                <span
+                                                    class="ssp-fontFamily_ArvoRegular ssp-color_monoBody"
+                                                    >{label.sspStartBenefitsAppFillTextOne}</span
+                                                >
+                                            </li>
+                                            <li
+                                                class="ssp-fontFamily_popinBold"
+                                            >
+                                                <span
+                                                    class="ssp-fontFamily_ArvoRegular ssp-color_monoBody"
+                                                    >{label.sspStartBenefitsAppFillTextTwo}</span
+                                                >
+                                            </li>
+                                        </ol>
+                                        <ol
+                                            if:true={hasPAOrBCCPTProgram}
+                                            class="ssp-color_blueAlpha"
+                                        >
+                                            <li
+                                                class="ssp-fontFamily_popinBold"
+                                            >
+                                                <span
+                                                    class="ssp-fontFamily_ArvoRegular ssp-color_monoBody"
+                                                    >{label.sspSearchPatient}</span
+                                                >
+                                            </li>
+                                            <li
+                                                class="ssp-fontFamily_popinBold"
+                                            >
+                                                <span
+                                                    class="ssp-fontFamily_ArvoRegular ssp-color_monoBody"
+                                                    >{label.sspFillPatientsDetails}</span
+                                                >
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </div>
+                                <div
+                                    class="slds-col slds-size_1-of-1 slds-large-size_4-of-12 ssp-beforeStartOneThirdContainer"
+                                >
+                                    <div
+                                        class="ssp-marginBottomFifteen ssp-beforeStartContentIcon"
+                                    >
+                                        <img
+                                            class="ssp-iconSize"
+                                            src={icLaptopIcon}
+                                            aria-hidden="true"
+                                            role="presentation"
+                                            alt="get started benefits Application"
+                                        />
+                                    </div>
+                                    <div class="ssp-beforeStartIconContent">
+                                        <p
+                                            class="ssp-fontFamily_popinBold ssp-color_monoBody ssp-beforeStartCardTitle"
+                                        >
+                                            {label.sspStartBenefitsAppGetResultTitle}
+                                        </p>
+                                        <ol
+                                            if:true={allProgramExceptPAAndBCCPT}
+                                            class="ssp-color_blueAlpha"
+                                        >
+                                            <li
+                                                class="ssp-fontFamily_popinBold"
+                                            >
+                                                <span
+                                                    class="ssp-fontFamily_ArvoRegular ssp-color_monoBody"
+                                                    >{label.sspStartBenefitsAppGetResultTextOne}</span
+                                                >
+                                            </li>
+                                            <li
+                                                class="ssp-fontFamily_popinBold"
+                                            >
+                                                <span
+                                                    class="ssp-fontFamily_ArvoRegular ssp-color_monoBody"
+                                                    >{label.sspStartBenefitsAppGetResultTextTwo}</span
+                                                >
+                                            </li>
+                                        </ol>
+                                        <ol
+                                            if:true={hasPAOrBCCPTProgram}
+                                            class="ssp-color_blueAlpha"
+                                        >
+                                            <li
+                                                class="ssp-fontFamily_popinBold"
+                                            >
+                                                <span
+                                                    class="ssp-fontFamily_ArvoRegular ssp-color_monoBody"
+                                                    >{label.sspSelectCompletedPlan}</span
+                                                >
+                                            </li>
+                                            <li
+                                                class="ssp-fontFamily_popinBold"
+                                            >
+                                                <span
+                                                    class="ssp-fontFamily_ArvoRegular ssp-color_monoBody"
+                                                    >{label.sspPrintCard}</span
+                                                >
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div
+            if:true={isToShowNeedHelpBlock}
+            class="slds-p-horizontal_xx-large ssp-mobileHorizontalPadding ssp-bg_monoDelta"
+        >
+            <div class="ssp-container_width slds-grid slds-wrap">
+                <div class="slds-col slds-size_1-of-1">
+                    <div
+                        class="ssp-getBenefitsThreeFourthContainer ssp-getBenefitsNeedHelpMainContainer"
+                    >
+                        <div class="ssp-getBenefitsNeedHelpContainer">
+                            <p
+                                if:true={allProgramExceptPAAndBCCPT}
+                                class="ssp-marginBottomTwentyOne ssp-fontFamily_popinBold ssp-color_monoBody ssp-needHelpHeading"
+                            >
+                                {label.sspStartBenefitsAppNeedHelpTitle}
+                            </p>
+                            <p
+                                if:true={allProgramExceptPAAndBCCPT}
+                                class="ssp-marginBottomThirty ssp-color_monoOmega ssp-fontFamily_ArvoRegular ssp-needHelpPara"
+                            >
+                                {label.sspStartBenefitsAppNeedHelpText}
+                            </p>
+                            <div class="ssp-card_wrap ">
+                                <div
+                                    if:true={isToShowContactAssister}
+                                    class="slds-col slds-size_1-of-1 slds-large-size_6-of-12 ssp-needHelpCardContainer"
+                                >
+                                    <div
+                                        class="ssp-card_wrap ssp-bg_whiteAlpha"
+                                    >
+                                        <c-ssp-cta-card-grey
+                                            ssp-title-val={label.sspStartBenefitsAppContactAssisterTitle}
+                                        >
+                                            <div slot="content">
+                                                <p>
+                                                    {label.sspStartBenefitsAppContactAssisterText}
+                                                </p>
+                                                <ul>
+                                                    <li>
+                                                        {label.sspStartBenefitsAppContactAssisterListOne}
+                                                    </li>
+                                                    <li>
+                                                        {label.sspStartBenefitsAppContactAssisterListTwo}
+                                                    </li>
+                                                    <li>
+                                                        {label.sspStartBenefitsAppContactAssisterListThree}
+                                                    </li>
+                                                    <li>
+                                                        {label.sspStartBenefitsAppContactAssisterListFour}
+                                                    </li>
+                                                    <li>
+                                                        {label.sspStartBenefitsAppContactAssisterListFive}
+                                                    </li>
+                                                    <li>
+                                                        {label.sspStartBenefitsAppContactAssisterListSix}
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div slot="footer">
+                                                <lightning-button
+                                                    class="ssp-button_base ssp-fontFamily_popinBold ssp-color_monoBody"
+                                                    label={label.sspStartBenefitsAppContactAssisterTitle}
+                                                    onclick={connectAssister}
+                                                    title={label.sspStartBenefitsAssisterAlternateText}
+                                                ></lightning-button>
+                                            </div>
+                                        </c-ssp-cta-card-grey>
+                                    </div>
+                                </div>
+                                <div
+                                    if:true={allProgramExceptPAAndBCCPT}
+                                    class="slds-col slds-size_1-of-1 slds-large-size_6-of-12 ssp-needHelpCardContainer"
+                                >
+                                    <div
+                                        class="ssp-card_wrap ssp-bg_whiteAlpha ssp-fullHeight "
+                                    >
+                                        <c-ssp-cta-card-grey
+                                            ssp-title-val={label.sspStartBenefitsAppCallTitle}
+                                        >
+                                            <div
+                                                slot="content"
+                                                class="ssp-getStartAppCallHeight"
+                                            >
+                                                <p>
+                                                    {label.sspStartBenefitsAppCallText}
+                                                </p>
+                                            </div>
+                                            <div slot="footer">
+                                                <lightning-formatted-phone
+                                                    class="ssp-button_base ssp-fontFamily_popinBold ssp-color_blueAlpha ssp-getBenefitsTelNumber"
+                                                    value={label.sspStartBenefitsAppCallNumber}
+                                                    title={label.sspStartBenefitsAppCallAlternateText}
+                                                ></lightning-formatted-phone>
+                                            </div>
+                                        </c-ssp-cta-card-grey>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div
+            class="slds-p-horizontal_xx-large ssp-mobileHorizontalPadding ssp-getBenefitsPaddingVSixty ssp-uploadProofForms"
+        >
+            <div class="ssp-container_width slds-grid slds-wrap">
+                <div
+                    class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12 ssp-footerBtnBackSave slds-large-size_6-of-12 ssp-actionButtons"
+                >
+                    <lightning-button
+                        name={label.sspStartBenefitsExit}
+                        variant="base"
+                        label={label.sspStartBenefitsExit}
+                        class="ssp-exitModalBtn ssp-button_base ssp-getStartBenefitsButton"
+                        onclick={exitBenefitStartPage}
+                        title={label.sspStartBenefitsExitAlternate}
+                    ></lightning-button>
+                </div>
+                <div
+                    class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-large-size_6-of-12 ssp-footerBtnNext slds-text-align_right"
+                >
+                    <template if:true={notDependent}>
+                        <template if:false={hasExistingApplication}>
+                            <template if:true={showStartButton}>
+                                <lightning-button
+                                    name={label.sspStartBenefitsButton}
+                                    variant="neutral"
+                                    label={label.sspStartBenefitsButton}
+                                    class="ssp-button_neutral ssp-exitModalBtn ssp-getStartBenefitsButton ssp-getStartBenefitsNeutralButton"
+                                    onclick={openWhoAllApplyModal}
+                                    title={label.sspStartBenefitsButtonAlternate}
+                                ></lightning-button>
+                            </template>
+                        </template>
+                    </template>
+                </div>
+            </div>
+        </div>
+    </main>
+    <template if:true={showWhoAllApplyModal}>
+        <c-ssp-information-for-all-who-apply
+            onclose={closeWhoAllApplyModal}
+        ></c-ssp-information-for-all-who-apply>
+    </template>
+    <template if:true={isLearnMoreModal}>
+        <c-ssp-detailed-information-modal
+            reference={reference}
+            header-value={label.sspGetBenefitsLearnMoreHeading}
+            open-model={isLearnMoreModal}
+            onclosemodal={closeLearnMoreModal}
+            class="ssp-getStartedLearnMoreModal"
+        >
+            <div slot="contentSlot" class="ssp-learnMore"></div>
+        </c-ssp-detailed-information-modal>
+    </template>
+</template>

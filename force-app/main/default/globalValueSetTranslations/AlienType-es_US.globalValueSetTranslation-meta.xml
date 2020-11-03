@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Active duty member of the U.S. Armed Forces</masterLabel>
+        <translation>Miembro en servicio activo de las Fuerzas Armadas de EE. UU.</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Afghani Special Immigrant</masterLabel>
+        <translation>Inmigrante especial afgano</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Amerasian Immigrant</masterLabel>
+        <translation>Inmigrante de origen asiático-estadounidense</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>American Indian&apos;s born in Canada (50%+)</masterLabel>
+        <translation>Indígena estadounidense nacido en Canadá (50%+)</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Asylee</masterLabel>
+        <translation>Asilado</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Battered Spouse/child</masterLabel>
+        <translation>Cónyuge/Menor maltratado</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Conditional Entry</masterLabel>
+        <translation>Entrada condicional</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Conversion</masterLabel>
+        <translation>Conversión</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Cuban/Haitian Entrant</masterLabel>
+        <translation>Procedente de Cuba/Haití</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Cuban/Haitian Parolee</masterLabel>
+        <translation>En libertad bajo palabra procedente de Cuba/Haití</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Current spouse of a veteran</masterLabel>
+        <translation>Cónyuge actual de un veterano</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Current spouse of an active duty member of U.S. Armed Forces</masterLabel>
+        <translation>Cónyuge actual de un miembro en servicio activo de las Fuerzas Armadas de EE. UU</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Deportation Withheld</masterLabel>
+        <translation>Deportación retenida</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Diplomats &amp; Diplomat&apos;s Families</masterLabel>
+        <translation>Diplomáticos y familias de diplomáticos</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Enrolled member of an Indian Tribe</masterLabel>
+        <translation>Miembro inscrito de una tribu indígena</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Iraqi Special Immigrant</masterLabel>
+        <translation>Inmigrante especial iraquí</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Legal Alien Permanent Resident</masterLabel>
+        <translation>Extranjero legal con residencia permanente</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Parolee</masterLabel>
+        <translation>En libertad bajo palabra</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Permanent Resident under Color of Law (PRUCOL)</masterLabel>
+        <translation>Residente permanente bajo Color de Ley (PRUCOL)</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Refugee</masterLabel>
+        <translation>Refugiado</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>SSI Determined</masterLabel>
+        <translation>Determinado por Seguro de Ingreso Suplementario (SSI)</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Students (Temp. stay)</masterLabel>
+        <translation>Estudiantes (Estadía temporal)</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Undocumented Aliens</masterLabel>
+        <translation>Extranjeros indocumentados</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Unmarried child of a veteran</masterLabel>
+        <translation>Hijo/a no casado/a de un veterano</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Unmarried child of an active duty member of USAF</masterLabel>
+        <translation>Hijo/a no casado/a de un miembro en servicio activo de las Fuerzas Armadas de EE. UU.</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Veteran</masterLabel>
+        <translation><!-- Veteran --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Victim of Trafficking</masterLabel>
+        <translation><!-- Victim of Trafficking --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Visitors / Tourists</masterLabel>
+        <translation><!-- Visitors / Tourists --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Widow of a veteran  (not remarried)</masterLabel>
+        <translation><!-- Widow of a veteran  (not remarried) --></translation>
+    </valueTranslation>
+</GlobalValueSetTranslation>

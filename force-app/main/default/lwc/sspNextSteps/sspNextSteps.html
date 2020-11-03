@@ -1,0 +1,448 @@
+<!--
+* name          : sspEligibilityResults
+* @description  : To Show Eligibility Details for household.
+* @author       : Saurabh
+* @date         : 11/02/2020
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName                MM/DD/YYYY               A Brief Description about the Change
+  Samridh                      12/02/20                           Development
+  Saurabh                      12/02/20                            Development
+-->
+<template>
+    <template if:true={showSpinner}>
+        <c-ssp-spinner></c-ssp-spinner>
+    </template>
+    <c-ssp-detailed-information-modal
+        if:true={showLearnMore}
+        header-value={label.learnMoreLink}
+        open-model={showLearnMore}
+        onclosemodal={closeLearnMoreModal}
+        reference={reference}
+    >
+        <p
+            slot="contentSlot"
+            class="ssp-learnMore ssp-fontFamily_ArvoRegular"
+        ></p>
+    </c-ssp-detailed-information-modal>
+    <!--Document verification modal-->
+    <c-ssp-detailed-information-modal
+        if:true={showDocumentVerifyModal}
+        header-value={label.sspDocumentVerificationHeader}
+        open-model={showDocumentVerifyModal}
+        onclosemodal={closeDocumentVerifyModal}
+        reference={reference}
+    >
+        <p slot="contentSlot" class="ssp-fontFamily_ArvoRegular">
+            <lightning-formatted-rich-text
+                value={label.sspDocumentVerificationContent}
+            >
+            </lightning-formatted-rich-text>
+        </p>
+    </c-ssp-detailed-information-modal>
+    <!--Document verification modal ends here-->
+    <div class="ssp-nextStepContainer" if:false={isNextStepsNotAccessible}>
+        <div
+            class="sspHeadingBar slds-p-horizontal_xx-large slds-p-vertical_medium ssp-bg_appHeaderGradient slds-grid slds-wrap slds-grid_vertical-align-center ssp-margin-bottom_xlarge"
+        >
+            <div class="ssp-container_width slds-grid slds-wrap">
+                <p class="ssp-fontFamily_popinBold ssp-color_monoBody">
+                    {label.benefitsApplication}
+                </p>
+            </div>
+        </div>
+        <div class="ssp-cardContainerElement">
+        <div class="ssp-innerContainer">
+            <div class="ssp-boderBottom5X ssp-margin-bottom_medium">
+                <h1
+                        class="ssp-topHeader ssp-color_greenAlpha ssp-fontFamily_popinBlack"
+                >
+                    {label.nextStep}
+                </h1>
+                <a
+                        class="ssp-fontFamily_popinBold ssp-color_monoBody ssp-margin-bottom_small"
+                    href="javascript:void(0)"
+                    onclick={learnMoreModal}
+                    title={label.addMemberLearnMoreTitleText}
+                    >{label.learnMoreLink}</a
+                >
+            </div>
+            <p
+                    class="ssp-caseNumberFont ssp-margin-bottom_large ssp-color_monoBody"
+            >
+                {caseNumberData}
+            </p>
+            <div class="ssp-bodyContainer">
+                <div class="ssp-nextStepUpdateContainer">
+                    <div
+                    if:true={appRejected}
+                            class="ssp-nextStepUpdate slds-m-bottom_large"
+                        >
+                        <p>{label.sspAuthNotGivenAccessText1}</p>
+                        <p class="slds-m-top_medium">
+                            {label.sspAuthNotGivenAccessText2}
+                        </p>
+                    </div>
+                    <div
+                    if:true={nonMedicaidWithoutElectronicConsent}
+                            class="ssp-nextStepUpdate slds-m-bottom_large"
+                        >
+                        <p>{label.sspAuthRequestNotProcessedText1}</p>
+                        <p class="slds-m-top_medium">
+                            {label.sspAuthRequestNotProcessedText2}
+                        </p>
+                        <p class="slds-m-top_medium">
+                            {label.sspAlternativelyCallDCBS}
+                        </p>
+                    </div>
+                    <div
+                    if:true={medicaidWithOtherWithoutElectronicConsent}
+                    class="ssp-nextStepUpdate slds-m-bottom_large"
+                >
+                        <p>{label.sspAuthRequestNotProcessedText1}</p>
+                        <p class="slds-m-top_medium">
+                            {label.sspAuthRequestNotProcessedText2}
+                        </p>
+                        <div class="slds-m-top_medium">
+                            <span>
+                                {label.sspNoCaseAccessText3}
+                            </span>
+                            <a
+                                title={label.sspMAPLinkTitle}
+                                class="slds-m-horizontal_xx-small ssp-color_blueAlpha"
+                                tabindex="0"
+                                href={mapURLLink}
+                                target="_blank"
+                            >
+                                {label.sspMapLink}
+                            </a>
+                            <span>{label.sspReturnToDCBS}</span>
+                                <span
+                                    >{label.sspContactRegardingAuthApplication}</span
+                                >
+                        </div>
+                    </div>
+                    <div
+                    if:true={medicaidOnlyWithoutElectronicConsent}
+                    class="ssp-nextStepUpdate slds-m-bottom_large"
+                >
+                        <p>{label.sspAuthRequestNotProcessedText1}</p>
+                        <p class="slds-m-top_medium">
+                            {label.sspAuthRequestNotProcessedText2}
+                        </p>
+                        <div class="slds-m-top_medium">
+                            <span>
+                                {label.sspNoCaseAccessText3}
+                            </span>
+                            <a
+                                title={label.sspMAPLinkTitle}
+                                class="slds-m-horizontal_xx-small ssp-color_blueAlpha"
+                                tabindex="0"
+                                href={mapURLLink}
+                                target="_blank"
+                            >
+                                {label.sspMapLink}
+                            </a>
+                            <span>{label.sspReturnToDCBS}</span>
+                        </div>
+                    </div>
+                </div>
+                <template if:true={hasAuthRepHasAccess}>
+                <template if:true={uploadDocumentStatus}>
+                    <div
+                        class="ssp-color_monoBody ssp-margin-bottom_small ssp-sectionHeading ssp-fontFamily_popinBold"
+                    >
+                        {label.uploadDocumentation}
+                    </div>
+                   
+                        <p
+                            class="ssp-color_monoOmega ssp-margin-bottom_small ssp-fontFamily_ArvoRegular"
+                        >
+                            {label.documentUploadNote}
+                        </p>
+                  <div class="ssp-margin-bottom_large">
+                    <a
+                        class="ssp-fontFamily_popinBold ssp-color_monoBody ssp-margin-bottom_small"
+                        href="javascript:void(0)"
+                        onclick={openDocumentVerifyModal}
+                        title={label.addMemberLearnMoreTitleText}
+                        >{label.learnMoreLink}</a
+                    >
+                </div>
+                
+                <div
+                    if:true={nextStepsData.isExpeditedSNAP}
+                    class="ssp-snapNote ssp-color_monoBody ssp-margin-bottom_large ssp-caseNumberFont ssp-warningNoticeCard ssp-bg_whiteBeta ssp-boxShadow"
+                >
+                    <img
+                        class="ssp-warningNoticeCardIcon slds-m-right_medium"
+                        src={icInfoUrl}
+                        alt="info_icon"
+                    />
+                    <span>
+                        <strong
+                            class="ssp-fontFamily_popinBold slds-m-right_xx-small"
+                            >{label.takeActionNow}</strong
+                        >
+                        {label.receiveSnapBenefits}</span
+                    >
+                </div>
+                <div
+                        if:true={nextStepsData.isKPPendingVerification}
+                    class="ssp-bottomNote ssp-color_monoBody ssp-margin-bottom_large ssp-caseNumberFont"
+                >
+                    {label.documentsUploadNote}
+                    </div>
+                            <div
+                                if:true={showVerificationText}
+                        class="ssp-color_monoOmega ssp-margin-bottom_small
+                        ssp-fontFamily_ArvoRegular"
+                            >
+                        {label.documentUploadNoteForKiHIPP}
+                </div>
+                <div
+                    class="ssp-first-time-user-dashboard ssp-margin-bottom_xlarge"
+                >
+                    <lightning-button
+                        label={label.documentCenterButton}
+                        variant="netural"
+                        class="dd-slds-nav_btn-next ssp-button_neutral ssp-dashboard-action-section"
+                        title={label.documentCenterButton}
+                        onclick={navigateToDocumentCenter}
+                    ></lightning-button>
+                    </div>
+                </template>
+                </template>
+            </div>
+        </div>
+        </div>
+        <div
+            if:true={isInterviewPending}
+            class="ssp-cardContainerElement ssp-sidePadding ssp-bg_monoAlpha ssp-margin-bottom_xlarge"
+        >
+            <div class="ssp-innerContainer">
+                <div class="ssp-bodyContainer">
+                    <div
+                        class="ssp-color_monoBody ssp-margin-bottom_small ssp-sectionHeading ssp-fontFamily_popinBold"
+                    >
+                        {label.completeInterview}
+                    </div>
+                    <p
+                        class="ssp-color_monoOmega ssp-margin-bottom_small ssp-fontFamily_ArvoRegular"
+                    >
+                        {label.completeInterviewNote}
+                    </p>
+                    <ul
+                        class="ssp-color_monoOmega ssp-margin-bottom_large ssp-fontFamily_ArvoRegular"
+                    >
+                        <template
+                            for:each={pendingInterviewPrograms}
+                            for:item="pendingInterviewProgram"
+                        >
+                            <li key={pendingInterviewProgram.ProgramCode}>
+                                {pendingInterviewProgram.programName}
+                            </li>
+                        </template>
+                    </ul>
+                    <div
+                        class="ssp-noteCard ssp-color_monoBody ssp-margin-bottom_large ssp-caseNumberFont ssp-bg_whiteAlpha slds-m-right_large"
+                    >
+                        <div
+                            class="ssp-color_monoBody ssp-margin-bottom_small ssp-sectionHeading ssp-fontFamily_popinBold"
+                        >
+                            {label.interviewByPhone}
+                        </div>
+                        <p
+                            class="ssp-color_monoOmega ssp-fontFamily_ArvoRegular ssp-margin-bottom_large slds-m-left_xx-small"
+                        >
+                            {label.phoneInterview}
+                        </p>
+                        <div class="ssp-stacked-btn-width slds-m-left_xx-small">
+                            <div class="ssp-button_base ssp-cardButton">
+                                <a
+                                title={label.callOfficeButton}
+                                    href="tel:1 (855) 306-8959"
+                                    class="slds-button slds-button_neutral"
+                                    >{label.callOfficeButton}</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="ssp-noteCard ssp-color_monoBody ssp-margin-bottom_large ssp-caseNumberFont ssp-bg_whiteAlpha"
+                    >
+                        <div
+                            class="ssp-color_monoBody ssp-margin-bottom_small ssp-sectionHeading ssp-fontFamily_popinBold"
+                        >
+                            {label.visitOfficeInterview}
+                        </div>
+                        <p
+                            class="ssp-color_monoOmega ssp-fontFamily_ArvoRegular ssp-margin-bottom_large slds-m-left_xx-small"
+                        >
+                            {label.interviewAtOffice}
+                        </p>
+                        <div class="ssp-stacked-btn-width slds-m-left_xx-small">
+                            <lightning-button
+                                label={label.findOfficeButton}
+                                variant="netural"
+                                class="ssp-button_base ssp-cardButton"
+                                title={label.findOfficeButton}
+                                onclick={navigationFunction}
+                                data-page="google_map__c"
+                            ></lightning-button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ssp-cardContainerElement">
+        <div class="ssp-innerContainer">
+            <template if:true={hasAuthRepHasAccess}>
+            <div if:true={applyWaiverStatus}>
+                <div class="ssp-bodyContainer">
+                    <div
+                        class="ssp-color_monoBody ssp-margin-bottom_large ssp-sectionHeading ssp-fontFamily_popinBold"
+                    >
+                        {label.applyWaiver}
+                    </div>
+                    <div
+                        class="ssp-bottomNote ssp-color_monoBody ssp-margin-bottom_xlarge ssp-caseNumberFont"
+                    >
+                        {label.applyWaiverNote}
+                    </div>
+                </div>
+            </div>
+                    <div
+                        if:true={visitHealthCareStatus}
+                        class="ssp-bodyContainer"
+                    >
+                <div
+                    class="ssp-color_monoBody ssp-margin-bottom_small ssp-sectionHeading ssp-fontFamily_popinBold"
+                >
+                            {label.sspLowCostHealthInsurance}
+                </div>
+                <p
+                    class="ssp-color_monoOmega ssp-margin-bottom_large ssp-fontFamily_ArvoRegular"
+                >
+                    {label.visitHealthcareNote}
+                </p>
+                        <div
+                            class="ssp-margin-bottom_xlarge ssp-moreHelpContainer"
+                        >
+                    <lightning-button
+                                label={label.sspHealthBenefitExchange}
+                        variant="netural"
+                        class="ssp-button_base ssp-visitHealthCareBtn ssp-cardButton"
+                                title={label.sspHealthBenefitExchange}
+                        onclick={visitHealthCare}
+                    ></lightning-button>
+                </div>
+            </div>
+                    <div if:true={additionalProgramStatus}>
+                <div
+                    class="ssp-color_blueAlpha ssp-margin-bottom_large ssp-eligibleHeading ssp-fontFamily_popinBlack"
+                >
+                    {label.eligibleOtherPrograms}
+                </div>
+                <div class="slds-grid slds-wrap">
+                    <template
+                        for:each={additionalProgramLists}
+                        for:item="additionalProgram"
+                    >
+                        <div
+                            key={additionalProgram.programName}
+                            class="slds-size_1-of-1 slds-large-size_1-of-2"
+                        >
+                            <p
+                                class="ssp-color_monoBody slds-m-bottom_x-small ssp-fontFamily_popinBold"
+                            >
+                                {additionalProgram.programName}
+                            </p>
+                            <p
+                                class="ssp-color_monoOmega ssp-margin-bottom_large ssp-fontFamily_ArvoRegular ssp-sectionHeadings"
+                            >
+                                {additionalProgram.programText}
+                            </p>
+                        </div>
+                    </template>
+                </div>
+                <div class="ssp-margin-bottom_xlarge">
+                    <lightning-button
+                        label={label.homePageApplyBenefit}
+                        onclick={applyForBenefitsNav}
+                        variant="brand"
+                        class="ssp-button_brand ssp-screenFooterNextBtn ssp-visitHealthCareBtn ssp-cardButton"
+                        title={label.homePageApplyBenefit}
+                        data-page="getStartedBenefits__c"
+                    ></lightning-button>
+                </div>
+            </div>
+                    <div
+                        if:true={moreInformationStatus}
+                        class="ssp-bodyContainer"
+                    >
+                <div
+                    class="ssp-color_monoBody ssp-margin-bottom_small ssp-sectionHeading ssp-fontFamily_popinBold"
+                >
+                    {label.needMoreHelp}
+                </div>
+                <p
+                    class="ssp-color_monoOmega ssp-margin-bottom_large ssp-fontFamily_ArvoRegular"
+                >
+                    {label.needMoreHelpNote}
+                </p>
+                        <div
+                            class="ssp-margin-bottom_xlarge ssp-moreHelpContainer"
+                        >
+                    <lightning-button
+                        label={label.viewMore}
+                        onclick={openMoreHelpModal}
+                        variant="netural"
+                        class="ssp-button_base ssp-visitHealthCareBtn ssp-cardButton"
+                        title={label.viewMore}
+                        disabled={isInfoModalNotAccessible}
+                    ></lightning-button>
+                </div>
+            </div>
+            </template>
+            <div
+                    class="ssp-footerContainer  ssp-eligibilityResultFooter ssp-margin-bottom_xlarge"
+            >
+                <lightning-button
+                    data-page="dashboard__c"
+                    label={label.goDashboard}
+                    onclick={navigationFunction}
+                    variant="netural"
+                    class="dd-slds-nav_btn-next ssp-button_neutral ssp-screenFooterNextBtn"
+                    title={label.goDashboard}
+                ></lightning-button>
+            </div>
+        </div>
+    </div>
+    </div>
+    <template if:true={isNextStepsShowAccessDeniedComponent}>
+        <div class="ssp-nextStepContainer slds-m-top_xx-large">
+            <div class="ssp-innerContainer">
+                <div class="ssp-boderBottom5X ssp-margin-bottom_medium">
+                    <h1
+                        class="ssp-topHeader ssp-color_greenAlpha ssp-fontFamily_popinBlack  "
+                    >
+                        {label.nextStep}
+                    </h1>
+                    <a
+                        class="ssp-fontFamily_popinBold ssp-color_monoBody ssp-margin-bottom_small "
+                        href="javascript:void(0)"
+                        onclick={learnMoreModal}
+                        title={label.addMemberLearnMoreTitleText}
+                        >{label.learnMoreLink}</a
+                    >
+                </div>
+            </div>
+        </div>
+        <c-ssp-access-denied></c-ssp-access-denied>
+    </template>
+    <div if:true={isMoreHelpModal}>
+        <c-ssp-more-help-info-modal></c-ssp-more-help-info-modal>
+    </div>
+</template>

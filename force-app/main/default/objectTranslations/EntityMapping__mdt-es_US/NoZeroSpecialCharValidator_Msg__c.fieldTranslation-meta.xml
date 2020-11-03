@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- NoZeroSpecialCharValidator_Msg --></label>
+    <name>NoZeroSpecialCharValidator_Msg__c</name>
+    <picklistValues>
+        <masterLabel>Please enter a valid Alien Number with no special characters.</masterLabel>
+        <translation>Ingresar un número de extranjero válido sin caracteres especiales.</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Please enter a valid I-94 Number with no special characters.</masterLabel>
+        <translation>Ingresar un número de I-94 válido sin caracteres especiales.</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Please enter a valid Number with a maximum of 12 characters.</masterLabel>
+        <translation>Ingresar un número válido con un máximo de 12 caracteres.</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Please enter a valid SEVIS ID with no special characters.</masterLabel>
+        <translation>Ingresar una ID de SEVIS válida sin caracteres especiales.</translation>
+    </picklistValues>
+</CustomFieldTranslation>

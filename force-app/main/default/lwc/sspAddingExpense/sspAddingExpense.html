@@ -1,0 +1,33 @@
+<template>
+    <!--
+* name 		: sspAddingExpense
+* @description 	: The component shows up when the user navigates to Expense Summary page for the first time
+* @author 		: Soumyashree Jena
+* @date 		: 20/11/2019
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName	              MM/DD/YYYY	             A Brief Description about the Change
+-->
+    <div if:true={openModal}>
+        <c-ssp-Detailed-Information-Modal
+            header-value={customLabel.sspAddingExpensePopUpHeader}
+            open-model="true"
+            reference={reference}
+        >
+            <span slot="contentSlot">
+                <lightning-formatted-rich-text
+                    value={customLabel.sspAddingExpensePopUpContent}
+                ></lightning-formatted-rich-text
+            ></span>
+            <span slot="Footer">
+                <lightning-button
+                    variant="brand"
+                    label={customLabel.sspNext}
+                    class="ssp-button_brand ssp-cardButton slds-m-right_medium slds-align_absolute-center"
+                    onclick={closeModal}
+                ></lightning-button>
+            </span>
+        </c-ssp-Detailed-Information-Modal>
+    </div>
+</template>

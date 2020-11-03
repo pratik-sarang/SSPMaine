@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Signature Match Validator Msg --></label>
+    <name>SignatureMatchValidator_Msg__c</name>
+    <picklistValues>
+        <masterLabel>Signature must match name of the primary applicant.</masterLabel>
+        <translation>La firma debe coincidir con el nombre del solicitante primario.</translation>
+    </picklistValues>
+</CustomFieldTranslation>

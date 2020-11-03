@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CareCoordinatorRelationship__c</fullName>
+    <description>Used for CIS</description>
+    <externalId>false</externalId>
+    <label>Care Coordinator Relationship</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>CC</fullName>
+                <default>false</default>
+                <label>Care Coordinator</label>
+            </value>
+            <value>
+                <fullName>FM</fullName>
+                <default>false</default>
+                <label>Family Member</label>
+            </value>
+            <value>
+                <fullName>NF</fullName>
+                <default>false</default>
+                <label>Nursing Facility</label>
+            </value>
+            <value>
+                <fullName>OC</fullName>
+                <default>false</default>
+                <label>Other Caregiver</label>
+            </value>
+            <value>
+                <fullName>P</fullName>
+                <default>false</default>
+                <label>Provider</label>
+            </value>
+            <value>
+                <fullName>R</fullName>
+                <default>false</default>
+                <label>Relative</label>
+            </value>
+            <value>
+                <fullName>SL</fullName>
+                <default>false</default>
+                <label>Self</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

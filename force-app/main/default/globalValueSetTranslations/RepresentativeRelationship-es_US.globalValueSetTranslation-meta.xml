@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Executor</masterLabel>
+        <translation>Ejecutor</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Family member (not spouse)</masterLabel>
+        <translation>Miembro de la familia (no cónyuge)</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Friend</masterLabel>
+        <translation>Amigo(a)</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Legal Guardian</masterLabel>
+        <translation>Tutor legal</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Nursing Facility Representative</masterLabel>
+        <translation>Representante de centro de cuidados de enfermería</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Other</masterLabel>
+        <translation>Otro</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Outside entity</masterLabel>
+        <translation>Entidad externa</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Parent of a minor child</masterLabel>
+        <translation>Padre/Madre de un menor</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Power of Attorney</masterLabel>
+        <translation>Poder</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Spouse</masterLabel>
+        <translation>Cónyuge</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Statutory Benefit Payee</masterLabel>
+        <translation>Receptor reglamentario del beneficio</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Treatment Center Employee</masterLabel>
+        <translation>Empleado de centro de tratamiento</translation>
+    </valueTranslation>
+</GlobalValueSetTranslation>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>InHousePrivateAssister__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Field indicates if Assister is Private. For Private Assisters value is set to 1.</description>
+    <externalId>false</externalId>
+    <label>In House Private Assister</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>

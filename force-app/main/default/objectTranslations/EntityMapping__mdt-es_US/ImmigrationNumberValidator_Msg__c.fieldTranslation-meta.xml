@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- ImmigrationNumberValidator_Msg --></label>
+    <name>ImmigrationNumberValidator_Msg__c</name>
+    <picklistValues>
+        <masterLabel>Please enter a valid Card Number with 13 characters.</masterLabel>
+        <translation>Ingresar un número de tarjeta válido con 13 caracteres.</translation>
+    </picklistValues>
+</CustomFieldTranslation>

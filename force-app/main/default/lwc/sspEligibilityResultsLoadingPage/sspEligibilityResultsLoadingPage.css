@@ -1,0 +1,71 @@
+.ssp-message-container img {
+    width: 24px;
+}
+.ssp-loader-container {
+    width: 19rem;
+    margin: auto;
+}
+.ssp-eligibilityLoadingPage_container .ssp-backgroundImage {
+    position: absolute;
+    right: 0;
+    height: 7.625rem;
+    width: auto;
+}
+
+.ssp-eligibilityLoadingPageMainContainer h1.ssp-eligibilityResultsHeader {
+    font-size: 1rem;
+}
+.ssp-eligibilityLoadingPage_container .ssp-spinner {
+    width: 20rem;
+    height: 15rem;
+    margin: auto;
+    display: block;
+}
+
+.ssp-eligibilityLoadingPage_container .ssp-loaderContainer {
+    padding-top: 1.938rem;
+}
+
+.ssp-eligibilityLoadingPage_container {
+    font-size: 1rem;
+}
+
+.ssp-eligibilityLoadingPage_container .ssp-loadingInformation {
+    padding-bottom: 8.125rem;
+    text-align: center;
+}
+
+.ssp-eligibilityLoadingPage_container .ssp-desktopBackgroundImage {
+    display: none;
+}
+
+.ssp-eligibilityLoadingPage_container {
+    background-size: cover;
+    background-image: url(../resource/SSP_KynectImages7/DashboardMobile.jpg);
+}
+
+@media only screen and (min-width: 769px) {
+    .ssp-eligibilityLoadingPage_container {
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-image: url(../resource/SSP_KynectImages7/Dashboard.png);
+        height: 620px;
+    }
+    .ssp-eligibilityLoadingPage_container .ssp-displayNextLine {
+        display: block;
+    }
+    .ssp-eligibilityLoadingPage_container .ssp-mobileBackgroundImage {
+        display: none;
+    }
+    .ssp-eligibilityLoadingPage_container .ssp-desktopBackgroundImage {
+        display: block;
+        height: 15.188rem;
+        margin-top: 1.875rem;
+    }
+    .ssp-eligibilityLoadingPage_container .ssp-loaderContainer {
+        padding-top: 0;
+    }
+    .ssp-eligibilityLoadingPage_container .ssp-loadingInformation {
+        padding-bottom: 3.25rem;
+    }
+}

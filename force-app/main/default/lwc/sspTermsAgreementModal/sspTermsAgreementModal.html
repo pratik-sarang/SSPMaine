@@ -1,0 +1,64 @@
+<!--
+* name          : sspTermsAgreementModal.
+* @description  : This is a Generic modal for approving Terms Of Agreement.
+* @author       : Chirag, Shivam
+* @date         : 4/23/2020
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName                MM/DD/YYYY               A Brief Description about the Change
+-->
+
+<template>
+    <div class="ssp-termsAgreementModalContainer">
+        <c-ssp-detailed-information-modal
+            reference={reference}
+            header-value={label.sspTermsOfAgreement}
+            open-model={openModel}
+            onclosemodal={closeApplicationStatementModal}
+            scroll-event={trueValue}
+            onenablemodalbuttons={enableModalButtons}
+        >
+            <span slot="contentSlot">
+                <div
+                    class="ssp-TermsAgreementContentContainer ssp-fontFamily_ArvoRegular ssp-color_monoOmega slds-m-bottom_xx-large"
+                >
+                    <p>{label.sspTermsAgreementContent}</p>
+                </div>
+            </span>
+            <div
+                slot="Footer"
+                class="slds-grid slds-wrap slds-grid_align-spread slds-gutters"
+            >
+                <div
+                    class="slds-col slds-size_1-of-2 slds-medium-size_1-of-2 slds-large-size_6-of-12"
+                >
+                    <lightning-button
+                        name="DisAgree"
+                        variant="base"
+                        title={label.sspTermsAgreementDisagreeAltText}
+                        label={label.sspDisagreeButton}
+                        class="ssp-exitModalBtn ssp-button_base"
+                        onclick={handleOnClick}
+                        disabled={disabled}
+                    >
+                    </lightning-button>
+                </div>
+                <div
+                    class="slds-col slds-size_1-of-2 slds-medium-size_1-of-2 slds-large-size_6-of-12"
+                >
+                    <lightning-button
+                        name="Agree"
+                        variant="neutral"
+                        title={label.sspTermsAgreementAgreeAltText}
+                        label={label.sspAgreeButton}
+                        class="ssp-exitModalBtn ssp-button_neutral"
+                        onclick={handleOnClick}
+                        disabled={disabled}
+                    >
+                    </lightning-button>
+                </div>
+            </div>
+        </c-ssp-detailed-information-modal>
+    </div>
+</template>

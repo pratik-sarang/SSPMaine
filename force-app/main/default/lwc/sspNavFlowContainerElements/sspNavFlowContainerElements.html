@@ -1,0 +1,606 @@
+<template>
+    <template if:true={showSpinner}>
+        <c-ssp-spinner></c-ssp-spinner>
+    </template>
+    <c-ssp-logging-and-error-handling-modal
+    if:true={showErrorModal}
+    error-id={errorMsg}
+    onprogressvaluechange={retryTransaction}
+  >
+  </c-ssp-logging-and-error-handling-modal>
+    <!--Contact Information-->
+    <template if:true={showBanner}>
+        <div class="ssp-bodyContainer ssp-margin-top_large">
+            <c-ssp-explicit-notice-card>
+                <div
+                    class="slds-grid slds-wrap slds-size_1-of-1 ssp-justify-content"
+                >
+                    <div
+                        class="slds-size_1-of-1"
+                    >
+                        <p class="ssp-fontFamily_popinBold ssp-color_monoBody">
+                            {label.sspYouHaveChangedInfo}
+                        </p>
+                        <template if:true={showLinkForBanner}>
+                            <div
+                                class="slds-large-size_5-of-6 slds-medium-size_5-of-6 slds-size_1-of-1"
+                            >
+                                <p
+                                    class="ssp-fontFamily_popinBold ssp-color_monoBody"
+                                >
+                                    <a role="button" tabindex="0" onclick={handleReviewRequiredPopUp}
+                                        >{label.affectedScreensList}</a
+                                    >
+                                </p>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+            </c-ssp-explicit-notice-card>
+        </div>
+    </template>
+      <c-ssp-detailed-information-modal
+    if:true={showReviewScreenPopup}
+    header-value={label.sspAffectedSections}
+    open-model={showReviewScreenPopup}
+    onclosemodal={handleReviewRequiredPopUp}
+    reference={reference}
+  >
+    <div slot="contentSlot">
+      <span>{label.reviewRequiredNote}</span>
+      <ul>
+        <template for:each={lstReviewRequiredScreenNames} for:item="item">
+          <li key={item}>{item}</li>
+        </template>
+      </ul>
+    </div>
+  </c-ssp-detailed-information-modal>
+
+    <div>
+        <!--current-member-name={currentMemberName}-->
+        <template if:true={hohContact}>
+            <c-ssp-primary-applicant-contact-page
+                application-id={applicationId}
+                next-event={nextEventValue}
+                member-id={memberId}
+                flow-name={flowName}
+                allow-save-data={allowSaveData}
+            >
+            </c-ssp-primary-applicant-contact-page>
+        </template>
+        <template if:true={hohAddress}>
+            <c-ssp-primary-applicant-address-page
+                application-id={applicationId}
+                member-id={memberId}
+                flow-name={flowName}
+                next-event={nextEventValue}
+                allow-save-data={allowSaveData}
+                mode={mode}
+            ></c-ssp-primary-applicant-address-page>
+        </template>
+        <!--Contact Informaion - NP-->
+        <template if:true={nonPrimaryContact}>
+            <c-ssp-non-primary-applicant-contact-page
+                application-id={applicationId}
+                next-event={nextEventValue}
+                member-id={memberId}
+                flow-name={flowName}
+                allow-save-data={allowSaveData}
+                current-member-name={currentMemberName}
+            >
+            </c-ssp-non-primary-applicant-contact-page>
+        </template>
+        <!--<template if:false={nonPrimaryAddress}>
+            <c-ssp-primary-applicant-address-page
+                application-id={applicationId}
+                member-id={memberId}
+                flow-name={flowName}
+                next-event={nextEventValue}
+                allow-save-data={allowSaveData}
+            ></c-ssp-primary-applicant-address-page>
+        </template>-->
+
+        <!--Member Details-->
+        <!--Individual Details-->
+        <template if:true={noCitizen}>
+            <c-ssp-not-u-s-citizen
+                next-event={nextEventValue}
+                allow-save-data={allowSaveData}
+                member-id={memberId}
+                application-id={applicationId}
+                page-to-load={pageName}
+            >
+            </c-ssp-not-u-s-citizen>
+        </template>
+        <template if:true={showAlienSponsor}>
+            <c-ssp-alien-sponsor
+                s-app-id={applicationId}
+                s-member-id={memberId}
+                current-member-name={currentMemberName}
+                next-event={nextEventValue}
+                allow-save-data={allowSaveData}
+                >                
+            </c-ssp-alien-sponsor>
+        </template>
+        <template if:true={nativeIndianAmerican}>
+            <c-ssp-american-indian-alaskan-native
+                current-member-name={currentMemberName}
+                next-event={nextEventValue}
+                allow-save-data={allowSaveData}
+                member-id={memberId}
+            ></c-ssp-american-indian-alaskan-native>
+        </template>
+        <template if:true={showEducationSummary}>
+            <c-ssp-house-hold-education-summary
+                next-event={nextEventValue}
+                member-id={memberId}
+                allow-save-data={allowSaveData}
+                application-id={applicationId}
+                mode={mode}
+            >
+            </c-ssp-house-hold-education-summary>
+        </template>
+        <template if:true={absentParent}>
+            <c-ssp-absent-parent-summary
+                next-event={nextEventValue}
+                application-id={applicationId}
+                allow-save-data={allowSaveData}
+                member-id={memberId}
+                page-to-load={pageName}
+            >
+            </c-ssp-absent-parent-summary>
+        </template>
+        <template if:true={fosterCare}>
+            <c-ssp-former-foster-care
+                next-event={nextEventValue}
+                allow-save-data={allowSaveData}
+                member-id={memberId}
+                current-member-name={currentMemberName}
+            >
+            </c-ssp-former-foster-care>
+        </template>
+        <template if:true={planSelection}>
+            <c-ssp-m-c-o-selection
+                application-id={applicationId}
+                next-event={nextEventValue}
+                member-id={memberId}
+                allow-save-data={allowSaveData}
+                current-member-name={currentMemberName}
+            >
+            </c-ssp-m-c-o-selection>
+        </template>
+
+        <!--Health Information-->
+        <template if:true={pregnancy}>
+            <c-ssp-health-information-pregnancy
+                next-event={nextEventValue}
+                allow-save-data={allowSaveData}
+                member-id={memberId}
+                page-to-load={pageName}
+                application-id={applicationId}
+            >
+            </c-ssp-health-information-pregnancy>
+        </template>
+        <template if:true={showDisability}>
+            <c-ssp-member-disability
+                application-id={applicationId}
+                next-event={nextEventValue}
+                member-id={memberId}
+                allow-save-data={allowSaveData}
+                screen-id={screenName}
+                page-to-load={pageName}
+            >
+            </c-ssp-member-disability>
+        </template>
+        <template if:true={showBlindness}>
+            <c-ssp-member-disability
+                application-id={applicationId}
+                next-event={nextEventValue}
+                member-id={memberId}
+                allow-save-data={allowSaveData}
+                screen-id={screenName}
+                page-to-load={pageName}
+            >
+            </c-ssp-member-disability>
+        </template>
+        <template if:true={healthCondition}>
+            <c-ssp-health-condition
+                next-event={nextEventValue}
+                member-id={memberId}
+                allow-save-data={allowSaveData}
+                application-id={applicationId}
+                page-to-load={pageName}
+            ></c-ssp-health-condition>
+        </template>
+        <template if:true={medicareCoverageSummary}>
+            <c-ssp-medicare-coverage-summary
+                current-member-name={currentMemberName}
+                next-event={nextEventValue}
+                member-id={memberId}
+                allow-save-data={allowSaveData}
+                page-to-load={pageName}
+                application-id={applicationId}
+            ></c-ssp-medicare-coverage-summary>
+        </template>
+
+        <!--Member health information - CD2 6.5.2 - Caretaker Services-->
+        <template if:true={showCareTakerServices}>
+        <c-ssp-care-taker-services
+            next-event={nextEventValue}
+            ssp-member-id={memberId}
+            ssp-application-id={applicationId}
+            member-name={currentMemberName}
+            allow-save-data={allowSaveData}
+            page-to-load={pageName}
+        ></c-ssp-care-taker-services>
+        </template>
+		
+		<!--Member health information - CD2 6.5.1 - CIS Services-->
+	    <template if:true={showCIS}>
+	      <c-ssp-community-integration-supplementation
+	        next-event={nextEventValue}
+	        ssp-member-id={memberId}
+	        ssp-application-id={applicationId}
+	        member-name={currentMemberName}
+	        allow-save-data={allowSaveData}
+	        page-to-load={pageName}
+	      ></c-ssp-community-integration-supplementation>
+	    </template>
+        <!---->
+
+        <!--Member Other Information--> 
+        <template if:true={livingArrangement}>
+            <c-ssp-member-living-arrangement
+                application-id={applicationId}
+                next-event={nextEventValue}
+                member-id={memberId}
+                allow-save-data={allowSaveData}
+                mode={mode}
+            >
+            </c-ssp-member-living-arrangement>
+        </template>              
+        <template if:true={inHome}>
+            <c-ssp-in-home-assistance
+                current-member-name={currentMemberName}
+                next-event={nextEventValue}
+                allow-save-data={allowSaveData}
+                member-id={memberId}
+            >
+            </c-ssp-in-home-assistance>
+        </template>
+        <template if:true={conviction}>
+            <c-ssp-conviction-page
+                next-event={nextEventValue}
+                allow-save-data={allowSaveData}
+                member-id={memberId}
+                application-id={applicationId}
+                page-to-load={pageName}
+            ></c-ssp-conviction-page>
+        </template>
+        <template if:true={ssiBenefits}>
+            <c-ssp-ssi-benefits
+                member-name={currentMemberName}
+                next-event={nextEventValue}
+                allow-save-data={allowSaveData}
+                member-id={memberId}
+            >
+            </c-ssp-ssi-benefits>
+        </template>
+        <template if:true={showEntitledBenefits}>
+            <c-ssp-entitled-benefits
+                ssp-application-id={applicationId}
+                next-event={nextEventValue}
+                ssp-member-id={memberId}
+                allow-save-data={allowSaveData}
+                member-first-name={memberFirstName}
+            >
+            </c-ssp-entitled-benefits>
+        </template>
+        <template if:true={showMedicalEnforcement}>
+            <c-ssp-medical-support-enforcement
+                ssp-application-id={applicationId}
+                next-event={nextEventValue}
+                ssp-member-id={memberId}
+                allow-save-data={allowSaveData}
+                member-name={currentMemberName}
+            >
+            </c-ssp-medical-support-enforcement>
+        </template>
+
+        <!--Resources Information-->
+        <template if:true={resourceSummary}>
+            <c-ssp-resource-summary
+                application-id={applicationId}
+                next-event={nextEventValue}
+                member-id={memberId}
+                flow-name={flowName}
+                allow-save-data={allowSaveData}
+                member-name={currentMemberName}
+        member-full-name={currentMemberFullName}
+                head-of-household={headOfHousehold}
+                flow-status={flowStatus}
+            >
+            </c-ssp-resource-summary>
+        </template>
+        <template if:true={removeExistingResource}>
+            <c-ssp-remove-existing-resource
+                application-id={applicationId}
+                next-event={nextEventValue}
+                member-id={memberId}
+                flow-name={flowName}
+                allow-save-data={allowSaveData}
+                member-name={currentMemberName}
+            >
+            </c-ssp-remove-existing-resource>
+        </template>
+        <template if:true={changeExistingResource}>
+            <c-ssp-change-existing-resources
+                application-id={applicationId}
+                next-event={nextEventValue}
+                member-id={memberId}
+                flow-name={flowName}
+                allow-save-data={allowSaveData}
+                member-name={currentMemberName}
+            >
+            </c-ssp-change-existing-resources>
+        </template>
+
+        <!--Income And Subsidies Information-->
+        <template if:true={showIncomeSummary}>
+            <c-ssp-income-summary
+                ssp-application-id={applicationId}
+                next-event={nextEventValue}
+                member-id={memberId}
+                allow-save-data={allowSaveData}
+                member-first-name={memberFirstName}
+        member-name={currentMemberFullName}
+                flow-status={flowStatus}
+            >
+            </c-ssp-income-summary>
+        </template>
+        <template if:true={removeExistingIncome}>
+            <c-ssp-remove-existing-income
+                ssp-application-id={applicationId}
+                next-event={nextEventValue}
+                ssp-member-id={memberId}
+                allow-save-data={allowSaveData}
+                member-name={currentMemberName}
+        member-full-name={currentMemberFullName}
+            >
+            </c-ssp-remove-existing-income>
+        </template>
+        <template if:true={changeExistingIncome}>
+            <c-ssp-change-existing-income
+                ssp-application-id={applicationId}
+                next-event={nextEventValue}
+                ssp-member-id={memberId}
+                allow-save-data={allowSaveData}
+                member-name={currentMemberName}
+        member-full-name={currentMemberFullName}
+            >
+            </c-ssp-change-existing-income>
+        </template>
+        <template if:true={showOutOfStateSummary}>
+            <c-ssp-out-of-state-benefits-summary
+                next-event={nextEventValue}
+                member-id={memberId}
+                member-name={currentMemberName}
+                allow-save-data={allowSaveData}
+            >
+            </c-ssp-out-of-state-benefits-summary>
+        </template>  
+              
+
+        <!--Expenses Information-->
+        <template if:true={showExpensesSummary}>
+            <c-ssp-expenses-summary
+                ssp-application-id={applicationId}
+                next-event={nextEventValue}
+                ssp-member-id={memberId}
+                allow-save-data={allowSaveData}
+                member-name={currentMemberName}
+        member-full-name={currentMemberFullName}
+                member-first-name={memberFirstName}
+                flow-status={flowStatus}
+            >
+            </c-ssp-expenses-summary>
+        </template>
+        <template if:true={removeExistingExpenses}>
+            <c-ssp-remove-existing-expense
+                next-event={nextEventValue}
+                application-id={applicationId}
+                allow-save-data={allowSaveData}
+                member-id={memberId}
+                member-name={currentMemberName}
+            >
+            </c-ssp-remove-existing-expense>
+        </template>
+        <template if:true={changeExistingExpense}>
+            <c-ssp-change-existing-expense
+                ssp-application-id={applicationId}
+                next-event={nextEventValue}
+                ssp-member-id={memberId}
+                allow-save-data={allowSaveData}
+                member-name={currentMemberName}
+            >
+            </c-ssp-change-existing-expense>
+        </template>
+        <template if:true={medicalBills}>
+            <c-ssp-medical-bills-three-months
+                application-id={applicationId}
+                member-id={memberId}                
+                next-event={nextEventValue}
+                allow-save-data={allowSaveData}
+            >
+            </c-ssp-medical-bills-three-months>
+        </template>
+
+        <!--Household Information-->
+        <template if:true={healthSelection}>
+            <c-ssp-health-selection
+                mode={mode}
+                app-id={applicationId}
+                next-event={nextEventValue}
+                allow-save-data={allowSaveData}
+            >
+            </c-ssp-health-selection>
+        </template>
+        <template if:true={householdSelection}>
+            <c-ssp-household-circumstances-selection
+                application-id={applicationId}
+                member-id={memberId}
+                page-action={action}
+                next-event={nextEventValue}
+                allow-save-data={allowSaveData}
+				mode={mode}
+            >
+            </c-ssp-household-circumstances-selection>
+        </template>
+        <template if:true={incomeAndSubsidiesSelection}>
+            <c-ssp-income-and-subsidies-selection
+                mode={mode}
+                ssp-application-id={applicationId}
+                next-event={nextEventValue}
+                page-action={action}
+                allow-save-data={allowSaveData}
+            >
+            </c-ssp-income-and-subsidies-selection>
+        </template>
+        <template if:true={expensesSelection}>
+            <c-ssp-expenses-selection
+                mode={mode}
+                ssp-application-id={applicationId}
+                next-event={nextEventValue}
+                page-action={action}
+                allow-save-data={allowSaveData}
+                member-id={memberId}
+            >
+            </c-ssp-expenses-selection>
+        </template>
+        <template if:true={resourceSelection}>
+            <c-ssp-resource-selection
+                mode={mode}
+                application-id={applicationId}
+                next-event={nextEventValue}
+                page-action={action}
+                allow-save-data={allowSaveData}
+                member-name={currentMemberName}
+                head-of-household={headOfHousehold}                
+            >
+            </c-ssp-resource-selection>
+        </template>
+        <template if:true={otherResourceSelection}>
+            <c-ssp-other-resources-selection
+                application-id={applicationId}
+                next-event={nextEventValue}
+                allow-save-data={allowSaveData}
+            >
+            </c-ssp-other-resources-selection>
+        </template>
+
+        <!--healthCare Coverage-->
+        <template if:true={healthCoverage}>
+            <c-ssp-health-coverage-selection
+                member-id={memberId}
+                app-id={applicationId}
+                next-event={nextEventValue}
+                allow-save-data={allowSaveData}
+            >
+            </c-ssp-health-coverage-selection>
+        </template>
+
+        <template if:true={healthCoverageEnrollSummary}>
+            <c-ssp-health-care-enrollment
+                is-enrolled-in-insurance="true"
+                app-id={applicationId}
+                member-id={memberId}
+                next-event={nextEventValue}
+                allow-save-data={allowSaveData}
+                mode={mode}
+            >
+            </c-ssp-health-care-enrollment>
+        </template>
+
+        <template if:true={healthCoverageAccessSummary}>
+            <c-ssp-health-care-enrollment
+                is-enrolled-in-insurance="false"
+                app-id={applicationId}
+                next-event={nextEventValue}
+                allow-save-data={allowSaveData}
+            >
+            </c-ssp-health-care-enrollment>
+        </template>
+        <template if:true={preferredPaymentMethod}>
+            <c-ssp-preferred-payment-method
+                member-id={memberId}
+                app-id={applicationId}
+                next-event={nextEventValue}
+                allow-save-data={allowSaveData}
+            >
+            </c-ssp-preferred-payment-method>
+        </template>
+
+        <!--Relationships and Tax Filing-->
+        <template if:true={relationship}>
+            <c-ssp-relationships-page
+                application-id={applicationId}
+                member-id={memberId}
+                next-event={nextEventValue}
+                allow-save-data={allowSaveData}
+                mode={action}
+                mode-value={mode}
+            >
+            </c-ssp-relationships-page>
+        </template>
+        <template if:true={householdMeals}>
+            <c-ssp-house-hold-meals
+                application-id={applicationId}
+                member-id={memberId}
+                flow-name={flowName}
+                next-event={nextEventValue}
+                allow-save-data={allowSaveData}
+                mode-value={mode}
+            >
+            </c-ssp-house-hold-meals>
+        </template>
+        <template if:true={taxFilingDetails}>
+            <c-ssp-tax-filing-details
+                application-id={applicationId}
+                member-id={memberId}
+                next-event={nextEventValue}
+                allow-save-data={allowSaveData}
+                member-name={currentMemberName}
+                mode-value={mode}
+            >
+            </c-ssp-tax-filing-details>
+        </template>
+
+        <!--Sign and Submit-->
+        <template if:true={expeditedSNAP}>
+            <c-ssp-expedited-snap-benefits
+                application-id={applicationId}
+                next-event={nextEventValue}
+                allow-save-data={allowSaveData}
+            >
+            </c-ssp-expedited-snap-benefits>
+        </template>
+        <!-- CR�Changes�-�1258 -->
+        <template if:true={collateralSNAP}>
+            <c-ssp-collateral-contact
+                application-id={applicationId}
+                next-event={nextEventValue}
+                allow-save-data={allowSaveData}
+            >
+            </c-ssp-collateral-contact>
+        </template>
+        <!-- CR�Changes�-�1258 end -->
+        <template if:true={signaturePage}>
+            <c-ssp-signature-page
+                application-id={applicationId}
+                next-event={nextEventValue}
+                allow-save-data={allowSaveData}
+            >
+            </c-ssp-signature-page>
+        </template>
+    </div>
+</template>

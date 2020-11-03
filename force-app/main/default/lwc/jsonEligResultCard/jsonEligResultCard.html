@@ -1,0 +1,49 @@
+<template>
+	<div
+		class="slds-grid slds-wrap slds-m-vertical_large ssp-innerContainer ssp-componentWidth ssp-margin-bottom_small ssp-bg_whiteAlpha"
+	>
+		<div
+			class="ssp-appCardOrange ssp-boxShadow ssp-componentWidth slds-grid slds-wrap"
+		>
+			<div
+				class="ssp-appCardOrangeHeader ssp-fontFamily_popinBold ssp-bg_monoDelta ssp-componentWidth"
+			>
+				<p class="ssp-color_blueAlpha">{title}</p>
+			</div>
+
+			<div class="slds-grid slds-wrap">
+				<div
+					class="ssp-appCardOrangeBody ssp-componentWidth slds-p-horizontal_large"
+				>
+					<div class="ssp-appCardOrangeAdditional">
+						<div class="ssp-appDiscOrange ssp-bg_monoGamma"></div>
+
+						<div class="slds-p-top_xx-small slds-p-bottom_medium">
+							<p class="ssp-color_monoOmega">
+								{eligMsg}
+							</p>
+						</div>
+
+						<lightning-formatted-rich-text value={pgmInfo}>
+						</lightning-formatted-rich-text>
+
+						<template if:true={hasButton}>
+							<div
+								class="slds-col slds-p-top_medium ssp-ctaCardButton slds-size_1-of-1 slds-small-size_1-of-1 slds-medium-size_2-of-2 slds-large-size_1-of-4"
+							>
+								<lightning-button
+									label={btnLabel}
+									variant={variant}
+									class={btnClass}
+									title={btnTitle}
+									onclick={handleResultCardBtnClick}
+								>
+								</lightning-button>
+							</div>
+						</template>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>

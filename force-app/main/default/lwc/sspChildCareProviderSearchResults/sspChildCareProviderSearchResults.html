@@ -1,0 +1,409 @@
+<!--
+  @File Name          : sspChildCareProviderSearchResults.html
+  @Description        : 
+  @Author             : ChangeMeIn@UserSettingsUnder.SFDoc
+  @Group              : 
+  @Last Modified By   : ChangeMeIn@UserSettingsUnder.SFDoc
+  @Last Modified On   : 09-18-2020
+  @Modification Log   : 
+  Ver       Date            Author      		    Modification
+  1.0    6/2/2020   ChangeMeIn@UserSettingsUnder.SFDoc     Initial Version
+-->
+<template>
+  <c-ssp-spinner if:true={showSpinner}>
+    
+  </c-ssp-spinner>
+      <div class="ssp-child-care-provider-app-header ssp-bg_appHeaderGradient slds-p-vertical_medium slds-m-bottom_x-large">
+        <h1 class="ssp-fontFamily_popinBold ssp-child-care-provider-text1">
+            {customLabels.sspChildCareProviderSearch}
+        </h1>                  
+      </div>
+    <div>
+      <template if:true={showSearchOptions}>
+          <div class="ssp-bodyContainer">
+            <div class="slds-grid slds-wrap">
+              <div class="slds-size_2-of-3">
+                <div class="ssp-fontFamily_popinBold slds-text-align_left">
+                  <a href="javascript:void(0);" class="ssp-anchor ssp-color_monoBody"
+                    title={originPageNameAlt} onclick={handleChildCareSearch}>{originPageName}</a>
+                </div>
+              </div>
+              <div class="slds-size_1-of-3">
+                <template if:true ={isCitizenUser}>  
+                <div class="ssp-color_blueAlpha slds-text-align_right">
+                    <a href="javascript:void(0);" class="ssp-anchor ssp-color_blueAlpha"
+                    title={customLabels.sspFavAlt} onclick={viewToFavoritesList}>{customLabels.favoritesLink}
+                    ({ShowFavoriteCount})</a>
+                </div>
+                </template>
+              </div>
+            </div>  
+          <div class="ssp-child-care-provider-hearder slds-m-top_large">
+            <h1 class="ssp-child-care-provider-hearder-text ssp-fontFamily_popinBlack ssp-color_blueAlpha">
+              {customLabels.sspSearchByProviderLabel}
+            </h1>
+          </div>
+          <div class="ssp-child-care-toggle">
+            <c-ssp-base-component-input-toggle
+              label={customLabels.sspSearchBy}
+              options={searchOptions}
+              onchange={searchOptionSetter}
+              value={selectedSearchType}
+              class="ssp-button_brand slds-m-left_x-small"
+              aria-required="true"
+            ></c-ssp-base-component-input-toggle>
+          </div>
+            <div>
+              <template if:true={isSearchTypeLocation}>
+                <a
+                href="javascript:void(0);"
+                class="ssp-color_blueAlpha ssp-userCurrentLoc ssp-anchor ssp-margin-bottom_small"
+                onclick={getCurrentLocation}
+                title={customLabels.sspClickUseCurrentLocation}
+                >{customLabels.sspUseMyCurrentLocation}</a>
+              </template>             
+          </div>
+        <div class="slds-p-vertical_medium ssp-searchField">                  
+              <c-ssp-base-component-input-text
+                  class="ssp-applicationInputs ssp-child-helptext slds-large-size_1-of-1 slds-size_1-of-1"
+                  label={sspSearch}
+                  name="SearchProvider"
+                  value ={sspSearchInput}
+                  onblur={handleInputFocusOrBlur}
+                  onchange={handleOnChangeAddressInput}
+              ></c-ssp-base-component-input-text>
+              <a><img
+                src={searchIcon}
+                aria-hidden="true"
+                role="presentation"
+                class="ssp-searchIcon"
+                alt={sspSearch}      
+                />
+              </a>
+          <div tabindex="0" 
+            if:true={placeResultArray} 
+            class="slds-box">
+            <template 
+              for:each={placeResultArray} 
+              for:item="adResult">
+                <ul 
+                  tabindex="0" 
+                  role="listbox" 
+                  key={adResult.formatted_address} 
+                  class="city_predictions slds-m-vertical_xx-small">
+                  <li 
+                    tabindex="0"
+                    key={adResult.formatted_address} 
+                    class="slds-listbox__item">
+                      <a tabindex="0" 
+                      key={adResult.formatted_address}
+                      href="javascript:void(0)" 
+                      data-id={adResult.formatted_address}
+                      onmousedown={getAddressDetails} 
+                      class="ssp-color_blueAlpha" 
+                      target="_blank">{adResult.formatted_address}</a>
+                  </li>
+                </ul>
+            </template>
+          </div>
+          <div if:true={isLocationSearchErrorMessage} class="slds-grid slds-wrap slds-size_1-of-1">
+            <span class="slds-m-top_small ssp-errorMessage ssp-color_redOmega" role="alert">{customLabels.sspPleaseSelectSuggestedLocation}</span>
+           </div>
+          <div if:true={isSearchErrorMessage} class="slds-grid slds-wrap slds-size_1-of-1">
+            <span class="slds-m-top_small ssp-errorMessage ssp-color_redOmega" role="alert">{customLabels.sspPleaseEnterAtLeastOneSearchCriteria}</span>
+           </div> 
+         </div>  
+          <div class="slds-grid slds-wrap slds-size_1-of-1 ">
+            <div
+              class="slds-m-vertical_medium slds-m-bottom_x-large searchWidth slds-align_absolute-center ssp-child-care-search-button">
+              <lightning-button
+                class="slds-text-align_right ssp-button_neutral slds-col"
+                label={customLabels.sspSearchPlaceHolder}
+                title={customLabels.sspSearchPlaceHolderAlt}
+                onclick={handleSearch}
+              >
+              </lightning-button>
+            </div>
+          </div>
+        </div> 
+      </template>
+  </div>
+  
+  <template if:true={showTable}>
+      <div class="ssp-bg_monoSigma slds-p-vertical_x-large ssp-find-assister-agent-filter"
+      >
+      <template if:true={noResults}>
+        <div class="slds-grid ssp-align-items-center ssp-bodyContainer">
+          <div class="slds-size_1-of-2 ssp-color_monoBody ssp-fontFamily_popinBold ssp-search-results-count"
+          >
+            {customLabels.sspNoResultsFound}
+          </div> 
+        </div>       
+       <div class="slds-grid slds-wrap ssp-bodyContainer ssp-child-care-margin-top">
+        <div class="slds-col ssp-fontFamily_popinRegular">
+                {customLabels.sspAllStarsDescription}
+        </div>
+        <div class="ssp-fontFamily_popinRegular slds-col ssp-anchor">
+               <a href="javascript:void(0);" class="ssp-color_blueAlpha"
+                    title={customLabels.sspAllStarLink} onclick={allStarLinkClick}>{customLabels.sspAllStarLink}</a>
+        </div>
+        </div>
+      </template>
+        <template if:true={showFilterButton}>
+          <div class="slds-grid ssp-align-items-center ssp-bodyContainer">
+            <div
+              class="slds-size_1-of-2 ssp-color_monoBody ssp-fontFamily_popinBold ssp-search-results-count"
+            >
+              {dataListLength} {customLabels.sspResults}
+            </div>
+            <div
+              class="slds-grid slds-size_1-of-2 slds-grid_align-end ssp-filter-btn"
+            >
+              <lightning-button
+                variant="brand"
+                label={appliedFiltersLabel}
+                title={customLabels.sspFilterAlt}
+                onclick={openModal}
+                class="ssp-button_brand slds-col"
+              >
+              </lightning-button>
+            </div>
+          </div>
+        <div class="slds-grid slds-wrap ssp-bodyContainer ssp-child-care-margin-top slds-grid_align-spread">
+          <div class="slds-col ssp-fontFamily_popinRegular">
+                  {customLabels.sspAllStarsDescription}
+          </div>
+            <div class="ssp-fontFamily_popinRegular slds-col ssp-anchor">
+                <a href="javascript:void(0);" class="ssp-color_blueAlpha"
+                      title={customLabels.sspAllStarLink} onclick={allStarLinkClick}>{customLabels.sspAllStarLink}</a>
+          </div>
+        </div>
+      </template>
+      <div class="ssp-bodyContainer">
+        <template if:true={showFilterModal}>
+          <div if:true={showModal}>
+            <c-ssp-detailed-information-modal
+              class="ssp-filterModal"
+              reference={reference}
+              open-model={showModal}
+              onclosemodal={closeModal}
+              header-value={customLabels.sspFilter}
+            >
+              <div
+                slot="contentSlot"
+                class="ssp-agent-modal ssp-fontFamily_ArvoRegular ssp-color_monoOmega"
+              >
+                <template for:each={wrapperList} for:item="objFilter">
+                  <div key={objFilter.title} if:true={objFilter.isRadio}>
+                    <lightning-radio-group
+                      name="optList"
+                      label={objFilter.title}
+                      options={objFilter.optionList}
+                      class="slds-p-bottom_large ssp-radioGroup"
+                      type="radio"
+                      data-target={objFilter.target}
+                      value={sortByField}
+                      onchange={handleFilterChange}
+                    ></lightning-radio-group>
+                  </div>
+                  <template if:true={objFilter.show}>
+                    <div
+                      key={objFilter.title}
+                      if:true={objFilter.isCheckbox}
+                      class="ssp-checkbox"
+                    >
+                      <lightning-checkbox-group
+                        name="optCheckbox"
+                        label={objFilter.title}
+                        options={objFilter.optionList}
+                        value={objFilter.selectedList}
+                        data-target={objFilter.target}
+                        data-position={objFilter.index}
+                        class="ssp-cbWithCompleteBorder ssp-checkboxGroup slds-p-bottom_large"
+                        onchange={handleFilterChange}
+                      ></lightning-checkbox-group>
+                    </div>
+                  </template>
+                </template>
+              </div>
+              <div
+              slot="Footer"
+              class="slds-grid slds-wrap slds-size_1-of-1 ssp-stacked-btn-width"
+              >
+              <lightning-button
+                variant="brand"
+                label={customLabels.sspViewResults}
+                title={customLabels.sspViewFilteredResults}
+                class="ssp-button_brand ssp-stacked-btn-width slds-text-align_left slds-size_1-of-1 slds-p-around_x-small"
+                onclick={applyFilters}
+              ></lightning-button>
+              <lightning-button
+                variant="neutral"
+                label={customLabels.sspResetFilter}
+                title={customLabels.sspClearAllSelectedFilters}
+                class="ssp-button_base ssp-stacked-btn-width slds-size_1-of-1 slds-p-around_x-small"
+                onclick={resetFilters}
+              >
+              </lightning-button>
+            </div>
+          </c-ssp-detailed-information-modal>
+        </div>
+      </template>
+      <div class="slds-size_1-of-1 ssp-search-results">
+        <template for:each={dataList} for:item="data">
+          <div key={data.ProviderId} class="ssp-result-card">
+            <c-ssp-cta-card-blue>
+              <div slot="content">
+                <div class="slds-grid slds-wrap ssp-space-between">
+                  <p class="ssp-color_blueAlpha ssp-fontFamily_popinBold ssp-Provider-name slds-size_1-of-2 slds-small-size_12-of-12 slds-large-size_1-of-2 slds-medium-size_12-of-12">
+                    {data.ProviderName}
+                  </p>
+                  <template if:true={isSearchTypeLocation}>
+                  <p class="ssp-fontFamily_popinBold ssp-color_monoBody slds-size_1-of-2 slds-small-size_12-of-12 slds-large-size_1-of-2 slds-medium-size_12-of-12 slds-text-align_right">
+                    {data.Distance} {customLabels.sspMiles}
+                  </p>
+                  </template>
+                </div>
+                <p class="ssp-child-care-margin-middle">
+                  <span class = "ssp-color_monoBody ssp-fontFamily_popinRegular ssp-child-care-results-text">  {customLabels.allStarsLevel}: </span>
+                  <span><img
+                  src={providerRateIcon}
+                  alt={customLabels.allStarsLevel}
+                  class ="slds-m-bottom_xx-small"
+                  /></span>
+                  <span class="ssp-color_monoBody ssp-fontFamily_popinBold ssp-child-care-results-text"> {data.NumberOfStars} </span>
+                </p>
+                <div class=" slds-grid slds-wrap ssp-margin-top_large">
+                  <div class="slds-small-size_12-of-12 slds-large-size_1-of-3 slds-medium-size_12-of-12 ssp-anchor ssp-child-care-results-text ssp-fontFamily_Regular ssp-child-care-color_monoBody">
+                    <a href={data.mapsLink} target="_blank" title={data.addressAlt}>
+                        {data.Address1}<br/>
+                        {data.Address2}
+                    </a>
+                  </div>
+                  <div class="slds-small-size_12-of-12 slds-large-size_1-of-3 slds-medium-size_12-of-12 ssp-anchor slds-size_1-of-1 ssp-fontFamily_popinBold ssp-child-care-color_monoBody ssp-child-care-results-text">
+                    <a
+                    href={data.phoneHref}
+                    title={data.phoneTitle}
+                    class="ssp-underline ssp-fontFamily_popinBold"
+                    >{data.PhoneNumber}</a
+                  >
+                  </div>
+                  <div class="slds-small-size_12-of-12 slds-large-size_1-of-3 slds-medium-size_12-of-12 slds-size_1-of-1 ssp-child-care-results-text">
+                    <span class ="ssp-color_monoBody ssp-fontFamily_popinBold slds-m-right_x-small"> 
+                     {customLabels.sspOpenNow}
+                    </span>
+                    <span class="ssp-color_monoBody  ssp-fontFamily_popinRegular"> 
+                      {data.OpenNow}</span>
+                  </div>
+                </div>
+                <div class=" slds-grid slds-wrap">
+                <template if:true={data.IsOngoingProcess}>
+                    <p class="ssp-color_monoBody ssp-child-care-results-text ssp-fontFamily_popinRegular slds-m-vertical_medium">
+                    <img
+                    src={providerNotificationIcon}
+                    alt={customLabels.sspChildCareInspectionHelp}
+                    /><span class="slds-m-left_xx-small">{data.ProcessText}</span> 
+                    </p>
+                </template>
+              </div>
+              <div>
+              <template if:true={data.IsProviderStatus}>
+                  <p class="ssp-color_monoBody ssp-child-care-results-text ssp-fontFamily_popinRegular slds-m-vertical_medium">
+                    <img
+                    src={providerNotificationIcon}
+                    alt={customLabels.sspChildcareSuspendedHelp}
+                    /><span class="slds-m-left_xx-small">{data.SuspendText}</span>
+                  </p>
+              </template>
+             </div>
+            </div>
+             <div slot="footer">
+              <hr class="ssp-horizontal-rule ssp-bg_monoAlpha ssp-child-care-provider-line"></hr>
+                <div class="slds-grid slds-wrap">
+                    <template if:false ={isCitizenUser}> 
+                        <div class= "ssp-child-care-provider-Padding-right slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-large-size_6-of-12">
+                            <lightning-button
+                                label={customLabels.sspViewMoreDetails}
+                                title={customLabels.sspViewMoreAlt}
+                                class="ssp-button_base"
+                                onclick={showProviderDetails}
+                                variant="brand"
+                                value={data}
+                            ></lightning-button>
+                        </div>
+                    </template>
+                </div>
+            <div class="slds-grid slds-wrap">
+                <template if:true ={isCitizenUser}> 
+                 <div class= " ssp-child-care-provider-Padding-right slds-col">
+                  <lightning-button
+                      label={customLabels.sspViewMoreDetails}
+                      title={customLabels.sspViewMoreAlt}
+                      class="ssp-button_base"
+                      onclick={showProviderDetails}
+                      variant="brand"
+                      value={data}
+                  ></lightning-button>
+                 </div>
+                 <div class= "ssp-child-care-provider-Padding-left slds-col">
+                  <template if:false={data.ShowFavorite}>
+                      <lightning-button title={customLabels.sspAddToFavoritesAlt} label={customLabels.sspAddToFavorites} value = "AddToFavorites" data-id={data.ProviderId} data-name ={data.ProviderName} variant="brand"
+                          class="ssp-button_base" onclick={handleFavorites}>
+                      </lightning-button>
+                  </template>
+                  <template if:true ={data.ShowFavorite}>
+                      <lightning-button title={customLabels.sspRemoveToFavoritesAlt} label={customLabels.sspRemoveFromFavorites} value = "RemoveFromFavorites" data-id={data.ProviderId} data-name ={data.ProviderName} variant="brand"
+                          class="ssp-button_base" onclick={handleFavorites}>
+                      </lightning-button>
+                  </template>
+                 </div>
+                </template>
+               </div>  
+              </div>
+            </c-ssp-cta-card-blue>
+          </div>
+        </template>
+      </div>
+      <lightning-button
+          variant="brand"
+          class="ssp-button_brand ssp-stacked-btn-width ssp-showmore-btn"
+          label={customLabels.sspShowMore}
+          onclick={handleShowMore}
+          if:true={displayShowMore}
+        >
+        </lightning-button>   
+   </div>
+  </div>
+  </template>
+  <div>
+    <template if:true={showDetails}>
+      <c-ssp-child-care-provider-details
+      provider-data={selectedProvider}
+      onsearchresults={handleSearchResults}
+      page-type="search"
+    >
+    </c-ssp-child-care-provider-details>
+   </template>
+  </div>
+    <div>
+      <template if:true= {favoriteDetails}>
+        <c-ssp-child-care-favorites
+        onbacktosearchprovider={handleBackToSearchProvider}
+        >
+        </c-ssp-child-care-favorites>
+      </template>
+      <template if:true={showModalWindow}>
+        <c-ssp-detailed-information-modal
+            open-model={showModalWindow}
+            header-value={modalHeader}
+            onclosemodal={handleCloseModal}
+        >
+            <span slot="contentSlot">
+                <lightning-formatted-rich-text value={modalBody}>
+                </lightning-formatted-rich-text>
+            </span>
+            <span slot="Footer">{modalFooter}</span>
+        </c-ssp-detailed-information-modal>
+    </template>
+    </div>
+</template>

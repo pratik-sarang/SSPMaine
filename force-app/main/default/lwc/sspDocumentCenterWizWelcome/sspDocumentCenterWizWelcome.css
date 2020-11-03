@@ -1,0 +1,222 @@
+.ssp-uploadProofForms h1 {
+    font-size: 2rem;
+    width: 12.5rem;
+    position: absolute;
+    top: 3.75rem;
+    line-height: 2.5rem;
+}
+
+.ssp-alignmentContainer {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.ssp-uploadProofForms .ssp-desktopSideBackground {
+    position: absolute;
+    right: 0;
+    height: 7.625rem;
+    width: auto;
+}
+
+.ssp-uploadProofForms .ssp-bluePolygon {
+    top: 1.813rem;
+    right: 0;
+}
+
+.ssp-uploadProofForms .ssp-purplePolygon {
+    top: 9.688rem;
+    right: 19%;
+}
+
+.ssp-uploadProofForms .ssp-greyPolygon {
+    top: 5.375rem;
+    right: 34%;
+}
+
+.ssp-uploadProofForms .ssp-yellowPolygon {
+    top: 6.75rem;
+    right: 43%;
+}
+
+.ssp-uploadProofForms .ssp-desktopBackground, .ssp-uploadProofForms .ssp-desktopSideBackground {
+    display: none;
+}
+
+.ssp-uploadProofForms .ssp-mobileBackground {
+    height: 15.625rem;
+    width: 100%;
+}
+
+.ssp-uploadProofForms .ssp-actionButtonsContainer {
+    margin-top: 6.25rem;
+    margin-bottom: 3.75rem;
+}
+
+.ssp-uploadProofForms .ssp-actionButtons .slds-button {
+    height: 3.75rem;
+}
+
+.ssp-uploadProofForms .ssp-actionButtons {
+    display: flex;
+    flex-flow: column-reverse wrap;
+}
+
+.ssp-uploadProofForms ul li::before {
+    content: "\2022";
+    display: inline-block;
+    height: 1rem;
+    font-size: 1.375rem;
+    vertical-align: sub;
+    text-indent: -1rem;
+}
+
+.ssp-uploadProofForms .ssp-startUploadContainer {
+    font-size: 1rem;
+    padding-top: 1.875rem;
+}
+
+.ssp-uploadProofForms .ssp-identifyEvidenceIcon {
+    width: 2.25rem;
+    height: 2.25rem;
+}
+
+.ssp-uploadProofForms .ssp-uploadDocumentIcon {
+    width: 2.25rem;
+    height: 1.813rem;
+}
+
+.ssp-uploadProofForms .ssp-evidenceLabel, .ssp-uploadProofForms .ssp-uploadDocumentLabel {
+    font-size: 1.125rem;
+    padding-left: 0.938rem;
+}
+
+.ssp-uploadProofForms .ssp-startUploadDetails {
+    padding-left: 3.188rem;
+}
+
+.ssp-uploadProofForms .ssp-startUploadContent2 {
+    padding-top: 1.875rem;
+}
+
+.ssp-uploadProofForms .ssp-sectionIconContainer {
+    padding-top: 1.875rem;
+    margin-bottom: 0.75rem;
+}
+
+.ssp-uploadProofForms li {
+    padding-left: 1rem;
+}
+
+.ssp-uploadProofForms .ssp-actionButtons .ssp-cancelButton {
+    margin-top: 1.875rem;
+}
+.ssp-imgElements {
+    position: absolute;
+    /* top: 50%; */
+    transform: translateY(-50%);
+    width: 650px;
+    padding: 0;
+    margin-left: 0;
+}
+.ssp-imgContainer {
+    width: 100%;
+    height: 585px;
+    background-image: url(/resource/SSP_KynectImages5/getStartedUploadingForms.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-position: 50% 17%;
+}
+@media only screen and (max-width: 768px) {
+    .ssp-imgContainer {
+        width: 100%;
+
+        background-image: url(/resource/SSP_KynectImages5/getStartedUploadingFormsMobile.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        background-position: center center;
+    }
+    .ssp-imgElements {
+        width: 100%;
+        padding: 0 30px 0 30px;
+        margin: 0;
+    }
+    .ssp-uploadProofForms h1 {
+        top: 7.75rem;
+        line-height: 3.75rem;
+        width: 17.5rem;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    .ssp-alignmentContainer {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+    .ssp-uploadProofForms h1 {
+        font-size: 3.75rem;
+        top: 7.75rem;
+        line-height: 3.75rem;
+        width: 25rem;
+    }
+    .ssp-uploadProofForms .ssp-desktopBackground {
+        display: block;
+        width: 100%;
+        /* height: 26.75rem; */
+    }
+    .ssp-uploadProofForms .ssp-desktopSideBackground {
+        display: block;
+        top: 11.25rem;
+        width: 14.188rem;
+        height: 23rem;
+    }
+    .ssp-uploadProofForms .ssp-mobileBackgroundContainer {
+        display: none;
+    }
+    .ssp-uploadProofForms .ssp-actionButtons {
+        flex-flow: row;
+    }
+    .ssp-uploadProofForms .ssp-screenFooterNextBtn {
+        margin-left: auto;
+        order: 2;
+    }
+    .ssp-uploadProofForms .ssp-identifyEvidenceIcon {
+        width: 4rem;
+        height: 4rem;
+    }
+    .ssp-uploadProofForms .ssp-uploadDocumentIcon {
+        width: 4rem;
+        height: 3.25rem;
+    }
+    .ssp-uploadProofForms .ssp-identifyEvidenceIcon, .ssp-uploadProofForms .ssp-uploadDocumentIcon {
+        display: block;
+        margin-bottom: 0.938rem;
+    }
+    .ssp-uploadProofForms .ssp-actionButtons .ssp-cancelButton {
+        margin-top: 0;
+    }
+    .ssp-uploadProofForms .ssp-startUploadContent1 {
+        padding-top: 1.875rem;
+    }
+    .ssp-uploadProofForms .ssp-evidenceLabel, .ssp-uploadProofForms .ssp-uploadDocumentLabel, .ssp-uploadProofForms .ssp-startUploadDetails {
+        padding-left: 0;
+    }
+    .ssp-uploadProofForms .ssp-startUploadContainer .slds-col:nth-child(3) {
+        padding-left: 0.625rem;
+        padding-right: 0.625rem;
+    }
+    .ssp-uploadProofForms .ssp-startUploadContainer .slds-col:nth-child(1) {
+        padding-right: 1.25rem;
+    }
+    .ssp-uploadProofForms .ssp-startUploadContainer .slds-col:nth-child(3) {
+        padding-left: 1.25rem;
+    }
+    .ssp-uploadProofForms .ssp-actionButtonsContainer {
+        margin-top: 6.25rem;
+        margin-bottom: 6.25rem;
+    }
+    .ssp-uploadProofForms .ssp-sectionIconContainer {
+        margin-bottom: 1.25rem;
+    }
+}

@@ -1,0 +1,139 @@
+<template>
+    <template if:true={showSpinner}>
+        <c-ssp-spinner></c-ssp-spinner>
+    </template>
+
+    <!-- PROGRAM CARD -->
+    <div class="slds-grid slds-wrap ssp-bg_monoAlpha">
+        <div class=" ssp-CardOuterDOM slds-size_1-of-1">
+            <div class="ssp-card slds-m-bottom_x-large">
+                <div class="slds-grid slds-wrap slds-p-top_medium">
+                    <div
+                        class="ssp-fontFamily_popinBold slds-size_1-of-1 ssp-infoText ssp-leftpadding30"
+                    >
+                        {individualName}
+                    </div>
+                    <!-- FINAL STATUS - Case level/ Program Level/ Application level -->
+                    <div
+                        class="slds-grid slds-wrap slds-size_1-of-1 ssp-leftpadding30"
+                    >
+                        <div if:true={showGreenDisc} class="ssp-Disc"></div>
+                        <div if:true={showRedDisc} class="ssp-redDisc"></div>
+                        <div
+                            if:true={showOrangeDisc}
+                            class="ssp-orangeDisc"
+                        ></div>
+                        <div
+                            class="ssp-infoText13 ssp-fontFamily_popinRegular ssp-color_monoOmega "
+                        >
+                            {finalStatusLabel}
+                        </div>
+                    </div>
+
+                    <div class="slds-p-bottom_medium ssp-leftpadding30">
+                        <!-- Waiver Program Name -->
+                        <div
+                            if:true={showWaiverProgram}
+                            class="ssp-cardElement slds-size_1-of-1"
+                        >
+                            <div
+                                class="ssp-infoText13 ssp-fontFamily_popinRegular ssp-color_monoOmega slds-size_1-of-1"
+                            >
+                                {labels.sspProgramLabel}
+                            </div>
+                            <div
+                                class="ssp-infoText ssp-renewalText ssp-color_monoBody ssp-fontFamily_popinRegular"
+                            >
+                                {waiverProgram}
+                            </div>
+                        </div>
+
+                        <!-- Waiver Application Number -->
+                        <div
+                            if:true={showApplicationNumber}
+                            class="ssp-cardElement slds-size_1-of-2"
+                        >
+                            <div
+                                class="ssp-infoText13 ssp-fontFamily_popinRegular ssp-color_monoOmega slds-size_1-of-1"
+                            >
+                                {labels.sspApplicationHash}
+                            </div>
+                            <div
+                                class="ssp-infoText ssp-renewalText ssp-color_monoBody ssp-fontFamily_popinRegular"
+                            >
+                                {applicationNumber}
+                            </div>
+                        </div>
+
+                        <!-- Waiver Case Number -->
+                        <div
+                            if:true={showWaiverCaseNumber}
+                            class="ssp-cardElement slds-size_1-of-2"
+                        >
+                            <div
+                                class="ssp-infoText13 ssp-fontFamily_popinRegular ssp-color_monoOmega slds-size_1-of-1"
+                            >
+                                {labels.sspWaiverCaseHash}
+                            </div>
+                            <div
+                                class="ssp-infoText ssp-renewalText ssp-color_monoBody ssp-fontFamily_popinRegular"
+                            >
+                                {waiverCaseNumber}
+                            </div>
+                        </div>
+
+                        <div if:true={showReminderText}>
+                            <span
+                                class="ssp-textPadding_6 ssp-infoText ssp-renewalText ssp-color_monoBody ssp-fontFamily_popinRegular"
+                            >
+                                <span>
+                                    <img
+                                        class="ssp-reviewIcon"
+                                        src={needsReviewIconUrl}
+                                        alt="review_icon"
+                                    />
+                                </span>
+                                <span>
+                                    {labels.sspSubmitApplicationWaiver}
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- ***************************** Links Below this comment ***************************** -->
+
+                    <div
+                        class="ssp-hrRuler slds-m-bottom_medium slds-size_1-of-1"
+                    ></div>
+
+                    <div class="slds-grid slds-wrap ssp-leftpadding30">
+                        <div
+                            if:true={showContinueApplication}
+                            class="slds-p-bottom_medium slds-size_1-of-1"
+                        >
+                            <a
+                                if:true={renderingMap.showWaiverContinueApp.isAccessible}
+                                class="ssp-color_blueAlpha ssp-anchor"
+                                onclick={handleContinueApplicationClick}
+                            >
+                                {labels.sspContinueApplication}
+                            </a>
+                        </div>
+                        <div
+                            if:true={showVisitWaiverDashboard}
+                            class="slds-p-bottom_medium slds-size_1-of-1"
+                        >
+                            <a
+                                if:true={renderingMap.showWaiverDashboard.isAccessible}
+                                class="ssp-color_blueAlpha ssp-anchor"
+                                onclick={handleVisitDashboardClick}
+                            >
+                                {labels.sspWaiverCardVisitDashboard}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

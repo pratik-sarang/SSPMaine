@@ -1,0 +1,143 @@
+<!--
+* name 		    : sspClaimsAndPayments
+* @description 	: Component for Claims and Payments Screen
+* @author 		: Venkata Ranga Babu And Ajay
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+*  
+-->
+<template>
+    <c-ssp-spinner if:true={showSpinner}></c-ssp-spinner>
+    <c-ssp-access-denied if:true={notAccessible}></c-ssp-access-denied>
+    <c-ssp-logging-and-error-handling-modal
+        if:true={showErrorModal}
+        onclosemodal={closeErrorModal}
+    >
+    </c-ssp-logging-and-error-handling-modal>
+    <c-ssp-toast
+        if:true={showToastFlag}
+        condition={toastType}
+        ssp-toast-title-val={toastMessage}
+        show-error-toast={showToastFlag}
+        onhidetoast={hideToast}
+    >
+    </c-ssp-toast>
+    <main if:false={notAccessible} class="ssp-claimsAndPayments">
+        <div class="ssp-claimsAndPaymentsHeader ssp-bodyPadding">
+            <h1 class="ssp-claimsAndPaymentsHeaderText ssp-fontFamily_popinBlack ssp-color_blueAlpha">
+                {label.sspClaimsAndPayments}
+            </h1>
+        </div>
+        <div class="ssp-fontFamily_ArvoRegular ssp-color_monoOmega ssp-payInstructions ssp-bodyPadding">
+            <p>{label.payOnlineInstruction}</p>
+            <p class="ssp-repaymentInstructions">{label.repaymentInstruction}</p>
+            <p>{label.amountOwedInstruction} &nbsp; <a href={phoneHref} class="ssp-color_blueAlpha ssp-contactNumber">{label.repaymentContactNumber}</a>.</p>
+        </div>
+        <div class="ssp-fontFamily_popinBold ssp-color_monoBody ssp-amountOwedheading ssp-bodyPadding">
+            <p>{label.amountOwed}</p>
+        </div>
+        <template for:each={claimRecordsByProgram} for:item="claimRecordsByStatus">
+            <div key={claimRecordsByStatus.program} class="ssp-bg_monoAlpha ssp-claimProgramStatus ssp-bodyPadding">
+                <p class="ssp-fontFamily_popinBold ssp-color_blueAlpha ssp-programName">{claimRecordsByStatus.programDisplay}</p>
+                <!--Delinquent-->
+                <template for:each={claimRecordsByStatus.claims} for:item="claimRecord">
+                    <div key={claimRecord.ClaimNumber__c} class="slds-grid slds-wrap slds-size_1-of-1 ssp-claimCardSection">
+                        <c-ssp-cta-card-blue class="slds-size_1-of-1 ssp-claimCard">
+                            <div slot="content">
+                                <div class="ssp-claimStatus ssp-bg_monoDelta">
+                                    <p class={claimRecord.statusClass}>{claimRecord.statusDisplay}</p>
+                                </div>
+                                <div class="slds-grid slds-wrap ssp-bg_whiteAlpha ssp-statusInfo">
+                                    <div class="slds-size_1-of-1">
+                                        <p class="ssp-dueDateSection">
+                                            <span class="ssp-claimId ssp-fontFamily_popinBold ssp-color_monoBody">{label.ID}  #: {claimRecord.ClaimNumber__c}</span>
+                                            <span class="ssp-dueDate ssp-fontFamily_popinRegular ssp-color_monoOmega">{label.dueDate}: {claimRecord.DueDate}</span>
+                                        </p>
+                                    </div>
+                                    <div class="slds-grid slds-wrap slds-size_1-of-1 ssp-statusInfoAmount">
+                                        <div class="slds-large-size_3-of-5 slds-size_1-of-1">
+                                            <p class="ssp-currentAmountSection">
+                                                <span class="ssp-currentAmountText ssp-fontFamily_popinRegular ssp-color_monoOmega">{label.currentAmountOwed}</span> 
+                                                <span class={claimRecord.amountClass}>${claimRecord.CurrentAmountOwed}</span>
+                                            </p>
+                                            <div if:true={claimRecord.showWarning} class="ssp-paymentWarning">
+                                                <img class="ssp-reviewIcon slds-m-right_medium" src={reviewIcon} alt="review_icon">
+                                                <span class="ssp-payAlert ssp-fontFamily_popinRegular ssp-color_monoBody">{label.payImmediatelyAlert}</span>
+                                            </div>
+                                        </div>
+                                        <div class="slds-large-size_2-of-5 slds-size_1-of-1 ssp-buttonPayNowSection">
+                                            <lightning-button
+                                                variant="brand"
+                                                class="ssp-button_brand ssp-buttonPayNow"
+                                                label={label.payNow}
+                                                onclick={openPaymentModal}
+                                                disabled={claimRecord.paymentDisabled}
+                                                data-claim-number={claimRecord.ClaimNumber__c}
+                                            >
+                                            </lightning-button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </c-ssp-cta-card-blue>
+                    </div>
+                </template>
+            </div>
+        </template>
+    </main>
+    <!--Payment Modal-->
+    <template if:true={isPaymentModal}>
+        <c-ssp-detailed-information-modal
+            open-model={isPaymentModal}
+            onclosemodal={closePaymentModal}
+            header-value={label.sspChoosePaymentAmount}
+            reference = {reference}
+            class="ssp-payNowModal"
+        >
+        <div slot="contentSlot">
+            <div class="slds-grid slds-wrap slds-size_1-of-1 ssp-choosePaymentInfo">
+                <p class="ssp-fontFamily_ArvoRegular ssp-color_monoBody">
+                    {label.sspSelectIfYouWouldLikeToPay}
+                </p>
+            </div>
+            <div class="slds-grid slds-wrap slds-size_1-of-1 ssp-amountTypeList">
+                <lightning-radio-group
+                    options={amountTypeList}
+                    class="ssp-radioGroup slds-size_1-of-1"
+                    type="radio"
+                    value={selectedAmountType}
+                    onchange={handleAmountChange}
+                ></lightning-radio-group>
+            </div>
+            <div class="slds-grid slds-wrap slds-size_1-of-1 ssp-remainingAmountOwed">
+                <p class="ssp-fontFamily_popinRegular ssp-color_monoBody ssp-remainingAmountOwedText">{label.sspRemainingAmountOwed}</p>
+                <p class="ssp-fontFamily_popinBold ssp-color_blueAlpha">${remainingAmount}</p>
+            </div>
+            <div class="slds-grid slds-wrap slds-size_1-of-1">
+                <p class="ssp-fontFamily_ArvoRegular ssp-color_monoBody">
+                    {label.sspPleaseHaveYourBankAccountInformation}.
+                </p>
+            </div>
+        </div>
+        <div slot="Footer" class="slds-grid slds-wrap slds-size_1-of-1 ssp-stacked-btn-width">
+            <lightning-button
+                title={label.sspClickToVisitKentucky}
+                label={label.sspNext}
+                variant="brand"
+                class="ssp-button_brand slds-size_1-of-1"
+                onclick={navigateToPaymentPage}
+                disabled={isNotAllowedToPay}
+            >
+            </lightning-button>
+            <lightning-button
+                title={label.sspClickToReturn}
+                label={label.sspCancel}
+                class="ssp-button_base slds-size_1-of-1 ssp-cancel-button"
+                onclick={closePaymentModal}
+            >
+            </lightning-button>
+        </div>
+        </c-ssp-detailed-information-modal>
+    </template>
+</template>

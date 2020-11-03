@@ -1,0 +1,44 @@
+<!--
+* name          : sspSelectionCard.
+* @description  : This card shows user information.
+* @author       : Chaitanya.
+* @date         : 12/11/2019
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName                MM/DD/YYYY               A Brief Description about the Change
+  Chaitanya                       12/11/2019                          Initial Version
+-->
+<template>
+    <div class="slds-box ssp-selectionCard ssp-boxShadow ssp-bg_white">
+        <div
+            class="slds-grid slds-wrap slds-grid_align-spread slds-grid_vertical-align-center"
+        >
+            <div class="ssp-selectionCardText ssp-fontFamily_popinBold">
+                <slot></slot>
+            </div>
+            <div>
+                <template if:true={displayEditButton}>
+                    <lightning-button
+                        label={buttonValue}
+                        title="base"
+                        variant="neutral"
+                        onclick={handleClick}
+                        class="ssp-button_base ssp-cardButton"
+                    >
+                    </lightning-button>
+                </template>
+                <template if:true={displayStartButton}>
+                    <lightning-button
+                        label={buttonValue}
+                        title="Neutral"
+                        variant="neutral"
+                        onclick={handleClick}
+                        class="ssp-button_neutral ssp-cardButton"
+                    >
+                    </lightning-button>
+                </template>
+            </div>
+        </div>
+    </div>
+</template>

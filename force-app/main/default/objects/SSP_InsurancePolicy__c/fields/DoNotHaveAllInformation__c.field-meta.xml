@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DoNotHaveAllInformation__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This field is use to identify whether user have all detail information of Policy and its Covered Individuals</description>
+    <externalId>false</externalId>
+    <label>Don&apos;t have all Information?</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

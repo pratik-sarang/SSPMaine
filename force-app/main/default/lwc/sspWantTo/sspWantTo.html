@@ -1,0 +1,121 @@
+<!--
+* name 		    : sspWantTo
+* @description 	: This component provides I want.. to navigation links.
+* @author 		: Keshav Poduval And Nikhil Shinde
+* @date 		: 26-05-2020
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+*  
+-->
+
+<template>
+    <template if:true={showSpinner}>
+        <c-ssp-spinner></c-ssp-spinner>
+    </template>
+    <div
+        class="slds-grid slds-wrap slds-large-size_1-of-1 ssp-iWantToContainer ssp-bg_monoDelta"
+    >
+        <p
+            class="slds-size_1-of-1 ssp-fontFamily_popinBold ssp-color_blueAlpha ssp-want-to-text"
+        >
+            {customLabels.sspIWantTo}
+        </p>
+        <div class="slds-grid slds-wrap slds-size_1-of-1 ssp-wantToContent">
+            <template if:true={linkRoleVisibility.SSP_Request_Access}>
+                <div
+                    class="slds-col slds-wrap slds-large-size_1-of-2 slds-medium-size_1-of-2 slds-size_1-of-1 slds-p-bottom_small slds-p-right_small"
+                    
+                >
+                    <div>
+                        <a
+                            tabindex="0"
+                            class="ssp-fontFamily_popinBold ssp-color_monoBody ssp-wantToContentHeader"
+                            onclick={navigateToAccessRequest}
+                            title={customLabels.sspRequestAccessAlternateText}
+                            >{customLabels.sspRequestAccess}</a
+                        >
+                    </div>
+                    <div class="ssp-wantToContentDescription">
+                        {customLabels.sspRequestAccessToCaseDescription}
+                    </div>
+                </div>
+            </template>
+            <template if:true={linkRoleVisibility.SSP_Prescreening_Tool}>
+                <div
+                    class="slds-col slds-wrap slds-large-size_1-of-2 slds-medium-size_1-of-2 slds-size_1-of-1 slds-p-bottom_small slds-p-right_small"
+                >
+                    <div>
+                        <a
+                            tabindex="0"
+                            class="ssp-fontFamily_popinBold ssp-color_monoBody ssp-wantToContentHeader"
+                            title={customLabels.sspPreScreeningAlternateText}
+                            onclick={navigateToPreScreeningToolPage}
+                            >{customLabels.sspPreScreeningTool}</a
+                        >
+                    </div>
+                    <div class="ssp-wantToContentDescription">
+                        {customLabels.sspCheckForEligibilityDescription}
+                    </div>
+                </div>
+            </template>
+            <template if:true={linkRoleVisibility.SSP_SNAP}>
+                <div
+                    class="slds-col slds-wrap slds-large-size_1-of-2 slds-medium-size_1-of-2 slds-size_1-of-1 slds-p-bottom_small slds-p-right_small"
+                >
+                    <div>
+                        <a
+                            tabindex="0"
+                            class="ssp-fontFamily_popinBold ssp-color_monoBody ssp-wantToContentHeader"
+                            href={shortSnapURL}
+                            title={customLabels.sspSNAPAlternateText}
+                            >{customLabels.sspStartShortSNAP}</a
+                        >
+                    </div>
+                    <div class="ssp-wantToContentDescription">
+                        {customLabels.sspStartShortSNAPDescription}
+                    </div>
+                </div>
+            </template>
+
+            <template if:true={linkRoleVisibility.SSP_AgentPortal}>
+                <div
+                    class="slds-col slds-wrap slds-large-size_1-of-2 slds-medium-size_1-of-2 slds-size_1-of-1 slds-p-bottom_small slds-p-right_small"
+                >
+                    <div>
+                        <a
+                            tabindex="0"
+                            class="ssp-fontFamily_popinBold ssp-color_monoBody ssp-wantToContentHeader"
+                            href={customLabels.sspAgentPortalURL}
+                            target="_blank"
+                            title={customLabels.sspAgentPortalAlternateText}
+                            >{customLabels.sspAgentPortal}</a
+                        >
+                    </div>
+                    <div class="ssp-wantToContentDescription">
+                        {customLabels.sspVisitAgentPortalDescription}
+                    </div>
+                </div>
+            </template>
+            <template if:true={linkRoleVisibility.SSP_DownloadManual}>
+                <div
+                    class="slds-col slds-wrap slds-large-size_1-of-2 slds-medium-size_1-of-2 slds-size_1-of-1 slds-p-bottom_small slds-p-right_small"
+                >
+                    <div>
+                        <a
+                            tabindex="0"
+                            class="ssp-fontFamily_popinBold ssp-color_monoBody ssp-wantToContentHeader"
+                            href={customLabels.sspUserManualDownloadLink}
+                            target="_blank"
+                            title={customLabels.sspDownloadManualAlternateText}
+                            >{customLabels.sspDownloadUserManual}</a
+                        >
+                    </div>
+                    <div class="ssp-wantToContentDescription">
+                        {customLabels.sspDownloadUserManualDescription}
+                    </div>
+                </div>
+            </template>
+        </div>
+    </div>
+</template>

@@ -1,0 +1,37 @@
+.ssp-radioGroup .ssp-radioWidth {
+  width: 100%;
+}
+.showError {
+  font-size: 0.75rem;
+  margin-top: 0.125rem;
+  background: transparent;
+}
+.ssp-genericInput .slds-form-element {
+  display: inline;
+}
+.ssp-genericInput .ssp-genericRequired {
+  display: inline;
+}
+.ssp-radioGroup .slds-form-element__label {
+  letter-spacing: 0.3px;
+  line-height: 30px;
+}
+.ssp-helptextIcon {
+  margin-left: 10px;
+  position: relative;
+  bottom: 3px;
+  margin-bottom: 0.313rem;
+}
+.ssp-alignHelpText {
+  display: inline-block;
+}
+.ssp-alignHelpText label {
+  font-size: 16px;
+  margin-bottom: 0.1875rem;
+  word-break: break-word;
+}
+@media only screen and (max-width: 768px) {
+  .ssp-componentWidth {
+      width: 100%;
+  }
+}

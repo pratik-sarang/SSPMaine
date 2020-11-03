@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>ClaimMySiteRequest__c$Name</field>
+    </columns>
+    <columns>
+        <field>ClaimMySiteRequest__c$DateOfRequest__c</field>
+    </columns>
+    <columns>
+        <field>ClaimMySiteRequest__c$RequestingOrganizationName__c</field>
+    </columns>
+    <columns>
+        <field>ClaimMySiteRequest__c$FirstName__c</field>
+    </columns>
+    <columns>
+        <field>ClaimMySiteRequest__c$LastName__c</field>
+    </columns>
+    <columns>
+        <field>ClaimMySiteRequest__c$Email__c</field>
+    </columns>
+    <columns>
+        <field>ClaimMySiteRequest__c$PhoneNumber__c</field>
+    </columns>
+    <description>The system will display a Table of the claims &quot;Denied Claims&quot; that are in &quot;Denied&quot; status, sorted by Date of Request (newest to oldest)</description>
+    <filter>
+        <criteriaItems>
+            <column>ClaimMySiteRequest__c$Status__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Denied</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Denied Claims</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Claim_Site_Request__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>ClaimMySiteRequest__c$DateOfRequest__c</sortColumn>
+    <sortOrder>Desc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>ClaimMySiteRequest__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

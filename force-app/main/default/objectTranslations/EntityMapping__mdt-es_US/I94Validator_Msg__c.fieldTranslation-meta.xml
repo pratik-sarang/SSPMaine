@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- I94Validator_Msg --></label>
+    <name>I94Validator_Msg__c</name>
+    <picklistValues>
+        <masterLabel>Please enter a valid I-94 Number with no special characters.</masterLabel>
+        <translation>Ingresar un número de I-94 válido sin caracteres especiales.Ingresar un número de I-94 válido sin caracteres especiales.</translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,13 @@
+.ssp-marginBottomThirty {
+    margin-bottom: 1.875rem;
+}
+.ssp-consentContentContainer p,
+.ssp-consentContentContainer li {
+    margin-bottom: 20px;
+}
+.ssp-consentContentContainer li {
+    list-style-type: decimal;
+}
+.ssp-consentContentContainer ul {
+    padding-left: 15px;
+}

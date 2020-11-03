@@ -1,0 +1,136 @@
+<!--
+* name 		        : sspEntitledBenefits
+* @description 	    : Container for Entitled Benefits Page
+* @author 		    : Kyathi Kanumuri, Shrikant Raut 
+* @date 		    : 11/28/2019
+* MODIFICATION LOG:
+* DEVELOPER           DATE                DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* Kyathi Kanumuri	      11/28/2019	      HTML Structure Creation
+* 
+-->
+<template>
+    <template if:true={showSpinner}>
+        <c-ssp-spinner></c-ssp-spinner>
+    </template>
+    <div class="ssp-entitledBenefits_container ssp-bodyContainer">
+        <div class="ssp-errorToast" if:true={hasSaveValidationError}>
+            <c-ssp-toast
+                ssp-toast-title-val={label.toastErrorText}
+                show-error-toast={trueValue}
+                onhidetoast={hideToast}
+            ></c-ssp-toast>
+        </div>
+
+        <template if:true={isVisible}>
+            <div class="ssp-entitledBenefitsForm slds-m-top_x-large">
+                <div class="ssp-fieldsContainer">
+                    <p>
+                        <a
+                            tabindex="0"
+                            role="button"
+                            onclick={displayLearnMoreModelMethod}
+                            onkeydown={displayLearnMoreModelMethod}
+                            title={label.sspLearnMoreAltText}
+                            class="ssp-learnMore_link ssp-color_monoBody ssp-fontFamily_popinBold slds-m-bottom_x-large"
+                        >
+                            {label.sspLearnMoreLink}</a
+                        >
+                    </p>
+                    <template if:true={openLearnMoreModel}>
+                        <c-ssp-detailed-information-modal
+                            reference={reference}
+                            header-value={label.sspLearnMoreLink}
+                            open-model={openLearnMoreModel}
+                            onclosemodal={hideLearnMoreModelMethod}
+                        >
+                            <span
+                                slot="contentSlot"
+                                class="ssp-learnMore ssp-fontFamily_ArvoRegular"
+                            >
+                            </span>
+                        </c-ssp-detailed-information-modal>
+                    </template>
+
+                    <p tabindex="0"
+                        class="ssp-fieldLabel ssp-fontFamily_popinBold ssp-color_monoBody slds-m-bottom_medium"
+                    >
+                        {label.sspBenefitOrPlanApplied}
+                    </p>
+                    <template
+                        for:each={benefitsWrapperList}
+                        for:item="benefit"
+                        for:index="index"
+                    >
+                        <div
+                            key={benefit.key}
+                            class="ssp-checkbox slds-m-bottom_medium"
+                        >
+                            <template
+                                if:true={benefit.BenefitTypeCode__c.isVisible}
+                            >
+                                <c-ssp-multiselect-with-additional-input
+                                    label={benefit.BenefitTypeCode__c.label}
+                                    value={benefit.BenefitTypeCode__c.value}
+                                    class={benefit.BenefitTypeCode__c.className}
+                                    show-error={errorClass}
+                                    is-checked={benefit.BenefitTypeCode__c.isChecked}
+                                    data-index={index}
+                                    data-id={benefit.StatusofApplication__c.fieldAPI}
+                                    data-type={benefit.BenefitTypeCode__c.typeValue}
+                                    onhandlemultiselectchange={showHideFields}
+                                    disabled={isReadOnlyUser}
+                                >
+                                    <div
+                                        if:true={benefit.BenefitTypeCode__c.isChecked}
+                                        class="slds-grid slds-wrap"
+                                    >
+                                        <c-ssp-base-component-input-picklist
+                                            if:true={benefit.StatusofApplication__c.isVisible}
+                                            class={benefit.StatusofApplication__c.className}
+                                            option={applicationStatusList}
+                                            title={label.sspApplicationStatusAltText}
+                                            label={label.sspApplicationStatus}
+                                            value={benefit.StatusofApplication__c.value}
+                                            data-id={benefit.StatusofApplication__c.fieldAPI}
+                                            field-name={benefit.StatusofApplication__c.fieldAPI}
+                                            entity-name={benefit.StatusofApplication__c.objectAPI}
+                                            meta-list={metaDataListParent}
+                                            onhandlepicklistchange={setApplicationStatus}
+                                            data-index={index}
+                                        >
+                                        </c-ssp-base-component-input-picklist>
+
+                                        <template
+                                            if:true={benefit.isDateVisible}
+                                        >
+                                            <c-ssp-base-component-input-date
+                                                if:true={benefit.BenefitApplicationDate__c.isVisible}
+                                                name={label.sspApplicationDate}
+                                                class={benefit.BenefitApplicationDate__c.className}
+                                                label={label.sspApplicationDate}
+                                                title={label.sspApplicationDate}
+                                                value={benefit.BenefitApplicationDate__c.value}
+                                                data-id={benefit.BenefitApplicationDate__c.fieldAPI}
+                                                field-name={benefit.BenefitApplicationDate__c.fieldAPI}
+                                                entity-name={benefit.BenefitApplicationDate__c.objectAPI}
+                                                meta-list={metaDataListParent}
+                                            ></c-ssp-base-component-input-date>
+                                        </template>
+                                    </div>
+                                </c-ssp-multiselect-with-additional-input>                                
+                            </template>
+
+                        </div>                        
+                    </template>
+                    <span class="ssp-color_redOmega" role="alert" aria-atomic="true"
+                        >{benefitValidationError}</span
+                    >
+                </div>
+            </div>
+        </template>
+    </div>
+    <template if:true={showAccessDeniedComponent}>
+        <c-ssp-access-denied></c-ssp-access-denied>
+    </template>
+</template>

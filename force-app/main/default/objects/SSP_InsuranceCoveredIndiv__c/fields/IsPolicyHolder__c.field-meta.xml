@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IsPolicyHolder__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This flag is used to identify policy holder</description>
+    <externalId>false</externalId>
+    <label>Is Individual Policy Holder?</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

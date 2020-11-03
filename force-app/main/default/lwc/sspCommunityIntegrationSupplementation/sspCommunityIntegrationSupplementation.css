@@ -1,0 +1,77 @@
+.ssp-componentWidth {
+    width: 100%;
+}
+
+.ssp-cisQuestionsText {
+    font-size: 1rem;
+}
+
+.ssp-cisDetailsContainer {
+    margin-bottom: 3.75rem;
+}
+.ssp-cisCareCoordinator {
+    margin-bottom: 6.25rem;
+}
+
+.ssp-cisHeaderText {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    margin-bottom: 0.9375rem;
+}
+
+.ssp-cisHr {
+    height: 0.313rem;
+    border-radius: 0.156rem;
+    margin-bottom: 1.875rem;
+}
+
+.ssp-startDate {
+    padding-right: 2%;
+}
+.ssp-endDate {
+    padding-left: 2%;
+}
+
+.ssp-cisComponentWidth {
+    width: 48.1%;
+}
+
+.ssp-cisWidth {
+    width: 100%;
+}
+
+.ssp-cisMarginBottom {
+    margin-bottom: 1.875rem;
+}
+
+.ssp-cisDetailsContainer > .ssp-cisToggleQuestions {
+    margin-top: 30px;
+    padding-bottom: 30px;
+}
+
+@media only screen and (max-device-width: 768px) {
+    .ssp-startDate {
+        padding-right: 0%;
+        margin-bottom: 1.875rem;
+    }
+    .ssp-endDate {
+        padding-left: 0%;
+    }
+
+    .ssp-cisComponentWidth {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-device-width: 1023px) {
+    .ssp-startDate {
+        padding-right: 0%;
+        margin-bottom: 1.875rem;
+    }
+    .ssp-endDate {
+        padding-left: 0%;
+    }
+    .ssp-cisComponentWidth {
+        width: 100%;
+    }
+}

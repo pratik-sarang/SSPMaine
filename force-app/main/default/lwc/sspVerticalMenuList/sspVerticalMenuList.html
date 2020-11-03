@@ -1,0 +1,31 @@
+<!--
+* name          : sspVerticalMenuList.
+* @description  : This a component which shows a vertical menu.
+* @author       :Venkat.
+* @date         : 12/11/2019
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName                MM/DD/YYYY               A Brief Description about the Change
+  Venkat                     12/11/2019                          Initial Version
+  Chirag                    05/18/2020                  Added HOH Enable/Disable Functionality
+-->
+<template>
+    <div class="ssp-verical-menu">
+        <lightning-vertical-navigation selected-item={selectedName} onselect={handleSelect}>
+            <lightning-vertical-navigation-section class="ssp-verticalMenuHeader ssp-fontFamily_popinBold" label={customLabels.sspNavigation}>
+                <div class="slds-grid slds-wrap">
+                    <div class="ssp-verticalMenuBorder slds-grid_align-center">
+                        <template for:each={menuOptions} for:item="item">
+                            <lightning-vertical-navigation-item
+                                key={item.name}
+                                label={item.label}
+                                name={item.name}
+                            ></lightning-vertical-navigation-item>
+                        </template>
+                    </div>
+                </div>
+            </lightning-vertical-navigation-section>
+        </lightning-vertical-navigation>
+    </div>
+</template>

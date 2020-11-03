@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Page Config Display Name View --></label>
+    <name>Page_Config_Display_Name_View__c</name>
+    <picklistValues>
+        <masterLabel>Absent Parent</masterLabel>
+        <translation><!-- Absent Parent --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Access to Healthcare Coverage Summary</masterLabel>
+        <translation><!-- Access to Healthcare Coverage Summary --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Address Information</masterLabel>
+        <translation><!-- Address Information --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Address Information - Non Primary</masterLabel>
+        <translation><!-- Address Information - Non Primary --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Alien Sponsor</masterLabel>
+        <translation><!-- Alien Sponsor --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>American Indian Alaskan Native</masterLabel>
+        <translation><!-- American Indian Alaskan Native --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Blindness</masterLabel>
+        <translation><!-- Blindness --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Contact Information</masterLabel>
+        <translation><!-- Contact Information --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Contact Information - Non Primary</masterLabel>
+        <translation><!-- Contact Information - Non Primary --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Conviction</masterLabel>
+        <translation><!-- Conviction --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Education</masterLabel>
+        <translation><!-- Education Summary --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Enrollment in Healthcare Coverage Summary</masterLabel>
+        <translation><!-- Enrollment in Healthcare Coverage Summary --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Expedite your SNAP Benefits</masterLabel>
+        <translation><!-- Expedite your SNAP Benefits --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Expenses</masterLabel>
+        <translation><!-- Expenses --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Former Foster Care</masterLabel>
+        <translation><!-- Former Foster Care --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Health</masterLabel>
+        <translation><!-- Health --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Health Condition</masterLabel>
+        <translation><!-- Health Condition --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Healthcare Coverage Selection</masterLabel>
+        <translation><!-- Healthcare Coverage Selection --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Household Circumstances</masterLabel>
+        <translation><!-- Household Circumstances --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Household Meal</masterLabel>
+        <translation><!-- Household Meal --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Living Arrangement</masterLabel>
+        <translation><!-- Living Arrangement --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Medical Expenses (Last 3 Months)</masterLabel>
+        <translation><!-- Medical Expenses (Last 3 Months) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not a U.S. Citizen</masterLabel>
+        <translation><!-- Not a U.S. Citizen --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other Resources</masterLabel>
+        <translation><!-- Other Resources --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pregnancy</masterLabel>
+        <translation><!-- Pregnancy --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Relationships</masterLabel>
+        <translation><!-- Relationships --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Resources</masterLabel>
+        <translation><!-- Resources --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Signature Page</masterLabel>
+        <translation><!-- Signature Page --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tax Filing</masterLabel>
+        <translation><!-- Tax Filing --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

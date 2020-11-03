@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Adopted Daughter</masterLabel>
+        <translation>Hija adoptada</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Adopted Son</masterLabel>
+        <translation>Hijo adoptado</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Aunt (Including Great)</masterLabel>
+        <translation>Tía (incluye tía abuela)</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Brother-in-Law</masterLabel>
+        <translation>Cuñado</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Brother/ Half-Brother</masterLabel>
+        <translation>Hermano/ Medio hermano</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Cousin</masterLabel>
+        <translation>Primo/a</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Daughter</masterLabel>
+        <translation>Hija</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Daughter-in-Law</masterLabel>
+        <translation>Nuera</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Father</masterLabel>
+        <translation>Padre</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Father-in-Law</masterLabel>
+        <translation>Suegro</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Foster Child</masterLabel>
+        <translation>Menor en cuidados de crianza</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Foster Parent</masterLabel>
+        <translation>Padre de cuidados de crianza</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Granddaughter (Including Great)</masterLabel>
+        <translation>Abuelo (incluye bisabuelo)</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Grandfather (Including Great)</masterLabel>
+        <translation>Abuelo (incluye bisabuelo)</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Grandmother (Including Great)</masterLabel>
+        <translation>Abuela (incluye bisabuela)</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Grandson (Including Great)</masterLabel>
+        <translation>Nieto (incluye bisnieto)</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Mother</masterLabel>
+        <translation>Madre</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Mother-in-Law</masterLabel>
+        <translation>Suegra</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Nephew (Including Great)</masterLabel>
+        <translation>Sobrino (incluye sobrino nieto)</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Niece (Including Great)</masterLabel>
+        <translation>Sobrina (incluye sobrina nieta)</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Sister-in-Law</masterLabel>
+        <translation>Cuñada</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Sister/ Half Sister</masterLabel>
+        <translation>Hermana/Hermanastra</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Son</masterLabel>
+        <translation>Hijo</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Son-in-Law</masterLabel>
+        <translation>Yerno</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Spouse</masterLabel>
+        <translation>Cónyuge</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Step Brother</masterLabel>
+        <translation>Hermanastro</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Step Daughter</masterLabel>
+        <translation>Hijastra</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Step Father</masterLabel>
+        <translation>Padrastro</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Step Granddaughter (Including Great)</masterLabel>
+        <translation>Nietastra (incluye bisnieta)</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Step Grandfather (Including Great)</masterLabel>
+        <translation>Abuelastro (incluye bisabuelo)</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Step Grandmother (Including Great)</masterLabel>
+        <translation>Abuelastra (incluye bisabuela)</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Step Grandson (Including Great)</masterLabel>
+        <translation>Nietastro (incluye bisnieto)</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Step Mother</masterLabel>
+        <translation>Madrastra</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Step Sister</masterLabel>
+        <translation>Hermanastra</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Step Son</masterLabel>
+        <translation>Hijastro</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Uncle (Including Great)</masterLabel>
+        <translation>Tío (incluye tío abuelo)</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Unrelated</masterLabel>
+        <translation>Sin relación de parentesco</translation>
+    </valueTranslation>
+</GlobalValueSetTranslation>

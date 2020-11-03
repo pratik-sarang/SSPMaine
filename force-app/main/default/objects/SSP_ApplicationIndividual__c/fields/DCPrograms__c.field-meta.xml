@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DCPrograms__c</fullName>
+    <description>This field is used to store existing programs for a member from Reverse SSP DC</description>
+    <externalId>false</externalId>
+    <label>DC Programs</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>BenefitPrograms</valueSetName>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

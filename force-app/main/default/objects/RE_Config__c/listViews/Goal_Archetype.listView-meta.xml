@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Goal_Archetype</fullName>
+    <columns>NAME</columns>
+    <columns>Archetype__c</columns>
+    <columns>Goal__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>RE_Config__c.GoalArchetypeMapping</value>
+    </filters>
+    <label>Goal Archetype</label>
+</ListView>

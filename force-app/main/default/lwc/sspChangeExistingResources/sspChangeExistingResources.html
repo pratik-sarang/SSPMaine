@@ -1,0 +1,242 @@
+<!--
+* name 		        : sspChangeExistingResources
+* @description 	    : Container for Change in Existing Resource Page
+* @author 		    : Kyathi Kanumuri 
+* @date 		    : 11/25/2019
+* MODIFICATION LOG:
+* DEVELOPER           DATE                DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName	      11/26/2019	      HTML Structure Creation
+* 
+-->
+<template>
+    <template if:true={showSpinner}>
+        <c-ssp-spinner></c-ssp-spinner>
+    </template>
+    <div class="ssp-changeResource_container ssp-bodyContainer">
+        <div class="ssp-errorToast" if:true={hasSaveValidationError}>
+            <c-ssp-toast
+                ssp-toast-title-val={label.toastErrorText}
+                show-error-toast={trueValue}
+                onhidetoast={hideToast}
+            ></c-ssp-toast>
+        </div>
+        <div
+            class="slds-grid slds-wrap ssp-changeResourceForm slds-m-vertical_x-large"
+        >
+            <div
+                class="slds-grid slds-wrap slds-size_1-of-1 ssp-fieldsContainer"
+            >
+                <p
+                    class="ssp-fieldLabel ssp-fontFamily_popinBold ssp-color_monoBody slds-m-bottom_medium" tabindex="0"
+                >
+                    {changeResourceQuestionLabel}
+                </p>
+            </div>
+            <div class="slds-grid slds-wrap slds-size_1-of-1">
+                <template for:each={existResources} for:item="exResource">
+                    <div
+                        key={exResource.strResourceId}
+                        class="slds-size_1-of-1 ssp-fieldsContainer"
+                    >
+                        <c-ssp-base-component-multiline-input-checkbox
+                            onhandlemultiselectchange={handleCheckboxAction}
+                            object-data={exResource}
+                            hide-additional-fields={falseValue}
+                            class="ssp-changeResourceCheckbox"
+                        >
+                            <div slot="labelContent" class="ssp-checkboxLabels">
+                                <p
+                                    class="ssp-fontFamily_popinBold ssp-color_monoBody ssp-labelLine1"
+                                >
+                                    {exResource.strResTileLineOneValue}
+                                </p>
+                                <p
+                                    class="ssp-fontFamily_popinBold ssp-color_blueAlpha"
+                                >
+                                    {exResource.strResTileLineTwoValue}
+                                </p>
+                            </div>
+                            <div
+                                class="slds-grid slds-wrap"
+                                slot="buttonContainer"
+                            >
+                                <template
+                                    if:true={exResource.isResourceAccountInvestmentLiquid}
+                                >
+                                    <div
+                                        class="slds-size_1-of-1 slds-large-size_1-of-2 slds-p-horizontal_small slds-p-vertical_x-small"
+                                    >
+                                        <c-ssp-base-component-input-text-icon
+                                            class="ssp-changeExistingResourceInputs slds-medium-size_1-of-2 slds-size_1-of-1"
+                                            label={label.sspCurrencyValue}
+                                            value={exResource.dResourceValue}
+                                            pattern="^[0-9][0-9]{0,9}(\.[0-9]{0,2})?$"
+                                            data-id="AccountBalance__c"
+                                            entity-name="SSP_Asset__c"
+                                            field-name="AccountBalance__c"
+                                            meta-list={MetaDataListParent}
+                                            data-record={exResource.strResourceId}
+                                        >
+                                        </c-ssp-base-component-input-text-icon>
+                                    </div>
+                                </template>
+                                <template
+                                    if:true={exResource.isResourceLifeInsurance}
+                                >
+                                    <div
+                                        class="slds-size_1-of-1 slds-large-size_1-of-2 slds-p-horizontal_small slds-p-vertical_x-small"
+                                    >
+                                        <c-ssp-base-component-input-text-icon
+                                            class="ssp-changeExistingResourceInputs slds-medium-size_1-of-2 slds-size_1-of-1"
+                                            label={label.sspLifeInsuranceFaceValue}
+                                            value={exResource.strInsuranceFaceValueAmount}
+                                            pattern="^[0-9][0-9]{0,9}(\.[0-9]{0,2})?$"
+                                            data-id="FaceValueAmount__c"
+                                            entity-name="SSP_Asset__c"
+                                            field-name="FaceValueAmount__c"
+                                            meta-list={MetaDataListParent}
+                                            data-record={exResource.strResourceId}
+                                        >
+                                        </c-ssp-base-component-input-text-icon>
+                                    </div>
+                                    <div
+                                        class="slds-size_1-of-1 slds-large-size_1-of-2 slds-p-horizontal_small slds-p-vertical_x-small"
+                                    >
+                                        <c-ssp-base-component-input-text-icon
+                                            class="ssp-changeExistingResourceInputs slds-medium-size_1-of-2 slds-size_1-of-1"
+                                            label={label.sspLifeInsuranceSurrenderValue}
+                                            value={exResource.dCashSurrenderValue}
+                                            pattern="^[0-9][0-9]{0,9}(\.[0-9]{0,2})?$"
+                                            data-id="CashSurrenderValue__c"
+                                            entity-name="SSP_Asset__c"
+                                            field-name="CashSurrenderValue__c"
+                                            meta-list={MetaDataListParent}
+                                            data-record={exResource.strResourceId}
+                                        >
+                                        </c-ssp-base-component-input-text-icon>
+                                    </div>
+                                </template>
+                                <template
+                                    if:true={exResource.isResourceRealEstate}
+                                >
+                                    <div
+                                        class="slds-size_1-of-1 slds-large-size_1-of-2 slds-p-horizontal_small slds-p-vertical_x-small"
+                                    >
+                                        <c-ssp-base-component-input-text-icon
+                                            class="ssp-changeExistingResourceInputs slds-medium-size_1-of-2 slds-size_1-of-1"
+                                            label={label.sspPropertyFairMarketValue}
+                                            value={exResource.dRealEstateFairMarketValue}
+                                            pattern="^[0-9][0-9]{0,9}(\.[0-9]{0,2})?$"
+                                            data-id="RealEstateFairMarketValue__c"
+                                            entity-name="SSP_Asset__c"
+                                            field-name="RealEstateFairMarketValue__c"
+                                            meta-list={MetaDataListParent}
+                                            data-record={exResource.strResourceId}
+                                        >
+                                        </c-ssp-base-component-input-text-icon>
+                                    </div>
+                                </template>
+                                <template
+                                    if:true={exResource.showLoanAmountOwed}
+                                >
+                                    <div
+                                        class="slds-size_1-of-1 slds-large-size_1-of-2 slds-p-horizontal_small slds-p-vertical_x-small"
+                                    >
+                                        <c-ssp-base-component-input-text-icon
+                                            class="ssp-changeExistingResourceInputs slds-medium-size_1-of-2 slds-size_1-of-1"
+                                            label={label.sspLoanAmountOwned}
+                                            value={exResource.dLoanBalance}
+                                            pattern="^[0-9][0-9]{0,9}(\.[0-9]{0,2})?$"
+                                            data-id="LoanBalance__c"
+                                            entity-name="SSP_Asset__c"
+                                            field-name="LoanBalance__c"
+                                            meta-list={MetaDataListParent}
+                                            data-record={exResource.strResourceId}
+                                        >
+                                        </c-ssp-base-component-input-text-icon>
+                                    </div>
+                                </template>
+                                <template
+                                    if:true={exResource.isResourceFuneralContract}
+                                >
+                                    <div
+                                        class="slds-size_1-of-1 slds-large-size_1-of-2 slds-p-horizontal_small slds-p-vertical_x-small"
+                                    >
+                                        <c-ssp-base-component-input-text-icon
+                                            class="ssp-changeExistingResourceInputs slds-medium-size_1-of-2 slds-size_1-of-1"
+                                            label={label.sspContractCost}
+                                            value={exResource.strGoodsServicesCost}
+                                            pattern="^[0-9][0-9]{0,9}(\.[0-9]{0,2})?$"
+                                            data-id="PreFuneralAgmtGoodsAndServicesCost__c"
+                                            entity-name="SSP_Asset__c"
+                                            field-name="PreFuneralAgmtGoodsAndServicesCost__c"
+                                            meta-list={MetaDataListParent}
+                                            data-record={exResource.strResourceId}
+                                        >
+                                        </c-ssp-base-component-input-text-icon>
+                                    </div>
+                                </template>
+                                <template
+                                    if:true={exResource.isResourceVehicle}
+                                >
+                                    <div
+                                        class="slds-size_1-of-1 slds-large-size_1-of-2 slds-p-horizontal_small slds-p-vertical_x-small"
+                                    >
+                                        <c-ssp-base-component-input-text-icon
+                                            class="ssp-changeExistingResourceInputs slds-medium-size_1-of-2 slds-size_1-of-1"
+                                            label={label.sspVehicleCurrentValue}
+                                            value={exResource.dVehicleFairMarketValue}
+                                            pattern="^[0-9][0-9]{0,9}(\.[0-9]{0,2})?$"
+                                            data-id="VehicleFairMarketValue__c"
+                                            entity-name="SSP_Asset__c"
+                                            field-name="VehicleFairMarketValue__c"
+                                            meta-list={MetaDataListParent}
+                                            data-record={exResource.strResourceId}
+                                        >
+                                        </c-ssp-base-component-input-text-icon>
+                                    </div>
+                                    <div
+                                        class="slds-size_1-of-1 slds-large-size_1-of-2 slds-p-horizontal_small slds-p-vertical_x-small"
+                                    >
+                                        <c-ssp-base-component-input-text-icon
+                                            class="ssp-changeExistingResourceInputs slds-medium-size_1-of-2 slds-size_1-of-1"
+                                            label={label.sspVehicleAmountOwned}
+                                            value={exResource.dVehicleDebt}
+                                            pattern="^[0-9][0-9]{0,9}(\.[0-9]{0,2})?$"
+                                            data-id="VehicleDebt__c"
+                                            entity-name="SSP_Asset__c"
+                                            field-name="VehicleDebt__c"
+                                            meta-list={MetaDataListParent}
+                                            data-record={exResource.strResourceId}
+                                        >
+                                        </c-ssp-base-component-input-text-icon>
+                                    </div>
+                                </template>
+                            </div>
+                        </c-ssp-base-component-multiline-input-checkbox>
+                    </div>
+                </template>
+            </div>
+            <div
+                class="slds-grid slds-wrap slds-size_1-of-1 ssp-fieldsContainer  ssp-labelLine1"
+            >
+                <c-ssp-base-component-multiline-input-checkbox
+                    onhandlemultiselectchange={handleOwnResourcesAction}
+                    hide-additional-fields={trueValue}
+                    class="ssp-ownsResourceCheckbox slds-size_1-of-1"
+                >
+                    <div
+                        slot="labelContent"
+                        class="applicationInputs slds-large-size_1-of-1 slds-size_1-of-1 ssp-singleLineCheckboxLabel  ssp-labelLine1 ssp-fontFamily_popinBold"
+                    >
+                        {resourceNotChangedLabel}
+                    </div>
+                </c-ssp-base-component-multiline-input-checkbox>
+            </div>
+            <span class="ssp-color_redOmega" role="alert" aria-atomic="true" if:true={noResourceSelected}
+                >{label.sspSelectResourceErrorMessage}</span
+            >
+        </div>
+    </div>
+</template>

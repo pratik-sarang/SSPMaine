@@ -1,0 +1,216 @@
+.ssp-reportFraudContainer{
+    margin-bottom:220px;
+}
+
+.ssp-reportFraudHeader {
+    font-size: 24px;
+    line-height: 32px;
+    text-align: left;
+    letter-spacing: normal;
+    margin-top: 30px;
+}
+
+.ssp-reportFraudNextHeader {
+    font-size: 24px;
+    line-height: 32px;
+    text-align: left;
+    letter-spacing: normal;
+    margin: 30px 0 5px 0;
+}
+
+.ssp-reportFraudCommonMargin {
+    margin-bottom: 15px;
+}
+
+.ssp-reportFraudHr {
+    height: 0.313rem;
+    border-radius: 0.156rem;
+    margin: 30px 0;
+}
+
+.ssp-reportFraudHrTwo {
+    height: 0.313rem;
+    border-radius: 0.156rem;
+    margin: 15px 0;
+}
+
+.ssp-reportFraudHrThree {
+    height: 0.313rem;
+    border-radius: 0.156rem;
+    margin: 15px 0 30px 0;
+}
+
+.ssp-reportFraudWhoCommitted {
+    margin-bottom: 60px;
+}
+
+.ssp-requestCardTextArea {
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.3px;
+    text-align: left;
+}
+
+.ssp-reportFraudWhoCommittedQuestion {
+    margin-bottom: 9px;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.3px;
+    text-align: left;
+}
+
+.ssp-reportFraudProvideInfoText {
+    font-size: 16px;
+    line-height: 24px;
+    text-align: left;
+    letter-spacing: normal;
+    margin-bottom: 30px;
+}
+
+.ssp-reportFraudProvideInfo {
+    margin-bottom: 60px;
+}
+
+.ssp-letUsKnowEmployerInfo {
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.3px;
+    text-align: left;
+}
+
+.ssp-reportFraudEmployerInfo {
+    margin-bottom: 30px;
+}
+
+.ssp-reportFraudCanOIGContact {
+    margin-bottom: 60px;
+}
+
+.ssp-reportFraudYourInformation {
+    font-size: 18px;
+    line-height: 24px;
+    text-align: left;
+    letter-spacing: -0.3px;
+}
+
+/* .ssp-reportFraudHowCanOIG {
+    margin-bottom: 100px;
+} */
+
+.ssp-reportFraudMultiLineCheckBox {
+    margin-bottom: 30px;
+}
+
+.ssp-submitButton {
+    margin-bottom: 0.938rem;
+}
+
+/* .ssp-reportFraudCaptchaContainer {
+    
+} */
+
+/* .ssp-actionButtonsContainer {
+    margin-top: 100px;
+} */
+.ssp-requestCardButtons {
+    display: flex;
+    flex-flow: column-reverse wrap;
+    margin-bottom: 3.75rem;
+}
+
+.ssp-reportFraudPhoneRight {
+    padding-right: 10px;
+}
+
+.ssp-reportFraudPhoneLeft {
+    padding-left: 10px;
+}
+
+.ssp-reportFraudConfirmation {
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: -0.3px;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.ssp-reportFraudReturnButton {
+    margin-bottom: 60px;
+}
+
+.ssp-reportFraudNextText {
+    text-align: left;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: normal;
+    margin-bottom: 30px;
+}
+
+.ssp-reportFraudCaptchaContainer {
+    height: 90px;
+    margin-top: 100px;
+    position: relative;
+}
+
+.ssp-getBenefitCaptcha {
+    border: none;
+    height: 495px;
+    z-index: 9;
+    position: absolute;
+}
+
+@media only screen and (min-width: 769px) {
+    .ssp-reportFraudHeader {
+        font-size: 42px;
+        line-height: 48px;
+        text-align: left;
+        letter-spacing: normal;
+        margin-top: 75px;
+    }
+
+    .ssp-reportFraudNextHeader {
+        font-size: 42px;
+        line-height: 48px;
+        text-align: left;
+        letter-spacing: normal;
+        margin-top: 75px;
+    }
+
+    .ssp-reportFraudPhoneRight {
+        padding-right: 0px;
+    }
+
+    .ssp-reportFraudPhoneLeft {
+        padding-left: 0px;
+    }
+    .ssp-reportFraudLeftPadding {
+        padding-left: 15px;
+    }
+    .ssp-reportFraudRightPadding {
+        padding-right: 15px;
+    }
+
+    .ssp-reportFraudWhoCommitted {
+        width: 50%;
+    }
+    .ssp-reportFraudWhatHappened {
+        width: 100%;
+    }
+    .ssp-requestCardButtons {
+        justify-content: space-between;
+        flex-flow: row;
+    }
+
+    .ssp-requestCardContainer .ssp-screenFooterNextBtn {
+        margin-left: auto;
+        order: 2;
+    }
+
+    .ssp-submitButton {
+        margin-bottom: 0rem;
+    }
+    .ssp-getBenefitCaptcha {
+        z-index: 0;
+    }
+}

@@ -1,0 +1,48 @@
+.ssp-taxFilingContainer .ssp-taxFilingDesc,
+.ssp-taxFilingContainer .ssp-taxFilingCurrentYearLabel,
+.ssp-taxFilingContainer .ssp-taxFilingDependentOfLabel,
+.ssp-taxFilingContainer .ssp-taxFilingClaimingDependentLabel,
+.ssp-taxFilingContainer .ssp-taxFilingNextYearLabel,
+.ssp-taxFilingContainer .ssp-taxFilingDependentOfHouseholdLabel,
+.ssp-taxFilingContainer .ssp-taxFilingHOHLabel {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: -0.019rem;
+    text-align: left;
+}
+
+.ssp-taxFilingContainer {
+    padding-bottom: 2.5rem;
+}
+
+.ssp-taxFilingContainer .ssp-taxFilingDesc {
+    margin: 1.875rem 0;
+}
+
+.ssp-taxFilingContainer .ssp-taxFilingCurrentYearLabel,
+.ssp-taxFilingContainer .ssp-taxFilingClaimingDependentLabel,
+.ssp-taxFilingContainer .ssp-taxFilingDependentOfLabel,
+.ssp-taxFilingContainer .ssp-taxFilingNextYearLabel,
+.ssp-taxFilingContainer .ssp-taxFilingNextYearLabel {
+    margin-bottom: 0.938rem;
+}
+
+.ssp-taxFilingContainer .ssp-taxFilingCurrentYear,
+.ssp-taxFilingContainer .ssp-taxFilingDependentOf,
+.ssp-taxFilingContainer .ssp-taxFilingClaimingDependent,
+.ssp-taxFilingContainer .ssp-taxFilingNextYear,
+.ssp-taxFilingContainer .ssp-taxFilingDependentOutsideHouseHoldToggle,
+.ssp-taxFilingContainer .ssp-taxFilingClaimingDependentToggle,
+.ssp-taxFilingContainer .ssp-taxFilingNextYearToggle,
+.ssp-taxFilingContainer .ssp-taxFilingHeadOfHouseHoldToggle {
+    margin-bottom: 3.75rem;
+}
+
+.ssp-taxFilingContainer .ssp-taxFilingDependentOfHousehold,
+.ssp-taxFilingContainer .ssp-taxFilingHeadOfHouseHoldToggle,
+.ssp-taxFilingContainer .ssp-taxFilingOutsideIndividualParent {
+    margin-top: 3.75rem;
+}
+.ssp-taxFilingContainer .ssp-taxFilingCurrentYear {
+    margin-top: 1.875rem;
+}

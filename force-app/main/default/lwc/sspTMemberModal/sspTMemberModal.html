@@ -1,0 +1,31 @@
+<!--
+* name          : sspTMemberModal
+* @description  : TMember pop up modal shown after tax filing Screen
+* @author       : Sanchita Tibrewala and P V Siddarth
+* @date         : 31/01/2020   
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName                MM/DD/YYYY               A Brief Description about the Change
+  Sanchita and Siddarth         31/01/2020                        Initial Version
+-->
+<template>
+    <c-ssp-detailed-information-modal
+        header-value={label.sspNoFurtherQuestions}
+        onclosemodal={handleProp}
+        if:true={openModal}
+        open-model={openModal}
+        reference={reference}>
+        <p class="ssp-fontFamily_ArvoRegular ssp-color_monoOmega slds-p-bottom_large" slot="contentSlot">
+            {popupContent}
+        </p>
+        <div slot="Footer" class="slds-grid slds-wrap slds-grid_align-spread">
+            <lightning-button
+                variant="brand"
+                label={label.sspNext}
+                class="ssp-nextModalBtn ssp-button_brand ssp-exitModalBtn"
+                onclick={saveAndExitModal}>
+            </lightning-button>
+        </div>
+    </c-ssp-detailed-information-modal>
+</template>

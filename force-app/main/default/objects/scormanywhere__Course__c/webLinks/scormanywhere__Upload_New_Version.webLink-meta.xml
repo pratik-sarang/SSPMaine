@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>scormanywhere__Upload_New_Version</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>Upload New Version</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <url>{!IF(ISBLANK($Site.Prefix),&apos;&apos;,URLFOR($Site.Prefix))}/apex/scormanywhere__uploadcourses?ParentCourseId={!scormanywhere__Course__c.Id}&amp;disableMultiSelect=true</url>
+</WebLink>

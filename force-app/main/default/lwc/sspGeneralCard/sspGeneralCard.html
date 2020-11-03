@@ -1,0 +1,34 @@
+<!--
+* name          :sspGeneralCard.
+* @description  : This is a generic component called General Card.
+* @author       : Chaitanya.
+* @date         : 12/11/2019
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName                MM/DD/YYYY               A Brief Description about the Change
+-->
+<template>
+    <div class="ssp-generalCard ssp-boxShadow">
+        <div
+            class="ssp-generalCardTitle ssp-fontFamily_popinBold ssp-color_monoBody"
+        >
+            {sspGeneralTitleVal}
+        </div>
+        <div>
+            <p
+                class="ssp-generalCardContent ssp-fontFamily_ArvoRegular ssp-color_monoOmega"
+            >
+                <slot></slot>
+            </p>
+        </div>
+        <div class="ssp-generalCardFooter ssp-fontFamily_popinBold">
+            <a
+                class="ssp-fontFamily_popinBold ssp-color_blueAlpha"
+                href={sspGeneralUrlVal}
+                title="learn More"
+                >{label.sspLearnMoreLink}</a
+            >
+        </div>
+    </div>
+</template>

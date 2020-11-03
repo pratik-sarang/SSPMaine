@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Flag to indicate if the page is active i.e., part of the flow. Use this flag to mark the pages which become no longer needed in the flow as per new configuration. --></help>
+    <label><!-- Is Active --></label>
+    <name>IsActive__c</name>
+</CustomFieldTranslation>

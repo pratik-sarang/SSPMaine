@@ -1,0 +1,77 @@
+.ssp-identityUploadHeader {
+    font-size: 42px;
+    margin-bottom: 24px;
+    line-height: 42px;
+    margin-top: 60px;
+    letter-spacing: normal;
+}
+
+.ssp-identityUploadHr {
+    height: 0.313rem;
+    border-radius: 0.156rem;
+    margin: 1.875rem 0;
+}
+.ssp-writtenStatement {
+    margin-top: 30px;
+}
+.ssp-writtenStatementText {
+    font-size: 1rem;
+}
+.ssp-fileUploadContainer {
+    margin-top: 30px;
+}
+
+.ssp-attachMoreDocumentsText {
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.ssp-cardContainer {
+    margin-top: 5px;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
+
+.ssp-cardSection {
+    margin-bottom: 20px;
+}
+.ssp-documentCard {
+    margin-bottom: 15px;
+}
+.ssp-uploadedDocument {
+    text-decoration: underline;
+}
+.ssp-uploadedDocument:hover {
+    cursor: pointer;
+}
+.ssp-writtenStatementLink {
+    font-size: 0.813rem;
+    text-decoration: underline;
+}
+a:focus {
+    outline: none;
+}
+
+.ssp-actionButtonsContainer {
+    margin-top: 6.25rem;
+    margin-bottom: 3.75rem;
+}
+
+.ssp-button-container {
+    margin-top: 100px;
+}
+
+.ssp-attestCheckBox {
+    width: 100%;
+}
+
+@media only screen and (min-width: 769px) {
+    .ssp-desktopPaddingRight15 {
+        padding-right: 0.938rem;
+    }
+
+    .ssp-screenFooterNextBtn {
+        margin-left: auto;
+        order: 2;
+    }
+}

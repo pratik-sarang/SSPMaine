@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OutcomeReason__c</fullName>
+    <description>Outcome reason recorded when closing the referral</description>
+    <externalId>false</externalId>
+    <label>Outcome Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Cancelled by Client</fullName>
+                <default>false</default>
+                <label>Cancelled by Client</label>
+            </value>
+            <value>
+                <fullName>Didn&apos;t meet eligibility criteria</fullName>
+                <default>false</default>
+                <label>Didn&apos;t meet eligibility criteria</label>
+            </value>
+            <value>
+                <fullName>Client didn&apos;t come to appointment</fullName>
+                <default>false</default>
+                <label>Client didn&apos;t come to appointment</label>
+            </value>
+            <value>
+                <fullName>Client refused plan</fullName>
+                <default>false</default>
+                <label>Client refused plan</label>
+            </value>
+            <value>
+                <fullName>Funding not available</fullName>
+                <default>false</default>
+                <label>Funding not available</label>
+            </value>
+            <value>
+                <fullName>Unable to reach client</fullName>
+                <default>false</default>
+                <label>Unable to reach client</label>
+            </value>
+            <value>
+                <fullName>Services available didn&apos;t fit the client&apos;s need</fullName>
+                <default>false</default>
+                <label>Services available didn&apos;t fit the client&apos;s need</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

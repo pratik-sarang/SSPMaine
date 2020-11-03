@@ -1,0 +1,7 @@
+.ssp-genericInput .slds-form-element {
+  display: inline;
+}
+.ssp-genericInput .ssp-genericRequired {
+  display: inline;
+  color: red;
+}

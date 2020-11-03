@@ -1,0 +1,88 @@
+.ssp-wizardUploadContainer h1 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    letter-spacing: normal;
+    margin-top: 1.875rem;
+    margin-bottom: 0.438rem;
+}
+
+.ssp-wizardUploadContainer .ssp-sectionSeperator {
+    height: 0.313rem;
+    margin: 1.875rem 0;
+}
+
+.ssp-wizardUploadContainer .ssp-actionButtonsContainer {
+    margin-top: 6.25rem;
+    margin-bottom: 3.75rem;
+}
+
+.ssp-wizardUploadContainer .ssp-actionButtons {
+    display: flex;
+    flex-flow: column-reverse wrap;
+}
+
+.ssp-wizardUploadContainer .ssp-actionButtons .slds-button {
+    height: 3.75rem;
+}
+
+.ssp-wizardUploadContainer .ssp-actionButtons .ssp-cancelButton {
+    margin-top: 1.563rem;
+}
+
+.ssp-wizardUploadContainer .ssp-writtenStatement,
+.ssp-wizardUploadContainer .ssp-fileUploadContainer {
+    margin-top: 1.875rem;
+}
+
+.ssp-wizardUploadContainer .ssp-writtenStatement {
+    font-size: 1rem;
+    margin-bottom: 0.375rem;
+}
+
+.ssp-wizardUploadContainer .ssp-fileUploadContainer {
+    padding-bottom: 1.813rem;
+    margin-bottom: 0.938rem;
+}
+
+.ssp-wizardUploadContainer .ssp-attachMoreDocumentsText {
+    margin-bottom: 0.938rem;
+    font-size: 1rem;
+}
+
+.ssp-wizardUploadContainer .ssp-cardContainer {
+    margin-top: 1.875rem;
+    margin-bottom: 1.875rem;
+    padding-bottom: 1.875rem;
+}
+
+.ssp-wizardUploadContainer .ssp-cardSection {
+    margin-bottom: 1.25rem;
+}
+
+.ssp-wizardUploadContainer .ssp-writtenStatementLink {
+    font-size: 0.813rem;
+    text-decoration: underline;
+}
+
+.ssp-wizardUploadContainer .ssp-username {
+    font-size: 0.813rem;
+}
+
+@media only screen and (min-width: 769px) {
+    .ssp-wizardUploadContainer .ssp-actionButtons {
+        justify-content: space-between;
+        flex-flow: row;
+    }
+    .ssp-wizardUploadContainer .ssp-screenFooterNextBtn {
+        margin-left: auto;
+        order: 2;
+    }
+    .ssp-wizardUploadContainer .ssp-actionButtons .ssp-cancelButton {
+        margin-top: 0;
+    }
+    .ssp-wizardUploadContainer h1 {
+        font-size: 2.625rem;
+        margin-top: 3.75rem;
+        margin-bottom: 1.25rem;
+    }
+}

@@ -1,0 +1,233 @@
+<!--
+* name 		        : sspAccordionCard
+* @description 	    : This component is an accordion that displays info to the user.
+* @author 		    : Chaitanya Kanakia 
+* @date 		    : 12/11/2019
+* MODIFICATION LOG:
+* DEVELOPER           DATE                DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+-->
+<template>
+    <div class="ssp-accordion">
+        <button class="ssp-accordionButton slds-grid slds-grid_align-spread">
+            <slot class="ssp-componentWidth" name="Title"></slot>
+            <img
+                class="ssp-accordionIcon"
+                src={expandIconUrl}
+                alt="accordionIcon"
+            />
+        </button>
+        <div class="ssp-accordionPanel" id="accordion-content-id-1">
+            <slot name="contentSlot"></slot>
+            <div class="slds-m-bottom_x-large">
+                <div
+                    class="slds-size_1-of-1 ssp-navigationLink ssp-color_monoOmega ssp-fontFamily_popinRegular"
+                >
+                    {label.sspReimbursementMonth}
+                </div>
+                <div
+                    class="slds-size_1-of-1  ssp-infoText ssp-color_monoBody ssp-fontFamily_popinRegular ssp-margin-bottom_large"
+                >
+                    {showBenefitMonth}
+                </div>
+                <div
+                    class="ssp-ruler ssp-bg_monoAlpha ssp-margin-bottom_large"
+                ></div>
+                <div
+                    class="ssp-componentWidth ssp-infoText ssp-margin-bottom_large"
+                >
+                    <!-- <a
+                        class="ssp-color_monoOmega ssp-fontFamily_popinRegular ssp-margin-bottom_large"
+                        onclick={totalPremiumModal}
+                    >
+                        {label.sspTotalPremium}_ _ _ _ _ _ _ _ _ _ _
+                    </a>
+                    <span class="ssp-fontFamily_popinRegular"
+                        >{showTotalPremium}</span
+                    > -->
+                    <ul class="premium">
+                        <li>
+                            <span class="abc">
+                                <a
+                                    class="ssp-fontFamily_popinRegular ssp-margin-bottom_large"
+                                    onclick={totalPremiumModal}
+                                >
+                                    {label.sspTotalPremium}
+                                </a>
+                            </span>
+                            <span class="xyz ssp-fontFamily_popinRegular"
+                                >{label.sspDollarSign}{showTotalPremium}
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="ssp-componentWidth ssp-infoText">
+                    <!-- <a
+                        class="ssp-color_monoOmega ssp-fontFamily_popinRegular ssp-margin-bottom_large"
+                        onclick={adjustmentsModal}
+                        >{label.sspAdjustments}_ _ _ _ _ _ _ _ _ _ _
+                    </a>
+                    <span class="ssp-fontFamily_popinRegular"
+                        >{showAdjustments}
+                    </span> -->
+                    <template if:true={adjustmentLinkShow}>
+                        <ul class="premium">
+                            <li>
+                                <span class="abc">
+                                    <a
+                                        class="ssp-fontFamily_popinRegular ssp-margin-bottom_large"
+                                        onclick={adjustmentsModal}
+                                    >
+                                        {label.sspAdjustments}
+                                    </a>
+                                </span>
+                                <span class="xyz ssp-fontFamily_popinRegular">
+                                    {label.sspDollarSign}{showAdjustments}
+                                </span>
+                            </li>
+                        </ul>
+                    </template>
+                </div>
+            </div>
+        </div>
+    </div>
+    <template if:true={openTotalPremiumModal}>
+        <c-ssp-detailed-information-modal
+            header-value={label.sspTotalPremium}
+            onclosemodal={handleProp}
+            open-model={openTotalPremiumModal}
+            reference={reference}
+        >
+            <div slot="contentSlot">
+                <template for:each={totalPremiumModalValues} for:item="value">
+                    <div key={value} class="slds-m-bottom_x-large">
+                        <div
+                            class="slds-size_1-of-1 ssp-navigationLink ssp-color_monoOmega ssp-fontFamily_popinRegular"
+                        >
+                            {label.sspBenefitMonth}
+                        </div>
+                        <div
+                            class="slds-size_1-of-1  ssp-infoText ssp-color_monoBody ssp-fontFamily_popinRegular ssp-margin-bottom_small"
+                        >
+                            {value.totalBenefitMonth}
+                        </div>
+                        <div
+                            class="ssp-ruler ssp-bg_monoAlpha ssp-margin-bottom_small"
+                        ></div>
+                        <div
+                            class="ssp-componentWidth ssp-infoText ssp-margin-bottom_small"
+                        >
+                            <!-- <p
+                                class="ssp-color_monoOmega ssp-fontFamily_popinRegular ssp-margin-bottom_small"
+                            >
+                                {label.sspApprovedPremium}_ _ _ _ _ _ _ _ _ _ _
+
+                                <span class="ssp-fontFamily_popinRegular"
+                                    >{value.approvedPremium}</span
+                                >
+                            </p> -->
+                            <ul class="premium">
+                                <li>
+                                    <span class="abc">
+                                        <span
+                                            class="ssp-color_monoOmega ssp-fontFamily_popinRegular ssp-margin-bottom_small"
+                                        >
+                                            {label.sspApprovedPremium}
+                                        </span>
+                                    </span>
+                                    <span
+                                        class="xyz ssp-fontFamily_popinRegular"
+                                        >{label.sspDollarSign}{value.approvedPremium}
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="ssp-componentWidth ssp-infoText">
+                            <!-- <p
+                                class="ssp-color_monoOmega ssp-fontFamily_popinRegular slds-m-bottom_x-large"
+                                onclick={adjustmentsModal}
+                            >
+                                _ _ _ _ _ _ _ _ _ _ _
+
+                                <span class="ssp-fontFamily_popinRegular"
+                                    >{value.electiveAbortion}</span
+                                >
+                            </p> -->
+                            <template if:true={value.showElectiveAbortion}>
+                                <ul class="premium">
+                                    <li>
+                                        <span class="abc">
+                                            <span
+                                                class="ssp-color_monoOmega ssp-fontFamily_popinRegular ssp-margin-bottom_small"
+                                            >
+                                                {label.sspElectiveAbortion}
+                                            </span>
+                                        </span>
+                                        <span
+                                            class="xyz ssp-fontFamily_popinRegular"
+                                            >{label.sspDollarSign}{value.electiveAbortion}
+                                        </span>
+                                    </li>
+                                </ul>
+                            </template>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </c-ssp-detailed-information-modal>
+    </template>
+    <template if:true={openAdjustmentModal}>
+        <c-ssp-detailed-information-modal
+            header-value={label.sspAdjustments}
+            onclosemodal={handleProp}
+            open-model={openAdjustmentModal}
+            reference={reference}
+        >
+            <div slot="contentSlot">
+                <template for:each={adjustmentsModalValues} for:item="value">
+                    <div key={value} class="slds-m-bottom_x-large">
+                        <div
+                            class="slds-size_1-of-1 ssp-navigationLink ssp-color_monoBody ssp-fontFamily_popinRegular ssp-margin-bottom_small"
+                        >
+                            {value.adjustmentBenefitMonth}
+                        </div>
+                        <div
+                            class="slds-size_1-of-1  ssp-infoText ssp-color_monoBody ssp-fontFamily_popinRegular ssp-margin-bottom_small"
+                        >
+                            {label.sspReasonColon} {value.reason}
+                        </div>
+
+                        <div
+                            class="ssp-componentWidth ssp-infoText slds-m-bottom_x-large"
+                        >
+                            <!-- <p
+                                class="ssp-color_monoOmega ssp-fontFamily_popinRegular"
+                            >
+                                {label.sspAmount}_ _ _ _ _ _ _ _ _ _ _
+
+                                <span class="ssp-fontFamily_popinRegular"
+                                    >{value.amount}</span
+                                >
+                            </p> -->
+                            <ul class="premium">
+                                <li>
+                                    <span class="abc">
+                                        <span
+                                            class="ssp-color_monoOmega ssp-fontFamily_popinRegular ssp-margin-bottom_small"
+                                        >
+                                            {label.sspAmount}
+                                        </span>
+                                    </span>
+                                    <span
+                                        class="xyz ssp-fontFamily_popinRegular"
+                                        >{label.sspDollarSign}{value.amount}
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </c-ssp-detailed-information-modal>
+    </template>
+</template>

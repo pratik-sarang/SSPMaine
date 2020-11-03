@@ -1,0 +1,58 @@
+.ssp-pageBtnGrop {
+    display: flex;
+    align-items: center;
+}
+.ssp-pageButtonList {
+    margin: 0 10px;
+}
+.ssp-pageButton {
+    padding: 3px 13px;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    font-size: 1.125rem;
+    cursor: pointer;
+    color: inherit;
+    text-decoration: none;
+}
+.ssp-pageButton-elipses {
+    padding: 3px 0;
+    display: inline-block;
+    text-align: center;
+    font-size: 1.125rem;
+    letter-spacing: 6px;
+    cursor: pointer;
+}
+.ssp-paginationNext, .ssp-paginationPrevious {
+    width: 170px;
+    height: 60px;
+}
+.ssp-paginationPrevious {
+    margin-right: 15px;
+    margin-left: 100px;
+}
+.ssp-paginationNext {
+    margin-left: 15px;
+}
+
+.ssp-paginationPreviousMobile, .ssp-paginationNextMobile {
+    width: 48px;
+    height: 48px;
+}
+.ssp-paginationNextMobile {
+    margin-left: 15px;
+}
+.ssp-mobilePagination {
+    display: none;
+}
+.ssp-desktopPagination {
+    display: list-item;
+}
+@media only screen and (max-device-width: 768px) {
+    .ssp-mobilePagination {
+        display: list-item;
+    }
+    .ssp-desktopPagination {
+        display: none;
+    }
+}

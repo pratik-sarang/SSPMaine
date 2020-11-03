@@ -1,0 +1,161 @@
+<template>    
+    <main class="">
+        <template if:true={showNextSteps}>
+            <c-ssp-next-steps></c-ssp-next-steps>
+        </template>
+        <template if:false={showNextSteps}>
+        <div
+            class="sspHeadingBar slds-p-horizontal_xx-large slds-p-vertical_medium ssp-bg_appHeaderGradient slds-grid slds-wrap slds-grid_vertical-align-center"
+        >
+            <div class="ssp-container_width slds-grid slds-wrap">
+                <div class="ssp-fontFamily_popinBold">
+                    {label.benefitsApplication}
+                </div>
+            </div>
+            <template if:true={showSpinner}>
+                <c-ssp-spinner></c-ssp-spinner>
+            </template>
+        </div>
+        <div class="">
+            <div class="">
+                <div class={hiddenClass}>
+                    <div if:true={resolveErrors} role="alert">
+                        <c-ssp-toast
+                            ssp-toast-title-val={errorToast}
+                            show-error-toast={resolveErrors}
+                        ></c-ssp-toast>
+                    </div>
+                    <div class="ssp-bg_monoDelta sspInputElement">
+                        <div class="ssp-bodyContainer">
+                            <div class="slds-p-top_medium">
+                                <i class="ssp-arrow_left"></i>
+                                <a
+                                    title={pageTitleAlt}
+                                    onclick={handleNavigateSummary}
+                                    class="ssp-viewSummary ssp-color_monoBody ssp-fontFamily_popinBold"
+                                    tabindex="0"
+                                    >{pageTitle}</a
+                                >
+
+                                <template if:true={isHouseholdFlow}>
+                                    <h1
+                                        class="ssp-individualName slds-p-top_xx-small ssp-fontFamily_popinBlack"
+                                    >
+                                        {label.sspHouseholdInformation }
+                                	</h1>
+                                </template>
+                                <template if:true={isMemberFlow}>
+                                    <h1
+                                        class="ssp-individualName ssp-fontFamily_popinBlack slds-p-top_xx-small"
+                                    >
+                                        {memberScreenFullName}
+                                    </h1>
+                                </template>
+                                <template if:true={isHealthCareFlow}>
+                                    <h1
+                                        class="ssp-individualName slds-p-top_medium ssp-fontFamily_popinBlack"
+                                    >
+                                        {headerForHealthFlow}
+                                    </h1>
+                                </template>
+                                <template if:true={isSignAndSubmitFlow}>
+                                    <h1
+                                        class="ssp-individualName ssp-fontFamily_popinBlack"
+                                    >
+                                        {headerForSignSubmitFlow}
+                                    </h1>
+                                </template>
+
+                                <template if:true={intakeFlow}>
+                                    <div
+                                        class="ssp-individualSection ssp-color_monoBody slds-p-top_small slds-p-bottom_medium"
+                                    >
+                                        {sectionDetails}
+                                    </div>
+                                </template>
+                            </div>
+                        </div>
+                    </div>
+                    <template if:true={intakeFlow}>
+                        <div>
+                            <c-ssp-open-drop-down
+                                page-to-load-api={pageToLoad}
+                                ongotoaction={handleGoToAction}
+                                ongotoactionreset={handleResetAction}
+                            >
+                            </c-ssp-open-drop-down>
+                        </div>
+                    </template>
+                    <template if:true={racFlow}>
+                        <div>
+                            <!--<c-ssp-section-drop-down
+                                page-to-load-api={pageToLoad}
+                                ongotoaction={handleGoToAction}
+                            >
+                            </c-ssp-section-drop-down>-->
+                        </div>
+                    </template>
+                </div>
+                <div>
+                    <c-ssp-nav-flow-container-elements
+                        page-to-load-api={pageToLoad}
+                        application-id={applicationId}
+                        member-id={memberId}
+                        flow-name={flowName}
+                        action-received={pageName}
+                        current-member-name={memberScreenDetails}
+                        current-member-full-name={memberScreenFullName}
+                        member-first-name={memberFirstName}
+                        allow-save={objectValueSave}
+                        next-event={actVal}
+                        mode={mode}
+                        head-of-household={headOfHousehold}                        
+                        onreviewrequiredevent={handleReviewRequired}
+                    >
+                    </c-ssp-nav-flow-container-elements>
+                </div>
+            </div>
+        </div>
+        <div class={hiddenClass}>
+            <c-ssp-nav-flow-footer
+                oninvokedriver={callSaveExit}
+                screen-permission = {screenPermission}
+                flow-name={flowName}
+                is-last-page={isLastPage}
+                is-first-page={isFirstPage}
+                page-to-load-received={pageToLoad}
+                member-id={memberId}
+                go-to-page-config-id={goToPageConfigIdValue}
+                application-id={applicationId}
+                input-temp-value={inputTempValue}
+                done-saving={doneSaving}
+                onactionnext={handleNextEvent}
+                onsavescreendata={handleAllowSave}
+                onnextevent={handleResetAction}
+                onbuttoneventnext={handleNavButtonEventNext}
+                onsaveexit={callSaveExit}
+				mode-value={mode}
+                onsummarynavigation={handleNavigateSummary}
+                onshowcustomtoast={handleToastOnError}
+				show-exit={showExit}				
+				is-review-required={isReviewRequiredFlow}
+                is-signature-page={isSignaturePage}   
+                review-required-page={reviewRequiredPages} 
+                save-exit-called={saveExitTriggered}                        
+            >
+            </c-ssp-nav-flow-footer>
+        </div>
+        </template>
+    </main>
+
+    <template if:true={saveExit}>
+        <c-ssp-exit-application-modal
+            application-id={applicationId}
+            open-model={saveExit}
+            onclosemodal={closeModal}
+            onsavecalled={handleSaveExitCalled}
+            summary-button-label={label.saveAndExit}
+            save-exit-called={saveExitTriggered}
+        ></c-ssp-exit-application-modal>
+    </template>
+</template>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SpecialLocationInstructions__c</fullName>
+    <description>Any instrutions that would be helpful to the resident (Ex: Office is on third floor, 4th door on the right)</description>
+    <externalId>false</externalId>
+    <label>Special Location Instructions</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

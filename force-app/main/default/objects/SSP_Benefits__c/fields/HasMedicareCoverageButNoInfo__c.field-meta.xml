@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HasMedicareCoverageButNoInfo__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This field is used to indicate the flag when there is a medical coverage but no information</description>
+    <externalId>false</externalId>
+    <label>Has Medicare Coverage But No Info</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

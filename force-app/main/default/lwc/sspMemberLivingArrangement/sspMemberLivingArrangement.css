@@ -1,0 +1,56 @@
+.ssp-complete-questions {
+    font-size: 1rem;
+    margin-top: 30px;
+}
+
+.ssp-organizationListCard {
+    cursor: pointer;
+    border-radius: 6px;
+    box-shadow: 0 15px 25px -7px rgba(0, 35, 98, 0.1),
+        0 0 6px 0 rgba(0, 35, 98, 0.15);
+}
+
+.ssp-organizationListName {
+    font-size: 1rem;
+    letter-spacing: -0.3px;
+    line-height: 1.5rem;
+}
+
+.ssp-addressListName {
+    text-decoration: underline;
+}
+
+.ssp-searchBoxContainer {
+    position: relative;
+}
+.ssp-searchBox {
+    width: 100%;
+    height: 60px;
+    padding-left: 60px;
+    outline: none;
+}
+
+.ssp-searchIcon {
+    position: absolute;
+    top: 38px;
+    left: 1rem;
+    z-index: 4;
+    cursor: pointer;
+}
+.ssp-search-label {
+    font-size: 0.8125rem;
+    padding: 0;
+    margin-bottom: 0.125rem;
+}
+.ssp-no-results {
+    font-size: 1rem;
+    line-height: 1.375rem;
+}
+.ssp-componentWidth {
+    width: 100%;
+}
+.ssp-infoText {
+    font-size: 1rem;
+    letter-spacing: -0.0187rem;
+    line-height: 1.5rem;
+}

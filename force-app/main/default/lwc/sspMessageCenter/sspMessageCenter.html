@@ -1,0 +1,70 @@
+<!--
+* name          : sspMessageCenter
+* @description  : Message Center  Parent Component.
+* @author       : Chirag, Gunjyot, Aniket
+* @date         : 07/01/2020
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName                MM/DD/YYYY               A Brief Description about the Change
+  Chirag                       07/01/20                            Development
+-->
+<template>
+    <template if:true={showSpinner}>
+        <c-ssp-spinner></c-ssp-spinner>
+    </template>
+    <template if:false={showMessage}>
+        <div>
+            <h1 class="ssp-fontFamily_popinBlack ssp-headingOne ssp-color_blueAlpha ">
+                {customLabel.sspMessageCenterHeading}</h1>
+        </div>
+        <div class="ssp-hrcontainer">
+            <hr class="ssp-horizontal-rule ssp-bg_monoAlpha">
+            </hr>
+            <div class="ssp-noSearchFoundContainer">
+                <div class="ssp-sideImage">
+                    <p class="ssp-noMatchFound ssp-color_monoOmega ssp-fontFamily_popinRegular">{customLabel.sspMessageCenterCurrentlyNoData}
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </template>
+    <template if:true={showMessage}>
+        <div class="ssp-messageCenter">
+            <h1 class="ssp-fontFamily_popinBlack ssp-headingTwo ssp-color_blueAlpha ">
+                {customLabel.sspMessageCenterHeading}</h1>
+
+            <div class="ssp-TabsRow">
+                <div class="ssp-Tab  ssp-fontFamily_popinBold ssp-color_monoOmega ssp-TabWidth slds-align_absolute-center ssp-notice-tab " tabindex="0"
+                    onclick={openSelected}>
+                    {customLabel.sspMessageCenterNoticesBraces}<p class="ssp-count">{noticesCount}</p>
+                    {customLabel.sspMessageCenterBracesClose}
+                </div>
+                <div class="ssp-Tab  ssp-fontFamily_popinBold ssp-color_monoOmega ssp-TabWidth slds-align_absolute-center ssp-active " tabindex="0"
+                    onclick={openSelected}>
+                    {customLabel.sspMessageCenterMessagesBraces}<p class="ssp-count ssp-color_blueAlpha">{messagesCount}
+                    </p>{customLabel.sspMessageCenterBracesClose}
+                </div>
+            </div>
+            <div class="ssp-searchAreaContainer">
+                <c-ssp-filter-search-box tab-selected={tabSelected} ontodo={handleToDo}
+                    onannouncement={handleAnnouncement} onprogress={handleSearchResults} onempty={handleEmpty}
+                    search-value={searchValue}>
+
+                </c-ssp-filter-search-box>
+            </div>
+            <div class="ssp-TabsContent">
+                <c-ssp-message-center-table-notices table-columns={tableColumns2} message-table-data={messageTableData2}
+                    is-search={isSearch} no-search-found={noSearchFound} onnoticeread={handleNoticeRead}>
+                </c-ssp-message-center-table-notices>
+            </div>
+            <div class="ssp-TabsContent ssp-show">
+                <c-ssp-message-center-table table-columns={tableColumns1} message-table-data={messageTableData1}
+                    no-search-found={noSearchFoundMessage} onmessage={handleMessageRead} onnotices={selectNoticeTab} onupdate={updateMessage} onsort={sortByKey}>
+                </c-ssp-message-center-table>
+            </div>
+        </div>
+
+    </template>
+</template>

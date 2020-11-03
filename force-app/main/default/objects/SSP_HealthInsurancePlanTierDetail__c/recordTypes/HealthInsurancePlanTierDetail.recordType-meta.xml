@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HealthInsurancePlanTierDetail</fullName>
+    <active>true</active>
+    <description>This is used to store details of Insurance Plan Tier.</description>
+    <label>Health Insurance Plan Tier Detail</label>
+    <picklistValues>
+        <picklist>EnrollmentTierLevel__c</picklist>
+        <values>
+            <fullName>EMOD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMPO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMSP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMTD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FAM</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

@@ -1,0 +1,72 @@
+.ssp-reviewIcon {
+    height: 72.52px;
+    width: 71px;
+    margin-right: 14px;
+}
+.ssp-headerText {
+    font-size: 24px;
+    letter-spacing: -0.4px;
+    line-height: 24px;
+}
+.ssp-infoText {
+    font-size: 1rem;
+    letter-spacing: -0.0187rem;
+    line-height: 1.5rem;
+    text-align: center;
+}
+.spp-bodyMargin {
+    margin-top: 60px;
+    margin-bottom: 100px;
+}
+.ssp-headerIconText {
+    margin-bottom: 35px;
+}
+.ssp-sideImage {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-image: url(../resource/SSP_CD2_Icons/sspIcons/background_copy@3x.png);
+    background-repeat: no-repeat;
+    background-position: 100%;
+    background-size: 122px;
+    transform: translateY(4%);
+}
+.ssp-textPosition {
+    position: relative;
+}
+@media only screen and (max-width: 768px) {
+    .ssp-sideImage {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        background-image: url(../resource/SSP_CD2_Icons/sspIcons/background_copy@3x.png);
+        background-repeat: no-repeat;
+        background-position: 100%;
+        background-size: 70px;
+        transform: translateY(-10%);
+    }
+    .ssp-infoText {
+        font-size: 1rem;
+        letter-spacing: -0.0187rem;
+        line-height: 1.5rem;
+        text-align: left;
+    }
+}
+@media only screen and (max-width: 320px) {
+    .ssp-sideImage {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        background-image: url(../resource/SSP_CD2_Icons/sspIcons/background_copy@3x.png);
+        background-repeat: no-repeat;
+        background-position: 100%;
+        background-size: 70px;
+        transform: translateY(-8%);
+    }
+    .ssp-infoText {
+        font-size: 1rem;
+        letter-spacing: -0.0187rem;
+        line-height: 1.5rem;
+        text-align: left;
+    }
+}

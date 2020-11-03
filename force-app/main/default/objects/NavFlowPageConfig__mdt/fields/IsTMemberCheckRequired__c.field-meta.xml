@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IsTMemberCheckRequired__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This field is used to indicate whether a T Member Check is Required</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Is TMember Check Required ?</label>
+    <type>Checkbox</type>
+</CustomField>

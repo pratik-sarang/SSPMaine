@@ -1,0 +1,88 @@
+<!-- 
+* name 		      : SspAssisterAccessRequestModal
+* @description 	  : This modal is used for Assister Access Request Modal
+* @author 		  : Kyathi
+* @date           : 05/15/2020
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* --------------------------------------------------------------------------------------------
+-->
+<template>
+    <template if:true={showSpinner}>
+        <c-ssp-spinner></c-ssp-spinner>
+    </template>
+    <div
+        class="ssp-medicaidPenaltyWarning ssp-applicationStatementModalContainer" if:true={dataLoaded}
+    >
+        <c-ssp-detailed-information-modal
+            reference={reference}
+            header-value={label.sspAssisterAccessRequestModal}
+            open-model={openModel}
+            onclosemodal={closeApplicationStatementModal}
+            scroll-event={trueValue}
+            onenablemodalbuttons={enableModalButtons}
+            class="ssp-AssisterAccessRequestModal"
+        >
+            <div slot="contentSlot">
+                <div class="ssp-authModalContent">
+                    <p class="ssp-fontFamily_ArvoRegular ssp-color_monoOmega">
+                        {sspWantsToBeAssisterText} 
+                    </p>
+                    <p
+                        class="ssp-color_monoOmega ssp-fontFamily_ArvoRegular ssp-authModalSubHeading"
+                    >
+                        {label.sspAssisterAccessModalLineTwo}&nbsp;<a href={label.sspAppendixBUrl}>{label.sspAppendixBLabel}</a>
+                    </p>
+                    <p
+                        class="ssp-color_monoOmega ssp-fontFamily_ArvoRegular ssp-authModalSubHeading"
+                    >
+                        {label.sspAssisterAccessModalLineThree}
+                    </p>
+                    <p
+                        class="ssp-color_monoOmega ssp-fontFamily_ArvoRegular ssp-authModalSubHeading"
+                    >
+                        {label.sspAssisterAccessModalLineFour}
+                    </p>
+                    <p
+                        class="ssp-fontFamily_ArvoRegular ssp-color_monoOmega ssp-marginBottomThirty"
+                    >
+                        {label.sspAssisterAccessModalLineFive}
+                    </p>
+                </div>
+            </div>
+            <div
+                slot="Footer"
+                class="slds-grid slds-wrap slds-grid_align-spread slds-gutters"
+            >
+                <div
+                    class="slds-col slds-size_1-of-2 slds-medium-size_1-of-2 slds-large-size_6-of-12"
+                >
+                    <lightning-button
+                        name="Reject"
+                        variant="base"
+                        title={label.sspRejectAccessRequestTitle}
+                        label={label.sspAuthRepAccessModalRejectButton}
+                        class="ssp-exitModalBtn ssp-button_base"
+                        onclick={handleOnClick}
+                        disabled={disabled}
+                    >
+                    </lightning-button>
+                </div>
+                <div
+                    class="slds-col slds-size_1-of-2 slds-medium-size_1-of-2 slds-large-size_6-of-12"
+                >
+                    <lightning-button
+                        name="Accept"
+                        variant="neutral"
+                        title={label.sspAcceptAccessRequestTitle}
+                        label={label.sspAuthRepAccessModalAcceptButton}
+                        class="ssp-exitModalBtn ssp-button_neutral"
+                        onclick={handleOnClick}
+                        disabled={disabled}
+                    >
+                    </lightning-button>
+                </div>
+            </div>
+        </c-ssp-detailed-information-modal>
+    </div>
+</template>

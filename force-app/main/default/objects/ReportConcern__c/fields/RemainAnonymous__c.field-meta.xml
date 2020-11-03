@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RemainAnonymous__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Can be selected if individual filing concern would like to reamin anonymous</description>
+    <externalId>false</externalId>
+    <label>Remain Anonymous?</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

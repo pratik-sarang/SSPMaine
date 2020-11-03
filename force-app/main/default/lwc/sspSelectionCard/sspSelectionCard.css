@@ -1,0 +1,17 @@
+.ssp-selectionCard {
+    border-radius: 6px;
+    padding: 15px 30px 15px 30px;
+    border: 0;
+}
+.ssp-selectionCardText {
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: -0.3px;
+    line-height: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+    .ssp-selectionCard {
+        padding: 14px 24px 15px 24px;
+    }
+}

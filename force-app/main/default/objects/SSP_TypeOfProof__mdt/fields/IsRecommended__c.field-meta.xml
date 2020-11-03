@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IsRecommended__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Flag will be used to determine recommended type of proof that can be submitted.</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Is Recommended?</label>
+    <type>Checkbox</type>
+</CustomField>

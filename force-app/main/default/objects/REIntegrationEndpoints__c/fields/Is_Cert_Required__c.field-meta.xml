@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_Cert_Required__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This field is used to determine if certificate is required or not for the callout</description>
+    <externalId>false</externalId>
+    <label>Is Cert Required</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

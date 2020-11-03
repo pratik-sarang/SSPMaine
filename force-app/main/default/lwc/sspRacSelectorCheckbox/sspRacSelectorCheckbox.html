@@ -1,0 +1,126 @@
+<!--
+* name 		        : SspRacSelectorCheckbox
+* @description 	    : Container for Report Change Selection screen
+* @author 		    : Shivam 
+* @date 		    : 1/23/2020
+* MODIFICATION LOG:
+* DEVELOPER           DATE                DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* Shivam	      1/23/2020	      HTML Structure Creation
+* Kyathi           1/24/2020	      HTML Structure Creation
+-->
+<template>
+    <div class="ssp-errorToast" if:true={hasSaveValidationError}>
+                <c-ssp-toast
+                    ssp-toast-title-val={label.toastErrorText}
+                    show-error-toast={trueValue}
+                    onhidetoast={hideToast}
+                ></c-ssp-toast>
+            </div>
+    <c-ssp-base-component-multiline-input-checkbox
+        onhandlemultiselectchange={handleCheckboxAction}
+        object-data={menuItem}
+        class="ssp-reportChangeCheckbox"
+        always-show-additional-fields={menuItem.summary}
+        hide-additional-fields={hideAdditionalFields}
+        data-index={indexOptions}
+        data-flow-name={menuItem.flowName}
+        data-screen-id={menuItem.optionId}
+    >
+        <div slot="labelContent" class="ssp-checkboxLabels ssp-color_monoBody">
+            <span
+                class="ssp-resourceLabel1
+                                 ssp-fontFamily_popinBold"
+                >{menuItem.RACMenuOption}</span
+            >
+
+            <template if:true={menuItem.showHelpText}>
+                <lightning-helptext
+                    class="ssp-helptextIcon slds-m-left_xx-small"
+                    icon-name="utility:info_alt"
+                    content={menuItem.RACHelpText}
+                ></lightning-helptext>
+                <br />
+            </template>
+            <template if:true={menuItem.showSubHeading}>
+                <span class="ssp-racSubHeader">{menuItem.RACSubheader}</span>
+            </template>
+        </div>
+
+        <div slot="buttonContainer">
+            <template if:true={showSummary}>
+            <template
+                for:each={menuItem.summary}
+                for:item="summary"
+                for:index="index"
+            >
+                <div
+                    if:true={summary.isHealth}
+                    class="ssp-reportIncomeDetails"
+                    key={summary.key}
+                >
+                    <p>
+                            <span>{summary.PolicyHolderName}</span>
+                    </p>
+                        <p>
+                            {summary.PlanName}
+                        </p>
+                        <p if:false={summary.PlanName}>
+                            {summary.InsuranceCompanyName}
+                        </p>
+                        <p>
+                            <span>{summary.TypeOfCoverageCode}</span>
+                        </p>
+                        <p if:true={summary.InsurancePolicyNumber}
+                           class="ssp-fontFamily_popinBold">
+                            <span class="slds-p-right_xx-small"
+                                >{label.sspPolicyId}</span
+                            >
+                            <span>{summary.InsurancePolicyNumber}</span>
+                        </p>
+                    <br/>
+                </div>
+            </template>
+            <template if:true={mapOfIncome}>
+                <template for:each={mapOfIncome} for:item="keyValue">
+                    <div key={keyValue.key}>
+                        <p
+                        class="ssp-color_blueAlpha sspMonoBetaBorderBottom slds-p-top_xx-small slds-m-bottom_medium ssp-fontFamily_popinBold"
+                    >
+                        {keyValue.key}
+                    </p>
+                        <template for:each={keyValue.value} for:item="value">
+                            <div key={value.key}>
+                                <div class="slds-m-bottom_medium ssp-color_monoBody">
+                                    <p>
+                                        {value.incomeSourceName}
+                                    </p>
+                                    <p class="ssp-fontFamily_popinBold">
+                                        {value.grossIncomeFormatted}
+                                    </p>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                </template>
+            </template>
+        </template>
+        
+
+            <div
+                class="ssp-selectMember"
+                if:false={menuItem.isBasedOnIndividual}
+            >
+                <c-ssp-base-component-input-checkbox-group
+                    if:true={showMembers}
+                    label={label.sspHealthSelectionSelectApplicant}
+                    options={menuItem.members}
+                    data-screen-id={menuItem.optionId}
+                    data-flow-name={menuItem.flowName}
+                    onchange={handleMemberChange}
+                >
+                </c-ssp-base-component-input-checkbox-group>
+            </div>
+        </div>
+    </c-ssp-base-component-multiline-input-checkbox>
+</template>

@@ -1,0 +1,85 @@
+<!--***************************************************************************************** * 
+NAME : Resources_Under_Maintenance * 
+DESCRIPTION : This Page is shown when the Resources Site is under maintenance*
+* @DATE 03/02/2020 
+***********************************************************************************************-->
+<apex:page id="maintenancePage" showHeader="false" applyHtmlTag="true" sidebar="false" standardStylesheets="false">
+    <style>
+        .display-block {
+        display: block!important;
+        text-align: center;
+        padding: 2rem 2rem 1.5rem 2rem;
+        background: #c3d2ef;
+        }
+        h1{
+        font-size: 1.5em;
+        color: #0663ab;
+        }
+        p{
+        width: 50%;
+        margin-left: 25%;
+        font-size: 0.9rem;
+        margin-top: 0;
+        }
+        .cHeaderOverlay {
+        background: #ffffff;
+        }
+        .cHeaderOverlay .cHeaderLine {
+        padding: 1rem 1rem 2rem 1rem;
+        }
+        .cBrandingLogo{
+        background-image: url(/resource/1573557962000/BackYard_Logo_Color);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: relative;
+        display: block;
+        outline: 0;
+        width: 15%;
+        height: 2rem;
+        }
+        .cFooterPanel .center{
+        text-align: center;
+        }
+        .cFooterPanel .center{
+        padding-bottom: 0.5rem;
+        }
+        .cFooterPanel{
+        background: #c3d2ef;
+        font-family: Arial,Helvetica,sans-serif;
+        font-size: 0.8rem;
+        line-height: 1.3rem;
+        padding-bottom: 0.5rem;
+        }
+        .display-block .block-white{
+        text-align:center;
+        display: block;
+        background: #fff;
+        min-height: 20rem;
+        padding: 15rem 15.5rem 0;
+        }
+        a{
+        color: rgb(2, 74, 134);
+        }
+    </style>
+    <div class="cHeaderOverlay" id="header-overlay">
+        <div class="cHeaderLine slds-grid">
+            <div class="cBrandingProfile">
+                <div>
+                    <a class="cBrandingLogo" href="javascript:void(0);" title="Resources">
+                        <span class="assistiveText"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="display-block">
+        <div class="block-white">
+        <h1> Website Maintenance In Progress </h1>
+        <p>Sorry for the inconvenience. We are currently under maintenance. Please try again in a few hours </p>
+        </div>
+    </div>
+    
+    <div class="cFooterPanel" id="footer">
+    </div>
+</apex:page>

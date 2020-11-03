@@ -1,0 +1,89 @@
+<!-- 
+* name 		      : SspAdditionalInformationModal
+* @description 	  : This component creates a screen for AdditionalInformationModal 
+* @author 		  : Kyathi
+* @date           : 06/01/2020
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* Kyathi                        6/1/2020                            HTML Structure
+-->
+<template>
+    <div class="ssp-medicaidPenaltyWarning ssp-kiHIPPConsentModalContainer">
+        <c-ssp-detailed-information-modal
+            reference={reference}
+            header-value={label.sspAdditionalImportantInformation}
+            open-model={openModel}
+            onclosemodal={closeConsentModal}
+            scroll-event={trueValue}
+            onenablemodalbuttons={enableModalButtons}
+        >
+            <span slot="contentSlot">
+                <div
+                    class="ssp-consentContentContainer ssp-fontFamily_ArvoRegular ssp-color_monoOmega"
+                >
+                    <p>{label.sspAdditionalInfoModalContent1}</p>
+                    <ul>
+                        <li>
+                            {label.sspAdditionalInfoModalContent2}
+                        </li>
+                        <li>
+                            {label.sspAdditionalInfoModalContent3}
+                        </li>
+                        <li>
+                            {label.sspAdditionalInfoModalContent4}
+                        </li>
+                        <li>
+                            {label.sspAdditionalInfoModalContent5}
+                        </li>
+                        <li>
+                            {label.sspAdditionalInfoModalContent6}
+                        </li>
+                        <li>
+                            {label.sspAdditionalInfoModalContent7}
+                        </li>
+                        <li>
+                            {label.sspAdditionalInfoModalContent8}
+                        </li>
+                        <li>
+                            {label.sspAdditionalInfoModalContent9}
+                        </li>
+                    </ul>
+                </div>
+            </span>
+            <div
+                slot="Footer"
+                class="slds-grid slds-wrap slds-grid_align-spread slds-gutters"
+            >
+                <div
+                    class="slds-col slds-size_1-of-2 slds-medium-size_1-of-2 slds-large-size_6-of-12"
+                >
+                    <lightning-button
+                        name="Reject"
+                        variant="base"
+                        label={label.sspDisagreeButton}
+                        title={label.sspDisagreeToTerms}
+                        class="ssp-exitModalBtn ssp-button_base"
+                        onclick={handleOnClick}
+                        disabled={disabled}
+                    >
+                    </lightning-button>
+                </div>
+                <div
+                    class="slds-col slds-size_1-of-2 slds-medium-size_1-of-2 slds-large-size_6-of-12"
+                >
+                    <lightning-button
+                        name="Agree"
+                        variant="neutral"
+                        label={label.sspAgreeButton}
+                         title={label.sspAgreesToTerms}
+                        class="ssp-exitModalBtn ssp-button_neutral"
+                        onclick={handleOnClick}
+                        disabled={disabled}
+                    >
+                    </lightning-button>
+                </div>
+            </div>
+        </c-ssp-detailed-information-modal>
+    </div>
+</template>

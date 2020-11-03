@@ -1,0 +1,114 @@
+h1 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    letter-spacing: normal;
+    margin-top: 2.5rem;
+    margin-bottom: 0.438rem;
+}
+
+.ssp-username {
+    margin-bottom: 1.875rem;
+    font-size: 0.813rem;
+}
+
+.ssp-sectionSeperator {
+    height: 0.313rem;
+    margin: 1.875rem 0;
+}
+
+.ssp-completeQuestions {
+    font-size: 1rem;
+    margin-bottom: 2.188rem;
+}
+
+.ssp-fieldsContainer {
+    margin-bottom: 1.25rem;
+}
+
+.ssp-actionButtonsContainer {
+    margin-top: 6.25rem;
+    margin-bottom: 3.75rem;
+}
+
+.ssp-actionButtons {
+    display: flex;
+    flex-flow: column-reverse wrap;
+}
+
+.ssp-actionButtons .slds-button {
+    height: 3.75rem;
+}
+
+.ssp-fieldsContainer .slds-size_1-of-2:first-child {
+    margin-bottom: 1.25rem;
+}
+
+.ssp-actionButtons .ssp-cancelButton {
+    margin-top: 1.563rem;
+}
+
+.ssp-fileUploadContainer {
+    padding-bottom: 29px;
+    margin-bottom: 15px;
+}
+
+.ssp-attachMoreDocumentsText {
+    margin-bottom: 15px;
+}
+
+.ssp-cardContainer {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+}
+
+.ssp-cardSection {
+    margin-bottom: 20px;
+}
+
+.ssp-section2 {
+    margin-top: 1.25rem;
+}
+
+@media only screen and (min-width: 769px) {
+    .ssp-actionButtons {
+        display: flex;
+        justify-content: space-between;
+    }
+    h1 {
+        font-size: 2.625rem;
+        margin-top: 3.75rem;
+        margin-bottom: 1.25rem;
+    }
+    .ssp-fieldsContainer .slds-size_1-of-2:first-child {
+        margin-bottom: 0;
+    }
+    .ssp-desktopPaddingRight15 {
+        padding-right: 0.938rem;
+    }
+    .ssp-fieldsContainer .slds-size_1-of-2:nth-child(2) {
+        padding-left: 0.938rem;
+    }
+    .ssp-fieldsContainer {
+        margin-bottom: 2.188rem;
+    }
+    .ssp-actionButtons {
+        flex-flow: row;
+    }
+    .ssp-screenFooterNextBtn {
+        margin-left: auto;
+        order: 2;
+    }
+    .ssp-actionButtons .ssp-cancelButton {
+        margin-top: 0;
+    }
+    .ssp-section1 {
+        border-bottom: none;
+    }
+    .ssp-description {
+        margin-bottom: 1.875rem;
+    }
+    .ssp-section2 {
+        margin-top: 1.875rem;
+    }
+}

@@ -1,0 +1,34 @@
+<!--
+* name          : SspKnowledgeArticleCategoryListPage
+* @description  : This component is the landing Page for the Help and FAQ Page. It shows the various Benefind Article Categories
+* @author       : Narapa.
+* @date         : 07/27/2020
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName                MM/DD/YYYY               A Brief Description about the Change
+* Narapa                       07/27/2020               Task 363517,363520,363526,363513: Help and FAQ Front End Development
+-->
+<template>
+    <div class="ssp-accordion ssp-bg_greyBeta">
+        <button
+            aria-expanded="false"
+            class="ssp-accordionButton slds-grid slds-grid_align-spread"
+        >
+            <div class="ssp-fontFamily_popinBold">
+                {category.label}
+            </div>
+
+            <lightning-icon
+                icon-name="utility:chevronright"
+            ></lightning-icon>
+        </button>
+        <div
+            aria-hidden="true"
+            class="ssp-accordionPanel"
+            id="accordion-content-id-1"
+        >
+            <slot name="contentSlot"></slot>
+        </div>
+    </div>
+</template>

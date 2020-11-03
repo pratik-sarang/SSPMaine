@@ -1,0 +1,53 @@
+<!--
+* name          : sspReportAdditionalChangesModal
+* @description  : This modal appears in both Report a Change and Add and Remove Member Flows to ensure user has completed all changes required in a single session prior to eligibility run. 
+* @author       : Suyash and P V Siddarth
+* @date         : 13/02/20   
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName                MM/DD/YYYY               A Brief Description about the Change
+  Siddarth                     13/02/20                             Development
+-->
+<template>
+  <c-ssp-detailed-information-modal
+    header-value={label.sspReportAdditionalChanges}
+    open-model={openModel}
+    onclosemodal={handleProp}
+    reference={reference}
+  >
+    <p
+      class="ssp-fontFamily_ArvoRegular ssp-color_monoOmega slds-p-bottom_large"
+      slot="contentSlot"
+    >
+      {label.sspAnyAdditionalChangesNeedReported}
+    </p>
+    <div slot="Footer" class="slds-grid slds-wrap slds-grid_align-spread">
+      <template if:false={bIsMemberFlow}>
+        <lightning-button
+          variant="brand"
+          label={label.sspAddRemoveHouseholdMember}
+          class="ssp-exitModalBtn ssp-exitSaveBtn ssp-button_brand"
+          onclick={addRemoveHouseholdMember}
+        >
+        </lightning-button>
+      </template>
+      <template if:true={bIsMemberFlow}>
+        <lightning-button
+          variant="brand"
+          label={label.sspReportChangeExistingHouseHoldMember}
+          class="ssp-exitModalBtn ssp-exitSaveBtn ssp-button_brand"
+          onclick={reportChangeExistingHouseHoldMember}
+        >
+        </lightning-button>
+      </template>
+      <lightning-button
+        variant="base"
+        label={label.sspNoAdditionalChanges}
+        class="ssp-exitModalBtn ssp-cancelBtn ssp-button_base"
+        onclick={cancelModal}
+      >
+      </lightning-button>
+    </div>
+  </c-ssp-detailed-information-modal>
+</template>

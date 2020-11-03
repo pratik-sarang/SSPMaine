@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>College / University</masterLabel>
+        <translation>Instituto universitario / Universidad</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Elementary School</masterLabel>
+        <translation>Escuela primaria</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>GED</masterLabel>
+        <translation>GED (Diploma General de Educación)</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>High School</masterLabel>
+        <translation>Escuela secundaria</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Home School</masterLabel>
+        <translation>Escuela en el hogar</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Middle School</masterLabel>
+        <translation>Escuela media</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Other</masterLabel>
+        <translation>Otro</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Technical / Trade / Vocational School</masterLabel>
+        <translation>Escuela técnica / de oficio / vocacional</translation>
+    </valueTranslation>
+</GlobalValueSetTranslation>

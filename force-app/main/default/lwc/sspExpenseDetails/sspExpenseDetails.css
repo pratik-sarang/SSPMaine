@@ -1,0 +1,83 @@
+.ssp-benefits-text {
+    font-size: 1rem;
+    padding-left: 8.75rem;
+}
+.ssp-expense-details-header-text {
+    font-size: 2.625rem;
+    line-height: 1;
+    margin-bottom: 5px;
+}
+.ssp-user-name {
+    font-size: 1.125rem;
+}
+.ssp-horizontal-rule {
+    height: 0.313em;
+    border-radius: 0.156em;
+    margin: 1em 0 0 0;
+    border: none;
+}
+.ssp-complete-questions {
+    font-size: 1rem;
+}
+.ssp-expense-details-form > * {
+    margin-top: 1em;
+}
+.ssp-expense-details-form .ssp-action-btn-section {
+    margin-top: 3rem;
+}
+.ssp-actionButtons {
+    padding-bottom: 60px;
+    font-size: 1.125rem;
+    line-height: 1.688rem;
+}
+.ssp-actionButtons .ssp-saveBtn {
+    margin-left: none;
+}
+.ssp-actionButtons .ssp-cancelBtn {
+    margin-right: 1.75rem;
+}
+.ssp-content {
+    font-size: 1rem;
+}
+.ssp-show-error {
+    font-size: 0.75rem;
+    margin-top: 0.125rem;
+    background: transparent;
+}
+
+@media only screen and (max-width: 1023px){
+    .ssp-expenseAmount{
+        padding-left: 0;
+        padding-right: 16px;
+        margin-top: 25px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .ssp-expense-details .ssp-application-inputs,
+    .ssp-expense-details .ssp-endDate {
+        padding: 0;
+    }
+    .ssp-expense-details .ssp-paddingMobile {
+        padding-top: 1.5rem;
+    }
+    
+    .ssp-cancelBtn, .ssp-saveBtn{
+        min-width: 170px;
+    }
+    .ssp-expense-details-header-text {
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .ssp-actionButtons .ssp-cancelBtn {
+        margin-right: 0;
+        width: 50%;
+        padding-right: 10px;
+    }
+    .ssp-saveBtn {
+        width: 50%;
+        padding-left: 10px;
+    }
+}

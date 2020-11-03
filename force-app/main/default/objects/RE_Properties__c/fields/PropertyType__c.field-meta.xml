@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PropertyType__c</fullName>
+    <defaultValue>&quot;Text&quot;</defaultValue>
+    <description>Property Data Type such as text, number,date</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Property Data Type such as text, number,date</inlineHelpText>
+    <label>Property Type</label>
+    <length>100</length>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

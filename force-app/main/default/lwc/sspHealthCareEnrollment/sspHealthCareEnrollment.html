@@ -1,0 +1,234 @@
+<!--
+* name 		        : sspHealthCareEnrollment
+* @description 	    : Container for health care enrollment page. this screen shows all the policies that the user has applied to and all the covered individual.
+* @author 		    : Chaitanya Kanakia, Ashwin Kasture 
+* @date 		    : 12/04/2019
+* MODIFICATION LOG:
+* DEVELOPER             DATE                DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* Chaitanya & Ashwin    12/04/2019	      Container for health care enrollment page
+* 
+-->
+<template>
+    <template if:true={showSpinner}>
+        <c-ssp-spinner></c-ssp-spinner>
+    </template>
+    <div class="ssp-errorToast" if:true={showToast}>
+        <c-ssp-toast
+            ssp-toast-title-val={label.sspSummaryRecordValidator}
+            show-error-toast={showToast}
+            onhidetoast={handleHideToast}
+        >
+        </c-ssp-toast>
+    </div>
+    <div class="ssp-bodyContainer" if:true={screenRenderingStatus}>
+        <div
+            class="ssp-healthCareEnrollHr ssp-bg_monoAlpha slds-m-top_large"
+        ></div>
+        <div
+            class="ssp-healthCareEnrollDesc ssp-color_monoOmega ssp-fontFamily_ArvoRegular"
+        >
+            <template if:true={isEnrolled}>
+                {label.sspHealthCareEnrollDesc}
+            </template>
+            <template if:false={isEnrolled}>
+                {label.sspHealthCareAccessDesc}
+            </template>
+        </div>
+        <template if:true={healthEnrollmentSummaryList}>
+            <lightning-button
+                class="ssp-healthCareEnrollCovBtn ssp-button_brand ssp-screenFooterNextBtn"
+                label={label.sspHealthCareEnrollAddCover}
+                variant="Brand"
+                onclick={showEnrollmentDetailScreen}
+                title={label.sspHealthCareEnrollAddCoverAlt}
+                if:false={addButtonRenderingStatus}
+            >
+            </lightning-button>
+            <template for:each={healthEnrollmentSummaryList} for:item="source">
+                <div
+                    key={source.sInsurancePolicyId}
+                    class="ssp-healthCareEnrollSource"
+                >
+                    <c-ssp-selection-progress-card
+                        edit-button="true"
+                        progress-checked={source.progressChecked}
+                        record-value={source.sPlanName}
+                        application-id={applicationId}
+                        member-id={memberIdValue}
+                        obj-card={source}
+                        policy-data={source}
+                        is-covered-ind-deletion={isPolicyDeletion}
+                        open-model-for-exist={source.bIsWPRecord}
+                        onremove={removeInsurancePolicy}
+                        onhidesection={updatePolicyData}
+                        onbutton={buttonClick}
+                        remove-modal-heading={removeModalPolicyHeader}
+                        hide-trash={enrollmentCanDelete}
+                        disabled={disableEnrollment}
+                        is-view-button-visible={isReadOnlyEnrollment}
+                    >
+                        <span
+                            slot="titleValue"
+                            class="ssp-healthCareEnrollPolicyCont ssp-policyTitle ssp-fontFamily_popinBold
+                            ssp-color_monoBody"
+                            >{source.sPlanName}</span
+                        >
+                        <span
+                            if:true={source.sPolicyNumber}
+                            slot="subtitleValue"
+                            class="ssp-healthCareEnrollPolicyCont ssp-fontFamily_popinBold
+                            ssp-color_monoBody"
+                            >{label.sspHealthCareEnrollPolicyId}
+                            {source.sPolicyNumber}</span
+                        >
+                        <p
+                            slot="sspAdditionalNotes"
+                            class="ssp-healthCareEnrollPolicyAdditional ssp-color_monoOmega"
+                        >
+                            {source.sTypeOfCoverageCode}
+                        </p>
+                    </c-ssp-selection-progress-card>
+
+                    <div
+                        class="ssp-healthCareEnrollPolicyHolder"
+                        if:true={source.sPolicyHolderId}
+                    >
+                        <c-ssp-selection-card-with-remove-icon
+                            button-alt-text={source.sPolicyHolderFullName}
+                            display-checkmark={checkCondition}
+                            hide-remove-icon="true"
+                            oncardaction={handleClick}
+                            obj-card={source.sPolicyHolderId}
+                            display-edit={source.bPolicyHolderIsHealthFacilityExist}
+                            remove-modal-heading={removeModalIndividualHeader}
+                            disabled={disableIndividualEnrollment}
+                            is-view-button-visible={isReadOnlyIndividualEnrollment}
+                            view-button-alt-text={source.viewButtonAlt}
+                        >
+                            <div
+                                class="ssp-healthCareEnrollMemberCont"
+                                slot="cardContent"
+                            >
+                                <p
+                                    class="ssp-healthCareEnrollMemberTitle ssp-color_monoBody ssp-fontFamily_popinBold ssp-word-break-all"
+                                >
+                                    {source.sPolicyHolderFirstName}
+                                    {source.sPolicyHolderLastName}
+                                </p>
+                                <p
+                                    class="ssp-healthCareEnrollMemberDesc ssp-color_blueAlpha ssp-fontFamily_popinBold ssp-word-break-all"
+                                >
+                                    {label.sspHealthCareEnrollPolicyHolder}
+                                </p>
+                            </div>
+                        </c-ssp-selection-card-with-remove-icon>
+                    </div>
+                </div>
+                <template for:each={source.lstCoverInd} for:item="member">
+                    <div
+                        if:true={member.sCoveredIndId}
+                        class="ssp-healthCareEnrollMembers"
+                        key={member.sCoveredIndId}
+                    >
+                        <c-ssp-selection-card-with-remove-icon
+                            button-alt-text={member.sCoveredIndFullName}
+                            record-value={member.removeAltCoverIndText}
+                            display-checkmark={checkCondition}
+                            obj-card={member.sCoveredIndId}
+                            covered-ind-data={member}
+                            policy-data={source}
+                            application-id={applicationId}
+                            member-id={memberIdValue}
+                            is-covered-ind-deletion={isCoveredIndDeletion}
+                            open-model-for-exist={member.bIsWPIndividualRecord}
+                            onremove={removeInsuranceCoverInd}
+                            oncardaction={handleClick}
+                            onhidesection={updatePolicyData}
+                            display-edit={member.bIsCoveredHealthFacilityExist}
+                            remove-modal-heading={removeModalIndividualHeader}
+                            can-delete={canDelete}
+                            disabled={disableIndividualEnrollment}
+                            is-view-button-visible={isReadOnlyIndividualEnrollment}
+                            view-button-alt-text={member.viewButtonAltText}
+                        >
+                            <div
+                                class="ssp-healthCareEnrollMemberCont"
+                                slot="cardContent"
+                            >
+                                <p
+                                    class="ssp-healthCareEnrollMemberTitle ssp-color_monoBody ssp-fontFamily_popinBold ssp-word-break-all"
+                                >
+                                    {member.sCoveredIndFirstName}
+                                    {member.sCoveredIndLastName}
+                                </p>
+                                <p
+                                    class="ssp-healthCareEnrollMemberDesc ssp-color_blueAlpha ssp-fontFamily_popinBold ssp-word-break-all"
+                                >
+                                    {label.sspHealthCareEnrollCoveredInd}
+                                </p>
+                            </div>
+                        </c-ssp-selection-card-with-remove-icon>
+                    </div>
+                </template>
+            </template>
+        </template>
+        <template if:false={healthEnrollmentSummaryList}>
+            <lightning-button
+                class="ssp-healthCareEnrollCovBtn ssp-button_brand ssp-screenFooterNextBtn ssp-defaultAddCoverageBtn"
+                label={label.sspHealthCareEnrollAddCover}
+                variant="Brand"
+                onclick={showEnrollmentDetailScreen}
+                disabled
+                if:false={addButtonRenderingStatus}
+            ></lightning-button>
+            <div class="ssp-healthCareEnrollSource ssp-defaultTile">
+                <c-ssp-selection-card-with-remove-icon
+                    button-alt-text={defaultAltTextForStart}
+                    obj-card=""
+                    onremove={hideDefaultTitle}
+                    display-checkmark={checkCondition}
+                    oncardaction={buttonClick}
+                    remove-modal-heading={label.sspHeaderAccessHealthcareCoverageModal}
+                    disabled={disableEnrollment}
+                    can-delete={canDelete}
+                    is-view-button-visible={isReadOnlyEnrollment}
+                    view-button-alt-text={defaultAltTextForView}
+                >
+                    <div
+                        class="ssp-healthCareEnrollMemberCont"
+                        slot="cardContent"
+                    >
+                        <p
+                            class="ssp-healthCareEnrollMemberTitle ssp-color_monoBody ssp-fontFamily_popinBold ssp-word-break-all"
+                        >
+                            {label.sspHealthCareEnrollCoverage}
+                        </p>
+                    </div>
+                </c-ssp-selection-card-with-remove-icon>
+            </div>
+        </template>
+    </div>
+    <template if:true={showEnrollmentDetails}>
+        <c-ssp-enrollment-details
+            application-id={applicationId}
+            insurance-policy-id={insurancePolicyId}
+            is-enrolled-in-insurance={isEnrolledInInsurance}
+            onsummary={showEnrollmentSummaryScreen}
+			onrulechange={reviewRequiredAction}
+        >
+        </c-ssp-enrollment-details>
+    </template>
+    <template if:true={showIndividualEnrollment}>
+        <c-ssp-individual-enrollment
+            ssp-covered-individual-id={sspCoveredIndividualId}
+            onhideindividualenrollmentdetails={handleHideIndividualEnrollmentDetails}
+            is-enrolled-in-insurance={isEnrolledInInsurance}
+            mode={mode}
+        >
+        </c-ssp-individual-enrollment>
+    </template>
+    <template if:true={showAccessDeniedComponent}>
+        <c-ssp-access-denied></c-ssp-access-denied>
+    </template>
+</template>

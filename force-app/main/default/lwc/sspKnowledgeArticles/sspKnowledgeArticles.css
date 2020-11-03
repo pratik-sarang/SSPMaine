@@ -1,0 +1,29 @@
+h1 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin: 30px 0;
+}
+
+.ssp-ka-header .ssp-ka-page-title .slds-grid .slds-size_1-of-1 > h1 {
+    font-size: 2.625rem;
+    line-height: 3rem;
+    padding-bottom: 30px;
+    border-bottom: 5px solid #eeeff2;
+}
+
+.ssp-ka-separation {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.ssp-accordionSlot {
+    padding-bottom: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+    .ssp-ka-header .ssp-ka-page-title .slds-grid .slds-size_1-of-1 > h1 {
+        font-size: 1.5rem;
+        line-height: 1.875rem;
+        border-bottom: 5px solid #eeeff2;
+    }
+}

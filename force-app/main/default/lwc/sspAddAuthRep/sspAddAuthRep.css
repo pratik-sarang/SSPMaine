@@ -1,0 +1,108 @@
+.ssp-add-auth-rep-btns {
+    margin: 70px 0 60px 0;
+}
+.ssp-add-auth-rep-btns .ssp-cancel-btn {
+    padding-right: 12px;
+}
+.ssp-add-auth-rep-btns .ssp-next-btn {
+    padding-left: 12px;
+}
+.ssp-reps-header {
+    margin-bottom: 60px;
+}
+.ssp-reps-text {
+    font-size: 1rem;
+    padding-left: 8.75rem;
+}
+.ssp-add-auth-rep-program {
+    font-size: 1rem;
+}
+.ssp-add-auth-rep-program-header-text {
+    font-size: 2.625rem;
+}
+.ssp-horizontal-rule {
+    height: 0.313rem;
+    border-radius: 0.156rem;
+    border: none;
+}
+
+.ssp-horizontal-rule-modal {
+    height: 0.313rem;
+    border-radius: 0.156rem;
+    border: none;
+    margin-bottom: 2.313rem;
+    margin-top: 1.25rem;
+}
+
+.ssp-auth-rep-program-info {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+.ssp-common-margin-top {
+    margin-top: 0;
+}
+.ssp-auth-rep-program-form > * {
+    margin-top: 15px;
+}
+
+.ssp-modalFooter {
+    width: -webkit-fill-available;
+}
+
+.ssp-modalHeaderSubText {
+    font-size: 1rem;
+    line-height: 1.375rem;
+}
+
+.ssp-contactDetails {
+    text-decoration: underline;
+}
+
+.ssp-PersonContainer {
+    margin-top: 2rem;
+    width: 60%;
+    margin-bottom: 0.875rem;
+}
+.ssp-align-center {
+    display: flex;
+    align-items: center;
+}
+@media only screen and (max-device-width: 768px) {
+    .ssp-reps-text {
+        padding-left: 1.875rem;
+    }
+    .ssp-add-auth-rep-program-header-text {
+        font-size: 1.5rem;
+    }
+    .ssp-common-margin-top {
+        margin-top: 1rem;
+        padding-left: 0;
+    }
+    .ssp-optional-field {
+        width: 100%;
+    }
+    .ssp-gutter-right {
+        padding-right: 0;
+    }
+    .ssp-gutter-left {
+        padding-left: 0;
+    }
+    .ssp-search-cancel {
+        margin-bottom: 15px;
+    }
+}
+
+@media only screen and (min-device-width: 769px) {
+    .ssp-toggle-question .ssp-applicationInputs {
+        width: 100%;
+    }
+    .ssp-optional-field {
+        width: 170px;
+    }
+    .ssp-buttonContainer {
+        margin-top: 1rem;
+    }
+    .ssp-horizontal-rule-modal {
+        margin-top: 2.5rem;
+    }
+}

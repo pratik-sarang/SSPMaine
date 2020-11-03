@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>State__c</fullName>
+    <description>This field is used to store another state for which benefits are available for a member</description>
+    <externalId>false</externalId>
+    <label>Another State for Benefits</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>SSPState</valueSetName>
+    </valueSet>
+</CustomField>

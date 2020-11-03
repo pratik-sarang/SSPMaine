@@ -1,0 +1,27 @@
+.showError {
+  font-size: 0.75rem;
+  margin-top: 0.125rem;
+  background: transparent;
+}
+
+.ssp-inputDate {
+  width: 100%;
+  position: relative;
+}
+
+.ssp-genericInput .slds-form-element {
+  display: inline;
+}
+
+.ssp-datePickerIcon {
+  display: none;
+}
+
+@supports (-webkit-touch-callout: none) {
+  .ssp-datePickerIcon {
+    display: block;
+    position: absolute;
+    top: 2.125rem;
+    right: 0.625rem;
+  }
+}

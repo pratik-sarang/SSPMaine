@@ -1,0 +1,117 @@
+.ssp-innerContainer {
+    max-width: 1170px;
+    width: 100%;
+    margin: auto;
+}
+.ssp-cardContainerElement {
+    padding: 0 30px;
+}
+.ssp-sidePadding {
+    padding: 30px 30px 15px 30px;
+}
+.ssp-bodyContainer {
+    margin: 0;
+}
+.ssp-topHeader {
+    font-size: 2.625rem;
+    line-height: 3rem; 
+}
+
+.ssp-boderBottom5X a{
+    display: inline-block;
+    padding-top: 10px;
+}
+.ssp-sectionHeading {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+}
+p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+.ssp-caseNumberFont {
+    font-size: 0.8125rem;
+    letter-spacing: 0.3px;
+    line-height: 18px;
+}
+
+.ssp-bottomNote,
+.ssp-snapNote {
+    padding: 30px;
+    border-radius: 6px;
+    box-shadow: 0 15px 25px -7px rgba(0, 35, 98, 0.1),
+        0 0 6px 0 rgba(0, 35, 98, 0.15);
+    max-width: 770px;
+    width: 100%;
+}
+.ssp-snapNote {
+    padding: 15px;
+    display: flex;
+    align-items: stretch;
+}
+.ssp-snapNote img {
+    align-self: center;
+}
+.ssp-noteCard {
+    max-width: 370px;
+    width: 100%;
+    border-radius: 6px;
+    box-shadow: 0 15px 25px -7px rgba(0, 35, 98, 0.1),
+        0 0 6px 0 rgba(0, 35, 98, 0.15);
+    padding: 24px;
+    display: inline-block;
+}
+.ssp-noteCard .ssp-sectionHeading {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+.ssp-warningNoticeCardIcon {
+    height: 24px;
+    width: 24px;
+}
+.ssp-eligibleHeading {
+    font-size: 2.625rem;
+    line-height: 2rem;
+}
+a {
+    text-decoration: underline;
+}
+.ssp-footerContainer {
+    text-align: right;
+    margin-top: 100px;
+}
+ul {
+    list-style: disc;
+    list-style-position: inside;
+}
+.ssp-cardButton a {
+    text-decoration: none;
+}
+.ssp-moreHelpContainer {
+    display: inline-block;
+}
+@media only screen and (max-width: 768px) {
+    .ssp-topHeader {
+        font-size: 1.5rem;
+        line-height: 1.875rem;
+    }
+    .ssp-cardContainerElement .ssp-innerContainer {
+        padding: 0;
+    }
+    .ssp-cardContainerElement .ssp-innerContainer .ssp-bodyContainer {
+        padding: 0;
+    }
+    .ssp-member-background {
+        height: 122px;
+    }
+    .ssp-eligibleHeading {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+    .ssp-noteCard {
+        max-width: 100%;
+    }
+    .ssp-moreHelpContainer {
+        display: block;
+    }
+}

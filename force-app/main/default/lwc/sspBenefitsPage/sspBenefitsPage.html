@@ -1,0 +1,254 @@
+<template>
+  <template if:true={showSpinner}>
+    <c-ssp-spinner></c-ssp-spinner>
+  </template>
+  <template if:true={showRACPopUp}>
+    <c-ssp-report-a-change-modal
+      onclose={handleClose}
+      application-list={strActiveCases}
+      origin="benefits-page"
+    ></c-ssp-report-a-change-modal>
+  </template>
+
+  <template if:true={showAccessDenied}>
+    <c-ssp-access-denied></c-ssp-access-denied>
+  </template>
+  <template if:true={showScreen}>
+    <div class="ssp-containerBody">
+      <template if:true={isWorkerPortalBannerVisible}>
+        <div class="ssp-WorkerPortal slds-m-bottom_x-large">
+          <c-ssp-worker-portal-banner> </c-ssp-worker-portal-banner>
+        </div>
+      </template>
+      <div class="slds-grid slds-wrap">
+        <div
+          class="ssp-headerText ssp-fontFamily_popinBlack ssp-color_blueAlpha slds-size_1-of-1 slds-m-vertical_large"
+        >
+          {labels.sspBenefits}
+        </div>
+
+        <div
+          class="ssp-infoText slds-m-bottom_large ssp-color_monoOmega ssp-fontFamily_ArvoRegular"
+        >
+          {labels.sspViewManageApprovedPrograms}
+          <span if:true={isHeadOfHousehold}>
+            <span if:false={isChangeMode}>
+              <span if:false={isDAILOwner}>
+                <span if:false={isJORITWIST}>
+                  <span if:false={isDAILCBWOwner}>
+                    <span if:true={hasRACCases}>
+                      <span if:true={renderingMap.showRAC.isAccessible}>
+                        <a
+                          if:false={isTMember}
+                          onclick={handleRac}
+                          class="ssp-color_blueAlpha"
+                          tabindex="0"
+                          role="button"
+                        >
+                          &nbsp;{labels.sspReportAChange}
+                        </a>
+                      </span>
+                    </span>
+                  </span>
+                </span>
+              </span>
+            </span>
+          </span>
+        </div>
+        <div
+          class="ssp-hrRuler ssp-color_monoBeta slds-m-bottom_large slds-size_1-of-1"
+        ></div>
+      </div>
+      <div class="slds-grid slds-wrap">
+        <div
+          if:true={renewalCaseNumbersSet.length}
+          class="ssp-infoText slds-m-bottom_large ssp-color_monoOmega ssp-fontFamily_ArvoRegular"
+        >
+          {labels.sspKeepYourBenefits}
+        </div>
+
+        <template for:each={renewalCaseNumbersSet} for:item="caseNumber">
+          <div
+            key={caseNumber}
+            class="ssp-renewalText slds-m-bottom_large ssp-color_monoBody ssp-fontFamily_popinRegular slds-size_1-of-1"
+          >
+            <span class="ssp-fontFamily_popinBold ssp-textPadding_6">
+              {labels.sspCaseHash}{caseNumber}
+            </span>
+            {labels.sspIsUpForRenewal}
+            <span if:false={isDAILOwner}>
+              <span
+                if:true={isHeadOfHousehold}
+                class="ssp_renewYourBenefits ssp-anchor ssp-color_blueAlpha"
+              >
+                <span if:false={isChangeMode}>
+                  <span if:false={isJORITWIST}>
+                    <span if:false={isDAILCBWOwner}>
+                      <span if:false={isTMember}>
+                        <a
+                          if:true={renderingMap.showRenewal.isAccessible}
+                          class="renewal"
+                          data-case={caseNumber}
+                          onclick={redirectToRenewal}
+                          tabindex="0"
+                        >
+                          {labels.sspRenewBenefits}
+                        </a>
+                      </span>
+                    </span>
+                  </span>
+                </span>
+              </span>
+            </span>
+          </div>
+        </template>
+
+        <div
+          class="slds-size_1-of-1 ssp-bg_monoDelta ssp-color_monoBody slds-m-bottom_x-large ssp-benefitsAccordion"
+        >
+          <c-ssp-accordion-card
+            class="slds-size_1-of-1 ssp-bg_monoDelta  slds-m-bottom_large"
+          >
+            <div class="ssp-fontFamily_popinBold" slot="Title">
+              {labels.sspInterestedInOtherStatePrograms}
+            </div>
+            <div slot="contentSlot">
+              <div
+                class="slds-grid slds-wrap slds-grid_align-spread  ssp-benefitsPageContainer ssp-first ssp-appTable_borderBottom"
+              >
+                <div
+                  class="slds-grid slds-wrap slds-large-size_3-of-4 slds-size_1-of-1"
+                >
+                  <div
+                    class="ssp-infoText13 ssp-color_monoBody ssp-fontFamily_popinBold slds-m-bottom_x-small slds-size_1-of-1"
+                  >
+                    {labels.sspSearchChildCareProviders}
+                  </div>
+                  <div
+                    class="ssp-infoText13 ssp-color_monoBody ssp-fontFamily_popinRegular slds-m-bottom_medium slds-size_1-of-1 slds-p-right_x-large"
+                  >
+                    {labels.sspSearchStateApprovedProviders}
+                  </div>
+                </div>
+                <div
+                  if:true={renderingMap.showCCPS.isAccessible}
+                  class="slds-grid slds-wrap  ssp-buttonAlignment ssp-componentWidth slds-large-size_1-of-4 slds-size_1-of-1"
+                >
+                  <lightning-button
+                    label={labels.sspSearchProviders}
+                    title={labels.sspSearchProviders}
+                    class="slds-medium-size_1-of-1 slds-size_1-of-1 ssp-button_brand ssp-buttonWidth"
+                    onclick={handleChildCareSearch}
+                    variant="brand"
+                  ></lightning-button>
+                </div>
+              </div>
+              <div
+                class="slds-grid slds-wrap slds-grid_align-spread slds-m-vertical_large ssp-benefitsPageContainer"
+              >
+                <div
+                  class="slds-grid slds-wrap slds-large-size_3-of-4 slds-size_1-of-1"
+                >
+                  <div
+                    class="ssp-infoText13 ssp-color_monoBody ssp-fontFamily_popinBold slds-m-bottom_x-small slds-size_1-of-1"
+                  >
+                    {labels.sspApplyForBenefits}
+                  </div>
+                  <div
+                    class="ssp-infoText13 ssp-color_monoBody ssp-fontFamily_popinRegular slds-m-bottom_medium slds-size_1-of-1 slds-p-right_x-large"
+                  >
+                    {labels.sspGetBenefitsHealthFood}
+                  </div>
+                </div>
+                <div
+                  if:false={isDAILOwner}
+                  class="slds-grid slds-wrap  ssp-buttonAlignment ssp-componentWidth slds-large-size_1-of-4 slds-size_1-of-1"
+                >
+                  <template
+                    if:true={renderingMap.showAddApplyBenefits.isAccessible}
+                  >
+                    <lightning-button
+                      label={buttonLabel}
+                      title={buttonLabel}
+                      class="slds-medium-size_1-of-1 slds-size_1-of-1 ssp-button_brand ssp-buttonWidth"
+                      onclick={navigateToBenefitsScreen}
+                      variant="brand"
+                    ></lightning-button>
+                  </template>
+                </div>
+              </div>
+            </div>
+          </c-ssp-accordion-card>
+        </div>
+      </div>
+    </div>
+    <div class="ssp-TabsRow">
+      <div
+        class="ssp-tabHeight ssp-Tab ssp-fontFamily_popinBold ssp-color_monoOmega ssp-TabWidth slds-align_absolute-center ssp-active ssp-activeBenefits"
+        onclick={openSelected} tabindex="0" onkeydown={openSelected}
+      >
+        {labels.sspActivePendingCases}
+      </div>
+      <div
+        class="ssp-tabHeight ssp-Tab ssp-fontFamily_popinBold ssp-color_monoOmega ssp-TabWidth slds-align_absolute-center ssp-inactiveBenefits"
+        onclick={openSelected} tabindex="0" onkeydown={openSelected}
+      >
+        {labels.sspInactiveCases}
+      </div>
+    </div>
+
+    <!-- ACTIVE CASES -->
+    <div class="ssp-TabsContent ssp-activeBenefits ">
+      <template if:true={activePrograms.length}>
+        <template for:each={activePrograms} for:item="program">
+          <c-ssp-benefits-case-details
+            case-number={program.caseNumber}
+            program={program}
+            rac-cases-string={strActiveCases}
+            renewal-case-numbers-set={renewalCaseNumbersSet}
+            is-head-of-household={isHeadOfHousehold}
+            is-change-mode={isChangeMode}
+            is-j-o-r-i-t-w-i-s-t={isJORITWIST}
+            is-t-member={isTMember}
+            available-programs={availablePrograms}
+            rendering-map={renderingMap}
+            selected-role={selectedRole}
+            case-vs-status-map={caseVsStatusMap}
+            logged-in-individual-id={loggedInIndividualId}
+            map-waiver-details={mapWaiverDetails}
+            map-waiver-status={mapWaiverStatus}
+            list-waiver-status={listWaiverStatus}
+            key={program.key}
+          ></c-ssp-benefits-case-details>
+        </template>
+      </template>
+    </div>
+
+    <!-- INACTIVE CASES -->
+    <div class="ssp-TabsContent ssp-inactiveBenefits ">
+      <template if:true={inactivePrograms.length}>
+        <template for:each={inactivePrograms} for:item="program">
+          <c-ssp-benefits-case-details
+            case-number={program.caseNumber}
+            program={program}
+            rac-cases-string={strActiveCases}
+            renewal-case-numbers-set={renewalCaseNumbersSet}
+            is-head-of-household={isHeadOfHousehold}
+            is-change-mode={isChangeMode}
+            is-j-o-r-i-t-w-i-s-t={isJORITWIST}
+            is-t-member={isTMember}
+            available-programs={availablePrograms}
+            rendering-map={renderingMap}
+            selected-role={selectedRole}
+            case-vs-status-map={caseVsStatusMap}
+            logged-in-individual-id={loggedInIndividualId}
+            map-waiver-details={mapWaiverDetails}
+            map-waiver-status={mapWaiverStatus}
+            list-waiver-status={listWaiverStatus}
+            key={program.key}
+          ></c-ssp-benefits-case-details>
+        </template>
+      </template>
+    </div>
+  </template>
+</template>

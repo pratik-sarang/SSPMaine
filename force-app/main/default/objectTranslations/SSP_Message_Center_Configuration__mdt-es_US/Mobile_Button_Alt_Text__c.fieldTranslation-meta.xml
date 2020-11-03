@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Mobile Button Alt Text --></label>
+    <name>Mobile_Button_Alt_Text__c</name>
+    <picklistValues>
+        <masterLabel>Click to Call DCBS</masterLabel>
+        <translation>Haga clic para llamar a DCBS</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Click to Review and Consent</masterLabel>
+        <translation>Haga clic para revisar y dar consentimiento</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Click to continue the application</masterLabel>
+        <translation><!-- Click to continue the application --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Click to pay your claim</masterLabel>
+        <translation><!-- Click to pay your claim --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Click to renew benefits</masterLabel>
+        <translation>Haga clic para renovar beneficios</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Click to upload documents</masterLabel>
+        <translation>Haga clic para cargar documentos</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Click to view the notice</masterLabel>
+        <translation>Haga clic para ver el aviso</translation>
+    </picklistValues>
+</CustomFieldTranslation>

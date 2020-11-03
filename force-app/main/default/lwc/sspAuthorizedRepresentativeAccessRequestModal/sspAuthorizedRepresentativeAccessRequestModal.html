@@ -1,0 +1,210 @@
+<!-- 
+* name 		      : sspAuthorizedRepresentativeAccessRequestModal
+* @description 	  : This modal is used for Authorized Representative Access RequestModal
+* @author 		  : Sharon
+* @date           : 05/15/2020
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* --------------------------------------------------------------------------------------------
+-->
+<template>
+    <template if:true={showSpinner}>
+        <c-ssp-spinner></c-ssp-spinner>
+    </template>
+    <div
+        class="ssp-medicaidPenaltyWarning ssp-applicationStatementModalContainer ssp-authAccessRequestModal ssp-requestConsentSection"
+        if:true={showData}
+    >
+        <c-ssp-detailed-information-modal
+            reference={reference}
+            header-value={label.sspAuthRepAccessModalHeading}
+            open-model={openModel}
+            onclosemodal={closeApplicationStatementModal}
+            scroll-event={trueValue}
+            onenablemodalbuttons={enableModalButtons}
+        >
+            <div slot="contentSlot">
+                <div class="ssp-authModalContent">
+                    <p class="ssp-fontFamily_ArvoRegular ssp-color_monoOmega">
+                        <!--Start-Tracker Defect-56-->
+                        {notificationBody}
+                        <!--End - Tracker Defect-56-->
+                    </p>
+                    <p
+                        class="ssp-color_blueAlpha ssp-fontFamily_popinBold ssp-authModalSubHeading"
+                    >
+                        {label.sspAuthRepAccessPermissionHeading}
+                    </p>
+                    <template for:each={programPermissionList} for:item="item">
+                        <div key={item.program}>
+                            <p>{item.program}</p>
+                            <p class="ssp-permission ssp-color_monoBody">
+                                {item.permission}
+                            </p>
+                        </div>
+                    </template>
+                    <p
+                        class="ssp-fontFamily_ArvoRegular ssp-color_monoOmega ssp-marginBottomThirty ssp-authRepAccessModalContentTwo"
+                    >
+                        {label.sspAuthRepAccessModalContentTwo}
+                    </p>
+                    <p
+                        class="ssp-fontFamily_ArvoRegular ssp-color_monoOmega ssp-marginBottomThirty"
+                    >
+                        {label.sspAuthRepAccessModalContentThree}
+                    </p>
+                    <p
+                        class="ssp-fontFamily_ArvoRegular ssp-color_monoOmega ssp-marginBottomThirty"
+                    >
+                        {label.sspAuthRepAccessModalContentFour}
+                    </p>
+                </div>
+                <div class="ssp-authModalForm">
+                    <div class="slds-grid slds-wrap">
+                        <div
+                            class="slds-col slds-max-medium-size_1-of-1 slds-size_8-of-12"
+                        >
+                            <div
+                                class="ssp-margin-bottom_small ssp-authModalInput"
+                            >
+                                <c-ssp-base-component-input-text
+                                    class="ssp-applicationInputs"
+                                    meta-list={MetaDataListParent}
+                                    entity-name="SSP_Application__c"
+                                    field-name="ApplicationEsignFirstName__c"
+                                    data-id="sFirstName"
+                                    match-value={primaryApplicant.firstName}
+                                    label={label.sspSnapContactFirstName}
+                                    max-length="50"
+                                >
+                                </c-ssp-base-component-input-text>
+                            </div>
+                        </div>
+                        <div
+                            class="slds-max-medium-size_1-of-1 slds-size_4-of-12"
+                        >
+                            <div
+                                class="ssp-margin-bottom_small ssp-authModalInputLess"
+                            >
+                                <c-ssp-base-component-input-text
+                                    class="ssp-applicationInputs ssp-middleInitialField ssp-no-mi"
+                                    meta-list={MetaDataListParent}
+                                    entity-name="SSP_Application__c"
+                                    field-name="ApplicationEsignMiddleInitial__c"
+                                    data-id="sMiddleName"
+                                    match-value={primaryApplicant.middleInitial}
+                                    label={label.sspSnapContactMiddleInitial}
+                                    disabled={isDisableMIField}
+                                    max-length="1"
+                                >
+                                </c-ssp-base-component-input-text>
+                            </div>
+                        </div>
+                        <div
+                            class="slds-m-vertical_medium ssp-medicareDetailsForm slds-size_1-of-1"
+                        >
+                            <c-ssp-base-component-input-checkbox
+                                label={label.noMiddleNameText}
+                                onchange={toggleMiCheckbox}
+                                class="ssp-no-mi"
+                            >
+                            </c-ssp-base-component-input-checkbox>
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-wrap">
+                        <div
+                            class="slds-col slds-max-medium-size_1-of-1 slds-size_8-of-12 "
+                        >
+                            <div
+                                class="ssp-margin-bottom_small ssp-authModalInput"
+                            >
+                                <c-ssp-base-component-input-text
+                                    class="ssp-applicationInputs"
+                                    label={label.sspSnapContactLastName}
+                                    meta-list={MetaDataListParent}
+                                    entity-name="SSP_Application__c"
+                                    field-name="ApplicationEsignLastName__c"
+                                    data-id="sLastName"
+                                    match-value={primaryApplicant.lastName}
+                                    max-length="50"
+                                >
+                                </c-ssp-base-component-input-text>
+                            </div>
+                        </div>
+                        <div
+                            class="slds-col slds-max-medium-size_1-of-1 slds-size_4-of-12 ssp-snapContactSuffix"
+                        >
+                            <div
+                                class="ssp-margin-bottom_small ssp-authModalInputLess"
+                            >
+                                <c-ssp-base-component-input-picklist
+                                    class="ssp-applicationInputs"
+                                    meta-list={MetaDataListParent}
+                                    entity-name="SSP_Application__c"
+                                    field-name="ApplicationEsignSuffixCode__c"
+                                    value=""
+                                    data-id="sSuffixCode"
+                                    match-value={primaryApplicant.suffix}
+                                    option={suffixValues}
+                                    label={label.sspSuffixLabel}
+                                ></c-ssp-base-component-input-picklist>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-wrap">
+                        <div
+                            class="slds-col slds-max-medium-size_1-of-1 slds-size_8-of-12 ssp-marginBottomSixty"
+                        >
+                            <div class="ssp-authModalInput">
+                                <c-ssp-base-component-input-date
+                                    meta-list={MetaDataListParent}
+                                    entity-name="SSP_TrackDeletion__c"
+                                    field-name="EndDate__c"
+                                    data-id="dEndDate"
+                                    class="ssp-applicationInputDate slds-size_1-of-1"
+                                    label={label.sspDateLabel}
+                                    value={timeTravelDate}
+                                    is-read-only="true"
+                                >
+                                </c-ssp-base-component-input-date>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                slot="Footer"
+                class="slds-grid slds-wrap slds-grid_align-spread slds-gutters "
+            >
+                <div
+                    class="slds-col slds-size_1-of-2 slds-medium-size_1-of-2 slds-large-size_6-of-12 "
+                >
+                    <lightning-button
+                        name="Reject"
+                        variant="base"
+                        title={label.sspRejectAccessRequestTitle}
+                        label={label.sspAuthRepAccessModalRejectButton}
+                        class="ssp-exitModalBtn ssp-button_base"
+                        onclick={handleReject}
+                        disabled={disabled}
+                    >
+                    </lightning-button>
+                </div>
+                <div
+                    class="slds-col slds-size_1-of-2 slds-medium-size_1-of-2 slds-large-size_6-of-12"
+                >
+                    <lightning-button
+                        name="Accept"
+                        variant="neutral"
+                        title={label.sspAcceptAccessRequestTitle}
+                        label={label.sspAuthRepAccessModalAcceptButton}
+                        class="ssp-exitModalBtn ssp-button_neutral"
+                        onclick={handleAccept}
+                        disabled={disabled}
+                    >
+                    </lightning-button>
+                </div>
+            </div>
+        </c-ssp-detailed-information-modal>
+    </div>
+</template>

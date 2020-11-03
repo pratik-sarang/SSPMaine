@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Dormitories/ On - Campus Housing</masterLabel>
+        <translation>Dormitorios / Alojamiento en campus</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Drug Addiction and Alcohol Treatment Centers</masterLabel>
+        <translation>Centros de Tratamiento para Alcohol y Adicción a Drogas</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Emergency Custody Situation</masterLabel>
+        <translation>Situación de custodia de emergencia</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Family Care Home</masterLabel>
+        <translation>Hogar de cuidados familiares</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Group Living Arrangement</masterLabel>
+        <translation>Vida en grupo</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Half - Way House</masterLabel>
+        <translation>Hogar de transición</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Homeless or Homeless Shelter</masterLabel>
+        <translation>Sin hogar o refugio para personas sin hogar</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Hospitalization</masterLabel>
+        <translation>Hospitalización</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>In Home</masterLabel>
+        <translation>En hogar</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Incarcerated</masterLabel>
+        <translation>Encarcelado</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Job Corps</masterLabel>
+        <translation>Programa Job Corps</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Living elsewhere while attending school</masterLabel>
+        <translation>Viviendo en otro lugar mientras asiste a la escuela</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Long Term Care Facility</masterLabel>
+        <translation>Centro de cuidados a largo plazo</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Military Base</masterLabel>
+        <translation>Base militar</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Personal Care Home</masterLabel>
+        <translation>Hogar de cuidados personales</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Psychiatric Residential Treatment Facility</masterLabel>
+        <translation>Centro residencial de tratamiento psiquiátrico</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Rehab Facility</masterLabel>
+        <translation>Centro de rehabilitación</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Shelter for Battered women and children</masterLabel>
+        <translation>Refugio para mujeres y niños maltratados</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Someone else&apos;s home</masterLabel>
+        <translation>Hogar de otra persona</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Staying somewhere else due to employment</masterLabel>
+        <translation>Viviendo en otro lugar debido a empleo</translation>
+    </valueTranslation>
+</GlobalValueSetTranslation>

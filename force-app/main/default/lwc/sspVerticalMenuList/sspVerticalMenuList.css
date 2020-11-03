@@ -1,0 +1,17 @@
+.ssp-verticalMenuBorder {
+    border-radius: 0 6px 6px 0;
+    padding-top: 21px;
+    padding-bottom: 21px;
+    width: 100%;
+}
+.ssp-verticalMenuHeader {
+    font-size: 1rem;
+    letter-spacing: -0.3px;
+    line-height: 24px;
+}
+
+@media only screen and (max-width: 768px) {
+    .ssp-verticalMenuHeader {
+        display: none;
+    }
+}

@@ -1,0 +1,95 @@
+<!-- 
+* name 		      : sspMedicalBillsThreeMonths
+* @description 	  : This component is used for Medical Bills for Last Three Months 
+* @author 		  : Sharon
+* @date           : 08/02/2020
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* 	      
+-->
+<template>
+    <div class="ssp-bodyContainer" if:false={isNotAccessible}>
+        <template if:true={showSpinner}>
+            <c-ssp-spinner></c-ssp-spinner>
+        </template>
+        <div
+            class="ssp-medBillsThreeMonthsContainer ssp-fontFamily_ArvoRegular ssp-marginTopThirty"
+        >
+            <div class="ssp-errorToast" if:true={showToast}>
+                <c-ssp-toast
+                    ssp-toast-title-val={label.toastErrorText}
+                    show-error-toast={trueValue}
+                    onhidetoast={handleHideToast}
+                ></c-ssp-toast>
+            </div>
+            <div class="ssp-medicalBillsThreeContent">
+                <p class="ssp-color_monoOmega">
+                    {label.sspMedicalExpensesPara}
+                </p>
+                <ul class="ssp-color_blueAlpha">
+                    <li>
+                        <span class="ssp-color_monoOmega"
+                            >{label.sspMedicalExpensesListOne}</span
+                        >
+                    </li>
+                    <li>
+                        <span class="ssp-color_monoOmega"
+                            >{label.sspMedicalExpensesListTwo}</span
+                        >
+                    </li>
+                    <li>
+                        <span class="ssp-color_monoOmega"
+                            >{label.sspMedicalExpensesListThree}</span
+                        >
+                    </li>
+                    <li>
+                        <span class="ssp-color_monoOmega"
+                            >{label.sspMedicalExpensesListFour}</span
+                        >
+                    </li>
+                    <li>
+                        <span class="ssp-color_monoOmega"
+                            >{label.sspMedicalExpensesListFive}</span
+                        >
+                    </li>
+                    <li>
+                        <span class="ssp-color_monoOmega"
+                            >{label.sspMedicalExpensesListSix}</span
+                        >
+                    </li>
+                    <li>
+                        <span class="ssp-color_monoOmega"
+                            >{label.sspMedicalExpensesListSeven}</span
+                        >
+                    </li>
+                </ul>
+            </div>
+            <div class="ssp-medicalBillsThreeInputSelection">
+                <div
+                    class="slds-grid slds-wrap slds-large-size_1-of-1 slds-size_1-of-1"
+                >
+                <template if:true={optList}>
+                    <div class="ssp-medicalBillsCheckboxLabelContainer">
+                        <c-ssp-base-component-input-checkbox-group
+                            data-id="checkbox"
+                            class="ssp-medicalBillsCheckboxGroup"
+                            label={label.sspMedicalExpensesQuestion}
+                            options={optList}
+                            value={checkboxValues}
+                            entity-name="SSP_Member__c"
+                            field-name="IsCoverageMonth1__c"
+                            onchange={handleAssistanceWithMedicalBills}
+                            meta-list={metaData}
+                        >
+                        </c-ssp-base-component-input-checkbox-group>
+                    </div>
+                  </template>  
+                </div>
+            </div>
+        </div>
+    </div>
+    <template if:true={showAccessDeniedComponent}>
+        <c-ssp-access-denied></c-ssp-access-denied>
+    </template>
+</template>

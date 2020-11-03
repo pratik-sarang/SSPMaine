@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- NextCurrentYear_Validator_Msg --></label>
+    <name>NextCurrentYear_Validator_Msg__c</name>
+    <picklistValues>
+        <masterLabel>Plan start date can only be next or current year.</masterLabel>
+        <translation><!-- Plan start date can only be next or current year. --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

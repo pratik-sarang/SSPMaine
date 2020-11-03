@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Button Name --></label>
+    <name>Button_Name__c</name>
+    <picklistValues>
+        <masterLabel>Call DCBS at 855-306-8959</masterLabel>
+        <translation>Llamar a DCBS al 855-306-8959</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Continue Application</masterLabel>
+        <translation>Continuar solicitud</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pay Claim</masterLabel>
+        <translation>Pagar reclamo</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Renew Benefits</masterLabel>
+        <translation>Renovar beneficios</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Review &amp; Consent</masterLabel>
+        <translation>revisión y consentimiento</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Upload Documents</masterLabel>
+        <translation>subir documentos</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>View Notice</masterLabel>
+        <translation>Ver Aviso</translation>
+    </picklistValues>
+</CustomFieldTranslation>

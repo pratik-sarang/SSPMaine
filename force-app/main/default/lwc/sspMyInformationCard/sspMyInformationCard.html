@@ -1,0 +1,295 @@
+<!--
+* name 		    : sspMyInformationCard
+* @description 	: This component provides information of logged in individual.
+* @author 		: Keshav Poduval And Nikhil Shinde
+* @date 		: 26-05-2020
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+*  
+-->
+
+<template>
+    <template if:true={showSpinner}>
+        <c-ssp-spinner></c-ssp-spinner>
+      </template>
+    <div
+        if:true={showContents}
+        class="ssp-myInformationCard ssp-fontFamily_popinRegular ssp-color_monoBody ssp-boxShadow ssp-bg_whiteAlpha"
+    >
+        <div
+            class="slds-grid slds-wrap ssp-collapsedView ssp-myInformationWidth"
+        >
+            <div
+                if:true={renderingMap.showID.isAccessible}
+                class="slds-col slds-large-size_1-of-5 slds-size_1-of-1 ssp-collapsedContent"
+            >
+                <div class="ssp-color_monoOmega">
+                    {label.sspMyInformationId}
+                </div>
+                <div class="ssp-myInformationContent">
+                    {nonCitizenUserData.userId}
+                </div>
+            </div>
+            <div
+                if:true={renderingMap.showOrganization.isAccessible}
+                class="slds-col slds-large-size_1-of-5 slds-size_1-of-1 ssp-collapsedContent"
+            >
+                <div class="ssp-color_monoOmega">
+                    {label.sspMyInformationOrganization}
+                </div>
+                <div class="ssp-myInformationContent">
+                    {nonCitizenUserData.organizationName}
+                </div>
+            </div>
+            <div
+                if:true={renderingMap.showCoverageArea.isAccessible}
+                class="slds-col slds-large-size_1-of-5 slds-size_1-of-1 ssp-collapsedContent"
+            >
+                <div class="ssp-color_monoOmega">
+                    {label.sspMyInformationCoverageArea}
+                </div>
+                <div class="ssp-myInformationContent">
+                    {nonCitizenUserData.coverageArea}
+                </div>
+            </div>
+            <template if:true={renderingMap.showPublicPrivate.isAccessible}>
+                <template if:true={isPublic}>
+                    <div
+                        class="slds-col slds-large-size_1-of-5 slds-size_1-of-1 ssp-collapsedContent"
+                    >
+                        {label.sspMyInformationPublic}
+                    </div>
+                </template>
+                <template if:true={isPrivate}>
+                    <div
+                        class="slds-col slds-large-size_1-of-5 slds-size_1-of-1 ssp-collapsedContent"
+                    >
+                        {label.sspMyInformationPrivate}
+                    </div>
+                </template>
+            </template>
+        </div>
+        <div class="ssp-expandedView ssp-myInformationWidth">
+            <template if:true={isExpanded}>
+                <div if:true={renderingMap.showContactInformation.isAccessible}>
+                    <div
+                        class="ssp-fontFamily_popinBold ssp-color_blueAlpha ssp-myInformationContent"
+                    >
+                        {label.sspContactInformation}
+                    </div>
+                    <div class="ssp-cisHr ssp-bg_monoAlpha"></div>
+                    <div class="slds-grid slds-wrap">
+                        <div
+                            class="slds-col slds-large-size_1-of-3 slds-size_1-of-1 ssp-expandedContent"
+                        >
+                            <div class="ssp-color_monoOmega">
+                                {label.sspName}
+                                <!-- New -->
+                            </div>
+                            <div class="ssp-myInformationContent">
+                                {nonCitizenUserData.name}
+                            </div>
+                        </div>
+                        <div
+                            class="slds-col slds-large-size_1-of-3 slds-size_1-of-1 ssp-expandedContent"
+                        >
+                            <div class="ssp-color_monoOmega">
+                                {label.sspEmailAddress}
+                            </div>
+                            <div class="ssp-myInformationContent">
+                                {nonCitizenUserData.email}
+                            </div>
+                        </div>
+                        <div
+                            class="slds-col slds-large-size_1-of-3 slds-size_1-of-1 ssp-expandedContent"
+                        >
+                            <div class="ssp-color_monoOmega">
+                                {label.sspPhoneNumber}
+                            </div>
+                            <div class="ssp-myInformationContent">
+                                {nonCitizenUserData.phone}
+                            </div>
+                        </div>
+                        <div
+                            class="slds-col slds-large-size_1-of-3 slds-size_1-of-1 ssp-expandedContent"
+                        >
+                            <div class="ssp-color_monoOmega">
+                                {label.sspPhoneType}
+                            </div>
+                            <div class="ssp-myInformationContent">
+                                {nonCitizenUserData.phoneType}
+                            </div>
+                        </div>
+                        <div
+                            class="slds-col slds-large-size_1-of-3 slds-size_1-of-1 ssp-expandedContent"
+                        >
+                            <div class="ssp-color_monoOmega">
+                                <!-- New -->
+                                {label.sspSecondaryNumber}
+                            </div>
+                            <div class="ssp-myInformationContent">
+                                {nonCitizenUserData.phoneSecondry}
+                            </div>
+                        </div>
+                        <div
+                            class="slds-col slds-large-size_1-of-3 slds-size_1-of-1 ssp-expandedContent"
+                        >
+                            <div class="ssp-color_monoOmega">
+                                {label.sspMailingAddress}
+                            </div>
+                            <div class="ssp-myInformationContent">
+                                {nonCitizenUserData.mailingAddress}
+                            </div>
+                        </div>
+                        <div
+                            class="slds-col slds-large-size_1-of-3 slds-size_1-of-1 ssp-expandedContent"
+                        >
+                            <div class="ssp-color_monoOmega">
+                                {label.sspPreferredMethodOfContact}
+                            </div>
+                            <div class="ssp-myInformationContent">
+                                {nonCitizenUserData.preferredContact}
+                            </div>
+                        </div>
+                        <div
+                            class="slds-col slds-large-size_1-of-3 slds-size_1-of-1 ssp-expandedContent"
+                        >
+                            <div class="ssp-color_monoOmega">
+                                {label.sspPreferredTimeOfContact}
+                            </div>
+                            <div class="ssp-myInformationContent">
+                                {nonCitizenUserData.preferredTimeOfContact}
+                            </div>
+                        </div>
+                        <!--Non-Citizen Dashboard Perf issue fix | Block moved-->
+                        <template if:true={renderingMap.showClients.isAccessible}>
+                            <div
+                                if:false={isMailCenterWorker}
+                                if:true={renderingMap.showClients.isAccessible}
+                                class="slds-col slds-large-size_1-of-3 slds-size_1-of-1 ssp-collapsedContent"
+                            >
+                                <div class="ssp-color_monoOmega">
+                                    {label.sspMyInformationClients}
+                                </div>
+                                <div class="ssp-myInformationContent">
+                                    {nonCitizenUserData.clientCount}
+                                    <span if:true={isAssisterOrAgencyAdminUser} class="ssp-myInformationContent">
+                                        <a onclick={exportToCSV}
+                                        onkeydown={exportToCSV}
+                                        tabindex="0"
+                                        role="button"
+                                        class="ssp-exportClientList ssp-color_blueAlpha"
+                                        >
+                                        {label.sspExportClientList}
+                                    </a>
+                                    </span>
+                                </div>
+                            </div>
+                        </template>                        
+                    </div>
+                </div>
+                <div if:true={renderingMap.showOrganizationName.isAccessible}>
+                    <div
+                        if:true={isToShowOrganisationBlock}
+                        class="ssp-fontFamily_popinBold ssp-color_blueAlpha ssp-myInformationContent slds-m-top_medium"
+                    >
+                        {label.sspOrganizationInformation}
+                    </div>
+                    <div
+                        if:true={isToShowOrganisationBlock}
+                        class="ssp-cisHr ssp-bg_monoAlpha"
+                    ></div>
+                    <div
+                        if:true={isToShowOrganisationBlock}
+                        class="slds-grid slds-wrap"
+                    >
+                            <div
+                                class="slds-col slds-large-size_1-of-3 slds-size_1-of-1 ssp-expandedContent"
+                            >
+                                <div class="ssp-color_monoOmega">
+                                    {label.sspAssisterOrganizationName}
+                                </div>
+                                <div class="ssp-myInformationContent">
+                                    {nonCitizenUserData.assisterOrgName}
+                                </div>
+                            </div>
+                            <div
+                                class="slds-col slds-large-size_1-of-3 slds-size_1-of-1 ssp-expandedContent"
+                            >
+                                <div class="ssp-color_monoOmega">
+                                    {label.sspAssisterID}
+                                </div>
+                                <div class="ssp-myInformationContent">
+                                    {nonCitizenUserData.assisterID}
+                                </div>
+                            </div>
+                        <div
+                            class="slds-col slds-large-size_1-of-3 slds-size_1-of-1 ssp-expandedContent"
+                        >
+                            <div class="ssp-color_monoOmega">
+                                {label.sspOrganizationPhysicalAddress}
+                            </div>
+                            <div class="ssp-myInformationContent">
+                                {nonCitizenUserData.orgPhysicalAddress}
+                            </div>
+                        </div>
+                        <div
+                            class="slds-col slds-large-size_1-of-3 slds-size_1-of-1 ssp-expandedContent"
+                        >
+                            <div class="ssp-color_monoOmega">
+                                {label.sspPhoneNumber}
+                            </div>
+                            <div class="ssp-myInformationContent">
+                                {nonCitizenUserData.orgPhone}
+                            </div>
+                        </div>
+                        <div
+                            class="slds-col slds-large-size_1-of-3 slds-size_1-of-1 ssp-expandedContent"
+                        >
+                            <div class="ssp-color_monoOmega">
+                                {label.sspEmail}
+                            </div>
+                            <div class="ssp-myInformationContent">
+                                {nonCitizenUserData.orgEmail}
+                            </div>
+                        </div>
+
+                        <div
+                            class="slds-col slds-large-size_1-of-3 slds-size_1-of-1 ssp-expandedContent"
+                        >
+                            <div class="ssp-color_monoOmega">
+                                {label.sspOrganizationMailingAddress}
+                            </div>
+                            <div class="ssp-myInformationContent">
+                                {nonCitizenUserData.orgMailAddress}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    if:true={showViewLessButton}
+                    tabindex="0"
+                    class="ssp-viewMore ssp-color_blueAlpha"
+                    onclick={collapseInformation}
+                    onkeydown={collapseInformation}
+                    title={label.sspViewLessAlternateText}
+                >
+                    {label.sspViewLess}
+                </div>
+            </template>
+            <template if:false={isExpanded}>
+                <div
+                    if:true={showViewLessButton}
+                    tabindex="0"
+                    class="ssp-viewMore ssp-color_blueAlpha"
+                    onclick={expandInformation}
+                    onkeydown={expandInformation}
+                    title={label.sspViewMoreAlternateText}
+                >
+                    {label.sspViewMore}
+                </div>
+            </template>
+        </div>
+    </div>
+</template>

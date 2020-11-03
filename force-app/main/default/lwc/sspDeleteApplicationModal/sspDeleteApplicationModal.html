@@ -1,0 +1,14 @@
+<template>
+    <c-ssp-detailed-information-modal onclosemodal={closeModal} header-value={customLabels.sspDeleteApplication} open-model={showPopup}>
+        <span slot="contentSlot">
+           {customLabels.sspDeleteApplicationNote}
+        </span>
+        <div slot="Footer" class="slds-grid slds-wrap ssp-stacked-btn-width">
+            <lightning-button class="ssp-button_brand slds-size_1-of-1" variant="brand" label={customLabels.sspYesDeleteApplication} onclick={startDeleteFlow}></lightning-button>
+            <lightning-button class="ssp-button_base slds-size_1-of-1 slds-m-top_small" variant="neutral" label={customLabels.sspNoCancel} onclick={closeModal}></lightning-button>
+        </div>
+    </c-ssp-detailed-information-modal>
+    <c-ssp-logging-and-error-handling-modal if:true={showErrorModal} error-id={errorMsg} onprogressvaluechange={closeError}>
+    </c-ssp-logging-and-error-handling-modal>
+    <c-ssp-spinner if:true={showSpinner}></c-ssp-spinner>
+</template>

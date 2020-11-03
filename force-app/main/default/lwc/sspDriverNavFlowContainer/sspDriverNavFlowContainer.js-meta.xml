@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata" fqn="sspDriverNavFlowContainer">
+    <apiVersion>46.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__RecordPage</target>
+        <target>lightning__AppPage</target>
+        <target>lightning__HomePage</target>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightningCommunity__Default">
+            <property name="flowName" type="String" label="flowName"/>
+            <property name="sectionId" type="String" label="Section Id" default="Unknown" description="An Id required to keep a track of progress on App Summary."/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

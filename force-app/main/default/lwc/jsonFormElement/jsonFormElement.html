@@ -1,0 +1,56 @@
+<template>
+
+    <template if:true={isTextType}>
+        <c-json-form-text
+            name={name}
+            form-data={formData}
+            field-layout={fieldLayout}
+            all-fields={allFields}
+            custom-labels={customLabels}
+        ></c-json-form-text>
+    </template>
+
+    <!--template if:true={isPicklist}>
+        <c-json-form-picklist
+            name={name}
+            form-data={formData}
+            field-layout={fieldLayout}
+            all-fields={allFields}
+            picklists-record-type-id={picklistsRecordTypeId}
+        ></c-json-form-picklist>
+    </template-->
+
+    <template if:true={isRichText}>
+        <c-json-form-rich-text
+            name={name}
+            form-data={formData}
+            field-layout={fieldLayout}
+            all-fields={allFields}
+            custom-labels={customLabels}
+        >
+            ></c-json-form-rich-text
+        >
+    </template>
+
+    <template if:true={isToggle}>
+        <c-json-form-toggle
+            name={name}
+            form-data={formData}
+            field-layout={fieldLayout}
+            all-fields={allFields}
+            custom-labels={customLabels}
+        ></c-json-form-toggle>
+    </template>
+
+    <template if:true={isButton}>
+        <c-json-form-button
+            name={name}
+            form-data={formData}
+            field-layout={fieldLayout}
+            all-fields={allFields}
+            custom-labels={customLabels}
+            disable-cond={disableCond}
+        ></c-json-form-button>
+    </template>
+
+</template>

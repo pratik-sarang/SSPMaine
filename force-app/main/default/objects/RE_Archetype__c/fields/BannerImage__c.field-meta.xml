@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BannerImage__c</fullName>
+    <description>This field is use to set the Archetype banner image in Archetype Detail Screen.</description>
+    <externalId>false</externalId>
+    <label>BannerImage</label>
+    <length>131072</length>
+    <trackTrending>false</trackTrending>
+    <type>Html</type>
+    <visibleLines>25</visibleLines>
+</CustomField>

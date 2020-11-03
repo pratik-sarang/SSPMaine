@@ -1,0 +1,165 @@
+<!--
+* name 		        : sspAlienSponsor
+* @description 	    : This screen use to select Alien sponsor for Member.
+* @author 		    : Siddharth P V, Ashwin Kasture 
+* @date 		    : 26/03/2020
+* MODIFICATION LOG:
+* DEVELOPER           DATE                DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* Siddharth P V	      01/16/2020	      Initial UI
+* Ashwin Kasture      26/03/2020          Initial Development
+-->
+<template>
+  <template if:true={showSpinner}>
+    <c-ssp-spinner></c-ssp-spinner>
+  </template>
+  <!-- CD2 2.5 Security Role Matrix. -->
+  <div
+    if:true={isPageAccessible}
+    class="ssp-bodyContainer ssp-bodyfooterMargin"
+  >
+    <div class="slds-m-vertical_large">
+      <template if:true={alienSponsorVerification}>
+        <c-ssp-general-notice-card>
+          <p>
+            {label.sspPageInformationVerified}
+            <span><a href={callUsAt}
+                    class="ssp-color_blueAlpha slds-m-left_xx-small">
+                    {label.startBenefitsAppCallNumber}.</a>
+            </span>
+          </p>
+        </c-ssp-general-notice-card>
+      </template>
+    </div>
+    <div
+      class="ssp-infoText slds-m-vertical_large ssp-color_monoOmega ssp-fontFamily_ArvoRegular"
+    >
+      {label.sspCompleteQuestionsAlienSponsor}
+    </div>
+    <div class="ssp-infoText slds-m-vertical_large">
+      <span class="ssp-color_monoOmega ssp-fontFamily_ArvoRegular">
+        {label.sspUnsureHowToCompleteSection}
+      </span>
+      <span>
+        <a
+          href={affidavitLink}
+          target="_blank"
+          title={label.sspAltAffidavitOfSupport}
+          class="ssp-hyperlinkPadding ssp-color_blueAlpha"
+          >{label.sspAffidavitOfSupport}
+        </a>
+      </span>
+    </div>
+
+    <div class="slds-grid slds-wrap slds-m-vertical_x-large">
+      <c-ssp-base-component-input-toggle
+        entity-name="SSP_Member__c"
+        field-name="SponsoredByOrganization__c"
+        class="ssp-applicationInputs"
+        label={label.sspSponsoredByOrganization}
+        value={currentMemberData.SponsoredByOrganization__c}
+        onhandlechange={handleSponsoredByOrganization}
+        options={optList}
+        handle-change="true"
+        meta-list={MetaDataListParent}
+      ></c-ssp-base-component-input-toggle>
+    </div>
+
+    <template if:true={isNotSponsoredByOrganization}>
+      <div class="slds-grid slds-wrap slds-m-vertical_x-large">
+        <c-ssp-base-component-input-toggle
+          entity-name="SSP_Member__c"
+          field-name="SponsoredByOrganization__c"
+          class="ssp-applicationInputs"
+          label={label.sspAlienSponsorMemberOfHousehold}
+          value={alienSponsorMemberOfHouseholdToggle}
+          onhandlechange={handleAlienSponsorMemberOfHousehold}
+          options={optList}
+          handle-change="true"
+          meta-list={MetaDataListParent}
+        ></c-ssp-base-component-input-toggle>
+      </div>
+
+      <template if:true={isTrueAlienSponsorMemberOfHousehold}>
+        <template if:true={listOfHousehold}>
+          <div
+            class="slds-grid slds-wrap slds-m-vertical_x-large ssp-fullWidth"
+          >
+            <c-ssp-base-component-input-picklist
+              entity-name="SSP_Member__c"
+              field-name="InternalAlienSponsor__c"
+              class="ssp-applicationInputs ssp-inputFieldWidth"
+              label={label.sspSelectHouseholdMember}
+              value={currentAlienSponsor}
+              option={listOfHouseholdData}
+              meta-list={MetaDataListParent}
+              title={label.sspAltClickListRelevantHouseholdMembers}
+            >
+            </c-ssp-base-component-input-picklist>
+          </div>
+        </template>
+      </template>
+      <template if:true={isFalseAlienSponsorMemberOfHousehold}>
+        <template if:true={isTrueWhoIsAlienSponsor}>
+          <div
+            class="slds-grid slds-wrap slds-m-vertical_x-large ssp-fullWidth"
+          >
+            <c-ssp-base-component-input-picklist
+              entity-name="SSP_Member__c"
+              field-name="ExternalAlienSponsor__c"
+              class="ssp-applicationInputs ssp-inputFieldWidth"
+              label="Who is the Alien Sponsor"
+              value={externalAlienSponsor}
+              option={listOfAlienSponsorData}
+              onchange={handlePicklist}
+              onhandlepicklistchange={handlePicklist}
+              meta-list={MetaDataListParent}
+            >
+            </c-ssp-base-component-input-picklist>
+          </div>
+        </template>
+
+        <template if:true={alienSponsorInfo}>
+          <div class="slds-grid slds-wrap slds-m-top_x-large ssp-fullWidth">
+            <c-ssp-base-component-input-text
+              label={label.alienSponsorName}
+              entity-name="SSP_AlienSponsor__c"
+              field-name="SponsorFirstName__c"
+              class="ssp-applicationInputs ssp-inputFieldWidth ssp-containersMiddlePadding"
+              meta-list={MetaDataListParent}
+            >
+            </c-ssp-base-component-input-text>
+          </div>
+          <div class="slds-grid slds-wrap slds-m-bottom_x-large">
+            <div class="ssp-fullWidth">
+              <c-ssp-address-auto-complete
+                class="ssp-applicationInputs ssp-fullWidth ssp-address1"
+                record={addressRecord}
+                field-map={fieldMap}
+                meta-list={MetaDataListParent}
+              >
+              </c-ssp-address-auto-complete>
+            </div>
+          </div>
+          <div
+            class="slds-grid slds-wrap slds-m-vertical_x-large ssp-fullWidth"
+          >
+            <c-ssp-base-component-input-phone
+              label={label.sspPrimaryPhoneNumber}
+              entity-name="SSP_AlienSponsor__c"
+              field-name="PrimaryPhoneNumber__c"
+              class="ssp-applicationInputs ssp-inputFieldWidth"
+              meta-list={MetaDataListParent}
+              max-length="12"
+              placeholder="###-###-####"
+            ></c-ssp-base-component-input-phone>
+          </div>
+        </template>
+      </template>
+    </template>
+  </div>
+  <!-- CD2 2.5 Security Role Matrix. -->
+  <template if:true={showAccessDeniedComponent}>
+    <c-ssp-access-denied></c-ssp-access-denied>
+  </template>
+</template>

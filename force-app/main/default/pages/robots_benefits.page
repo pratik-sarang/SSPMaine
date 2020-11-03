@@ -1,0 +1,13 @@
+<!--***************************************************************************************** * 
+NAME : robots_benefits 
+DESCRIPTION : This VF page is used only for PROD – For site to appear on google search....** 
+@DATE 08/31/2020 
+***********************************************************************************************-->
+<apex:page contentType="text/plain">
+User-agent: *
+Disallow: /   
+Allow: /benefits/s  
+
+Sitemap: https://kynect.ky.gov/benefits/s/sitemap.xml
+
+</apex:page>

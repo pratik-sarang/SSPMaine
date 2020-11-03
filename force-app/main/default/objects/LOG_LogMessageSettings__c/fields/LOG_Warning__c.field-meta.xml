@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LOG_Warning__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>If True – log Warning messages in this org 
+Otherwise - False</description>
+    <externalId>false</externalId>
+    <inlineHelpText>If True – log Warning-level messages in this org 
+Otherwise - False</inlineHelpText>
+    <label>Warning</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UseEBTCard__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Contains Use EBT Card Permission</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Contains Use EBT Card Permission</inlineHelpText>
+    <label>Use EBT Card</label>
+    <type>Checkbox</type>
+</CustomField>

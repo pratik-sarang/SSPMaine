@@ -1,0 +1,112 @@
+<!--
+* name : sspResourceSelection
+* @description : This Screen is used for Resource Selection questions.
+* @author : Sharon Roja
+* @date : 01/06/2020.
+* MODIFICATION LOG:
+* DEVELOPER             DATE            DESCRIPTION
+* ________________________________________________________________________________
+* Sharon Roja           01/06/2020      Creating HTML Structure
+* Karthik Gulla         01/06/2020      Backend Integration
+* Vedant Belsare        04/10/2020      Removed Learn More Button
+-->
+<template>
+    <template if:true={showSpinner}>
+        <c-ssp-spinner></c-ssp-spinner>
+    </template>
+    <!--2.5 Security Role Matrix and Program Access-->
+    <template if:true={showAccessDeniedComponent}>
+        <c-ssp-access-denied></c-ssp-access-denied>
+    </template>
+    <!--Added isScreenAccessible check - 2.5 Security Role Matrix and Program Access-->
+    <div if:true = {isScreenAccessible} class="ssp-bodyContainer">
+        <div class="ssp-errorToast" if:true={hasSaveValidationError}>
+            <c-ssp-toast
+                ssp-toast-title-val={label.toastErrorText}
+                show-error-toast={trueValue}
+                onhidetoast={hideToast}
+            ></c-ssp-toast>
+        </div>
+        <div class="ssp-resourceSelectionInfoText slds-m-top_large ssp-color_monoOmega ssp-fontFamily_ArvoRegular">
+            {label.sspResourceSelectionQuestionComplete}
+        </div>
+      <!-- Learn More Button Removed--> 
+       <!-- <div class="ssp-preferredPaymentLearn">
+            <a
+                href="javascript:void(0)"
+                class="ssp-resourceSelectionLearnText ssp-color_monoBody ssp-fontFamily_popinBold"
+                onclick={openLearnMoreModal}
+                >{label.sspResourceSelectionLearnMore}</a
+            >
+        </div>
+    -->
+        <div class="ssp-resourceSelectionInfoText ssp-color_monoOmega ssp-fontFamily_ArvoRegular slds-m-top_medium slds-m-bottom_medium">
+            {label.sspResourceSelectionNote}
+        </div>
+        <template if:true={hasMetadataListValues}>
+            <div class="slds-grid slds-wrap sspResourceSelection">
+                <template
+                    for:each={resourceSelectionQuestionsList}
+                    for:item="resSelectionQuestions"
+                    for:index="qIndex">
+                    <template if:true={resSelectionQuestions.showQuestion}>
+                        <div class="slds-grid slds-wrap ssp-resourceSelectionQuestion ssp-border-bottom slds-size_1-of-1 ssp-flex-direction-col"
+                            key={resSelectionQuestions.questionLabel}>
+                            <c-ssp-base-component-input-toggle
+                                class="ssp-resourceSelectionInputs slds-size_1-of-1"
+                                label={resSelectionQuestions.questionLabel}
+                                options={yesNoOptions}
+                                data-record={resSelectionQuestions.questionId}
+                                data-id={resSelectionQuestions.fieldAPI}
+                                entity-name={resSelectionQuestions.objectAPI}
+                                field-name={resSelectionQuestions.fieldAPI}
+                                meta-list={MetaDataListParent}
+                                onchange={handleQuestionsChange}
+                                value={resSelectionQuestions.questionValue}
+                                is-help-text={resSelectionQuestions.showHelp}
+                                help-text-content={resSelectionQuestions.helpContent}
+                                disabled={resSelectionQuestions.isDisabled}>
+                            </c-ssp-base-component-input-toggle>
+                            <template if:true={resSelectionQuestions.showMembersList}>
+                                <p tabindex="0" class="slds-m-vertical_medium ssp-selectApplicants ssp-color_monoBody">{label.sspSelectApplicableHouseholdMembers}</p>
+                                <div class="sspMember" key={resSelectionQuestions.questionLabel}>
+                                    <div>
+                                        <template
+                                            for:each={resSelectionQuestions.applicableMembers}
+                                            for:item="resSelectionQuestionMember"
+                                            for:index="qmIndex">
+                                            <c-ssp-base-component-input-checkbox
+                                                class="ssp-resourceSelectionMembers"
+                                                label={resSelectionQuestionMember.label}
+                                                input-value={resSelectionQuestionMember.value}
+                                                key={resSelectionQuestionMember.value}
+                                                value={resSelectionQuestionMember.isChecked}
+                                                data-record={resSelectionQuestions.questionId}
+                                                disabled={resSelectionQuestionMember.isDisabled}
+                                                onchange={handleMembersChange}>
+                                            </c-ssp-base-component-input-checkbox>
+                                        </template>
+                                        <template if:true={resSelectionQuestions.showErrorMessage}>
+                                            <span role="alert" aria-atomic="true" class="slds-m-top_small ssp-errorMessage ssp-color_redOmega">
+                                                {resSelectionQuestions.errorMessage}
+                                            </span>
+                                        </template>
+                                    </div>
+                                </div>
+                            </template>
+                        </div>
+                    </template>
+                </template>
+            </div>
+        </template>
+    </div>
+    <template if:true={isLearnMoreModal}>
+        <c-ssp-detailed-information-modal
+            reference={reference}
+            header-value={label.sspResourceSelectionLearnMore}
+            open-model={isLearnMoreModal}
+            onclosemodal={closeLearnMoreModal}>
+            <p slot="contentSlot">{label.sspLearnMoreModalContent}</p>
+        </c-ssp-detailed-information-modal>
+    </template>
+</template>

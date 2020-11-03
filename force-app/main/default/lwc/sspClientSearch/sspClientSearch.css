@@ -1,0 +1,247 @@
+.ssp-clientSearchContainer {
+    width: 100%;
+    padding-top: 2.375rem;
+    padding-left: 3.75rem;
+    padding-right: 6.25rem;
+}
+
+.ssp-searchTitle {
+    font-size: 1.125rem;
+    text-align: left;
+    margin-bottom: 2.063rem;
+    line-height: 1.5rem;
+    letter-spacing: -0.3px;
+}
+
+.ssp-clientSearchContent {
+    margin-bottom: 1.063rem;
+    padding: 0 3.75rem 0 0;
+}
+
+.ssp-searchFooter {
+    margin-top: 3.125rem;
+    padding-bottom: 1.75rem;
+}
+.ssp-toggleSearch {
+    width: 30%;
+    line-height: 2.813rem;
+    text-align: left;
+    position: relative;
+}
+.ssp-toggleSearch:focus {
+    outline: none;
+}
+.ssp-toggleSearch span {
+    vertical-align: bottom;
+    line-height: 1.875rem;
+    text-align: left;
+    letter-spacing: -0.3px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.ssp-resetButton {
+    width: 20%;
+}
+
+.ssp-searchButton {
+    width: 20%;
+    padding-left: 1.875rem;
+}
+.ssp-exportToExcel {
+    width: 20%;
+    padding-left: 1.375rem;
+    margin-left: 1.375rem;
+}
+.ssp-excelDownloadLink {
+    text-decoration: none;
+}
+
+.ssp-clientSearchFooterButton {
+    /* width: 100%; */
+    line-height: 1.563rem;
+    letter-spacing: normal;
+}
+
+.ssp-radioButtonContainer {
+    display: flex;
+    position: relative;
+    margin-bottom: 0.313rem;
+    cursor: pointer;
+    font-size: 1rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+/* Hide the browser's default radio button */
+.ssp-multilineRadioInput {
+    position: absolute;
+    opacity: 0;
+    left: 0;
+    cursor: pointer;
+    height: 1.25rem;
+    width: 1.25rem;
+    z-index: 9;
+}
+
+/* Create a custom radio button */
+.ssp-multilineRadioChecked {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 1.25rem;
+    width: 1.25rem;
+    border-radius: 50%;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.ssp-multilineRadioChecked:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.ssp-multilineRadioInput:checked ~ .ssp-multilineRadioChecked:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.ssp-multilineRadioChecked:after {
+    top: 2px;
+    left: 2px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+.ssp-label-name {
+    padding-left: 1.875rem;
+    font-size: 0.8125rem;
+}
+
+.ssp-searchAddress {
+    margin: 0;
+}
+
+/*Table related css*/
+.ssp-result-table {
+    overflow-x: auto;
+}
+.ssp-action-image-container {
+    display: inline-block;
+}
+.ssp-sort-image {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: 0.75rem;
+    cursor: pointer;
+}
+.ssp-th-styles {
+    line-height: 1.875rem;
+    padding-top: 0.938rem;
+    padding-bottom: 0.938rem;
+}
+.ssp-td-styles {
+    padding-top: 0.938rem;
+    padding-bottom: 0.938rem;
+}
+.ssp-paginationContainer {
+    padding-left: 0.938rem;
+    overflow-x: auto;
+    margin-bottom: 15px;
+}
+.search-results {
+    padding: 1.875rem 10.313rem 0 3.75rem;
+}
+.ssp-resultName {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: -0.3px;
+}
+
+.ssp-clientFound-label {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    letter-spacing: -0.3px;
+    text-align: left;
+}
+.ssp-clientDetails {
+    line-height: 1.25rem;
+    text-align: left;
+    letter-spacing: normal;
+}
+.ssp-otherColumnData {
+    line-height: 1.5rem;
+    text-align: left;
+    letter-spacing: normal;
+}
+
+a:focus {
+    outline: none;
+}
+
+@media only screen and (max-width: 1024px) {
+    .ssp-toggleSearch {
+        width: 30%;
+        line-height: 2.813rem;
+        text-align: left;
+        position: relative;
+    }
+    .ssp-resetButton {
+        width: 20%;
+    }
+
+    .ssp-searchButton {
+        width: 20%;
+        padding-left: 5%;
+    }
+    .ssp-exportToExcel {
+        width: 25%;
+        padding-left: 7%;
+        margin-left: 1.375rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .ssp-clientSearchContainer {
+        width: 100%;
+        padding: 2.375rem 1.875rem 0 1.875rem;
+    }
+    .ssp-clientSearchContent {
+        margin-bottom: 1.063rem;
+        padding: 0;
+    }
+    .ssp-resetButton {
+        margin-bottom: 1.875rem;
+        width: 100%;
+    }
+
+    .ssp-searchButton {
+        margin-bottom: 1.875rem;
+        padding: 0;
+        width: 100%;
+    }
+    .ssp-exportToExcel {
+        margin-bottom: 1.875rem;
+        padding: 0;
+        width: 100%;
+        margin-left: 0;
+    }
+    .ssp-toggleSearch {
+        margin-bottom: 1.875rem;
+        width: 100%;
+    }
+    .ssp-columnHeader {
+        width: max-content;
+    }
+    .ssp-th-styles {
+        padding: 0.938rem;
+    }
+    .ssp-td-styles {
+        padding: 0.938rem;
+    }
+    .ssp-columnName {
+        width: max-content;
+    }
+}

@@ -1,0 +1,143 @@
+<!--
+* @name 		    : sspShortSNAPAddressAutoComplete
+* @description 	    :  address Autocomplete entry screen in Short SNAP.
+* @author 		    : Chirag, Shivam 
+* @date 		    : 29/4/2020
+-->
+
+<template>
+    <div class="slds-grid slds-wrap slds-m-vertical_small">
+        <div
+            class="slds-col slds-size_1-of-1 slds-large-size_6-of-12 slds-m-top_medium ssp-gutter-right ssp-address-one-container"
+        >
+            <c-ssp-base-component-input-text
+                class="ssp-address-input search-input"
+                data-id={fieldMap.addressLine1.fieldApiName}
+                field-name={fieldMap.addressLine1.fieldApiName}
+                entity-name={fieldMap.addressLine1.objectApiName}
+                label={fieldMap.addressLine1.label}
+                value={addressLine1}
+                disabled={disabled}
+                onchange={handleLine1Change}
+                onfocusout={handleInputFocusOrBlur}
+            >
+            </c-ssp-base-component-input-text>
+
+            <template if:true={_showOverlay}>
+                <div
+                    class="slds-grid slds-wrap 
+                    slds-dropdown_length-with-icon-7 
+                    slds-dropdown_fluid ssp-address-dropdown ssp-bg_monoDelta ssp-accordion"
+                >
+                    <div class="slds-col slds-size_4-of-4 ">
+                        <ul
+                            class="slds-listbox slds-listbox_vertical slds-p-bottom_large"
+                        >
+                            <template
+                                if:false={zeroPredictions}
+                                for:each={predictions}
+                                for:item="prediction"
+                            >
+                                <li
+                                    tabindex="0"
+                                    key={prediction.place_id}
+                                    class="slds-listbox__item ssp-color_monoBody "
+                                    data-place-id={prediction.place_id}
+                                    onmousedown={handleAddressSelect}
+                                >
+                                    <div
+                                        class="slds-media slds-listbox__option slds-p-horizontal_medium slds-listbox__option_has-meta"
+                                    >
+                                        <span class="slds-media__body">
+                                            <span
+                                                class="slds-listbox__option-text 
+                                                slds-listbox__option-text_entity"
+                                            >
+                                                {prediction.description}
+                                            </span>
+                                        </span>
+                                    </div>
+                                </li>
+                            </template>
+                            <template if:true={zeroPredictions}>
+                                <li
+                                    tabindex="0"
+                                    class="slds-listbox__item ssp-color_monoBody ssp-no-address ssp-bg_monoAlpha"
+                                >
+                                    <div
+                                        class="slds-media slds-listbox__option slds-p-horizontal_medium slds-listbox__option_has-meta"
+                                    >
+                                        <span class="slds-media__body">
+                                            <span
+                                                class="slds-listbox__option-text 
+                                                slds-listbox__option-text_entity"
+                                            >
+                                                {label.addressNotFound}
+                                            </span>
+                                        </span>
+                                    </div>
+                                </li>
+                                <li
+                                    class="slds-listbox__item ssp-color_monoBody"
+                                >
+                                    <div
+                                        class="slds-media slds-listbox__option slds-p-horizontal_medium slds-listbox__option_has-meta"
+                                    >
+                                        <span class="slds-media__body">
+                                            <a
+                                                href="javascript:void(0)"
+                                                title="Manually enter address"
+                                                onmousedown={toggleManualEntryModal}
+                                                class="ssp-fontFamily_popinBold ssp-color_monoBody slds-listbox__option-text 
+                                                    slds-listbox__option-text_entity"
+                                            >
+                                                {label.manuallyEnterAddress}</a
+                                            >
+                                        </span>
+                                    </div>
+                                </li>
+                            </template>
+                        </ul>
+                    </div>
+                </div>
+            </template>
+        </div>
+        <!--Line 2 in autocomplete address-->
+
+        <div
+            class="slds-col slds-size_1-of-1 slds-large-size_6-of-12 slds-m-top_medium ssp-gutter-left"
+        >
+            <c-ssp-base-component-input-text
+                class="ssp-address-input auto-line2"
+                pattern="^[\sA-Za-z0-9\.\/,#'&amp;-]+$"
+                data-id={fieldMap.addressLine2.fieldApiName}
+                field-name={fieldMap.addressLine2.fieldApiName}
+                entity-name={fieldMap.addressLine2.objectApiName}
+                meta-list={metaList}
+                value={addressLine2}
+                disabled={disabled}
+                label={fieldMap.addressLine2.label}
+                onchange={handleLine2Change}
+                placeholder={label.addressLineTwoAltText}
+            ></c-ssp-base-component-input-text>
+        </div>
+    </div>
+
+    <!--Manual address entry modal-->
+    <c-ssp-detailed-information-modal
+        open-model={manualMode}
+        header-value={label.modalHeader}
+        onclosemodal={handleCloseModal}
+        reference={reference}
+        role="dialog"
+        class="ssp-ManualAddressModalContainer"
+    >
+        <c-ssp-short-s-n-a-p-manual-address
+            slot="contentSlot"
+            field-map={fieldMap}
+            class="slds-col slds-m-bottom_none slds-p-bottom_none"
+            onsave={handleCloseModal}
+            oncancel={handleCloseModal}
+        ></c-ssp-short-s-n-a-p-manual-address>
+    </c-ssp-detailed-information-modal>
+</template>

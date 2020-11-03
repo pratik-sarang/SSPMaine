@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Document Type --></label>
+    <name>DocumentType__c</name>
+    <picklistValues>
+        <masterLabel>Application Form</masterLabel>
+        <translation>Formulario de aplicación</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Brochure</masterLabel>
+        <translation>Folleto</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FAQs</masterLabel>
+        <translation>Preguntas frecuentes</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Policy</masterLabel>
+        <translation>Política</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Poster</masterLabel>
+        <translation>Póster</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reference Guide</masterLabel>
+        <translation>Guia de referencia</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Training Materials</masterLabel>
+        <translation>Materiales de capacitación</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Video</masterLabel>
+        <translation>Vídeo</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Welcome Packet</masterLabel>
+        <translation>Paquete de bienvenida</translation>
+    </picklistValues>
+</CustomFieldTranslation>

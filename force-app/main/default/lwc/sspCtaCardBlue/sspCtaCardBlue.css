@@ -1,0 +1,29 @@
+.ssp-ctaCardBlue {
+  border-radius: 6px;
+  padding: 30px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.ssp-ctaTitle p:first-child {
+    font-size: 1rem;
+    line-height: 24px;
+    letter-spacing: -0.3px;
+    text-align: left;
+}
+
+.ssp-ctaBody {
+    font-size: 1rem;
+    line-height: 24px;
+    text-align: left;
+}
+
+.ssp-ctaButton {
+  margin-top: auto;
+}
+@media only screen and (max-width: 768px) {
+    .ssp-ctaCard {
+        padding: 24px;
+    }
+}

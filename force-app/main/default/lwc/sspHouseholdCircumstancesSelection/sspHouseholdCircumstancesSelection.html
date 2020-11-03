@@ -1,0 +1,64 @@
+<template>
+    <template if:true={showSpinner}>
+        <c-ssp-spinner></c-ssp-spinner>
+    </template>
+    <!--2.5 Security Role Matrix and Program Access-->
+    <template if:true={showAccessDeniedComponent}>
+        <c-ssp-access-denied></c-ssp-access-denied>
+    </template>
+    <!--Added isScreenAccessible check - 2.5 Security Role Matrix and Program Access-->
+    <div if:true = {isScreenAccessible} class="ssp-bodyContainer">
+        <!--modified by kyathi as part of CD1 Defect-->
+        <p class="slds-m-top_x-large">
+            <a
+                class="ssp-fontFamily_popinBold ssp-color_monoBody"
+                href="javascript:void(0)"
+                onclick={learnMoreModal}
+                title={label.sspHouseholdLearnMoreTitle}
+                role="button"
+                tabindex="0"
+            >
+                {label.learnMoreLink}
+            </a>
+        </p>
+        <p class="sspText ssp-color_monoOmega ssp-fontFamily_ArvoRegular">
+            {label.otherScenariosBenefitsQuestions}
+        </p>
+        <!--Learn More-->
+        <c-ssp-detailed-information-modal
+            if:true={showLearnMore}
+            header-value={label.sspHouseholdSelectionLearnTitle}
+            open-model={showLearnMore}
+            onclosemodal={closeLearnMoreModal}
+            reference={reference}
+        >
+            <p slot="contentSlot">
+               {label.sspHouseholdSelectionLearnContent}
+            </p>
+        </c-ssp-detailed-information-modal>
+        <p
+            class="sspText slds-m-vertical_medium ssp-color_monoOmega ssp-fontFamily_ArvoRegular"
+        >
+            {label.circumstanceSelectionNote}
+        </p>
+        <template for:each={questions} for:item="question">
+            <div
+                key={question.label}
+                class="slds-p-bottom_x-large slds-m-vertical_x-large ssp-question-section ssp-healthSelectionMembers"
+            >
+                <c-ssp-household-information-question
+                    is-read-only-user = {isReadOnlyUser}
+                    field={question.field}
+                    key={question.label}
+                    question={question.label}
+                    required={question.required}
+                    members={question.applicableMembers}
+                    application={application}
+                    is-help-text={question.helpTextContent}
+                    help-text={question.helpTextContent}                    
+                >
+                </c-ssp-household-information-question>
+            </div>
+        </template>
+    </div>
+</template>

@@ -1,0 +1,112 @@
+<!--
+* name 		: sspMedicalSupportEnforcement
+* @description 	: This screen handle Medical Enforcement Screen
+* @author 		: Karthik Velu, Gora Kireeti
+* @date 		: 12/19/2020
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName	      MM/DD/YYYY	      A Brief Description 
+                  about the Change
+-->
+<template>
+    <template if:true={showSpinner}>
+        <c-ssp-spinner></c-ssp-spinner>
+    </template>
+    <!-- CD2 2.5 Security Role Matrix. -->
+    <div if:true={isPageAccessible} class="ssp-bodyContainer">
+        <template if:true={showMedicaidRecords}>
+            <div
+                class="ssp-theCabinetForHealth ssp-margin-bottom_large ssp-color_monoOmega ssp-fontFamily_ArvoRegular"
+            >
+                {sspTheCabinetText1}
+            </div>
+            <div
+                class="ssp-childSupportEnforcement ssp-margin-bottom_large ssp-color_monoOmega ssp-fontFamily_ArvoRegular"
+            >
+                {label.sspChildSupportEnforcementText}
+            </div>
+        </template>
+        <template if:true={showMedicaidKTapRecords}>
+            <div
+                class="ssp-theCabinetForHealth ssp-margin-bottom_large ssp-color_monoOmega ssp-fontFamily_ArvoRegular"
+            >
+                {sspTheCabinetText2}
+            </div>
+            <div
+                class="ssp-childSupportEnforcement ssp-margin-bottom_large ssp-color_monoOmega ssp-fontFamily_ArvoRegular"
+            >
+                {label.sspChildSupportEnforcementText}
+            </div>
+        </template>
+
+        <template if:true={isVisible}>
+            <template if:true={showMedicaidRecords}>
+                <div class="ssp-margin-bottom_large">
+                    <c-ssp-base-component-input-toggle
+                        label={doesAgreeQuestion1}
+                        options={responseOptions}
+                        class="ssp-applicationInputs"
+                        value={objResult.HasChildSupportToggle__c}
+                        field-name="HasChildSupportToggle__c"
+                        meta-list={MetaDataListParent}
+                        data-id="HasChildSupportToggle__c"
+                        entity-name="SSP_NoncustodialRelationship__c"
+                        onchange={manageMedicalComments}
+                    >
+                    </c-ssp-base-component-input-toggle>
+                </div>
+            </template>
+            <template if:true={showMedicaidKTapRecords}>
+                <div class="ssp-margin-bottom_large">
+                    <c-ssp-base-component-input-toggle
+                        label={doesAgreeQuestion2}
+                        options={responseOptions}
+                        class="ssp-applicationInputs"
+                        value={objResult.HasChildSupportToggle__c}
+                        field-name="HasChildSupportToggle__c"
+                        meta-list={MetaDataListParent}
+                        data-id="HasChildSupportToggle__c"
+                        entity-name="SSP_NoncustodialRelationship__c"
+                        onchange={manageMedicalComments}
+                    >
+                    </c-ssp-base-component-input-toggle>
+                </div>
+            </template>
+            <template if:true={showFieldsMAKT}>
+                <template if:true={showMedicalComments}>
+                    <div class="slds-grid slds-wrap slds-size_1-of-1">
+                        <c-ssp-base-component-input-picklist
+                            class="ssp-applicationInputs ssp-margin-bottom_small ssp-reason-field slds-large-size_1-of-2 slds-size_1-of-1 slds-p-right_medium"
+                            label={label.sspReasonText}
+                            value={objResult.GoodCauseCode__c}
+                            field-name="GoodCauseCode__c"
+                            meta-list={MetaDataListParent}
+                            option={goodCauseCodeOptions}
+                            data-id="GoodCauseCode__c"
+                            entity-name="SSP_NoncustodialRelationship__c"
+                            title={label.sspReasonAlternate}
+                        >
+                        </c-ssp-base-component-input-picklist>
+                    </div>
+                    <div class="ssp-additionalInformation">
+                        <c-ssp-base-component-input-text-area
+                            class="ssp-applicationInputs"
+                            label={label.sspAdditionalInformationText}
+                            value={objResult.MedicalSupportComments__c}
+                            field-name="MedicalSupportComments__c"
+                            meta-list={MetaDataListParent}
+                            data-id="MedicalSupportComments__c"
+                            entity-name="SSP_NoncustodialRelationship__c"
+                        >
+                        </c-ssp-base-component-input-text-area>
+                    </div>
+                </template>
+            </template>
+        </template>
+    </div>
+    <!-- CD2 2.5 Security Role Matrix. -->
+    <template if:true={showAccessDeniedComponent}>
+        <c-ssp-access-denied></c-ssp-access-denied>
+    </template>
+</template>

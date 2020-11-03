@@ -1,0 +1,19 @@
+.ssp-learnMore {
+    font-size: 1rem;
+}
+.ssp-absent-parents-summary-cards:last-child {
+    margin-bottom: 100px;
+}
+.ssp-absent-parents-summary-cards {
+    margin: 20px 0;
+}
+.ssp-info_fontSize {
+    font-size: 1rem;
+}
+.ssp-word-break {
+    word-break: break-word;
+}
+
+.ssp-learnMoreLink {
+    text-decoration: underline;
+}

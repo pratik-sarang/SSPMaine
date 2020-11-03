@@ -1,0 +1,180 @@
+<!--
+* name          : SspKnowledgeArticleCategoryListPage
+* @description  : This component is the landing Page for the Help and FAQ Page. It shows the various Benefind Article Categories
+* @author       : Narapa.
+* @date         : 07/27/2020
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName                MM/DD/YYYY               A Brief Description about the Change
+* Narapa                       07/27/2020               Task 363517: Help and FAQ Landing Page
+-->
+<template>
+    <!--Back Button-->
+    <div>
+        <div class="ssp-bodyContainer">
+            <div class="slds-grid slds-wrap">
+                <div class="slds-size_2-of-3">
+                    <div
+                        class="ssp-fontFamily_popinBold slds-text-align_left slds-m-top_large"
+                    >
+                        <a
+                            href="javascript:void(0);"
+                            class="ssp-anchor ssp-color_monoBody"
+                            title={customLabels.sspAltGoBack}
+                            onclick={redirectToPreviousPage}
+                            ><em
+                                class="ssp-arrow_left slds-m-right_xx-small"
+                            ></em
+                            >{customLabels.sspBack}
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Heading for the Page-->
+    <div class="ssp-ka-header">
+        <div class="ssp-bodyContainer ssp-ka-page-title">
+            <div class="slds-grid slds-wrap">
+                <div class="slds-size_1-of-1">
+                    <h1 class="ssp-fontFamily_popinBlack ssp-color_blueAlpha">
+                        {customLabels.sspHelpResources}
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Search Input-->
+    <div class="ssp-ka-header">
+        <div class="ssp-bodyContainer slds-m-bottom_medium ">
+            <div class="ssp-kaSearchField">
+                <lightning-input
+                    type="text"
+                    value={searchText}
+                    onchange={onSearchInput}
+                    placeholder={customLabels.sspSearch}
+                >
+                    ></lightning-input
+                >
+                <!--Magnifier Glass Image-->
+                <a
+                    ><img
+                        src={searchIcon}
+                        aria-hidden="true"
+                        role="presentation"
+                        class="ssp-searchIcon"
+                        alt={customLabels.sspSearch}
+                    />
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!--No of Results found when articles are searched-->
+    <template if:true={showSearchResultsCount}>
+        <div class="ssp-bg_appHeaderGradient">
+            <div class="ssp-bodyContainer">
+                <div class="slds-grid slds-wrap">
+                    <div class="slds-size_1-of-1">
+                        <div
+                            class="ssp-fontFamily_popinBold slds-text-align_left slds-m-top_medium"
+                        >
+                            {searchResultsInfo}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <!--Buttons to Expand and Collapse the articles Searched-->
+    <template if:true={showAccordionButtons}>
+        <div class="ssp-bg_appHeaderGradient">
+            <div class="ssp-bodyContainer">
+                <div class="slds-grid slds-wrap">
+                    <div class="slds-size_1-of-1">
+                        <div
+                            class="ssp-fontFamily_popinBold slds-text-align_left slds-m-top_medium"
+                        >
+                            <a
+                                href="javascript:void(0);"
+                                class="ssp-anchor ssp-color_monoBody"
+                                title={customLabels.sspAltExpandAll}
+                                onclick={expandAllAccordions}
+                                >{customLabels.sspExpandAll}</a
+                            >
+                            <span class="ssp-ka-separation">|</span>
+                            <a
+                                href="javascript:void(0);"
+                                class="ssp-anchor ssp-color_monoBody"
+                                title={customLabels.sspAltCollapseAll}
+                                onclick={collapseAllAccordions}
+                                >{customLabels.sspCollapseAll}</a
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <!--Showing Benefind Article Categories on Load of the Page-->
+    <div class="ssp-bg_appHeaderGradient slds-p-vertical_large">
+        <div class="ssp-bodyContainer">
+            <template if:false={isSearched}>
+                <template for:each={allCategories} for:item="category">
+                    <div key={category.value} class="slds-m-bottom_medium ">
+                        <c-ssp-knowledge-article-category-card
+                            category={category}
+                            class="slds-size_1-of-1"
+                        >
+                        </c-ssp-knowledge-article-category-card>
+                    </div>
+                </template>
+            </template>
+
+            <!--Showing Searched Categories from results when a search Text is provided-->
+            <template if:true={isSearched}>
+                <template for:each={searchedCategories} for:item="category">
+                    <div key={category.value} class="slds-m-bottom_medium ">
+                        <c-ssp-knowledge-article-category-card
+                            category={category}
+                            search-text={searchText}
+                            class="slds-size_1-of-1"
+                        >
+                        </c-ssp-knowledge-article-category-card>
+                    </div>
+                </template>
+
+                <!--Showing Searched Articles from results when a search Text is provided-->
+                <template for:each={searchedArticles} for:item="article">
+                    <template if:true={article.Question__c}>
+                        <div key={article.Id} class="slds-m-bottom_medium ">
+                            <c-ssp-accordion-card
+                                class="slds-size_1-of-1 slds-m-bottom_large"
+								accordion-additional-class="ssp-bg_greyBeta"
+                            >
+                                <div
+                                    class="ssp-fontFamily_popinBold"
+                                    slot="Title"
+                                >
+                                    <lightning-formatted-rich-text
+                                        value={article.Question__c}
+                                    ></lightning-formatted-rich-text>
+                                </div>
+                                <div slot="contentSlot" class="ssp-accordionSlot">
+                                    <lightning-formatted-rich-text
+                                        value={article.Answer__c}
+                                    ></lightning-formatted-rich-text>
+                                </div>
+                            </c-ssp-accordion-card>
+                        </div>
+                    </template>
+                </template>
+            </template>
+        </div>
+    </div>
+</template>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IsInsuranceCovered__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This flag is used to identify if the insurance is covered or not</description>
+    <externalId>false</externalId>
+    <label>Is Insurance Covered ?</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

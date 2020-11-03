@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <accessMappings>
+        <accessLevel>Edit</accessLevel>
+        <object>Account</object>
+        <objectField>Id</objectField>
+        <userField>Contact.RelatedAccount</userField>
+    </accessMappings>
+    <accessMappings>
+        <accessLevel>Edit</accessLevel>
+        <object>Consent__c</object>
+        <objectField>Organization__c</objectField>
+        <userField>Contact.RelatedAccount</userField>
+    </accessMappings>
+    <accessMappings>
+        <accessLevel>Edit</accessLevel>
+        <object>RE_Resource_Taxonomy__c</object>
+        <objectField>Resource__c.Organization__c</objectField>
+        <userField>Contact.RelatedAccount</userField>
+    </accessMappings>
+    <accessMappings>
+        <accessLevel>Edit</accessLevel>
+        <object>Referral__c</object>
+        <objectField>ReferredAccountID__c</objectField>
+        <userField>Contact.RelatedAccount</userField>
+    </accessMappings>
+    <accessMappings>
+        <accessLevel>Read</accessLevel>
+        <object>ReportConcern__c</object>
+        <objectField>Organization__c</objectField>
+        <userField>Contact.RelatedAccount</userField>
+    </accessMappings>
+    <description>Share Consent, Referral with non citizens</description>
+    <name>RE SSP Non Citizen Profile</name>
+    <profiles>SSP Non Citizen Profile</profiles>
+</SharingSet>

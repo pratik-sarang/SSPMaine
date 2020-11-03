@@ -1,0 +1,13 @@
+<template>
+    <div class="ssp-ctaCardBlue ssp-boxShadow ssp-bg_whiteAlpha">
+    <div class="ssp-ctaTitle">
+      <p class="ssp-fontFamily_popinBold ssp-color_monoBody">{sspTitleValue}</p>
+    </div>
+    <div class="ssp-ctaBody ssp-fontFamily_ArvoRegular ssp-color_monoOmega">
+      <slot name="content"></slot>
+    </div>
+    <div class="ssp-ctaButton">
+      <slot name="footer"></slot>
+    </div>
+  </div>
+</template>

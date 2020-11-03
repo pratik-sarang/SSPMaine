@@ -1,0 +1,117 @@
+.ssp-disqualificationDetails {
+    padding-top: 3.75rem;
+}
+
+.ssp-individualName {
+    padding-top: 0.9375rem;
+}
+
+.ssp-waiverContent {
+    padding-top: 1.875rem;
+    padding-bottom: 2.8125rem;
+    font-size: 1rem;
+}
+
+.ssp-disqualifyProgramName {
+    font-size: 1.125rem;
+}
+
+.ssp-disqualificationCardContainer {
+    border-radius: .375rem;
+    margin-bottom: 1.875rem;
+}
+
+.ssp-disqualifyProgramName {
+    padding-top: 1.87rem;
+    padding-bottom: 0.9375rem;
+}
+
+.ssp-disqualifySuspensionName {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    padding-bottom: 0.9375rem;
+}
+
+.ssp-effectStartDate,
+.ssp-effectiveEndDate {
+    display: inline-block;
+}
+
+.ssp-effectStartDate {
+    margin-right: 1.875rem;
+}
+
+.ssp-disqualifyEffectContent {
+    font-size: 0.8125rem;
+    line-height: 1.875rem;
+    letter-spacing: 0.3px;
+}
+
+.ssp-disqualifyEffectDate {
+    font-size: 1rem;
+    line-height: 1.375rem;
+}
+
+.ssp-disqualificationCardContent {
+    padding: 15px 1.875rem 1.875rem;
+}
+
+.ssp-disqualificationBodyContainer {
+    padding-bottom: 8.75rem;
+}
+
+.ssp-cardViewContent {
+    border-top: 1px solid #dadee4;
+    padding: 11px 1.875rem 1rem 1.875rem;
+}
+
+.ssp-cardViewContent a {
+    font-size: 0.8125rem;
+    text-decoration: underline;
+    line-height: 1.875rem;
+    letter-spacing: -0.24px;
+}
+
+.ssp-programContainer {
+    margin-bottom: 45px;
+}
+
+@media only screen and (max-width: 768px) {
+    .ssp-mobileHorizontalPadding {
+        padding-left: 1.875rem;
+        padding-right: 1.875rem;
+    }
+
+    .ssp-disqualificationDetails {
+        padding-top: 2.5rem;
+    }
+
+    .ssp-individualName {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+
+    .ssp-effectStartDate,
+    .ssp-effectiveEndDate {
+        display: block;
+    }
+
+    .ssp-effectStartDate {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .ssp-cardViewContent,
+    .ssp-disqualificationCardContent {
+        padding: 15px 24px;
+    }
+
+    .ssp-waiverContent {
+        line-height: 1.5rem;
+    }
+
+    .ssp-disqualificationBodyContainer {
+        padding-top: 2.5rem;
+        padding-bottom: 3.75rem;
+    }
+}

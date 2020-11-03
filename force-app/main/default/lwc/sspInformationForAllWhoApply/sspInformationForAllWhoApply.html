@@ -1,0 +1,63 @@
+<!--
+* name          : sspInformationForAllWhoApply.html
+* @description  : Displaying Important Information for All Who Apply in a Modal
+* @author       : Nikhil Shinde
+* @date         : 14/02/2020
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName                MM/DD/YYYY               A Brief Description about the Change
+  Nikhil Shinde                 17/02/2020                          Development
+-->
+
+<template>
+    <div class="ssp-medicaidPenaltyWarning">
+        <c-ssp-detailed-information-modal
+            reference={reference}
+            header-value={label.sspInformationModalHeader}
+            open-model={openModel}
+            onclosemodal={closeModal}
+            scroll-event={trueValue}
+            onenablemodalbuttons={enableModalButtons}
+        >
+            <div
+                class="ssp-modal-content ssp-fontFamily_ArvoRegular ssp-color_monoOmega informationForAllWhoApplyContent"
+                slot="contentSlot"
+            ></div>
+
+            <div
+                slot="Footer"
+                class="slds-grid slds-wrap slds-grid_align-spread slds-gutters ssp-modal-footer "
+            >
+                <div
+                    class="slds-col slds-size_1-of-2 slds-medium-size_1-of-2 slds-large-size_6-of-12"
+                >
+                    <lightning-button
+                        name="DisAgree"
+                        variant="base"
+                        title={label.sspApplicationStatementDisagreeButtonAlternate}
+                        label={label.sspDisagreeButton}
+                        class="ssp-exitModalBtn ssp-button_base"
+                        onclick={handleClick}
+                        disabled={disabled}
+                    >
+                    </lightning-button>
+                </div>
+                <div
+                    class="slds-col slds-size_1-of-2 slds-medium-size_1-of-2 slds-large-size_6-of-12"
+                >
+                    <lightning-button
+                        name="Agree"
+                        variant="neutral"
+                        title={label.sspApplicationStatementAgreeButtonAlternate}
+                        label={label.sspAgreeButton}
+                        class="ssp-exitModalBtn ssp-button_neutral"
+                        onclick={handleClick}
+                        disabled={disabled}
+                    >
+                    </lightning-button>
+                </div>
+            </div>
+        </c-ssp-detailed-information-modal>
+    </div>
+</template>

@@ -1,0 +1,36 @@
+.ssp-infoText {
+    font-size: 1rem;
+    letter-spacing: -0.0187rem;
+    line-height: 1.5rem;
+}
+.ssp-ruler {
+    height: 5px;
+    width: 770px;
+    border-radius: 2.5px;
+}
+.ssp-blueHeader {
+    height: auto;
+    font-size: 1.125rem;
+    letter-spacing: -0.0187rem;
+    line-height: 1.5rem;
+}
+.ssp-componentWidth {
+    width: 100%;
+}
+.ssp-widthTypeAhead {
+    width: 49%;
+}
+.ssp-relation-section > li {
+    margin-bottom: 1.75rem;
+}
+.ssp-relation-section > li:first-child {
+    margin-top: 3.75rem;
+}
+.ssp-relation-section > li:last-child {
+    margin-bottom: 4.25rem;
+}
+@media only screen and (max-width: 768px) {
+    .ssp-widthTypeAhead {
+        width: 100%;
+    }
+}

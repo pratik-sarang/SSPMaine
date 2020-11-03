@@ -1,0 +1,50 @@
+<!--
+* name 		: sspRemoveExistingIncomeDetails
+* @description 	: This component deals with removing of income existing details
+* @author 		: Anuja and Kireeti and chirag
+* @date 		: 11/27/2019
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName	      MM/DD/YYYY	      A Brief Description 
+                  about the Change
+-->
+<template>
+  <template if:true={checkForAppliedProgram}>
+    <div class="ssp-removeExistingIncome-details slds-m-bottom_medium">
+
+      <c-ssp-remove-income-modal open-model={openModel} onprogressvaluechange={handleProgressValueChange}
+        income-id={incomeObj.Id}>
+      </c-ssp-remove-income-modal>
+
+      <div class="slds-size_1-of-1 ssp-fieldsContainer">
+        <c-ssp-base-component-multiline-input-checkbox onhandlemultiselectchange={toggleModal} object-data={incomeObj}
+          hide-additional-fields={showIncomeDetail} class="sspRemoveIncomeDetail" disabled={disabled}
+          value={checkboxValue} is-checked={checkboxValue}>
+          <div slot="labelContent" class="ssp-checkbox-labels">
+            <p class="ssp-fontFamily_popinBold ssp-color_monoBody ssp-labelLine1">{lineOne}</p>
+            <p class="ssp-fontFamily_popinBold ssp-color_blueAlpha">{lineTwo}</p>
+          </div>
+          <div class="slds-grid slds-wrap" slot="buttonContainer">
+            <div class="slds-size_1-of-1 slds-large-size_1-of-2 slds-p-horizontal_small slds-p-vertical_x-small">
+              <c-ssp-base-component-input-date data-id="EndDate__c" class={inputClassName} value={incomeObj.EndDate__c}
+                entity-name="SSP_Asset__c" field-name="EndDate__c" meta-list={metaDataListParent}
+                label={label.sspEndDate} time-travel-current-date={timeTravelDate}></c-ssp-base-component-input-date>
+            </div>
+            <template if:true={showReason}>
+              <div class="slds-size_1-of-1 slds-large-size_1-of-2 slds-p-horizontal_small slds-p-vertical_x-small">
+                <c-ssp-base-component-input-picklist title={label.sspEndReasonAlt} data-id="EmploymentEndReason__c" class={inputClassName}
+                  value={incomeObj.EmploymentEndReason__c} entity-name="SSP_Asset__c"
+                  field-name="EmploymentEndReason__c" meta-list={metaDataListParent} option={endReasonOptions}
+                  name={label.sspEndReason} label={label.sspEndReason}></c-ssp-base-component-input-picklist>
+              </div>
+            </template>
+
+          </div>
+        </c-ssp-base-component-multiline-input-checkbox>
+      </div>
+
+
+    </div>
+  </template>
+</template>

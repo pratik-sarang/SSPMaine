@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Non-institutionalized Hospice</masterLabel>
+        <translation>No institucionalizado - Servicios para enfermos terminales</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Not Applicable</masterLabel>
+        <translation>No corresponde</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Waiver</masterLabel>
+        <translation>Exención</translation>
+    </valueTranslation>
+</GlobalValueSetTranslation>

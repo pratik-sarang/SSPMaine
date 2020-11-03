@@ -1,0 +1,17 @@
+<template>
+    <template if:true={isShown}>
+        <div class={colClass} key={field.name}>
+            <template if:false={isEmptyCol}>
+                <c-json-form-element
+                    name={field.name}
+                    form-data={objectData}
+                    field-layout={field}
+                    all-fields={allFields}
+                    custom-labels={customLabels}
+                    disable-cond={disableCond}
+                >
+                </c-json-form-element>
+            </template>
+        </div>
+    </template>
+</template>

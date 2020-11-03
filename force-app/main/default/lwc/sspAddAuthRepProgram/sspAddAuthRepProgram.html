@@ -1,0 +1,196 @@
+<template>
+    <div class={showPermissionClass}>
+        <template if:true={showSpinner}>
+            <c-ssp-spinner></c-ssp-spinner>
+        </template>
+        <c-ssp-toast
+            if:true={showErrorToast}
+            ssp-toast-title-val={customLabel.toastErrorText}
+            onhidetoast={handleHideToast}
+            show-error-toast={showErrorToast}
+        >
+        </c-ssp-toast>
+        <div class="slds-m-bottom_xx-large ssp-add-auth-rep-permissions">
+            <div
+                class="ssp-reps-app-header ssp-bg_appHeaderGradient slds-p-vertical_medium slds-m-bottom_x-large"
+            >
+                <span
+                    class="ssp-fontFamily_popinBold ssp-color_monoBody ssp-reps-text"
+                    >{customLabel.sspRepsAssistAgents}</span
+                >
+            </div>
+            <div
+                class="slds-m-vertical_large ssp-add-auth-rep ssp-bodyContainer"
+            >
+                <div class="ssp-add-auth-rep-header">
+                    <h1
+                        class="ssp-add-auth-rep-header-text ssp-fontFamily_popinBlack ssp-color_blueAlpha"
+                    >
+                        {customLabel.sspAddAuthorizedRepresentative}
+                    </h1>
+                </div>
+                <p
+                    class="ssp-horizontal-rule ssp-bg_monoAlpha slds-m-vertical_x-large"
+                ></p>
+                <p
+                    class="ssp-fontFamily_ArvoRegular ssp-color_monoBody ssp-sub-heading-text ssp-m-heading"
+                >
+                    {customLabel.sspContentAuthorizeRepresentativeConsent}
+                </p>
+                <!--Start - Added as a part of CD2 R3 Section 5.8.1.1-->
+                <div class="slds-grid slds-wrap slds-size_1-of-1">
+                    <c-ssp-base-component-input-picklist
+                        class="ssp-inputElement ssp-existing slds-large-size_1-of-2 slds-size_1-of-1 ssp-gutter-right"
+                        label={customLabel.sspPersonRelation}
+                        title={customLabel.sspClickHereToSeeOptionsForRelationships}
+                        option={representativeRelationshipCodes}
+                        data-id="RepresentativeRelationshipCode__c"
+                        entity-name="AccountContactRelation"
+                        field-name="RepresentativeRelationshipCode__c"
+                        meta-list={metaDataListParent}
+                        value={relationshipCode}
+                    >
+                    </c-ssp-base-component-input-picklist>
+                </div>
+               <!-- <div
+                    if:false={isSelectedViaSearch}
+                    class="slds-grid slds-wrap slds-size_1-of-1"
+                >-->
+                    <c-ssp-address-auto-complete
+                        class="ssp-inputElement addressLineClass slds-size_1-of-1"
+                        record={addressRecord}
+                        field-map={fieldMap}
+                        meta-list={metaDataListParent}                        
+                    >
+                    </c-ssp-address-auto-complete>
+               <!-- </div>commented as part of cd2 changes -->
+                <!--End - Added as a part of CD2 R3 Section 5.8.1.1-->
+                <p
+                    class="ssp-fontFamily_ArvoRegular ssp-color_monoOmega slds-m-bottom_x-large ssp-indicateAccessText"
+                >
+                    {customLabel.sspPleaseIndicateTheProgramsAndLevelOfAccess}
+                </p>
+                <template if:false={editPermissions}>
+                    <template if:true={showPicklist}>
+                        <div class="ssp-case-question slds-m-bottom_x-large">
+                            <p
+                                class="ssp-fontFamily_popinBold ssp-color_monoBody slds-m-bottom_medium"
+                                title={customLabel.sspClickHereToSeeYourCases}
+                            >
+                                {customLabel.sspWhichCaseWouldYouLikeToAdd}
+                            </p>
+                            <c-ssp-base-component-input-picklist
+                                option={caseOptions}
+                                value={selectedCaseNumber}
+                                onhandlepicklistchange={handlePicklistChange}
+                                title={customLabel.sspClickHereToSeeYourCases}
+                            ></c-ssp-base-component-input-picklist>
+                        </div>
+                    </template>
+                </template>
+                <template if:true={showCaseError}>
+                    <p
+                        key={error}
+                        class="slds-size_1-of-1 ssp-show-error ssp-color_redOmega"
+                    >
+                        {customLabel.sspRequiredErrorMessage}
+                    </p>
+                </template>
+                <template if:true={showPrograms}>
+                    <div class="ssp-program-selection">
+                        <p
+                            class="ssp-fontFamily_popinBold ssp-color_monoBody slds-m-bottom_medium" tabindex="0"
+                        >
+                            {customLabel.sspWhichProgramDoYouWant}
+                        </p>
+                        <template for:each={programs} for:item="program">
+                            <div
+                                class="ssp-programs"
+                                key={program.programName}
+                                onchange={handleHideError}
+                            >
+                                <c-ssp-add-auth-rep-program-details
+                                    checkbox-label={program.programName}
+                                    radio-options={program.permissionLevel}
+                                    class="ssp-applicationInputs"
+                                    program-name={program.programId}
+                                    program-checkbox={program.selected}
+                                    selected-permission={program.permission}
+                                ></c-ssp-add-auth-rep-program-details>
+                            </div>
+                        </template>
+                    </div>
+                </template>
+                <template if:true={showError}>
+                    <p
+                        key={error}
+                        class="slds-size_1-of-1 ssp-show-error ssp-color_redOmega"
+                    >
+                        {customLabel.sspPleaseSelectAtLeastOneProgram}
+                    </p>
+                </template>
+                <!-- <div class="slds-grid slds-wrap slds-size_1-of-1 ssp-action-btn-section">
+                <div class="slds-size_1-of-1 ssp-action-btns">
+                    <lightning-button class="ssp-button_base ssp-cancelBtn" label={customLabel.sspCancel} title="Cancel entering details for your authorized representative" onclick={handleCancel}></lightning-button>
+                    <lightning-button class="ssp-button_neutral ssp-saveBtn" label={customLabel.sspNext} title="Continue to next screen to enter further details on your authorized representative" onclick={saveDetails}></lightning-button>
+                </div>
+            </div> -->
+                <div
+                    class="slds-grid slds-wrap slds-grid_align-center slds-m-bottom_xx-large ssp-action-btn-section"
+                >
+                    <div
+                        class="slds-grid slds-wrap ssp-footerBtnBackSave slds-size_1-of-2 slds-small-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2"
+                    >
+                        <div class="slds-col ssp-firstGroupBtn">
+                            <lightning-button
+                                label={customLabel.sspBack}
+                                class="ssp-button_base"
+                                onclick={handleBack}
+                                title={customLabel.sspReturnPreviousScreen}
+                            >
+                            </lightning-button>
+                        </div>
+                        <div class="slds-col ssp-secondGroupBtn">
+                            <lightning-button
+                                label={customLabel.sspCancel}
+                                onclick={handleCancel}
+                                variant="brand"
+                                class="dd-slds-nav_btn-next ssp-button_base"
+                                title={customLabel.sspCancelEnteringDetailsAuthorizedRepresentative}
+                            ></lightning-button>
+                        </div>
+                    </div>
+                    <div
+                        class="slds-col ssp-footerBtnNext slds-text-align_right slds-size_1-of-2 slds-small-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2"
+                    >
+                    <template if:false={authRepRequest}>
+                        <lightning-button
+                            label={customLabel.sspNext}
+                            onclick={saveDetails}
+                            variant="netural"
+                            class="dd-slds-nav_btn-next ssp-button_neutral"
+                            title={customLabel.sspContinueToNextScreenToEnterFurtherDetails}
+                        ></lightning-button>
+                    </template>
+                    <template if:true={authRepRequest}>
+                        <lightning-button
+                            label={customLabel.sspRequestAccess}
+                            onclick={handleAuthRepRequest}
+                            variant="netural"
+                            class="dd-slds-nav_btn-next ssp-button_neutral"
+                            title={customLabel.sspRequestAccess}
+                        ></lightning-button>
+                    </template>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <template if:true={showConsent}>
+        <c-ssp-add-auth-rep-consent
+            account-relation={strAccountRelation}
+            permission-param={permissionParam}
+            onback={handleConsentBack}
+        ></c-ssp-add-auth-rep-consent>
+    </template>
+</template>

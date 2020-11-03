@@ -1,0 +1,86 @@
+.ssp-fontSize {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.ssp-semiHeader {
+    height: 60px;
+}
+
+.ssp-backgroundImage {
+    position: absolute;
+    right: 0;
+    height: 7.625rem;
+    width: auto;
+}
+
+.ssp-semiHeaderText {
+    padding-left: 30px;
+    font-size: 1rem;
+}
+
+.ssp-margin-card {
+    margin-bottom: 60px;
+}
+.ssp-marginHeading {
+    margin-bottom: 30px;
+}
+
+.ssp-headingSignaturePage {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+.ssp-SnapsignaturePage_Container {
+    margin-bottom: 60px;
+    margin-top: 30px;
+}
+.ssp-termsOfAgreement {
+    font-size: 1.125rem;
+    letter-spacing: -0.01875rem;
+    line-height: 1.5rem;
+}
+.ssp-greyUnderline {
+    height: 0.3125rem;
+    border-radius: 0.15625rem;
+}
+.ssp-greyUnderlineSmall {
+    height: 0.0625rem;
+}
+
+.ssp-desktopBackgroundImage {
+    display: none;
+}
+
+.ssp-mobileBackgroundImage {
+    margin-top: 30px;
+}
+
+@media only screen and (min-width: 769px) {
+
+    .ssp-SnapsignaturePage_Container {
+        margin-bottom: 55px;
+        margin-top: 60px;
+    }
+    .ssp-headingSignaturePage {
+        font-size: 2.625rem;
+        line-height: 3rem;
+    }
+    .ssp-add-auth-rep-btns {
+        margin-top: 40px;
+    }
+    .ssp-mobileBackgroundImage {
+        display: none;
+    }
+    .ssp-desktopBackgroundImage {
+        display: block;
+        height: 15.188rem;
+        margin-top: 1.875rem;
+    }
+}
+
+
+@media only screen and (max-width: 768px){
+    .ssp-cancel-btn{
+        width:45%;
+    }
+}

@@ -1,0 +1,44 @@
+.ssp-iWantToContainer {
+    width: 100%;
+    padding: 0.938rem 0 2.813rem 3.75rem;
+}
+
+a:focus {
+    outline: none;
+}
+.ssp-want-to-text {
+    font-size: 1.125rem;
+    margin-bottom: 0.875rem;
+    line-height: 1.5rem;
+    letter-spacing: -0.3px;
+    text-align: left;
+}
+
+.ssp-wantToContent {
+    padding-right: 7.875rem;
+}
+
+.ssp-wantToContentHeader {
+    font-size: 1.125rem;
+    line-height: 1.5;
+    letter-spacing: -0.3px;
+    text-decoration: underline;
+    text-align: left;
+}
+
+.ssp-wantToContentDescription {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    text-align: left;
+    letter-spacing: normal;
+    padding-top: 0.313rem;
+}
+
+@media only screen and (max-device-width: 768px) {
+    .ssp-iWantToContainer {
+        padding: 0.938rem 1.875rem 2.813rem 1.875rem;
+    }
+    .ssp-wantToContent {
+        padding-right: 0;
+    }
+}

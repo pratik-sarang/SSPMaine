@@ -1,0 +1,215 @@
+.ssp-message-center-table {
+    margin-right: 0;
+    font-size: 13px;
+    border-collapse: collapse;
+}
+.ssp-sort-image-container {
+    border: none;
+}
+.ssp-sort-image-container:focus {
+    outline: none;
+}
+
+.ssp-message-center-table-tag {
+    padding-left: 10px;
+    border-radius: 10px;
+    width: fit-content;
+    padding-right: 10px;
+    font-size: 0.688rem;
+    line-height: 18px;
+    margin-bottom: 4px;
+}
+
+.ssp-message-table p.ssp-app-details-child {
+    word-break: break-word;
+}
+.ssp-message-table p.ssp-app-details-child2 {
+    word-wrap: break-all;
+}
+.ssp-app-action {
+    font-size: 16px;
+}
+.ssp-message-center-table thead th {
+    font-size: 13px;
+    height: 61px;
+    text-transform: none;
+    line-height: 24px;
+    letter-spacing: -0.24px;
+}
+.ssp-message-table table.ssp-message-center-table tbody td,
+.ssp-message-table table.ssp-message-center-table thead th {
+    padding-left: 30.5px;
+    word-wrap: break-word;
+    white-space: -o-pre-wrap;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+}
+.ssp-action-image-container {
+    display: inline-block;
+}
+
+.ssp-message-table table.ssp-message-center-table tbody td {
+    padding-top: 22.5px;
+    padding-bottom: 22.5px;
+}
+
+.ssp-app-action {
+    width: 25%;
+}
+
+.ssp-app-action-trash {
+    width: 10%;
+}
+.ssp-app-manager-tbl thead th:first-child {
+    border-radius: 6px 0 0 6px;
+}
+.ssp-app-manager-tbl thead th:last-child {
+    border-radius: 0 6px 6px 0;
+}
+
+.ssp-sort-image {
+    width: 24px;
+    height: 24px;
+    margin-left: 12px;
+}
+.ssp-message-center-table-row {
+    line-height: 20px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    box-shadow: inset 0 0 6px 0 rgba(0, 35, 98, 0.15);
+}
+
+.ssp-trash-icon {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.ssp-noSearchFoundContainer {
+    height: 307px;
+}
+
+.ssp-sideImage {
+    height: 100%;
+    width: 100%;
+    background-image: url(../resource/SSP_CD2_Icons/sspIcons/img_nomatchesfound@2x.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 175px 152px;
+    transform: translateY(4%);
+}
+
+.ssp-noMatchFound {
+    padding-top: 30px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+/* for type of message styling*/
+
+.ssp-italic {
+    font-style: italic;
+}
+
+/* mobile Styling*/
+
+.ssp-app-manager-tbl .ssp-app-mobile-view {
+    display: block;
+}
+.ssp-message-mobile-view .ssp-sort-table-btn {
+    margin-top: 20px;
+}
+.ssp-message-mobile-view {
+    display: block;
+    font-size: 13px;
+}
+.ssp-message-desktop-view {
+    display: none;
+}
+
+.ssp-message-mobile-view .ssp-app-details-child {
+    margin-bottom: 20px;
+}
+.ssp-message-mobile-view .ssp-manager-filter-container,
+.ssp-message-mobile-view .ssp-app-manager-details {
+    display: inline-block;
+    vertical-align: top;
+    flex: 1 0 50%;
+}
+.ssp-message-mobile-view .ssp-manager-filter-container {
+    display: flex;
+}
+
+.ssp-message-mobile-view .ssp-app-filter {
+    margin-left: auto;
+}
+.ssp-message-mobile-view .ssp-sort-table-btn {
+    margin-top: 20px;
+}
+.ssp-message-mobile-view .ssp-sort-table-btn-container {
+    width: 100%;
+}
+.ssp-message-mobile-view .ssp-app-manager-details {
+    width: 75%;
+}
+.ssp-message-mobile-view .ssp-manager-filter-container {
+    display: flex;
+}
+.ssp-message-table .ssp-message-mobile-view .ssp-app-filter-container,
+.ssp-message-table
+    .ssp-message-mobile-view
+    .ssp-message-center-table-header:nth-child(2) {
+    margin-left: auto;
+}
+.ssp-message-table .ssp-message-mobile-view .ssp-message-tbl-header {
+    display: flex;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.ssp-message-table .ssp-message-mobile-view .ssp-action-image-container {
+    vertical-align: top;
+}
+.ssp-message-mobile-view .ssp-tbl-header-content:nth-child(3) {
+    display: none;
+}
+.ssp-message-tbl-header p {
+    display: inline-block;
+}
+.ssp-message-tbl-header {
+    height: 40px;
+    line-height: 3.2;
+}
+.ssp-message-table .ssp-message-mobile-view .ssp-message-center-table-row {
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.ssp-trash-icon-mobile {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    margin-top: 33px;
+    margin-left: 21px;
+}
+.ssp-margin-top-twenty-two {
+    margin-top: 22px;
+}
+.ssp-callPhone {
+    display: none;
+}
+@media (min-width: 768px) {
+    .ssp-message-mobile-view {
+        display: none;
+    }
+    .ssp-message-desktop-view {
+        display: block;
+    }
+    .ssp-message-table .ssp-app-filter {
+        width: 15%;
+    }
+}

@@ -1,0 +1,111 @@
+<template>
+    <main class="ssp-first-time-user-dashboard">
+        <div class="ssp-dashboard-container ">
+            <img
+                src={backgroundImg}
+                class="ssp-individual-dashboard-background ssp-showDesktop "
+                alt={customLabels.sspMyInformation}
+            />
+            <img
+                src={backgroundImgMobile}
+                class="ssp-individual-dashboard-background ssp-showMobile"
+                alt={customLabels.sspMyInformation}
+            />
+            <div
+                class="ssp-dashboard-header-section slds-p-top_xx-large slds-m-bottom_x-large"
+            >
+                <h1
+                    class="ssp-header-text ssp-fontFamily_popinBlack ssp-color_monoBody"
+                >
+                    {welcomeNote}{memberName}
+                </h1>
+                <p class="slds-p-top_small">
+                    <a
+                        tabindex="0"
+                        onclick={navigateMyInformation}
+                        title={customLabels.sspMyInformation}
+                        class="ssp-fontFamily_popinRegular ssp-learnMore ssp-color_blueAlpha"
+                        >{customLabels.sspMyInformation}</a
+                    >
+                </p>
+                <p
+                    class="slds-p-top_medium ssp-check-eligibility-text ssp-fontFamily_ArvoRegular ssp-color_monoBody"
+                >
+                    {customLabels.sspYouCanCheckYourEligibility}
+                </p>
+            </div>
+            <div
+                class="slds-grid slds-wrap slds-size_1-of-1 ssp-dashboard-card-section"
+            >
+                <template for:each={programsOffered} for:item="program">
+                    <div
+                        class="slds-large-size_1-of-3 slds-size_1-of-1 ssp-program-card"
+                        key={program.typeOfAssistance}
+                    >
+                        <c-ssp-cta-card-blue
+                            ssp-title-value={program.typeOfAssistance}
+                            ssp-button-label={customLabels.sspLearnMoreLink}
+                        >
+                            <div
+                                slot="content"
+                                class="ssp-fontFamily_popinRegular"
+                            >
+                                <p class="slds-m-bottom_large">
+                                    <!-- {program.programName} -->
+                                    <lightning-formatted-rich-text
+                                        value={program.programName}
+                                    ></lightning-formatted-rich-text>
+                                </p>
+                                <p>{program.programDescription}</p>
+                            </div>
+                        </c-ssp-cta-card-blue>
+                    </div>
+                </template>
+            </div>
+        </div>
+        <div class="ssp-bg_monoAlpha ssp-dashboard-action-section">
+            <div
+                class="slds-grid slds-wrap ssp-dashboard-container slds-grid_vertical-stretch"
+            >
+                <div
+                    class="slds-large-size_1-of-2 slds-size_1-of-1 ssp-position-container"
+                >
+          <p
+            class="ssp-fontFamily_popinBlack ssp-color_monoBody ssp-apply-benefits-text"
+          >
+            {customLabels.sspApplyForBenefits}
+          </p>
+          <p
+                        class="ssp-fontFamily_ArvoRegular ssp-color_monoOmega ssp-info-font-size ssp-mid-row-margins"
+          >
+            {customLabels.sspGetBenefitsForMedicalExpensesFoodFinancesAndChildCare}
+          </p>
+          <lightning-button
+                        class="ssp-button_neutral ssp-position-element"
+            label={customLabels.sspApplyForBenefits}
+            onclick={applyForBenefits}
+          ></lightning-button>
+        </div>
+        <div
+                    class="slds-large-size_1-of-2 slds-size_1-of-1 ssp-check-eligibility-section ssp-position-container"
+        >
+          <p
+            class="ssp-fontFamily_popinBlack ssp-color_monoBody ssp-apply-benefits-text"
+          >
+            {customLabels.sspSeeIfIMayBeEligible}
+          </p>
+          <p
+                        class="ssp-fontFamily_ArvoRegular ssp-color_monoOmega ssp-info-font-size ssp-check-eligibility-mid-row-margins"
+          >
+            {customLabels.sspUseTheScreeningTool}
+          </p>
+          <lightning-button
+                        class="ssp-button_neutral ssp-position-element"
+            label={customLabels.sspStartCheckingEligibility}
+            onclick={redirectToPreScreeningTool}
+          ></lightning-button>
+        </div>
+      </div>
+    </div>
+  </main>
+</template>

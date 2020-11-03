@@ -1,0 +1,101 @@
+.ssp-TabsRow {
+    display: flex;
+    width: 100%;
+}
+.ssp-TabWidth {
+    width: 100%;
+    height: 69px;
+}
+.ssp-Tab {
+    font-size: 1rem;
+    line-height: 24px;
+    letter-spacing: -0.3px;
+    text-align: left;
+    padding: 16px 0 17px 30px;
+}
+
+.ssp-Tab:hover {
+    cursor: pointer;
+}
+
+.ssp-TabsContent {
+    border-radius: 0 0 6px 6px;
+    display: none;
+}
+
+.ssp-ContentDisc {
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    margin-right: 9px;
+}
+
+.ssp-ContentTitle {
+    font-size: 1rem;
+    line-height: 24px;
+    letter-spacing: -0.3px;
+    text-align: left;
+}
+
+.ssp-ContentLink {
+    font-size: 0.8125rem;
+    line-height: 20px;
+    letter-spacing: -0.3px;
+    text-align: left;
+    text-decoration: underline;
+    margin-left: 18px;
+}
+
+.ssp-show {
+    display: block;
+}
+
+.ssp-headingOne {
+    margin: 60px 0 30px 30px;
+    font-size: 2.625rem;
+    line-height: 48px;
+}
+.ssp-headingTwo {
+    margin: 60px 0 30px 30px;
+    font-size: 2.625rem;
+    line-height: 48px;
+}
+
+.ssp-horizontal-rule {
+    height: 0.313em;
+    border-radius: 0.156em;
+    margin: 1em 0 0 0;
+    border: none;
+}
+
+.ssp-hrcontainer {
+    padding-left: 30px;
+}
+
+.ssp-noSearchFoundContainer {
+    height: 580px;
+}
+.ssp-sideImage {
+    height: 100%;
+    width: 100%;
+    background-image: url(../resource/SSP_CD2_Icons/sspIcons/img_nomatchesfound@2x.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 156px 150px;
+    transform: translateY(4%);
+    background-position-y: 65px;
+}
+
+.ssp-noMatchFound {
+    padding-top: 267px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .ssp-headingTwo {
+        margin: 50px 0 30px 30px;
+        font-size: 1.5rem;
+        line-height: 32px;
+    }
+}

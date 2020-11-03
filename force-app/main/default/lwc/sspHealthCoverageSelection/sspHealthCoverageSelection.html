@@ -1,0 +1,82 @@
+<!--
+* name 		        : sspHealthCoverageSelection
+* @description 	    : Container for health coverage selection page. This screen takes the input for Health 
+*                     selection gatepost questions.
+* @author 		    : Chaitanya Kanakia, Ashwin Kasture 
+* @date 		    : 11/12/2019
+* MODIFICATION LOG:
+* DEVELOPER           DATE                DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* Chaitanya & Ashwin  11/12/2019	      Container for health coverage selection page.
+* 
+-->
+<template>
+    <template if:true={showSpinner}>
+        <c-ssp-spinner></c-ssp-spinner>
+    </template>
+    <div class="ssp-healthCovSelectionContainer ssp-bodyContainer" if:false={isScreenNotAccessible}>
+        <a
+            class="ssp-healthCovSelectionLearnMore ssp-fontFamily_popinBold ssp-color_monoBody"
+            href="#url"
+            title={label.sspHealthCoverSelectionLearnMoreContent}
+            onclick={openLearnMoreModal}
+            >{label.sspLearnMoreLink}</a
+        >
+        <div
+            class="ssp-healthCovSelectionOptions slds-m-top_large"
+            if:true={isToShowEnrolledInHealthCoverage}
+        >
+            <c-ssp-base-component-input-toggle
+                data-num="0"
+                data-id="EnrolledInHealthcareCoverageToggle__c"
+                entity-name="SSP_Application__c"
+                field-name="EnrolledInHealthCareCoverageToggle__c"
+                meta-list={MetaDataListParent}
+                data-question="sEnrolledQuestion"
+                class="ssp-applicationInputs"
+                options={optList}
+                label={label.sspHealthCoverSelectionEnrolled}
+                onchange={toggleCondition}
+        		disabled={bIsEnrollmentApproved}
+                value={objHealthSelectionInfo.sEnrolledInHealthCareCoverage}
+            >
+            </c-ssp-base-component-input-toggle>
+        </div>
+        <div
+            class="ssp-healthCovSelectionOptions"
+            if:true={isToShowNotEnrolledInHealthCoverage}
+        >
+            <c-ssp-base-component-input-toggle
+                data-num="1"
+                data-id="NotEnrolledInHealthcareCoverageToggle__c"
+                entity-name="SSP_Application__c"
+                field-name="NotEnrolledInHealthCareCoverageToggle__c"
+                meta-list={MetaDataListParent}
+                data-question="sNotEnrolledQuestion"
+                class="ssp-applicationInputs"
+                options={optList}
+        		disabled={bIsAccessApproved}
+                label={label.sspHealthCoverSelectionEmployer}
+                onchange={toggleCondition}
+                value={objHealthSelectionInfo.sNotEnrolledInHealthCareCoverage}
+            >
+            </c-ssp-base-component-input-toggle>
+        </div>
+        <template if:true={isLearnMoreModal}>
+            <c-ssp-detailed-information-modal
+                header-value={label.sspHealthCoverSelectionLabel}
+                open-model={isLearnMoreModal}
+                onclosemodal={closeLearnMoreModal}
+                reference={reference}
+            >
+                <p
+                    slot="contentSlot"
+                    class="ssp-learnMore ssp-fontFamily_ArvoRegular"
+                ></p>
+            </c-ssp-detailed-information-modal>
+        </template>
+    </div>
+    <template if:true={showAccessDeniedComponent}>
+        <c-ssp-access-denied></c-ssp-access-denied>
+    </template>
+</template>

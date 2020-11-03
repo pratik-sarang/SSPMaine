@@ -1,0 +1,83 @@
+<template>
+    <div class="ssp-report-change-modal" if:true={openModal}>
+        <template if:true={showSpinner}>
+            <c-ssp-spinner></c-ssp-spinner>
+        </template>
+        <c-ssp-Detailed-Information-Modal
+            header-value={customLabel.sspReportAChangeTitle}
+            open-model="true"
+            onclosemodal={closeModal}
+            reference={reference}
+            if:false={showSpinner}
+        >
+            <span slot="contentSlot">
+        <template if:true={showCaseDetails}>
+                <p
+                    class="ssp-fontFamily_ArvoRegular ssp-changeTypeFont slds-p-bottom_medium ssp-color_monoOmega"
+                >
+                    {customLabel.sspSelectPendingCaseNumber}
+                </p>
+                <template for:each={displayList} for:item="display">
+                    <c-ssp-base-multiline-radio
+                        key={display.Id}
+                        name="application-selection"
+                        value={display.Id}
+                        onchange={handleApplicationChange}
+                    >
+                        <p class="ssp-fontFamily_popinBold ssp-color_monoBody">
+                            {display.Name}
+                        </p>
+                        <p
+                            class="ssp-fontFamily_popinRegular ssp-color_monoBody"
+                        >
+                            {display.programs}
+                        </p>
+                        <p
+                            class="ssp-fontFamily_popinRegular ssp-color_monoOmega"
+                        >
+                            {display.members}
+                        </p>
+                    </c-ssp-base-multiline-radio>
+                </template>
+                <template if:true={showApplicationError}>
+                    <p class="showError ssp-color_redOmega">{customLabel.sspRequiredErrorMessage}</p>
+                </template>
+        </template>
+                <p
+                    class="ssp-fontFamily_ArvoRegular ssp-changeTypeFont slds-p-vertical_medium ssp-color_monoOmega"
+                >
+                    {customLabel.sspTypeOfChangeYouWantToReport}
+                </p>
+                <c-ssp-base-component-input-radio-group
+                    data-id="sApplicationChangeType"
+                    class="ssp-applicationInput slds-large-size_1-of-2 slds-size_1-of-1 slds-p-right_medium"
+                    options={changeTypeOptions}
+                    meta-list=""
+                    value={changeType}
+                    disabled={disableAction}
+                    onchange={handleApplicationTypeChange}
+                ></c-ssp-base-component-input-radio-group>
+                <template if:true={showApplicationTypeError}>
+                    <p class="showError ssp-color_redOmega">{customLabel.sspRequiredErrorMessage} </p>
+                </template>
+            </span>
+            <span slot="Footer" class="slds-col ssp-stacked-btn-width">
+                <lightning-button
+                    variant="brand"
+                    label={customLabel.sspContinue}
+                    class="ssp-button_brand"
+                    disabled={disableAction}
+                    onclick={initSave}
+                ></lightning-button>
+                <lightning-button
+                    class="ssp-button_base"
+                    label={customLabel.sspCancel}
+                    onclick={closeModal}
+                ></lightning-button>
+            </span>
+        </c-ssp-Detailed-Information-Modal>
+    </div>
+    <template if:true={showAnotherUserInProgress}>
+        <c-ssp-another-user-already-here-modal open-model={showAnotherUserInProgress} onprogressvaluechange={progressValueUpdated}></c-ssp-another-user-already-here-modal>
+    </template>
+</template>

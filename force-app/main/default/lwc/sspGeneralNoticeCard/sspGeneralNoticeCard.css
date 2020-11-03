@@ -1,0 +1,29 @@
+.ssp-warningNoticeCard,
+.ssp-explicitNoticeCard {
+    padding: 30px 30px 30px 24px;
+}
+
+.ssp-noticeCard {
+    font-size: 0.8125rem;
+    line-height: 18px;
+    letter-spacing: 0.3px;
+    border-radius: 6px;
+    padding: 30px;
+}
+
+.ssp-warningNoticeCardIcon,
+.ssp-explicitNoticeCardIcon {
+    height: 24px;
+    width: 24px;
+}
+
+.ssp-explicitNoticeCardBody ul {
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
+@media only screen and (max-width: 768px) {
+    .ssp-noticeCard {
+        padding: 15px 24px;
+    }
+}

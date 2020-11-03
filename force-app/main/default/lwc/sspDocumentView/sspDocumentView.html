@@ -1,0 +1,22 @@
+<template>
+    <template if:true={showSpinner}>
+        <c-ssp-spinner></c-ssp-spinner>
+    </template>
+    <main>
+        <div>
+
+        
+            <iframe
+                title="Download Document"
+                data-id="pdfFrame"
+                src="../resource/lcins1_pdfjs/web/viewer.html"
+                width="100%"
+                height="100%"
+                class="ssp-downloadDocumentFrame slds-hide"
+            >
+            </iframe>
+
+            <img src={imgUrl} alt="document" />
+        </div>
+    </main>
+</template>

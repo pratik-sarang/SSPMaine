@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RepresentativeRelationshipCode__c</fullName>
+    <description>How is this person related to you ?</description>
+    <externalId>false</externalId>
+    <label>How is this person related to you?</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>RepresentativeRelationship</valueSetName>
+    </valueSet>
+</CustomField>

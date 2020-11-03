@@ -1,0 +1,166 @@
+<!-- 
+* name 		      : sspApplicationStatementUnderstandingModal
+* @description 	  : This modal is used for Application Statement of Understanding 
+* @author 		  : Sharon
+* @date           : 05/15/2020
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* --------------------------------------------------------------------------------------------
+-->
+<template>
+  
+    <main>
+        <c-ssp-logging-and-error-handling-modal if:true={showErrorModal} error-id={errorCode} onprogressvaluechange={closeError}>
+        </c-ssp-logging-and-error-handling-modal>
+        <template if:true={showSpinner}>
+            <c-ssp-spinner></c-ssp-spinner>
+        </template>
+        <template if:true={showResults}>
+            <c-ssp-waiver-screening-results all-answered-no={allAnsweredNo} contact-name={contactName} individual-id={individualId} case-number={caseNumber}></c-ssp-waiver-screening-results>
+        </template>
+        <c-ssp-toast
+        if:true={showErrorToast}
+        ssp-toast-title-val={label.toastErrorText}
+        onhidetoast={handleHideToast}
+        show-error-toast={showErrorToast}></c-ssp-toast>
+        <template if:true={showAccessDenied}>
+            <c-ssp-access-denied></c-ssp-access-denied>
+        </template>
+        <template if:true={showScreen}>
+        <div
+            class="sspHeadingBar ssp-shortHeading slds-p-horizontal_xx-large ssp-mobileHorizontalPadding ssp-bg_appHeaderGradient slds-grid slds-wrap slds-grid_vertical-align-center"
+        >
+            <div class="ssp-container_width slds-grid slds-wrap">
+                <p
+                    class="ssp-fontFamily_popinBold ssp-appCardOrangeTitle ssp-color_monoBody"
+                >
+                    {label.sspWaiverQuestionsApply}
+                </p>
+            </div>
+        </div>
+        <div class="ssp-bodyContainer ssp-SnapContactInformationContainer ssp-waiverScreenQuestContainer">
+            <h1
+                class="ssp-fontFamily_popinBlack ssp-color_blueAlpha ssp-headingSignaturePage ssp-margin-bottom_thirty"
+            >
+                {label.sspWaiverQuestionsHeading}
+            </h1>
+            <div
+                class="ssp-margin-bottom_thirty ssp-bg_monoAlpha ssp-greyUnderline"
+            ></div>
+            <div
+                class="ssp-fontFamily_ArvoRegular ssp-color_monoOmega ssp-waiverContent"
+            >
+                {label.sspWaiverQuestionsContent}
+                <p>
+                    <a
+                        tabindex="0"
+                        href="javascript:void(0)"
+                        title={label.sspWaiverQuestionsLearnTitle}
+                        class="ssp-learnMore_link slds-m-top_xx-small ssp-color_monoBody ssp-fontFamily_popinBold"
+                        onclick={openLearnMoreModal}
+                    >
+                        {label.sspLearnMoreLink}
+                    </a>
+                </p>
+            </div>
+            <div class="slds-grid slds-wrap slds-size_1-of-1 slds-m-vertical_x-large">
+                <c-ssp-base-component-input-toggle
+                    class="applicationInputs "
+                    label={label.sspWaiverQuestionOne}
+                    options={responseOptions}
+                    value={saveRecord.HasBrainInjury}
+                    onchange={handleBrainInjury}
+                    disabled={disabled}
+                ></c-ssp-base-component-input-toggle>
+                <template if:true ={showHasBrainInjuryError}> 
+                    <p  class="slds-size_1-of-1 ssp-show-error ssp-color_redOmega">{errorMessage}</p>
+                </template>
+            </div>
+            <div class="slds-grid slds-wrap slds-size_1-of-1 slds-m-vertical_x-large">
+                <c-ssp-base-component-input-toggle
+                    class="applicationInputs "
+                    label={label.sspWaiverQuestionTwo}
+                    options={responseOptions}
+                    value={saveRecord.IsVentilatorDependent}
+                    onchange={handleOnVentilator}
+                    disabled={disabled}
+                ></c-ssp-base-component-input-toggle>
+                <template if:true ={showOnVentilatorError}> 
+                    <p  class="slds-size_1-of-1 ssp-show-error ssp-color_redOmega">{errorMessage}</p>
+                </template>
+            </div>
+            <div class="slds-grid slds-wrap slds-size_1-of-1 slds-m-vertical_x-large">
+                <c-ssp-base-component-input-toggle
+                    class="applicationInputs "
+                    label={questionThreeLabel}
+                    options={responseOptions}
+                    value={saveRecord.RequireAssistance}
+                    onchange={handleRequireAssistance}
+                    disabled={disabled}
+                ></c-ssp-base-component-input-toggle>
+                <template if:true ={showRequireAssistanceError}> 
+                    <p  class="slds-size_1-of-1 ssp-show-error ssp-color_redOmega">{errorMessage}</p>
+                </template>
+            </div>
+            <div class="slds-grid slds-wrap slds-size_1-of-1 slds-m-vertical_x-large">
+                <c-ssp-base-component-input-toggle
+                    class="applicationInputs "
+                    label={label.sspWaiverQuestionFour}
+                    options={responseOptions}
+                    value={saveRecord.HasDevelopmentalDisability}
+                    onchange={handleHasDisability}
+                    disabled={disabled}
+                ></c-ssp-base-component-input-toggle>
+                <template if:true ={showHasDisabilityError}> 
+                    <p  class="slds-size_1-of-1 ssp-show-error ssp-color_redOmega">{errorMessage}</p>
+                </template>
+            </div>
+            <div class="slds-grid slds-wrap slds-size_1-of-1 slds-m-vertical_x-large">
+                <c-ssp-base-component-input-toggle
+                    class="applicationInputs"
+                    label={questionFiveLabel}
+                    options={responseOptions}
+                    value={saveRecord.WillContinueServices}
+                    onchange={handleReceivingServices}
+                    disabled={disabled}
+                ></c-ssp-base-component-input-toggle>
+                <template if:true ={showReceivingServicesError}> 
+                    <p  class="slds-size_1-of-1 ssp-show-error ssp-color_redOmega">{errorMessage}</p>
+                </template>
+            </div>
+            <div
+                class="slds-grid slds-wrap slds-grid_align-spread ssp-add-auth-rep-btns"
+            >
+                <lightning-button
+                    label={label.sspCancel}
+                    title={label.sspWaiverQuestionsCancelTitle}
+                    class="ssp-button_base ssp-cancel-btn ssp-waiverOrder_2"
+                    onclick={handleExit}
+                ></lightning-button>
+                <lightning-button
+                    label={label.sspNext}
+                    title={label.sspWaiverQuestionsNextTitle}
+                    class="ssp-button_neutral ssp-authorize-btn ssp-waiverOrder_1"
+                    onclick={handleNext}                   
+                ></lightning-button>
+            </div>
+        </div>
+        <template if:true={isLearnMoreModal}>
+            <c-ssp-detailed-information-modal
+                reference={reference}
+                header-value={label.sspWaiverLearnHeading}
+                open-model={isLearnMoreModal}
+                onclosemodal={closeLearnMoreModal}>
+                <p slot="contentSlot">
+                    <lightning-formatted-rich-text
+                        value={label.sspWaiverLearnMoreContent}
+                    ></lightning-formatted-rich-text>
+                        <lightning-formatted-rich-text
+                        value={label.sspLearnMoreContentTwo}
+                    ></lightning-formatted-rich-text>
+                </p>
+            </c-ssp-detailed-information-modal>
+        </template>
+    </template>
+    </main>
+</template>

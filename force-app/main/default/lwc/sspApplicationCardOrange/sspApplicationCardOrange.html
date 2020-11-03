@@ -1,0 +1,32 @@
+<template>
+    <div
+        class="ssp-appCardOrange ssp-boxShadow ssp-componentWidth slds-grid slds-wrap"
+    >
+        <div
+            class="ssp-appCardOrangeHeader ssp-fontFamily_popinBold ssp-color_blueAlpha ssp-bg_monoDelta ssp-componentWidth"
+        >
+            <p>{headerValue}</p>
+        </div>
+        <div class="slds-grid slds-wrap ssp-componentWidth">
+            <slot name="bodySlot"></slot>
+            <!-- <div class="ssp-appCardOrangeBody">
+            <div>
+                <p
+                    class="ssp-appCardOrangeTitle ssp-fontFamily_popinBold ssp-color_monoBody"
+                >
+                    {titleValue}
+                </p>
+                <div class="slds-grid slds-grid_vertical-align-center">
+                    <div class="ssp-appDiscOrange ssp-bg_orangeAlpha"></div>
+                    <p>{resultsLabel}</p>
+                </div>
+            </div>
+            <div class="ssp-appCardOrangeHr ssp-bg_monoBeta"></div>
+            <div class="ssp-appCardOrangeAdditional ssp-color_monoOmega">
+                <slot name="information"></slot>
+                 <p>{additionalNotes}</p> 
+                 <p>Stacked</p> 
+            </div>-->
+        </div>
+    </div>
+</template>

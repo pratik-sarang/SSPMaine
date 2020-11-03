@@ -1,0 +1,54 @@
+<template>
+
+  <div class="slds-form-element slds-form-element_stacked dd-form-element">
+        <label class="slds-form-element__label" for={fieldInfo.name}
+            >{label}</label
+        >
+    <template if:true={isHelpText}>
+      <lightning-helptext
+        class="ssp-helptextIcon"
+        icon-name="utility:info_alt"
+        content={helpText}
+      ></lightning-helptext>
+    </template>
+        <div class={formatterClass}>
+            <lightning-input
+                type={typ}
+                name={fieldInfo.name}
+				        id={fieldInfo.name}
+                value={value}
+                label={label}
+                  placeholder={placeholder} 
+                  message-when-bad-input={badInputMsg}
+                message-when-pattern-mismatch={patternMismatchMsg}
+                message-when-type-mismatch={typeMismatchMsg}
+                  message-when-range-underflow={rangeUnderflowMsg}
+                message-when-range-overflow={rangeOverflowMsg}
+                  message-when-step-mismatch={stepMismatchMsg}
+                  message-when-value-missing={missValueMsg} 
+                  pattern={pattern}
+                  max-length={maxLength} 
+                  min-length={minLength} 
+                  max={maxValue} 
+                  min={minValue}
+                  accept={fileTypes} 
+                  required={requiredVar} 
+                  field-level-help={helpText}
+                  variant="label-hidden"
+                  class={fieldClass} 
+                  onchange={handleChange}
+                  step={step}
+                autocomplete="off" 
+                  ></lightning-input>
+                  
+                  <div class="slds-p-bottom_small">
+                    <template for:each={ErrorMessageList} for:item="error">
+                    <p key={error} class="showError ssp-color_redOmega">
+                        {error}
+                    </p>
+                    </template>
+                  </div>
+    </div>
+  </div>
+
+</template>

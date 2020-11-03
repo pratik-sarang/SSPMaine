@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IsDeleted__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Delete Indicator for Agent/Auth rep update SSPDC service call</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Delete Indicator for Agent/Auth rep update SSPDC service call</inlineHelpText>
+    <label>Is Deleted</label>
+    <type>Checkbox</type>
+</CustomField>

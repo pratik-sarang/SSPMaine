@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Notification that site claim request for the organization has been submitted successfully</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>RE Claims: New Site Request Confirmed</name>
+    <style>none</style>
+    <subject>Claim My Site Request Received Confirmation {!ClaimMySiteRequest__c.UniqueIdentificationNo__c}</subject>
+    <textOnly>Hello {!ClaimMySiteRequest__c.FirstName__c} {!ClaimMySiteRequest__c.LastName__c},
+
+We have received your request. You should hear from us within one week for next steps.
+
+Here&apos;s what you can expect next:
+
+We&apos;ll contact you to confirm your details
+We&apos;ll share information about the user agreement and data privacy practices
+You&apos;ll gain access to some training materials to help you hit the ground running
+If everything checks out, you&apos;ll have access soon and can begin to add your team to the site.
+
+For your reference, the following contains the information you submitted:
+
+First Name: {!ClaimMySiteRequest__c.FirstName__c}
+Last Name: {!ClaimMySiteRequest__c.LastName__c}
+Email Address: {!ClaimMySiteRequest__c.Email__c}
+Phone Number: {!ClaimMySiteRequest__c.PhoneNumber__c}
+Organization Role: {!ClaimMySiteRequest__c.OrganizationRole__c}
+Reason for joining: {!ClaimMySiteRequest__c.ReasonforJoining__c}
+How did you hear about the Resource Engine: {!ClaimMySiteRequest__c.HearAboutRE__c}
+
+You have confirmed that you have read the terms and conditions.
+
+Thank you,
+{!IF(ClaimMySiteRequest__c.OwnerFullName= &quot;State User Queue&quot;, &quot;Community Partner Onboarding Team&quot;, ClaimMySiteRequest__c.OwnerFullName)} 
+
+Please note: This is an automatic message and cannot receive replies.</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

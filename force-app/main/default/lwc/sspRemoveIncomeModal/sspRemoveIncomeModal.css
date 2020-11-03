@@ -1,0 +1,14 @@
+.ssp-content{
+	font-size: 1rem;
+	line-height: 24px;
+}
+
+.ssp-modalFooter{
+	width: -webkit-fill-available;
+}
+
+@media only screen and (min-width: 768px) {
+	.ssp-buttonContainer{
+		margin-top: 1rem;
+	}
+}

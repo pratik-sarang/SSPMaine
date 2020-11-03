@@ -1,0 +1,68 @@
+<!--
+* name          : sspReviewVariationCard.
+* @description  : This is component show review items to the user.
+* @author       : Saurabh.
+* @date         : 12/11/2019
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName                MM/DD/YYYY               A Brief Description about the Change
+  Saurabh                    12/11/2019                          Initial Version
+-->
+<template>
+    <div class="ssp-ReviewCardContainer ssp-boxShadow">
+        <div class="ssp-ReviewCard ssp-bg_redGamma">
+            <div
+                class="slds-grid slds-wrap slds-grid_align-spread slds-grid_vertical-align-center"
+            >
+                <div
+                    class="slds-grid slds-col_bump-right slds-grid_vertical-align-center "
+                >
+                    <div class="ssp-ReviewCardIcon slds-m-right_small">
+                        <img alt="Review_needed_Icon" src={iconUrl} />
+                    </div>
+                    <div class="ssp-ReviewCardText ssp-fontFamily_popinBold">
+                        <slot></slot>
+                    </div>
+                </div>
+                <div>
+                    <lightning-button
+                        label={buttonValue}
+                        variant="neutral"
+                        title="Neutral action"
+                        onclick={handleClick}
+                        class="ssp-button_neutral ssp-cardButton"
+                    >
+                    </lightning-button>
+                </div>
+            </div>
+        </div>
+        <div>
+            <ul>
+                <template for:each={cardData} for:item="dataItem">
+                    <li key={dataItem.header}>
+                        <div
+                            class="slds-grid_vertical-align-center ssp-ReviewVariationCard ssp-bg_monodelta slds-grid slds-wrap slds-grid_align-spread"
+                        >
+                            <div class="slds-grid_vertical-align-center">
+                                <span
+                                    class="ssp-ReviewVariationCardRed ssp-fontFamily_popinBold ssp-color_redAlpha"
+                                    >{dataItem.header}</span
+                                >
+                                <span
+                                    class="ssp-ReviewVariationCardBlack ssp-fontFamily_popinRegular"
+                                    ><p>{dataItem.footer}</p></span
+                                >
+                            </div>
+                            <div
+                                class="slds-grid_vertical-align-center ssp-ReviewCardNextIcon"
+                            >
+                                <img alt="Right_arrow_icon" src={nextIconUrl} />
+                            </div>
+                        </div>
+                    </li>
+                </template>
+            </ul>
+        </div>
+    </div>
+</template>

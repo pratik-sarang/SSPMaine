@@ -1,0 +1,23 @@
+.ssp-genericDashboardCard {
+    border-radius: 6px;
+}
+.ssp-genericDashboardHead {
+    border-radius: 6px 6px 0 0;
+    padding: 15px 30px;
+    font-size: 1.125rem;
+    line-height: 24px;
+    letter-spacing: -.3px;
+    text-align: left;
+}
+
+.ssp-genericDashboardHead p {
+    margin-right: 7px;
+}
+
+.ssp-genericDashboardHead img {
+    height: 24px;
+    width: 24px;
+}
+.ssp-boxShadow {
+     box-shadow: 0 15px 25px -7px rgba(0,35,98,0.1), 0 0 6px 0 rgba(0,35,98,0.15);
+}

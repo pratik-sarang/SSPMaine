@@ -1,0 +1,24 @@
+<!--
+* name            : sspBaseComponentInputCheckboxGroup
+* @description    : Generic component for Input check box Group
+-->
+<template>
+  <div class="ssp-genericInput programCheckbox ssp-checkboxGroup">
+    <lightning-checkbox-group
+      label={label}
+      value={value}
+      data-id="inputVal"
+      title={title}
+      options={options}
+      onchange={handleValidations}
+      disabled={disabled}
+      class="ssp-checkboxContainer"
+    >
+    </lightning-checkbox-group>
+  </div>
+  <div class="ssp-genericInput">
+    <template for:each={ErrorMessageList} for:item="error">
+      <p role="alert" aria-atomic="true" key={error} class="ssp-showError ssp-color_redOmega">{error}</p>
+    </template>
+  </div>
+</template>

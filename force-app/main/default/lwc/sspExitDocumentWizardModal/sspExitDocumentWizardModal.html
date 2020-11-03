@@ -1,0 +1,49 @@
+<!--
+* name : SspExitDocumentWizardModal
+* @description :This screen is container for Exit Wizard Modal.
+* @author : Kyathi Kanumuri
+* @date : 4/15/2020
+* MODIFICATION LOG:
+* DEVELOPER             DATE            DESCRIPTION
+* ________________________________________________________________________________
+* Kyathi                4/10/2020     Creating HTML Structure
+-->
+<template>
+    <div class="ssp-ExitWizardModalContainer">
+        <template if:true={openModel}>
+            <c-ssp-detailed-information-modal
+                reference={reference}
+                header-value={label.sspExitDocumentWizard}
+                open-model={openModel}
+                onclosemodal={closeModal}
+            >
+                <span slot="contentSlot">
+                    <p>
+                        {label.sspExitWizardContent}
+                    </p>
+                </span>
+                <div
+                    slot="Footer"
+                    class="ssp-remove-income-modal slds-grid slds-wrap slds-grid_align-spread"
+                >
+                    <lightning-button
+                        variant="brand"
+                        label={label.sspExitDocumentCenter}
+                        name={objCard}
+                        class="ssp-deleteButton ssp-button_brand slds-size--1-of-1 slds-p-bottom_medium ssp-fontFamily_popinBold "
+                        onclick={exitDocumentCenter}
+                        title={label.sspExitWizardModalTitle}
+                    ></lightning-button>
+                    <lightning-button
+                        variant="neutral"
+                        label={label.sspContinueUploading}
+                        class="ssp-cancelButton ssp-button_base slds-size--1-of-1
+ ssp-fontFamily_popinBold"
+                        onclick={closeModal}
+                        title={label.sspContinueUploadingTitle}
+                    ></lightning-button>
+                </div>
+            </c-ssp-detailed-information-modal>
+        </template>
+    </div>
+</template>

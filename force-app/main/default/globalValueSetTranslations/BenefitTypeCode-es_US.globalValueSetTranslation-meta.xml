@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Black Lung</masterLabel>
+        <translation>Pulmón negro</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>IRA at 59 and 1/2 Years</masterLabel>
+        <translation>IRA a los 59 y 1/2 años</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>RailRoad Retirement</masterLabel>
+        <translation>Jubilación para trabajadores ferroviarios</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Social Security Retirement, Survivor&apos;s, and Disability Insurance (RSDI)</masterLabel>
+        <translation>Seguro para Jubilación, Supervivencia y Discapacidad de Seguro Social (RSDI)</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>UMWA</masterLabel>
+        <translation>UMWA (Trabajadores Mineros Unidos de América)</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Unemployment Insurance</masterLabel>
+        <translation>Seguro por desempleo</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>VA Compensation</masterLabel>
+        <translation>Indemnización de VA (Asuntos para Veteranos)</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>VA Pension</masterLabel>
+        <translation>Pensión de Asuntos para Veteranos (VA)</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Worker&apos;s Compensation</masterLabel>
+        <translation>Indemnización laboral</translation>
+    </valueTranslation>
+</GlobalValueSetTranslation>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Values1</fullName>
+    <columns>View__c</columns>
+    <columns>Is_Intake__c</columns>
+    <columns>Intake_Order__c</columns>
+    <columns>Is_RAC__c</columns>
+    <columns>RAC_Order__c</columns>
+    <columns>Screens__c</columns>
+    <columns>Order__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All Values</label>
+    <language>en_US</language>
+</ListView>

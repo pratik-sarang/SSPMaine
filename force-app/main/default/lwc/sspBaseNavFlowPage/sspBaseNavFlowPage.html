@@ -1,0 +1,20 @@
+<!--
+* name            : sspBaseNavFlowPage
+* @description    : Base component to show the page name.
+-->
+<template>
+  <div class="slds-page-header_1 slds-p-bottom_large">
+    <div class="slds-page-header__row">
+      <div class="slds-page-header__col-title">
+        <h1>
+          <span
+            class="slds-page-header__title slds-truncate"
+            title={pageDisplayName}
+            >{pageDisplayName}</span
+          >
+        </h1>
+      </div>
+    </div>
+  </div>
+  {body}
+</template>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Display name for the flow. 
+Example : Address 
+
+If custom label is used then prefix with $. 
+Example : $Address --></help>
+    <label><!-- Page Display Name --></label>
+    <name>PageDisplayName__c</name>
+</CustomFieldTranslation>

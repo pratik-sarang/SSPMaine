@@ -1,0 +1,140 @@
+<!--
+* name 		    : sspCheckRIDPStatus
+* @description 	: This component calls the challenge questions service and then post answers service once the answers are selected
+* @author 		: Nikhil Shinde and Prasanth
+* @date 		: 25-06-2020
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+*  
+-->
+
+<template>
+    <div class="ssp-bodyContainer">
+        <template if:true={showSpinner}>
+            <c-ssp-spinner></c-ssp-spinner>
+        </template>
+        <div if:true={showErrorToast} role="alert">
+            <c-ssp-toast
+                ssp-toast-title-val={toastMessage}
+                onhidetoast={handleHideToast}
+                show-error-toast={showErrorToast}
+            ></c-ssp-toast>
+        </div>
+        <div class="ssp-challengeQuestionsContainer">
+            <div>
+                <h1
+                    class="ssp-challengeQuestionsHeader ssp-fontFamily_popinBold ssp-color_blueAlpha"
+                >
+                    {label.sspChallengeQuestions}
+                </h1>
+            </div>
+            <div class="ssp-challengeQuestionsHr ssp-bg_monoAlpha"></div>
+
+            <template for:each={challengeQuestions} for:item="displayQuestions">
+                <div
+                    key={displayQuestions.questionNumber}
+                    class="ssp-questionOptions"
+                >
+                    <p
+                        tabindex="0"
+                        class="ssp-challengeQuestions ssp-color_monoOmega"
+                        key={displayQuestions.questionNumber}
+                    >
+                        {displayQuestions.question}
+                    </p>
+                    <template
+                        for:each={displayQuestions.options}
+                        for:item="displayOptions"
+                    >
+                        <c-ssp-base-multiline-radio
+                            key={displayOptions.key}
+                            name={displayQuestions.question}
+                            onchange={handleOptionChange}
+                            value={displayOptions.key}
+                        >
+                            <p
+                                class="ssp-challengeQuestionsOptions ssp-fontFamily_popinRegular ssp-color_monoBody"
+                            >
+                                {displayOptions.value}
+                            </p>
+                        </c-ssp-base-multiline-radio>
+                    </template>
+                    <template if:true={showApplicationError}>
+                        <div if:false={displayQuestions.checked}>
+                            <p class="showError ssp-color_redOmega">
+                                {label.sspRequiredErrorMessage}
+                            </p>
+                        </div>
+                    </template>
+                </div>
+            </template>
+
+            <template if:true={isVerification}>
+                <c-ssp-detailed-information-modal
+                    header-value={label.sspModalHeader}
+                    open-model={isVerification}
+                    onclosemodal={closeAdditionalVerification}
+                    reference={reference}
+                >
+                    <div
+                        slot="contentSlot"
+                        class="ssp-verificationModal ssp-fontFamily_ArvoRegular"
+                    >
+                        {label.sspModalContent}&nbsp;<a href={contactNumber}
+                            >{label.sspContactNumber}</a
+                        >&nbsp;{label.sspModalContentTwo}
+                    </div>
+                    <div slot="Footer">
+                        <lightning-button
+                            label={label.sspResumeRIDP}
+                            variant="brand"
+                            class="ssp-button_brand ssp-resumeRIDP"
+                            onclick={closeAdditionalVerification}
+                        >
+                        </lightning-button>
+                    </div>
+                </c-ssp-detailed-information-modal>
+            </template>
+            <c-ssp-logging-and-error-handling-modal
+                if:true={showErrorModal}
+                error-id={errorMsg}
+                onprogressvaluechange={closeError}
+            >
+            </c-ssp-logging-and-error-handling-modal>
+            <div
+                class="ssp-button-container slds-grid slds-wrap slds-grid_align-center slds-m-bottom_xx-large slds-m-top_x-large"
+            >
+                <div
+                    class="slds-col ssp-footerBtnBackSave slds-size_1-of-2 slds-small-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-m-bottom_xx-large"
+                >
+                    <lightning-button
+                        label={label.sspExitButton}
+                        onclick={handleExitButton}
+                        variant="brand"
+                        class="dd-slds-nav_btn-next ssp-button_base"
+                        title={label.sspSaveAndExitAltText}
+                    ></lightning-button>
+                </div>
+                <div
+                    class="slds-col ssp-footerBtnNext slds-text-align_right slds-size_1-of-2 slds-small-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-m-bottom_xx-large"
+                >
+                    <lightning-button
+                        label={label.sspNextButton}
+                        onclick={handleNext}
+                        variant="netural"
+                        class="dd-slds-nav_btn-next ssp-button_neutral"
+                        title={label.sspNextAltText}
+                    ></lightning-button>
+                </div>
+            </div>
+        </div>
+        <c-ssp-match-already-receiving-benefits-modal
+            open-modal={programRemoved}
+            application-id={appId}
+            final-program-list-size={finalProgramListSize}
+            member-individual-id={memberIndividualId}
+        >
+        </c-ssp-match-already-receiving-benefits-modal>
+    </div>
+</template>

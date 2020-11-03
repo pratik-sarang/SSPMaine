@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validate_AlphaNumeric_Msg__c</fullName>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Validate AlphaNumeric Msg</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Please enter either letter and numeric characters.</fullName>
+                <default>true</default>
+                <label>Please enter either letter and numeric characters.</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

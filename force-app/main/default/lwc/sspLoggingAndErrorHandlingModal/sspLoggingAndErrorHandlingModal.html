@@ -1,0 +1,34 @@
+<template>
+  <c-ssp-detailed-information-modal
+    header-value={label.sspErrorStatus}
+    open-model={openModal}
+    onclosemodal={closeModal}
+    reference={reference}
+  >
+    <div slot="contentSlot">
+      <p class="ssp-margin-bottom_medium">
+        {label.sspLoggingAndErrorContent1}
+        <a class="ssp-color_blueAlpha slds-m-left_xx-small" href={numberHref}
+          >{number}</a
+        >{label.sspDot}
+      </p>
+      <p>{label.sspCustomerServiceAvailable}</p>
+      <p>{label.sspMondayFridayTime}</p>
+      <p class="ssp-margin-bottom_medium">{label.sspSaturdayHoursVary}</p>
+      <p if:true={errorId} class="ssp-margin-bottom_medium">
+        {contactCustomerService}
+      </p>
+      <p class="ssp-margin-bottom_medium">
+        {label.sorryForInconvenience}
+      </p>
+    </div>
+    <span slot="Footer">
+      <lightning-button
+        variant="neutral"
+        label={label.sspContinueButton}
+        class="ssp-button_base ssp-cardButton ssp-stacked-btn-width"
+        onclick={closeModal}
+      ></lightning-button>
+    </span>
+  </c-ssp-detailed-information-modal>
+</template>

@@ -1,0 +1,15 @@
+<template>
+    <lightning-button
+        variant="brand"
+        label={label.sspOpenOverlay}
+        class="ssp-exitModalBtn ssp-fontSize_16 ssp-button_brand ssp-buttonPadding slds-grid slds-col ssp-bodyContainer slds-p-vertical_xx-large"
+        onclick={openModal}
+    >
+    </lightning-button>
+    <template if:true={openModel}>
+        <c-ssp-find-dcbs-office
+            open-model={openModel}
+            onclosemodal={handleProp}
+        ></c-ssp-find-dcbs-office
+    ></template>
+</template>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- ResourceType --></label>
+    <name>ResourceType__c</name>
+    <picklistValues>
+        <masterLabel>Account</masterLabel>
+        <translation>Cuenta</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Annuity</masterLabel>
+        <translation>Anualidad</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Burial Funds</masterLabel>
+        <translation>Fondos para entierro</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Burial Plot</masterLabel>
+        <translation>Terreno para entierro</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Investment</masterLabel>
+        <translation>Inversión</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Life Estate</masterLabel>
+        <translation>Derecho real de por vida</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Life Insurance</masterLabel>
+        <translation>Seguro de vida</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Life Settlement Contract</masterLabel>
+        <translation>Contrato de venta de seguro de vida a tercero</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lifetime Care Agreement</masterLabel>
+        <translation>Acuerdo de cuidados de por vida</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other Resource</masterLabel>
+        <translation>Otro recurso</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Partnership Qualified LTC Policy</masterLabel>
+        <translation>Póliza de sociedad calificada para cuidados a largo plazo</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pre Arranged Funeral Contract</masterLabel>
+        <translation>Contrato de funeral preacordado</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Promissory Note or Land Contract</masterLabel>
+        <translation>Pagaré o contrato de compraventa</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Real Estate Property</masterLabel>
+        <translation>Bienes inmuebles</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Trust</masterLabel>
+        <translation>Fideicomiso</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vehicle</masterLabel>
+        <translation>Vehículo</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other Liquid Resource</masterLabel>
+        <translation>Otro recurso líquido</translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,36 @@
+<!--
+* name          : sspInHomeAssistance
+* @description  : This screen collects Information about the type of in-home assistance being received
+* @author       : Sanchita Tibrewala and P V Siddarth
+* @date         : 01/22/2020
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName                MM/DD/YYYY               A Brief Description about the Change
+  Sanchita and Siddarth         01/22/20                          Initial Version
+-->
+<template>
+    <template if:true={retMemberObjectExpr}>
+        <template if:true={showSpinner}>
+            <c-ssp-spinner></c-ssp-spinner>
+        </template>
+        <div class="ssp-bodyContainer">
+            <div
+                class="slds-grid slds-wrap slds-m-top_large ssp-footerPadding ssp-componentWidth"
+            >
+                <c-ssp-base-component-input-picklist
+                    label={label.sspTypeOfInHomeAssistance}
+                    title={label.sspAltTypesOfInHomeAssistance}
+                    class="ssp-inHomeAssistanceDetails ssp-componentWidth"
+                    placeholder={label.sspSelectAnOption}
+                    data-id="InHomeCareType__c"
+                    value={homeAssistanceValue}
+                    field-name="InHomeCareType__c"
+                    entity-name="SSP_Member__c"
+                    meta-list={MetaDataListParent}
+                    option={inHomeCareType}
+                ></c-ssp-base-component-input-picklist>
+            </div>
+        </div>
+    </template>
+</template>

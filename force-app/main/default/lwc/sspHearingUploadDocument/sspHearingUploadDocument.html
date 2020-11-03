@@ -1,0 +1,105 @@
+<!-- 
+* name 		      : sspHearingUploadDocument
+* @description 	  : This screen is used to Upload Hearing Documents 
+* @author 		  : Sharon
+* @date           : 09/07/2020
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* --------------------------------------------------------------------------------------------
+-->
+<template>
+    <template if:true={showAccessDeniedComponent}>
+        <c-ssp-access-denied></c-ssp-access-denied>
+    </template>
+    <template if:true={isScreenAccessible}>
+        <div class="ssp-hearingUploadtContainer">
+            <div class="ssp-container_width">
+                <div class="ssp-hearingHeadContainer">
+                    <h1
+                        class="ssp-individualName ssp-hearingRequestHeading ssp-fontFamily_popinBlack"
+                    >
+                        {label.sspHearingDocumentTitle}
+                    </h1>
+                </div>
+                <div
+                    class="ssp-hearingGreyLine ssp-bg_monoAlpha ssp-greyUnderline"
+                ></div>
+                <div class="ssp-errorToast" if:true={hasSaveValidationError}>
+                    <c-ssp-toast
+                        ssp-toast-title-val={label.sspRequiredValidationMsg}
+                        show-error-toast={trueValue}
+                        onhidetoast={hideToast}
+                    ></c-ssp-toast>
+                </div>
+                <div
+                    class="ssp-documentCenterHome ssp-hearingUploadContentContainer"
+                >
+                    <p
+                        class="ssp-fontFamily_ArvoRegular ssp-color_monoOmega ssp-HearingFontSixteen ssp-hearingFileTitle"
+                    >
+                        {label.sspHearingDocumentContentOne}
+                    </p>
+                    <div class="ssp-headerList">
+                        <ul class="ssp-hearingFileContent">
+                            <li
+                                class="ssp-fontFamily_ArvoRegular ssp-color_monoOmega ssp-HearingFontSixteen"
+                            >
+                                {label.sspHearingDocumentContentTwo}
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="ssp-hearingUploadCase">
+                        <p
+                            class="ssp-fontFamily_popinRegular ssp-color_monoOmega ssp-hearingCaseTitle"
+                        >
+                            {label.sspHearingDocumentRequest}
+                        </p>
+                        <p
+                            class="ssp-fontFamily_popinRegular ssp-color_monoBody ssp-HearingFontSixteen ssp-hearingCaseContent"
+                        >
+                            {selectedDetail}
+                        </p>
+                    </div>
+                    <c-ssp-document-file-upload
+                        is-hearing="true"
+                        hearing-request-number={hearingRequestId}
+                        hearing-id={selectedDetail}
+                        onhearingdocumenttype={selectHearingDocumentTypeHandler}
+                        onsinglefileupload={uploadedFileHandler}
+                    ></c-ssp-document-file-upload>
+                    <div
+                        class="ssp-mobileHorizontalPadding ssp-getStartedBenefits ssp-uploadProofForms"
+                    >
+                        <div class="ssp-container_width slds-grid slds-wrap">
+                            <div
+                                class="slds-col slds-size_1-of-1 ssp-footerBtnBackSave slds-large-size_6-of-12 ssp-actionButtons"
+                            >
+                                <lightning-button
+                                    name={label.sspHearingDocumentCancel}
+                                    variant="base"
+                                    label={label.sspHearingDocumentCancel}
+                                    class="ssp-exitModalBtn ssp-button_base ssp-getStartBenefitsButton"
+                                    onclick={cancelUpload}
+                                    title={label.sspHearingDocumentCancelTitle}
+                                ></lightning-button>
+                            </div>
+                            <div
+                                class="slds-col slds-size_1-of-1 slds-large-size_6-of-12 ssp-footerBtnNext slds-text-align_right"
+                            >
+                                <lightning-button
+                                    name={label.sspHearingDocumentTitle}
+                                    variant="neutral"
+                                    label={label.sspHearingDocumentTitle}
+                                    class="ssp-button_neutral ssp-exitModalBtn ssp-getStartBenefitsButton ssp-getStartBenefitsNeutralButton"
+                                    onclick={handleUpload}
+                                    title={label.SSP_HearingDocumentButtonText}
+                                    disabled={isReadOnlyUser}
+                                ></lightning-button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+</template>

@@ -1,0 +1,80 @@
+<!-- 
+* name 		      : SspAuthorizationModal
+* @description 	  : This component creates a screen for AuthorizationModal 
+* @author 		  : Kyathi
+* @date           : 06/01/2020
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* Kyathi                        6/1/2020                            HTML Structure
+-->
+<template>
+    <div class="ssp-medicaidPenaltyWarning ssp-kiHIPPConsentModalContainer">
+        <c-ssp-detailed-information-modal
+            reference={reference}
+            header-value={label.sspAuthorizations}
+            open-model={openModel}
+            onclosemodal={closeConsentModal}
+            scroll-event={trueValue}
+            onenablemodalbuttons={enableModalButtons}
+        >
+            <span slot="contentSlot">
+                <div
+                    class="ssp-consentContentContainer ssp-fontFamily_ArvoRegular ssp-color_monoOmega"
+                >
+                    <p>{label.sspAuthorizationsModalContent1}</p>
+                    <ul>
+                        <li>
+                            {label.sspAuthorizationsModalContent2}
+                        </li>
+                        <li>
+                            {label.sspAuthorizationsModalContent3}
+                        </li>
+                        <li>
+                            {label.sspAuthorizationsModalContent4}
+                        </li>
+                        <li>
+                            {label.sspAuthorizationsModalContent5}
+                        </li>
+                        <li>
+                            {label.sspAuthorizationsModalContent6}
+                        </li>
+                    </ul>
+                </div>
+            </span>
+            <div
+                slot="Footer"
+                class="slds-grid slds-wrap slds-grid_align-spread slds-gutters"
+            >
+                <div
+                    class="slds-col slds-size_1-of-2 slds-medium-size_1-of-2 slds-large-size_6-of-12"
+                >
+                    <lightning-button
+                        name="Reject"
+                        variant="base"
+                        label={label.sspDisagreeButton}
+                        title={label.sspDisagreeToTerms}
+                        class="ssp-exitModalBtn ssp-button_base"
+                        onclick={handleOnClick}
+                        disabled={disabled}
+                    >
+                    </lightning-button>
+                </div>
+                <div
+                    class="slds-col slds-size_1-of-2 slds-medium-size_1-of-2 slds-large-size_6-of-12"
+                >
+                    <lightning-button
+                        name="Agree"
+                        variant="neutral"
+                        label={label.sspAgreeButton}
+                        title={label.sspAgreesToTerms}
+                        class="ssp-exitModalBtn ssp-button_neutral"
+                        onclick={handleOnClick}
+                        disabled={disabled}
+                    >
+                    </lightning-button>
+                </div>
+            </div>
+        </c-ssp-detailed-information-modal>
+    </div>
+</template>

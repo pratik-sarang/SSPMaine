@@ -1,0 +1,29 @@
+<!--
+* name          :sspBaseComponentInputSelect
+* @description  : This screen is used for Select input field.
+* @author       :Shikha
+* @date         : 29/11/2019
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+*Kyathi         1/3/2020               HTML Structure
+-->
+<template>
+  <div class="ssp-genericInput">
+    <lightning-combobox
+      name={name}
+      label={name}
+      value={value}
+      placeholder={label.sspSelect}
+      options={option}
+      onchange={handleOnchangeValidations}
+      onblur={handleValidations}
+      disabled={isDisabled}
+    >
+    </lightning-combobox>
+
+    <template for:each={ErrorMessageList} for:item="error">
+      <p key={error} class="showError ssp-color_redOmega">{error}</p>
+    </template>
+  </div>
+</template>

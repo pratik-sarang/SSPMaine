@@ -1,0 +1,152 @@
+<!--
+* name : sspHealthCondition
+* @description : This Screen is used for Health Condition.
+* @author : Sharon Roja,Naveena 
+* @date : 01/06/2020.
+* MODIFICATION LOG:
+* DEVELOPER             DATE            DESCRIPTION
+* ________________________________________________________________________________
+* Sharon Roja           01/06/2020      Creating HTML Structure
+-->
+<template>
+    <template if:true={showSpinner}>
+        <c-ssp-spinner></c-ssp-spinner>
+    </template>
+    <div class="ssp-errorToast" if:true={hasSaveValidationError}>
+        <c-ssp-toast
+            ssp-toast-title-val={label.toastErrorText}
+            show-error-toast={trueValue}
+            onhidetoast={hideToast}
+        ></c-ssp-toast>
+    </div>
+    <div if:true={isPageAccessible} class="ssp-bodyContainer ssp-healthConditionContainer">
+        <div class="slds-m-vertical_large">
+            <template if:true={healthConditionVerified}>
+                <c-ssp-general-notice-card>
+                    <p>
+                        {label.sspPageInformationVerified}
+                        <span><a href={callUsAt}
+                                class="ssp-color_blueAlpha slds-m-left_xx-small"
+                                >{label.startBenefitsAppCallNumber}.</a>
+                        </span>
+                    </p>
+                </c-ssp-general-notice-card>
+            </template>
+        </div>
+        <div
+            if:true={basedOnMedicaidType}
+            class="sspHealthConditionEmergencyContainer"
+        >
+            <div
+                class="ssp-healthConditionHeaderText ssp-MarginVertcalThirty ssp-fontFamily_popinBold ssp-color_blueAlpha"
+            >
+                {label.sspHealthConditionEmergencyTitle}
+            </div>
+            <div class="ssp-healthConditionHr ssp-bg_monoAlpha"></div>
+            <div
+                if:true={basedOnMedicaidType}
+                class="slds-grid slds-wrap slds-size_1-of-1 ssp-MarginVertcalThirty"
+            >
+                <c-ssp-base-component-input-date
+                    data-id="BeginDate__c"
+                    class="ssp-applicationInputs ssp-healthConditionDate slds-large-size_1-of-1 slds-size_1-of-1"
+                    label={label.sspHealthConditionEmergencyQuestionOne}
+                    value={emergencyBeginDateReturn}
+                    field-name="EmergencyBeginDate__c"
+                    entity-name="SSP_Member__c"
+                    meta-list={metaData}
+                    onchange={handleEmergencyBeginDate}
+                    disabled={healthConditionVerified}
+                    time-travel-current-date={timeTravelDate}
+                >
+                </c-ssp-base-component-input-date>
+                <div class="ssp-color_redOmega" role="alert" aria-atomic="true" if:true={basedOnMedicaidType}>
+                    {sOverlappingDateErrorMsg}
+                </div>
+            </div>            
+            <div
+                if:true={basedOnMedicaidType}
+                class="slds-grid slds-wrap slds-size_1-of-1 ssp-MarginVertcalThirty"
+            >
+                <c-ssp-base-component-input-date
+                    data-id="EndDate__c"
+                    class="ssp-applicationInputs ssp-healthConditionDate slds-large-size_1-of-1 slds-size_1-of-1"
+                    label={label.sspHealthConditionEmergencyQuestionTwo}
+                    value={emergencyEndDateReturn}
+                    field-name="EmergencyEndDate__c"
+                    entity-name="SSP_Member__c"
+                    meta-list={metaData}
+                    onchange={handleEmergencyEndDate}
+                    time-travel-current-date={timeTravelDate}
+                >
+                </c-ssp-base-component-input-date>
+                <div class="ssp-color_redOmega" role="alert" aria-atomic="true" if:true={basedOnMedicaidType}>
+                    {sOverlappingDateErrorMsg}
+                </div>
+            </div>            
+        </div>
+        <template if:true={basedOnProgramType}>
+            <div class="sspHealthConditionEmergencyContainer">
+                <div
+                    class="ssp-healthConditionHeaderText ssp-fontFamily_popinBold ssp-color_blueAlpha"
+                >
+                    {label.sspHealthConditionRecoveryTitle}
+                </div>
+                <div class="ssp-healthConditionHr ssp-bg_monoAlpha"></div>
+                <div
+                    class="slds-grid slds-wrap slds-size_1-of-1 ssp-MarginVertcalThirty"
+                >
+                    <c-ssp-base-component-input-date
+                        data-id="recoveryDate"
+                        class="ssp-applicationInputs ssp-healthConditionDate slds-large-size_1-of-1 slds-size_1-of-1"
+                        label={label.sspHealthConditionRecoveryQuestionOne}
+                        value={recoveryDateReturn}
+                        field-name="RecoveryDate__c"
+                        entity-name="SSP_Member__c"
+                        meta-list={metaData}
+                        onchange={handleRecoveryDate}
+                        time-travel-current-date={timeTravelDate}
+                    >
+                    </c-ssp-base-component-input-date>
+                </div>
+                <div
+                    class="slds-grid slds-wrap slds-size_1-of-1 ssp-MarginVertcalThirty"
+                >
+                    <c-ssp-base-component-input-toggle
+                        label={label.sspHealthConditionRecoveryQuestionTwo}
+                        class="ssp-applicationInputs slds-large-size_1-of-1 slds-size_1-of-1"
+                        onchange={toggleHealthConditionOption}
+                        field-name="IsOnSickLeaveToggle__c"
+                        entity-name="SSP_Member__c"
+                        meta-list={metaData}
+                        options={optList}
+                        value={toggleIsOnSickLeave}
+                    >
+                    </c-ssp-base-component-input-toggle>
+                </div>
+                <template if:true={isTrueSickLeave}>
+                    <div
+                        class="slds-grid slds-wrap slds-size_1-of-1 ssp-MarginVertcalThirty"
+                    >
+                        <c-ssp-base-component-input-date
+                            data-id="returnDate"
+                            class="ssp-applicationInputs ssp-healthConditionDate slds-large-size_1-of-1 slds-size_1-of-1"
+                            label={label.sspHealthConditionRecoveryQuestionThree}
+                            value={returnToWorkDateReturn}
+                            field-name="ReturnToWorkDate__c"
+                            entity-name="SSP_Member__c"
+                            meta-list={metaData}
+                            onchange={handleReturnDate}
+                            time-travel-current-date={timeTravelDate}
+                        >
+                        </c-ssp-base-component-input-date>
+                    </div>
+                </template>
+            </div>
+        </template>
+    </div>
+    <!-- CD2 2.5 Security Role Matrix. -->
+    <template if:true={showAccessDeniedComponent}>
+        <c-ssp-access-denied></c-ssp-access-denied>
+    </template>
+</template>

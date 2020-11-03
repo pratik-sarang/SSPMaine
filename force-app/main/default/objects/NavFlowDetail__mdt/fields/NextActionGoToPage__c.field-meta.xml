@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NextActionGoToPage__c</fullName>
+    <description>Used to determine which page to load when next button is clicked. Assume the following example:
+Current navigation flow status : CRCRR
+Current page is the second page.
+
+If this field value is &apos;Required&apos; then clicking next button will skip page 3 since it already completed and will load page 4.
+If this field value is &apos;Completed&apos; then clicking next button will load page 3.
+
+ If &apos;Required&apos; then next action will load the next required page. If the immediate next page is already completed then it will be skipped.</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Used to determine which page to load when next button is clicked. Assume the following example:
+Current navigation flow status : CRCRR
+Current page is the second page.
+
+If value is &apos;Required&apos; then next button will skip page 3 and will load page 4.</inlineHelpText>
+    <label>Next Action Go To Page</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Required</fullName>
+                <default>true</default>
+                <label>Required</label>
+            </value>
+            <value>
+                <fullName>Completed</fullName>
+                <default>false</default>
+                <label>Completed</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

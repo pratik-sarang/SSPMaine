@@ -1,0 +1,151 @@
+.kynect-hpcard-container {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 0px 0px 40px 40px;
+}
+
+.kynect-hp-card-header {
+  height: 200px;
+}
+
+.kynect-card-title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2.75rem;
+  line-height: 2.75rem;
+  position: absolute;
+  left: 6%;
+  top: 10%;
+  width: 67%;
+  margin-top: -1.25rem;
+}
+
+.kynect-hpcard-img {
+  position: relative;
+  left: 69%;
+  width: 33%;
+  top: -98px;
+}
+
+.kynect-hpcard-body {
+  text-align: left;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.25rem;
+  line-height: 2.25rem;
+}
+
+.kynect-cardButton {
+  margin-top: auto;
+}
+
+@media only screen and (max-width: 420px) {
+  .kynect-hp-card-header {
+    position: relative;
+    height: 33%;
+  }
+
+  .kynect-card-title {
+    position: absolute;
+    left: 10%;
+    top: 30%;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2.25rem;
+    line-height: 2.25rem;
+  }
+
+  .kynect-hpcard-img {
+    position: relative;
+    left: 67%;
+    width: 33%;
+    top: -65px;
+  }
+
+  .kynect-hpcard-body {
+    font-size: 1rem;
+    line-height: 1rem;
+  }
+}
+
+@media only screen and (min-width: 420px) and (max-width: 620px) {
+  .kynect-hpcard-img {
+    position: relative;
+    left: 75%;
+    width: 25%;
+    top: -83px;
+  }
+
+  .kynect-card-title {
+    left: 5%;
+  }
+
+  .kynect-hp-card-header {
+    height: 150px;
+  }
+
+  .kynect-hpcard-body {
+    font-size: 1rem;
+    line-height: 1rem;
+  }
+}
+
+@media only screen and (min-width: 620px) and (max-width: 800px) {
+  .kynect-hpcard-img {
+    position: relative;
+    left: 85%;
+    width: 15%;
+    top: -86px;
+  }
+
+  .kynect-card-title {
+    left: 5%;
+  }
+
+  .kynect-hp-card-header {
+    height: 175px;
+  }
+
+  .kynect-hpcard-body {
+    font-size: 1rem;
+    line-height: 1rem;
+  }
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1024px) {
+  .kynect-hpcard-img {
+    position: relative;
+    left: 64%;
+    width: 36%;
+    top: -78px;
+  }
+
+  .kynect-card-title {
+    left: 7%;
+    top: 7%;
+    font-size: 2.25rem;
+    line-height: 2.25rem;
+  }
+
+  .kynect-hpcard-body {
+    font-size: 1rem;
+    line-height: 1rem;
+  }
+
+  .kynect-cardButton {
+    font-size: 1.25rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1200px) {
+  .kynect-hpcard-img {
+    position: relative;
+    left: 76%;
+    width: 25%;
+    top: -65px;
+  }
+}

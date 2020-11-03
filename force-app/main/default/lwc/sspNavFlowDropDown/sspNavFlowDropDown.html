@@ -1,0 +1,43 @@
+<template>
+    <template if:true={retExp1}>
+        <div class="ssp-navFlowDropdownCon">
+            <select
+                name="select1"
+                onchange={onPageSelect}
+                aria-label="navFlowDropdown"
+                class="selVal ssp-dropdownMenu ssp-sectionDropdownSelect ssp-bg_whiteAlpha"
+            >
+                <template for:each={pageOptionsValue} for:item="option">
+                    <template key={option.key} if:true={retExp2}>
+                        <option
+                            class="ssp-dropdownMenuOptions"
+                            key={option.key}
+                            selected
+                            value={option.value}
+                        >
+                            {option.key}
+                        </option>
+                    </template>
+                    <template key={option.key} if:true={retExp3}>
+                        <option
+                            class="ssp-dropdownMenuOptions"
+                            key={option.key}
+                            value={option.value}
+                            >{option.key}
+                        </option>
+                    </template>
+                    <template key={option.key} if:true={retExp4}>
+                        <option
+                            class="ssp-dropdownMenuOptions"
+                            key={option.key}
+                            disabled
+                            value={option.value}
+                        >
+                            {option.key}
+                        </option>
+                    </template>
+                </template>
+            </select>
+        </div>
+    </template>
+</template>

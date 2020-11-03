@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Executeforallchanges__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This field is used to indicate whether Trigger code needs to run for any change on the profile or not. If not selected by default it executes only on profile change at user level.</description>
+    <externalId>false</externalId>
+    <label>Execute for all changes?</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

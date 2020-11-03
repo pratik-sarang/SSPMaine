@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Source__c</fullName>
+    <description>Indicates whether the source of referral is Added by Resident, Suggested by Partner or Suggested by System</description>
+    <externalId>false</externalId>
+    <label>Source</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Added by Resident</fullName>
+                <default>false</default>
+                <label>Added by Resident</label>
+            </value>
+            <value>
+                <fullName>Suggested by Partner</fullName>
+                <default>false</default>
+                <label>Suggested by Partner</label>
+            </value>
+            <value>
+                <fullName>Suggested by System</fullName>
+                <default>false</default>
+                <label>Suggested by System</label>
+            </value>
+            <value>
+                <fullName>Frequently Paired Together</fullName>
+                <default>false</default>
+                <label>Frequently Paired Together</label>
+            </value>
+            <value>
+                <fullName>Related Services</fullName>
+                <default>false</default>
+                <label>Related Services</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

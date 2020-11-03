@@ -1,0 +1,66 @@
+a:focus {
+    outline: none;
+}
+a {
+    text-decoration: underline;
+}
+.ssp-nextStepUpdate,
+.ssp-benefitsApp {
+    font-size: 1rem;
+}
+
+.ssp-topHeader {
+    font-size: 2.625rem;
+    line-height: 3rem;
+    padding-bottom: 30px;
+    margin-bottom: 15px;
+}
+.ssp-footerContainer {
+    margin-top: 100px;
+    text-align: right;
+}
+.ssp-backgroundImage {
+    position: absolute;
+    right: 0;
+    height: 122px;
+    width: auto;
+    top: 90px;
+}
+.ssp-desktopBackgroundImage {
+    display: none;
+}
+.ssp_headingBar {
+    margin-bottom: 30px;
+}
+@media only screen and (min-width: 769px) {
+    .ssp_headingBar {
+        margin-bottom: 60px;
+    }
+    .ssp-mobileBackgroundImage {
+        display: none;
+    }
+    .ssp-desktopBackgroundImage {
+        display: block;
+        height: 243px;
+    }
+    .ssp-nextStepUpdate {
+        width: 770px;
+    }
+    .ssp-topHeader {
+       padding-bottom: 30px;
+       margin-bottom: 30px;
+    }
+    .ssp-innerContainer{
+        width: 95%;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .ssp-topHeader {
+        font-size: 1.5rem;
+        line-height: 1.875rem;
+    }
+    div.ssp-horizantalPadding {
+        padding-left: 30px;
+        padding-right:30px;
+    }
+}

@@ -1,0 +1,295 @@
+<!--
+* name : sspTaxFilingDetails
+* @description :This component is used for Tax Filing Details.
+* @author : Kyathi Kanumuri
+* @date : 02/21/2020
+* MODIFICATION LOG:
+* DEVELOPER             DATE            DESCRIPTION
+* ________________________________________________________________________________
+* Kyathi                02/21/2020      Creating HTML Structure
+* Karthik Gulla         02/21/2020      Backend Integration
+-->
+<template>
+    <!--2.5 Security Role Matrix and Program Access-->
+    <template if:true={showAccessDeniedComponent}>
+        <c-ssp-access-denied></c-ssp-access-denied>
+    </template>
+    
+    <template if:true={showSpinner}>
+        <c-ssp-spinner></c-ssp-spinner>
+    </template>
+    <template if:true={showTMemberModal}>
+        <c-ssp-t-member-modal
+        popup-content={tMemberPopupContent}
+        ></c-ssp-t-member-modal>
+    </template>
+    <template if:true={openModel}>
+        <c-ssp-detailed-information-modal
+            reference={reference}
+            header-value={warningModalHeading}
+            open-model={openModel}
+            onclosemodal={closeWarningModal}
+        >
+            <span slot="contentSlot">
+                <p class="slds-m-bottom_medium">
+                    {warningModalContent}
+                </p>
+            </span>
+            <div slot="Footer" class="slds-col ssp-adding-income-btns">
+                <lightning-button
+                    variant="brand"
+                    label={warningModalButton}
+                    class="ssp-button_brand"
+                    onclick={closeWarningModal}
+                >
+                </lightning-button>
+            </div>
+        </c-ssp-detailed-information-modal>
+    </template>
+    <!--Added showContents check - 2.5	Security Role Matrix and Program Access-->
+    <template if:true={showContents}>
+        <template if:true={performTaxFilingDataInitiate}>
+            <div class="ssp-bodyContainer ssp-taxFilingContainer ssp-fullWidthDetailsForm">
+                <div class="ssp-errorToast" if:true={hasSaveValidationError}>
+                    <c-ssp-toast
+                        ssp-toast-title-val={label.toastErrorText}
+                        show-error-toast={trueValue}
+                        onhidetoast={hideToast}
+                    ></c-ssp-toast>
+                </div>
+                <div class="ssp-taxFilingCurrentYear">
+                    <div class="ssp-taxFilingCurrentYearCheckbox">
+                        <c-ssp-base-component-input-radio-group
+                            class="ssp-taxFilingDetailInputs"
+                            label={taxFilingDetailsTaxThisYearLabel}
+                            options={taxFilingStatusOptionsCurrentYear}
+                            data-year="current"
+                            value={currentMemberTaxFilingData.strTaxFilingStatusCurrentYear}
+                            data-id="TaxFilerStatusCurrentYear__c"
+                            entity-name="SSP_Member__c"
+                            field-name="TaxFilerStatusCurrentYear__c"
+                            meta-list={MetaDataListParent}
+                            onchange={handleTaxFilingStatusChange}
+                            is-help-text={trueValue}
+                            help-text-content={label.sspTaxFilingStatusHelpTextCurrent}
+                            disabled={isDependentTaxFiler}
+                        >
+                        </c-ssp-base-component-input-radio-group>
+                    </div>
+                </div>
+
+                <template
+                    if:true={taxFilingDetails.showDependentsOfSection.currentYear}
+                >
+                    <div class="ssp-taxFilingDependentOf">
+                        <div class="ssp-taxFilingDependentOfCheckbox">
+                            <c-ssp-base-component-input-radio-group
+                                class="ssp-taxFilingDetailInputs"
+                                label={taxFilingDetailsDependentOfLabel}
+                                value={currentMemberTaxFilingData.strTaxFilerMemberCurrentYear}
+                                data-id="TaxFilerMemberCurrent__c"
+                                entity-name="SSP_Member__c"
+                                field-name="TaxFilerMemberCurrent__c"
+                                meta-list={MetaDataListParent}
+                                options={householdClaimantMembersCurrentYear}
+                                disabled={isDependentTaxFiler}
+                            ></c-ssp-base-component-input-radio-group>
+                        </div>
+                    </div>
+                </template>
+                <template if:true={showClaimantDependentError}>
+                    <span class="ssp-showError ssp-color_redOmega">{claimantDependentValidationMessage}</span>
+                </template>
+
+                <template
+                    if:true={taxFilingDetails.showClaimingDependentsSection.currentYear}
+                >
+                    <div class="ssp-taxFilingClaimingDependent">
+                        <div class="ssp-taxFilingClaimingDependentToggle">
+                            <c-ssp-base-component-input-toggle
+                                class="ssp-taxFilingDetailInputs"
+                                label={taxFilingDetailsClaimingDependentLabel}
+                                options={yesNoOptions}
+                                value={currentMemberTaxFilingData.taxFilingDetailsClaimingDependentCurrentYear}
+                                data-id="taxFilingDetailsClaimingDependentCurrentYear"
+                                entity-name="SSP_Member__c"
+                                field-name="TaxFilingClaimingCurrent__c"
+                                meta-list={MetaDataListParent}
+                                data-year="current"
+                                onchange={handleTaxFilingClaimingDependentChange}
+                            >
+                            </c-ssp-base-component-input-toggle>
+                            <template if:true={showTCDCYRequiredError}>
+                                <span class="ssp-showError ssp-color_redOmega">{label.sspRequiredMessage}</span>
+                            </template>
+                        </div>
+                        <template
+                            if:true={taxFilingDetails.showDependentsSection.currentYear}
+                        >
+                            <div class="ssp-taxFilingClaimingCheckbox">
+                                <c-ssp-base-component-input-checkbox-group
+                                    class="ssp-taxFilingDetailInputs"
+                                    label={taxFilingDetailsWhichMemberAsDependentLabel}
+                                    value={currentMemberTaxFilingData.taxFilerMembersCurrent}
+                                    options={householdClaimingMembersCurrentYear}
+                                    data-id="TaxFilerMemberCurrent__c"
+                                    entity-name="SSP_Member__c"
+                                    field-name="TaxFilerMemberCurrent__c"
+                                    meta-list={MetaDataListParent}
+                                    data-year="current"
+                                ></c-ssp-base-component-input-checkbox-group>
+                            </div>
+                        </template>
+                        <template for:each={dependentTaxFilingValidatorCurrentErrorMessagesList} for:item="dtfErrorMessage" for:index="dtfIndex">
+                            <span class="ssp-showError ssp-color_redOmega" key={dtfErrorMessage}>{dtfErrorMessage}</span>
+                        </template>
+                    </div>
+                </template>
+
+                <template
+                    if:true={taxFilingDetails.showParentOrSiblingSection.currentYear}
+                >
+                    <div class="ssp-taxFilingDependentOutsideHouseHoldToggle">
+                        <c-ssp-base-component-input-toggle
+                            label={taxFilingDetailsParentOrSiblingLabel}
+                            options={yesNoOptions}
+                            class="ssp-taxFilingDetailInputs"
+                            data-id="HasParentOrSiblingCurrentOutHousehold__c"
+                            value={currentMemberTaxFilingData.strHasParentOrSiblingOutOfHouseholdCurrentYear}
+                            entity-name="SSP_Member__c"
+                            field-name="HasParentOrSiblingCurrentOutHousehold__c"
+                            meta-list={MetaDataListParent}
+                            data-year="current"
+                            onchange={handleParentOrSiblingChange}
+                        ></c-ssp-base-component-input-toggle>
+                    </div>
+                </template>
+                <template if:true={taxFilingDetails.isInOpenEnrollmentPeriod}>
+                    <div class="ssp-taxFilingNextYearToggle">
+                        <c-ssp-base-component-input-toggle
+                            class="ssp-taxFilingDetailInputs"
+                            label={taxFilingDetailsSameNextYearLabel}
+                            data-id="taxFilingDetailsSameNextYear"
+                            entity-name="SSP_Member__c"
+                            field-name="TaxFilingSameNextYear__c"
+                            meta-list={MetaDataListParent}
+                            options={yesNoOptions}
+                            onchange={handleTaxFilingNextYearChange}
+                            value={taxFilingDetailsSameNextYear}
+                        >
+                        </c-ssp-base-component-input-toggle>
+                    </div>
+                    <template if:true={showTCDNYRequiredError}>
+                        <span class="ssp-showError ssp-color_redOmega">{label.sspRequiredMessage}</span>
+                    </template>
+                
+                    <template
+                        if:true={taxFilingDetails.showNextYearTaxFilingDetailsSection}
+                    >
+                        <div class="ssp-taxFilingNextYear">
+                            <div class="ssp-taxFilingNextYearRadio">
+                                <c-ssp-base-component-input-radio-group
+                                    class="ssp-taxFilingDetailInputs"
+                                    label={taxFilingDetailsTaxFilingNextYearLabel}
+                                    options={taxFilingStatusOptions}
+                                    value={currentMemberTaxFilingData.strTaxFilingStatusNextYear}
+                                    data-year="next"
+                                    data-id="TaxFilerStatusNextYear__c"
+                                    entity-name="SSP_Member__c"
+                                    field-name="TaxFilerStatusNextYear__c"
+                                    meta-list={MetaDataListParent}
+                                    onchange={handleTaxFilingStatusChange}
+                                    is-help-text={trueValue}
+                                    help-text-content={label.sspTaxFilingStatusHelpTextNext}
+                                >
+                                </c-ssp-base-component-input-radio-group>
+                            </div>
+
+                            <template
+                                if:true={taxFilingDetails.showDependentsOfSection.nextYear}
+                            >
+                                <div class="ssp-taxFilingDependentOfHousehold">
+                                    <div
+                                        class="ssp-taxFilingDependentOfHouseholdCheckbox"
+                                    >
+                                        <c-ssp-base-component-input-radio-group
+                                            class="ssp-taxFilingDetailInputs"
+                                            label={taxFilingDetailsDependentOfLabel}
+                                            options={householdClaimantMembersNextYear}
+                                            value={currentMemberTaxFilingData.strTaxFilerMemberNextYear}
+                                            data-id="TaxFilerMemberNext__c"
+                                            entity-name="SSP_Member__c"
+                                            field-name="TaxFilerMemberNext__c"
+                                            meta-list={MetaDataListParent}
+                                        ></c-ssp-base-component-input-radio-group>
+                                    </div>
+                                </div>
+                            </template>
+
+                            <template
+                                if:true={taxFilingDetails.showClaimingDependentsSection.nextYear}
+                            >
+                                <div class="ssp-taxFilingHeadOfHouseHoldToggle">
+                                    <c-ssp-base-component-input-toggle
+                                        label={taxFilingDetailsClaimingDependentNextYearLabel}
+                                        options={yesNoOptions}
+                                        data-id="taxFilingDetailsClaimingDependentNextYear"
+                                        value={currentMemberTaxFilingData.taxFilingDetailsClaimingDependentNextYear}
+                                        entity-name="SSP_Member__c"
+                                        field-name="TaxFilingClaimingNext__c"
+                                        meta-list={MetaDataListParent}
+                                        class="ssp-taxFilingDetailInputs"
+                                        data-year="next"
+                                        onchange={handleTaxFilingClaimingDependentChange}
+                                    >
+                                    </c-ssp-base-component-input-toggle>
+                                </div>
+                                <template
+                                    if:true={taxFilingDetails.showDependentsSection.nextYear}
+                                >
+                                    <div class="ssp-taxFilingHeadOfHouseHoldCheckbox">
+                                        <div class="ssp-taxFilingHOHCheckbox">
+                                            <c-ssp-base-component-input-checkbox-group
+                                                class="ssp-taxFilingDetailInputs"
+                                                label={taxFilingDetailsWhichMemberAsDependentLabel}
+                                                value={currentMemberTaxFilingData.taxFilerMembersNext}
+                                                options={householdClaimingMembersNextYear}
+                                                data-id="TaxFilerMemberNext__c"
+                                                data-year="next"
+                                                entity-name="SSP_Member__c"
+                                                field-name="TaxFilerMemberNext__c"
+                                                meta-list={MetaDataListParent}
+                                            ></c-ssp-base-component-input-checkbox-group>
+                                        </div>
+                                    </div>
+                                </template>
+                                <template for:each={dependentTaxFilingValidatorNextErrorMessagesList} for:item="dtfErrorMessage" for:index="dtfIndex">
+                                    <span class="ssp-showError ssp-color_redOmega" key={dtfErrorMessage}>{dtfErrorMessage}</span>
+                                </template>
+                            </template>
+
+                            <template
+                                if:true={taxFilingDetails.showParentOrSiblingSection.nextYear}
+                            >
+                                <div class="ssp-taxFilingOutsideIndividualParent">
+                                    <c-ssp-base-component-input-toggle
+                                        class="ssp-taxFilingDetailInputs"
+                                        label={taxFilingDetailsParentOrSiblingLabel}
+                                        value={currentMemberTaxFilingData.strHasParentOrSiblingOutOfHouseholdNextYear}
+                                        options={yesNoOptions}
+                                        data-id="HasParentOrSiblingNextOutHousehold__c"
+                                        data-year="next"
+                                        entity-name="SSP_Member__c"
+                                        field-name="HasParentOrSiblingNextOutHousehold__c"
+                                        meta-list={MetaDataListParent}
+                                        onchange={handleParentOrSiblingChange}
+                                    ></c-ssp-base-component-input-toggle>
+                                </div>
+                            </template>
+                        </div>
+                    </template>
+                </template>
+            </div>
+        </template>
+    </template>
+</template>

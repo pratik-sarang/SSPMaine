@@ -1,0 +1,47 @@
+.ssp-writtenStatement {
+    margin-top: 30px;
+}
+.ssp-writtenStatementText {
+    font-size: 1rem;
+}
+.ssp-fileUploadContainer {
+    padding-bottom: 29px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.ssp-attachMoreDocumentsText {
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.ssp-cardContainer {
+    margin-top: 5px;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
+
+.ssp-cardSection {
+    margin-bottom: 20px;
+}
+.ssp-documentCard {
+    margin-bottom: 15px;
+}
+.ssp-uploadedDocument {
+    text-decoration: underline;
+}
+.ssp-uploadedDocument:hover {
+    cursor: pointer;
+}
+.ssp-writtenStatementLink {
+    font-size: 0.813rem;
+    text-decoration: underline;
+}
+a:focus {
+    outline: none;
+}
+@media only screen and (min-width: 769px) {
+    .ssp-desktopPaddingRight15 {
+        padding-right: 0.938rem;
+    }
+}

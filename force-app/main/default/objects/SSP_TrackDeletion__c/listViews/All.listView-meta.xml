@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>SSP_Application__c</columns>
+    <columns>SSP_Member__c</columns>
+    <columns>Source__c</columns>
+    <columns>SalesforceId__c</columns>
+    <columns>DCId__c</columns>
+    <columns>ParentDCId__c</columns>
+    <columns>EndDate__c</columns>
+    <columns>EndReason__c</columns>
+    <columns>OtherReason__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All</label>
+    <language>en_US</language>
+</ListView>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This is Resource Engine Consent Page for all community user profiles.</description>
+    <formulas>
+        <name>ConsentText</name>
+        <dataType>String</dataType>
+        <expression>{!$Label.UserConsentText}</expression>
+    </formulas>
+    <formulas>
+        <name>WarningSymbol</name>
+        <dataType>String</dataType>
+        <expression>{!$Label.UserConsentWarning}</expression>
+    </formulas>
+    <interviewLabel>RE Consent Page {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>RE Consent Page</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <screens>
+        <name>Acceptance_of_Consent_Page</name>
+        <label>Acceptance of Consent Page</label>
+        <locationX>304</locationX>
+        <locationY>55</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>Warning</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;color: rgb(5, 5, 5);&quot;&gt;&lt;u&gt;{!WarningSymbol}&lt;/u&gt;&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>ConsentMessage</name>
+            <fieldText>&lt;p&gt;{!ConsentText}&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <start>
+        <locationX>35</locationX>
+        <locationY>55</locationY>
+        <connector>
+            <targetReference>Acceptance_of_Consent_Page</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+</Flow>

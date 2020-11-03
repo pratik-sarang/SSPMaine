@@ -1,0 +1,235 @@
+<!--
+* name 		    : sspIdentityDocumentUpload
+* @description 	: sspIdentityDocumentUpload
+* @author 		: Nikhil Shinde and Prasanth
+* @date 		: 25-06-2020
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+*  
+-->
+
+<template>
+    <div class="ssp-bodyContainer">
+        <div class="ssp-identityUploadHeader">
+            <h1 class=" ssp-fontFamily_popinBold ssp-color_blueAlpha">
+                {label.sspIdentityUploadHeader}
+            </h1>
+        </div>
+        <div class="ssp-identityUploadHr ssp-bg_monoAlpha"></div>
+        <div class="slds-grid slds-wrap">
+            <template if:true={showDetailsSpinner}>
+                <c-ssp-spinner></c-ssp-spinner>
+            </template>
+            <div class="ssp-errorToast" if:true={hasSaveValidationError}>
+                <c-ssp-toast
+                    ssp-toast-title-val={toastErrorText}
+                    ssp-toast-additional-info={toastAdditionalInfo}
+                    show-error-toast={trueValue}
+                    onhidetoast={hideToast}
+                    condition={toastCondition}
+                ></c-ssp-toast>
+            </div>
+            <div class="slds-m-bottom_x-large ssp-attestCheckBox">
+                <c-ssp-base-component-input-checkbox
+                    class="ssp-identityCheckBox"
+                    data-id=""
+                    field-name=""
+                    entity-name=""
+                    meta-list={MetaDataListParent}
+                    label={label.sspIAttest}
+                    value={isIAttest}
+                    onchange={handleCheckboxChange}
+                    title={label.sameAddressInfoAltText}
+                >
+                </c-ssp-base-component-input-checkbox>
+            </div>
+            <template if:true={restrictAddDocument}>
+                <div
+                    class="slds-col slds-size_1-of-1 ssp-genericFileUploadSubContainer"
+                >
+                    <div
+                        class="slds-grid slds-wrap slds-size_1-of-2 slds-max-medium-size_1-of-1 ssp-fieldsContainer"
+                    >
+                        <c-ssp-base-component-input-picklist
+                            class="ssp-formOfProofInput slds-size_1-of-1 ssp-desktopPaddingRight15"
+                            label={label.sspFormOfProof}
+                            title={label.sspFormOfProofAlternateText}
+                            option={identityFormOfProofOptions}
+                            selected-value={selectedFormOfProof}
+                            value={selectedFormOfProof}
+                            is-help-text={trueValue}
+                            help-text-content={label.sspFormOfProofHelpText}
+                            onhandlepicklistchange={onChangeFormOfProof}
+                            has-truncated-labels="true"
+                        >
+                        </c-ssp-base-component-input-picklist>
+                    </div>
+                </div>
+                <div
+                    if:true={isWrittenStatementSelected}
+                    class="ssp-writtenStatement"
+                >
+                    <p
+                        class="ssp-fontFamily_ArvoRegular ssp-color_monoOmega ssp-writtenStatementText slds-m-bottom_xx-small"
+                    >
+                        {label.sspDownloadStatement}
+                    </p>
+                    <p>
+                        <a
+                            tabindex="0"
+                            title={label.sspWrittenStatementTemplateTitle}
+                            onclick={openWrittenStatement}
+                            onkeydown={openWrittenStatement}
+                            class="ssp-writtenStatementLink ssp-fontFamily_popinBold ssp-color_blueAlpha"
+                        >
+                            {label.sspWrittenStatementTemplate}
+                        </a>
+                    </p>
+                </div>
+                <div class="slds-col slds-size_1-of-1">
+                    <div
+                        class="ssp-fileUploadContainer"
+                    >
+                        <lightning-input
+                            name="file-upload-input"
+                            onchange={onFileChange}
+                            type="file"
+                            label={label.sspAddAdditionalDocument}
+                            variant="label-hidden"
+                            title={sspSelectDocumentToUploadTitle}
+                            class={statusClassUploadInput}
+                            disabled={isDisableUploadInput}
+                        ></lightning-input>
+                        <div
+                            if:true={showUploadError}
+                            role="alert"
+                            aria-atomic="true"
+                            key={error}
+                            class="ssp-showError ssp-color_redAlpha"
+                        >
+                            {errorFileUploadErrorAtField}
+                        </div>
+                        <div
+                            if:true={showFileNotUploadedError}
+                            role="alert"
+                            aria-atomic="true"
+                            key={error}
+                            class="ssp-showError ssp-color_redAlpha"
+                        >
+                            {label.sspRequiredValidationMsg}
+                        </div>
+                    </div>
+                </div>
+            </template>
+            <template if:true={showUploadedDocList}>
+                <div
+                    class="slds-col slds-size_1-of-1 ssp-cardContainer"
+                >
+                    <template for:each={uploadedDocumentList} for:item="aDoc">
+                        <div key={aDoc.fileId} class="ssp-documentCard">
+                            <c-ssp-selection-card-with-remove-icon
+                                onremove={deleteTheFile}
+                                card-id={aDoc.fileId}
+                                data-item-id={aDoc.fileId}
+                                obj-card={aDoc.fileId}
+                                hide-buttons={trueValue}
+                                display-checkmark={trueValue}
+                                remove-modal-heading={label.sspRemoveDocumentModalHeader}
+                                remove-alt-text={label.sspRemoveDocumentTitle}
+                                remove-modal-content={label.sspRemoveDocumentModalContent}
+                                delete-button-label={label.sspRemoveDocumentModalHeader}
+                                delete-button-title={label.sspRemoveDocumentButtonTitle}
+                                cancel-button-title={label.cancelButtonTitle}
+                            >
+                                <div
+                                    slot="cardContent"
+                                    class="ssp-selectionCardTitle"
+                                >
+                                    <p
+                                        class="slds-m-left_x-small  ssp-color_monoBody ssp-fontFamily_popinBold ssp-word-break-all"
+                                    >
+                                        {aDoc.proofName}
+                                    </p>
+                                    <p
+                                        slot="cardContent"
+                                        class=" ssp-selectionCardTitle ssp-color_monoBody ssp-fontFamily_popinBold slds-m-left_x-small ssp-word-break-all"
+                                    >
+                                        <a
+                                            tabindex="0"
+                                            data-document-name={aDoc.fileName}
+                                            data-content-id={aDoc.contentDocumentId}
+                                            data-extension={aDoc.fileType}
+                                            onclick={openFile}
+                                            onkeydown={openFile}
+                                            class="ssp-uploadedDocument ssp-fontFamily_popinBold ssp-color_blueAlpha"
+                                            title={aDoc.selectDocumentTitle}
+                                            >{aDoc.fileName}</a
+                                        >
+                                    </p>
+                                </div>
+                            </c-ssp-selection-card-with-remove-icon>
+                        </div>
+                    </template>
+                </div>
+            </template>
+
+            <div
+                class="slds-col slds-size_1-of-1 ssp-resourceSummary_container ssp-attachDocumentsContainer ssp-genericUploadContainer"
+            >
+                <!--<lightning-button
+                    name="addDoc"
+                    class="ssp-button_base ssp-addResourceButton"
+                    label={label.sspUploadDocumentButton}
+                    title={label.sspUploadAlternateText}
+                    onclick={handleUpload}
+                    disabled={restrictAddDocument}
+                >
+                </lightning-button> -->
+                <div
+                    if:true={showFileNotUploadedTileHiddenError}
+                    role="alert"
+                    aria-atomic="true"
+                    key={error}
+                    class="ssp-showError ssp-color_redAlpha"
+                >
+                    {label.sspRequiredValidationMsg}
+                </div>
+            </div>
+        </div>
+        <div
+            class="ssp-button-container slds-grid slds-wrap slds-grid_align-center slds-m-bottom_xx-large slds-m-top_x-large"
+        >
+            <div
+                class="slds-col ssp-footerBtnBackSave slds-size_1-of-2 slds-small-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-m-bottom_xx-large"
+            >
+                <lightning-button
+                    label={label.sspExitButton}
+                    onclick={handleExitButton}
+                    variant="brand"
+                    class="dd-slds-nav_btn-next ssp-button_base"
+                    title={label.sspBackTitle}
+                ></lightning-button>
+            </div>
+            <div
+                class="slds-col ssp-footerBtnNext slds-text-align_right slds-size_1-of-2 slds-small-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-m-bottom_xx-large"
+            >
+                <!--390440-->
+                <lightning-button
+                    label={label.sspNextButton}
+                    onclick={checkUploadAtNext}
+                    variant="netural"
+                    class="dd-slds-nav_btn-next ssp-button_neutral"
+                    title={label.sspNextAltText}
+                ></lightning-button>
+            </div>
+        </div>
+        <c-ssp-match-already-receiving-benefits-modal
+            open-modal={programRemoved}
+            application-id={appId}
+            final-program-list-size={finalProgramListSize}
+            member-individual-id={memberIndividualId}
+        >
+        </c-ssp-match-already-receiving-benefits-modal>
+    </div>
+</template>

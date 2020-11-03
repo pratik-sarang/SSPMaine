@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BenefindArticles</fullName>
+    <active>true</active>
+    <description>Record Type for SSP Help and FAQ&apos;s</description>
+    <label>Benefind Articles</label>
+    <picklistValues>
+        <picklist>Help_Category__c</picklist>
+        <values>
+            <fullName>BA_Application Assisters</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BA_Application Intake</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BA_Application Results and Next Steps</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BA_Child Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BA_Document Center</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BA_General kynect benefits Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BA_Kentucky Online Gateway</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BA_Kynect benefits acronyms</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BA_MCO Selection</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BA_Other programs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BA_Presumptive Eligibility %28PE%29 and BCCTP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BA_Printable Forms</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BA_Report a Change</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BA_Resident Dashboard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contact us</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

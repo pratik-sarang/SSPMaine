@@ -1,0 +1,143 @@
+<!--
+* name 		    : sspSnapAddressInformation
+* @description 	: Page for Address in short snap.
+* @author 		: Chirag Garg,Shivam
+* @date 		: 4/23/2020
+* MODIFICATION LOG:
+* DEVELOPER                     DATE                               DESCRIPTION
+* ---------------------------------------------------------------------------------------------
+* DeveloperName	      MM/DD/YYYY	      A Brief Description 
+                  about the Change
+-->
+
+<template>
+    <template if:true={spinnerOn}>
+        <c-ssp-spinner></c-ssp-spinner>
+    </template>
+    <main role="main" class="ssp-snapAddressInformation">
+        <div class="ssp-shortHeading slds-p-horizontal_xx-large ssp-mobileHorizontalPadding ssp-bg_appHeaderGradient slds-grid slds-wrap slds-grid_vertical-align-center">
+            <div class="ssp-container_width slds-grid slds-wrap">
+                <p class="ssp-fontFamily_popinBold ssp-appCardOrangeTitle ssp-color_monoBody">
+                {label.sspShortSNAPApplication}
+                </p>
+            </div>
+        </div>
+        <div class="ssp-errorToast" if:true={hasSaveValidationError}>
+            <c-ssp-toast
+                ssp-toast-title-val={label.toastErrorText}
+                show-error-toast={trueValue}
+                onhidetoast={hideToast}
+            ></c-ssp-toast>
+        </div>
+        <template if:true={isVisible}>
+            <div class="ssp-bodyContainer ssp-snapAddressInformationContainer">
+                <h1
+                    class="ssp-fontFamily_popinBlack ssp-color_blueAlpha ssp-headingSignaturePage ssp-marginHeading"
+                >
+                    {label.sspAddressInformation}
+                </h1>
+                <div
+                    class="ssp-margin-bottom_large ssp-bg_monoAlpha ssp-greyUnderline"
+                ></div>
+                <div
+                    class="ssp-margin-bottom_large ssp-fontFamily_ArvoRegular ssp-color_monoBody ssp-fontSize"
+                >
+                    {label.sspShortSnapAddressContent}
+                </div>
+
+                <div>
+                    <div class="slds-grid slds-wrap">
+                        <c-ssp-base-component-input-toggle
+                            label={label.sspShortSnapAddressContent2}
+                            options={toggleButtonOptions}
+                            onchange={handleKentuckyResidentChange}
+                            value={applicationObject.ShortSnapIsIntentionToResideInKentucky__c}
+                            class="ssp-snapAddressInput"
+                            data-id="ShortSnapIsIntentionToResideInKentucky__c"
+                            field-name="ShortSnapIsIntentionToResideInKentucky__c"
+                            entity-name="SSP_Application__c"
+                            meta-list={metaDataListParent}
+                        >
+                        </c-ssp-base-component-input-toggle>
+                    </div>
+                </div>
+                <div if:true={showPhysicalAddress} class="ssp-marginTopSixty">
+                    <div class="slds-grid slds-wrap">
+                        <c-ssp-base-component-input-toggle
+                            class="ssp-address-input ssp-snapAddressInput"
+                            label={label.sspShortSnapAddressContent3}
+                            value={applicationObject.ShortSnapIsFixedAddress__c}
+                            onchange={togglePhysicalMailingAddress}
+                            options={toggleButtonOptions}
+                            data-id="ShortSnapIsFixedAddress__c"
+                            field-name="ShortSnapIsFixedAddress__c"
+                            entity-name="SSP_Application__c"
+                            meta-list={metaDataListParent}
+                        >
+                        </c-ssp-base-component-input-toggle>
+                    </div>
+                    <div if:true={showAddressComp} class="ssp-addressmarginSpace">
+                        <c-ssp-short-s-n-a-p-address-auto-complete
+                            class="ssp-address1"
+                            record={addressRecord}
+                            field-map={fieldMap}
+                            meta-list={metaDataListParent}
+                        ></c-ssp-short-s-n-a-p-address-auto-complete>
+                    </div>
+                </div>
+                <div class="ssp-marginTopSixty">
+                    <div
+                        if:true={showDifferentMailingAddress}
+                        class="slds-grid slds-wrap"
+                    >
+                        <c-ssp-base-component-input-toggle
+                            class="ssp-address-input ssp-snapAddressInput"
+                            label={label.sspSnapDifferentMailingAddress}
+                            value={applicationObject.ShortSnapIsMailingAddress__c}
+                            onchange={toggleIsMailingAddressDifferent}
+                            options={toggleButtonOptions}
+                            data-id="ShortSnapIsMailingAddress__c"
+                            field-name="ShortSnapIsMailingAddress__c"
+                            entity-name="SSP_Application__c"
+                            meta-list={metaDataListParent}
+                        >
+                        </c-ssp-base-component-input-toggle>
+                    </div>
+                    <template if:true={showMailingAddressField}>
+                        <div class="ssp-addressmarginSpace">
+                            <c-ssp-short-s-n-a-p-address-auto-complete
+                                class="ssp-address2"
+                                record={addressRecord}
+                                field-map={mailingAddFieldMap}
+                                meta-list={metaDataListParent}
+                            ></c-ssp-short-s-n-a-p-address-auto-complete>
+                        </div>
+                    </template>
+                </div>
+                <div
+                    class="slds-grid slds-wrap slds-grid_align-spread ssp-add-auth-rep-btns slds-grid_reverse ssp-marginTopHundred"
+                >
+                    <lightning-button
+                        label={label.sspNext}
+                        title={label.sspNextButtonAltText}
+                        class="ssp-button_neutral ssp-authorize-btn"
+                        onclick={initSave}
+                    ></lightning-button>
+
+                    <lightning-button
+                        label={label.sspExitButton}
+                        title={label.sspExitShortSNAPApplication}
+                        class="ssp-button_base ssp-cancel-btn"
+                        onclick={handleExit}
+                    ></lightning-button>
+                    <lightning-button
+                        label={label.sspBack}
+                        title={label.sspGoBackPreviousPage}
+                        class="ssp-button_base ssp-cancel-btn"
+                        onclick={handleBack}
+                    ></lightning-button>
+                </div>
+            </div>
+        </template>
+    </main>
+</template>

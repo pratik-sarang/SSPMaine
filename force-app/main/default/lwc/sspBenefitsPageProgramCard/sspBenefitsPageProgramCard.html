@@ -1,0 +1,349 @@
+<template>
+    <template if:true={showSpinner}>
+        <c-ssp-spinner></c-ssp-spinner>
+    </template>
+    
+    <!-- PROGRAM CARD -->
+    <div class="slds-grid slds-wrap ssp-bg_monoAlpha ssp-leftMargin">
+        <div class="slds-m-top_x-large ssp-CardOuterDOM slds-size_1-of-1">
+            <div
+                class="ssp-programText slds-m-bottom_medium ssp-fontFamily_popinBold ssp-color_blueAlpha slds-m-bottom_medium"
+            >
+                {programName}
+            </div>
+            <div class="ssp-card slds-m-bottom_x-large">
+                <div
+                    class="ssp-leftpadding30 slds-grid slds-wrap slds-p-top_medium"
+                >
+                    <div
+                        class="ssp-fontFamily_popinBold slds-size_1-of-1 ssp-infoText"
+                    >
+                        {individualName}
+                    </div>
+                    <div class="slds-grid slds-wrap slds-size_1-of-1">
+                        <div if:true={showGreenDisc} class="ssp-Disc"></div>
+                        <div if:true={showRedDisc} class="ssp-redDisc"></div>
+                        <div
+                            if:true={showOrangeDisc}
+                            class="ssp-orangeDisc"
+                        ></div>
+                        <div
+                            class="ssp-infoText13 ssp-fontFamily_popinRegular ssp-color_monoOmega"
+                        >
+                            {programStatus}
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-wrap slds-p-bottom_medium">
+                        <template if:true={showBenefitPeriod}>
+                            <div class="ssp-cardElement">
+                                <div
+                                    class="ssp-infoText13 ssp-fontFamily_popinRegular ssp-color_monoOmega slds-size_1-of-1"
+                                >
+                                    {labels.sspBenefitPeriod}
+                                </div>
+                                <div
+                                    class="ssp-infoText ssp-renewalText ssp-color_monoBody ssp-fontFamily_popinRegular"
+                                >
+                                    {benefitPeriod}
+                                </div>
+                            </div>
+                        </template>
+
+                        <!-- Only for CC -->
+                        <div if:true={showCoPay} class="ssp-cardElement">
+                            <div
+                                class="ssp-infoText13 ssp-fontFamily_popinRegular ssp-color_monoOmega slds-size_1-of-1"
+                            >
+                                {labels.sspFamilyAssessedCoPay}
+                            </div>
+                            <div class="slds-size_1-of-1 slds-grid slds-wrap">
+                                <template
+                                    for:each={coPayMonthVSAmount}
+                                    for:item="item"
+                                >
+                                    <div
+                                        key={month}
+                                        class="ssp-fontFamily_popinBold ssp-color_greenAlpha ssp-months ssp-infoText"
+                                    >
+                                        {item.month}
+                                    </div>
+                                    <div
+                                        key={amounts}
+                                        class="ssp-infoText ssp-renewalText ssp-color_monoBody ssp-fontFamily_popinRegular ssp-amounts ssp-infoText"
+                                    >
+                                        {labels.sspDollarSign}{item.amount}
+                                    </div>
+                                </template>
+                            </div>
+                        </div>
+
+                        <div
+                            if:true={showCoPayEffectiveDate}
+                            class="ssp-cardElement"
+                        >
+                            <div
+                                class="ssp-infoText13 ssp-fontFamily_popinRegular ssp-color_monoOmega slds-size_1-of-1"
+                            >
+                                {labels.sspCoPayEffectiveFrom}
+                            </div>
+                            <div
+                                class="ssp-infoText ssp-renewalText ssp-color_monoBody ssp-fontFamily_popinRegular"
+                            >
+                                {coPayEffectiveDate}
+                            </div>
+                        </div>
+
+                        <div
+                            if:true={showEBTFundLoadDate}
+                            class="ssp-cardElement"
+                        >
+                            <div
+                                class="ssp-infoText13 ssp-fontFamily_popinRegular ssp-color_monoOmega slds-size_1-of-1"
+                            >
+                                {labels.sspCardFundsLoadedOn}
+                            </div>
+                            <div
+                                class="ssp-infoText ssp-renewalText ssp-color_monoBody ssp-fontFamily_popinRegular"
+                            >
+                                {EBTFundLoadDate}
+                            </div>
+                        </div>
+
+                        <div
+                            if:true={showRenewalDueDate}
+                            class="ssp-cardElement"
+                        >
+                            <div
+                                class="ssp-infoText13 ssp-fontFamily_popinRegular ssp-color_monoOmega slds-size_1-of-1"
+                            >
+                                {labels.sspRenewalDate}
+                            </div>
+                            <div
+                                class="ssp-infoText ssp-renewalText ssp-color_monoBody ssp-fontFamily_popinRegular"
+                            >
+                                {renewalDueDate}
+                            </div>
+                        </div>
+                        <div if:true={showAllotment} class="ssp-allotmentCard">
+                            <div
+                                class="ssp-infoText13 ssp-fontFamily_popinRegular ssp-color_monoOmega slds-size_1-of-1 ssp-KTAPCard"
+                            >
+                                {labels.sspAllotment}
+                            </div>
+                            <div
+                                class="slds-grid slds-wrap slds-grid_align-spread"
+                            >
+                                <template
+                                    for:each={allotmentMonthVSAmount}
+                                    for:item="item"
+                                >
+                                    <div
+                                        key={item}
+                                        class="ssp-allotmentElements"
+                                    >
+                                        <div
+                                            key={month}
+                                            class="ssp-fontFamily_popinBold ssp-color_greenAlpha sp-months ssp-infoText slds-size_1-of-1"
+                                        >
+                                            {item.month}
+                                        </div>
+                                        <div
+                                            key={amounts}
+                                            class="ssp-infoText ssp-renewalText ssp-color_monoBody ssp-fontFamily_popinRegular ssp-amounts ssp-infoText slds-size_1-of-1"
+                                        >
+                                            {labels.sspDollarSign}{item.amount}
+                                        </div>
+                                    </div>
+                                </template>
+                            </div>
+                        </div>
+
+                        <!--For CC Enrollments Details-->
+                        <div if:true={showCCEnrollmentsList}>
+                            <template
+                                for:each={enrollmentLabelsList}
+                                for:item="enrollment"
+                            >
+                                <div key={enrollment}>
+                                    {enrollment.label}
+                                </div>
+                                <div
+                                    key={enrollment}
+                                    if:true={renderingMap.showCCEnrollSummary.isAccessible}
+                                >
+                                    <a
+                                        tabindex="0"
+                                        data-individual={enrollment.individualId}
+                                        onclick={handleNavigateToCC}
+                                        onkeydown={handleNavigateToCC}
+                                    >
+                                        {labels.sspViewDetails}
+                                    </a>
+                                </div>
+                            </template>
+                        </div>
+
+                        <div
+                            if:true={showAdditionalVerificationNeeded}
+                            class="slds-grid slds-wrap slds-p-bottom_medium slds-size_1-of-1 slds-grid_vertical-align-center"
+                        >
+                            <div>
+                                <img
+                                    class="ssp-reviewIcon"
+                                    src={needsReviewIconUrl}
+                                    alt="review_icon"
+                                />
+                            </div>
+                            <div class="ssp-additionalInfoContainer">
+                                <span
+                                    class="ssp-infoText13 ssp-color_monoBody ssp-fontFamily_popinRegular"
+                                >
+                                    {labels.sspAdditionalVerification} &nbsp;
+                                </span>
+                                <span
+                                    if:true={renderingMap.showUploadDoc.isAccessible}
+                                >
+                                    <span if:false={isTMember}>
+                                        <a
+                                            onclick={handleDocumentClick}
+                                            if:true={isHeadOfHousehold}
+                                            class="ssp-infoText13 ssp-fontFamily_popinRegular ssp-anchor ssp-color_blueAlpha"
+                                        >
+                                            {labels.sspUploadDocuments}
+                                        </a>
+                                    </span>
+                                </span>
+
+                                <div>
+                                    <span class="ssp-textPadding_6 "
+                                        >{labels.sspDocumentsDueBy}</span
+                                    >
+                                    {documentUploadDueDate}
+                                </div>
+                            </div>
+                        </div>
+
+                        <template if:true={showAskForInterview}>
+                            <div>
+                                {labels.sspCompleteInterviewDCBS} &nbsp;
+                                <a
+                                    class="ssp-color_blueAlpha ssp-anchor"
+                                    href="tel:{labels.sspPhoneNumber}"
+                                >
+                                    {labels.sspPhoneNumber}
+                                </a>
+                            </div>
+                        </template>
+
+                        <template if:true={showReviewDate}>
+                            <div class="slds-size_1-of-1">
+                                <div>
+                                    <span class="ssp-textPadding_6">
+                                        {labels.sspYourEligibilityDetermination}</span
+                                    >
+                                    {reviewDate}
+                                </div>
+                            </div>
+                        </template>
+
+                        <template if:true={showApplicationSubmissionDate}>
+                            <div class="slds-size_1-of-1">
+                                <span class="ssp-textPadding_6"
+                                    >{labels.sspApplicationSubmitted}</span
+                                >
+                                {applicationSubmissionDate}.
+                            </div>
+                        </template>
+
+                        <template if:true={showEffectiveDate}>
+                            <div class="slds-size_1-of-1">
+                                <span class="ssp-textPadding_6"
+                                    >{labels.sspEffectiveDate}</span
+                                >
+                                {effectiveDate}.
+                            </div>
+                        </template>
+
+                        <template if:true={showDenialReason}>
+                            <div>
+                                <span class="ssp-textPadding_6"
+                                    >{labels.sspReason}-</span
+                                >{reason}
+                            </div>
+                        </template>
+
+                        <template if:true={showSNAPClaimAmount}>
+                            <div class="slds-size_1-of-1">
+                                <span>
+                                    <img
+                                        class="ssp-reviewIcon"
+                                        src={needsReviewIconUrl}
+                                        alt="review_icon"
+                                    />
+                                </span>
+                                {labels.sspYouOweForSnapBenefits}&nbsp;
+                                <a 
+                                    class="ssp-color_blueAlpha ssp-anchor"
+                                    onclick={handlePayBalanceClick}
+                                >
+                                    {labels.sspPayBalance}
+                                </a>
+                            </div>
+
+                            <div class="slds-size_1-of-1">
+                                <span>
+                                    <img
+                                        class="ssp-reviewIcon"
+                                        src={needsReviewIconUrl}
+                                        alt="review_icon"
+                                    />
+                                </span>
+                                {labels.sspYouMaySetupRepaymentAgreement} &nbsp;
+                                <a
+                                    class="ssp-color_blueAlpha ssp-anchor"
+                                    href="tel:labels.sspPhoneNumber2}"
+                                >
+                                    {labels.sspPhoneNumber2}
+                                </a>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+                <div
+                    class="ssp-hrRuler ssp-color_monoBeta slds-size_1-of-1"
+                ></div>
+                <div class="ssp-leftpadding30 slds-grid_align-spread">
+                    <template if:true={showEligibilityNotice}>
+                        <div
+                            if:true={isHeadOfHousehold}
+                            class="slds-p-vertical_medium "
+                        >
+                            <a
+                                if:true={renderingMap.showViewEligibility.isAccessible}
+                                class="ssp-color_blueAlpha ssp-anchor"
+                                data-dms-id={DMSId}
+                                onclick={downloadDocumentOnClick}
+                            >
+                                {labels.sspViewEligibilityNotice}
+                            </a>
+                        </div>
+                    </template>
+
+                    <template if:true={showDenialNotice}>
+                        <div class="slds-p-vertical_medium">
+                            <a
+                                if:true={renderingMap.showViewDenialNotice.isAccessible}
+                                class="ssp-color_blueAlpha ssp-anchor"
+                                data-dms-id={DMSId}
+                                onclick={downloadDocumentOnClick}
+                            >
+                                {labels.sspViewDenialNotice}
+                            </a>
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</template>

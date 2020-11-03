@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Target_Page_Info__c</fullName>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Target Page Info</label>
+    <referenceTo>PageInfo__mdt</referenceTo>
+    <relationshipLabel>Section Program Configurations (Target Page Info)</relationshipLabel>
+    <relationshipName>Section_Program_Configurations1_del</relationshipName>
+    <required>false</required>
+    <type>MetadataRelationship</type>
+    <unique>false</unique>
+</CustomField>

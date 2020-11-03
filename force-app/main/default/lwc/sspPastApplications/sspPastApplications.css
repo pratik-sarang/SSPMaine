@@ -1,0 +1,185 @@
+.ssp-past-application-title {
+    font-size: 2.625rem;
+    line-height: 3rem;
+}
+.ssp-back-benefits {
+    margin: 30px 0 15px 0;
+}
+.ssp-th-styles {
+    line-height: 24px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    letter-spacing: -0.22px;
+    width: 31%;
+}
+.ssp-past-applications-table thead tr {
+    border-width: 0 1px 1px 1px;
+    border-style: solid;
+}
+.ssp-past-applications-table tbody tr {
+    border-width: 0 0 1px 0;
+    border-style: solid;
+}
+.ssp-th-styles:first-child {
+    width: 38%;
+}
+.ssp-action-image-container {
+    display: inline-block;
+}
+.ssp-sort-image {
+    width: 24px;
+    height: 24px;
+    margin-left: 12px;
+    cursor: pointer;
+}
+.ssp-td-styles {
+    padding-top: 17px;
+    padding-bottom: 17px;
+}
+.ssp-application-no {
+    font-size: 1rem;
+    line-height: 24px;
+}
+.ssp-three-dots-bg {
+    display: inline-block;
+    height: 32px;
+    width: 32px;
+    text-align: center;
+    border-radius: 25px;
+}
+.ssp-paginationContainer {
+    padding-left: 15px;
+    overflow-x: auto;
+}
+.ssp-past-applications-table {
+    padding-left: 2px;
+}
+.ssp-dropdown-cont {
+    margin-top: 47px;
+}
+.ssp-menuItemDropDownIcon {
+    height: 24px;
+    width: 24px;
+    background-size: 24px;
+    background-image: url(../resource/sspOverviewIcons/icons/ic_dropdown/ic_dropdown@3x.png);
+    margin-left: 15px;
+}
+.ssp-menuItemDropDown {
+    cursor: pointer;
+}
+.ssp-menuItemDropDownBtn {
+    padding: 25px 0;
+    width: 100%;
+    border: none;
+    background: none;
+}
+.ssp-menuItemDropDownBtn:focus {
+    outline: none;
+}
+.ssp-menuItemDropDownHeader {
+    font-size: 1rem;
+    line-height: 24px;
+    letter-spacing: -0.3px;
+}
+.ssp-menuItemDropDownContent {
+    display: none;
+    border-radius: 0 0 6px 6px;
+    position: absolute;
+    width: 105%;
+    z-index: 9;
+    max-height: 435px;
+    overflow-y: overlay;
+    top: 75px;
+}
+.ssp-menuItemDropDownContent a {
+    display: block;
+    text-decoration: none;
+    font-size: 1rem;
+    line-height: 22px;
+    letter-spacing: 0.3px;
+    padding: 15px 30px 15px 24px;
+}
+.ssp-expandDropDown {
+    display: block;
+}
+.ssp-collapseDropDown {
+    background-image: url(../resource/sspOverviewIcons/icons/ic_collapsedropdown/ic_collapsedropdown@3x.png);
+}
+.ssp-status-dot {
+    display: inline-block;
+    height: 8px;
+    width: 8px;
+    border-radius: 100%;
+    margin-right: 6px;
+}
+.ssp-case-number {
+    min-width: 153px;
+    display: inline-block;
+}
+.ssp-status,
+.ssp-programs-applied {
+    font-size: 0.813rem;
+    line-height: 24px;
+}
+.ssp-submitted-date {
+    font-size: 0.813rem;
+    line-height: 30px;
+    letter-spacing: 0.3px;
+}
+.ssp-programs-applied {
+    white-space: normal;
+    word-break: break-word;
+}
+.ssp-action-image-container a {
+    outline: none;
+}
+@media only screen and (max-width: 768px) {
+    .ssp-column-cont-mobile {
+        justify-content: space-between;
+    }
+    .ssp-column-text-mobile {
+        white-space: pre-wrap;
+        max-width: 69%;
+    }
+    .ssp-sort-image {
+        margin-left: 0;
+    }
+    .ssp-th-styles {
+        width: 40%;
+    }
+    .ssp-th-styles:first-child {
+        width: 60%;
+    }
+    .ssp-mobile-table td div {
+        white-space: pre-wrap;
+    }
+    .ssp-past-application-header-cont {
+        padding: 0 30px;
+    }
+    .ssp-past-applicant-container {
+        padding: 0;
+    }
+    .ssp-th-styles:last-child {
+        padding: 15px 14px;
+    }
+    .ssp-three-dots-bg {
+        margin-top: 30px;
+    }
+    .ssp-td-styles:last-child {
+        display: block;
+    }
+    .ssp-dropdown-cont .ssp-bodyContainer {
+        padding: 0;
+    }
+    .ssp-menuItemDropDown {
+        padding-right: 14px;
+    }
+    .ssp-menuItemDropDownBtn {
+        display: flex;
+        justify-content: space-between;
+    }
+    .ssp-past-application-title {
+        font-size: 1.5rem;
+        line-height: 32px;
+    }
+}
