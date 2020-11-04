@@ -1,0 +1,1511 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    
+    <customValue>
+        
+        <fullName>Adoption &amp; Foster Care</fullName>
+        
+        <default>false</default>
+        
+        <label>Adoption &amp; Foster Care</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Adult and Continuing Education</fullName>
+        
+        <default>false</default>
+        
+        <label>Adult and Continuing Education</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Advocacy and Referrals</fullName>
+        
+        <default>false</default>
+        
+        <label>Advocacy and Referrals</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Agriculture Assistance</fullName>
+        
+        <default>false</default>
+        
+        <label>Agriculture Assistance</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Anger Management</fullName>
+        
+        <default>false</default>
+        
+        <label>Anger Management</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Assisted Living</fullName>
+        
+        <default>false</default>
+        
+        <label>Assisted Living</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Birth Control</fullName>
+        
+        <default>false</default>
+        
+        <label>Birth Control</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Books</fullName>
+        
+        <default>false</default>
+        
+        <label>Books</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Bus Fare</fullName>
+        
+        <default>false</default>
+        
+        <label>Bus Fare</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Cancer Detection and Treatment</fullName>
+        
+        <default>false</default>
+        
+        <label>Cancer Detection and Treatment</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Car Buying Assistance</fullName>
+        
+        <default>false</default>
+        
+        <label>Car Buying Assistance</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Car Rental - Cars to Work Program</fullName>
+        
+        <default>false</default>
+        
+        <label>Car Rental - Cars to Work Program</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Car Repair Assistance</fullName>
+        
+        <default>false</default>
+        
+        <label>Car Repair Assistance</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Caregiver Subsidy</fullName>
+        
+        <default>false</default>
+        
+        <label>Caregiver Subsidy</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Cell Phones</fullName>
+        
+        <default>false</default>
+        
+        <label>Cell Phones</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Child Care Assistance</fullName>
+        
+        <default>false</default>
+        
+        <label>Child Care Assistance</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Child/Adult Care Food Programs</fullName>
+        
+        <default>false</default>
+        
+        <label>Child/Adult Care Food Programs</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Citizenship</fullName>
+        
+        <default>false</default>
+        
+        <label>Citizenship</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Civil Rights</fullName>
+        
+        <default>false</default>
+        
+        <label>Civil Rights</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Clothes</fullName>
+        
+        <default>false</default>
+        
+        <label>Clothes</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Community Centers</fullName>
+        
+        <default>false</default>
+        
+        <label>Community Centers</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Community Clinics</fullName>
+        
+        <default>false</default>
+        
+        <label>Community Clinics</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Community Groups</fullName>
+        
+        <default>false</default>
+        
+        <label>Community Groups</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Computer Skills</fullName>
+        
+        <default>false</default>
+        
+        <label>Computer Skills</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Consumer Complaints</fullName>
+        
+        <default>false</default>
+        
+        <label>Consumer Complaints</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Consumer Education and Protection</fullName>
+        
+        <default>false</default>
+        
+        <label>Consumer Education and Protection</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Consumer Regulation and Standards</fullName>
+        
+        <default>false</default>
+        
+        <label>Consumer Regulation and Standards</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Counseling</fullName>
+        
+        <default>false</default>
+        
+        <label>Counseling</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Courts and Detention Centers</fullName>
+        
+        <default>false</default>
+        
+        <label>Courts and Detention Centers</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Credit Counseling</fullName>
+        
+        <default>false</default>
+        
+        <label>Credit Counseling</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Crisis Intervention</fullName>
+        
+        <default>false</default>
+        
+        <label>Crisis Intervention</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Crisis Shelter</fullName>
+        
+        <default>false</default>
+        
+        <label>Crisis Shelter</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Dental</fullName>
+        
+        <default>false</default>
+        
+        <label>Dental</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Do Not Call Registry</fullName>
+        
+        <default>false</default>
+        
+        <label>Do Not Call Registry</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Domestic Violence Shelter</fullName>
+        
+        <default>false</default>
+        
+        <label>Domestic Violence Shelter</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Emergencies &amp; Disasters</fullName>
+        
+        <default>false</default>
+        
+        <label>Emergencies &amp; Disasters</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Emergency Payment Assistance</fullName>
+        
+        <default>false</default>
+        
+        <label>Emergency Payment Assistance</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Employment Programs</fullName>
+        
+        <default>false</default>
+        
+        <label>Employment Programs</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Energy Efficiency Upgrades</fullName>
+        
+        <default>false</default>
+        
+        <label>Energy Efficiency Upgrades</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Environmental Conservation</fullName>
+        
+        <default>false</default>
+        
+        <label>Environmental Conservation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>ESL - English as a Second Language</fullName>
+        
+        <default>false</default>
+        
+        <label>ESL - English as a Second Language</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Expense Assistance</fullName>
+        
+        <default>false</default>
+        
+        <label>Expense Assistance</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Farmers Markets</fullName>
+        
+        <default>false</default>
+        
+        <label>Farmers Markets</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Fertility</fullName>
+        
+        <default>false</default>
+        
+        <label>Fertility</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Financial Aid</fullName>
+        
+        <default>false</default>
+        
+        <label>Financial Aid</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Financial Planning</fullName>
+        
+        <default>false</default>
+        
+        <label>Financial Planning</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Food Delivery</fullName>
+        
+        <default>false</default>
+        
+        <label>Food Delivery</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Food Distribution Sites</fullName>
+        
+        <default>false</default>
+        
+        <label>Food Distribution Sites</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Food Pantries/Banks</fullName>
+        
+        <default>false</default>
+        
+        <label>Food Pantries/Banks</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Food Stamps - SNAP and WIC</fullName>
+        
+        <default>false</default>
+        
+        <label>Food Stamps - SNAP and WIC</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Food Stamps/SNAP/WIC</fullName>
+        
+        <default>false</default>
+        
+        <label>Food Stamps/SNAP/WIC</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Foreclosure Counseling</fullName>
+        
+        <default>false</default>
+        
+        <label>Foreclosure Counseling</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Gardening Programs</fullName>
+        
+        <default>false</default>
+        
+        <label>Gardening Programs</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Gas Money</fullName>
+        
+        <default>false</default>
+        
+        <label>Gas Money</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>GED/HS Diploma</fullName>
+        
+        <default>false</default>
+        
+        <label>GED/HS Diploma</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Government Support</fullName>
+        
+        <default>false</default>
+        
+        <label>Government Support</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Health Education</fullName>
+        
+        <default>false</default>
+        
+        <label>Health Education</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Health Insurance Counseling</fullName>
+        
+        <default>false</default>
+        
+        <label>Health Insurance Counseling</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Health Screening</fullName>
+        
+        <default>false</default>
+        
+        <label>Health Screening</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Healthcare &amp; Appointment Ride Programs</fullName>
+        
+        <default>false</default>
+        
+        <label>Healthcare &amp; Appointment Ride Programs</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Help Finding School</fullName>
+        
+        <default>false</default>
+        
+        <label>Help Finding School</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Help paying for funeral</fullName>
+        
+        <default>false</default>
+        
+        <label>Help paying for funeral</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Help paying for medical devices</fullName>
+        
+        <default>false</default>
+        
+        <label>Help paying for medical devices</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Help paying for prescriptions</fullName>
+        
+        <default>false</default>
+        
+        <label>Help paying for prescriptions</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Help paying for Utilities</fullName>
+        
+        <default>false</default>
+        
+        <label>Help paying for Utilities</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Help paying for Utilities/Expenses</fullName>
+        
+        <default>false</default>
+        
+        <label>Help paying for Utilities/Expenses</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>HIV Testing, Prevention, Treatment</fullName>
+        
+        <default>false</default>
+        
+        <label>HIV Testing, Prevention, Treatment</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Homebuyer Education</fullName>
+        
+        <default>false</default>
+        
+        <label>Homebuyer Education</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Homeless Shelter</fullName>
+        
+        <default>false</default>
+        
+        <label>Homeless Shelter</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Hospice Care</fullName>
+        
+        <default>false</default>
+        
+        <label>Hospice Care</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Household Items and Appliances</fullName>
+        
+        <default>false</default>
+        
+        <label>Household Items and Appliances</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Housing Search Assistance</fullName>
+        
+        <default>false</default>
+        
+        <label>Housing Search Assistance</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Independent Living</fullName>
+        
+        <default>false</default>
+        
+        <label>Independent Living</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Inpatient Treatment</fullName>
+        
+        <default>false</default>
+        
+        <label>Inpatient Treatment</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Interview Preparation</fullName>
+        
+        <default>false</default>
+        
+        <label>Interview Preparation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Job Search</fullName>
+        
+        <default>false</default>
+        
+        <label>Job Search</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Life Skills</fullName>
+        
+        <default>false</default>
+        
+        <label>Life Skills</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Literacy Programs</fullName>
+        
+        <default>false</default>
+        
+        <label>Literacy Programs</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Maternity Care</fullName>
+        
+        <default>false</default>
+        
+        <label>Maternity Care</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Mediation</fullName>
+        
+        <default>false</default>
+        
+        <label>Mediation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Medicaid</fullName>
+        
+        <default>false</default>
+        
+        <label>Medicaid</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Medical Expense Assistance</fullName>
+        
+        <default>false</default>
+        
+        <label>Medical Expense Assistance</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Medical Public Assistance</fullName>
+        
+        <default>false</default>
+        
+        <label>Medical Public Assistance</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Medicare</fullName>
+        
+        <default>false</default>
+        
+        <label>Medicare</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Mental Health</fullName>
+        
+        <default>false</default>
+        
+        <label>Mental Health</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Mental Health Care</fullName>
+        
+        <default>false</default>
+        
+        <label>Mental Health Care</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Mental Health Facilities</fullName>
+        
+        <default>false</default>
+        
+        <label>Mental Health Facilities</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Mental Health Support Groups</fullName>
+        
+        <default>false</default>
+        
+        <label>Mental Health Support Groups</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Mental Health Treatment</fullName>
+        
+        <default>false</default>
+        
+        <label>Mental Health Treatment</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Mortgage Payment Assistance</fullName>
+        
+        <default>false</default>
+        
+        <label>Mortgage Payment Assistance</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Municipal Services &amp; Government Offices</fullName>
+        
+        <default>false</default>
+        
+        <label>Municipal Services &amp; Government Offices</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Nutrition Education</fullName>
+        
+        <default>false</default>
+        
+        <label>Nutrition Education</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Outpatient Treatment</fullName>
+        
+        <default>false</default>
+        
+        <label>Outpatient Treatment</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Pain Management</fullName>
+        
+        <default>false</default>
+        
+        <label>Pain Management</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Personal Care Items</fullName>
+        
+        <default>false</default>
+        
+        <label>Personal Care Items</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Physical Therapy</fullName>
+        
+        <default>false</default>
+        
+        <label>Physical Therapy</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Post-natal Care</fullName>
+        
+        <default>false</default>
+        
+        <label>Post-natal Care</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Predatory Lending Assistance</fullName>
+        
+        <default>false</default>
+        
+        <label>Predatory Lending Assistance</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Primary Care</fullName>
+        
+        <default>false</default>
+        
+        <label>Primary Care</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Professional Associations</fullName>
+        
+        <default>false</default>
+        
+        <label>Professional Associations</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Property Tax Rebate Information</fullName>
+        
+        <default>false</default>
+        
+        <label>Property Tax Rebate Information</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Public Housing</fullName>
+        
+        <default>false</default>
+        
+        <label>Public Housing</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Public Transportation</fullName>
+        
+        <default>false</default>
+        
+        <label>Public Transportation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Records, Permits, Licenses</fullName>
+        
+        <default>false</default>
+        
+        <label>Records, Permits, Licenses</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Rent Payment Assistance</fullName>
+        
+        <default>false</default>
+        
+        <label>Rent Payment Assistance</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Repair Assistance</fullName>
+        
+        <default>false</default>
+        
+        <label>Repair Assistance</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Residential Treatment</fullName>
+        
+        <default>false</default>
+        
+        <label>Residential Treatment</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Resume Preparation</fullName>
+        
+        <default>false</default>
+        
+        <label>Resume Preparation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Retirement</fullName>
+        
+        <default>false</default>
+        
+        <label>Retirement</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Ride Sharing Programs</fullName>
+        
+        <default>false</default>
+        
+        <label>Ride Sharing Programs</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Scholarships</fullName>
+        
+        <default>false</default>
+        
+        <label>Scholarships</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>School Counseling</fullName>
+        
+        <default>false</default>
+        
+        <label>School Counseling</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Schools</fullName>
+        
+        <default>false</default>
+        
+        <label>Schools</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Screening</fullName>
+        
+        <default>false</default>
+        
+        <label>Screening</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Senior and Disabled Ride Programs</fullName>
+        
+        <default>false</default>
+        
+        <label>Senior and Disabled Ride Programs</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Senior Living</fullName>
+        
+        <default>false</default>
+        
+        <label>Senior Living</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Skills Assessment</fullName>
+        
+        <default>false</default>
+        
+        <label>Skills Assessment</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Smoking Cessation</fullName>
+        
+        <default>false</default>
+        
+        <label>Smoking Cessation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Sober Living</fullName>
+        
+        <default>false</default>
+        
+        <label>Sober Living</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Social Security</fullName>
+        
+        <default>false</default>
+        
+        <label>Social Security</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Social Security Disability Insurance (SSDI)</fullName>
+        
+        <default>false</default>
+        
+        <label>Social Security Disability Insurance (SSDI)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Specialized Training</fullName>
+        
+        <default>false</default>
+        
+        <label>Specialized Training</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Stolen Identity</fullName>
+        
+        <default>false</default>
+        
+        <label>Stolen Identity</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Substance Abuse</fullName>
+        
+        <default>false</default>
+        
+        <label>Substance Abuse</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Supported Employment</fullName>
+        
+        <default>false</default>
+        
+        <label>Supported Employment</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>TANF</fullName>
+        
+        <default>false</default>
+        
+        <label>TANF</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Tax Preparation Assistance</fullName>
+        
+        <default>false</default>
+        
+        <label>Tax Preparation Assistance</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Thrift Shops</fullName>
+        
+        <default>false</default>
+        
+        <label>Thrift Shops</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Transitional Housing Shelter</fullName>
+        
+        <default>false</default>
+        
+        <label>Transitional Housing Shelter</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Translation/Interpretation</fullName>
+        
+        <default>false</default>
+        
+        <label>Translation/Interpretation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Tutoring</fullName>
+        
+        <default>false</default>
+        
+        <label>Tutoring</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Unemployment Insurance</fullName>
+        
+        <default>false</default>
+        
+        <label>Unemployment Insurance</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Vaccinations</fullName>
+        
+        <default>false</default>
+        
+        <label>Vaccinations</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>View All Consumer</fullName>
+        
+        <default>false</default>
+        
+        <label>View All Consumer</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>View All Education</fullName>
+        
+        <default>false</default>
+        
+        <label>View All Education</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>View All Employment</fullName>
+        
+        <default>false</default>
+        
+        <label>View All Employment</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>View All Financial</fullName>
+        
+        <default>false</default>
+        
+        <label>View All Financial</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>View All Food</fullName>
+        
+        <default>false</default>
+        
+        <label>View All Food</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>View All Health/Medical</fullName>
+        
+        <default>false</default>
+        
+        <label>View All Health/Medical</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>View All Housing</fullName>
+        
+        <default>false</default>
+        
+        <label>View All Housing</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>View All Legal</fullName>
+        
+        <default>false</default>
+        
+        <label>View All Legal</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>View All Mental Health &amp; Addiction</fullName>
+        
+        <default>false</default>
+        
+        <label>View All Mental Health &amp; Addiction</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>View All Transportation</fullName>
+        
+        <default>false</default>
+        
+        <label>View All Transportation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Vision</fullName>
+        
+        <default>false</default>
+        
+        <label>Vision</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Vocational Rehabilitation (for Disabilities)</fullName>
+        
+        <default>false</default>
+        
+        <label>Vocational Rehabilitation (for Disabilities)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Volunteer Opportunities</fullName>
+        
+        <default>false</default>
+        
+        <label>Volunteer Opportunities</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Voter Registration</fullName>
+        
+        <default>false</default>
+        
+        <label>Voter Registration</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Worker&apos;s Compensation</fullName>
+        
+        <default>false</default>
+        
+        <label>Worker&apos;s Compensation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Workplace Rights</fullName>
+        
+        <default>false</default>
+        
+        <label>Workplace Rights</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Youth Shelter</fullName>
+        
+        <default>false</default>
+        
+        <label>Youth Shelter</label>
+        
+    </customValue>
+    
+    <description>This is used to store SubCategory picklist values.</description>
+    
+    <masterLabel>SubCategory</masterLabel>
+    
+    <sorted>false</sorted>
+    
+</GlobalValueSet>

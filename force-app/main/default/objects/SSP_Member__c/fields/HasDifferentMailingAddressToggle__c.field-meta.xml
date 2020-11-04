@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HasDifferentMailingAddressToggle__c</fullName>
+    <description>This field is used to store if individual has different mailing address than HOH</description>
+    <externalId>false</externalId>
+    <label>Have Different Mailing Address ?</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        
+            <restricted>true</restricted>
+        
+            <valueSetName>YesNo</valueSetName>
+        
+        </valueSet>
+</CustomField>

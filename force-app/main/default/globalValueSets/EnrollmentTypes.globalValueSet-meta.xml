@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    
+    <customValue>
+        
+        <fullName>FT</fullName>
+        
+        <default>false</default>
+        
+        <label>Full Time</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>HT</fullName>
+        
+        <default>false</default>
+        
+        <label>Half Time or More</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>LT</fullName>
+        
+        <default>false</default>
+        
+        <label>Less Than Half Time</label>
+        
+    </customValue>
+    
+    <description>Different Enrollment types</description>
+    
+    <masterLabel>Enrollment Types</masterLabel>
+    
+    <sorted>false</sorted>
+    
+</GlobalValueSet>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AlienTypeCode__c</fullName>
+    <description>This field is used to store Alien type code for an Alien Sponsor</description>
+    <externalId>false</externalId>
+    <label>Alien Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        
+            <restricted>true</restricted>
+        
+            <valueSetName>AlienType</valueSetName>
+        
+        </valueSet>
+</CustomField>

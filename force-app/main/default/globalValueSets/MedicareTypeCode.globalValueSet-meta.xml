@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    
+    <customValue>
+        
+        <fullName>PA</fullName>
+        
+        <default>false</default>
+        
+        <label>Medicare Part A</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>PB</fullName>
+        
+        <default>false</default>
+        
+        <label>Medicare Part B</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>MD</fullName>
+        
+        <default>false</default>
+        
+        <label>CONDITIONAL ENROLLMENT IN MEDICARE PART A</label>
+        
+    </customValue>
+    
+    <description>Medicare Types</description>
+    
+    <masterLabel>Medicare Type Code</masterLabel>
+    
+    <sorted>false</sorted>
+    
+</GlobalValueSet>

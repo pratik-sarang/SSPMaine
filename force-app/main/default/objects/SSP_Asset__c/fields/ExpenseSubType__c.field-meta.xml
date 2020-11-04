@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ExpenseSubType__c</fullName>
+    <description>This field is used to store Expense Sub type for an Asset</description>
+    <externalId>false</externalId>
+    <label>Expense Sub Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        
+            <controllingField>ExpenseTypeCode__c</controllingField>
+        
+            <restricted>true</restricted>
+        
+            <valueSetName>ExpenseSubType</valueSetName>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>SE</controllingFieldValue>
+            
+                <valueName>INS</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>SE</controllingFieldValue>
+            
+                <valueName>MRT</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>SE</controllingFieldValue>
+            
+                <valueName>RNT</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>SE</controllingFieldValue>
+            
+                <valueName>TAX</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>UE</controllingFieldValue>
+            
+                <valueName>EL</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>UE</controllingFieldValue>
+            
+                <valueName>WA</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>UE</controllingFieldValue>
+            
+                <valueName>GA</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>UE</controllingFieldValue>
+            
+                <valueName>CF</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>UE</controllingFieldValue>
+            
+                <valueName>SW</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>UE</controllingFieldValue>
+            
+                <valueName>TP</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>UE</controllingFieldValue>
+            
+                <valueName>GS</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>UE</controllingFieldValue>
+            
+                <valueName>WC</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>UE</controllingFieldValue>
+            
+                <valueName>HF</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>ME</controllingFieldValue>
+            
+                <valueName>PD</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>ME</controllingFieldValue>
+            
+                <valueName>MS</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>ME</controllingFieldValue>
+            
+                <valueName>HIP</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>ME</controllingFieldValue>
+            
+                <valueName>CPP</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>ME</controllingFieldValue>
+            
+                <valueName>CSD</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>ME</controllingFieldValue>
+            
+                <valueName>DN</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>ME</controllingFieldValue>
+            
+                <valueName>HA</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>ME</controllingFieldValue>
+            
+                <valueName>PR</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>ME</controllingFieldValue>
+            
+                <valueName>SA</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>ME</controllingFieldValue>
+            
+                <valueName>GC</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>ME</controllingFieldValue>
+            
+                <valueName>TC</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>ME</controllingFieldValue>
+            
+                <valueName>TR</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>ME</controllingFieldValue>
+            
+                <valueName>LD</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>ME</controllingFieldValue>
+            
+                <valueName>HH</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>ME</controllingFieldValue>
+            
+                <valueName>SMI</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>ME</controllingFieldValue>
+            
+                <valueName>MP</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>ME</controllingFieldValue>
+            
+                <valueName>MN</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>ME</controllingFieldValue>
+            
+                <valueName>OT</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>ME</controllingFieldValue>
+            
+                <valueName>HOH</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>CAE</controllingFieldValue>
+            
+                <valueName>CS</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>DE</controllingFieldValue>
+            
+                <valueName>SE</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>DE</controllingFieldValue>
+            
+                <valueName>SH</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>DE</controllingFieldValue>
+            
+                <valueName>AL</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>DE</controllingFieldValue>
+            
+                <valueName>SLI</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>DE</controllingFieldValue>
+            
+                <valueName>AIAN</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>DE</controllingFieldValue>
+            
+                <valueName>BE</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>DE</controllingFieldValue>
+            
+                <valueName>HAS</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>DE</controllingFieldValue>
+            
+                <valueName>ME</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>DE</controllingFieldValue>
+            
+                <valueName>SET</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>DE</controllingFieldValue>
+            
+                <valueName>SSP</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>DE</controllingFieldValue>
+            
+                <valueName>SQP</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>DE</controllingFieldValue>
+            
+                <valueName>SHI</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>DE</controllingFieldValue>
+            
+                <valueName>EWS</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>DE</controllingFieldValue>
+            
+                <valueName>IRA</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>DE</controllingFieldValue>
+            
+                <valueName>DPA</valueName>
+            
+            </valueSettings>
+        
+        </valueSet>
+</CustomField>

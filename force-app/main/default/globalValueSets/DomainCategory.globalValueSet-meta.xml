@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    
+    <customValue>
+        
+        <fullName>Basic Resources</fullName>
+        
+        <default>false</default>
+        
+        <label>Basic Resources</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Stabilizing Resources</fullName>
+        
+        <default>false</default>
+        
+        <label>Stabilizing Resources</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Sustaining Resources</fullName>
+        
+        <default>false</default>
+        
+        <isActive>false</isActive>
+        
+        <label>Sustaining Resources</label>
+        
+    </customValue>
+    
+    <description>This is used to store DomainCategory picklist values.</description>
+    
+    <masterLabel>Domain Category</masterLabel>
+    
+    <sorted>false</sorted>
+    
+</GlobalValueSet>

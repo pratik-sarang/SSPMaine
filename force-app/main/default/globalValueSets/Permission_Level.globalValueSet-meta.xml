@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    
+    <customValue>
+        
+        <fullName>ST</fullName>
+        
+        <default>false</default>
+        
+        <label>Apply, Report Changes , Recertify</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>NT</fullName>
+        
+        <default>false</default>
+        
+        <label>Apply, Report Changes , Recertify and receive copy of Notices</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SE</fullName>
+        
+        <default>false</default>
+        
+        <label>Apply, Report Changes, Recertify and use EBT Card</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>CC</fullName>
+        
+        <default>false</default>
+        
+        <label>Apply, Report Change, Recertify and receive checks made out to client</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>CA</fullName>
+        
+        <default>false</default>
+        
+        <label>Apply, Report Change, Recertify and receive checks</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>ET</fullName>
+        
+        <default>false</default>
+        
+        <label>Use EBT Card</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>PY</fullName>
+        
+        <default>false</default>
+        
+        <label>Statutory Benefit Payee</label>
+        
+    </customValue>
+    
+    <description>Level of permissions for Auth Rep</description>
+    
+    <masterLabel>Permission Level</masterLabel>
+    
+    <sorted>false</sorted>
+    
+</GlobalValueSet>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    
+    <customValue>
+        
+        <fullName>JR</fullName>
+        
+        <default>false</default>
+        
+        <label>Jr.</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SR</fullName>
+        
+        <default>false</default>
+        
+        <label>Sr.</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>TW</fullName>
+        
+        <default>false</default>
+        
+        <label>II</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>TH</fullName>
+        
+        <default>false</default>
+        
+        <label>III</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>FO</fullName>
+        
+        <default>false</default>
+        
+        <label>IV</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>FV</fullName>
+        
+        <default>false</default>
+        
+        <label>V</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SI</fullName>
+        
+        <default>false</default>
+        
+        <label>VI</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SE</fullName>
+        
+        <default>false</default>
+        
+        <label>VII</label>
+        
+    </customValue>
+    
+    <description>Suffix codes used for any user</description>
+    
+    <masterLabel>Suffix</masterLabel>
+    
+    <sorted>false</sorted>
+    
+</GlobalValueSet>

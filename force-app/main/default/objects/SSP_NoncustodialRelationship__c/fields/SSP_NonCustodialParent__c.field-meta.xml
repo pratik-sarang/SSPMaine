@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SSP_NonCustodialParent__c</fullName>
+    <description>This field is used to indicate the Non custodial parent involved in the Junction record</description>
+    <externalId>false</externalId>
+    <label>Non Custodial Parent</label>
+    <referenceTo>SSP_NonCustodialParent__c</referenceTo>
+    <relationshipName>NoncustodialRelationships</relationshipName>
+    <relationshipOrder>1</relationshipOrder>
+    <reparentableMasterDetail>true</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

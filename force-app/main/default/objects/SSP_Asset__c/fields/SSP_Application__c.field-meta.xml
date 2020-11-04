@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SSP_Application__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>This field is used to identify the related application on an Asset</description>
+    <externalId>false</externalId>
+    <label>SSP Application</label>
+    <referenceTo>SSP_Application__c</referenceTo>
+    <relationshipName>SSP_Assets</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

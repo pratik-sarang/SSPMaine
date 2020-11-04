@@ -1,0 +1,5781 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    
+    <customValue>
+        
+        <fullName>ACOM</fullName>
+        
+        <default>false</default>
+        
+        <label>Pueblo of Acoma</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>AFOG</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Afognak (formerly the Village of Afognak)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>AGCA</fullName>
+        
+        <default>false</default>
+        
+        <label>Agua Caliente Band of Cahuilla Indians of the Agua Caliente Indian Reservation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>AGDA</fullName>
+        
+        <default>false</default>
+        
+        <label>Agdaagux Tribe of King Cove</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>AKCH</fullName>
+        
+        <default>false</default>
+        
+        <label>Ak Chin Indian Community of the Maricopa (Ak Chin) Indian Reservation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>AKHI</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Akhiok</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>AKI</fullName>
+        
+        <default>false</default>
+        
+        <label>Akiak Native Community</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>AKIA</fullName>
+        
+        <default>false</default>
+        
+        <label>Akiachak Native Community</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>AKUT</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Akutan</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>ALAB</fullName>
+        
+        <default>false</default>
+        
+        <label>Alabama-Coushatta Tribe of Texas</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>ALAK</fullName>
+        
+        <default>false</default>
+        
+        <label>Village of Alakanuk</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>ALAS</fullName>
+        
+        <default>false</default>
+        
+        <label>Sitka Tribe of Alaska</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>ALAT</fullName>
+        
+        <default>false</default>
+        
+        <label>Alatna Village</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>ALEK</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Aleknagik</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>ALEU</fullName>
+        
+        <default>false</default>
+        
+        <label>Pribilof Islands Aleut Communities of St. Paul &amp; St. George Islands</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>ALGA</fullName>
+        
+        <default>false</default>
+        
+        <label>Algaaciq Native Village (St. Mary&apos;s)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>ALLA</fullName>
+        
+        <default>false</default>
+        
+        <label>Allakaket Village</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>ALTU</fullName>
+        
+        <default>false</default>
+        
+        <label>Alturas Indian Rancheria</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>AMBL</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Ambler</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>ANAK</fullName>
+        
+        <default>false</default>
+        
+        <label>Village of Anaktuvuk Pass</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>ANDR</fullName>
+        
+        <default>false</default>
+        
+        <label>Yupiit of Andreafski</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>ANGO</fullName>
+        
+        <default>false</default>
+        
+        <label>Angoon Community Association</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>ANIA</fullName>
+        
+        <default>false</default>
+        
+        <label>Village of Aniak</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>ANVI</fullName>
+        
+        <default>false</default>
+        
+        <label>Anvik Village</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>APAC</fullName>
+        
+        <default>false</default>
+        
+        <label>Apache Tribe of Oklahoma</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>ARAP</fullName>
+        
+        <default>false</default>
+        
+        <label>Arapaho Tribe of the Wind River Reservation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>ARCT</fullName>
+        
+        <default>false</default>
+        
+        <label>Arctic Village (See Native Village of Venetie Tribal Government)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>AROO</fullName>
+        
+        <default>false</default>
+        
+        <label>Aroostook Band of Micmac Indians</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>ASAC</fullName>
+        
+        <default>false</default>
+        
+        <label>Asa&apos;carsarmiut Tribe</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>ASSI</fullName>
+        
+        <default>false</default>
+        
+        <label>Assiniboine and Sioux Tribes of the Fort Peck Indian Reservation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>ATKA</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Atka</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>ATMA</fullName>
+        
+        <default>false</default>
+        
+        <label>Village of Atmautluak</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>ATQA</fullName>
+        
+        <default>false</default>
+        
+        <label>Atqasuk Village (Atkasook)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>AUBU</fullName>
+        
+        <default>false</default>
+        
+        <label>United Auburn Indian Community of the Auburn Rancheria of California</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>BADR</fullName>
+        
+        <default>false</default>
+        
+        <label>Bad River Band of the Lake Superior Tribe of Chippewa Indians of the Bad River Reservation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>BAMI</fullName>
+        
+        <default>false</default>
+        
+        <label>Bay Mills Indian Community</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>BARA</fullName>
+        
+        <default>false</default>
+        
+        <label>Kashia Band of Pomo Indians of the Stewart’s Point Rancheria</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>BEAV</fullName>
+        
+        <default>false</default>
+        
+        <label>Beaver Village</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>BELK</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Belkofski</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>BIGL</fullName>
+        
+        <default>false</default>
+        
+        <label>Big Lagoon Rancheria</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>BILL</fullName>
+        
+        <default>false</default>
+        
+        <label>Village of Bill Moore&apos;s Slough</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>BIRC</fullName>
+        
+        <default>false</default>
+        
+        <label>Birch Creek Tribe</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>BLAC</fullName>
+        
+        <default>false</default>
+        
+        <label>Blackfeet Tribe of the Blackfeet Indian Reservation of Montana</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>BLUE</fullName>
+        
+        <default>false</default>
+        
+        <label>Blue Lake Rancheria</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>BPAI</fullName>
+        
+        <default>false</default>
+        
+        <label>Bishop Pauite Tribe (previously listed as Paiute-Shoshone Indians of the Bishop Community of the Bishop Colony)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>BREV</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Brevig Mission</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>BRID</fullName>
+        
+        <default>false</default>
+        
+        <label>Bridgeport Indian Colony</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>BRSI</fullName>
+        
+        <default>false</default>
+        
+        <label>Lower Brule Sioux Tribe of the Lower Brule Reservation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>BUCK</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Buckland</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>BURN</fullName>
+        
+        <default>false</default>
+        
+        <label>Burns Paiute Tribe</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>BVRA</fullName>
+        
+        <default>false</default>
+        
+        <label>Big Valley Band of Pomo Indians of the Big Valley Rancheria</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>CABA</fullName>
+        
+        <default>false</default>
+        
+        <label>Cabazon Band of  Mission Indians</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>CACU</fullName>
+        
+        <default>false</default>
+        
+        <label>Los Coyotes Band of Cahuilla &amp; Cupeno Indians </label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>CADD</fullName>
+        
+        <default>false</default>
+        
+        <label>Caddo Nation of Oklahoma</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>CAHU</fullName>
+        
+        <default>false</default>
+        
+        <label>Cahuilla Band of Mission Indians of the Cahuilla Reservation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>CANT</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Cantwell</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>CATA</fullName>
+        
+        <default>false</default>
+        
+        <label>Catawba Indian Nation (Catawba Tribe of South Carolina)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>CAYU</fullName>
+        
+        <default>false</default>
+        
+        <label>Cayuga Nation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>CBDM</fullName>
+        
+        <default>false</default>
+        
+        <label>Campo Band of Diegueño Mission Indians of the Campo Indian Reservation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>CEDA</fullName>
+        
+        <default>false</default>
+        
+        <label>Cedarville Rancheria</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>CGBD</fullName>
+        
+        <default>false</default>
+        
+        <label>Capitan Grande Band of Diegueño Mission Indians of California:Barona Group of Capitan Grande Band of Mission Indians of the Barona Reservation; Viejas (Baron Long) Group of Capitan Grande Band of Mission Indians of the Viejas Reservation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>CHAL</fullName>
+        
+        <default>false</default>
+        
+        <label>Chalkyitsik Village</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>CHAN</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Chenega (aka Chanega)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>CHCR</fullName>
+        
+        <default>false</default>
+        
+        <label>Chippewa-Cree Indians of the Rocky Boy&apos;s Reservation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>CHEA</fullName>
+        
+        <default>false</default>
+        
+        <label>Cheyenne and Arapaho Tribes</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>CHEE</fullName>
+        
+        <default>false</default>
+        
+        <label>Cheesh-Na Tribe (formerly the Native Village of Chistochina)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>CHEF</fullName>
+        
+        <default>false</default>
+        
+        <label>Village of Chefornak</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>CHEH</fullName>
+        
+        <default>false</default>
+        
+        <label>Confederated Tribes of the Chehalis Reservation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>CHEM</fullName>
+        
+        <default>false</default>
+        
+        <label>Chemehuevi Indian Tribe of the Chemehuevi Reservation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>CHER</fullName>
+        
+        <default>false</default>
+        
+        <label>Cherokee Nation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>CHEV</fullName>
+        
+        <default>false</default>
+        
+        <label>Chevak Native Village</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>CHEY</fullName>
+        
+        <default>false</default>
+        
+        <label>Northern Cheyenne Tribe of the Northern Cheyenne Indian Reservation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>CHIB</fullName>
+        
+        <default>false</default>
+        
+        <label>Chignik Bay Tribal Council (formerly the Native Village of Chignik)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>CHIC</fullName>
+        
+        <default>false</default>
+        
+        <label>Chickahominy Indian Tribe</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>CHIE</fullName>
+        
+        <default>false</default>
+        
+        <label>Chickahominy Indian Tribe-Eastern Division</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>CHIG</fullName>
+        
+        <default>false</default>
+        
+        <label>Chignik Lake Village</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>CHIK</fullName>
+        
+        <default>false</default>
+        
+        <label>Chickaloon Native Village</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>CHIL</fullName>
+        
+        <default>false</default>
+        
+        <label>Chilkoot Indian Association (Haines)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>CHIM</fullName>
+        
+        <default>false</default>
+        
+        <label>Chitimacha Tribe of Louisiana</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>CHIN</fullName>
+        
+        <default>false</default>
+        
+        <label>Chinik Eskimo Community (Golovin)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>CHIT</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Chitina</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>CHKL</fullName>
+        
+        <default>false</default>
+        
+        <label>Chilkat Indian Village (Klukwan)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>CHNA</fullName>
+        
+        <default>false</default>
+        
+        <label>The Chickasaw Nation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>CHNK</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Chignik Lagoon</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>CHOC</fullName>
+        
+        <default>false</default>
+        
+        <label>Jena Band of Choctaw Indians</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>CHOK</fullName>
+        
+        <default>false</default>
+        
+        <label>United Keetoowah Band of Cherokee Indians in Oklahoma</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>CHON</fullName>
+        
+        <default>false</default>
+        
+        <label>The Choctaw Nation of Oklahoma</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>CHRA</fullName>
+        
+        <default>false</default>
+        
+        <label>Mechoopda Indian Tribe of Chico Rancheria</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>CHSI</fullName>
+        
+        <default>false</default>
+        
+        <label>Cheyenne River Sioux Tribe of the Cheyenne River Reservation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>CHUK</fullName>
+        
+        <default>false</default>
+        
+        <label>Picayune Rancheria of Chukchansi Indians of California</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>CHUL</fullName>
+        
+        <default>false</default>
+        
+        <label>Chuloonawick Native Village</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>CHUM</fullName>
+        
+        <default>false</default>
+        
+        <label>Santa Ynez Band of Chumash Mission Indians of the Santa Ynez Reservation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>CIRC</fullName>
+        
+        <default>false</default>
+        
+        <label>Circle Native Community</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>CLIF</fullName>
+        
+        <default>false</default>
+        
+        <label>Red Cliff Band of Lake Superior Chippewa Indians of Wisconsin</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>CLPO</fullName>
+        
+        <default>false</default>
+        
+        <label>Village of Clarks Point</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>CMIW</fullName>
+        
+        <default>false</default>
+        
+        <label>California Valley Miwok Tribe </label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>COCO</fullName>
+        
+        <default>false</default>
+        
+        <label>Cocopah Tribe of Arizona</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>COEU</fullName>
+        
+        <default>false</default>
+        
+        <label>Coeur D’Alene Tribe</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>COLO</fullName>
+        
+        <default>false</default>
+        
+        <label>Colorado River Indian Tribes of the Colorado River Indian Reservation (Arizona and California)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>COLV</fullName>
+        
+        <default>false</default>
+        
+        <label>Confederated Tribes of the Colville Reservation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>COMA</fullName>
+        
+        <default>false</default>
+        
+        <label>Comanche Nation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>COPO</fullName>
+        
+        <default>false</default>
+        
+        <label>Coyote Valley Band of Pomo Indians of California</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>COQU</fullName>
+        
+        <default>false</default>
+        
+        <label>Coquille Indian Tribe</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>CORA</fullName>
+        
+        <default>false</default>
+        
+        <label>Cachil DeHe Band of Wintun Indians of the Colusa Indian Community of the Colusa Rancheria</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>COUS</fullName>
+        
+        <default>false</default>
+        
+        <label>Coushatta Tribe of Louisiana</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>COWL</fullName>
+        
+        <default>false</default>
+        
+        <label>Cowlitz Indian Tribe</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>CRAI</fullName>
+        
+        <default>false</default>
+        
+        <label>Craig Community Association</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>CRCR</fullName>
+        
+        <default>false</default>
+        
+        <label>Crow Creek Sioux Tribe of the Crow Creek Reservation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>CREE</fullName>
+        
+        <default>false</default>
+        
+        <label>Poarch Band of Creeks</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>CROI</fullName>
+        
+        <default>false</default>
+        
+        <label>St. Croix Chippewa Indians of Wisconsin</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>CROO</fullName>
+        
+        <default>false</default>
+        
+        <label>Village of Crooked Creek</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>CROW</fullName>
+        
+        <default>false</default>
+        
+        <label>Crow Tribe of Montana</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>CSMO</fullName>
+        
+        <default>false</default>
+        
+        <label>Cold Springs Rancheria of Mono Indians of California</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>CURY</fullName>
+        
+        <default>false</default>
+        
+        <label>Curyung Tribal Council</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>CUSI</fullName>
+        
+        <default>false</default>
+        
+        <label>Confederated Tribes of the Coos, Lower Umpqua and Siuslaw Indians of Oregon</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>DCPO</fullName>
+        
+        <default>false</default>
+        
+        <label>Dry Creek Rancheria of Pomo Indians </label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>DEER</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Deering</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>DELA</fullName>
+        
+        <default>false</default>
+        
+        <label>Delaware Nation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>DELT</fullName>
+        
+        <default>false</default>
+        
+        <label>Delaware Tribe of Indians</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>DIEG</fullName>
+        
+        <default>false</default>
+        
+        <label>San Pasqual Band of Diegueño Mission Indians of California</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>DOT</fullName>
+        
+        <default>false</default>
+        
+        <label>Village of Dot Lake</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>DOUG</fullName>
+        
+        <default>false</default>
+        
+        <label>Douglas Indian Association</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>DSHO</fullName>
+        
+        <default>false</default>
+        
+        <label>Duckwater Shoshone Tribe of the Duckwater Reservation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>EAGL</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Eagle</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>EASH</fullName>
+        
+        <default>false</default>
+        
+        <label>Eastern Shawnee Tribe of Oklahoma</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>EBCH</fullName>
+        
+        <default>false</default>
+        
+        <label>Eastern Band of Cherokee Indians </label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>EEK</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Eek</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>EGEG</fullName>
+        
+        <default>false</default>
+        
+        <label>Egegik Village</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>EKLU</fullName>
+        
+        <default>false</default>
+        
+        <label>Eklutna Native Village</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>EKUK</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Ekuk</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>EKWO</fullName>
+        
+        <default>false</default>
+        
+        <label>Ekwok Village</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>ELIM</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Elim</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>ELK</fullName>
+        
+        <default>false</default>
+        
+        <label>Elk Valley Rancheria</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>ELWA</fullName>
+        
+        <default>false</default>
+        
+        <label>Lower Elwha Tribal Community</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>ELYS</fullName>
+        
+        <default>false</default>
+        
+        <label>Ely Shoshone Tribe of Nevada</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>EMMO</fullName>
+        
+        <default>false</default>
+        
+        <label>Emmonak Village</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>ENMA</fullName>
+        
+        <default>false</default>
+        
+        <label>Enterprise Rancheria of Maidu Indians of California</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>EVAN</fullName>
+        
+        <default>false</default>
+        
+        <label>Evansville Village (aka Bettles Field)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>EWII</fullName>
+        
+        <default>false</default>
+        
+        <label>Ewiiaapaayp Band of Kumeyaay Indians</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>EYAC</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Eyak (Cordova)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>FAPA</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of False Pass</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>FBEL</fullName>
+        
+        <default>false</default>
+        
+        <label>Fort Belknap Indian Community of the Fort Belknap Reservation of Montana</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>FLSI</fullName>
+        
+        <default>false</default>
+        
+        <label>Flandreau Santee Sioux Tribe of South Dakota</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>FOBI</fullName>
+        
+        <default>false</default>
+        
+        <label>Fort Bidwell Indian Community of the Fort Bidwell Reservation of California</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>FOYU</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Fort Yukon</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>FPAI</fullName>
+        
+        <default>false</default>
+        
+        <label>Fort Independence Indian Community of Paiute Indians of the Fort Independence Reservation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>FSAP</fullName>
+        
+        <default>false</default>
+        
+        <label>Fort Sill Apache Tribe of Oklahoma</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>GAKO</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Gakona</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>GALE</fullName>
+        
+        <default>false</default>
+        
+        <label>Galena Village (aka Louden Village)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>GAMB</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Gambell</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>GEOR</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Georgetown</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>GILA</fullName>
+        
+        <default>false</default>
+        
+        <label>Gila River Indian Community of the Gila River Indian Reservation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>GOBA</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Goodnews Bay</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>GOSH</fullName>
+        
+        <default>false</default>
+        
+        <label>Confederated Tribes of the Goshute Reservation (Nevada and Utah)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>GRAT</fullName>
+        
+        <default>false</default>
+        
+        <label>Federated Indians of Graton Rancheria</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>GREE</fullName>
+        
+        <default>false</default>
+        
+        <label>Greenville Rancheria</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>GRRO</fullName>
+        
+        <default>false</default>
+        
+        <label>Confederated Tribes of the Grand Ronde Community of Oregon</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>GSKL</fullName>
+        
+        <default>false</default>
+        
+        <label>Port Gamble S&apos;Klallam Tribe </label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>GUID</fullName>
+        
+        <default>false</default>
+        
+        <label>Guidiville Rancheria of California</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>GULK</fullName>
+        
+        <default>false</default>
+        
+        <label>Gulkana Village</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>GWAI</fullName>
+        
+        <default>false</default>
+        
+        <label>Utu Utu Gwaitu Paiute Tribe of the Benton Paiute Reservation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>HABE</fullName>
+        
+        <default>false</default>
+        
+        <label>Habematolel Pomo of Upper Lake</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>HAMI</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Hamilton</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>HANN</fullName>
+        
+        <default>false</default>
+        
+        <label>Hannahville Indian Community</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>HARB</fullName>
+        
+        <default>false</default>
+        
+        <label>Village of Old Harbor</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>HAVA</fullName>
+        
+        <default>false</default>
+        
+        <label>Havasupai Tribe of the Havasupai Reservation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>HEAL</fullName>
+        
+        <default>false</default>
+        
+        <label>Healy Lake Village</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>HOBA</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Hooper Bay</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>HOCH</fullName>
+        
+        <default>false</default>
+        
+        <label>Ho-Chunk Nation of Wisconsin</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>HOH</fullName>
+        
+        <default>false</default>
+        
+        <label>Hoh Indian Tribe </label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>HOLI</fullName>
+        
+        <default>false</default>
+        
+        <label>Organized Village of Grayling (aka Holikachuk)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>HOLY</fullName>
+        
+        <default>false</default>
+        
+        <label>Holy Cross Village</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>HOMA</fullName>
+        
+        <default>false</default>
+        
+        <label>Houlton Band of Maliseet Indians</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>HOON</fullName>
+        
+        <default>false</default>
+        
+        <label>Hoonah Indian Association</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>HOOP</fullName>
+        
+        <default>false</default>
+        
+        <label>Hoopa Valley Tribe</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>HOPI</fullName>
+        
+        <default>false</default>
+        
+        <label>Hopi Tribe of Arizona</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>HOPO</fullName>
+        
+        <default>false</default>
+        
+        <label>Hopland Band of Pomo Indians</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>HUAL</fullName>
+        
+        <default>false</default>
+        
+        <label>Hualapai Indian Tribe of the Hualapai Indian Reservation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>HUGH</fullName>
+        
+        <default>false</default>
+        
+        <label>Hughes Village</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>HURO</fullName>
+        
+        <default>false</default>
+        
+        <label>Nottawaseppi Huron Band of the Potawatomi</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>HUSL</fullName>
+        
+        <default>false</default>
+        
+        <label>Huslia Village</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>HYDA</fullName>
+        
+        <default>false</default>
+        
+        <label>Hydaburg Cooperative Association</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>IBDM</fullName>
+        
+        <default>false</default>
+        
+        <label>Inaja Band of Diegueño Mission Indians of the Inaja and Cosmit Reservation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>IGIU</fullName>
+        
+        <default>false</default>
+        
+        <label>Igiugig Village</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>ILDE</fullName>
+        
+        <default>false</default>
+        
+        <label>Pueblo of San Ildefonso</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>ILIA</fullName>
+        
+        <default>false</default>
+        
+        <label>Village of Iliamna</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>INAL</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Diomede (aka Inalik)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>INUP</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Barrow Inupiat Traditional Government</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>INUS</fullName>
+        
+        <default>false</default>
+        
+        <label>Inupiat Community of the Arctic Slope</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>IONE</fullName>
+        
+        <default>false</default>
+        
+        <label>Ione Band of Miwok Indians of California</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>IOOK</fullName>
+        
+        <default>false</default>
+        
+        <label>Iowa Tribe of Oklahoma</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>IOWA</fullName>
+        
+        <default>false</default>
+        
+        <label>Iowa Tribe  of Kansas and Nebraska</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>IQUA</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Nunam Iqua (formerly the Native Village of Sheldon&apos;s Point)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>IQUR</fullName>
+        
+        <default>false</default>
+        
+        <label>Iqurmuit Traditional Council (formerly the Native Village of Russian Mission)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>IVAN</fullName>
+        
+        <default>false</default>
+        
+        <label>Ivanoff Bay Village</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>JAMU</fullName>
+        
+        <default>false</default>
+        
+        <label>Jamul Indian Village of California</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>JEME</fullName>
+        
+        <default>false</default>
+        
+        <label>Pueblo of Jemez</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>JICA</fullName>
+        
+        <default>false</default>
+        
+        <label>Jicarilla Apache Nation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>JSKL</fullName>
+        
+        <default>false</default>
+        
+        <label>Jamestown S’Klallam Tribe</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>KAGU</fullName>
+        
+        <default>false</default>
+        
+        <label>Kaguyak Village</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>KAIB</fullName>
+        
+        <default>false</default>
+        
+        <label>Kaibab Band of Paiute Indians of the Kaibab Indian Reservation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>KAKE</fullName>
+        
+        <default>false</default>
+        
+        <label>Organized Village of Kake</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>KAKT</fullName>
+        
+        <default>false</default>
+        
+        <label>Kaktovik Village (aka Barter Island)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>KALI</fullName>
+        
+        <default>false</default>
+        
+        <label>Kalispel Indian Community of the Kalispel Reservation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>KALS</fullName>
+        
+        <default>false</default>
+        
+        <label>Village of Kalskag</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>KALT</fullName>
+        
+        <default>false</default>
+        
+        <label>Village of Kaltag</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>KANA</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Kanatak</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>KARL</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Karluk</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>KARU</fullName>
+        
+        <default>false</default>
+        
+        <label>Karuk Tribe </label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>KASA</fullName>
+        
+        <default>false</default>
+        
+        <label>Organized Village of Kasaan</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>KASI</fullName>
+        
+        <default>false</default>
+        
+        <label>Kasigluk Traditional Elders Council (formerly the Native Village of Kasigluk)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>KAW</fullName>
+        
+        <default>false</default>
+        
+        <label>Kaw Nation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>KENA</fullName>
+        
+        <default>false</default>
+        
+        <label>Kenaitze Indian Tribe</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>KETC</fullName>
+        
+        <default>false</default>
+        
+        <label>Ketchikan Indian Corporation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>KEWA</fullName>
+        
+        <default>false</default>
+        
+        <label>Kewa Pueblo</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>KEWE</fullName>
+        
+        <default>false</default>
+        
+        <label>Keweenaw Bay Indian Community</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>KIAL</fullName>
+        
+        <default>false</default>
+        
+        <label>Kialegee Tribal Town</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>KIAN</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Kiana</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>KICK</fullName>
+        
+        <default>false</default>
+        
+        <label>Kickapoo Tribe of Indians of the Kickapoo Reservation in Kansas</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>KICT</fullName>
+        
+        <default>false</default>
+        
+        <label>Kickapoo Traditional Tribe of Texas</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>KIIS</fullName>
+        
+        <default>false</default>
+        
+        <label>King Island Native Community</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>KING</fullName>
+        
+        <default>false</default>
+        
+        <label>King Salmon Tribe</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>KIOK</fullName>
+        
+        <default>false</default>
+        
+        <label>Kickapoo Tribe of Oklahoma</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>KIOW</fullName>
+        
+        <default>false</default>
+        
+        <label>Kiowa Indian Tribe of Oklahoma</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>KIPN</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Kipnuk</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>KIVA</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Kivalina</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>KLAM</fullName>
+        
+        <default>false</default>
+        
+        <label>Klamath Tribes </label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>KLAW</fullName>
+        
+        <default>false</default>
+        
+        <label>Klawock Cooperative Association</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>KLUT</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Kluti Kaah (aka Copper Center)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>KNIK</fullName>
+        
+        <default>false</default>
+        
+        <label>Knik Tribe</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>KOBU</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Kobuk</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>KOI</fullName>
+        
+        <default>false</default>
+        
+        <label>Koi Nation of Northern California</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>KOKH</fullName>
+        
+        <default>false</default>
+        
+        <label>Kokhanok Village</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>KOLI</fullName>
+        
+        <default>false</default>
+        
+        <label>New Koliganek Village Council</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>KONG</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Kongiganak</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>KOOT</fullName>
+        
+        <default>false</default>
+        
+        <label>Kootenai Tribe of Idaho</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>KOTL</fullName>
+        
+        <default>false</default>
+        
+        <label>Village of Kotlik</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>KOTZ</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Kotzebue</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>KOYK</fullName>
+        
+        <default>false</default>
+        
+        <label>Koyukuk Native Village</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>KOYU</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Koyuk</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>KUSK</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Chuathbaluk (Russian Mission, Kuskokwim)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>KWET</fullName>
+        
+        <default>false</default>
+        
+        <label>Organized Village of Kwethluk</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>KWIG</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Kwigillingok</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>KWIN</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Kwinhagak (aka Quinhagak)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>LABA</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Larsen Bay</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>LACC</fullName>
+        
+        <default>false</default>
+        
+        <label>Lac Courte Oreilles Band of Lake Superior Chippewa Indians of Wisconsin</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>LACD</fullName>
+        
+        <default>false</default>
+        
+        <label>Lac du Flambeau Band of Lake Superior Chippewa Indians of the Lac du Flambeau Reservation of Wisconsin</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>LAGU</fullName>
+        
+        <default>false</default>
+        
+        <label>Pueblo of Laguna</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>LARA</fullName>
+        
+        <default>false</default>
+        
+        <label>Cahto Indian Tribe of the Laytonville Rancheria</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>LEVE</fullName>
+        
+        <default>false</default>
+        
+        <label>Levelock Village</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>LIME</fullName>
+        
+        <default>false</default>
+        
+        <label>Lime Village</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>LIPA</fullName>
+        
+        <default>false</default>
+        
+        <label>Lipay Nation of Santa Ysabel (Previously listed as the Santa Ysabel Band of Diegueño Mission Indians of the Santa Ysabel Reservation)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>LKAL</fullName>
+        
+        <default>false</default>
+        
+        <label>Village of Lower Kalskag</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>LONE</fullName>
+        
+        <default>false</default>
+        
+        <label>Lone Pine Paiute-Shoshone Tribe</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>LOSI</fullName>
+        
+        <default>false</default>
+        
+        <label>Lower Sioux Indian Community in the State of Minnesota</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>LPAI</fullName>
+        
+        <default>false</default>
+        
+        <label>Lovelock Paiute Tribe of the Lovelock Indian Colony</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>LPBD</fullName>
+        
+        <default>false</default>
+        
+        <label>La Posta Band of Diegueño Mission Indians of the La Posta Indian Reservation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>LUIS</fullName>
+        
+        <default>false</default>
+        
+        <label>La Jolla Band of Luiseño Indians </label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>LUMM</fullName>
+        
+        <default>false</default>
+        
+        <label>Lummi Tribe of the Lummi Reservation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>LVCH</fullName>
+        
+        <default>false</default>
+        
+        <label>Lac Vieux Desert Band of Lake Superior Chippewa Indians of Michigan</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>LYTT</fullName>
+        
+        <default>false</default>
+        
+        <label>Lytton Rancheria of California</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>MACH</fullName>
+        
+        <default>false</default>
+        
+        <label>Sault Ste. Marie Tribe of Chippewa Indians of Michigan</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>MAID</fullName>
+        
+        <default>false</default>
+        
+        <label>Berry Creek Rancheria of Maidu Indians of California</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>MAIG</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Mary&apos;s Igloo</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>MAKA</fullName>
+        
+        <default>false</default>
+        
+        <label>Makah Indian Tribe of the Makah Indian Reservation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>MANL</fullName>
+        
+        <default>false</default>
+        
+        <label>Manley Hot Springs Village</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>MANO</fullName>
+        
+        <default>false</default>
+        
+        <label>Manokotak Village</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>MANZ</fullName>
+        
+        <default>false</default>
+        
+        <label>Manzanita Band of Diegueño Mission Indians of the Manzanita Reservation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>MARA</fullName>
+        
+        <default>false</default>
+        
+        <label>Manchester Band of Pomo Indians of the Manchester Rancheria</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>MARS</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Marshall (aka Fortuna Ledge)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>MASH</fullName>
+        
+        <default>false</default>
+        
+        <label>Mashpee Wampanoag Tribe</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>MASP</fullName>
+        
+        <default>false</default>
+        
+        <label>Mashantucket Pequot Tribe </label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>MASS</fullName>
+        
+        <default>false</default>
+        
+        <label>Wampanoag Tribe of Gay Head (Aquinnah) of Massachusetts</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>MATT</fullName>
+        
+        <default>false</default>
+        
+        <label>Upper Mattaponi Tribe</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>MCGR</fullName>
+        
+        <default>false</default>
+        
+        <label>McGrath Native Village</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>MCHI</fullName>
+        
+        <default>false</default>
+        
+        <label>Minnesota Chippewa Tribe (Six component reservations: Bois Forte Band (Nett Lake);Fond du Lac Band; Grand Portage Band; Leech Lake Band; Mille Lacs Ban; White Earth Band)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>MCHO</fullName>
+        
+        <default>false</default>
+        
+        <label>Mississippi Band of Choctaw Indians</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>MDEW</fullName>
+        
+        <default>false</default>
+        
+        <label>Mdewakanton Sioux Indians</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>MEGR</fullName>
+        
+        <default>false</default>
+        
+        <label>Mesa Grande Band of Diegueño Mission Indians of the Mesa Grande Reservation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>MEKO</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Mekoryuk</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>MENO</fullName>
+        
+        <default>false</default>
+        
+        <label>Menominee Indian Tribe of Wisconsin</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>MENT</fullName>
+        
+        <default>false</default>
+        
+        <label>Mentasta Traditional Council</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>MESC</fullName>
+        
+        <default>false</default>
+        
+        <label>Mescalero Apache Tribe of the Mescalero Reservation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>METL</fullName>
+        
+        <default>false</default>
+        
+        <label>Metlakatla Indian Community, Annette Island Reserve</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>MEUK</fullName>
+        
+        <default>false</default>
+        
+        <label>Sheep Ranch Rancheria of Me-Wuk Indians</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>MEWK</fullName>
+        
+        <default>false</default>
+        
+        <label>Chicken Ranch Rancheria of Me-Wuk Indians of California</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>MEWU</fullName>
+        
+        <default>false</default>
+        
+        <label>Buena Vista Rancheria of Me-Wuk Indians of California</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>MICC</fullName>
+        
+        <default>false</default>
+        
+        <label>Miccosukee Tribe of Indians of Florida</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>MINT</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Minto</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>MIOK</fullName>
+        
+        <default>false</default>
+        
+        <label>Miami Tribe of Oklahoma</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>MIPO</fullName>
+        
+        <default>false</default>
+        
+        <label>Middletown Rancheria of Pomo Indians of California</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>MIWO</fullName>
+        
+        <default>false</default>
+        
+        <label>Shingle Springs Band of Miwok Indians, Shingle Springs Rancheria (Verona Tract)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>MIWU</fullName>
+        
+        <default>false</default>
+        
+        <label>Jackson Band of Miwuk Indians</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>MOAP</fullName>
+        
+        <default>false</default>
+        
+        <label>Moapa Band of Paiute Indians of the Moapa River Indian Reservation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>MOCA</fullName>
+        
+        <default>false</default>
+        
+        <label>Morongo Band of Cahuilla Mission Indians </label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>MODO</fullName>
+        
+        <default>false</default>
+        
+        <label>Modoc Tribe of Oklahoma</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>MOHA</fullName>
+        
+        <default>false</default>
+        
+        <label>Saint Regis Mohawk Tribe (formerly the St. Regis Band of Mohawk Indians of New York)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>MOHE</fullName>
+        
+        <default>false</default>
+        
+        <label>Mohegan Tribe of Indians of Connecticut</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>MOJA</fullName>
+        
+        <default>false</default>
+        
+        <label>Fort Mojave Indian Tribe (Arizona, California and Nevada)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>MOMA</fullName>
+        
+        <default>false</default>
+        
+        <label>Mooretown Rancheria of Maidu Indians of California</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>MONA</fullName>
+        
+        <default>false</default>
+        
+        <label>Monacan Indian Nation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>MONO</fullName>
+        
+        <default>false</default>
+        
+        <label>Big Sandy Rancheria of Western Mono Indians of California</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>MUCK</fullName>
+        
+        <default>false</default>
+        
+        <label>Muckleshoot Indian Tribe</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>MUNS</fullName>
+        
+        <default>false</default>
+        
+        <label>Stockbridge Munsee Community</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>MUSC</fullName>
+        
+        <default>false</default>
+        
+        <label>Muscogee (Creek) Nation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>NAKN</fullName>
+        
+        <default>false</default>
+        
+        <label>Naknek Native Village</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>NAKS</fullName>
+        
+        <default>false</default>
+        
+        <label>South Naknek Village</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>NANS</fullName>
+        
+        <default>false</default>
+        
+        <label>Nansemond Indian Tribe</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>NANW</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Nanwalek (aka English Bay)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>NAPI</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Napaimute</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>NAPK</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Napakiak</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>NAPS</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Napaskiak</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>NARR</fullName>
+        
+        <default>false</default>
+        
+        <label>Narragansett Indian Tribe </label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>NAVN</fullName>
+        
+        <default>false</default>
+        
+        <label>Navajo Nation (Arizona, New Mexico and Utah)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>NELA</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Nelson Lagoon</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>NENA</fullName>
+        
+        <default>false</default>
+        
+        <label>Nenana Native Association</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>NEWH</fullName>
+        
+        <default>false</default>
+        
+        <label>Newhalen Village</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>NEWS</fullName>
+        
+        <default>false</default>
+        
+        <label>New Stuyahok Village</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>NEWT</fullName>
+        
+        <default>false</default>
+        
+        <label>Newtok Village</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>NEZ</fullName>
+        
+        <default>false</default>
+        
+        <label>Nez Perce Tribe</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>NIGH</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Nightmute</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>NIKO</fullName>
+        
+        <default>false</default>
+        
+        <label>Nikolai Village</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>NINI</fullName>
+        
+        <default>false</default>
+        
+        <label>Ninilchik Village</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>NISQ</fullName>
+        
+        <default>false</default>
+        
+        <label>Nisqually Indian Tribe </label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>NNIK</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Nikolski</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>NOAT</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Noatak</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>NOME</fullName>
+        
+        <default>false</default>
+        
+        <label>Nome Eskimo Community</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>NOML</fullName>
+        
+        <default>false</default>
+        
+        <label>Paskenta Band of Nomlaki Indians of California</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>NOMO</fullName>
+        
+        <default>false</default>
+        
+        <label>Northfork Rancheria of Mono Indians of California</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>NOND</fullName>
+        
+        <default>false</default>
+        
+        <label>Nondalton Village</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>NOOI</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Nuiqsut (aka Nooiksut)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>NOOK</fullName>
+        
+        <default>false</default>
+        
+        <label>Nooksack Indian Tribe of Washington</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>NOOR</fullName>
+        
+        <default>false</default>
+        
+        <label>Noorvik Native Community</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>NOSH</fullName>
+        
+        <default>false</default>
+        
+        <label>Northwestern Band of Shoshoni Nation </label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>NOVI</fullName>
+        
+        <default>false</default>
+        
+        <label>Northway Village</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>NULA</fullName>
+        
+        <default>false</default>
+        
+        <label>Nulato Village</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>NUNA</fullName>
+        
+        <default>false</default>
+        
+        <label>Nunakauyarmiut Tribe (formerly the Native Village of Toksook Bay)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>NUNP</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Nunapitchuk</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>NVCO</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Council</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>ODAW</fullName>
+        
+        <default>false</default>
+        
+        <label>Little Traverse Bay Bands of Odawa Indians</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>OGLA</fullName>
+        
+        <default>false</default>
+        
+        <label>Oglala Sioux Tribe (previously listed as Oglala Sioux Tribe of the Pine Ridge Reservation)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>OHOG</fullName>
+        
+        <default>false</default>
+        
+        <label>Village of Ohogamiut</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>OMAH</fullName>
+        
+        <default>false</default>
+        
+        <label>Omaha Tribe of Nebraska</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>ONEI</fullName>
+        
+        <default>false</default>
+        
+        <label>Oneida Nation of New York</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>ONEW</fullName>
+        
+        <default>false</default>
+        
+        <label>Oneida Tribe of Indians of Wisconsin</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>ONON</fullName>
+        
+        <default>false</default>
+        
+        <label>Onondaga Nation </label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>ORUT</fullName>
+        
+        <default>false</default>
+        
+        <label>Orutsararmuit Native Village (aka Bethel)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>OSAN</fullName>
+        
+        <default>false</default>
+        
+        <label>The Osage Nation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>OSCA</fullName>
+        
+        <default>false</default>
+        
+        <label>Oscarville Traditional Village</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>OTCH</fullName>
+        
+        <default>false</default>
+        
+        <label>Grand Traverse Band of Ottawa and Chippewa Indians</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>OTOE</fullName>
+        
+        <default>false</default>
+        
+        <label>Otoe-Missouria Tribe of Indians</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>OTOK</fullName>
+        
+        <default>false</default>
+        
+        <label>Ottawa Tribe of Oklahoma</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>OTTA</fullName>
+        
+        <default>false</default>
+        
+        <label>Little River Band of Ottawa Indians</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>OUZI</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Ouzinkie</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>OWIN</fullName>
+        
+        <default>false</default>
+        
+        <label>Ohkay Owingeh (formerly the Pueblo of San Juan)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>PAII</fullName>
+        
+        <default>false</default>
+        
+        <label>Paiute Indian Tribe of Utah  (Cedar Band of Paiutes, Kanosh Band of Paiutes,Koosharem Band of Paiutes, Indian Peaks Band of Paiutes, and Shivwits Band of Paiutes)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>PAIM</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Paimiut</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>PAIS</fullName>
+        
+        <default>false</default>
+        
+        <label>Paiute-Shoshone Tribe of the Fallon Reservation and Colony</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>PAIT</fullName>
+        
+        <default>false</default>
+        
+        <label>San Juan Southern Paiute Tribe of Arizona</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>PALA</fullName>
+        
+        <default>false</default>
+        
+        <label>Pala Band of Luiseño Mission Indians of the Pala Reservation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>PAMU</fullName>
+        
+        <default>false</default>
+        
+        <label>Pamunkey Indian Tribe</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>PAOK</fullName>
+        
+        <default>false</default>
+        
+        <label>Pawnee Nation of Oklahoma</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>PASC</fullName>
+        
+        <default>false</default>
+        
+        <label>Pascua Yaqui Tribe of Arizona</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>PASH</fullName>
+        
+        <default>false</default>
+        
+        <label>Fort McDermitt Paiute and Shoshone Tribes of the Fort McDermitt Indian Reservation (Nevada and Oregon)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>PASS</fullName>
+        
+        <default>false</default>
+        
+        <label>Passamaquoddy Tribe </label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>PAUL</fullName>
+        
+        <default>false</default>
+        
+        <label>Pauloff Harbor Village</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>PAUM</fullName>
+        
+        <default>false</default>
+        
+        <label>Pauma Band of Luiseño Mission Indians of the Pauma &amp; Yuima Reservation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>PECH</fullName>
+        
+        <default>false</default>
+        
+        <label>Pechanga Band of Luiseño Mission Indians of the Pechanga Reservation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>PEDR</fullName>
+        
+        <default>false</default>
+        
+        <label>Pedro Bay Village</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>PENO</fullName>
+        
+        <default>false</default>
+        
+        <label>Penobscot Nation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>PEOK</fullName>
+        
+        <default>false</default>
+        
+        <label>Peoria Tribe of Indians of Oklahoma</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>PERR</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Perryville</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>PETE</fullName>
+        
+        <default>false</default>
+        
+        <label>Petersburg Indian Association</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>PILO</fullName>
+        
+        <default>false</default>
+        
+        <label>Pilot Station Traditional Village</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>PIMA</fullName>
+        
+        <default>false</default>
+        
+        <label>Salt River Pima-Maricopa Indian Community of the Salt River Reservation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>PINE</fullName>
+        
+        <default>false</default>
+        
+        <label>Big Pine Band Paiute Tribe of the Owens Valley</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>PIPO</fullName>
+        
+        <default>false</default>
+        
+        <label>Pinoleville Pomo Nation (formerly the Pinoleville Rancheria of Pomo Indians of California)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>PIPT</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Pilot Point</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>PIT</fullName>
+        
+        <default>false</default>
+        
+        <label>Pit River Tribe (includes XL Ranch, Big Bend, Likely, Lookout, Montgomery Creek and Roaring Creek Rancherias)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>PLAT</fullName>
+        
+        <default>false</default>
+        
+        <label>Platinum Traditional Village</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>POGR</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Port Graham</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>POHE</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Port Heiden</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>POHO</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Point Hope</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>POLA</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Point Lay</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>POLI</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Port Lions</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>POMO</fullName>
+        
+        <default>false</default>
+        
+        <label>Cloverdale Rancheria of Pomo Indians of California</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>PONC</fullName>
+        
+        <default>false</default>
+        
+        <label>Ponca Tribe of Nebraska</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>POOK</fullName>
+        
+        <default>false</default>
+        
+        <label>Ponca Tribe of Indians of Oklahoma</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>PORT</fullName>
+        
+        <default>false</default>
+        
+        <label>Portage Creek Village (aka Ohgsenakale)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>POTA</fullName>
+        
+        <default>false</default>
+        
+        <label>Pokagon Band of Potawatomi Indians (Michigan and Indiana)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>POTF</fullName>
+        
+        <default>false</default>
+        
+        <label>Forest County Potawatomi Community</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>POTN</fullName>
+        
+        <default>false</default>
+        
+        <label>Citizen Potawatomi Nation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>POTT</fullName>
+        
+        <default>false</default>
+        
+        <label>Potter Valley Tribe (formerly the Potter Valley Rancheria of Pomo Indians of California)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>PRIS</fullName>
+        
+        <default>false</default>
+        
+        <label>Prairie Island Indian Community in the State of Minnesota</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>PRPO</fullName>
+        
+        <default>false</default>
+        
+        <label>Prairie Band Potawatomi Nation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>PTPO</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Pitka&apos;s Point</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>PUCO</fullName>
+        
+        <default>false</default>
+        
+        <label>Pueblo of Cochiti</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>PUEB</fullName>
+        
+        <default>false</default>
+        
+        <label>Ysleta Del Sur Pueblo </label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>PUIS</fullName>
+        
+        <default>false</default>
+        
+        <label>Pueblo of Isleta</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>PUNA</fullName>
+        
+        <default>false</default>
+        
+        <label>Pueblo of Nambe</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>PUPI</fullName>
+        
+        <default>false</default>
+        
+        <label>Pueblo of Picuris</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>PUPO</fullName>
+        
+        <default>false</default>
+        
+        <label>Pueblo of Pojoaque</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>PUSA</fullName>
+        
+        <default>false</default>
+        
+        <label>Pueblo of Santa Ana</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>PUSC</fullName>
+        
+        <default>false</default>
+        
+        <label>Pueblo of Santa Clara</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>PUSF</fullName>
+        
+        <default>false</default>
+        
+        <label>Pueblo of San Felipe</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>PUYA</fullName>
+        
+        <default>false</default>
+        
+        <label>Puyallup Tribe of the Puyallup Reservation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>PUZI</fullName>
+        
+        <default>false</default>
+        
+        <label>Pueblo of Zia</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>PYPA</fullName>
+        
+        <default>false</default>
+        
+        <label>Pyramid Lake Paiute Tribe of the Pyramid Lake Reservation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>QAGA</fullName>
+        
+        <default>false</default>
+        
+        <label>Qagan Tayagungin Tribe of Sand Point Village</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>QUAP</fullName>
+        
+        <default>false</default>
+        
+        <label>Quapaw Tribe of Indians</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>QUAR</fullName>
+        
+        <default>false</default>
+        
+        <label>Quartz Valley Indian Community of the Quartz Valley Reservation of California</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>QUAS</fullName>
+        
+        <default>false</default>
+        
+        <label>Alabama-Quassarte Tribal Town</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>QUEC</fullName>
+        
+        <default>false</default>
+        
+        <label>Quechan Tribe of the Fort Yuma Indian Reservation (Arizona and California)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>QUIL</fullName>
+        
+        <default>false</default>
+        
+        <label>Quileute Tribe of the Quileute Reservation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>QUIN</fullName>
+        
+        <default>false</default>
+        
+        <label>Quinault Indian Nation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>RAMP</fullName>
+        
+        <default>false</default>
+        
+        <label>Rampart Village</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>RAPP</fullName>
+        
+        <default>false</default>
+        
+        <label>Rappahannock Tribe, Inc.</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>RCAH</fullName>
+        
+        <default>false</default>
+        
+        <label>Ramona Band of Cahuilla</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>REDD</fullName>
+        
+        <default>false</default>
+        
+        <label>Redding Rancheria</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>REDE</fullName>
+        
+        <default>false</default>
+        
+        <label>Village of Red Devil</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>RENO</fullName>
+        
+        <default>false</default>
+        
+        <label>Reno-Sparks Indian Colony</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>REPO</fullName>
+        
+        <default>false</default>
+        
+        <label>Redwood Valley or Little River Band of Pomo Indians of the Redwood Valley Rancheria California</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>RESI</fullName>
+        
+        <default>false</default>
+        
+        <label>Resighini Rancheria</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>RINC</fullName>
+        
+        <default>false</default>
+        
+        <label>Rincon Band of Luiseño Mission Indians of the Rincon Reservation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>RLCH</fullName>
+        
+        <default>false</default>
+        
+        <label>Red Lake Band of Chippewa Indians</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>ROBI</fullName>
+        
+        <default>false</default>
+        
+        <label>Robinson Rancheria</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>RORO</fullName>
+        
+        <default>false</default>
+        
+        <label>Bear River Band of the Rohnerville Rancheria</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>ROSI</fullName>
+        
+        <default>false</default>
+        
+        <label>Rosebud Sioux Tribe of the Rosebud Indian Reservation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>RUBY</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Ruby</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>RVIT</fullName>
+        
+        <default>false</default>
+        
+        <label>Round Valley Indian Tribes, Round Valley Reservation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SAC</fullName>
+        
+        <default>false</default>
+        
+        <label>Sac &amp; Fox Nation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SACH</fullName>
+        
+        <default>false</default>
+        
+        <label>Saginaw Chippewa Indian Tribe of Michigan</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SAFM</fullName>
+        
+        <default>false</default>
+        
+        <label>Sac &amp; Fox Tribe of the Mississippi in Iowa</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SAFO</fullName>
+        
+        <default>false</default>
+        
+        <label>Sac &amp; Fox Nation of Missouri (Kansas and Nebraska)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SAGE</fullName>
+        
+        <default>false</default>
+        
+        <label>Saint George Island (See Pribilof Islands Aleut Communities of St. Paul &amp; St. George Islands)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SAKO</fullName>
+        
+        <default>false</default>
+        
+        <label>Confederated Salish and Kootenai Tribes of the Flathead Reservation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SALA</fullName>
+        
+        <default>false</default>
+        
+        <label>Village of Salamatoff</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SAMC</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Saint Michael</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SAMI</fullName>
+        
+        <default>false</default>
+        
+        <label>Samish Indian Nation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SAND</fullName>
+        
+        <default>false</default>
+        
+        <label>Pueblo of Sandia</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SANT</fullName>
+        
+        <default>false</default>
+        
+        <label>Santee Sioux Nation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SAPA</fullName>
+        
+        <default>false</default>
+        
+        <label>Saint Paul Island (See Pribilof Islands Aleut Communities of St. Paul &amp; St. George Islands)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SAUK</fullName>
+        
+        <default>false</default>
+        
+        <label>Sauk-Suiattle Indian Tribe of Washington</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SAVO</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Savoonga</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SAXM</fullName>
+        
+        <default>false</default>
+        
+        <label>Organized Village of Saxman</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SBRA</fullName>
+        
+        <default>false</default>
+        
+        <label>Elem Indian Colony of Pomo Indians of the Sulphur Bank Rancheria</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SCAH</fullName>
+        
+        <default>false</default>
+        
+        <label>Santa Rosa Band of Cahuilla Indians (formerly the Santa Rosa Band of Cahuilla Mission Indians of the Santa Rosa Reservation)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SCAP</fullName>
+        
+        <default>false</default>
+        
+        <label>San Carlos Apache Tribe of the San Carlos Reservation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SCBA</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Scammon Bay</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SECA</fullName>
+        
+        <default>false</default>
+        
+        <label>Seneca-Cayuga Nation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SELA</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Selawik</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SELD</fullName>
+        
+        <default>false</default>
+        
+        <label>Seldovia Village Tribe</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SEMI</fullName>
+        
+        <default>false</default>
+        
+        <label>Seminole Tribe of Florida (Dania, Big Cypress, Brighton, Hollywood and Tampa Reservations)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SENE</fullName>
+        
+        <default>false</default>
+        
+        <label>Seneca Nation of Indians</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>TONA</fullName>
+        
+        <default>false</default>
+        
+        <label>Tonawanda Band of Seneca </label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SEOK</fullName>
+        
+        <default>false</default>
+        
+        <label>Seminole Nation of Oklahoma</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SEPO</fullName>
+        
+        <default>false</default>
+        
+        <label>Sherwood Valley Rancheria of Pomo Indians of California</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SERR</fullName>
+        
+        <default>false</default>
+        
+        <label>San Manual Band of Serrano Mission Indians of the San Maual Reservation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SHAG</fullName>
+        
+        <default>false</default>
+        
+        <label>Shageluk Native Village</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SHAK</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Shaktoolik</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SHAW</fullName>
+        
+        <default>false</default>
+        
+        <label>Shawnee Tribe</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SHBA</fullName>
+        
+        <default>false</default>
+        
+        <label>Shoshone-Bannock Tribes of the Fort Hall Reservation of Idaho</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SHIN</fullName>
+        
+        <default>false</default>
+        
+        <label>Shinnecock Indian Nation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SHIS</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Shishmaref</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SHMD</fullName>
+        
+        <default>false</default>
+        
+        <label>Shakopee Mdewakanton Sioux Community of Minnesota</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SHOA</fullName>
+        
+        <default>false</default>
+        
+        <label>Shoalwater Bay IndianTribe of the Shoalwater Bay Indian Reservation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SHOS</fullName>
+        
+        <default>false</default>
+        
+        <label>Shoshone Tribe of the Wind River Reservation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SHPA</fullName>
+        
+        <default>false</default>
+        
+        <label>Shoshone-Paiute Tribes of the Duck Valley Reservation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SHUN</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Shungnak</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SILE</fullName>
+        
+        <default>false</default>
+        
+        <label>Confederated Tribes of the Siletz Reservation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SISS</fullName>
+        
+        <default>false</default>
+        
+        <label>Sisseton-Wahpeton Oyate of the Lake Traverse Reservation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SKAG</fullName>
+        
+        <default>false</default>
+        
+        <label>Skagway Village</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SKOK</fullName>
+        
+        <default>false</default>
+        
+        <label>Skokomish Indian Tribe </label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SKUL</fullName>
+        
+        <default>false</default>
+        
+        <label>Skull Valley Band of Goshute Indians of Utah</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SLEE</fullName>
+        
+        <default>false</default>
+        
+        <label>Village of Sleetmute</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SLPA</fullName>
+        
+        <default>false</default>
+        
+        <label>Summit Lake Paiute Tribe of Nevada</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SNOQ</fullName>
+        
+        <default>false</default>
+        
+        <label>Snoqualmie Indian Tribe</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SOBO</fullName>
+        
+        <default>false</default>
+        
+        <label>Soboba Band of Luiseño Indians</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SOKA</fullName>
+        
+        <default>false</default>
+        
+        <label>Sokaogon Chippewa Community</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SOLO</fullName>
+        
+        <default>false</default>
+        
+        <label>Village of Solomon</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SOPO</fullName>
+        
+        <default>false</default>
+        
+        <label>Scotts Valley Band of Pomo Indians of California</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SPIR</fullName>
+        
+        <default>false</default>
+        
+        <label>Spirit Lake Tribe</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SPOK</fullName>
+        
+        <default>false</default>
+        
+        <label>Spokane Tribe of the Spokane Reservation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SQUA</fullName>
+        
+        <default>false</default>
+        
+        <label>Squaxin Island Tribe of the Squaxin Island Reservation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SRRA</fullName>
+        
+        <default>false</default>
+        
+        <label>Santa Rosa Indian Community of the Santa Rosa Rancheria</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SRSI</fullName>
+        
+        <default>false</default>
+        
+        <label>Standing Rock Sioux Tribe (North Dakota and South Dakota)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>STEB</fullName>
+        
+        <default>false</default>
+        
+        <label>Stebbins Community Association</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>STEV</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Stevens</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>STIL</fullName>
+        
+        <default>false</default>
+        
+        <label>Stillaguamish Tribe of Indians of Washington</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>STON</fullName>
+        
+        <default>false</default>
+        
+        <label>Village of Stony River</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SUNA</fullName>
+        
+        <default>false</default>
+        
+        <label>Sun&apos;aq Tribe of Kodiak (formerly the Shoonaq&apos; Tribe of Kodiak)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SUQU</fullName>
+        
+        <default>false</default>
+        
+        <label>Suquamish Indian Tribe of the Port Madison Reservation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SUSA</fullName>
+        
+        <default>false</default>
+        
+        <label>Susanville Indian Rancheria</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SWIN</fullName>
+        
+        <default>false</default>
+        
+        <label>Swinomish Indian Tribal Community</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SYCU</fullName>
+        
+        <default>false</default>
+        
+        <label>Sycuan Band of the Kumeyaay Nation (formerly the Sycuan Band of Diegueno Mission Indians of California)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>TABL</fullName>
+        
+        <default>false</default>
+        
+        <label>Table Mountain Rancheria of California</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>TAKO</fullName>
+        
+        <default>false</default>
+        
+        <label>Takotna Village</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>TANA</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Tanana</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>TANC</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Tanacross</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>TANG</fullName>
+        
+        <default>false</default>
+        
+        <label>Tangirnaq Native Village (formerly Lesnoi Village)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>TAOS</fullName>
+        
+        <default>false</default>
+        
+        <label>Pueblo of Taos</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>TATI</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Tatitlek</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>TAZL</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Tazlina</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>TEJO</fullName>
+        
+        <default>false</default>
+        
+        <label>Tejon Indian Tribe</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>TELI</fullName>
+        
+        <default>false</default>
+        
+        <label>Telida Village</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>TELL</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Teller</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>TEMO</fullName>
+        
+        <default>false</default>
+        
+        <label>Te-Moak Tribe of Western Shoshone Indians of Nevada (Four constituent bands: Battle Mountain Band; Elko Band; South Fork Band; Wells Band)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>TESU</fullName>
+        
+        <default>false</default>
+        
+        <label>Pueblo of Tesuque</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>TETL</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Tetlin</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>THLO</fullName>
+        
+        <default>false</default>
+        
+        <label>Thlopthlocco Tribal Town</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>THRE</fullName>
+        
+        <default>false</default>
+        
+        <label>Three Affiliated Tribes of the Fort Berthold Reservation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>TIMB</fullName>
+        
+        <default>false</default>
+        
+        <label>Death Valley Timbi-Sha Shoshone Tribe</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>TLIN</fullName>
+        
+        <default>false</default>
+        
+        <label>Central Council of the Tlingit &amp; Haida Indian Tribes</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>TMCH</fullName>
+        
+        <default>false</default>
+        
+        <label>Turtle Mountain Band of Chippewa Indians of North Dakota</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>TOGI</fullName>
+        
+        <default>false</default>
+        
+        <label>Traditional Village of Togiak</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>TOHO</fullName>
+        
+        <default>false</default>
+        
+        <label>Tohono O’odham Nation of Arizona</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>TOLO</fullName>
+        
+        <default>false</default>
+        
+        <label>Tolowa Dee-ni&apos; Nation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>TONT</fullName>
+        
+        <default>false</default>
+        
+        <label>Tonto Apache Tribe of Arizona</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>TOOK</fullName>
+        
+        <default>false</default>
+        
+        <label>Tonkawa Tribe of Indians of Oklahoma</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>TORR</fullName>
+        
+        <default>false</default>
+        
+        <label>Torres-Martinez Desert Cahuilla Indians </label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>TRRA</fullName>
+        
+        <default>false</default>
+        
+        <label>Cher-Ae Heights Indian Community of the Trinidad Rancheria</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>TUBI</fullName>
+        
+        <default>false</default>
+        
+        <label>Tunica-Biloxi Indian Tribe of Louisiana</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>TULA</fullName>
+        
+        <default>false</default>
+        
+        <label>Tulalip Tribes of Washington</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>TULE</fullName>
+        
+        <default>false</default>
+        
+        <label>Tule River Indian Tribe of the Tule River Reservation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>TULU</fullName>
+        
+        <default>false</default>
+        
+        <label>Tuluksak Native Community</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>TUNT</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Tuntutuliak</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>TUNU</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Tununak</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>TUOL</fullName>
+        
+        <default>false</default>
+        
+        <label>Tuolumne Band of Me-Wuk Indians of the Tuolumne Rancheria of California</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>TUSC</fullName>
+        
+        <default>false</default>
+        
+        <label>Tuscarora Nation of New York</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>TWEN</fullName>
+        
+        <default>false</default>
+        
+        <label>Twenty-Nine Palms Band of Mission Indians of California</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>TWIN</fullName>
+        
+        <default>false</default>
+        
+        <label>Twin Hills Village</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>TYON</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Tyonek</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>UGAS</fullName>
+        
+        <default>false</default>
+        
+        <label>Ugashik Village</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>UINT</fullName>
+        
+        <default>false</default>
+        
+        <label>Ute Indian Tribe of the Uintah and Ouray Reservation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>ULPO</fullName>
+        
+        <default>false</default>
+        
+        <label>Upper Lake Band of Pomo Indians</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>UMAT</fullName>
+        
+        <default>false</default>
+        
+        <label>Confederated Tribes of the Umatilla Indian Reservation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>UMKU</fullName>
+        
+        <default>false</default>
+        
+        <label>Umkumiute Native Village</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>UMPQ</fullName>
+        
+        <default>false</default>
+        
+        <label>Cow Creek Band of Umpqua Tribe of Indians</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>UNAK</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Unalakleet</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>UNAL</fullName>
+        
+        <default>false</default>
+        
+        <label>Qawalangin Tribe of Unalaska</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>UNGA</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Unga</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>USIOU</fullName>
+        
+        <default>false</default>
+        
+        <label>Upper Sioux Community</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>USKA</fullName>
+        
+        <default>false</default>
+        
+        <label>Upper Skagit Indian Tribe of Washington</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>UTAT</fullName>
+        
+        <default>false</default>
+        
+        <label>Ute Mountain Ute Tribe (Colorado, New Mexico and Utah)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>UTE</fullName>
+        
+        <default>false</default>
+        
+        <label>Southern Ute Indian Tribe of the Southern Ute Reservation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>UTEM</fullName>
+        
+        <default>false</default>
+        
+        <label>Ute Mountain Tribe of the Ute Mountain Reservation (Colorado, New Mexico and Utah)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>VENE</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Venetie Tribal Government (Arctic Village and Village of Venetie)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>VPAI</fullName>
+        
+        <default>false</default>
+        
+        <label>Las Vegas Tribe of Paiute Indians of the Las Vegas Indian Colony</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>WAIL</fullName>
+        
+        <default>false</default>
+        
+        <label>Grindstone Indian Rancheria of Wintun-Wailaki Indians of California</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>WAIN</fullName>
+        
+        <default>false</default>
+        
+        <label>Village of Wainwright</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>WALE</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of Wales</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>WASH</fullName>
+        
+        <default>false</default>
+        
+        <label>Washoe Tribe (Carson Colony, Dresslerville Colony, Woodfords Community, Stewart Community and Washoe Ranches) (California and Nevada)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>WASP</fullName>
+        
+        <default>false</default>
+        
+        <label>Confederated Tribes of the Warm Springs Reservation of Oregon</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>WHMO</fullName>
+        
+        <default>false</default>
+        
+        <label>Native Village of White Mountain</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>WILT</fullName>
+        
+        <default>false</default>
+        
+        <label>Wilton Rancheria</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>WINM</fullName>
+        
+        <default>false</default>
+        
+        <label>Winnemucca Indian Colony of Nevada</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>WINN</fullName>
+        
+        <default>false</default>
+        
+        <label>Winnebago Tribe of Nebraska</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>WINT</fullName>
+        
+        <default>false</default>
+        
+        <label>Cortina Indian Rancheria of Wintun Indians of California</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>WINU</fullName>
+        
+        <default>false</default>
+        
+        <label>Yocha Dehe Wintun Nation </label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>WIPO</fullName>
+        
+        <default>false</default>
+        
+        <label>Match-e-be-nash-she-wish Band of Pottawatomi Indians of Michigan</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>WIYO</fullName>
+        
+        <default>false</default>
+        
+        <label>Wiyot Tribe (formerly the Table Bluff Reservation-Wiyot Tribe)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>WKWT</fullName>
+        
+        <default>false</default>
+        
+        <label>Wichita and Affiliated Tribes (Wichita, Keechi, Waco and Tawakonie)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>WMAP</fullName>
+        
+        <default>false</default>
+        
+        <label>White Mountain Apache Tribe of the Fort Apache Reservation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>WRAN</fullName>
+        
+        <default>false</default>
+        
+        <label>Wrangell Cooperative Association</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>WRPA</fullName>
+        
+        <default>false</default>
+        
+        <label>Walker River Paiute Tribe of the Walker River Reservation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>WSHO</fullName>
+        
+        <default>false</default>
+        
+        <label>Washoe Tribe (Nevada and California) (Carson Colony, Dresslerville Colony, Woodfords Community, Stewart Community and Washoe Ranches)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>WYAN</fullName>
+        
+        <default>false</default>
+        
+        <label>Wyandotte Nation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>YAAP</fullName>
+        
+        <default>false</default>
+        
+        <label>Yavapai-Apache Nation of the Camp Verde Indian Reservation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>YAKA</fullName>
+        
+        <default>false</default>
+        
+        <label>Confederated Tribes and Bands of the Yakama Nation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>YAKU</fullName>
+        
+        <default>false</default>
+        
+        <label>Yakutat Tlingit Tribe</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>YASI</fullName>
+        
+        <default>false</default>
+        
+        <label>Yankton Sioux Tribe of South Dakota</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>YAVA</fullName>
+        
+        <default>false</default>
+        
+        <label>Fort McDowell Yavapai Nation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>YAVP</fullName>
+        
+        <default>false</default>
+        
+        <label>Yavapai-Prescott Indian Tribe </label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>YOMB</fullName>
+        
+        <default>false</default>
+        
+        <label>Yomba Shoshone Tribe of the Yomba Reservation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>YPAI</fullName>
+        
+        <default>false</default>
+        
+        <label>Yerington Paiute Tribe of the Yerington Colony &amp; Campbell Ranch</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>YURO</fullName>
+        
+        <default>false</default>
+        
+        <label>Yurok Tribe of the Yurok Reservation</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>ZUNI</fullName>
+        
+        <default>false</default>
+        
+        <label>Zuni Tribe of the Zuni Reservation</label>
+        
+    </customValue>
+    
+    <description>Different types of Indian Tribe codes</description>
+    
+    <masterLabel>Indian Tribe Code</masterLabel>
+    
+    <sorted>false</sorted>
+    
+</GlobalValueSet>

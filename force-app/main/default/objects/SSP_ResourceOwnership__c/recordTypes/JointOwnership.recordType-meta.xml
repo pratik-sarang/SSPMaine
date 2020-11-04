@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>JointOwnership</fullName>
+    <active>true</active>
+    <description>Recordtype used for Joint Ownership of Resource</description>
+    <label>JointOwnership</label>
+</RecordType>

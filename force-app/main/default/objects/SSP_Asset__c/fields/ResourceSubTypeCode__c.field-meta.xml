@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ResourceSubTypeCode__c</fullName>
+    <description>This field is used to store resource sub type for an asset</description>
+    <externalId>false</externalId>
+    <label>Resource SubType</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        
+            <controllingField>ResourceTypeCode__c</controllingField>
+        
+            <restricted>true</restricted>
+        
+            <valueSetName>ResourceSubType</valueSetName>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>RP</controllingFieldValue>
+            
+                <valueName>RS</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>RP</controllingFieldValue>
+            
+                <valueName>BU</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>RP</controllingFieldValue>
+            
+                <valueName>RN</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>VI</controllingFieldValue>
+            
+                <valueName>CAR</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>VI</controllingFieldValue>
+            
+                <valueName>TRUCK</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>VI</controllingFieldValue>
+            
+                <valueName>MOTORC</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>VI</controllingFieldValue>
+            
+                <valueName>CAMPER</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>VI</controllingFieldValue>
+            
+                <valueName>TRAIL</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>VI</controllingFieldValue>
+            
+                <valueName>BOAT</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>VI</controllingFieldValue>
+            
+                <valueName>AIRCR</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>OR</controllingFieldValue>
+            
+                <valueName>CH</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>OR</controllingFieldValue>
+            
+                <valueName>DEC</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>OR</controllingFieldValue>
+            
+                <valueName>RMC</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>OR</controllingFieldValue>
+            
+                <valueName>OT</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>AC</controllingFieldValue>
+            
+                <valueName>CA</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>AC</controllingFieldValue>
+            
+                <valueName>SA</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>AC</controllingFieldValue>
+            
+                <valueName>CD</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>AC</controllingFieldValue>
+            
+                <valueName>NFRA</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>AC</controllingFieldValue>
+            
+                <valueName>IDA</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>AC</controllingFieldValue>
+            
+                <valueName>STA</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>IN</controllingFieldValue>
+            
+                <valueName>ST</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>IN</controllingFieldValue>
+            
+                <valueName>BO</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>IN</controllingFieldValue>
+            
+                <valueName>MF</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>LI</controllingFieldValue>
+            
+                <valueName>WH</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>LI</controllingFieldValue>
+            
+                <valueName>TM</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>LI</controllingFieldValue>
+            
+                <valueName>MD</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>LI</controllingFieldValue>
+            
+                <valueName>BR</valueName>
+            
+            </valueSettings>
+        
+        </valueSet>
+</CustomField>

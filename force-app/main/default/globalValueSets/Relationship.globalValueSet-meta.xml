@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    
+    <customValue>
+        
+        <fullName>SP</fullName>
+        
+        <default>false</default>
+        
+        <label>Spouse</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>MO</fullName>
+        
+        <default>false</default>
+        
+        <label>Mother</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SM</fullName>
+        
+        <default>false</default>
+        
+        <label>Step Mother</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>FA</fullName>
+        
+        <default>false</default>
+        
+        <label>Father</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SF</fullName>
+        
+        <default>false</default>
+        
+        <label>Step Father</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>GM</fullName>
+        
+        <default>false</default>
+        
+        <label>Grandmother (Including Great)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SX</fullName>
+        
+        <default>false</default>
+        
+        <label>Step Grandmother (Including Great)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>GF</fullName>
+        
+        <default>false</default>
+        
+        <label>Grandfather (Including Great)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SG</fullName>
+        
+        <default>false</default>
+        
+        <label>Step Grandfather (Including Great)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>DA</fullName>
+        
+        <default>false</default>
+        
+        <label>Daughter</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>AD</fullName>
+        
+        <default>false</default>
+        
+        <label>Adopted Daughter</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SO</fullName>
+        
+        <default>false</default>
+        
+        <label>Son</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SS</fullName>
+        
+        <default>false</default>
+        
+        <label>Step Son</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>ML</fullName>
+        
+        <default>false</default>
+        
+        <label>Mother-in-Law</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>UN</fullName>
+        
+        <default>false</default>
+        
+        <label>Uncle (Including Great)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>AS</fullName>
+        
+        <default>false</default>
+        
+        <label>Adopted Son</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>AU</fullName>
+        
+        <default>false</default>
+        
+        <label>Aunt (Including Great)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>BR</fullName>
+        
+        <default>false</default>
+        
+        <label>Brother/ Half-Brother</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>BL</fullName>
+        
+        <default>false</default>
+        
+        <label>Brother-in-Law</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>DL</fullName>
+        
+        <default>false</default>
+        
+        <label>Daughter-in-Law</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>FL</fullName>
+        
+        <default>false</default>
+        
+        <label>Father-in-Law</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>CO</fullName>
+        
+        <default>false</default>
+        
+        <label>Cousin</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>FK</fullName>
+        
+        <default>false</default>
+        
+        <label>Foster Child</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>FP</fullName>
+        
+        <default>false</default>
+        
+        <label>Foster Parent</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>GD</fullName>
+        
+        <default>false</default>
+        
+        <label>Granddaughter (Including Great)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>GS</fullName>
+        
+        <default>false</default>
+        
+        <label>Grandson (Including Great)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>NE</fullName>
+        
+        <default>false</default>
+        
+        <label>Nephew (Including Great)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>NI</fullName>
+        
+        <default>false</default>
+        
+        <label>Niece (Including Great)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SI</fullName>
+        
+        <default>false</default>
+        
+        <label>Sister/ Half Sister</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SL</fullName>
+        
+        <default>false</default>
+        
+        <label>Sister-in-Law</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SW</fullName>
+        
+        <default>false</default>
+        
+        <label>Son-in-Law</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SB</fullName>
+        
+        <default>false</default>
+        
+        <label>Step Brother</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SD</fullName>
+        
+        <default>false</default>
+        
+        <label>Step Daughter</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SH</fullName>
+        
+        <default>false</default>
+        
+        <label>Step Granddaughter (Including Great)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SR</fullName>
+        
+        <default>false</default>
+        
+        <label>Step Grandson (Including Great)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>ST</fullName>
+        
+        <default>false</default>
+        
+        <label>Step Sister</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>UR</fullName>
+        
+        <default>false</default>
+        
+        <label>Unrelated</label>
+        
+    </customValue>
+    
+    <description>Use to store relationship types on a member</description>
+    
+    <masterLabel>Relationship</masterLabel>
+    
+    <sorted>false</sorted>
+    
+</GlobalValueSet>

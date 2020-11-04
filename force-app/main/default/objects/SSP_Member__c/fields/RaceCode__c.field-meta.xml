@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RaceCode__c</fullName>
+    <description>This field is used to store Race Code for the Member</description>
+    <externalId>false</externalId>
+    <label>Your Race(s)</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        
+            <restricted>true</restricted>
+        
+            <valueSetName>Race</valueSetName>
+        
+        </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

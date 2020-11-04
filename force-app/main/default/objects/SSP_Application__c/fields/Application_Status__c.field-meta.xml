@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Application_Status__c</fullName>
+    <description>Formula field to check if Application is Pending or Submitted</description>
+    <externalId>false</externalId>
+    <formula>IF( ISPICKVAL(Status__c, &apos;UN&apos;),&apos;Unsubmitted&apos;, IF(ISPICKVAL(Status__c, &apos;P&apos;),&apos;Submitted&apos;,&apos;&apos;))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Formula field to check if Application is Pending or Submitted</inlineHelpText>
+    <label>Application Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

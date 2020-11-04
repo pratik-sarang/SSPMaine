@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SameContactInfoAsHOH__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This field is used to indicate whether member has same contact information as HOH</description>
+    <externalId>false</externalId>
+    <label>Same Contact Information as HOH</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SponsoredIndividualOther__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>This field is used to store the related member for an Alien Sponsor outside of household</description>
+    <externalId>false</externalId>
+    <label>Alien Sponsor (Other)</label>
+    <referenceTo>SSP_Member__c</referenceTo>
+    <relationshipName>SSP_Member2</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

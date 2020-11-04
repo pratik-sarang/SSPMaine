@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EmploymentEndReason__c</fullName>
+    <description>This field is used to store the employment end Reason for an Asset</description>
+    <externalId>false</externalId>
+    <label>Employment End Reason</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        
+            <controllingField>IncomeTypeCode__c</controllingField>
+        
+            <restricted>true</restricted>
+        
+            <valueSetName>EmploymentEndReason</valueSetName>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>DIR</controllingFieldValue>
+            
+                <controllingFieldValue>IS</controllingFieldValue>
+            
+                <controllingFieldValue>EA</controllingFieldValue>
+            
+                <controllingFieldValue>OUI</controllingFieldValue>
+            
+                <controllingFieldValue>SE</controllingFieldValue>
+            
+                <controllingFieldValue>SRP</controllingFieldValue>
+            
+                <controllingFieldValue>SM</controllingFieldValue>
+            
+                <valueName>OVR</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>DIR</controllingFieldValue>
+            
+                <controllingFieldValue>IS</controllingFieldValue>
+            
+                <controllingFieldValue>OUI</controllingFieldValue>
+            
+                <controllingFieldValue>SRP</controllingFieldValue>
+            
+                <controllingFieldValue>SM</controllingFieldValue>
+            
+                <valueName>CE</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>DIR</controllingFieldValue>
+            
+                <controllingFieldValue>IS</controllingFieldValue>
+            
+                <controllingFieldValue>OUI</controllingFieldValue>
+            
+                <controllingFieldValue>SRP</controllingFieldValue>
+            
+                <controllingFieldValue>SM</controllingFieldValue>
+            
+                <valueName>NC</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>DIR</controllingFieldValue>
+            
+                <controllingFieldValue>IS</controllingFieldValue>
+            
+                <controllingFieldValue>OUI</controllingFieldValue>
+            
+                <controllingFieldValue>SRP</controllingFieldValue>
+            
+                <controllingFieldValue>SM</controllingFieldValue>
+            
+                <valueName>RTW</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>DIR</controllingFieldValue>
+            
+                <controllingFieldValue>IS</controllingFieldValue>
+            
+                <controllingFieldValue>OUI</controllingFieldValue>
+            
+                <controllingFieldValue>SRP</controllingFieldValue>
+            
+                <controllingFieldValue>SM</controllingFieldValue>
+            
+                <valueName>CEH</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>DIR</controllingFieldValue>
+            
+                <controllingFieldValue>IS</controllingFieldValue>
+            
+                <controllingFieldValue>OUI</controllingFieldValue>
+            
+                <controllingFieldValue>SRP</controllingFieldValue>
+            
+                <controllingFieldValue>SM</controllingFieldValue>
+            
+                <valueName>NCP</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>DIR</controllingFieldValue>
+            
+                <controllingFieldValue>IS</controllingFieldValue>
+            
+                <controllingFieldValue>OUI</controllingFieldValue>
+            
+                <controllingFieldValue>SRP</controllingFieldValue>
+            
+                <controllingFieldValue>SM</controllingFieldValue>
+            
+                <valueName>MNOP</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>DIR</controllingFieldValue>
+            
+                <controllingFieldValue>IS</controllingFieldValue>
+            
+                <controllingFieldValue>OUI</controllingFieldValue>
+            
+                <controllingFieldValue>SRP</controllingFieldValue>
+            
+                <controllingFieldValue>SM</controllingFieldValue>
+            
+                <valueName>SM</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>DIR</controllingFieldValue>
+            
+                <controllingFieldValue>IS</controllingFieldValue>
+            
+                <controllingFieldValue>OUI</controllingFieldValue>
+            
+                <controllingFieldValue>SRP</controllingFieldValue>
+            
+                <controllingFieldValue>SM</controllingFieldValue>
+            
+                <valueName>NLE</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>DIR</controllingFieldValue>
+            
+                <controllingFieldValue>IS</controllingFieldValue>
+            
+                <controllingFieldValue>OUI</controllingFieldValue>
+            
+                <controllingFieldValue>SRP</controllingFieldValue>
+            
+                <controllingFieldValue>SM</controllingFieldValue>
+            
+                <valueName>NIE</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>DIR</controllingFieldValue>
+            
+                <controllingFieldValue>IS</controllingFieldValue>
+            
+                <controllingFieldValue>OUI</controllingFieldValue>
+            
+                <controllingFieldValue>SRP</controllingFieldValue>
+            
+                <controllingFieldValue>SM</controllingFieldValue>
+            
+                <valueName>NRE</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>DIR</controllingFieldValue>
+            
+                <controllingFieldValue>IS</controllingFieldValue>
+            
+                <controllingFieldValue>OUI</controllingFieldValue>
+            
+                <controllingFieldValue>SRP</controllingFieldValue>
+            
+                <controllingFieldValue>SM</controllingFieldValue>
+            
+                <valueName>UTL</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>DIR</controllingFieldValue>
+            
+                <controllingFieldValue>IS</controllingFieldValue>
+            
+                <controllingFieldValue>OUI</controllingFieldValue>
+            
+                <controllingFieldValue>SRP</controllingFieldValue>
+            
+                <controllingFieldValue>SM</controllingFieldValue>
+            
+                <valueName>MOS</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>DIR</controllingFieldValue>
+            
+                <controllingFieldValue>IS</controllingFieldValue>
+            
+                <controllingFieldValue>OUI</controllingFieldValue>
+            
+                <controllingFieldValue>SRP</controllingFieldValue>
+            
+                <controllingFieldValue>SM</controllingFieldValue>
+            
+                <valueName>IN</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>DIR</controllingFieldValue>
+            
+                <controllingFieldValue>IS</controllingFieldValue>
+            
+                <controllingFieldValue>OUI</controllingFieldValue>
+            
+                <controllingFieldValue>SRP</controllingFieldValue>
+            
+                <controllingFieldValue>SM</controllingFieldValue>
+            
+                <valueName>RT</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>DIR</controllingFieldValue>
+            
+                <controllingFieldValue>IS</controllingFieldValue>
+            
+                <controllingFieldValue>OUI</controllingFieldValue>
+            
+                <controllingFieldValue>SRP</controllingFieldValue>
+            
+                <controllingFieldValue>SM</controllingFieldValue>
+            
+                <valueName>RM</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>EA</controllingFieldValue>
+            
+                <controllingFieldValue>SE</controllingFieldValue>
+            
+                <valueName>F</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>EA</controllingFieldValue>
+            
+                <controllingFieldValue>SE</controllingFieldValue>
+            
+                <valueName>Q</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>EA</controllingFieldValue>
+            
+                <controllingFieldValue>SE</controllingFieldValue>
+            
+                <valueName>LO</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>EA</controllingFieldValue>
+            
+                <controllingFieldValue>SE</controllingFieldValue>
+            
+                <valueName>BC</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>EA</controllingFieldValue>
+            
+                <valueName>MN</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>EA</controllingFieldValue>
+            
+                <valueName>R</valueName>
+            
+            </valueSettings>
+        
+        </valueSet>
+</CustomField>
