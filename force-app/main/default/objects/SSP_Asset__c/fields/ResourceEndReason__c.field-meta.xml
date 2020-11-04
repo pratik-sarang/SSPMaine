@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ResourceEndReason__c</fullName>
+    <description>This field is used to store end reason for an asset</description>
+    <externalId>false</externalId>
+    <label>Resource End Reason</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        
+            <controllingField>ResourceTypeCode__c</controllingField>
+        
+            <restricted>true</restricted>
+        
+            <valueSetName>ResourceEndReason</valueSetName>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>RP</controllingFieldValue>
+            
+                <controllingFieldValue>LI</controllingFieldValue>
+            
+                <valueName>LQ</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>RP</controllingFieldValue>
+            
+                <controllingFieldValue>OR</controllingFieldValue>
+            
+                <controllingFieldValue>AC</controllingFieldValue>
+            
+                <controllingFieldValue>IN</controllingFieldValue>
+            
+                <valueName>FE</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>RP</controllingFieldValue>
+            
+                <controllingFieldValue>LI</controllingFieldValue>
+            
+                <valueName>SMT</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>RP</controllingFieldValue>
+            
+                <controllingFieldValue>OR</controllingFieldValue>
+            
+                <controllingFieldValue>AC</controllingFieldValue>
+            
+                <controllingFieldValue>IN</controllingFieldValue>
+            
+                <valueName>AC</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>RP</controllingFieldValue>
+            
+                <valueName>PF</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>RP</controllingFieldValue>
+            
+                <valueName>TRD</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>RP</controllingFieldValue>
+            
+                <controllingFieldValue>VI</controllingFieldValue>
+            
+                <valueName>RP</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>RP</controllingFieldValue>
+            
+                <controllingFieldValue>VI</controllingFieldValue>
+            
+                <controllingFieldValue>LI</controllingFieldValue>
+            
+                <valueName>TR</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>RP</controllingFieldValue>
+            
+                <controllingFieldValue>LI</controllingFieldValue>
+            
+                <valueName>TE</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>RP</controllingFieldValue>
+            
+                <controllingFieldValue>VI</controllingFieldValue>
+            
+                <controllingFieldValue>OR</controllingFieldValue>
+            
+                <controllingFieldValue>AC</controllingFieldValue>
+            
+                <controllingFieldValue>IN</controllingFieldValue>
+            
+                <controllingFieldValue>LI</controllingFieldValue>
+            
+                <valueName>OT</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>RP</controllingFieldValue>
+            
+                <controllingFieldValue>OR</controllingFieldValue>
+            
+                <controllingFieldValue>AC</controllingFieldValue>
+            
+                <controllingFieldValue>IN</controllingFieldValue>
+            
+                <valueName>LT</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>RP</controllingFieldValue>
+            
+                <controllingFieldValue>VI</controllingFieldValue>
+            
+                <controllingFieldValue>OR</controllingFieldValue>
+            
+                <controllingFieldValue>AC</controllingFieldValue>
+            
+                <controllingFieldValue>IN</controllingFieldValue>
+            
+                <valueName>ST</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>RP</controllingFieldValue>
+            
+                <controllingFieldValue>LI</controllingFieldValue>
+            
+                <valueName>SCV</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>RP</controllingFieldValue>
+            
+                <controllingFieldValue>VI</controllingFieldValue>
+            
+                <controllingFieldValue>OR</controllingFieldValue>
+            
+                <controllingFieldValue>AC</controllingFieldValue>
+            
+                <controllingFieldValue>IN</controllingFieldValue>
+            
+                <valueName>SO</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>RP</controllingFieldValue>
+            
+                <controllingFieldValue>LI</controllingFieldValue>
+            
+                <valueName>CC</valueName>
+            
+            </valueSettings>
+        
+            <valueSettings>
+            
+                <controllingFieldValue>RP</controllingFieldValue>
+            
+                <controllingFieldValue>OR</controllingFieldValue>
+            
+                <controllingFieldValue>AC</controllingFieldValue>
+            
+                <controllingFieldValue>IN</controllingFieldValue>
+            
+                <valueName>GT</valueName>
+            
+            </valueSettings>
+        
+        </valueSet>
+</CustomField>

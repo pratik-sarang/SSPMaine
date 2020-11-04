@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    
+    <customValue>
+        
+        <fullName>SE</fullName>
+        
+        <default>false</default>
+        
+        <label>Shelter Expense</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>UE</fullName>
+        
+        <default>false</default>
+        
+        <label>Utility Expense</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>EE</fullName>
+        
+        <default>false</default>
+        
+        <label>Higher Education Expense</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>ME</fullName>
+        
+        <default>false</default>
+        
+        <label>Medical Expense</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>CAE</fullName>
+        
+        <default>false</default>
+        
+        <label>Child Support Expense</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>DCE</fullName>
+        
+        <default>false</default>
+        
+        <label>Dependent Care Expense</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>DE</fullName>
+        
+        <default>false</default>
+        
+        <label>Tax Deduction Expense</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>AL</fullName>
+        
+        <default>false</default>
+        
+        <label>Alimony Expense</label>
+        
+    </customValue>
+    
+    <description>Different expense types</description>
+    
+    <masterLabel>Expense Type</masterLabel>
+    
+    <sorted>false</sorted>
+    
+</GlobalValueSet>

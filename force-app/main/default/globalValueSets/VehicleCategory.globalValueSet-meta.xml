@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    
+    <customValue>
+        
+        <fullName>RECR</fullName>
+        
+        <default>false</default>
+        
+        <label>Recreational</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>TRANS</fullName>
+        
+        <default>false</default>
+        
+        <label>Transportation</label>
+        
+    </customValue>
+    
+    <description>Different Categories of Vehicle</description>
+    
+    <masterLabel>Vehicle Category</masterLabel>
+    
+    <sorted>false</sorted>
+    
+</GlobalValueSet>

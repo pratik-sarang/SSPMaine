@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    
+    <customValue>
+        
+        <fullName>WIA</fullName>
+        
+        <default>false</default>
+        
+        <label>Work Investment Act (WIA)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>TAA</fullName>
+        
+        <default>false</default>
+        
+        <label>Trade Adjustment Act (TAA)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>OTA</fullName>
+        
+        <default>false</default>
+        
+        <label>Other State or Local Training Program</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>ETP</fullName>
+        
+        <default>false</default>
+        
+        <label>Employment and Training Program</label>
+        
+    </customValue>
+    
+    <description>Different types of programs by which citizen has been placed</description>
+    
+    <masterLabel>Placed Through Program</masterLabel>
+    
+    <sorted>false</sorted>
+    
+</GlobalValueSet>

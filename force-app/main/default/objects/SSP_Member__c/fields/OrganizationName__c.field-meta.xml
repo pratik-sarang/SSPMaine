@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OrganizationName__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>This field is used to indicate a related institution of organization type on a member</description>
+    <externalId>false</externalId>
+    <label>Organization/Provider Name</label>
+    <referenceTo>SSP_Institution__c</referenceTo>
+    <relationshipLabel>SSP Members (Organization/Provider Name)</relationshipLabel>
+    <relationshipName>SSP_Member</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

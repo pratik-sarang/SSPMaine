@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HasGivenWrongInformationToggle__c</fullName>
+    <description>This field is used to store if anyone in the household is convicted due to wrong information</description>
+    <externalId>false</externalId>
+    <label>Convicted wrong informtion ?</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        
+            <restricted>true</restricted>
+        
+            <valueSetName>YesNo</valueSetName>
+        
+        </valueSet>
+</CustomField>

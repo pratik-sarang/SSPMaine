@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    
+    <customValue>
+        
+        <fullName>EX</fullName>
+        
+        <default>false</default>
+        
+        <label>Executor</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>FM</fullName>
+        
+        <default>false</default>
+        
+        <label>Family member (not spouse)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>FR</fullName>
+        
+        <default>false</default>
+        
+        <label>Friend</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>LG</fullName>
+        
+        <default>false</default>
+        
+        <label>Legal Guardian</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>NF</fullName>
+        
+        <default>false</default>
+        
+        <label>Nursing Facility Representative</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>OT</fullName>
+        
+        <default>false</default>
+        
+        <label>Other</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>OE</fullName>
+        
+        <default>false</default>
+        
+        <label>Outside entity</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>MN</fullName>
+        
+        <default>false</default>
+        
+        <label>Parent of a minor child</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>PA</fullName>
+        
+        <default>false</default>
+        
+        <label>Power of Attorney</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SP</fullName>
+        
+        <default>false</default>
+        
+        <label>Spouse</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>PY</fullName>
+        
+        <default>false</default>
+        
+        <label>Statutory Benefit Payee</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>TCE</fullName>
+        
+        <default>false</default>
+        
+        <label>Treatment Center Employee</label>
+        
+    </customValue>
+    
+    <description>Used to store relationship types for Representatives</description>
+    
+    <masterLabel>Representative Relationship</masterLabel>
+    
+    <sorted>false</sorted>
+    
+</GlobalValueSet>

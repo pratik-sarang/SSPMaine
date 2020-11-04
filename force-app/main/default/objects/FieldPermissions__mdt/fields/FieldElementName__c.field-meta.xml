@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieldElementName__c</fullName>
+    <description>field or button or link for which this permission is defined in security matrix. use element Id from field inventory specific to this element, ex. REPS_HOME_18 to be used for &quot;Add an Authorized Representative&quot; button</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>field or button or link for which this permission is defined in security matrix. use element Id from field inventory specific to this element, ex. REPS_HOME_18 to be used for &quot;Add an Authorized Representative&quot; button</inlineHelpText>
+    <label>Field/Element Name</label>
+    <length>255</length>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

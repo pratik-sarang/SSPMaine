@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    
+    <customValue>
+        
+        <fullName>GED</fullName>
+        
+        <default>false</default>
+        
+        <label>GED</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>HS</fullName>
+        
+        <default>false</default>
+        
+        <label>High School</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>MS</fullName>
+        
+        <default>false</default>
+        
+        <label>Middle School</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>ES</fullName>
+        
+        <default>false</default>
+        
+        <label>Elementary School</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>TC</fullName>
+        
+        <default>false</default>
+        
+        <label>Technical / Trade / Vocational School</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>CL</fullName>
+        
+        <default>false</default>
+        
+        <label>College / University</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>HM</fullName>
+        
+        <default>false</default>
+        
+        <label>Home School</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>OT</fullName>
+        
+        <default>false</default>
+        
+        <label>Other</label>
+        
+    </customValue>
+    
+    <description>Institution School Types</description>
+    
+    <masterLabel>Institution School Type</masterLabel>
+    
+    <sorted>false</sorted>
+    
+</GlobalValueSet>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    
+    <description>SSP_HearingDoc_CASE_MANAGER_IN_TRAINING</description>
+    
+    <label>SSP_HearingDoc_CASE_MANAGER_IN_TRAINING</label>
+    
+    <protected>false</protected>
+    
+    <values>
+        
+        <field>CanDelete__c</field>
+        
+        <value xsi:type="xsd:boolean">false</value>
+        
+    </values>
+    
+    <values>
+        
+        <field>Permission__c</field>
+        
+        <value xsi:type="xsd:string">ReadOnly</value>
+        
+    </values>
+    
+    <values>
+        
+        <field>Role__c</field>
+        
+        <value xsi:type="xsd:string">CASE_MANAGER_IN_TRAINING</value>
+        
+    </values>
+    
+    <values>
+        
+        <field>ScreenName__c</field>
+        
+        <value xsi:type="xsd:string">SSP_APP_HearingDocuments</value>
+        
+    </values>
+    
+</CustomMetadata>

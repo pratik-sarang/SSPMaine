@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    
+    <customValue>
+        
+        <fullName>LQ</fullName>
+        
+        <default>false</default>
+        
+        <label>Liquidated</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>FE</fullName>
+        
+        <default>false</default>
+        
+        <label>Fund Exhausted</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SMT</fullName>
+        
+        <default>false</default>
+        
+        <label>Financial Institution Statement</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>AC</fullName>
+        
+        <default>false</default>
+        
+        <label>Account Closed</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>PF</fullName>
+        
+        <default>false</default>
+        
+        <label>Paid in Full</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>TRD</fullName>
+        
+        <default>false</default>
+        
+        <label>Trust Dissolved</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>RP</fullName>
+        
+        <default>false</default>
+        
+        <label>Repossessed</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>TR</fullName>
+        
+        <default>false</default>
+        
+        <label>Transferred</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>TE</fullName>
+        
+        <default>false</default>
+        
+        <label>Terminated</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>OT</fullName>
+        
+        <default>false</default>
+        
+        <label>Other</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>LT</fullName>
+        
+        <default>false</default>
+        
+        <label>Lost</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>ST</fullName>
+        
+        <default>false</default>
+        
+        <label>Stolen</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SCV</fullName>
+        
+        <default>false</default>
+        
+        <label>Surrendered for CSV</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SO</fullName>
+        
+        <default>false</default>
+        
+        <label>Sold</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>CC</fullName>
+        
+        <default>false</default>
+        
+        <label>Collateral Contact</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>GT</fullName>
+        
+        <default>false</default>
+        
+        <label>Gifted</label>
+        
+    </customValue>
+    
+    <description>Resource End Reason</description>
+    
+    <masterLabel>Resource End Reason</masterLabel>
+    
+    <sorted>false</sorted>
+    
+</GlobalValueSet>

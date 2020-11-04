@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IsTMember__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This field is used to indicate whether the Member is T member</description>
+    <externalId>false</externalId>
+    <label>IsTMember</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NotEnoughInformation__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This field is used to indicate that there is not enough information to provide for an asset</description>
+    <externalId>false</externalId>
+    <label>Not Enough Information</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

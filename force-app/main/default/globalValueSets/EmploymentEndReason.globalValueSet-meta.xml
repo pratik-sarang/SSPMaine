@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    
+    <customValue>
+        
+        <fullName>F</fullName>
+        
+        <default>false</default>
+        
+        <label>Fired</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>Q</fullName>
+        
+        <default>false</default>
+        
+        <label>Quit</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>LO</fullName>
+        
+        <default>false</default>
+        
+        <label>Laid Off</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>BC</fullName>
+        
+        <default>false</default>
+        
+        <label>Business Closed</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>MN</fullName>
+        
+        <default>false</default>
+        
+        <label>Medically necessary</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>R</fullName>
+        
+        <default>false</default>
+        
+        <label>Retired</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>OVR</fullName>
+        
+        <default>false</default>
+        
+        <label>Other</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>CE</fullName>
+        
+        <default>false</default>
+        
+        <label>Claim Exhausted</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>NC</fullName>
+        
+        <default>false</default>
+        
+        <label>Non compliance</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>RTW</fullName>
+        
+        <default>false</default>
+        
+        <label>Returned to work</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>CEH</fullName>
+        
+        <default>false</default>
+        
+        <label>Child emancipated/Left home</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>NCP</fullName>
+        
+        <default>false</default>
+        
+        <label>NCP non-payment (non-custodial parent)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>MNOP</fullName>
+        
+        <default>false</default>
+        
+        <label>No longer receiving contribution</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>SM</fullName>
+        
+        <default>false</default>
+        
+        <label>System Applied</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>NLE</fullName>
+        
+        <default>false</default>
+        
+        <label>No longer age eligible</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>NIE</fullName>
+        
+        <default>false</default>
+        
+        <label>Not income eligible</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>NRE</fullName>
+        
+        <default>false</default>
+        
+        <label>Not resource eligible</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>UTL</fullName>
+        
+        <default>false</default>
+        
+        <label>Unable to locate</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>MOS</fullName>
+        
+        <default>false</default>
+        
+        <label>Moved out of state</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>IN</fullName>
+        
+        <default>false</default>
+        
+        <label>Incarceration</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>RT</fullName>
+        
+        <default>false</default>
+        
+        <label>Refuse Treatment (alcohol or drug addiction)</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>RM</fullName>
+        
+        <default>false</default>
+        
+        <label>Remarried</label>
+        
+    </customValue>
+    
+    <customValue>
+        
+        <fullName>NLD</fullName>
+        
+        <default>false</default>
+        
+        <label>No longer disabled</label>
+        
+    </customValue>
+    
+    <description>Used to store different types of Employment end reason</description>
+    
+    <masterLabel>Employment End Reason</masterLabel>
+    
+    <sorted>false</sorted>
+    
+</GlobalValueSet>
