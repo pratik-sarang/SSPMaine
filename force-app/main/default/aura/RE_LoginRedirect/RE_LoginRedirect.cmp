@@ -1,6 +1,0 @@
-<aura:component controller="RE_ThemeCtrl" implements="forceCommunity:availableForAllPageTypes" access="global">
-    
-    <aura:attribute name="isSpinnerActive" type="Boolean" description= "this attribute is used to store the state of the spinner"/>
-     <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
-    <c:RE_UtilityServerCallerCmp aura:id="bSuper" isSpinnerActive="{!v.isSpinnerActive}"/> 	
-</aura:component>

@@ -1,5 +1,0 @@
-<aura:event type="COMPONENT" description="Fires the Map data to view">
-    <aura:attribute name="mapOptions" type="Object" description="this atrribute is used to display default zoom size on the Map."/>
-    <aura:attribute name="mapOptionsCenter" type="Object" description="this atrribute is used to display Map attributes."/>
-    <aura:attribute name="mapData" type="List" description="this atrribute is used to display the Map data."/>
-</aura:event>

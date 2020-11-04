@@ -1,8 +1,0 @@
-<!--*****************************************************************************************
-* NAME         :  RE_CountEvent
-* DESCRIPTION  :  Lightning Event to Pass Values from one Component to another 
-* @DATE 	   :  08/14/2019        
-******************************************************************************************-->
-<aura:event type="APPLICATION" description="Event template">
-	<aura:attribute name="cartCount" type="Integer"/>
-</aura:event>

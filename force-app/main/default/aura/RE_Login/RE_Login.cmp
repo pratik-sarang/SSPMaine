@@ -1,3 +1,0 @@
-<aura:component implements="forceCommunity:availableForAllPagetypes">
-    <a class="login-css" href="login">Login</a>
-</aura:component>

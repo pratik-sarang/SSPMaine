@@ -1,8 +1,0 @@
-.THIS.header-wrapper{
-    background: t(REHeaderBg);
-    color: t(REHeaderText);
-}
-.THIS .headerMainHead{
-    font-size: t(RESize34);
-    text-transform: uppercase;
-}

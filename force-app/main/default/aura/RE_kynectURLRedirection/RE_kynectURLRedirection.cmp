@@ -1,5 +1,0 @@
-<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes" access="global" >
-	 <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
-   	 <c:RE_UtilityServerCallerCmp aura:id="bSuper" isSpinnerActive="true"/>
-   
-</aura:component>

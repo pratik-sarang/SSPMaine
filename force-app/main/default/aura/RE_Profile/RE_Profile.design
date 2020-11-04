@@ -1,3 +1,0 @@
-<design:component>
-    	<design:attribute name="isMyAccount" label="My Account Page?" />
-</design:component>

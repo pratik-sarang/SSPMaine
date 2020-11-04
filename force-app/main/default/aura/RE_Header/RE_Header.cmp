@@ -1,7 +1,0 @@
-<aura:component >
-    <div class="header-wrapper slds-p-around_large slds-grid slds-wrap">
-        <div class="header-logo">
-            <img width="130" height="120" src="{!$Resource.logo}"/>
-        </div>
-    </div>
-</aura:component>

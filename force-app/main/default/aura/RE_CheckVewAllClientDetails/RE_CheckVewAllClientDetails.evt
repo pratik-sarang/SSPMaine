@@ -1,9 +1,0 @@
-<aura:event type="Component" description="Event template" >
-
-	<aura:attribute name="StopParentInit" type="Boolean" default ="true"/>
-    <aura:attribute name="showdetail" type="Boolean" default ="false"/>
-    <aura:attribute name="ClientId" type="String" default =""/>
-    <aura:attribute name="clientName" type="String" default =""/> 
-    <aura:attribute name="clientData" type="Object" />    
-    
-</aura:event>

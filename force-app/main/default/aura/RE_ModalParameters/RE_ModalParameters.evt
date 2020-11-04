@@ -1,9 +1,0 @@
-<!--*****************************************************************************************
-* NAME         :  RE_ModalParameters
-* DESCRIPTION  :  Lightning Event to Pass Values from Parent to Child 
-* @DATE 	   :  08/14/2019        
-******************************************************************************************-->
-<aura:event type="COMPONENT" description="To pass value from child to parent" > 
-    <aura:attribute name="isConsentAgreed" type="Boolean" required="true" description="To pass consent from Modal"/>
-    <aura:attribute name="isModalClosed" type="Boolean" default="false" description="To pass Modal Close Value"/>
-</aura:event>

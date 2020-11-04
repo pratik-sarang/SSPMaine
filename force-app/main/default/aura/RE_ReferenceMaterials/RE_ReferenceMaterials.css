@@ -1,9 +1,0 @@
-.THIS .referenceItem{
-    background-color:t(RENavActiveBG);   
-    border-bottom:0.0625rem solid t(RElightGrey);
-    cursor:pointer;  
-}
-.THIS .referenceItem a{
-    color:t(REBlack);
-    display:inline;
-}
