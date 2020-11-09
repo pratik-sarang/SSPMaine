@@ -1,21 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    
     <label>CCAP Limit 160% FPL Size 15</label>
+    
     <protected>false</protected>
+    
     <values>
+        
         <field>Key__c</field>
+        
         <value xsi:type="xsd:string">FPL_160</value>
+        
     </values>
+    
     <values>
+        
         <field>Number_Of_People__c</field>
+        
         <value xsi:type="xsd:double">15.0</value>
+        
     </values>
+    
     <values>
+        
         <field>Type__c</field>
+        
         <value xsi:type="xsd:string">EDCCAPINCLIMIT</value>
+        
     </values>
+    
     <values>
+        
         <field>Value__c</field>
+        
         <value xsi:type="xsd:double">9683.0</value>
+        
     </values>
+    
 </CustomMetadata>

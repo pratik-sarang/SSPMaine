@@ -3,11 +3,17 @@
     <label><!-- Permissions Level --></label>
     <name>PermissionsLevel__c</name>
     <picklistValues>
-        <masterLabel>Admin</masterLabel>
-        <translation>Administradora</translation>
-    </picklistValues>
+        
+            <masterLabel>Admin</masterLabel>
+        
+            <translation>Administradora</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Staff</masterLabel>
-        <translation>Personal</translation>
-    </picklistValues>
+        
+            <masterLabel>Staff</masterLabel>
+        
+            <translation>Personal</translation>
+        
+        </picklistValues>
 </CustomFieldTranslation>

@@ -3,7 +3,10 @@
     <label><!-- Allow_Only_1_Selection_Msg --></label>
     <name>Allow_Only_1_Selection_Msg__c</name>
     <picklistValues>
-        <masterLabel>Please select only one option</masterLabel>
-        <translation><!-- Please select only one option --></translation>
-    </picklistValues>
+        
+            <masterLabel>Please select only one option</masterLabel>
+        
+            <translation><!-- Please select only one option --></translation>
+        
+        </picklistValues>
 </CustomFieldTranslation>

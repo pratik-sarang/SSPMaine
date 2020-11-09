@@ -3,79 +3,136 @@
     <label><!-- Template Title --></label>
     <name>TemplateTitle__c</name>
     <picklistValues>
+        
         <masterLabel>Child Care Verification (PAFS-19)</masterLabel>
+        
         <translation>Verificación de Cuidados Infantiles (PAFS-19)</translation>
+        
     </picklistValues>
     <picklistValues>
+        
         <masterLabel>Childs Certification of School Enrollment/Attendance (PA-33D)</masterLabel>
+        
         <translation>Certificación de Inscripción/Asistencia a la Escuela de Menor (PA-33D)</translation>
+        
     </picklistValues>
     <picklistValues>
+        
         <masterLabel>Household Information Request (PA-21)</masterLabel>
+        
         <translation>Pedido de información del hogar (PA-21)</translation>
+        
     </picklistValues>
     <picklistValues>
+        
         <masterLabel>Information Request-Landlord (PAFS-76)</masterLabel>
+        
         <translation>Pedido de información - Arrendador (PAFS-76)</translation>
+        
     </picklistValues>
     <picklistValues>
+        
         <masterLabel>Irregular Work Form (PAFS-121)</masterLabel>
+        
         <translation>Formulario de trabajo irregular (PAFS-121)</translation>
+        
     </picklistValues>
     <picklistValues>
+        
         <masterLabel>Notice for Initial Job Search(DCC-90P)</masterLabel>
+        
         <translation>Aviso para búsqueda de trabajo inicial (DCC-90P)</translation>
+        
     </picklistValues>
     <picklistValues>
+        
         <masterLabel>Proof of Zero Income Form (PAFS-702)</masterLabel>
+        
         <translation>Formulario de comprobante de ingreso cero (PAFS-702)</translation>
+        
     </picklistValues>
     <picklistValues>
+        
         <masterLabel>Qualifying Income Trust (MAP-007)</masterLabel>
+        
         <translation>Fideicomiso de ingreso que califica (MAP-007)</translation>
+        
     </picklistValues>
     <picklistValues>
+        
         <masterLabel>Statement of Disability or Incapacity (FS-704)</masterLabel>
+        
         <translation>Declaración de discapacidad o incapacidad (FS-704)</translation>
+        
     </picklistValues>
     <picklistValues>
+        
         <masterLabel>Student Work Verification (DCC-90L)</masterLabel>
+        
         <translation>Verificación de trabajo de estudiante (DCC-90L)</translation>
+        
     </picklistValues>
     <picklistValues>
+        
         <masterLabel>Verification of Contributions - Loans - Roomer/Boarder Payments (PAFS-73)</masterLabel>
+        
         <translation>Verificación de contribuciones - Préstamos - Pagos de inquilino/pensionista (PAFS-73)</translation>
+        
     </picklistValues>
     <picklistValues>
+        
         <masterLabel>Verification of Employment and Wages (PAFS-700)</masterLabel>
+        
         <translation>Verificación de Empleo y Salarios (PAFS-700)</translation>
+        
     </picklistValues>
     <picklistValues>
+        
         <masterLabel>Verification of Kentucky Works Program Participation (KW-33)</masterLabel>
+        
         <translation>Verificación de Participación en Programa Kentucky Works (KW-33)</translation>
+        
     </picklistValues>
     <picklistValues>
+        
         <masterLabel>Written Income Statement</masterLabel>
+        
         <translation>Declaración Escrita de Ingreso</translation>
+        
     </picklistValues>
     <picklistValues>
+        
         <masterLabel>Written Statement</masterLabel>
+        
         <translation>Declaración Escrita</translation>
+        
     </picklistValues>
     <picklistValues>
+        
         <masterLabel>Written Statement for Income or No Income</masterLabel>
+        
         <translation><!-- Written Statement for Income or No Income --></translation>
+        
     </picklistValues>
     <picklistValues>
+        
         <masterLabel>Written Statement from Boarder</masterLabel>
+        
         <translation><!-- Written Statement from Boarder --></translation>
+        
     </picklistValues>
     <picklistValues>
+        
         <masterLabel>Written Statement from Child Care Facility</masterLabel>
+        
         <translation><!-- Written Statement from Child Care Facility --></translation>
+        
     </picklistValues>
     <picklistValues>
+        
         <masterLabel>Written Statement from Lender</masterLabel>
+        
         <translation>Declaración Escrita de Prestamista</translation>
+        
     </picklistValues>
 </CustomFieldTranslation>

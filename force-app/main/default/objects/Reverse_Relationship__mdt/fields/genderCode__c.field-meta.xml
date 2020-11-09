@@ -8,24 +8,44 @@
     <required>false</required>
     <type>Picklist</type>
     <valueSet>
-        <restricted>true</restricted>
-        <valueSetDefinition>
-            <sorted>false</sorted>
-            <value>
-                <fullName>F</fullName>
-                <default>true</default>
-                <label>F</label>
-            </value>
-            <value>
-                <fullName>M</fullName>
-                <default>false</default>
-                <label>M</label>
-            </value>
-            <value>
-                <fullName>B</fullName>
-                <default>false</default>
-                <label>B</label>
-            </value>
-        </valueSetDefinition>
-    </valueSet>
+        
+            <restricted>true</restricted>
+        
+            <valueSetDefinition>
+            
+                <sorted>false</sorted>
+            
+                <value>
+                
+                    <fullName>F</fullName>
+                
+                    <default>true</default>
+                
+                    <label>F</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>M</fullName>
+                
+                    <default>false</default>
+                
+                    <label>M</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>B</fullName>
+                
+                    <default>false</default>
+                
+                    <label>B</label>
+                
+                </value>
+            
+            </valueSetDefinition>
+        
+        </valueSet>
 </CustomField>

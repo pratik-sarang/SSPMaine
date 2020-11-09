@@ -6,10 +6,14 @@
     <columns>NamespacePrefix</columns>
     <filterScope>Everything</filterScope>
     <filters>
-        <field>RuleName__c</field>
-        <operation>contains</operation>
-        <value>contact</value>
-    </filters>
+        
+            <field>RuleName__c</field>
+        
+            <operation>contains</operation>
+        
+            <value>contact</value>
+        
+        </filters>
     <label>Filter</label>
     <language>en_US</language>
 </ListView>

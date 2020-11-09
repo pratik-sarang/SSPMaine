@@ -10,18 +10,32 @@
     <trackTrending>false</trackTrending>
     <type>Picklist</type>
     <valueSet>
-        <valueSetDefinition>
-            <sorted>false</sorted>
-            <value>
-                <fullName>Active</fullName>
-                <default>false</default>
-                <label>Active</label>
-            </value>
-            <value>
-                <fullName>Inactive</fullName>
-                <default>false</default>
-                <label>Inactive</label>
-            </value>
-        </valueSetDefinition>
-    </valueSet>
+        
+            <valueSetDefinition>
+            
+                <sorted>false</sorted>
+            
+                <value>
+                
+                    <fullName>Active</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Active</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>Inactive</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Inactive</label>
+                
+                </value>
+            
+            </valueSetDefinition>
+        
+        </valueSet>
 </CustomField>

@@ -3,15 +3,24 @@
     <label><!-- IllegalCharactersValidator_Msg --></label>
     <name>IllegalCharactersValidator_Msg__c</name>
     <picklistValues>
-        <masterLabel>Please enter data in correct format</masterLabel>
-        <translation><!-- Please enter data in correct format --></translation>
-    </picklistValues>
+        
+            <masterLabel>Please enter data in correct format</masterLabel>
+        
+            <translation><!-- Please enter data in correct format --></translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Please enter either letter and numeric characters.</masterLabel>
-        <translation>Ingresar tanto caracteres de letras como numéricos.</translation>
-    </picklistValues>
+        
+            <masterLabel>Please enter either letter and numeric characters.</masterLabel>
+        
+            <translation>Ingresar tanto caracteres de letras como numéricos.</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Please enter valid characters.</masterLabel>
-        <translation>Ingresar caracteres válidos</translation>
-    </picklistValues>
+        
+            <masterLabel>Please enter valid characters.</masterLabel>
+        
+            <translation>Ingresar caracteres válidos</translation>
+        
+        </picklistValues>
 </CustomFieldTranslation>

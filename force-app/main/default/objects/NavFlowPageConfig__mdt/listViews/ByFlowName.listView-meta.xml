@@ -13,9 +13,13 @@
     <columns>IsActive__c</columns>
     <filterScope>Everything</filterScope>
     <filters>
-        <field>NavigationFlowDetail__c</field>
-        <operation>contains</operation>
-        <value>Renewal</value>
-    </filters>
+        
+            <field>NavigationFlowDetail__c</field>
+        
+            <operation>contains</operation>
+        
+            <value>Renewal</value>
+        
+        </filters>
     <label>By Flow Name</label>
 </ListView>

@@ -1,95 +1,189 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <GlobalValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    
     <valueTranslation>
+        
         <masterLabel>Business Closed</masterLabel>
+        
         <translation>Cierre de empresa</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Child emancipated/Left home</masterLabel>
+        
         <translation>Hijo(a) emancipado(a)/Se fue del hogar</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Claim Exhausted</masterLabel>
+        
         <translation>Reclamo agotado</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Fired</masterLabel>
+        
         <translation>Despedido</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Incarceration</masterLabel>
+        
         <translation>Encarcelación</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Laid Off</masterLabel>
+        
         <translation>Despido por reducción de personal</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Medically necessary</masterLabel>
+        
         <translation>Médicamente necesario</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Moved out of state</masterLabel>
+        
         <translation>Se mudó fuera del estado</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>NCP non-payment (non-custodial parent)</masterLabel>
+        
         <translation>No pago de padre/madre sin la custodia</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>No longer age eligible</masterLabel>
+        
         <translation>Ya no es elegible por edad</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>No longer disabled</masterLabel>
+        
         <translation>Ya no tiene discapacidad</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>No longer receiving contribution</masterLabel>
+        
         <translation>Ya no recibe contribución</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Non compliance</masterLabel>
+        
         <translation>Incumplimiento</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Not income eligible</masterLabel>
+        
         <translation>No elegible por ingreso</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Not resource eligible</masterLabel>
+        
         <translation>No elegible por recursos</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Other</masterLabel>
+        
         <translation>Otro</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Quit</masterLabel>
+        
         <translation>Quit</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Refuse Treatment (alcohol or drug addiction)</masterLabel>
+        
         <translation>Se negó a recibir tratamiento (adicción a las drogas o al alcohol)</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Remarried</masterLabel>
+        
         <translation>Se volvió a casar</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Retired</masterLabel>
+        
         <translation>Jubilado</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Returned to work</masterLabel>
+        
         <translation>Volvió a trabajar</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>System Applied</masterLabel>
+        
         <translation>Presentación de solicitud por sistema</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Unable to locate</masterLabel>
+        
         <translation>Presentación de solicitud por sistema</translation>
+        
     </valueTranslation>
+    
 </GlobalValueSetTranslation>

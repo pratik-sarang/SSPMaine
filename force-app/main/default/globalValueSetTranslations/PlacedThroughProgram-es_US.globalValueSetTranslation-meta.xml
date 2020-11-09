@@ -1,19 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <GlobalValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    
     <valueTranslation>
+        
         <masterLabel>Employment and Training Program</masterLabel>
+        
         <translation>Programa de empleo y capacitación</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Other State or Local Training Program</masterLabel>
+        
         <translation>Otro programa de capacitación estatal o local</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Trade Adjustment Act (TAA)</masterLabel>
+        
         <translation>Ley para Ajuste del Comercio (TAA)</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Work Investment Act (WIA)</masterLabel>
+        
         <translation>Ley de Inversión Laboral (WIA)</translation>
+        
     </valueTranslation>
+    
 </GlobalValueSetTranslation>

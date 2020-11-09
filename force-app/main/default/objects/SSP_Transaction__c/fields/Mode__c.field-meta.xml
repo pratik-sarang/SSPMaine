@@ -9,34 +9,64 @@
     <trackTrending>false</trackTrending>
     <type>Picklist</type>
     <valueSet>
-        <restricted>true</restricted>
-        <valueSetDefinition>
-            <sorted>false</sorted>
-            <value>
-                <fullName>RAC</fullName>
-                <default>false</default>
-                <label>RAC</label>
-            </value>
-            <value>
-                <fullName>Recert</fullName>
-                <default>false</default>
-                <label>Recert</label>
-            </value>
-            <value>
-                <fullName>Intake</fullName>
-                <default>false</default>
-                <label>Intake</label>
-            </value>
-            <value>
-                <fullName>Other</fullName>
-                <default>false</default>
-                <label>Other</label>
-            </value>
-            <value>
-                <fullName>Renewal</fullName>
-                <default>false</default>
-                <label>Renewal</label>
-            </value>
-        </valueSetDefinition>
-    </valueSet>
+        
+            <restricted>true</restricted>
+        
+            <valueSetDefinition>
+            
+                <sorted>false</sorted>
+            
+                <value>
+                
+                    <fullName>RAC</fullName>
+                
+                    <default>false</default>
+                
+                    <label>RAC</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>Recert</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Recert</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>Intake</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Intake</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>Other</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Other</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>Renewal</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Renewal</label>
+                
+                </value>
+            
+            </valueSetDefinition>
+        
+        </valueSet>
 </CustomField>

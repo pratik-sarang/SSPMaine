@@ -10,33 +10,62 @@
     <trackTrending>false</trackTrending>
     <type>Picklist</type>
     <valueSet>
-        <valueSetDefinition>
-            <sorted>false</sorted>
-            <value>
-                <fullName>Community</fullName>
-                <default>false</default>
-                <label>Community</label>
-            </value>
-            <value>
-                <fullName>Integration</fullName>
-                <default>false</default>
-                <label>Integration</label>
-            </value>
-            <value>
-                <fullName>Original Media</fullName>
-                <default>false</default>
-                <label>Original Media</label>
-            </value>
-            <value>
-                <fullName>Related Media</fullName>
-                <default>false</default>
-                <label>Related Media</label>
-            </value>
-            <value>
-                <fullName>Chatter</fullName>
-                <default>false</default>
-                <label>Chatter</label>
-            </value>
-        </valueSetDefinition>
-    </valueSet>
+        
+            <valueSetDefinition>
+            
+                <sorted>false</sorted>
+            
+                <value>
+                
+                    <fullName>Community</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Community</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>Integration</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Integration</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>Original Media</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Original Media</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>Related Media</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Related Media</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>Chatter</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Chatter</label>
+                
+                </value>
+            
+            </valueSetDefinition>
+        
+        </valueSet>
 </CustomField>

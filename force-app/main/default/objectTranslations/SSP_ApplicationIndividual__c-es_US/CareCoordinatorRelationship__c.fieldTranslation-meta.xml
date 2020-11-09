@@ -3,31 +3,52 @@
     <label><!-- Care Coordinator Relationship --></label>
     <name>CareCoordinatorRelationship__c</name>
     <picklistValues>
-        <masterLabel>Care Coordinator</masterLabel>
-        <translation>Coordinador de cuidados</translation>
-    </picklistValues>
+        
+            <masterLabel>Care Coordinator</masterLabel>
+        
+            <translation>Coordinador de cuidados</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Family Member</masterLabel>
-        <translation>Miembro de la familia</translation>
-    </picklistValues>
+        
+            <masterLabel>Family Member</masterLabel>
+        
+            <translation>Miembro de la familia</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Nursing Facility</masterLabel>
-        <translation>Centro de cuidados de enfermería</translation>
-    </picklistValues>
+        
+            <masterLabel>Nursing Facility</masterLabel>
+        
+            <translation>Centro de cuidados de enfermería</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Other Caregiver</masterLabel>
-        <translation>Otro cuidador</translation>
-    </picklistValues>
+        
+            <masterLabel>Other Caregiver</masterLabel>
+        
+            <translation>Otro cuidador</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Provider</masterLabel>
-        <translation>Proveedor</translation>
-    </picklistValues>
+        
+            <masterLabel>Provider</masterLabel>
+        
+            <translation>Proveedor</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Relative</masterLabel>
-        <translation>Familiar</translation>
-    </picklistValues>
+        
+            <masterLabel>Relative</masterLabel>
+        
+            <translation>Familiar</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Self</masterLabel>
-        <translation>Persona misma</translation>
-    </picklistValues>
+        
+            <masterLabel>Self</masterLabel>
+        
+            <translation>Persona misma</translation>
+        
+        </picklistValues>
 </CustomFieldTranslation>

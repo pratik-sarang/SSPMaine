@@ -7,24 +7,44 @@
     <required>false</required>
     <type>Picklist</type>
     <valueSet>
-        <restricted>true</restricted>
-        <valueSetDefinition>
-            <sorted>false</sorted>
-            <value>
-                <fullName>Past Dates are not allowed</fullName>
-                <default>true</default>
-                <label>Past Dates are not allowed</label>
-            </value>
-            <value>
-                <fullName>Date should be today or in the past.</fullName>
-                <default>false</default>
-                <label>Date should be today or in the past.</label>
-            </value>
-            <value>
-                <fullName>Date should be today or in the future.</fullName>
-                <default>false</default>
-                <label>Date should be today or in the future.</label>
-            </value>
-        </valueSetDefinition>
-    </valueSet>
+        
+            <restricted>true</restricted>
+        
+            <valueSetDefinition>
+            
+                <sorted>false</sorted>
+            
+                <value>
+                
+                    <fullName>Past Dates are not allowed</fullName>
+                
+                    <default>true</default>
+                
+                    <label>Past Dates are not allowed</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>Date should be today or in the past.</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Date should be today or in the past.</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>Date should be today or in the future.</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Date should be today or in the future.</label>
+                
+                </value>
+            
+            </valueSetDefinition>
+        
+        </valueSet>
 </CustomField>

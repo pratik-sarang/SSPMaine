@@ -1,15 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <GlobalValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    
     <valueTranslation>
+        
         <masterLabel>Full Time</masterLabel>
+        
         <translation>Tiempo completo</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Half Time or More</masterLabel>
+        
         <translation>Medio tiempo o más</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Less Than Half Time</masterLabel>
+        
         <translation>Menos que medio tiempo</translation>
+        
     </valueTranslation>
+    
 </GlobalValueSetTranslation>

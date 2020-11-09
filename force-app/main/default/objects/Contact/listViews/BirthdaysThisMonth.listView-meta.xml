@@ -10,9 +10,13 @@
     <columns>CONTACT.BIRTHDATE</columns>
     <filterScope>Everything</filterScope>
     <filters>
-        <field>CONTACT.BIRTHDATE</field>
-        <operation>equals</operation>
-        <value>THIS_MONTH</value>
-    </filters>
+        
+            <field>CONTACT.BIRTHDATE</field>
+        
+            <operation>equals</operation>
+        
+            <value>THIS_MONTH</value>
+        
+        </filters>
     <label>Birthdays This Month</label>
 </ListView>

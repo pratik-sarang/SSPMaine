@@ -7,74 +7,144 @@
     <required>false</required>
     <type>Picklist</type>
     <valueSet>
-        <restricted>true</restricted>
-        <valueSetDefinition>
-            <sorted>false</sorted>
-            <value>
-                <fullName>Tel 8553068959</fullName>
-                <default>true</default>
-                <label>Tel 8553068959</label>
-            </value>
-            <value>
-                <fullName>call to dcbs</fullName>
-                <default>false</default>
-                <label>call to dcbs</label>
-            </value>
-            <value>
-                <fullName>navigate user to Document Center</fullName>
-                <default>false</default>
-                <label>navigate user to Document Center</label>
-            </value>
-            <value>
-                <fullName>navigate user to Renewal of Benefits screen</fullName>
-                <default>false</default>
-                <label>navigate user to Renewal of Benefits screen</label>
-            </value>
-            <value>
-                <fullName>navigate user to Claim Payments screen</fullName>
-                <default>false</default>
-                <label>navigate user to Claim Payments screen</label>
-            </value>
-            <value>
-                <fullName>navigate user to Application Summary</fullName>
-                <default>false</default>
-                <label>navigate user to Application Summary</label>
-            </value>
-            <value>
-                <fullName>navigate user to Message Center with Notice tab selected</fullName>
-                <default>false</default>
-                <label>navigate user to Message Center with Notice tab selected</label>
-            </value>
-            <value>
-                <fullName>navigate user to the assisted individual&apos;s Client View Dashboard</fullName>
-                <default>false</default>
-                <label>navigate user to the assisted individual&apos;s Client View Dashboard</label>
-            </value>
-            <value>
-                <fullName>navigate user to Renewal of assisted individual&apos;s Benefits screen</fullName>
-                <default>false</default>
-                <label>navigate user to Renewal of assisted individual&apos;s Benefits screen</label>
-            </value>
-            <value>
-                <fullName>opens Authorized Representative Access Request modal</fullName>
-                <default>false</default>
-                <label>opens Authorized Representative Access Request modal</label>
-            </value>
-            <value>
-                <fullName>opens Assister Access Request modal</fullName>
-                <default>false</default>
-                <label>opens Assister Access Request modal</label>
-            </value>
-            <value>
-                <fullName>navigate user to Hearing Summary</fullName>
-                <default>false</default>
-                <label>navigate user to Hearing Summary</label>
-            </value>
-            <value>
-                <fullName>call</fullName>
-                <default>false</default>
-                <label>call</label>
-            </value>
-        </valueSetDefinition>
-    </valueSet>
+        
+            <restricted>true</restricted>
+        
+            <valueSetDefinition>
+            
+                <sorted>false</sorted>
+            
+                <value>
+                
+                    <fullName>Tel 8553068959</fullName>
+                
+                    <default>true</default>
+                
+                    <label>Tel 8553068959</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>call to dcbs</fullName>
+                
+                    <default>false</default>
+                
+                    <label>call to dcbs</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>navigate user to Document Center</fullName>
+                
+                    <default>false</default>
+                
+                    <label>navigate user to Document Center</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>navigate user to Renewal of Benefits screen</fullName>
+                
+                    <default>false</default>
+                
+                    <label>navigate user to Renewal of Benefits screen</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>navigate user to Claim Payments screen</fullName>
+                
+                    <default>false</default>
+                
+                    <label>navigate user to Claim Payments screen</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>navigate user to Application Summary</fullName>
+                
+                    <default>false</default>
+                
+                    <label>navigate user to Application Summary</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>navigate user to Message Center with Notice tab selected</fullName>
+                
+                    <default>false</default>
+                
+                    <label>navigate user to Message Center with Notice tab selected</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>navigate user to the assisted individual&apos;s Client View Dashboard</fullName>
+                
+                    <default>false</default>
+                
+                    <label>navigate user to the assisted individual&apos;s Client View Dashboard</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>navigate user to Renewal of assisted individual&apos;s Benefits screen</fullName>
+                
+                    <default>false</default>
+                
+                    <label>navigate user to Renewal of assisted individual&apos;s Benefits screen</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>opens Authorized Representative Access Request modal</fullName>
+                
+                    <default>false</default>
+                
+                    <label>opens Authorized Representative Access Request modal</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>opens Assister Access Request modal</fullName>
+                
+                    <default>false</default>
+                
+                    <label>opens Assister Access Request modal</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>navigate user to Hearing Summary</fullName>
+                
+                    <default>false</default>
+                
+                    <label>navigate user to Hearing Summary</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>call</fullName>
+                
+                    <default>false</default>
+                
+                    <label>call</label>
+                
+                </value>
+            
+            </valueSetDefinition>
+        
+        </valueSet>
 </CustomField>

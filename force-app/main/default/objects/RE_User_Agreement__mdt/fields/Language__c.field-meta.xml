@@ -8,34 +8,64 @@
     <required>true</required>
     <type>Picklist</type>
     <valueSet>
-        <restricted>true</restricted>
-        <valueSetDefinition>
-            <sorted>false</sorted>
-            <value>
-                <fullName>English</fullName>
-                <default>true</default>
-                <label>English</label>
-            </value>
-            <value>
-                <fullName>Spanish</fullName>
-                <default>false</default>
-                <label>Spanish</label>
-            </value>
-            <value>
-                <fullName>es</fullName>
-                <default>false</default>
-                <label>es</label>
-            </value>
-            <value>
-                <fullName>en_US</fullName>
-                <default>false</default>
-                <label>en_US</label>
-            </value>
-            <value>
-                <fullName>es_US</fullName>
-                <default>false</default>
-                <label>es_US</label>
-            </value>
-        </valueSetDefinition>
-    </valueSet>
+        
+            <restricted>true</restricted>
+        
+            <valueSetDefinition>
+            
+                <sorted>false</sorted>
+            
+                <value>
+                
+                    <fullName>English</fullName>
+                
+                    <default>true</default>
+                
+                    <label>English</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>Spanish</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Spanish</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>es</fullName>
+                
+                    <default>false</default>
+                
+                    <label>es</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>en_US</fullName>
+                
+                    <default>false</default>
+                
+                    <label>en_US</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>es_US</fullName>
+                
+                    <default>false</default>
+                
+                    <label>es_US</label>
+                
+                </value>
+            
+            </valueSetDefinition>
+        
+        </valueSet>
 </CustomField>

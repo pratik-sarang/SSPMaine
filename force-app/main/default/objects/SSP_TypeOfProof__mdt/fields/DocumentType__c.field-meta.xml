@@ -8,1634 +8,3264 @@
     <required>false</required>
     <type>Picklist</type>
     <valueSet>
-        <restricted>true</restricted>
-        <valueSetDefinition>
-            <sorted>false</sorted>
-            <value>
-                <fullName>DL</fullName>
-                <default>false</default>
-                <label>Drivers License</label>
-            </value>
-            <value>
-                <fullName>HR</fullName>
-                <default>false</default>
-                <label>Hospital Birth Record</label>
-            </value>
-            <value>
-                <fullName>NC</fullName>
-                <default>false</default>
-                <label>Newspaper Clippings</label>
-            </value>
-            <value>
-                <fullName>RR</fullName>
-                <default>false</default>
-                <label>Religious Record</label>
-            </value>
-            <value>
-                <fullName>SR</fullName>
-                <default>false</default>
-                <label>School Record</label>
-            </value>
-            <value>
-                <fullName>SG</fullName>
-                <default>false</default>
-                <label>State Government Issued ID</label>
-            </value>
-            <value>
-                <fullName>OTH</fullName>
-                <default>false</default>
-                <label>OTHER</label>
-            </value>
-            <value>
-                <fullName>CS</fullName>
-                <default>false</default>
-                <label>Client statement</label>
-            </value>
-            <value>
-                <fullName>BRC</fullName>
-                <default>false</default>
-                <label>Birth Certificate</label>
-            </value>
-            <value>
-                <fullName>INSR</fullName>
-                <default>false</default>
-                <label>INS Records</label>
-            </value>
-            <value>
-                <fullName>KV</fullName>
-                <default>false</default>
-                <label>KVETS</label>
-            </value>
-            <value>
-                <fullName>AP</fullName>
-                <default>false</default>
-                <label>Adoption Record</label>
-            </value>
-            <value>
-                <fullName>AF</fullName>
-                <default>false</default>
-                <label>Affidavit from US citizen</label>
-            </value>
-            <value>
-                <fullName>I8</fullName>
-                <default>false</default>
-                <label>American Indian Card I-872</label>
-            </value>
-            <value>
-                <fullName>CR</fullName>
-                <default>false</default>
-                <label>Census Record</label>
-            </value>
-            <value>
-                <fullName>BA</fullName>
-                <default>false</default>
-                <label>Certificate of Birth Abroad of US Citizen (DS-1350, FS-240, or FS-545)</label>
-            </value>
-            <value>
-                <fullName>N5</fullName>
-                <default>false</default>
-                <label>Certificate of US Citizenship (N-560 or N-561)</label>
-            </value>
-            <value>
-                <fullName>IA</fullName>
-                <default>false</default>
-                <label>Institutional Admission Papers for Citizenship</label>
-            </value>
-            <value>
-                <fullName>IC</fullName>
-                <default>false</default>
-                <label>Insurance Company Record</label>
-            </value>
-            <value>
-                <fullName>MT</fullName>
-                <default>false</default>
-                <label>Military Record</label>
-            </value>
-            <value>
-                <fullName>NT</fullName>
-                <default>false</default>
-                <label>Naturalization Certificate</label>
-            </value>
-            <value>
-                <fullName>I7</fullName>
-                <default>false</default>
-                <label>Northern Mariana Card I-873</label>
-            </value>
-            <value>
-                <fullName>OB</fullName>
-                <default>false</default>
-                <label>Other Birth Records</label>
-            </value>
-            <value>
-                <fullName>PS</fullName>
-                <default>false</default>
-                <label>Passport</label>
-            </value>
-            <value>
-                <fullName>PH</fullName>
-                <default>false</default>
-                <label>Public Health Record</label>
-            </value>
-            <value>
-                <fullName>PM</fullName>
-                <default>false</default>
-                <label>Statement of Attending Physician or Midwife</label>
-            </value>
-            <value>
-                <fullName>TD</fullName>
-                <default>false</default>
-                <label>Tribal Census Document</label>
-            </value>
-            <value>
-                <fullName>I1</fullName>
-                <default>false</default>
-                <label>US citizen ID card (I-197 or I-179)</label>
-            </value>
-            <value>
-                <fullName>CSE</fullName>
-                <default>false</default>
-                <label>Civil Service Employment Document</label>
-            </value>
-            <value>
-                <fullName>ECC</fullName>
-                <default>false</default>
-                <label>Evidence of compliance with Child Citizen Act of 2000</label>
-            </value>
-            <value>
-                <fullName>RMC</fullName>
-                <default>false</default>
-                <label>Receipt of Medicare/Medicare Card</label>
-            </value>
-            <value>
-                <fullName>RS</fullName>
-                <default>false</default>
-                <label>Verified by Receipt of SSA Benefits</label>
-            </value>
-            <value>
-                <fullName>CZ</fullName>
-                <default>false</default>
-                <label>Certificate of Citizenship in non-US country</label>
-            </value>
-            <value>
-                <fullName>DS2</fullName>
-                <default>false</default>
-                <label>DS2019 (Certificate of Eligibility for Exchange Visitor (J-1) Status)</label>
-            </value>
-            <value>
-                <fullName>I20</fullName>
-                <default>false</default>
-                <label>I-20 (Certificate of Eligibility for Nonimmigrant (F-1) Student Status)</label>
-            </value>
-            <value>
-                <fullName>I3</fullName>
-                <default>false</default>
-                <label>I-327 (Reentry Permit)</label>
-            </value>
-            <value>
-                <fullName>AR</fullName>
-                <default>false</default>
-                <label>I-551 (Permanent Resident Card)</label>
-            </value>
-            <value>
-                <fullName>I57</fullName>
-                <default>false</default>
-                <label>I-571 (Refugee Travel Document)</label>
-            </value>
-            <value>
-                <fullName>I76</fullName>
-                <default>false</default>
-                <label>I-766 (Employment Authorization Card)</label>
-            </value>
-            <value>
-                <fullName>I9</fullName>
-                <default>false</default>
-                <label>I-94 (Arrival/Departure Record)</label>
-            </value>
-            <value>
-                <fullName>I9F</fullName>
-                <default>false</default>
-                <label>I-94 (Arrival/Departure Record) in Unexpired Foreign Passport</label>
-            </value>
-            <value>
-                <fullName>MRV</fullName>
-                <default>false</default>
-                <label>Machine Readable Immigrant Visa (with Temporary I-551 Language)</label>
-            </value>
-            <value>
-                <fullName>OT</fullName>
-                <default>false</default>
-                <label>Other Immigration Document</label>
-            </value>
-            <value>
-                <fullName>I5</fullName>
-                <default>false</default>
-                <label>Temporary I-551 Stamp (on passport or I-94)</label>
-            </value>
-            <value>
-                <fullName>FP</fullName>
-                <default>false</default>
-                <label>Unexpired Foreign Passport</label>
-            </value>
-            <value>
-                <fullName>AI</fullName>
-                <default>false</default>
-                <label>Member of a federally recognized Indian tribe or American Indian born in Canada</label>
-            </value>
-            <value>
-                <fullName>CHE</fullName>
-                <default>false</default>
-                <label>Cuban/Haitian entrant</label>
-            </value>
-            <value>
-                <fullName>DHS</fullName>
-                <default>false</default>
-                <label>Administrative order staying removal issued by DHS</label>
-            </value>
-            <value>
-                <fullName>HHS</fullName>
-                <default>false</default>
-                <label>Certification from HHS</label>
-            </value>
-            <value>
-                <fullName>I79</fullName>
-                <default>false</default>
-                <label>Notice of Action (I-797)</label>
-            </value>
-            <value>
-                <fullName>INA1</fullName>
-                <default>false</default>
-                <label>Petition under section 204(a)(1)(A) or (B) of INA</label>
-            </value>
-            <value>
-                <fullName>INA3</fullName>
-                <default>false</default>
-                <label>Petition under section 244(a)(3) of INA</label>
-            </value>
-            <value>
-                <fullName>OREL</fullName>
-                <default>false</default>
-                <label>Office of Refugee Resettlement eligibility letter (if under 18)</label>
-            </value>
-            <value>
-                <fullName>ORR</fullName>
-                <default>false</default>
-                <label>Office of Refugee Resettlement</label>
-            </value>
-            <value>
-                <fullName>RAS</fullName>
-                <default>false</default>
-                <label>Resident of American Samoa</label>
-            </value>
-            <value>
-                <fullName>WR</fullName>
-                <default>false</default>
-                <label>Document indicating withholding of removal</label>
-            </value>
-            <value>
-                <fullName>254</fullName>
-                <default>false</default>
-                <label>Employer Statement</label>
-            </value>
-            <value>
-                <fullName>255</fullName>
-                <default>false</default>
-                <label>COBRA Continuation Notice</label>
-            </value>
-            <value>
-                <fullName>STD</fullName>
-                <default>false</default>
-                <label>Letter/statement  from Department of Defense (TRICARE)</label>
-            </value>
-            <value>
-                <fullName>DVA</fullName>
-                <default>false</default>
-                <label>Letter/statement  from Department of Veteran Affairs (VA coverage)</label>
-            </value>
-            <value>
-                <fullName>LSSA</fullName>
-                <default>false</default>
-                <label>Letter from Social Security Administration</label>
-            </value>
-            <value>
-                <fullName>AC</fullName>
-                <default>false</default>
-                <label>Affidavit from non-US citizen</label>
-            </value>
-            <value>
-                <fullName>AL</fullName>
-                <default>false</default>
-                <label>Award Letter</label>
-            </value>
-            <value>
-                <fullName>CA</fullName>
-                <default>false</default>
-                <label>Certificate of Tribal Affiliation</label>
-            </value>
-            <value>
-                <fullName>DP</fullName>
-                <default>false</default>
-                <label>Incarceration Discharge Record</label>
-            </value>
-            <value>
-                <fullName>DD</fullName>
-                <default>false</default>
-                <label>Divorce Decree</label>
-            </value>
-            <value>
-                <fullName>EM</fullName>
-                <default>false</default>
-                <label>Employee ID</label>
-            </value>
-            <value>
-                <fullName>FG</fullName>
-                <default>false</default>
-                <label>Federal Government issued ID</label>
-            </value>
-            <value>
-                <fullName>GE</fullName>
-                <default>false</default>
-                <label>GED</label>
-            </value>
-            <value>
-                <fullName>HI</fullName>
-                <default>false</default>
-                <label>Health Insurance Card</label>
-            </value>
-            <value>
-                <fullName>HS</fullName>
-                <default>false</default>
-                <label>High School or College Diploma</label>
-            </value>
-            <value>
-                <fullName>GI</fullName>
-                <default>false</default>
-                <label>Immigration Document (Government Issued)</label>
-            </value>
-            <value>
-                <fullName>IR</fullName>
-                <default>false</default>
-                <label>Income Tax Return</label>
-            </value>
-            <value>
-                <fullName>LE</fullName>
-                <default>false</default>
-                <label>Law Enforcement Records</label>
-            </value>
-            <value>
-                <fullName>LG</fullName>
-                <default>false</default>
-                <label>Local Government Issued ID</label>
-            </value>
-            <value>
-                <fullName>MC</fullName>
-                <default>false</default>
-                <label>Marriage License</label>
-            </value>
-            <value>
-                <fullName>MD</fullName>
-                <default>false</default>
-                <label>Military Dependent&apos;s ID</label>
-            </value>
-            <value>
-                <fullName>DT</fullName>
-                <default>false</default>
-                <label>Personal Records Showing Deductions</label>
-            </value>
-            <value>
-                <fullName>PD</fullName>
-                <default>false</default>
-                <label>Property Deed or Title</label>
-            </value>
-            <value>
-                <fullName>SH</fullName>
-                <default>false</default>
-                <label>School Photo ID</label>
-            </value>
-            <value>
-                <fullName>MM</fullName>
-                <default>false</default>
-                <label>US Coast Guard Merchant Mariner card</label>
-            </value>
-            <value>
-                <fullName>UM</fullName>
-                <default>false</default>
-                <label>US Military ID Card or Draft Record</label>
-            </value>
-            <value>
-                <fullName>WS</fullName>
-                <default>false</default>
-                <label>Wage Stubs</label>
-            </value>
-            <value>
-                <fullName>CLS</fullName>
-                <default>false</default>
-                <label>Collateral statement</label>
-            </value>
-            <value>
-                <fullName>DM</fullName>
-                <default>false</default>
-                <label>Verified by DMV</label>
-            </value>
-            <value>
-                <fullName>DPP</fullName>
-                <default>false</default>
-                <label>Verified by DPP</label>
-            </value>
-            <value>
-                <fullName>VIRS</fullName>
-                <default>false</default>
-                <label>Verified by IRS</label>
-            </value>
-            <value>
-                <fullName>KT</fullName>
-                <default>false</default>
-                <label>Verified by KTAP or Kinship Care</label>
-            </value>
-            <value>
-                <fullName>LEV</fullName>
-                <default>false</default>
-                <label>Verified by Law enforcement</label>
-            </value>
-            <value>
-                <fullName>RFA</fullName>
-                <default>false</default>
-                <label>Verified by residential care facility administration</label>
-            </value>
-            <value>
-                <fullName>SNAPV</fullName>
-                <default>false</default>
-                <label>Verified by SNAP</label>
-            </value>
-            <value>
-                <fullName>VSSA</fullName>
-                <default>false</default>
-                <label>Verified by SSA</label>
-            </value>
-            <value>
-                <fullName>VA</fullName>
-                <default>false</default>
-                <label>Verified by correctional agency</label>
-            </value>
-            <value>
-                <fullName>VC</fullName>
-                <default>false</default>
-                <label>Verified by Child Support</label>
-            </value>
-            <value>
-                <fullName>VESA</fullName>
-                <default>false</default>
-                <label>ID verified by other Federal or State agency</label>
-            </value>
-            <value>
-                <fullName>CD</fullName>
-                <default>false</default>
-                <label>Court Documents</label>
-            </value>
-            <value>
-                <fullName>LD</fullName>
-                <default>false</default>
-                <label>Written Statement for Income or No Income</label>
-            </value>
-            <value>
-                <fullName>ES</fullName>
-                <default>false</default>
-                <label>Employer Statement </label>
-            </value>
-            <value>
-                <fullName>LT</fullName>
-                <default>false</default>
-                <label>Letter from Tribe about Income</label>
-            </value>
-            <value>
-                <fullName>LC</fullName>
-                <default>false</default>
-                <label>Loan Contract</label>
-            </value>
-            <value>
-                <fullName>RI</fullName>
-                <default>false</default>
-                <label>Written Income Statement</label>
-            </value>
-            <value>
-                <fullName>AT</fullName>
-                <default>false</default>
-                <label>Trust</label>
-            </value>
-            <value>
-                <fullName>BR</fullName>
-                <default>false</default>
-                <label>Business/Rental income records</label>
-            </value>
-            <value>
-                <fullName>CC</fullName>
-                <default>false</default>
-                <label>Collateral contact</label>
-            </value>
-            <value>
-                <fullName>IRF</fullName>
-                <default>false</default>
-                <label>IRS Income Reporting Form (1099, etc.)</label>
-            </value>
-            <value>
-                <fullName>ORD</fullName>
-                <default>false</default>
-                <label>Original Record</label>
-            </value>
-            <value>
-                <fullName>PA702</fullName>
-                <default>false</default>
-                <label>PAFS 702</label>
-            </value>
-            <value>
-                <fullName>PAST</fullName>
-                <default>false</default>
-                <label>Pay Stubs</label>
-            </value>
-            <value>
-                <fullName>RRV</fullName>
-                <default>false</default>
-                <label>Verification Required for Renewal</label>
-            </value>
-            <value>
-                <fullName>SFP</fullName>
-                <default>false</default>
-                <label>Statement from person/agency/financial institution</label>
-            </value>
-            <value>
-                <fullName>TPL</fullName>
-                <default>false</default>
-                <label>Tip Log</label>
-            </value>
-            <value>
-                <fullName>TAXR</fullName>
-                <default>false</default>
-                <label>Tax Return</label>
-            </value>
-            <value>
-                <fullName>TS</fullName>
-                <default>false</default>
-                <label>Tribal statement regarding income</label>
-            </value>
-            <value>
-                <fullName>WTNS</fullName>
-                <default>false</default>
-                <label>Written Statement</label>
-            </value>
-            <value>
-                <fullName>NM</fullName>
-                <default>false</default>
-                <label>Other Document Showing Name and Address</label>
-            </value>
-            <value>
-                <fullName>RM</fullName>
-                <default>false</default>
-                <label>Rent and Mortgage Statement</label>
-            </value>
-            <value>
-                <fullName>UB</fullName>
-                <default>false</default>
-                <label>Utility Bill</label>
-            </value>
-            <value>
-                <fullName>ST</fullName>
-                <default>false</default>
-                <label>Written Statement </label>
-            </value>
-            <value>
-                <fullName>PMNV</fullName>
-                <default>false</default>
-                <label>Not Verified - Paris Match</label>
-            </value>
-            <value>
-                <fullName>RMS</fullName>
-                <default>false</default>
-                <label>Rent or Mortgage Statement</label>
-            </value>
-            <value>
-                <fullName>AG</fullName>
-                <default>false</default>
-                <label>Paternity Records</label>
-            </value>
-            <value>
-                <fullName>MR</fullName>
-                <default>false</default>
-                <label>Medical Record</label>
-            </value>
-            <value>
-                <fullName>NS</fullName>
-                <default>false</default>
-                <label>Notarized Statement</label>
-            </value>
-            <value>
-                <fullName>SIA</fullName>
-                <default>false</default>
-                <label>Signed Application</label>
-            </value>
-            <value>
-                <fullName>SMT</fullName>
-                <default>false</default>
-                <label>Financial Institution Statement</label>
-            </value>
-            <value>
-                <fullName>CRD</fullName>
-                <default>false</default>
-                <label>Court Document</label>
-            </value>
-            <value>
-                <fullName>OTS</fullName>
-                <default>false</default>
-                <label>Other</label>
-            </value>
-            <value>
-                <fullName>VL</fullName>
-                <default>false</default>
-                <label>VLP</label>
-            </value>
-            <value>
-                <fullName>DH</fullName>
-                <default>false</default>
-                <label>DHS Office</label>
-            </value>
-            <value>
-                <fullName>PR</fullName>
-                <default>false</default>
-                <label>Personal Record</label>
-            </value>
-            <value>
-                <fullName>TXR</fullName>
-                <default>false</default>
-                <label>Tax Record</label>
-            </value>
-            <value>
-                <fullName>CL</fullName>
-                <default>false</default>
-                <label>CL 700</label>
-            </value>
-            <value>
-                <fullName>SOE</fullName>
-                <default>false</default>
-                <label>Statement from Employer</label>
-            </value>
-            <value>
-                <fullName>PA700</fullName>
-                <default>false</default>
-                <label>PAFS 700</label>
-            </value>
-            <value>
-                <fullName>DC</fullName>
-                <default>false</default>
-                <label>Death Record</label>
-            </value>
-            <value>
-                <fullName>FB</fullName>
-                <default>false</default>
-                <label>Date of Death Statement from Funeral Home</label>
-            </value>
-            <value>
-                <fullName>SC</fullName>
-                <default>false</default>
-                <label>Social Security Card</label>
-            </value>
-            <value>
-                <fullName>DS</fullName>
-                <default>false</default>
-                <label>Duplicate SSN</label>
-            </value>
-            <value>
-                <fullName>NPC</fullName>
-                <default>false</default>
-                <label>Newspaper Clipping</label>
-            </value>
-            <value>
-                <fullName>LTR</fullName>
-                <default>false</default>
-                <label>Letter</label>
-            </value>
-            <value>
-                <fullName>S5</fullName>
-                <default>false</default>
-                <label>SS-5 / System Generated SSN Application</label>
-            </value>
-            <value>
-                <fullName>BP</fullName>
-                <default>false</default>
-                <label>BOP.gov</label>
-            </value>
-            <value>
-                <fullName>KO</fullName>
-                <default>false</default>
-                <label>KOOL</label>
-            </value>
-            <value>
-                <fullName>MSMT</fullName>
-                <default>false</default>
-                <label>Mismatch</label>
-            </value>
-            <value>
-                <fullName>CE</fullName>
-                <default>false</default>
-                <label>Certificate of Degree of Indian Blood</label>
-            </value>
-            <value>
-                <fullName>DO</fullName>
-                <default>false</default>
-                <label>Document on Tribal Letterhead</label>
-            </value>
-            <value>
-                <fullName>EN</fullName>
-                <default>false</default>
-                <label>Tribal Enrollment Card</label>
-            </value>
-            <value>
-                <fullName>RE</fullName>
-                <default>false</default>
-                <label>Records showing reason for not cooperating with Medical Support Enforcement</label>
-            </value>
-            <value>
-                <fullName>SA</fullName>
-                <default>false</default>
-                <label>Written Statement From a Public or Licensed Private Social Agency</label>
-            </value>
-            <value>
-                <fullName>ADR</fullName>
-                <default>false</default>
-                <label>Adoption Records</label>
-            </value>
-            <value>
-                <fullName>KA</fullName>
-                <default>false</default>
-                <label>KASES</label>
-            </value>
-            <value>
-                <fullName>RCS</fullName>
-                <default>false</default>
-                <label>Records (court, medical, criminal, child protective services, social services, psychological, or law enforcement)</label>
-            </value>
-            <value>
-                <fullName>SI</fullName>
-                <default>false</default>
-                <label>System Inquiry</label>
-            </value>
-            <value>
-                <fullName>DCTS</fullName>
-                <default>false</default>
-                <label>Doctor&apos;s Statement</label>
-            </value>
-            <value>
-                <fullName>ME</fullName>
-                <default>false</default>
-                <label>medical record</label>
-            </value>
-            <value>
-                <fullName>FS</fullName>
-                <default>false</default>
-                <label>FS 704</label>
-            </value>
-            <value>
-                <fullName>LSED</fullName>
-                <default>false</default>
-                <label>Lease Document</label>
-            </value>
-            <value>
-                <fullName>LS</fullName>
-                <default>false</default>
-                <label>Landlord Statement</label>
-            </value>
-            <value>
-                <fullName>PF</fullName>
-                <default>false</default>
-                <label>PAFS - 76</label>
-            </value>
-            <value>
-                <fullName>PV</fullName>
-                <default>false</default>
-                <label>Previously Verified</label>
-            </value>
-            <value>
-                <fullName>CLSS</fullName>
-                <default>false</default>
-                <label>Class Schedule</label>
-            </value>
-            <value>
-                <fullName>DCC90L</fullName>
-                <default>false</default>
-                <label>DCC 90L</label>
-            </value>
-            <value>
-                <fullName>PA33</fullName>
-                <default>false</default>
-                <label>PA-33D</label>
-            </value>
-            <value>
-                <fullName>SAR</fullName>
-                <default>false</default>
-                <label>School Attendance Report</label>
-            </value>
-            <value>
-                <fullName>SEI</fullName>
-                <default>false</default>
-                <label>Statement from Educational Institution</label>
-            </value>
-            <value>
-                <fullName>HAS</fullName>
-                <default>false</default>
-                <label>Home School Attendance Report</label>
-            </value>
-            <value>
-                <fullName>OTD</fullName>
-                <default>false</default>
-                <label>Other (Document Source)</label>
-            </value>
-            <value>
-                <fullName>SS</fullName>
-                <default>false</default>
-                <label>School Statement</label>
-            </value>
-            <value>
-                <fullName>SCHT</fullName>
-                <default>false</default>
-                <label>School Transcript</label>
-            </value>
-            <value>
-                <fullName>DN</fullName>
-                <default>false</default>
-                <label>Doctor&apos;s Note</label>
-            </value>
-            <value>
-                <fullName>IN</fullName>
-                <default>false</default>
-                <label>OET Interface</label>
-            </value>
-            <value>
-                <fullName>LL</fullName>
-                <default>false</default>
-                <label>Landlord Letter</label>
-            </value>
-            <value>
-                <fullName>SFI</fullName>
-                <default>false</default>
-                <label>Statement from Institution</label>
-            </value>
-            <value>
-                <fullName>WSSSA</fullName>
-                <default>false</default>
-                <label>Written Statement from SSA</label>
-            </value>
-            <value>
-                <fullName>AV</fullName>
-                <default>false</default>
-                <label>Affidavit</label>
-            </value>
-            <value>
-                <fullName>ID</fullName>
-                <default>false</default>
-                <label>Immigration Document</label>
-            </value>
-            <value>
-                <fullName>NTO</fullName>
-                <default>false</default>
-                <label>Needs to Obtain</label>
-            </value>
-            <value>
-                <fullName>SYSA</fullName>
-                <default>false</default>
-                <label>System Applied</label>
-            </value>
-            <value>
-                <fullName>BL</fullName>
-                <default>false</default>
-                <label>Bill</label>
-            </value>
-            <value>
-                <fullName>REC</fullName>
-                <default>false</default>
-                <label>Receipt</label>
-            </value>
-            <value>
-                <fullName>CL76</fullName>
-                <default>false</default>
-                <label>CL 76</label>
-            </value>
-            <value>
-                <fullName>LA</fullName>
-                <default>false</default>
-                <label>Lease</label>
-            </value>
-            <value>
-                <fullName>MRC</fullName>
-                <default>false</default>
-                <label>Mortgage Contract</label>
-            </value>
-            <value>
-                <fullName>PAFS76</fullName>
-                <default>false</default>
-                <label>PAFS 76</label>
-            </value>
-            <value>
-                <fullName>SF</fullName>
-                <default>false</default>
-                <label>SAFE Form</label>
-            </value>
-            <value>
-                <fullName>LNCNT</fullName>
-                <default>false</default>
-                <label>Land Contract</label>
-            </value>
-            <value>
-                <fullName>FS19</fullName>
-                <default>false</default>
-                <label>FS-19</label>
-            </value>
-            <value>
-                <fullName>CO</fullName>
-                <default>false</default>
-                <label>Court Order</label>
-            </value>
-            <value>
-                <fullName>WIG</fullName>
-                <default>false</default>
-                <label>Wage / Income Garnishment</label>
-            </value>
-            <value>
-                <fullName>FEDH</fullName>
-                <default>false</default>
-                <label>Federal Hub</label>
-            </value>
-            <value>
-                <fullName>PRI</fullName>
-                <default>false</default>
-                <label>Personal Records showing income</label>
-            </value>
-            <value>
-                <fullName>SW</fullName>
-                <default>false</default>
-                <label>SWICA</label>
-            </value>
-            <value>
-                <fullName>WN</fullName>
-                <default>false</default>
-                <label>The Work Number</label>
-            </value>
-            <value>
-                <fullName>LDP</fullName>
-                <default>false</default>
-                <label>Document showing payment from person/agency</label>
-            </value>
-            <value>
-                <fullName>PT</fullName>
-                <default>false</default>
-                <label>Statement from lender</label>
-            </value>
-            <value>
-                <fullName>EX</fullName>
-                <default>false</default>
-                <label>Verification not required - excluded income</label>
-            </value>
-            <value>
-                <fullName>PAR</fullName>
-                <default>false</default>
-                <label>PARIS</label>
-            </value>
-            <value>
-                <fullName>SSA</fullName>
-                <default>false</default>
-                <label>Social Security Administration</label>
-            </value>
-            <value>
-                <fullName>UA</fullName>
-                <default>false</default>
-                <label>Unemployment Insurance Agency</label>
-            </value>
-            <value>
-                <fullName>CRTV</fullName>
-                <default>false</default>
-                <label>Court Verified</label>
-            </value>
-            <value>
-                <fullName>HO</fullName>
-                <default>false</default>
-                <label>Final Hearing Order</label>
-            </value>
-            <value>
-                <fullName>MRTD</fullName>
-                <default>false</default>
-                <label>MRT Determination</label>
-            </value>
-            <value>
-                <fullName>CIS1</fullName>
-                <default>false</default>
-                <label>CIS1</label>
-            </value>
-            <value>
-                <fullName>LSA</fullName>
-                <default>false</default>
-                <label>Lease agreement</label>
-            </value>
-            <value>
-                <fullName>BOR</fullName>
-                <default>false</default>
-                <label>Bill or Receipt</label>
-            </value>
-            <value>
-                <fullName>PA76</fullName>
-                <default>false</default>
-                <label>PA FS-76</label>
-            </value>
-            <value>
-                <fullName>CLH76</fullName>
-                <default>false</default>
-                <label>CL-76</label>
-            </value>
-            <value>
-                <fullName>IB</fullName>
-                <default>false</default>
-                <label>Invoice/Bill</label>
-            </value>
-            <value>
-                <fullName>AGV</fullName>
-                <default>false</default>
-                <label>Agency Verified</label>
-            </value>
-            <value>
-                <fullName>WSCC</fullName>
-                <default>false</default>
-                <label>Written Statement from Child Care Facility</label>
-            </value>
-            <value>
-                <fullName>BS</fullName>
-                <default>false</default>
-                <label>Bank Statement</label>
-            </value>
-            <value>
-                <fullName>CCT</fullName>
-                <default>false</default>
-                <label>Collateral Contract</label>
-            </value>
-            <value>
-                <fullName>CN</fullName>
-                <default>false</default>
-                <label>Contract</label>
-            </value>
-            <value>
-                <fullName>MS</fullName>
-                <default>false</default>
-                <label>Monthly Mortgage Statement</label>
-            </value>
-            <value>
-                <fullName>WSL</fullName>
-                <default>false</default>
-                <label>Written Statement From Lender</label>
-            </value>
-            <value>
-                <fullName>BAFI</fullName>
-                <default>false</default>
-                <label>Statement from bank or financial institution</label>
-            </value>
-            <value>
-                <fullName>CCPV</fullName>
-                <default>false</default>
-                <label>Collateral Contact with PVA or County Clerk</label>
-            </value>
-            <value>
-                <fullName>MLC</fullName>
-                <default>false</default>
-                <label>Mortgage / Land Contract</label>
-            </value>
-            <value>
-                <fullName>DE</fullName>
-                <default>false</default>
-                <label>Deed</label>
-            </value>
-            <value>
-                <fullName>OD</fullName>
-                <default>false</default>
-                <label>Documents verifying ownership other than 100%</label>
-            </value>
-            <value>
-                <fullName>OTA</fullName>
-                <default>false</default>
-                <label>Other acceptable</label>
-            </value>
-            <value>
-                <fullName>TB</fullName>
-                <default>false</default>
-                <label>Property Tax Bill</label>
-            </value>
-            <value>
-                <fullName>WIL</fullName>
-                <default>false</default>
-                <label>Will</label>
-            </value>
-            <value>
-                <fullName>LGD</fullName>
-                <default>false</default>
-                <label>Legal Document</label>
-            </value>
-            <value>
-                <fullName>SLC</fullName>
-                <default>false</default>
-                <label>Sales Contract</label>
-            </value>
-            <value>
-                <fullName>QCD</fullName>
-                <default>false</default>
-                <label>Quit Claim Deed</label>
-            </value>
-            <value>
-                <fullName>FI</fullName>
-                <default>false</default>
-                <label>Financial Institution Statement </label>
-            </value>
-            <value>
-                <fullName>RED</fullName>
-                <default>false</default>
-                <label>Receipt of Donation</label>
-            </value>
-            <value>
-                <fullName>STS</fullName>
-                <default>false</default>
-                <label>Settlement Statement</label>
-            </value>
-            <value>
-                <fullName>TC</fullName>
-                <default>false</default>
-                <label>Trust Contract</label>
-            </value>
-            <value>
-                <fullName>TRNSD</fullName>
-                <default>false</default>
-                <label>Transfer Deed</label>
-            </value>
-            <value>
-                <fullName>TL</fullName>
-                <default>false</default>
-                <label>Title</label>
-            </value>
-            <value>
-                <fullName>STM</fullName>
-                <default>false</default>
-                <label>Statement From Nursing Facility</label>
-            </value>
-            <value>
-                <fullName>PR68</fullName>
-                <default>false</default>
-                <label>Program 68</label>
-            </value>
-            <value>
-                <fullName>DLR</fullName>
-                <default>false</default>
-                <label>Dealer statement of value</label>
-            </value>
-            <value>
-                <fullName>NADA</fullName>
-                <default>false</default>
-                <label>Blue Book or NADA trade-in value</label>
-            </value>
-            <value>
-                <fullName>PRF</fullName>
-                <default>false</default>
-                <label>Proof of amount owed</label>
-            </value>
-            <value>
-                <fullName>VR</fullName>
-                <default>false</default>
-                <label>Vehicle Registration</label>
-            </value>
-            <value>
-                <fullName>WSCP</fullName>
-                <default>false</default>
-                <label>Written Statement From Certified Professional</label>
-            </value>
-            <value>
-                <fullName>LNS</fullName>
-                <default>false</default>
-                <label>Loan Statement</label>
-            </value>
-            <value>
-                <fullName>LPO</fullName>
-                <default>false</default>
-                <label>Lost Policy Certificate</label>
-            </value>
-            <value>
-                <fullName>PO</fullName>
-                <default>false</default>
-                <label>Policy</label>
-            </value>
-            <value>
-                <fullName>WSLI</fullName>
-                <default>false</default>
-                <label>Statement from Life Insurance Company</label>
-            </value>
-            <value>
-                <fullName>WSI</fullName>
-                <default>false</default>
-                <label>Statement from Insurance Company</label>
-            </value>
-            <value>
-                <fullName>AD</fullName>
-                <default>false</default>
-                <label>Advertisement</label>
-            </value>
-            <value>
-                <fullName>REA</fullName>
-                <default>false</default>
-                <label>Listed with Real Estate Agent</label>
-            </value>
-            <value>
-                <fullName>SO</fullName>
-                <default>false</default>
-                <label>Sell by Owner</label>
-            </value>
-            <value>
-                <fullName>SV</fullName>
-                <default>false</default>
-                <label>System Verified</label>
-            </value>
-            <value>
-                <fullName>CNT</fullName>
-                <default>false</default>
-                <label>Contract with TV or Radio</label>
-            </value>
-            <value>
-                <fullName>WL</fullName>
-                <default>false</default>
-                <label>Website Listing</label>
-            </value>
-            <value>
-                <fullName>PCT</fullName>
-                <default>false</default>
-                <label>Picture</label>
-            </value>
-            <value>
-                <fullName>FL</fullName>
-                <default>false</default>
-                <label>Copy of the Flyer</label>
-            </value>
-            <value>
-                <fullName>CPN</fullName>
-                <default>false</default>
-                <label>Copy of the Notice</label>
-            </value>
-            <value>
-                <fullName>LOG</fullName>
-                <default>false</default>
-                <label>Log</label>
-            </value>
-            <value>
-                <fullName>APPRS</fullName>
-                <default>false</default>
-                <label>Appraisal</label>
-            </value>
-            <value>
-                <fullName>CCP</fullName>
-                <default>false</default>
-                <label>Collateral Contact with PVA</label>
-            </value>
-            <value>
-                <fullName>PVA</fullName>
-                <default>false</default>
-                <label>PVA Printout</label>
-            </value>
-            <value>
-                <fullName>LNDC</fullName>
-                <default>false</default>
-                <label>Land Contact</label>
-            </value>
-            <value>
-                <fullName>PN</fullName>
-                <default>false</default>
-                <label>Promissory Note</label>
-            </value>
-            <value>
-                <fullName>LCA</fullName>
-                <default>false</default>
-                <label>Copy Of Lifetime Care Agreement</label>
-            </value>
-            <value>
-                <fullName>COC</fullName>
-                <default>false</default>
-                <label>Copy of Contract</label>
-            </value>
-            <value>
-                <fullName>PA</fullName>
-                <default>false</default>
-                <label>Power of Attorney Document</label>
-            </value>
-            <value>
-                <fullName>MP14</fullName>
-                <default>false</default>
-                <label>MAP 14</label>
-            </value>
-            <value>
-                <fullName>KHBE79</fullName>
-                <default>false</default>
-                <label>KHBE-79</label>
-            </value>
-            <value>
-                <fullName>CI</fullName>
-                <default>false</default>
-                <label>Client Verified at Interview</label>
-            </value>
-            <value>
-                <fullName>PB</fullName>
-                <default>false</default>
-                <label>Proof of Birth</label>
-            </value>
-            <value>
-                <fullName>SF1</fullName>
-                <default>false</default>
-                <label>SF-1</label>
-            </value>
-            <value>
-                <fullName>SF2</fullName>
-                <default>false</default>
-                <label>SF-2</label>
-            </value>
-            <value>
-                <fullName>CCSSA</fullName>
-                <default>false</default>
-                <label>Collateral Contact with SSA</label>
-            </value>
-            <value>
-                <fullName>QITD</fullName>
-                <default>false</default>
-                <label>Qualifying Income Trust Document</label>
-            </value>
-            <value>
-                <fullName>CCB</fullName>
-                <default>false</default>
-                <label>Collateral Contact with Boarder</label>
-            </value>
-            <value>
-                <fullName>WSB</fullName>
-                <default>false</default>
-                <label>Written Statement from Boarder</label>
-            </value>
-            <value>
-                <fullName>RG</fullName>
-                <default>false</default>
-                <label>Refuses to obtain an SSN because of a well-established religious objective</label>
-            </value>
-            <value>
-                <fullName>VAL</fullName>
-                <default>false</default>
-                <label>Not eligible to receive SSN based on alien status</label>
-            </value>
-            <value>
-                <fullName>NO</fullName>
-                <default>false</default>
-                <label>Does not have an SSN and may only be issued an SSN for a valid non-work reason</label>
-            </value>
-            <value>
-                <fullName>NB</fullName>
-                <default>false</default>
-                <label>Newborn without SSN</label>
-            </value>
-            <value>
-                <fullName>VRE</fullName>
-                <default>false</default>
-                <label>Refuses to provide an SSN</label>
-            </value>
-            <value>
-                <fullName>VAP</fullName>
-                <default>false</default>
-                <label>Applied for SSN</label>
-            </value>
-            <value>
-                <fullName>VWS</fullName>
-                <default>false</default>
-                <label>Without SSN Card</label>
-            </value>
-            <value>
-                <fullName>COD</fullName>
-                <default>false</default>
-                <label>Court Ordered </label>
-            </value>
-            <value>
-                <fullName>HPS</fullName>
-                <default>false</default>
-                <label>Health Professional Statement</label>
-            </value>
-            <value>
-                <fullName>MHP</fullName>
-                <default>false</default>
-                <label>Mental Health Professional Statement</label>
-            </value>
-            <value>
-                <fullName>90L</fullName>
-                <default>false</default>
-                <label>DCC-90L</label>
-            </value>
-            <value>
-                <fullName>CCE</fullName>
-                <default>false</default>
-                <label>Collateral Contact with Educational Institute</label>
-            </value>
-            <value>
-                <fullName>OET</fullName>
-                <default>false</default>
-                <label>Statement from OET</label>
-            </value>
-            <value>
-                <fullName>SRT</fullName>
-                <default>false</default>
-                <label>Statement from Resource Teacher</label>
-            </value>
-            <value>
-                <fullName>RC</fullName>
-                <default>false</default>
-                <label>Resource Changes</label>
-            </value>
-            <value>
-                <fullName>EC</fullName>
-                <default>false</default>
-                <label>Expense Changes</label>
-            </value>
-            <value>
-                <fullName>HC</fullName>
-                <default>false</default>
-                <label>Household Changes </label>
-            </value>
-            <value>
-                <fullName>INC</fullName>
-                <default>false</default>
-                <label>Income Changes</label>
-            </value>
-            <value>
-                <fullName>ESIGN</fullName>
-                <default>false</default>
-                <label>E Sign</label>
-            </value>
-            <value>
-                <fullName>HCP</fullName>
-                <default>false</default>
-                <label>Hard Copy</label>
-            </value>
-            <value>
-                <fullName>NSP</fullName>
-                <default>false</default>
-                <label>No Signature provided</label>
-            </value>
-            <value>
-                <fullName>VO</fullName>
-                <default>false</default>
-                <label>Voice Signature</label>
-            </value>
-            <value>
-                <fullName>PPV</fullName>
-                <default>false</default>
-                <label>P&amp;P Verified</label>
-            </value>
-            <value>
-                <fullName>SBC</fullName>
-                <default>false</default>
-                <label>Summary of Benefits and Coverage (SBC)</label>
-            </value>
-            <value>
-                <fullName>HCF</fullName>
-                <default>false</default>
-                <label>Health Coverage Form</label>
-            </value>
-            <value>
-                <fullName>PDD</fullName>
-                <default>false</default>
-                <label>Plan Description Document</label>
-            </value>
-            <value>
-                <fullName>PRS</fullName>
-                <default>false</default>
-                <label>Premium Rate Sheet</label>
-            </value>
-            <value>
-                <fullName>ICP</fullName>
-                <default>false</default>
-                <label>KI-HIPP - Health Insurance Card</label>
-            </value>
-            <value>
-                <fullName>ICR</fullName>
-                <default>false</default>
-                <label>KI-HIPP - Insurance Company Record</label>
-            </value>
-            <value>
-                <fullName>PIPD</fullName>
-                <default>false</default>
-                <label>Initial Enrollment - Paystub showing Insurance Premium Deduction</label>
-            </value>
-            <value>
-                <fullName>DSIPPE</fullName>
-                <default>false</default>
-                <label>Initial Enrollment - Any other document showing insurance premium payment</label>
-            </value>
-            <value>
-                <fullName>OTHKP</fullName>
-                <default>false</default>
-                <label>KI-HIPP - OTHER</label>
-            </value>
-            <value>
-                <fullName>PSIPD</fullName>
-                <default>false</default>
-                <label>Ongoing Verification - Paystub Showing Insurance Premium Deduction</label>
-            </value>
-            <value>
-                <fullName>DSIPP</fullName>
-                <default>false</default>
-                <label>Ongoing Verification - Document showing insurance premium payment</label>
-            </value>
-            <value>
-                <fullName>OGSC</fullName>
-                <default>false</default>
-                <label>Any other document showing reason for good cause circumstance</label>
-            </value>
-            <value>
-                <fullName>PSIPDG</fullName>
-                <default>false</default>
-                <label>Good Cause - Paystub Showing Insurance Premium Deduction</label>
-            </value>
-            <value>
-                <fullName>CCO</fullName>
-                <default>false</default>
-                <label>Certificate of Coverage</label>
-            </value>
-            <value>
-                <fullName>PLD</fullName>
-                <default>false</default>
-                <label>Plan Document</label>
-            </value>
-            <value>
-                <fullName>PBE</fullName>
-                <default>false</default>
-                <label>Proof of Benefit Exclusion</label>
-            </value>
-            <value>
-                <fullName>KHIP</fullName>
-                <default>false</default>
-                <label>KI-HIPP 63 Direct Deposit Authorization Form</label>
-            </value>
-            <value>
-                <fullName>VPC</fullName>
-                <default>false</default>
-                <label>Voided Personalized Check</label>
-            </value>
-            <value>
-                <fullName>DPT</fullName>
-                <default>false</default>
-                <label>Deposit Ticket</label>
-            </value>
-            <value>
-                <fullName>KMAP-14</fullName>
-                <default>false</default>
-                <label>MAP-14</label>
-            </value>
-            <value>
-                <fullName>KPOA</fullName>
-                <default>false</default>
-                <label>Power of Attorney</label>
-            </value>
-            <value>
-                <fullName>KCD</fullName>
-                <default>false</default>
-                <label>Court  Documents</label>
-            </value>
-            <value>
-                <fullName>PA11</fullName>
-                <default>false</default>
-                <label>PA-11</label>
-            </value>
-            <value>
-                <fullName>502</fullName>
-                <default>false</default>
-                <label>KW-33</label>
-            </value>
-            <value>
-                <fullName>DAG</fullName>
-                <default>false</default>
-                <label>Divorce Agreement</label>
-            </value>
-            <value>
-                <fullName>SAG</fullName>
-                <default>false</default>
-                <label>Separation Agreement</label>
-            </value>
-            <value>
-                <fullName>PROTO</fullName>
-                <default>false</default>
-                <label>Protective Order</label>
-            </value>
-            <value>
-                <fullName>POLR</fullName>
-                <default>false</default>
-                <label>Police Report</label>
-            </value>
-            <value>
-                <fullName>109</fullName>
-                <default>false</default>
-                <label>Pension Documentation</label>
-            </value>
-            <value>
-                <fullName>DT090</fullName>
-                <default>false</default>
-                <label>Other.</label>
-            </value>
-        </valueSetDefinition>
-    </valueSet>
+        
+            <restricted>true</restricted>
+        
+            <valueSetDefinition>
+            
+                <sorted>false</sorted>
+            
+                <value>
+                
+                    <fullName>DL</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Drivers License</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>HR</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Hospital Birth Record</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>NC</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Newspaper Clippings</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>RR</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Religious Record</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>SR</fullName>
+                
+                    <default>false</default>
+                
+                    <label>School Record</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>SG</fullName>
+                
+                    <default>false</default>
+                
+                    <label>State Government Issued ID</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>OTH</fullName>
+                
+                    <default>false</default>
+                
+                    <label>OTHER</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>CS</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Client statement</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>BRC</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Birth Certificate</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>INSR</fullName>
+                
+                    <default>false</default>
+                
+                    <label>INS Records</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>KV</fullName>
+                
+                    <default>false</default>
+                
+                    <label>KVETS</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>AP</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Adoption Record</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>AF</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Affidavit from US citizen</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>I8</fullName>
+                
+                    <default>false</default>
+                
+                    <label>American Indian Card I-872</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>CR</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Census Record</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>BA</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Certificate of Birth Abroad of US Citizen (DS-1350, FS-240, or FS-545)</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>N5</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Certificate of US Citizenship (N-560 or N-561)</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>IA</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Institutional Admission Papers for Citizenship</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>IC</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Insurance Company Record</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>MT</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Military Record</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>NT</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Naturalization Certificate</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>I7</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Northern Mariana Card I-873</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>OB</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Other Birth Records</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>PS</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Passport</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>PH</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Public Health Record</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>PM</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Statement of Attending Physician or Midwife</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>TD</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Tribal Census Document</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>I1</fullName>
+                
+                    <default>false</default>
+                
+                    <label>US citizen ID card (I-197 or I-179)</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>CSE</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Civil Service Employment Document</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>ECC</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Evidence of compliance with Child Citizen Act of 2000</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>RMC</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Receipt of Medicare/Medicare Card</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>RS</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Verified by Receipt of SSA Benefits</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>CZ</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Certificate of Citizenship in non-US country</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DS2</fullName>
+                
+                    <default>false</default>
+                
+                    <label>DS2019 (Certificate of Eligibility for Exchange Visitor (J-1) Status)</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>I20</fullName>
+                
+                    <default>false</default>
+                
+                    <label>I-20 (Certificate of Eligibility for Nonimmigrant (F-1) Student Status)</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>I3</fullName>
+                
+                    <default>false</default>
+                
+                    <label>I-327 (Reentry Permit)</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>AR</fullName>
+                
+                    <default>false</default>
+                
+                    <label>I-551 (Permanent Resident Card)</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>I57</fullName>
+                
+                    <default>false</default>
+                
+                    <label>I-571 (Refugee Travel Document)</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>I76</fullName>
+                
+                    <default>false</default>
+                
+                    <label>I-766 (Employment Authorization Card)</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>I9</fullName>
+                
+                    <default>false</default>
+                
+                    <label>I-94 (Arrival/Departure Record)</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>I9F</fullName>
+                
+                    <default>false</default>
+                
+                    <label>I-94 (Arrival/Departure Record) in Unexpired Foreign Passport</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>MRV</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Machine Readable Immigrant Visa (with Temporary I-551 Language)</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>OT</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Other Immigration Document</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>I5</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Temporary I-551 Stamp (on passport or I-94)</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>FP</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Unexpired Foreign Passport</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>AI</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Member of a federally recognized Indian tribe or American Indian born in Canada</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>CHE</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Cuban/Haitian entrant</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DHS</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Administrative order staying removal issued by DHS</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>HHS</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Certification from HHS</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>I79</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Notice of Action (I-797)</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>INA1</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Petition under section 204(a)(1)(A) or (B) of INA</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>INA3</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Petition under section 244(a)(3) of INA</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>OREL</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Office of Refugee Resettlement eligibility letter (if under 18)</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>ORR</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Office of Refugee Resettlement</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>RAS</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Resident of American Samoa</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>WR</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Document indicating withholding of removal</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>254</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Employer Statement</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>255</fullName>
+                
+                    <default>false</default>
+                
+                    <label>COBRA Continuation Notice</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>STD</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Letter/statement  from Department of Defense (TRICARE)</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DVA</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Letter/statement  from Department of Veteran Affairs (VA coverage)</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>LSSA</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Letter from Social Security Administration</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>AC</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Affidavit from non-US citizen</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>AL</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Award Letter</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>CA</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Certificate of Tribal Affiliation</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DP</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Incarceration Discharge Record</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DD</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Divorce Decree</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>EM</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Employee ID</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>FG</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Federal Government issued ID</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>GE</fullName>
+                
+                    <default>false</default>
+                
+                    <label>GED</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>HI</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Health Insurance Card</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>HS</fullName>
+                
+                    <default>false</default>
+                
+                    <label>High School or College Diploma</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>GI</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Immigration Document (Government Issued)</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>IR</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Income Tax Return</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>LE</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Law Enforcement Records</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>LG</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Local Government Issued ID</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>MC</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Marriage License</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>MD</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Military Dependent&apos;s ID</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DT</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Personal Records Showing Deductions</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>PD</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Property Deed or Title</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>SH</fullName>
+                
+                    <default>false</default>
+                
+                    <label>School Photo ID</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>MM</fullName>
+                
+                    <default>false</default>
+                
+                    <label>US Coast Guard Merchant Mariner card</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>UM</fullName>
+                
+                    <default>false</default>
+                
+                    <label>US Military ID Card or Draft Record</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>WS</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Wage Stubs</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>CLS</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Collateral statement</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DM</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Verified by DMV</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DPP</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Verified by DPP</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>VIRS</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Verified by IRS</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>KT</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Verified by KTAP or Kinship Care</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>LEV</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Verified by Law enforcement</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>RFA</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Verified by residential care facility administration</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>SNAPV</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Verified by SNAP</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>VSSA</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Verified by SSA</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>VA</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Verified by correctional agency</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>VC</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Verified by Child Support</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>VESA</fullName>
+                
+                    <default>false</default>
+                
+                    <label>ID verified by other Federal or State agency</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>CD</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Court Documents</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>LD</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Written Statement for Income or No Income</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>ES</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Employer Statement </label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>LT</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Letter from Tribe about Income</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>LC</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Loan Contract</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>RI</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Written Income Statement</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>AT</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Trust</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>BR</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Business/Rental income records</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>CC</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Collateral contact</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>IRF</fullName>
+                
+                    <default>false</default>
+                
+                    <label>IRS Income Reporting Form (1099, etc.)</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>ORD</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Original Record</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>PA702</fullName>
+                
+                    <default>false</default>
+                
+                    <label>PAFS 702</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>PAST</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Pay Stubs</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>RRV</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Verification Required for Renewal</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>SFP</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Statement from person/agency/financial institution</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>TPL</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Tip Log</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>TAXR</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Tax Return</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>TS</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Tribal statement regarding income</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>WTNS</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Written Statement</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>NM</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Other Document Showing Name and Address</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>RM</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Rent and Mortgage Statement</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>UB</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Utility Bill</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>ST</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Written Statement </label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>PMNV</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Not Verified - Paris Match</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>RMS</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Rent or Mortgage Statement</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>AG</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Paternity Records</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>MR</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Medical Record</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>NS</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Notarized Statement</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>SIA</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Signed Application</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>SMT</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Financial Institution Statement</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>CRD</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Court Document</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>OTS</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Other</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>VL</fullName>
+                
+                    <default>false</default>
+                
+                    <label>VLP</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DH</fullName>
+                
+                    <default>false</default>
+                
+                    <label>DHS Office</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>PR</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Personal Record</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>TXR</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Tax Record</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>CL</fullName>
+                
+                    <default>false</default>
+                
+                    <label>CL 700</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>SOE</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Statement from Employer</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>PA700</fullName>
+                
+                    <default>false</default>
+                
+                    <label>PAFS 700</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DC</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Death Record</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>FB</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Date of Death Statement from Funeral Home</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>SC</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Social Security Card</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DS</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Duplicate SSN</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>NPC</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Newspaper Clipping</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>LTR</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Letter</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>S5</fullName>
+                
+                    <default>false</default>
+                
+                    <label>SS-5 / System Generated SSN Application</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>BP</fullName>
+                
+                    <default>false</default>
+                
+                    <label>BOP.gov</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>KO</fullName>
+                
+                    <default>false</default>
+                
+                    <label>KOOL</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>MSMT</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Mismatch</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>CE</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Certificate of Degree of Indian Blood</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DO</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Document on Tribal Letterhead</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>EN</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Tribal Enrollment Card</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>RE</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Records showing reason for not cooperating with Medical Support Enforcement</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>SA</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Written Statement From a Public or Licensed Private Social Agency</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>ADR</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Adoption Records</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>KA</fullName>
+                
+                    <default>false</default>
+                
+                    <label>KASES</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>RCS</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Records (court, medical, criminal, child protective services, social services, psychological, or law enforcement)</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>SI</fullName>
+                
+                    <default>false</default>
+                
+                    <label>System Inquiry</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DCTS</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Doctor&apos;s Statement</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>ME</fullName>
+                
+                    <default>false</default>
+                
+                    <label>medical record</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>FS</fullName>
+                
+                    <default>false</default>
+                
+                    <label>FS 704</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>LSED</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Lease Document</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>LS</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Landlord Statement</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>PF</fullName>
+                
+                    <default>false</default>
+                
+                    <label>PAFS - 76</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>PV</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Previously Verified</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>CLSS</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Class Schedule</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DCC90L</fullName>
+                
+                    <default>false</default>
+                
+                    <label>DCC 90L</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>PA33</fullName>
+                
+                    <default>false</default>
+                
+                    <label>PA-33D</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>SAR</fullName>
+                
+                    <default>false</default>
+                
+                    <label>School Attendance Report</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>SEI</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Statement from Educational Institution</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>HAS</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Home School Attendance Report</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>OTD</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Other (Document Source)</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>SS</fullName>
+                
+                    <default>false</default>
+                
+                    <label>School Statement</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>SCHT</fullName>
+                
+                    <default>false</default>
+                
+                    <label>School Transcript</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DN</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Doctor&apos;s Note</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>IN</fullName>
+                
+                    <default>false</default>
+                
+                    <label>OET Interface</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>LL</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Landlord Letter</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>SFI</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Statement from Institution</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>WSSSA</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Written Statement from SSA</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>AV</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Affidavit</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>ID</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Immigration Document</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>NTO</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Needs to Obtain</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>SYSA</fullName>
+                
+                    <default>false</default>
+                
+                    <label>System Applied</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>BL</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Bill</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>REC</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Receipt</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>CL76</fullName>
+                
+                    <default>false</default>
+                
+                    <label>CL 76</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>LA</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Lease</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>MRC</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Mortgage Contract</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>PAFS76</fullName>
+                
+                    <default>false</default>
+                
+                    <label>PAFS 76</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>SF</fullName>
+                
+                    <default>false</default>
+                
+                    <label>SAFE Form</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>LNCNT</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Land Contract</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>FS19</fullName>
+                
+                    <default>false</default>
+                
+                    <label>FS-19</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>CO</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Court Order</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>WIG</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Wage / Income Garnishment</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>FEDH</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Federal Hub</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>PRI</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Personal Records showing income</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>SW</fullName>
+                
+                    <default>false</default>
+                
+                    <label>SWICA</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>WN</fullName>
+                
+                    <default>false</default>
+                
+                    <label>The Work Number</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>LDP</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Document showing payment from person/agency</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>PT</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Statement from lender</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>EX</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Verification not required - excluded income</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>PAR</fullName>
+                
+                    <default>false</default>
+                
+                    <label>PARIS</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>SSA</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Social Security Administration</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>UA</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Unemployment Insurance Agency</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>CRTV</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Court Verified</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>HO</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Final Hearing Order</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>MRTD</fullName>
+                
+                    <default>false</default>
+                
+                    <label>MRT Determination</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>CIS1</fullName>
+                
+                    <default>false</default>
+                
+                    <label>CIS1</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>LSA</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Lease agreement</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>BOR</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Bill or Receipt</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>PA76</fullName>
+                
+                    <default>false</default>
+                
+                    <label>PA FS-76</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>CLH76</fullName>
+                
+                    <default>false</default>
+                
+                    <label>CL-76</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>IB</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Invoice/Bill</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>AGV</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Agency Verified</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>WSCC</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Written Statement from Child Care Facility</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>BS</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Bank Statement</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>CCT</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Collateral Contract</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>CN</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Contract</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>MS</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Monthly Mortgage Statement</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>WSL</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Written Statement From Lender</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>BAFI</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Statement from bank or financial institution</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>CCPV</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Collateral Contact with PVA or County Clerk</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>MLC</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Mortgage / Land Contract</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DE</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Deed</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>OD</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Documents verifying ownership other than 100%</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>OTA</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Other acceptable</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>TB</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Property Tax Bill</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>WIL</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Will</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>LGD</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Legal Document</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>SLC</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Sales Contract</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>QCD</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Quit Claim Deed</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>FI</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Financial Institution Statement </label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>RED</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Receipt of Donation</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>STS</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Settlement Statement</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>TC</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Trust Contract</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>TRNSD</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Transfer Deed</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>TL</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Title</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>STM</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Statement From Nursing Facility</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>PR68</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Program 68</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DLR</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Dealer statement of value</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>NADA</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Blue Book or NADA trade-in value</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>PRF</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Proof of amount owed</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>VR</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Vehicle Registration</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>WSCP</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Written Statement From Certified Professional</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>LNS</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Loan Statement</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>LPO</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Lost Policy Certificate</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>PO</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Policy</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>WSLI</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Statement from Life Insurance Company</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>WSI</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Statement from Insurance Company</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>AD</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Advertisement</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>REA</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Listed with Real Estate Agent</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>SO</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Sell by Owner</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>SV</fullName>
+                
+                    <default>false</default>
+                
+                    <label>System Verified</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>CNT</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Contract with TV or Radio</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>WL</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Website Listing</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>PCT</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Picture</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>FL</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Copy of the Flyer</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>CPN</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Copy of the Notice</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>LOG</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Log</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>APPRS</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Appraisal</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>CCP</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Collateral Contact with PVA</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>PVA</fullName>
+                
+                    <default>false</default>
+                
+                    <label>PVA Printout</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>LNDC</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Land Contact</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>PN</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Promissory Note</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>LCA</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Copy Of Lifetime Care Agreement</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>COC</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Copy of Contract</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>PA</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Power of Attorney Document</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>MP14</fullName>
+                
+                    <default>false</default>
+                
+                    <label>MAP 14</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>KHBE79</fullName>
+                
+                    <default>false</default>
+                
+                    <label>KHBE-79</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>CI</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Client Verified at Interview</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>PB</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Proof of Birth</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>SF1</fullName>
+                
+                    <default>false</default>
+                
+                    <label>SF-1</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>SF2</fullName>
+                
+                    <default>false</default>
+                
+                    <label>SF-2</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>CCSSA</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Collateral Contact with SSA</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>QITD</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Qualifying Income Trust Document</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>CCB</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Collateral Contact with Boarder</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>WSB</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Written Statement from Boarder</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>RG</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Refuses to obtain an SSN because of a well-established religious objective</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>VAL</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Not eligible to receive SSN based on alien status</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>NO</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Does not have an SSN and may only be issued an SSN for a valid non-work reason</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>NB</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Newborn without SSN</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>VRE</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Refuses to provide an SSN</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>VAP</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Applied for SSN</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>VWS</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Without SSN Card</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>COD</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Court Ordered </label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>HPS</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Health Professional Statement</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>MHP</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Mental Health Professional Statement</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>90L</fullName>
+                
+                    <default>false</default>
+                
+                    <label>DCC-90L</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>CCE</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Collateral Contact with Educational Institute</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>OET</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Statement from OET</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>SRT</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Statement from Resource Teacher</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>RC</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Resource Changes</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>EC</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Expense Changes</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>HC</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Household Changes </label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>INC</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Income Changes</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>ESIGN</fullName>
+                
+                    <default>false</default>
+                
+                    <label>E Sign</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>HCP</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Hard Copy</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>NSP</fullName>
+                
+                    <default>false</default>
+                
+                    <label>No Signature provided</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>VO</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Voice Signature</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>PPV</fullName>
+                
+                    <default>false</default>
+                
+                    <label>P&amp;P Verified</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>SBC</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Summary of Benefits and Coverage (SBC)</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>HCF</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Health Coverage Form</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>PDD</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Plan Description Document</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>PRS</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Premium Rate Sheet</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>ICP</fullName>
+                
+                    <default>false</default>
+                
+                    <label>KI-HIPP - Health Insurance Card</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>ICR</fullName>
+                
+                    <default>false</default>
+                
+                    <label>KI-HIPP - Insurance Company Record</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>PIPD</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Initial Enrollment - Paystub showing Insurance Premium Deduction</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DSIPPE</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Initial Enrollment - Any other document showing insurance premium payment</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>OTHKP</fullName>
+                
+                    <default>false</default>
+                
+                    <label>KI-HIPP - OTHER</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>PSIPD</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Ongoing Verification - Paystub Showing Insurance Premium Deduction</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DSIPP</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Ongoing Verification - Document showing insurance premium payment</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>OGSC</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Any other document showing reason for good cause circumstance</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>PSIPDG</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Good Cause - Paystub Showing Insurance Premium Deduction</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>CCO</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Certificate of Coverage</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>PLD</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Plan Document</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>PBE</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Proof of Benefit Exclusion</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>KHIP</fullName>
+                
+                    <default>false</default>
+                
+                    <label>KI-HIPP 63 Direct Deposit Authorization Form</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>VPC</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Voided Personalized Check</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DPT</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Deposit Ticket</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>KMAP-14</fullName>
+                
+                    <default>false</default>
+                
+                    <label>MAP-14</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>KPOA</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Power of Attorney</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>KCD</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Court  Documents</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>PA11</fullName>
+                
+                    <default>false</default>
+                
+                    <label>PA-11</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>502</fullName>
+                
+                    <default>false</default>
+                
+                    <label>KW-33</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DAG</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Divorce Agreement</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>SAG</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Separation Agreement</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>PROTO</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Protective Order</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>POLR</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Police Report</label>
+                
+                </value>
+                            
+                <value>
+                
+                    <fullName>109</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Pension Documentation</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DT090</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Other.</label>
+                
+                </value>
+            
+            </valueSetDefinition>
+        
+        </valueSet>
 </CustomField>

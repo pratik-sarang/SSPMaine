@@ -1,21 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    
     <label>es_additionalOption5</label>
+    
     <protected>false</protected>
+    
     <values>
+        
         <field>Label__c</field>
+        
         <value xsi:type="xsd:string">Si usted decide no compartir su información con este socio en la comunidad, eso no afectará su capacidad de usar este sitio.</value>
+        
     </values>
+    
     <values>
+        
         <field>Language__c</field>
+        
         <value xsi:type="xsd:string">es_US</value>
+        
     </values>
+    
     <values>
+        
         <field>Value__c</field>
+        
         <value xsi:type="xsd:string">es_additionalOption5</value>
+        
     </values>
+    
     <values>
+        
         <field>isAdditionalOption__c</field>
+        
         <value xsi:type="xsd:boolean">true</value>
+        
     </values>
+    
 </CustomMetadata>

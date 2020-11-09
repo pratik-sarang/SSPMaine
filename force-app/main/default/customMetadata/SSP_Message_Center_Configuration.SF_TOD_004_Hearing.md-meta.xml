@@ -1,83 +1,163 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    
     <label>SF_TOD_004_Hearing</label>
+    
     <protected>false</protected>
+    
     <values>
+        
         <field>Applicable_Role__c</field>
+        
         <value xsi:type="xsd:string">User who uploaded document</value>
+        
     </values>
+    
     <values>
+        
         <field>Body_Spanish__c</field>
+        
         <value xsi:type="xsd:string">The following file you have uploaded has been found to be virus affected: {0}.
 Please visit the Hearing Summary to upload a new document which is not virus affected</value>
+        
     </values>
+    
     <values>
+        
         <field>Body__c</field>
+        
         <value xsi:type="xsd:string">The following file you have uploaded has been found to be virus affected: {0}.
 Please visit the Hearing Summary to upload a new document which is not virus affected</value>
+        
     </values>
+    
     <values>
+        
         <field>Button_Alt_Text__c</field>
+        
         <value xsi:type="xsd:string">Click to upload documents</value>
+        
     </values>
+    
     <values>
+        
         <field>Button_Name__c</field>
+        
         <value xsi:type="xsd:string">Upload Documents</value>
+        
     </values>
+    
     <values>
+        
         <field>Code__c</field>
+        
         <value xsi:type="xsd:string">SF-TOD-004-Hearing</value>
+        
     </values>
+    
     <values>
+        
         <field>Communication_Body_Spanish__c</field>
+        
         <value xsi:nil="true"/>
+        
     </values>
+    
     <values>
+        
         <field>Communication_Body__c</field>
+        
         <value xsi:type="xsd:string">A file you have uploaded has been found to be virus affected. Upload a new document to the Hearing Summary by visiting kynect.ky.gov/benefits.</value>
+        
     </values>
+    
     <values>
+        
         <field>Due_Date_criterion__c</field>
+        
         <value xsi:type="xsd:string">30 days from date uploaded</value>
+        
     </values>
+    
     <values>
+        
         <field>Expiry_Date_Criterion__c</field>
+        
         <value xsi:nil="true"/>
+        
     </values>
+    
     <values>
+        
         <field>Mobile_Button_Action__c</field>
+        
         <value xsi:type="xsd:string">navigate user to Hearing Summary</value>
+        
     </values>
+    
     <values>
+        
         <field>Mobile_Button_Alt_Text__c</field>
+        
         <value xsi:type="xsd:string">Click to upload documents</value>
+        
     </values>
+    
     <values>
+        
         <field>Mobile_Button_Name__c</field>
+        
         <value xsi:type="xsd:string">Upload Documents</value>
+        
     </values>
+    
     <values>
+        
         <field>Send_Reminder_Criteria__c</field>
+        
         <value xsi:type="xsd:string">-2</value>
+        
     </values>
+    
     <values>
+        
         <field>Severity__c</field>
+        
         <value xsi:type="xsd:string">Critical</value>
+        
     </values>
+    
     <values>
+        
         <field>Title_Spanish__c</field>
+        
         <value xsi:type="xsd:string">Virus Affected Document Uploaded</value>
+        
     </values>
+    
     <values>
+        
         <field>Title__c</field>
+        
         <value xsi:type="xsd:string">Virus Affected Document Uploaded</value>
+        
     </values>
+    
     <values>
+        
         <field>Trash_Action__c</field>
+        
         <value xsi:nil="true"/>
+        
     </values>
+    
     <values>
+        
         <field>button_Action__c</field>
+        
         <value xsi:type="xsd:string">navigate user to Hearing Summary</value>
+        
     </values>
+    
 </CustomMetadata>

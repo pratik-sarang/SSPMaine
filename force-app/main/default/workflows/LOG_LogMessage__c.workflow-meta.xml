@@ -1,29 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    
     <alerts>
+        
         <fullName>Send_Email_to_Reporter</fullName>
+        
         <description>Send Email to Reporter</description>
+        
         <protected>false</protected>
+        
         <recipients>
+            
             <recipient>rgurivelli@ky.gov</recipient>
+            
             <type>user</type>
+            
         </recipients>
+        
         <senderAddress>benefind_donotreply@ky.gov</senderAddress>
+        
         <senderType>OrgWideEmailAddress</senderType>
+        
         <template>unfiled$public/CommunityWelcomeEmailTemplate</template>
+        
     </alerts>
+    
     <rules>
+        
         <fullName>Send an Email on Log Message</fullName>
+        
         <actions>
+            
             <name>Send_Email_to_Reporter</name>
+            
             <type>Alert</type>
+            
         </actions>
+        
         <active>true</active>
+        
         <criteriaItems>
+            
             <field>LOG_LogMessage__c.LOG_Log_Code__c</field>
+            
             <operation>equals</operation>
+            
             <value>MCI500</value>
+            
         </criteriaItems>
+        
         <triggerType>onCreateOnly</triggerType>
+        
     </rules>
+    
 </Workflow>

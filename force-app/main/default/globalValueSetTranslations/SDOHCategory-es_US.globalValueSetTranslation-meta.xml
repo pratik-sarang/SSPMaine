@@ -1,75 +1,149 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <GlobalValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    
     <valueTranslation>
+        
         <masterLabel>Adult Education</masterLabel>
+        
         <translation>Educación para adultos</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Childcare</masterLabel>
+        
         <translation>Cuidados infantiles</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Children&apos;s Education</masterLabel>
+        
         <translation>Educación infantil</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Community Involvement</masterLabel>
+        
         <translation>Participación en la comunidad</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Disabilities</masterLabel>
+        
         <translation>Discapacidades</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Employment</masterLabel>
+        
         <translation>Empleo</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Family/Social Relations</masterLabel>
+        
         <translation>Relaciones sociales/familiares</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Food</masterLabel>
+        
         <translation>Alimentos</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Health Care Coverage</masterLabel>
+        
         <translation>Cobertura de atención de la salud</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Housing</masterLabel>
+        
         <translation>Vivienda</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Income</masterLabel>
+        
         <translation>Ingreso</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Legal</masterLabel>
+        
         <translation>Legal</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Life Skills</masterLabel>
+        
         <translation>Habilidades para la vida</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Mental Health</masterLabel>
+        
         <translation>Salud mental</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Mobility</masterLabel>
+        
         <translation>Movilidad</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Parenting Skills</masterLabel>
+        
         <translation>Habilidades para la crianza de niños</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Safety</masterLabel>
+        
         <translation>Seguridad</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Substance Abuse</masterLabel>
+        
         <translation>Abuso de sustancias</translation>
+        
     </valueTranslation>
+    
 </GlobalValueSetTranslation>

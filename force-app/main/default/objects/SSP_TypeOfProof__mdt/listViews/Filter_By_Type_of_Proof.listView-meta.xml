@@ -10,10 +10,14 @@
     <columns>Task_Code__c</columns>
     <filterScope>Everything</filterScope>
     <filters>
-        <field>K_Hipp_Proof__c</field>
-        <operation>equals</operation>
-        <value>1</value>
-    </filters>
+        
+            <field>K_Hipp_Proof__c</field>
+        
+            <operation>equals</operation>
+        
+            <value>1</value>
+        
+        </filters>
     <label>Filter By Type of Proof</label>
     <language>en_US</language>
 </ListView>

@@ -1,17 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    
     <label>Medical Bills for last 3 months Rule</label>
+    
     <protected>false</protected>
+    
     <values>
+        
         <field>RuleApexClassName__c</field>
+        
         <value xsi:type="xsd:string">SSP_MedicalBillsFor3MonthsQueueRule</value>
+        
     </values>
+    
     <values>
+        
         <field>RuleLogic__c</field>
+        
         <value xsi:nil="true"/>
+        
     </values>
+    
     <values>
+        
         <field>RuleName__c</field>
+        
         <value xsi:type="xsd:string">MedicalBillsRule</value>
+        
     </values>
+    
 </CustomMetadata>

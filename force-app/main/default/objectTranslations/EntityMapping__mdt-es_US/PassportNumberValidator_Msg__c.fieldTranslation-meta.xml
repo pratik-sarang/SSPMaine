@@ -3,7 +3,10 @@
     <label><!-- PassportNumberValidator_Msg --></label>
     <name>PassportNumberValidator_Msg__c</name>
     <picklistValues>
-        <masterLabel>Please enter a valid Number with a maximum of 12 characters.</masterLabel>
-        <translation>Ingresar un número válido con un máximo de 12 caracteres.</translation>
-    </picklistValues>
+        
+            <masterLabel>Please enter a valid Number with a maximum of 12 characters.</masterLabel>
+        
+            <translation>Ingresar un número válido con un máximo de 12 caracteres.</translation>
+        
+        </picklistValues>
 </CustomFieldTranslation>

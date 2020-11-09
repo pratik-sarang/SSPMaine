@@ -3,7 +3,10 @@
     <label><!-- Validate AlphaNumeric Msg --></label>
     <name>Validate_AlphaNumeric_Msg__c</name>
     <picklistValues>
-        <masterLabel>Please enter either letter and numeric characters.</masterLabel>
-        <translation>Ingresar tanto caracteres de letras como numéricos.</translation>
-    </picklistValues>
+        
+            <masterLabel>Please enter either letter and numeric characters.</masterLabel>
+        
+            <translation>Ingresar tanto caracteres de letras como numéricos.</translation>
+        
+        </picklistValues>
 </CustomFieldTranslation>

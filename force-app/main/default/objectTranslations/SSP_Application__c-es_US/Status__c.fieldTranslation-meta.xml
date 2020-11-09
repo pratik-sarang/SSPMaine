@@ -3,27 +3,45 @@
     <label><!-- Status --></label>
     <name>Status__c</name>
     <picklistValues>
-        <masterLabel>Approved</masterLabel>
-        <translation>Aprobado</translation>
-    </picklistValues>
+        
+            <masterLabel>Approved</masterLabel>
+        
+            <translation>Aprobado</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Blocked</masterLabel>
-        <translation>Bloqueado</translation>
-    </picklistValues>
+        
+            <masterLabel>Blocked</masterLabel>
+        
+            <translation>Bloqueado</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Inactive</masterLabel>
-        <translation>Inactivo</translation>
-    </picklistValues>
+        
+            <masterLabel>Inactive</masterLabel>
+        
+            <translation>Inactivo</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>New</masterLabel>
-        <translation>Nuevo</translation>
-    </picklistValues>
+        
+            <masterLabel>New</masterLabel>
+        
+            <translation>Nuevo</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Pending</masterLabel>
-        <translation>Pendiente</translation>
-    </picklistValues>
+        
+            <masterLabel>Pending</masterLabel>
+        
+            <translation>Pendiente</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Unsubmitted</masterLabel>
-        <translation>No enviado</translation>
-    </picklistValues>
+        
+            <masterLabel>Unsubmitted</masterLabel>
+        
+            <translation>No enviado</translation>
+        
+        </picklistValues>
 </CustomFieldTranslation>

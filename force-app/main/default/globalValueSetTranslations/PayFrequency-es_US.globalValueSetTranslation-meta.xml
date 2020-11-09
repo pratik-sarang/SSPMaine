@@ -1,47 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <GlobalValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    
     <valueTranslation>
+        
         <masterLabel>Contractual/Single Payment Covering More than One Month</masterLabel>
+        
         <translation>Pago contractual/único que cubre más de un mes</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Daily</masterLabel>
+        
         <translation>Por día</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Every 2 weeks</masterLabel>
+        
         <translation>Cada dos semanas</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Hourly</masterLabel>
+        
         <translation>Por hora</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Irregular</masterLabel>
+        
         <translation>Irregular</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Monthly</masterLabel>
+        
         <translation>Mensual</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>One Time Only - Lump sum</masterLabel>
+        
         <translation>Única vez - Monto único</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Quarterly</masterLabel>
+        
         <translation>Trimestral</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Twice a month</masterLabel>
+        
         <translation>Dos veces al mes</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Weekly</masterLabel>
+        
         <translation>Semanal</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Yearly</masterLabel>
+        
         <translation>Anual</translation>
+        
     </valueTranslation>
+    
 </GlobalValueSetTranslation>

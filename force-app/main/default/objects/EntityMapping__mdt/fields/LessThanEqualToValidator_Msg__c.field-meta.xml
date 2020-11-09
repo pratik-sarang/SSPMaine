@@ -7,24 +7,44 @@
     <required>false</required>
     <type>Picklist</type>
     <valueSet>
-        <restricted>true</restricted>
-        <valueSetDefinition>
-            <sorted>false</sorted>
-            <value>
-                <fullName>Please enter value less than or equal to {val}</fullName>
-                <default>true</default>
-                <label>Please enter value less than or equal to {val}</label>
-            </value>
-            <value>
-                <fullName>Please enter an age between 0 and 21</fullName>
-                <default>false</default>
-                <label>Please enter an age between 0 and 21</label>
-            </value>
-            <value>
-                <fullName>Please enter a value between $0 to ${val}.</fullName>
-                <default>false</default>
-                <label>Please enter a value between $0 to ${val}.</label>
-            </value>
-        </valueSetDefinition>
-    </valueSet>
+        
+            <restricted>true</restricted>
+        
+            <valueSetDefinition>
+            
+                <sorted>false</sorted>
+            
+                <value>
+                
+                    <fullName>Please enter value less than or equal to {val}</fullName>
+                
+                    <default>true</default>
+                
+                    <label>Please enter value less than or equal to {val}</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>Please enter an age between 0 and 21</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Please enter an age between 0 and 21</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>Please enter a value between $0 to ${val}.</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Please enter a value between $0 to ${val}.</label>
+                
+                </value>
+            
+            </valueSetDefinition>
+        
+        </valueSet>
 </CustomField>

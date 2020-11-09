@@ -3,11 +3,17 @@
     <label><!-- emailValidator_Msg --></label>
     <name>emailValidator_Msg__c</name>
     <picklistValues>
-        <masterLabel>Please enter a valid email address in the following format: email@domain.com</masterLabel>
-        <translation>Ingresar una dirección de correo electrónico válida en el siguiente formato: email@dominio.com</translation>
-    </picklistValues>
+        
+            <masterLabel>Please enter a valid email address in the following format: email@domain.com</masterLabel>
+        
+            <translation>Ingresar una dirección de correo electrónico válida en el siguiente formato: email@dominio.com</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Please enter email in correct format</masterLabel>
-        <translation><!-- Please enter email in correct format --></translation>
-    </picklistValues>
+        
+            <masterLabel>Please enter email in correct format</masterLabel>
+        
+            <translation><!-- Please enter email in correct format --></translation>
+        
+        </picklistValues>
 </CustomFieldTranslation>

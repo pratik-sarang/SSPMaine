@@ -7,19 +7,34 @@
     <required>false</required>
     <type>Picklist</type>
     <valueSet>
-        <restricted>true</restricted>
-        <valueSetDefinition>
-            <sorted>false</sorted>
-            <value>
-                <fullName>Please enter phone number in correct format</fullName>
-                <default>true</default>
-                <label>Please enter phone number in correct format</label>
-            </value>
-            <value>
-                <fullName>Please enter a valid 10-digit number in the following format: 123-456-7890</fullName>
-                <default>false</default>
-                <label>Please enter a valid 10-digit number in the following format: 123-456-7890</label>
-            </value>
-        </valueSetDefinition>
-    </valueSet>
+        
+            <restricted>true</restricted>
+        
+            <valueSetDefinition>
+            
+                <sorted>false</sorted>
+            
+                <value>
+                
+                    <fullName>Please enter phone number in correct format</fullName>
+                
+                    <default>true</default>
+                
+                    <label>Please enter phone number in correct format</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>Please enter a valid 10-digit number in the following format: 123-456-7890</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Please enter a valid 10-digit number in the following format: 123-456-7890</label>
+                
+                </value>
+            
+            </valueSetDefinition>
+        
+        </valueSet>
 </CustomField>

@@ -8,19 +8,34 @@
     <trackTrending>false</trackTrending>
     <type>Picklist</type>
     <valueSet>
-        <restricted>true</restricted>
-        <valueSetDefinition>
-            <sorted>false</sorted>
-            <value>
-                <fullName>MAGI</fullName>
-                <default>false</default>
-                <label>MAGI</label>
-            </value>
-            <value>
-                <fullName>Non-MAGI</fullName>
-                <default>false</default>
-                <label>Non-MAGI</label>
-            </value>
-        </valueSetDefinition>
-    </valueSet>
+        
+            <restricted>true</restricted>
+        
+            <valueSetDefinition>
+            
+                <sorted>false</sorted>
+            
+                <value>
+                
+                    <fullName>MAGI</fullName>
+                
+                    <default>false</default>
+                
+                    <label>MAGI</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>Non-MAGI</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Non-MAGI</label>
+                
+                </value>
+            
+            </valueSetDefinition>
+        
+        </valueSet>
 </CustomField>

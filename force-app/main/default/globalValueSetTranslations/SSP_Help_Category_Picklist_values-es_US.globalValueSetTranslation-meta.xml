@@ -1,59 +1,117 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <GlobalValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    
     <valueTranslation>
+        
         <masterLabel>Application Assisters</masterLabel>
+        
         <translation>Asistentes para solicitud</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Application Intake</masterLabel>
+        
         <translation>Ingreso de la solicitud</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Application Results and Next Steps</masterLabel>
+        
         <translation>Resultados de la solicitud y siguientes pasos</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Child Care</masterLabel>
+        
         <translation>Cuidados Infantiles</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Contact Us</masterLabel>
+        
         <translation>Contáctanos</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Document Center</masterLabel>
+        
         <translation>Centro de Documentos</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>General Kynect Benefits Information</masterLabel>
+        
         <translation>Información general sobre Kynect Benefits</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Kentucky Online Gateway</masterLabel>
+        
         <translation>Puerta de enlace en internet de Kentucky</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Kynect Benefits Acronyms</masterLabel>
+        
         <translation>Siglas de Kynect Benefits</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>MCO Selection</masterLabel>
+        
         <translation>Selección de MCO (Organización de Atención Administrada)</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Other Programs</masterLabel>
+        
         <translation>Otros programas</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Presumptive Eligibility (PE) and BCCTP</masterLabel>
+        
         <translation>Presunta Elegibilidad (PE) y BCCTP (Programa de Tratamiento para Cáncer de Mama y Cervical)</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Report a Change</masterLabel>
+        
         <translation>Informar un cambio</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Resident Dashboard</masterLabel>
+        
         <translation>Panel del residente</translation>
+        
     </valueTranslation>
+    
 </GlobalValueSetTranslation>

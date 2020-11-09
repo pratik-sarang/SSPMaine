@@ -1,19 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <GlobalValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    
     <valueTranslation>
+        
         <masterLabel>Farming</masterLabel>
+        
         <translation>Granja</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Illegal Activities</masterLabel>
+        
         <translation>Actividades ilegales</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Other Self Employment</masterLabel>
+        
         <translation>Otro trabajo por cuenta propia</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Rental</masterLabel>
+        
         <translation>Para alquiler</translation>
+        
     </valueTranslation>
+    
 </GlobalValueSetTranslation>

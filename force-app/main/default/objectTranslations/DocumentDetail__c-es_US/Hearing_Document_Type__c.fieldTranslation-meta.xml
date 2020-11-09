@@ -1,245 +1,426 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <label><!-- Hearing Document Type --></label>
+    <label>
+                    <!-- Hearing Document Type --></label>
     <name>Hearing_Document_Type__c</name>
     <picklistValues>
-        <masterLabel>AUDIO recording PHC</masterLabel>
-        <translation>Grabación de audio cuidados de salud primarios</translation>
-    </picklistValues>
+        
+            <masterLabel>AUDIO recording PHC</masterLabel>
+        
+            <translation>Grabación de audio cuidados de salud primarios</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Acknowledgement Letter-Exception</masterLabel>
-        <translation>Carta de declaración-Excepción</translation>
-    </picklistValues>
+        
+            <masterLabel>Acknowledgement Letter-Exception</masterLabel>
+        
+            <translation>Carta de declaración-Excepción</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Acknowledgement Letter-Medicaid Hearing Request</masterLabel>
-        <translation>Carta de declaración - Pedido de audiencia de Medicaid</translation>
-    </picklistValues>
+        
+            <masterLabel>Acknowledgement Letter-Medicaid Hearing Request</masterLabel>
+        
+            <translation>Carta de declaración - Pedido de audiencia de Medicaid</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Amended</masterLabel>
-        <translation>Enmendado</translation>
-    </picklistValues>
+        
+            <masterLabel>Amended</masterLabel>
+        
+            <translation>Enmendado</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Certification of Record</masterLabel>
-        <translation>Certificación de registro</translation>
-    </picklistValues>
+        
+            <masterLabel>Certification of Record</masterLabel>
+        
+            <translation>Certificación de registro</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Circuit Court Decision</masterLabel>
-        <translation>Decisión Tribunal de Circuito</translation>
-    </picklistValues>
+        
+            <masterLabel>Circuit Court Decision</masterLabel>
+        
+            <translation>Decisión Tribunal de Circuito</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Court of Appeals Decision</masterLabel>
-        <translation>Decisión de Tribunal de Apelaciones</translation>
-    </picklistValues>
+        
+            <masterLabel>Court of Appeals Decision</masterLabel>
+        
+            <translation>Decisión de Tribunal de Apelaciones</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Entry of Appearance</masterLabel>
-        <translation>Entrada de comparecencia</translation>
-    </picklistValues>
+        
+            <masterLabel>Entry of Appearance</masterLabel>
+        
+            <translation>Entrada de comparecencia</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Exception</masterLabel>
-        <translation>Excepción</translation>
-    </picklistValues>
+        
+            <masterLabel>Exception</masterLabel>
+        
+            <translation>Excepción</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Exhibits-Agency</masterLabel>
-        <translation>Pruebas-Agencia</translation>
-    </picklistValues>
+        
+            <masterLabel>Exhibits-Agency</masterLabel>
+        
+            <translation>Pruebas-Agencia</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Exhibits-Appellants</masterLabel>
-        <translation>Pruebas-Apelantes</translation>
-    </picklistValues>
+        
+            <masterLabel>Exhibits-Appellants</masterLabel>
+        
+            <translation>Pruebas-Apelantes</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>FS-80A Individual Waives Right to SNAP ADH and Accept Disqualition Penalty</masterLabel>
-        <translation>FS-80A Individuo renuncia a derecho a SNAP ADH y acepta sanción de descalificación</translation>
-    </picklistValues>
+        
+            <masterLabel>FS-80A Individual Waives Right to SNAP ADH and Accept Disqualition Penalty</masterLabel>
+        
+            <translation>FS-80A Individuo renuncia a derecho a SNAP ADH y acepta sanción de descalificación</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Final Order</masterLabel>
-        <translation>Orden definitiva</translation>
-    </picklistValues>
+        
+            <masterLabel>Final Order</masterLabel>
+        
+            <translation>Orden definitiva</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>HEARING AUDIO recording</masterLabel>
-        <translation>Grabación de audio de audiencia</translation>
-    </picklistValues>
+        
+            <masterLabel>HEARING AUDIO recording</masterLabel>
+        
+            <translation>Grabación de audio de audiencia</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Interim Order</masterLabel>
-        <translation>Orden provisional</translation>
-    </picklistValues>
+        
+            <masterLabel>Interim Order</masterLabel>
+        
+            <translation>Orden provisional</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Letter - Withdrawing</masterLabel>
-        <translation>Carta - Retiro</translation>
-    </picklistValues>
+        
+            <masterLabel>Letter - Withdrawing</masterLabel>
+        
+            <translation>Carta - Retiro</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Memo or Brief</masterLabel>
-        <translation>Memorando o resumen</translation>
-    </picklistValues>
+        
+            <masterLabel>Memo or Brief</masterLabel>
+        
+            <translation>Memorando o resumen</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Motion for Continuance</masterLabel>
-        <translation>Moción para continuación</translation>
-    </picklistValues>
+        
+            <masterLabel>Motion for Continuance</masterLabel>
+        
+            <translation>Moción para continuación</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Motion for Extension of Time</masterLabel>
-        <translation>Moción para extensión de tiempo</translation>
-    </picklistValues>
+        
+            <masterLabel>Motion for Extension of Time</masterLabel>
+        
+            <translation>Moción para extensión de tiempo</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Motion for Postponement</masterLabel>
-        <translation>Moción para postergación</translation>
-    </picklistValues>
+        
+            <masterLabel>Motion for Postponement</masterLabel>
+        
+            <translation>Moción para postergación</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Motion for Prehearing Conference</masterLabel>
-        <translation>Moción para reunión preaudiencia</translation>
-    </picklistValues>
+        
+            <masterLabel>Motion for Prehearing Conference</masterLabel>
+        
+            <translation>Moción para reunión preaudiencia</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Motion to Withdraw</masterLabel>
-        <translation>Moción para retirar</translation>
-    </picklistValues>
+        
+            <masterLabel>Motion to Withdraw</masterLabel>
+        
+            <translation>Moción para retirar</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Notice of Hearing</masterLabel>
-        <translation>Aviso de audiencia</translation>
-    </picklistValues>
+        
+            <masterLabel>Notice of Hearing</masterLabel>
+        
+            <translation>Aviso de audiencia</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Notice of Reassignment</masterLabel>
-        <translation>Aviso de reasignación</translation>
-    </picklistValues>
+        
+            <masterLabel>Notice of Reassignment</masterLabel>
+        
+            <translation>Aviso de reasignación</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Open Records Request</masterLabel>
-        <translation>Pedido de registros abiertos</translation>
-    </picklistValues>
+        
+            <masterLabel>Open Records Request</masterLabel>
+        
+            <translation>Pedido de registros abiertos</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Order Granting</masterLabel>
-        <translation>Orden otorgando</translation>
-    </picklistValues>
+        
+            <masterLabel>Order Granting</masterLabel>
+        
+            <translation>Orden otorgando</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Order Rescheduling</masterLabel>
-        <translation>Orden de reprogramación</translation>
-    </picklistValues>
+        
+            <masterLabel>Order Rescheduling</masterLabel>
+        
+            <translation>Orden de reprogramación</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Order Scheduling Hearing</masterLabel>
-        <translation>Orden de programación de audiencia</translation>
-    </picklistValues>
+        
+            <masterLabel>Order Scheduling Hearing</masterLabel>
+        
+            <translation>Orden de programación de audiencia</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Order of Abeyance</masterLabel>
-        <translation>Orden de prórroga</translation>
-    </picklistValues>
+        
+            <masterLabel>Order of Abeyance</masterLabel>
+        
+            <translation>Orden de prórroga</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Order of Dismissal</masterLabel>
-        <translation>Orden de desestimación</translation>
-    </picklistValues>
+        
+            <masterLabel>Order of Dismissal</masterLabel>
+        
+            <translation>Orden de desestimación</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Order to Show Cause</masterLabel>
-        <translation>Orden de mostrar causa</translation>
-    </picklistValues>
+        
+            <masterLabel>Order to Show Cause</masterLabel>
+        
+            <translation>Orden de mostrar causa</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Other</masterLabel>
-        <translation>Otro</translation>
-    </picklistValues>
+        
+            <masterLabel>Other</masterLabel>
+        
+            <translation>Otro</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>PAFS-78.1 Administrative Hearing Summary</masterLabel>
-        <translation>PAFS-78.1 Resumen de audiencia administrativa</translation>
-    </picklistValues>
+        
+            <masterLabel>PAFS-78.1 Administrative Hearing Summary</masterLabel>
+        
+            <translation>PAFS-78.1 Resumen de audiencia administrativa</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Prehearing Notice</masterLabel>
-        <translation>Aviso preaudiencia</translation>
-    </picklistValues>
+        
+            <masterLabel>Prehearing Notice</masterLabel>
+        
+            <translation>Aviso preaudiencia</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Prehearing Order</masterLabel>
-        <translation>Orden de preaudiencia</translation>
-    </picklistValues>
+        
+            <masterLabel>Prehearing Order</masterLabel>
+        
+            <translation>Orden de preaudiencia</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>RETURN Receipt</masterLabel>
-        <translation>Devolver recibo</translation>
-    </picklistValues>
+        
+            <masterLabel>RETURN Receipt</masterLabel>
+        
+            <translation>Devolver recibo</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>RETURN certified mail</masterLabel>
-        <translation>Devolver por correo certificado</translation>
-    </picklistValues>
+        
+            <masterLabel>RETURN certified mail</masterLabel>
+        
+            <translation>Devolver por correo certificado</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Recommended Order - Affirmed</masterLabel>
-        <translation>Orden recomendada- Ratificada</translation>
-    </picklistValues>
+        
+            <masterLabel>Recommended Order - Affirmed</masterLabel>
+        
+            <translation>Orden recomendada- Ratificada</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Recommended Order - Dismissed</masterLabel>
-        <translation>Orden recomendada- Desestimada</translation>
-    </picklistValues>
+        
+            <masterLabel>Recommended Order - Dismissed</masterLabel>
+        
+            <translation>Orden recomendada- Desestimada</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Recommended Order - Draft</masterLabel>
-        <translation>Orden recomendada- Borrador</translation>
-    </picklistValues>
+        
+            <masterLabel>Recommended Order - Draft</masterLabel>
+        
+            <translation>Orden recomendada- Borrador</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Recommended Order - Overturned in part</masterLabel>
-        <translation>Orden recomendada - Anulada en parte</translation>
-    </picklistValues>
+        
+            <masterLabel>Recommended Order - Overturned in part</masterLabel>
+        
+            <translation>Orden recomendada - Anulada en parte</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Recommended Order - Remand</masterLabel>
-        <translation>Orden recomendada- Detención</translation>
-    </picklistValues>
+        
+            <masterLabel>Recommended Order - Remand</masterLabel>
+        
+            <translation>Orden recomendada- Detención</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Recommended Order - Reversed</masterLabel>
-        <translation>Orden recomendada- Revocada</translation>
-    </picklistValues>
+        
+            <masterLabel>Recommended Order - Reversed</masterLabel>
+        
+            <translation>Orden recomendada- Revocada</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Recommended Order - Withdrawn</masterLabel>
-        <translation>Orden recomendada- Retirada</translation>
-    </picklistValues>
+        
+            <masterLabel>Recommended Order - Withdrawn</masterLabel>
+        
+            <translation>Orden recomendada- Retirada</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Recommended Order- Default</masterLabel>
-        <translation>Orden recomendada- Predeterminada</translation>
-    </picklistValues>
+        
+            <masterLabel>Recommended Order- Default</masterLabel>
+        
+            <translation>Orden recomendada- Predeterminada</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Recommended Order- No Service</masterLabel>
-        <translation>Orden recomendada- No dar servicio</translation>
-    </picklistValues>
+        
+            <masterLabel>Recommended Order- No Service</masterLabel>
+        
+            <translation>Orden recomendada- No dar servicio</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Recommended order - Waiver</masterLabel>
-        <translation>Orden recomendada - Exención</translation>
-    </picklistValues>
+        
+            <masterLabel>Recommended order - Waiver</masterLabel>
+        
+            <translation>Orden recomendada - Exención</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Request for Certification of Record</masterLabel>
-        <translation>Pedido de certificación de registro</translation>
-    </picklistValues>
+        
+            <masterLabel>Request for Certification of Record</masterLabel>
+        
+            <translation>Pedido de certificación de registro</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Request for Hearing</masterLabel>
-        <translation>Pedido de audiencia</translation>
-    </picklistValues>
+        
+            <masterLabel>Request for Hearing</masterLabel>
+        
+            <translation>Pedido de audiencia</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Request for Hearing to be Converted to In-Person</masterLabel>
-        <translation>Pedido para que audiencia se convierta en audiencia en persona</translation>
-    </picklistValues>
+        
+            <masterLabel>Request for Hearing to be Converted to In-Person</masterLabel>
+        
+            <translation>Pedido para que audiencia se convierta en audiencia en persona</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Request for Subpoena</masterLabel>
-        <translation>Pedido de citación</translation>
-    </picklistValues>
+        
+            <masterLabel>Request for Subpoena</masterLabel>
+        
+            <translation>Pedido de citación</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Request to Reschedule</masterLabel>
-        <translation>Pedido para reprogramar</translation>
-    </picklistValues>
+        
+            <masterLabel>Request to Reschedule</masterLabel>
+        
+            <translation>Pedido para reprogramar</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Response to Show Cause Order</masterLabel>
-        <translation>Respuesta para orden de mostrar causa</translation>
-    </picklistValues>
+        
+            <masterLabel>Response to Show Cause Order</masterLabel>
+        
+            <translation>Respuesta para orden de mostrar causa</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Returned 1st class mail</masterLabel>
-        <translation>Devuelto correo primera clase</translation>
-    </picklistValues>
+        
+            <masterLabel>Returned 1st class mail</masterLabel>
+        
+            <translation>Devuelto correo primera clase</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Returned Notice of Hearing Envelope</masterLabel>
-        <translation>Devolución de sobre de aviso de audiencia</translation>
-    </picklistValues>
+        
+            <masterLabel>Returned Notice of Hearing Envelope</masterLabel>
+        
+            <translation>Devolución de sobre de aviso de audiencia</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Status Report</masterLabel>
-        <translation>Informe de estatus</translation>
-    </picklistValues>
+        
+            <masterLabel>Status Report</masterLabel>
+        
+            <translation>Informe de estatus</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Subpoena</masterLabel>
-        <translation>Citación</translation>
-    </picklistValues>
+        
+            <masterLabel>Subpoena</masterLabel>
+        
+            <translation>Citación</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Summons</masterLabel>
-        <translation>Orden de comparecencia</translation>
-    </picklistValues>
+        
+            <masterLabel>Summons</masterLabel>
+        
+            <translation>Orden de comparecencia</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Supreme Court Decision</masterLabel>
-        <translation>Decisión de la Suprema Corte</translation>
-    </picklistValues>
+        
+            <masterLabel>Supreme Court Decision</masterLabel>
+        
+            <translation>Decisión de la Suprema Corte</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Witness and/or Exhibit List</masterLabel>
-        <translation>Testigo y/o lista de pruebas</translation>
-    </picklistValues>
+        
+            <masterLabel>Witness and/or Exhibit List</masterLabel>
+        
+            <translation>Testigo y/o lista de pruebas</translation>
+        
+        </picklistValues>
 </CustomFieldTranslation>

@@ -1,195 +1,389 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <GlobalValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    
     <valueTranslation>
+        
         <masterLabel>AI/AN Income</masterLabel>
+        
         <translation>Ingreso indígena estadounidense/nativo de Alaska (AI/AN)</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Alimony</masterLabel>
+        
         <translation>Pensión para ex cónyuge</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Attendant</masterLabel>
+        
         <translation>Cuidador(a)</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Cancer policy premiums</masterLabel>
+        
         <translation>Primas de póliza de cáncer</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Certain business expenses of reservists and officials (Form 2106)</masterLabel>
+        
         <translation>Ciertos gastos empresariales de reservistas y funcionarios (Formulario 2106)</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Child Support</masterLabel>
+        
         <translation>Manutención infantil</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Cooking Fuel</masterLabel>
+        
         <translation>Combustible para cocinar</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Cost sharing/spend down expenses</masterLabel>
+        
         <translation>Cost sharing/spend down expenses</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Deductible part of self employment tax</masterLabel>
+        
         <translation>Parte deducible de impuesto de trabajo por cuenta propia</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Dentures</masterLabel>
+        
         <translation>Dentaduras postizas</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Domestic production activities</masterLabel>
+        
         <translation>Actividades de producción nacional</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Electricity</masterLabel>
+        
         <translation>Electricidad</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Garbage</masterLabel>
+        
         <translation>Recolección de basura</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Gas</masterLabel>
+        
         <translation>Gas</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Glasses/contacts</masterLabel>
+        
         <translation>Anteojos/Lentes de contacto</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Health and hospitalization INS premiums</masterLabel>
+        
         <translation>Primas INS de salud y hospitalización</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Health savings account deduction</masterLabel>
+        
         <translation>Deducción de cuenta de ahorros para la salud</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Hearing aids</masterLabel>
+        
         <translation>Audífonos</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Heating Fuel</masterLabel>
+        
         <translation>Combustible para calefacción</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Home Health</masterLabel>
+        
         <translation>Salud en el hogar</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>IRA deduction</masterLabel>
+        
         <translation>Deducción de IRA</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Insurance</masterLabel>
+        
         <translation>Insurance</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Lodging</masterLabel>
+        
         <translation>Alojamiento</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Medical supplies</masterLabel>
+        
         <translation>Materiales médicos</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Medically Necessary Items with Doctor&apos;s Note</masterLabel>
+        
         <translation>Artículos médicamente necesarios con nota de médico</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Medicare Part D Premiums</masterLabel>
+        
         <translation>Primas de Medicare Parte D</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Mortgage</masterLabel>
+        
         <translation>Hipoteca</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Moving expenses</masterLabel>
+        
         <translation>Gastos de mudanza</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Non-reimbursable educator expense</masterLabel>
+        
         <translation>Gasto de educador no reembolsable</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Other</masterLabel>
+        
         <translation>Otro</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Penalty on early withdrawal of savings</masterLabel>
+        
         <translation>Sanción por retiro anticipado de ahorros</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Prescription drugs</masterLabel>
+        
         <translation>Fármacos con receta médica</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Prosthetics</masterLabel>
+        
         <translation>Prótesis</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Rent</masterLabel>
+        
         <translation>Alquiler</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>SMI Premium</masterLabel>
+        
         <translation>Prima SMI (Seguro Médico Suplementario)</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Securing/maintaining service animals</masterLabel>
+        
         <translation>Obtener/mantener animales de servicio</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Self-employed health insurance deduction</masterLabel>
+        
         <translation>Deducción de seguro de salud para trabajo por cuenta propia</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Self-employed qualified plans</masterLabel>
+        
         <translation>Planes calificados para trabajo por cuenta propia</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Self-employed simple plans</masterLabel>
+        
         <translation>Planes simples para trabajo por cuenta propia</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Sewage</masterLabel>
+        
         <translation>Eliminación de aguas residuales</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Student loan interest</masterLabel>
+        
         <translation>Interés de préstamo estudiantil</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Tax</masterLabel>
+        
         <translation>Impuesto</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Telephone</masterLabel>
+        
         <translation>Teléfono</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Telephone charges</masterLabel>
+        
         <translation>Cargos de teléfono</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Transportation</masterLabel>
+        
         <translation>Transporte</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Tuition and fees</masterLabel>
+        
         <translation>Matrícula y tarifas de centros de estudio</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Water</masterLabel>
+        
         <translation>Agua</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Wood/Coal</masterLabel>
+        
         <translation>Leña/Carbón</translation>
+        
     </valueTranslation>
+    
 </GlobalValueSetTranslation>

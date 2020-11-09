@@ -8,7 +8,10 @@
     <trackFeedHistory>false</trackFeedHistory>
     <type>Picklist</type>
     <valueSet>
-        <restricted>true</restricted>
-        <valueSetName>SSPState</valueSetName>
-    </valueSet>
+        
+            <restricted>true</restricted>
+        
+            <valueSetName>SSPState</valueSetName>
+        
+        </valueSet>
 </CustomField>

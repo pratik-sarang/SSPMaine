@@ -1,29 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    
     <label>RFIDetails</label>
+    
     <protected>false</protected>
+    
     <values>
+        
         <field>Intake_Order__c</field>
+        
         <value xsi:nil="true"/>
+        
     </values>
+    
     <values>
+        
         <field>Is_Intake__c</field>
+        
         <value xsi:type="xsd:boolean">false</value>
+        
     </values>
+    
     <values>
+        
         <field>Is_RAC__c</field>
+        
         <value xsi:type="xsd:boolean">false</value>
+        
     </values>
+    
     <values>
+        
         <field>RAC_Order__c</field>
+        
         <value xsi:nil="true"/>
+        
     </values>
+    
     <values>
+        
         <field>Screens__c</field>
+        
         <value xsi:nil="true"/>
+        
     </values>
+    
     <values>
+        
         <field>View__c</field>
+        
         <value xsi:type="xsd:string">RFIDetails</value>
+        
     </values>
+    
 </CustomMetadata>

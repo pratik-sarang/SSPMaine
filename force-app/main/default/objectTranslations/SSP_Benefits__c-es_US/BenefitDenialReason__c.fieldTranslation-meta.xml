@@ -3,23 +3,38 @@
     <label><!-- Benefit Denial Reason --></label>
     <name>BenefitDenialReason__c</name>
     <picklistValues>
-        <masterLabel>None of the above</masterLabel>
-        <translation>Ninguna de las opciones anteriores</translation>
-    </picklistValues>
+        
+            <masterLabel>None of the above</masterLabel>
+        
+            <translation>Ninguna de las opciones anteriores</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Not blind/disabled</masterLabel>
-        <translation>Sin ceguera/discapacidad</translation>
-    </picklistValues>
+        
+            <masterLabel>Not blind/disabled</masterLabel>
+        
+            <translation>Sin ceguera/discapacidad</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Other</masterLabel>
-        <translation>Otro</translation>
-    </picklistValues>
+        
+            <masterLabel>Other</masterLabel>
+        
+            <translation>Otro</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Over the income limit</masterLabel>
-        <translation>Supera límite de ingreso</translation>
-    </picklistValues>
+        
+            <masterLabel>Over the income limit</masterLabel>
+        
+            <translation>Supera límite de ingreso</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Over the resource limit</masterLabel>
-        <translation>Supera límite de recursos</translation>
-    </picklistValues>
+        
+            <masterLabel>Over the resource limit</masterLabel>
+        
+            <translation>Supera límite de recursos</translation>
+        
+        </picklistValues>
 </CustomFieldTranslation>

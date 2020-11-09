@@ -8,34 +8,64 @@
     <trackTrending>false</trackTrending>
     <type>Picklist</type>
     <valueSet>
-        <restricted>true</restricted>
-        <valueSetDefinition>
-            <sorted>true</sorted>
-            <value>
-                <fullName>CH</fullName>
-                <default>false</default>
-                <label>Child</label>
-            </value>
-            <value>
-                <fullName>NR</fullName>
-                <default>false</default>
-                <label>Not Related</label>
-            </value>
-            <value>
-                <fullName>OR</fullName>
-                <default>false</default>
-                <label>Other Relative</label>
-            </value>
-            <value>
-                <fullName>PA</fullName>
-                <default>false</default>
-                <label>Parent</label>
-            </value>
-            <value>
-                <fullName>SP</fullName>
-                <default>false</default>
-                <label>Spouse</label>
-            </value>
-        </valueSetDefinition>
-    </valueSet>
+        
+            <restricted>true</restricted>
+        
+            <valueSetDefinition>
+            
+                <sorted>true</sorted>
+            
+                <value>
+                
+                    <fullName>CH</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Child</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>NR</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Not Related</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>OR</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Other Relative</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>PA</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Parent</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>SP</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Spouse</label>
+                
+                </value>
+            
+            </valueSetDefinition>
+        
+        </valueSet>
 </CustomField>

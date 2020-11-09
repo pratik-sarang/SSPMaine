@@ -3,27 +3,45 @@
     <label><!-- Status Of Application --></label>
     <name>StatusofApplication__c</name>
     <picklistValues>
-        <masterLabel>Applied</masterLabel>
-        <translation>Presentó solicitud</translation>
-    </picklistValues>
+        
+            <masterLabel>Applied</masterLabel>
+        
+            <translation>Presentó solicitud</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Denied</masterLabel>
-        <translation>Negado</translation>
-    </picklistValues>
+        
+            <masterLabel>Denied</masterLabel>
+        
+            <translation>Negado</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Discontinued</masterLabel>
-        <translation>Discontinuado</translation>
-    </picklistValues>
+        
+            <masterLabel>Discontinued</masterLabel>
+        
+            <translation>Discontinuado</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Not Applied</masterLabel>
-        <translation>No presentó solicitud</translation>
-    </picklistValues>
+        
+            <masterLabel>Not Applied</masterLabel>
+        
+            <translation>No presentó solicitud</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Pending Appeal</masterLabel>
-        <translation>Apelación pendiente</translation>
-    </picklistValues>
+        
+            <masterLabel>Pending Appeal</masterLabel>
+        
+            <translation>Apelación pendiente</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Pending Application</masterLabel>
-        <translation>Solicitud pendiente</translation>
-    </picklistValues>
+        
+            <masterLabel>Pending Application</masterLabel>
+        
+            <translation>Solicitud pendiente</translation>
+        
+        </picklistValues>
 </CustomFieldTranslation>

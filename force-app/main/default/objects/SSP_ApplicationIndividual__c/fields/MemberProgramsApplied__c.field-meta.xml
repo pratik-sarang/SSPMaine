@@ -8,8 +8,11 @@
     <trackTrending>false</trackTrending>
     <type>MultiselectPicklist</type>
     <valueSet>
-        <restricted>true</restricted>
-        <valueSetName>BenefitPrograms</valueSetName>
-    </valueSet>
+        
+            <restricted>true</restricted>
+        
+            <valueSetName>BenefitPrograms</valueSetName>
+        
+        </valueSet>
     <visibleLines>4</visibleLines>
 </CustomField>

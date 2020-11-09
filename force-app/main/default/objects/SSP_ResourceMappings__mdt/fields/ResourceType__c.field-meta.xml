@@ -8,94 +8,184 @@
     <required>true</required>
     <type>Picklist</type>
     <valueSet>
-        <restricted>true</restricted>
-        <valueSetDefinition>
-            <sorted>false</sorted>
-            <value>
-                <fullName>OR</fullName>
-                <default>false</default>
-                <label>Other Liquid Resource</label>
-            </value>
-            <value>
-                <fullName>AC</fullName>
-                <default>false</default>
-                <label>Account</label>
-            </value>
-            <value>
-                <fullName>AN</fullName>
-                <default>false</default>
-                <label>Annuity</label>
-            </value>
-            <value>
-                <fullName>BF</fullName>
-                <default>false</default>
-                <label>Burial Funds</label>
-            </value>
-            <value>
-                <fullName>BP</fullName>
-                <default>false</default>
-                <label>Burial Plot</label>
-            </value>
-            <value>
-                <fullName>IN</fullName>
-                <default>false</default>
-                <label>Investment</label>
-            </value>
-            <value>
-                <fullName>LE</fullName>
-                <default>false</default>
-                <label>Life Estate</label>
-            </value>
-            <value>
-                <fullName>LI</fullName>
-                <default>false</default>
-                <label>Life Insurance</label>
-            </value>
-            <value>
-                <fullName>LSC</fullName>
-                <default>false</default>
-                <label>Life Settlement Contract</label>
-            </value>
-            <value>
-                <fullName>LTC</fullName>
-                <default>false</default>
-                <label>Lifetime Care Agreement</label>
-            </value>
-            <value>
-                <fullName>OT</fullName>
-                <default>false</default>
-                <label>Other Resource</label>
-            </value>
-            <value>
-                <fullName>PQ</fullName>
-                <default>false</default>
-                <label>Partnership Qualified LTC Policy</label>
-            </value>
-            <value>
-                <fullName>FA</fullName>
-                <default>false</default>
-                <label>Pre Arranged Funeral Contract</label>
-            </value>
-            <value>
-                <fullName>PN</fullName>
-                <default>false</default>
-                <label>Promissory Note or Land Contract</label>
-            </value>
-            <value>
-                <fullName>RP</fullName>
-                <default>false</default>
-                <label>Real Estate Property</label>
-            </value>
-            <value>
-                <fullName>TR</fullName>
-                <default>false</default>
-                <label>Trust</label>
-            </value>
-            <value>
-                <fullName>VI</fullName>
-                <default>false</default>
-                <label>Vehicle</label>
-            </value>
-        </valueSetDefinition>
-    </valueSet>
+        
+            <restricted>true</restricted>
+        
+            <valueSetDefinition>
+            
+                <sorted>false</sorted>
+            
+                <value>
+                
+                    <fullName>OR</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Other Liquid Resource</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>AC</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Account</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>AN</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Annuity</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>BF</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Burial Funds</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>BP</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Burial Plot</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>IN</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Investment</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>LE</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Life Estate</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>LI</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Life Insurance</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>LSC</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Life Settlement Contract</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>LTC</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Lifetime Care Agreement</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>OT</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Other Resource</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>PQ</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Partnership Qualified LTC Policy</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>FA</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Pre Arranged Funeral Contract</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>PN</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Promissory Note or Land Contract</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>RP</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Real Estate Property</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>TR</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Trust</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>VI</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Vehicle</label>
+                
+                </value>
+            
+            </valueSetDefinition>
+        
+        </valueSet>
 </CustomField>

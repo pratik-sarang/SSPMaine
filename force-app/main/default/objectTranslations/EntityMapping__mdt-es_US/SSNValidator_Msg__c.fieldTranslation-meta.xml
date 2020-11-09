@@ -3,11 +3,17 @@
     <label><!-- SSNValidator_Msg --></label>
     <name>SSNValidator_Msg__c</name>
     <picklistValues>
-        <masterLabel>Please enter SSN in correct format</masterLabel>
-        <translation><!-- Please enter SSN in correct format --></translation>
-    </picklistValues>
+        
+            <masterLabel>Please enter SSN in correct format</masterLabel>
+        
+            <translation><!-- Please enter SSN in correct format --></translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Please enter a valid 9-digit  Social Security Number</masterLabel>
-        <translation>Ingresar Número de Seguro Social válido de 9 dígitos.</translation>
-    </picklistValues>
+        
+            <masterLabel>Please enter a valid 9-digit  Social Security Number</masterLabel>
+        
+            <translation>Ingresar Número de Seguro Social válido de 9 dígitos.</translation>
+        
+        </picklistValues>
 </CustomFieldTranslation>

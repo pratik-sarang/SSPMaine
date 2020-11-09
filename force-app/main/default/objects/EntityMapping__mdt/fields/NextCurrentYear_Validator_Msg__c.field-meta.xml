@@ -7,14 +7,24 @@
     <required>false</required>
     <type>Picklist</type>
     <valueSet>
-        <restricted>true</restricted>
-        <valueSetDefinition>
-            <sorted>false</sorted>
-            <value>
-                <fullName>Plan start date can only be next or current year.</fullName>
-                <default>true</default>
-                <label>Plan start date can only be next or current year.</label>
-            </value>
-        </valueSetDefinition>
-    </valueSet>
+        
+            <restricted>true</restricted>
+        
+            <valueSetDefinition>
+            
+                <sorted>false</sorted>
+            
+                <value>
+                
+                    <fullName>Plan start date can only be next or current year.</fullName>
+                
+                    <default>true</default>
+                
+                    <label>Plan start date can only be next or current year.</label>
+                
+                </value>
+            
+            </valueSetDefinition>
+        
+        </valueSet>
 </CustomField>

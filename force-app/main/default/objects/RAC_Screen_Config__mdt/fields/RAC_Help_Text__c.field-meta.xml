@@ -7,24 +7,44 @@
     <required>false</required>
     <type>Picklist</type>
     <valueSet>
-        <restricted>true</restricted>
-        <valueSetDefinition>
-            <sorted>false</sorted>
-            <value>
-                <fullName>Living Arrangement changes include a difference in a previously reported Living Arrangement Type (e.g., In-Home to Incarcerated, Attending School to Rehab Facility, etc.)</fullName>
-                <default>true</default>
-                <label>Living Arrangement changes include a difference in a previously reported Living Arrangement Type (e.g., In-Home to Incarcerated, Attending School to Rehab Facility, etc.)</label>
-            </value>
-            <value>
-                <fullName>Changes to Resources include a decrease or increase in value, change in ownership or the opening or closing of accounts.</fullName>
-                <default>false</default>
-                <label>Changes to Resources include a decrease or increase in value, change in ownership or the opening or closing of accounts.</label>
-            </value>
-            <value>
-                <fullName>For previously reported Expenses, changes include a change in the amount of an expense or if the expense has ended.</fullName>
-                <default>false</default>
-                <label>For previously reported Expenses, changes include a change in the amount of an expense or if the expense has ended.</label>
-            </value>
-        </valueSetDefinition>
-    </valueSet>
+        
+            <restricted>true</restricted>
+        
+            <valueSetDefinition>
+            
+                <sorted>false</sorted>
+            
+                <value>
+                
+                    <fullName>Living Arrangement changes include a difference in a previously reported Living Arrangement Type (e.g., In-Home to Incarcerated, Attending School to Rehab Facility, etc.)</fullName>
+                
+                    <default>true</default>
+                
+                    <label>Living Arrangement changes include a difference in a previously reported Living Arrangement Type (e.g., In-Home to Incarcerated, Attending School to Rehab Facility, etc.)</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>Changes to Resources include a decrease or increase in value, change in ownership or the opening or closing of accounts.</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Changes to Resources include a decrease or increase in value, change in ownership or the opening or closing of accounts.</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>For previously reported Expenses, changes include a change in the amount of an expense or if the expense has ended.</fullName>
+                
+                    <default>false</default>
+                
+                    <label>For previously reported Expenses, changes include a change in the amount of an expense or if the expense has ended.</label>
+                
+                </value>
+            
+            </valueSetDefinition>
+        
+        </valueSet>
 </CustomField>

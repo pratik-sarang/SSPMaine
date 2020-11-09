@@ -3,23 +3,38 @@
     <label><!-- Organization Role --></label>
     <name>OrganizationRole__c</name>
     <picklistValues>
-        <masterLabel>Executive</masterLabel>
-        <translation>Ejecutivo</translation>
-    </picklistValues>
+        
+            <masterLabel>Executive</masterLabel>
+        
+            <translation>Ejecutivo</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Manager</masterLabel>
-        <translation>Gerente</translation>
-    </picklistValues>
+        
+            <masterLabel>Manager</masterLabel>
+        
+            <translation>Gerente</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Other</masterLabel>
-        <translation>Otro</translation>
-    </picklistValues>
+        
+            <masterLabel>Other</masterLabel>
+        
+            <translation>Otro</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Owner</masterLabel>
-        <translation>Propietario</translation>
-    </picklistValues>
+        
+            <masterLabel>Owner</masterLabel>
+        
+            <translation>Propietario</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Staff</masterLabel>
-        <translation>Personal</translation>
-    </picklistValues>
+        
+            <masterLabel>Staff</masterLabel>
+        
+            <translation>Personal</translation>
+        
+        </picklistValues>
 </CustomFieldTranslation>

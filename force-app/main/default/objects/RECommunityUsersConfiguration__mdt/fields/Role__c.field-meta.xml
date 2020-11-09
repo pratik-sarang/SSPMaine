@@ -7,19 +7,34 @@
     <required>true</required>
     <type>Picklist</type>
     <valueSet>
-        <restricted>true</restricted>
-        <valueSetDefinition>
-            <sorted>false</sorted>
-            <value>
-                <fullName>Admin</fullName>
-                <default>true</default>
-                <label>Admin</label>
-            </value>
-            <value>
-                <fullName>Staff</fullName>
-                <default>false</default>
-                <label>Staff</label>
-            </value>
-        </valueSetDefinition>
-    </valueSet>
+        
+            <restricted>true</restricted>
+        
+            <valueSetDefinition>
+            
+                <sorted>false</sorted>
+            
+                <value>
+                
+                    <fullName>Admin</fullName>
+                
+                    <default>true</default>
+                
+                    <label>Admin</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>Staff</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Staff</label>
+                
+                </value>
+            
+            </valueSetDefinition>
+        
+        </valueSet>
 </CustomField>

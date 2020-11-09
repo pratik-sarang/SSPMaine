@@ -3,23 +3,38 @@
     <label><!-- Caretaker Relation --></label>
     <name>CaretakerRelation__c</name>
     <picklistValues>
-        <masterLabel>Child</masterLabel>
-        <translation>Hijo/a</translation>
-    </picklistValues>
+        
+            <masterLabel>Child</masterLabel>
+        
+            <translation>Hijo/a</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Not Related</masterLabel>
-        <translation>Sin relación de parentesco</translation>
-    </picklistValues>
+        
+            <masterLabel>Not Related</masterLabel>
+        
+            <translation>Sin relación de parentesco</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Other Relative</masterLabel>
-        <translation>Otro familiar</translation>
-    </picklistValues>
+        
+            <masterLabel>Other Relative</masterLabel>
+        
+            <translation>Otro familiar</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Parent</masterLabel>
-        <translation>Padre/madre</translation>
-    </picklistValues>
+        
+            <masterLabel>Parent</masterLabel>
+        
+            <translation>Padre/madre</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Spouse</masterLabel>
-        <translation>Cónyuge</translation>
-    </picklistValues>
+        
+            <masterLabel>Spouse</masterLabel>
+        
+            <translation>Cónyuge</translation>
+        
+        </picklistValues>
 </CustomFieldTranslation>

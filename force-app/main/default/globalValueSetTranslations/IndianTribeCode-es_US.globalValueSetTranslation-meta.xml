@@ -1,2311 +1,4621 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <GlobalValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    
     <valueTranslation>
+        
         <masterLabel>Agdaagux Tribe of King Cove</masterLabel>
+        
         <translation>Tribu Agdaagux de King Cove</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Agua Caliente Band of Cahuilla Indians of the Agua Caliente Indian Reservation</masterLabel>
+        
         <translation>Banda de Agua Caliente de Indígenas Cahuilla de la Reserva Indígena Agua Caliente</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Ak Chin Indian Community of the Maricopa (Ak Chin) Indian Reservation</masterLabel>
+        
         <translation>Comunidad Indígena Ak Chin de la Reserva Indígena Maricopa (Ak Chin)</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Akiachak Native Community</masterLabel>
+        
         <translation>Comunidad Nativa de Akiakchak</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Akiak Native Community</masterLabel>
+        
         <translation>Comunidad Nativa de Akiak</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Alabama-Coushatta Tribe of Texas</masterLabel>
+        
         <translation>Tribu Alabama-Coushatta de Texas</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Alabama-Quassarte Tribal Town</masterLabel>
+        
         <translation>Poblado Tribal Alabama-Quassarte</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Alatna Village</masterLabel>
+        
         <translation>Aldea Alatna</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Algaaciq Native Village (St. Mary&apos;s)</masterLabel>
+        
         <translation>Aldea Nativa Algaaciq (Santa María)</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Allakaket Village</masterLabel>
+        
         <translation>Aldea Allakaket</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Alturas Indian Rancheria</masterLabel>
+        
         <translation>Ranchería Indígena Alturas</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Angoon Community Association</masterLabel>
+        
         <translation>Asociación Comunitaria Angoon</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Anvik Village</masterLabel>
+        
         <translation>Aldea Anvik</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Apache Tribe of Oklahoma</masterLabel>
+        
         <translation>Tribu Apache de Oklahoma</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Arapaho Tribe of the Wind River Reservation</masterLabel>
+        
         <translation>Tribu Arapaho de la Reserva Wind River</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Arctic Village (See Native Village of Venetie Tribal Government)</masterLabel>
+        
         <translation>Aldea Ártica (ver Aldea Nativa de Gobierno Tribal Venetie)</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Aroostook Band of Micmac Indians</masterLabel>
+        
         <translation>Banda Aroostook de Indígenas Micmac</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Asa&apos;carsarmiut Tribe</masterLabel>
+        
         <translation>Tribu Asa&apos;carsarmiut</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Assiniboine and Sioux Tribes of the Fort Peck Indian Reservation</masterLabel>
+        
         <translation>Tribus Assiniboine y Sioux Tribes de la Reserva Indígena Fuerte Peck</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Atqasuk Village (Atkasook)</masterLabel>
+        
         <translation>Aldea Atqasuk (Atkasook)</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Bad River Band of the Lake Superior Tribe of Chippewa Indians of the Bad River Reservation</masterLabel>
+        
         <translation>Tribu Bad River Band de Lake Superior de Indígenas Chippewa de la Reserva Bad River</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Bay Mills Indian Community</masterLabel>
+        
         <translation>Comunidad Indígena Bay Mills</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Bear River Band of the Rohnerville Rancheria</masterLabel>
+        
         <translation>Banda Bear River de la Ranchería Rohnerville</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Beaver Village</masterLabel>
+        
         <translation>Aldea Beaver</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Berry Creek Rancheria of Maidu Indians of California</masterLabel>
+        
         <translation>Ranchería Berry Creek de Indígenas Maidu de California</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Big Lagoon Rancheria</masterLabel>
+        
         <translation><!-- Big Lagoon Rancheria --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Big Pine Band Paiute Tribe of the Owens Valley</masterLabel>
+        
         <translation><!-- Big Pine Band Paiute Tribe of the Owens Valley --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Big Sandy Rancheria of Western Mono Indians of California</masterLabel>
+        
         <translation><!-- Big Sandy Rancheria of Western Mono Indians of California --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Big Valley Band of Pomo Indians of the Big Valley Rancheria</masterLabel>
+        
         <translation><!-- Big Valley Band of Pomo Indians of the Big Valley Rancheria --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Birch Creek Tribe</masterLabel>
+        
         <translation><!-- Birch Creek Tribe --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Bishop Pauite Tribe (previously listed as Paiute-Shoshone Indians of the Bishop Community of the Bishop Colony)</masterLabel>
+        
         <translation><!-- Bishop Pauite Tribe (previously listed as Paiute-Shoshone Indians of the Bishop Community of the Bishop Colony) --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Blackfeet Tribe of the Blackfeet Indian Reservation of Montana</masterLabel>
+        
         <translation><!-- Blackfeet Tribe of the Blackfeet Indian Reservation of Montana --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Blue Lake Rancheria</masterLabel>
+        
         <translation><!-- Blue Lake Rancheria --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Bridgeport Indian Colony</masterLabel>
+        
         <translation><!-- Bridgeport Indian Colony --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Buena Vista Rancheria of Me-Wuk Indians of California</masterLabel>
+        
         <translation><!-- Buena Vista Rancheria of Me-Wuk Indians of California --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Burns Paiute Tribe</masterLabel>
+        
         <translation><!-- Burns Paiute Tribe --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Cabazon Band of  Mission Indians</masterLabel>
+        
         <translation><!-- Cabazon Band of  Mission Indians --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Cachil DeHe Band of Wintun Indians of the Colusa Indian Community of the Colusa Rancheria</masterLabel>
+        
         <translation><!-- Cachil DeHe Band of Wintun Indians of the Colusa Indian Community of the Colusa Rancheria --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Caddo Nation of Oklahoma</masterLabel>
+        
         <translation><!-- Caddo Nation of Oklahoma --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Cahto Indian Tribe of the Laytonville Rancheria</masterLabel>
+        
         <translation><!-- Cahto Indian Tribe of the Laytonville Rancheria --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Cahuilla Band of Mission Indians of the Cahuilla Reservation</masterLabel>
+        
         <translation><!-- Cahuilla Band of Mission Indians of the Cahuilla Reservation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>California Valley Miwok Tribe </masterLabel>
+        
         <translation><!-- California Valley Miwok Tribe  --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Campo Band of Diegueño Mission Indians of the Campo Indian Reservation</masterLabel>
+        
         <translation><!-- Campo Band of Diegueño Mission Indians of the Campo Indian Reservation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Capitan Grande Band of Diegueño Mission Indians of California:Barona Group of Capitan Grande Band of Mission Indians of the Barona Reservation; Viejas (Baron Long) Group of Capitan Grande Band of Mission Indians of the Viejas Reservation</masterLabel>
+        
         <translation><!-- Capitan Grande Band of Diegueño Mission Indians of California:Barona Group of Capitan Grande Band of Mission Indians of the Barona Reservation; Viejas (Baron Long) Group of Capitan Grande Band of Mission Indians of the Viejas Reservation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Catawba Indian Nation (Catawba Tribe of South Carolina)</masterLabel>
+        
         <translation><!-- Catawba Indian Nation (Catawba Tribe of South Carolina) --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Cayuga Nation</masterLabel>
+        
         <translation><!-- Cayuga Nation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Cedarville Rancheria</masterLabel>
+        
         <translation><!-- Cedarville Rancheria --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Central Council of the Tlingit &amp; Haida Indian Tribes</masterLabel>
+        
         <translation><!-- Central Council of the Tlingit &amp; Haida Indian Tribes --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Chalkyitsik Village</masterLabel>
+        
         <translation><!-- Chalkyitsik Village --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Cheesh-Na Tribe (formerly the Native Village of Chistochina)</masterLabel>
+        
         <translation><!-- Cheesh-Na Tribe (formerly the Native Village of Chistochina) --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Chemehuevi Indian Tribe of the Chemehuevi Reservation</masterLabel>
+        
         <translation><!-- Chemehuevi Indian Tribe of the Chemehuevi Reservation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Cher-Ae Heights Indian Community of the Trinidad Rancheria</masterLabel>
+        
         <translation><!-- Cher-Ae Heights Indian Community of the Trinidad Rancheria --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Cherokee Nation</masterLabel>
+        
         <translation><!-- Cherokee Nation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Chevak Native Village</masterLabel>
+        
         <translation><!-- Chevak Native Village --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Cheyenne River Sioux Tribe of the Cheyenne River Reservation</masterLabel>
+        
         <translation><!-- Cheyenne River Sioux Tribe of the Cheyenne River Reservation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Cheyenne and Arapaho Tribes</masterLabel>
+        
         <translation><!-- Cheyenne and Arapaho Tribes --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Chickahominy Indian Tribe</masterLabel>
+        
         <translation><!-- Chickahominy Indian Tribe --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Chickahominy Indian Tribe-Eastern Division</masterLabel>
+        
         <translation><!-- Chickahominy Indian Tribe-Eastern Division --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Chickaloon Native Village</masterLabel>
+        
         <translation><!-- Chickaloon Native Village --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Chicken Ranch Rancheria of Me-Wuk Indians of California</masterLabel>
+        
         <translation><!-- Chicken Ranch Rancheria of Me-Wuk Indians of California --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Chignik Bay Tribal Council (formerly the Native Village of Chignik)</masterLabel>
+        
         <translation><!-- Chignik Bay Tribal Council (formerly the Native Village of Chignik) --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Chignik Lake Village</masterLabel>
+        
         <translation><!-- Chignik Lake Village --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Chilkat Indian Village (Klukwan)</masterLabel>
+        
         <translation><!-- Chilkat Indian Village (Klukwan) --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Chilkoot Indian Association (Haines)</masterLabel>
+        
         <translation><!-- Chilkoot Indian Association (Haines) --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Chinik Eskimo Community (Golovin)</masterLabel>
+        
         <translation><!-- Chinik Eskimo Community (Golovin) --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Chippewa-Cree Indians of the Rocky Boy&apos;s Reservation</masterLabel>
+        
         <translation><!-- Chippewa-Cree Indians of the Rocky Boy&apos;s Reservation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Chitimacha Tribe of Louisiana</masterLabel>
+        
         <translation><!-- Chitimacha Tribe of Louisiana --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Chuloonawick Native Village</masterLabel>
+        
         <translation><!-- Chuloonawick Native Village --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Circle Native Community</masterLabel>
+        
         <translation><!-- Circle Native Community --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Citizen Potawatomi Nation</masterLabel>
+        
         <translation><!-- Citizen Potawatomi Nation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Cloverdale Rancheria of Pomo Indians of California</masterLabel>
+        
         <translation><!-- Cloverdale Rancheria of Pomo Indians of California --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Cocopah Tribe of Arizona</masterLabel>
+        
         <translation><!-- Cocopah Tribe of Arizona --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Coeur D’Alene Tribe</masterLabel>
+        
         <translation><!-- Coeur D’Alene Tribe --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Cold Springs Rancheria of Mono Indians of California</masterLabel>
+        
         <translation><!-- Cold Springs Rancheria of Mono Indians of California --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Colorado River Indian Tribes of the Colorado River Indian Reservation (Arizona and California)</masterLabel>
+        
         <translation><!-- Colorado River Indian Tribes of the Colorado River Indian Reservation (Arizona and California) --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Comanche Nation</masterLabel>
+        
         <translation><!-- Comanche Nation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Confederated Salish and Kootenai Tribes of the Flathead Reservation</masterLabel>
+        
         <translation><!-- Confederated Salish and Kootenai Tribes of the Flathead Reservation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Confederated Tribes and Bands of the Yakama Nation</masterLabel>
+        
         <translation><!-- Confederated Tribes and Bands of the Yakama Nation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Confederated Tribes of the Chehalis Reservation</masterLabel>
+        
         <translation><!-- Confederated Tribes of the Chehalis Reservation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Confederated Tribes of the Colville Reservation</masterLabel>
+        
         <translation><!-- Confederated Tribes of the Colville Reservation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Confederated Tribes of the Coos, Lower Umpqua and Siuslaw Indians of Oregon</masterLabel>
+        
         <translation><!-- Confederated Tribes of the Coos, Lower Umpqua and Siuslaw Indians of Oregon --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Confederated Tribes of the Goshute Reservation (Nevada and Utah)</masterLabel>
+        
         <translation><!-- Confederated Tribes of the Goshute Reservation (Nevada and Utah) --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Confederated Tribes of the Grand Ronde Community of Oregon</masterLabel>
+        
         <translation><!-- Confederated Tribes of the Grand Ronde Community of Oregon --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Confederated Tribes of the Siletz Reservation</masterLabel>
+        
         <translation><!-- Confederated Tribes of the Siletz Reservation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Confederated Tribes of the Umatilla Indian Reservation</masterLabel>
+        
         <translation><!-- Confederated Tribes of the Umatilla Indian Reservation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Confederated Tribes of the Warm Springs Reservation of Oregon</masterLabel>
+        
         <translation><!-- Confederated Tribes of the Warm Springs Reservation of Oregon --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Coquille Indian Tribe</masterLabel>
+        
         <translation><!-- Coquille Indian Tribe --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Cortina Indian Rancheria of Wintun Indians of California</masterLabel>
+        
         <translation><!-- Cortina Indian Rancheria of Wintun Indians of California --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Coushatta Tribe of Louisiana</masterLabel>
+        
         <translation><!-- Coushatta Tribe of Louisiana --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Cow Creek Band of Umpqua Tribe of Indians</masterLabel>
+        
         <translation><!-- Cow Creek Band of Umpqua Tribe of Indians --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Cowlitz Indian Tribe</masterLabel>
+        
         <translation><!-- Cowlitz Indian Tribe --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Coyote Valley Band of Pomo Indians of California</masterLabel>
+        
         <translation><!-- Coyote Valley Band of Pomo Indians of California --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Craig Community Association</masterLabel>
+        
         <translation><!-- Craig Community Association --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Crow Creek Sioux Tribe of the Crow Creek Reservation</masterLabel>
+        
         <translation><!-- Crow Creek Sioux Tribe of the Crow Creek Reservation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Crow Tribe of Montana</masterLabel>
+        
         <translation><!-- Crow Tribe of Montana --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Curyung Tribal Council</masterLabel>
+        
         <translation><!-- Curyung Tribal Council --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Death Valley Timbi-Sha Shoshone Tribe</masterLabel>
+        
         <translation><!-- Death Valley Timbi-Sha Shoshone Tribe --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Delaware Nation</masterLabel>
+        
         <translation><!-- Delaware Nation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Delaware Tribe of Indians</masterLabel>
+        
         <translation><!-- Delaware Tribe of Indians --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Douglas Indian Association</masterLabel>
+        
         <translation><!-- Douglas Indian Association --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Dry Creek Rancheria of Pomo Indians </masterLabel>
+        
         <translation><!-- Dry Creek Rancheria of Pomo Indians  --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Duckwater Shoshone Tribe of the Duckwater Reservation</masterLabel>
+        
         <translation><!-- Duckwater Shoshone Tribe of the Duckwater Reservation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Eastern Band of Cherokee Indians </masterLabel>
+        
         <translation><!-- Eastern Band of Cherokee Indians  --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Eastern Shawnee Tribe of Oklahoma</masterLabel>
+        
         <translation><!-- Eastern Shawnee Tribe of Oklahoma --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Egegik Village</masterLabel>
+        
         <translation><!-- Egegik Village --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Eklutna Native Village</masterLabel>
+        
         <translation><!-- Eklutna Native Village --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Ekwok Village</masterLabel>
+        
         <translation><!-- Ekwok Village --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Elem Indian Colony of Pomo Indians of the Sulphur Bank Rancheria</masterLabel>
+        
         <translation><!-- Elem Indian Colony of Pomo Indians of the Sulphur Bank Rancheria --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Elk Valley Rancheria</masterLabel>
+        
         <translation><!-- Elk Valley Rancheria --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Ely Shoshone Tribe of Nevada</masterLabel>
+        
         <translation><!-- Ely Shoshone Tribe of Nevada --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Emmonak Village</masterLabel>
+        
         <translation><!-- Emmonak Village --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Enterprise Rancheria of Maidu Indians of California</masterLabel>
+        
         <translation><!-- Enterprise Rancheria of Maidu Indians of California --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Evansville Village (aka Bettles Field)</masterLabel>
+        
         <translation><!-- Evansville Village (aka Bettles Field) --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Ewiiaapaayp Band of Kumeyaay Indians</masterLabel>
+        
         <translation><!-- Ewiiaapaayp Band of Kumeyaay Indians --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Federated Indians of Graton Rancheria</masterLabel>
+        
         <translation><!-- Federated Indians of Graton Rancheria --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Flandreau Santee Sioux Tribe of South Dakota</masterLabel>
+        
         <translation><!-- Flandreau Santee Sioux Tribe of South Dakota --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Forest County Potawatomi Community</masterLabel>
+        
         <translation><!-- Forest County Potawatomi Community --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Fort Belknap Indian Community of the Fort Belknap Reservation of Montana</masterLabel>
+        
         <translation><!-- Fort Belknap Indian Community of the Fort Belknap Reservation of Montana --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Fort Bidwell Indian Community of the Fort Bidwell Reservation of California</masterLabel>
+        
         <translation><!-- Fort Bidwell Indian Community of the Fort Bidwell Reservation of California --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Fort Independence Indian Community of Paiute Indians of the Fort Independence Reservation</masterLabel>
+        
         <translation><!-- Fort Independence Indian Community of Paiute Indians of the Fort Independence Reservation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Fort McDermitt Paiute and Shoshone Tribes of the Fort McDermitt Indian Reservation (Nevada and Oregon)</masterLabel>
+        
         <translation><!-- Fort McDermitt Paiute and Shoshone Tribes of the Fort McDermitt Indian Reservation (Nevada and Oregon) --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Fort McDowell Yavapai Nation</masterLabel>
+        
         <translation><!-- Fort McDowell Yavapai Nation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Fort Mojave Indian Tribe (Arizona, California and Nevada)</masterLabel>
+        
         <translation><!-- Fort Mojave Indian Tribe (Arizona, California and Nevada) --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Fort Sill Apache Tribe of Oklahoma</masterLabel>
+        
         <translation><!-- Fort Sill Apache Tribe of Oklahoma --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Galena Village (aka Louden Village)</masterLabel>
+        
         <translation><!-- Galena Village (aka Louden Village) --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Gila River Indian Community of the Gila River Indian Reservation</masterLabel>
+        
         <translation><!-- Gila River Indian Community of the Gila River Indian Reservation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Grand Traverse Band of Ottawa and Chippewa Indians</masterLabel>
+        
         <translation><!-- Grand Traverse Band of Ottawa and Chippewa Indians --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Greenville Rancheria</masterLabel>
+        
         <translation><!-- Greenville Rancheria --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Grindstone Indian Rancheria of Wintun-Wailaki Indians of California</masterLabel>
+        
         <translation><!-- Grindstone Indian Rancheria of Wintun-Wailaki Indians of California --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Guidiville Rancheria of California</masterLabel>
+        
         <translation><!-- Guidiville Rancheria of California --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Gulkana Village</masterLabel>
+        
         <translation><!-- Gulkana Village --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Habematolel Pomo of Upper Lake</masterLabel>
+        
         <translation><!-- Habematolel Pomo of Upper Lake --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Hannahville Indian Community</masterLabel>
+        
         <translation><!-- Hannahville Indian Community --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Havasupai Tribe of the Havasupai Reservation</masterLabel>
+        
         <translation><!-- Havasupai Tribe of the Havasupai Reservation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Healy Lake Village</masterLabel>
+        
         <translation><!-- Healy Lake Village --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Ho-Chunk Nation of Wisconsin</masterLabel>
+        
         <translation><!-- Ho-Chunk Nation of Wisconsin --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Hoh Indian Tribe </masterLabel>
+        
         <translation><!-- Hoh Indian Tribe  --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Holy Cross Village</masterLabel>
+        
         <translation><!-- Holy Cross Village --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Hoonah Indian Association</masterLabel>
+        
         <translation><!-- Hoonah Indian Association --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Hoopa Valley Tribe</masterLabel>
+        
         <translation><!-- Hoopa Valley Tribe --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Hopi Tribe of Arizona</masterLabel>
+        
         <translation><!-- Hopi Tribe of Arizona --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Hopland Band of Pomo Indians</masterLabel>
+        
         <translation><!-- Hopland Band of Pomo Indians --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Houlton Band of Maliseet Indians</masterLabel>
+        
         <translation><!-- Houlton Band of Maliseet Indians --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Hualapai Indian Tribe of the Hualapai Indian Reservation</masterLabel>
+        
         <translation><!-- Hualapai Indian Tribe of the Hualapai Indian Reservation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Hughes Village</masterLabel>
+        
         <translation><!-- Hughes Village --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Huslia Village</masterLabel>
+        
         <translation><!-- Huslia Village --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Hydaburg Cooperative Association</masterLabel>
+        
         <translation><!-- Hydaburg Cooperative Association --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Igiugig Village</masterLabel>
+        
         <translation><!-- Igiugig Village --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Inaja Band of Diegueño Mission Indians of the Inaja and Cosmit Reservation</masterLabel>
+        
         <translation><!-- Inaja Band of Diegueño Mission Indians of the Inaja and Cosmit Reservation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Inupiat Community of the Arctic Slope</masterLabel>
+        
         <translation><!-- Inupiat Community of the Arctic Slope --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Ione Band of Miwok Indians of California</masterLabel>
+        
         <translation><!-- Ione Band of Miwok Indians of California --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Iowa Tribe of Oklahoma</masterLabel>
+        
         <translation><!-- Iowa Tribe of Oklahoma --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Iowa Tribe  of Kansas and Nebraska</masterLabel>
+        
         <translation><!-- Iowa Tribe  of Kansas and Nebraska --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Iqurmuit Traditional Council (formerly the Native Village of Russian Mission)</masterLabel>
+        
         <translation><!-- Iqurmuit Traditional Council (formerly the Native Village of Russian Mission) --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Ivanoff Bay Village</masterLabel>
+        
         <translation><!-- Ivanoff Bay Village --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Jackson Band of Miwuk Indians</masterLabel>
+        
         <translation><!-- Jackson Band of Miwuk Indians --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Jamestown S’Klallam Tribe</masterLabel>
+        
         <translation><!-- Jamestown S’Klallam Tribe --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Jamul Indian Village of California</masterLabel>
+        
         <translation><!-- Jamul Indian Village of California --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Jena Band of Choctaw Indians</masterLabel>
+        
         <translation><!-- Jena Band of Choctaw Indians --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Jicarilla Apache Nation</masterLabel>
+        
         <translation><!-- Jicarilla Apache Nation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Kaguyak Village</masterLabel>
+        
         <translation><!-- Kaguyak Village --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Kaibab Band of Paiute Indians of the Kaibab Indian Reservation</masterLabel>
+        
         <translation><!-- Kaibab Band of Paiute Indians of the Kaibab Indian Reservation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Kaktovik Village (aka Barter Island)</masterLabel>
+        
         <translation><!-- Kaktovik Village (aka Barter Island) --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Kalispel Indian Community of the Kalispel Reservation</masterLabel>
+        
         <translation><!-- Kalispel Indian Community of the Kalispel Reservation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Karuk Tribe </masterLabel>
+        
         <translation><!-- Karuk Tribe  --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Kashia Band of Pomo Indians of the Stewart’s Point Rancheria</masterLabel>
+        
         <translation><!-- Kashia Band of Pomo Indians of the Stewart’s Point Rancheria --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Kasigluk Traditional Elders Council (formerly the Native Village of Kasigluk)</masterLabel>
+        
         <translation><!-- Kasigluk Traditional Elders Council (formerly the Native Village of Kasigluk) --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Kaw Nation</masterLabel>
+        
         <translation><!-- Kaw Nation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Kenaitze Indian Tribe</masterLabel>
+        
         <translation><!-- Kenaitze Indian Tribe --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Ketchikan Indian Corporation</masterLabel>
+        
         <translation><!-- Ketchikan Indian Corporation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Kewa Pueblo</masterLabel>
+        
         <translation><!-- Kewa Pueblo --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Keweenaw Bay Indian Community</masterLabel>
+        
         <translation><!-- Keweenaw Bay Indian Community --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Kialegee Tribal Town</masterLabel>
+        
         <translation><!-- Kialegee Tribal Town --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Kickapoo Traditional Tribe of Texas</masterLabel>
+        
         <translation><!-- Kickapoo Traditional Tribe of Texas --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Kickapoo Tribe of Indians of the Kickapoo Reservation in Kansas</masterLabel>
+        
         <translation><!-- Kickapoo Tribe of Indians of the Kickapoo Reservation in Kansas --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Kickapoo Tribe of Oklahoma</masterLabel>
+        
         <translation><!-- Kickapoo Tribe of Oklahoma --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>King Island Native Community</masterLabel>
+        
         <translation><!-- King Island Native Community --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>King Salmon Tribe</masterLabel>
+        
         <translation><!-- King Salmon Tribe --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Kiowa Indian Tribe of Oklahoma</masterLabel>
+        
         <translation><!-- Kiowa Indian Tribe of Oklahoma --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Klamath Tribes </masterLabel>
+        
         <translation><!-- Klamath Tribes  --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Klawock Cooperative Association</masterLabel>
+        
         <translation><!-- Klawock Cooperative Association --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Knik Tribe</masterLabel>
+        
         <translation><!-- Knik Tribe --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Koi Nation of Northern California</masterLabel>
+        
         <translation><!-- Koi Nation of Northern California --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Kokhanok Village</masterLabel>
+        
         <translation><!-- Kokhanok Village --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Kootenai Tribe of Idaho</masterLabel>
+        
         <translation><!-- Kootenai Tribe of Idaho --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Koyukuk Native Village</masterLabel>
+        
         <translation><!-- Koyukuk Native Village --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>La Jolla Band of Luiseño Indians </masterLabel>
+        
         <translation><!-- La Jolla Band of Luiseño Indians  --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>La Posta Band of Diegueño Mission Indians of the La Posta Indian Reservation</masterLabel>
+        
         <translation><!-- La Posta Band of Diegueño Mission Indians of the La Posta Indian Reservation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Lac Courte Oreilles Band of Lake Superior Chippewa Indians of Wisconsin</masterLabel>
+        
         <translation><!-- Lac Courte Oreilles Band of Lake Superior Chippewa Indians of Wisconsin --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Lac Vieux Desert Band of Lake Superior Chippewa Indians of Michigan</masterLabel>
+        
         <translation><!-- Lac Vieux Desert Band of Lake Superior Chippewa Indians of Michigan --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Lac du Flambeau Band of Lake Superior Chippewa Indians of the Lac du Flambeau Reservation of Wisconsin</masterLabel>
+        
         <translation><!-- Lac du Flambeau Band of Lake Superior Chippewa Indians of the Lac du Flambeau Reservation of Wisconsin --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Las Vegas Tribe of Paiute Indians of the Las Vegas Indian Colony</masterLabel>
+        
         <translation><!-- Las Vegas Tribe of Paiute Indians of the Las Vegas Indian Colony --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Levelock Village</masterLabel>
+        
         <translation><!-- Levelock Village --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Lime Village</masterLabel>
+        
         <translation><!-- Lime Village --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Lipay Nation of Santa Ysabel (Previously listed as the Santa Ysabel Band of Diegueño Mission Indians of the Santa Ysabel Reservation)</masterLabel>
+        
         <translation><!-- Lipay Nation of Santa Ysabel (Previously listed as the Santa Ysabel Band of Diegueño Mission Indians of the Santa Ysabel Reservation) --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Little River Band of Ottawa Indians</masterLabel>
+        
         <translation><!-- Little River Band of Ottawa Indians --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Little Traverse Bay Bands of Odawa Indians</masterLabel>
+        
         <translation><!-- Little Traverse Bay Bands of Odawa Indians --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Lone Pine Paiute-Shoshone Tribe</masterLabel>
+        
         <translation><!-- Lone Pine Paiute-Shoshone Tribe --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Los Coyotes Band of Cahuilla &amp; Cupeno Indians </masterLabel>
+        
         <translation><!-- Los Coyotes Band of Cahuilla &amp; Cupeno Indians  --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Lovelock Paiute Tribe of the Lovelock Indian Colony</masterLabel>
+        
         <translation><!-- Lovelock Paiute Tribe of the Lovelock Indian Colony --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Lower Brule Sioux Tribe of the Lower Brule Reservation</masterLabel>
+        
         <translation><!-- Lower Brule Sioux Tribe of the Lower Brule Reservation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Lower Elwha Tribal Community</masterLabel>
+        
         <translation><!-- Lower Elwha Tribal Community --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Lower Sioux Indian Community in the State of Minnesota</masterLabel>
+        
         <translation><!-- Lower Sioux Indian Community in the State of Minnesota --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Lummi Tribe of the Lummi Reservation</masterLabel>
+        
         <translation><!-- Lummi Tribe of the Lummi Reservation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Lytton Rancheria of California</masterLabel>
+        
         <translation><!-- Lytton Rancheria of California --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Makah Indian Tribe of the Makah Indian Reservation</masterLabel>
+        
         <translation><!-- Makah Indian Tribe of the Makah Indian Reservation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Manchester Band of Pomo Indians of the Manchester Rancheria</masterLabel>
+        
         <translation><!-- Manchester Band of Pomo Indians of the Manchester Rancheria --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Manley Hot Springs Village</masterLabel>
+        
         <translation><!-- Manley Hot Springs Village --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Manokotak Village</masterLabel>
+        
         <translation><!-- Manokotak Village --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Manzanita Band of Diegueño Mission Indians of the Manzanita Reservation</masterLabel>
+        
         <translation><!-- Manzanita Band of Diegueño Mission Indians of the Manzanita Reservation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Mashantucket Pequot Tribe </masterLabel>
+        
         <translation><!-- Mashantucket Pequot Tribe  --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Mashpee Wampanoag Tribe</masterLabel>
+        
         <translation><!-- Mashpee Wampanoag Tribe --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Match-e-be-nash-she-wish Band of Pottawatomi Indians of Michigan</masterLabel>
+        
         <translation><!-- Match-e-be-nash-she-wish Band of Pottawatomi Indians of Michigan --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>McGrath Native Village</masterLabel>
+        
         <translation><!-- McGrath Native Village --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Mdewakanton Sioux Indians</masterLabel>
+        
         <translation><!-- Mdewakanton Sioux Indians --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Mechoopda Indian Tribe of Chico Rancheria</masterLabel>
+        
         <translation><!-- Mechoopda Indian Tribe of Chico Rancheria --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Menominee Indian Tribe of Wisconsin</masterLabel>
+        
         <translation><!-- Menominee Indian Tribe of Wisconsin --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Mentasta Traditional Council</masterLabel>
+        
         <translation><!-- Mentasta Traditional Council --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Mesa Grande Band of Diegueño Mission Indians of the Mesa Grande Reservation</masterLabel>
+        
         <translation><!-- Mesa Grande Band of Diegueño Mission Indians of the Mesa Grande Reservation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Mescalero Apache Tribe of the Mescalero Reservation</masterLabel>
+        
         <translation><!-- Mescalero Apache Tribe of the Mescalero Reservation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Metlakatla Indian Community, Annette Island Reserve</masterLabel>
+        
         <translation><!-- Metlakatla Indian Community, Annette Island Reserve --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Miami Tribe of Oklahoma</masterLabel>
+        
         <translation><!-- Miami Tribe of Oklahoma --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Miccosukee Tribe of Indians of Florida</masterLabel>
+        
         <translation><!-- Miccosukee Tribe of Indians of Florida --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Middletown Rancheria of Pomo Indians of California</masterLabel>
+        
         <translation><!-- Middletown Rancheria of Pomo Indians of California --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Minnesota Chippewa Tribe (Six component reservations: Bois Forte Band (Nett Lake);Fond du Lac Band; Grand Portage Band; Leech Lake Band; Mille Lacs Ban; White Earth Band)</masterLabel>
+        
         <translation><!-- Minnesota Chippewa Tribe (Six component reservations: Bois Forte Band (Nett Lake);Fond du Lac Band; Grand Portage Band; Leech Lake Band; Mille Lacs Ban; White Earth Band) --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Mississippi Band of Choctaw Indians</masterLabel>
+        
         <translation><!-- Mississippi Band of Choctaw Indians --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Moapa Band of Paiute Indians of the Moapa River Indian Reservation</masterLabel>
+        
         <translation><!-- Moapa Band of Paiute Indians of the Moapa River Indian Reservation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Modoc Tribe of Oklahoma</masterLabel>
+        
         <translation><!-- Modoc Tribe of Oklahoma --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Mohegan Tribe of Indians of Connecticut</masterLabel>
+        
         <translation><!-- Mohegan Tribe of Indians of Connecticut --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Monacan Indian Nation</masterLabel>
+        
         <translation><!-- Monacan Indian Nation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Mooretown Rancheria of Maidu Indians of California</masterLabel>
+        
         <translation><!-- Mooretown Rancheria of Maidu Indians of California --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Morongo Band of Cahuilla Mission Indians </masterLabel>
+        
         <translation><!-- Morongo Band of Cahuilla Mission Indians  --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Muckleshoot Indian Tribe</masterLabel>
+        
         <translation><!-- Muckleshoot Indian Tribe --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Muscogee (Creek) Nation</masterLabel>
+        
         <translation><!-- Muscogee (Creek) Nation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Naknek Native Village</masterLabel>
+        
         <translation><!-- Naknek Native Village --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Nansemond Indian Tribe</masterLabel>
+        
         <translation><!-- Nansemond Indian Tribe --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Narragansett Indian Tribe </masterLabel>
+        
         <translation><!-- Narragansett Indian Tribe  --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Afognak (formerly the Village of Afognak)</masterLabel>
+        
         <translation><!-- Native Village of Afognak (formerly the Village of Afognak) --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Akhiok</masterLabel>
+        
         <translation><!-- Native Village of Akhiok --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Akutan</masterLabel>
+        
         <translation><!-- Native Village of Akutan --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Aleknagik</masterLabel>
+        
         <translation><!-- Native Village of Aleknagik --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Ambler</masterLabel>
+        
         <translation><!-- Native Village of Ambler --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Atka</masterLabel>
+        
         <translation><!-- Native Village of Atka --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Barrow Inupiat Traditional Government</masterLabel>
+        
         <translation><!-- Native Village of Barrow Inupiat Traditional Government --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Belkofski</masterLabel>
+        
         <translation><!-- Native Village of Belkofski --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Brevig Mission</masterLabel>
+        
         <translation><!-- Native Village of Brevig Mission --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Buckland</masterLabel>
+        
         <translation><!-- Native Village of Buckland --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Cantwell</masterLabel>
+        
         <translation><!-- Native Village of Cantwell --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Chenega (aka Chanega)</masterLabel>
+        
         <translation><!-- Native Village of Chenega (aka Chanega) --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Chignik Lagoon</masterLabel>
+        
         <translation><!-- Native Village of Chignik Lagoon --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Chitina</masterLabel>
+        
         <translation><!-- Native Village of Chitina --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Chuathbaluk (Russian Mission, Kuskokwim)</masterLabel>
+        
         <translation><!-- Native Village of Chuathbaluk (Russian Mission, Kuskokwim) --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Council</masterLabel>
+        
         <translation><!-- Native Village of Council --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Deering</masterLabel>
+        
         <translation><!-- Native Village of Deering --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Diomede (aka Inalik)</masterLabel>
+        
         <translation><!-- Native Village of Diomede (aka Inalik) --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Eagle</masterLabel>
+        
         <translation><!-- Native Village of Eagle --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Eek</masterLabel>
+        
         <translation><!-- Native Village of Eek --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Ekuk</masterLabel>
+        
         <translation><!-- Native Village of Ekuk --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Elim</masterLabel>
+        
         <translation><!-- Native Village of Elim --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Eyak (Cordova)</masterLabel>
+        
         <translation><!-- Native Village of Eyak (Cordova) --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of False Pass</masterLabel>
+        
         <translation><!-- Native Village of False Pass --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Fort Yukon</masterLabel>
+        
         <translation><!-- Native Village of Fort Yukon --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Gakona</masterLabel>
+        
         <translation><!-- Native Village of Gakona --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Gambell</masterLabel>
+        
         <translation><!-- Native Village of Gambell --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Georgetown</masterLabel>
+        
         <translation><!-- Native Village of Georgetown --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Goodnews Bay</masterLabel>
+        
         <translation><!-- Native Village of Goodnews Bay --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Hamilton</masterLabel>
+        
         <translation><!-- Native Village of Hamilton --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Hooper Bay</masterLabel>
+        
         <translation><!-- Native Village of Hooper Bay --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Kanatak</masterLabel>
+        
         <translation><!-- Native Village of Kanatak --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Karluk</masterLabel>
+        
         <translation><!-- Native Village of Karluk --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Kiana</masterLabel>
+        
         <translation><!-- Native Village of Kiana --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Kipnuk</masterLabel>
+        
         <translation><!-- Native Village of Kipnuk --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Kivalina</masterLabel>
+        
         <translation><!-- Native Village of Kivalina --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Kluti Kaah (aka Copper Center)</masterLabel>
+        
         <translation><!-- Native Village of Kluti Kaah (aka Copper Center) --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Kobuk</masterLabel>
+        
         <translation><!-- Native Village of Kobuk --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Kongiganak</masterLabel>
+        
         <translation><!-- Native Village of Kongiganak --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Kotzebue</masterLabel>
+        
         <translation><!-- Native Village of Kotzebue --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Koyuk</masterLabel>
+        
         <translation><!-- Native Village of Koyuk --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Kwigillingok</masterLabel>
+        
         <translation><!-- Native Village of Kwigillingok --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Kwinhagak (aka Quinhagak)</masterLabel>
+        
         <translation><!-- Native Village of Kwinhagak (aka Quinhagak) --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Larsen Bay</masterLabel>
+        
         <translation><!-- Native Village of Larsen Bay --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Marshall (aka Fortuna Ledge)</masterLabel>
+        
         <translation><!-- Native Village of Marshall (aka Fortuna Ledge) --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Mary&apos;s Igloo</masterLabel>
+        
         <translation><!-- Native Village of Mary&apos;s Igloo --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Mekoryuk</masterLabel>
+        
         <translation><!-- Native Village of Mekoryuk --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Minto</masterLabel>
+        
         <translation><!-- Native Village of Minto --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Nanwalek (aka English Bay)</masterLabel>
+        
         <translation><!-- Native Village of Nanwalek (aka English Bay) --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Napaimute</masterLabel>
+        
         <translation><!-- Native Village of Napaimute --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Napakiak</masterLabel>
+        
         <translation><!-- Native Village of Napakiak --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Napaskiak</masterLabel>
+        
         <translation><!-- Native Village of Napaskiak --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Nelson Lagoon</masterLabel>
+        
         <translation><!-- Native Village of Nelson Lagoon --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Nightmute</masterLabel>
+        
         <translation><!-- Native Village of Nightmute --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Nikolski</masterLabel>
+        
         <translation><!-- Native Village of Nikolski --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Noatak</masterLabel>
+        
         <translation><!-- Native Village of Noatak --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Nuiqsut (aka Nooiksut)</masterLabel>
+        
         <translation><!-- Native Village of Nuiqsut (aka Nooiksut) --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Nunam Iqua (formerly the Native Village of Sheldon&apos;s Point)</masterLabel>
+        
         <translation><!-- Native Village of Nunam Iqua (formerly the Native Village of Sheldon&apos;s Point) --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Nunapitchuk</masterLabel>
+        
         <translation><!-- Native Village of Nunapitchuk --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Ouzinkie</masterLabel>
+        
         <translation><!-- Native Village of Ouzinkie --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Paimiut</masterLabel>
+        
         <translation><!-- Native Village of Paimiut --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Perryville</masterLabel>
+        
         <translation><!-- Native Village of Perryville --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Pilot Point</masterLabel>
+        
         <translation><!-- Native Village of Pilot Point --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Pitka&apos;s Point</masterLabel>
+        
         <translation><!-- Native Village of Pitka&apos;s Point --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Point Hope</masterLabel>
+        
         <translation><!-- Native Village of Point Hope --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Point Lay</masterLabel>
+        
         <translation><!-- Native Village of Point Lay --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Port Graham</masterLabel>
+        
         <translation><!-- Native Village of Port Graham --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Port Heiden</masterLabel>
+        
         <translation><!-- Native Village of Port Heiden --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Port Lions</masterLabel>
+        
         <translation><!-- Native Village of Port Lions --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Ruby</masterLabel>
+        
         <translation><!-- Native Village of Ruby --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Saint Michael</masterLabel>
+        
         <translation><!-- Native Village of Saint Michael --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Savoonga</masterLabel>
+        
         <translation><!-- Native Village of Savoonga --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Scammon Bay</masterLabel>
+        
         <translation><!-- Native Village of Scammon Bay --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Selawik</masterLabel>
+        
         <translation><!-- Native Village of Selawik --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Shaktoolik</masterLabel>
+        
         <translation><!-- Native Village of Shaktoolik --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Shishmaref</masterLabel>
+        
         <translation><!-- Native Village of Shishmaref --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Shungnak</masterLabel>
+        
         <translation><!-- Native Village of Shungnak --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Stevens</masterLabel>
+        
         <translation><!-- Native Village of Stevens --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Tanacross</masterLabel>
+        
         <translation><!-- Native Village of Tanacross --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Tanana</masterLabel>
+        
         <translation><!-- Native Village of Tanana --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Tatitlek</masterLabel>
+        
         <translation><!-- Native Village of Tatitlek --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Tazlina</masterLabel>
+        
         <translation><!-- Native Village of Tazlina --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Teller</masterLabel>
+        
         <translation><!-- Native Village of Teller --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Tetlin</masterLabel>
+        
         <translation><!-- Native Village of Tetlin --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Tuntutuliak</masterLabel>
+        
         <translation><!-- Native Village of Tuntutuliak --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Tununak</masterLabel>
+        
         <translation><!-- Native Village of Tununak --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Tyonek</masterLabel>
+        
         <translation><!-- Native Village of Tyonek --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Unalakleet</masterLabel>
+        
         <translation><!-- Native Village of Unalakleet --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Unga</masterLabel>
+        
         <translation><!-- Native Village of Unga --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Venetie Tribal Government (Arctic Village and Village of Venetie)</masterLabel>
+        
         <translation><!-- Native Village of Venetie Tribal Government (Arctic Village and Village of Venetie) --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of Wales</masterLabel>
+        
         <translation><!-- Native Village of Wales --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Native Village of White Mountain</masterLabel>
+        
         <translation><!-- Native Village of White Mountain --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Navajo Nation (Arizona, New Mexico and Utah)</masterLabel>
+        
         <translation><!-- Navajo Nation (Arizona, New Mexico and Utah) --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Nenana Native Association</masterLabel>
+        
         <translation><!-- Nenana Native Association --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>New Koliganek Village Council</masterLabel>
+        
         <translation><!-- New Koliganek Village Council --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>New Stuyahok Village</masterLabel>
+        
         <translation><!-- New Stuyahok Village --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Newhalen Village</masterLabel>
+        
         <translation><!-- Newhalen Village --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Newtok Village</masterLabel>
+        
         <translation><!-- Newtok Village --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Nez Perce Tribe</masterLabel>
+        
         <translation><!-- Nez Perce Tribe --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Nikolai Village</masterLabel>
+        
         <translation><!-- Nikolai Village --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Ninilchik Village</masterLabel>
+        
         <translation><!-- Ninilchik Village --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Nisqually Indian Tribe </masterLabel>
+        
         <translation><!-- Nisqually Indian Tribe  --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Nome Eskimo Community</masterLabel>
+        
         <translation><!-- Nome Eskimo Community --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Nondalton Village</masterLabel>
+        
         <translation><!-- Nondalton Village --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Nooksack Indian Tribe of Washington</masterLabel>
+        
         <translation><!-- Nooksack Indian Tribe of Washington --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Noorvik Native Community</masterLabel>
+        
         <translation><!-- Noorvik Native Community --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Northern Cheyenne Tribe of the Northern Cheyenne Indian Reservation</masterLabel>
+        
         <translation><!-- Northern Cheyenne Tribe of the Northern Cheyenne Indian Reservation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Northfork Rancheria of Mono Indians of California</masterLabel>
+        
         <translation><!-- Northfork Rancheria of Mono Indians of California --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Northway Village</masterLabel>
+        
         <translation><!-- Northway Village --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Northwestern Band of Shoshoni Nation </masterLabel>
+        
         <translation><!-- Northwestern Band of Shoshoni Nation  --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Nottawaseppi Huron Band of the Potawatomi</masterLabel>
+        
         <translation><!-- Nottawaseppi Huron Band of the Potawatomi --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Nulato Village</masterLabel>
+        
         <translation><!-- Nulato Village --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Nunakauyarmiut Tribe (formerly the Native Village of Toksook Bay)</masterLabel>
+        
         <translation><!-- Nunakauyarmiut Tribe (formerly the Native Village of Toksook Bay) --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Oglala Sioux Tribe (previously listed as Oglala Sioux Tribe of the Pine Ridge Reservation)</masterLabel>
+        
         <translation><!-- Oglala Sioux Tribe (previously listed as Oglala Sioux Tribe of the Pine Ridge Reservation) --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Ohkay Owingeh (formerly the Pueblo of San Juan)</masterLabel>
+        
         <translation><!-- Ohkay Owingeh (formerly the Pueblo of San Juan) --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Omaha Tribe of Nebraska</masterLabel>
+        
         <translation><!-- Omaha Tribe of Nebraska --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Oneida Nation of New York</masterLabel>
+        
         <translation><!-- Oneida Nation of New York --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Oneida Tribe of Indians of Wisconsin</masterLabel>
+        
         <translation><!-- Oneida Tribe of Indians of Wisconsin --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Onondaga Nation </masterLabel>
+        
         <translation><!-- Onondaga Nation  --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Organized Village of Grayling (aka Holikachuk)</masterLabel>
+        
         <translation><!-- Organized Village of Grayling (aka Holikachuk) --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Organized Village of Kake</masterLabel>
+        
         <translation><!-- Organized Village of Kake --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Organized Village of Kasaan</masterLabel>
+        
         <translation><!-- Organized Village of Kasaan --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Organized Village of Kwethluk</masterLabel>
+        
         <translation><!-- Organized Village of Kwethluk --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Organized Village of Saxman</masterLabel>
+        
         <translation><!-- Organized Village of Saxman --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Orutsararmuit Native Village (aka Bethel)</masterLabel>
+        
         <translation><!-- Orutsararmuit Native Village (aka Bethel) --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Oscarville Traditional Village</masterLabel>
+        
         <translation><!-- Oscarville Traditional Village --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Otoe-Missouria Tribe of Indians</masterLabel>
+        
         <translation><!-- Otoe-Missouria Tribe of Indians --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Ottawa Tribe of Oklahoma</masterLabel>
+        
         <translation><!-- Ottawa Tribe of Oklahoma --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Paiute Indian Tribe of Utah  (Cedar Band of Paiutes, Kanosh Band of Paiutes,Koosharem Band of Paiutes, Indian Peaks Band of Paiutes, and Shivwits Band of Paiutes)</masterLabel>
+        
         <translation><!-- Paiute Indian Tribe of Utah  (Cedar Band of Paiutes, Kanosh Band of Paiutes,Koosharem Band of Paiutes, Indian Peaks Band of Paiutes, and Shivwits Band of Paiutes) --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Paiute-Shoshone Tribe of the Fallon Reservation and Colony</masterLabel>
+        
         <translation><!-- Paiute-Shoshone Tribe of the Fallon Reservation and Colony --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Pala Band of Luiseño Mission Indians of the Pala Reservation</masterLabel>
+        
         <translation><!-- Pala Band of Luiseño Mission Indians of the Pala Reservation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Pamunkey Indian Tribe</masterLabel>
+        
         <translation><!-- Pamunkey Indian Tribe --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Pascua Yaqui Tribe of Arizona</masterLabel>
+        
         <translation><!-- Pascua Yaqui Tribe of Arizona --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Paskenta Band of Nomlaki Indians of California</masterLabel>
+        
         <translation><!-- Paskenta Band of Nomlaki Indians of California --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Passamaquoddy Tribe </masterLabel>
+        
         <translation><!-- Passamaquoddy Tribe  --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Pauloff Harbor Village</masterLabel>
+        
         <translation><!-- Pauloff Harbor Village --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Pauma Band of Luiseño Mission Indians of the Pauma &amp; Yuima Reservation</masterLabel>
+        
         <translation><!-- Pauma Band of Luiseño Mission Indians of the Pauma &amp; Yuima Reservation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Pawnee Nation of Oklahoma</masterLabel>
+        
         <translation><!-- Pawnee Nation of Oklahoma --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Pechanga Band of Luiseño Mission Indians of the Pechanga Reservation</masterLabel>
+        
         <translation><!-- Pechanga Band of Luiseño Mission Indians of the Pechanga Reservation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Pedro Bay Village</masterLabel>
+        
         <translation><!-- Pedro Bay Village --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Penobscot Nation</masterLabel>
+        
         <translation><!-- Penobscot Nation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Peoria Tribe of Indians of Oklahoma</masterLabel>
+        
         <translation><!-- Peoria Tribe of Indians of Oklahoma --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Petersburg Indian Association</masterLabel>
+        
         <translation><!-- Petersburg Indian Association --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Picayune Rancheria of Chukchansi Indians of California</masterLabel>
+        
         <translation><!-- Picayune Rancheria of Chukchansi Indians of California --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Pilot Station Traditional Village</masterLabel>
+        
         <translation><!-- Pilot Station Traditional Village --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Pinoleville Pomo Nation (formerly the Pinoleville Rancheria of Pomo Indians of California)</masterLabel>
+        
         <translation><!-- Pinoleville Pomo Nation (formerly the Pinoleville Rancheria of Pomo Indians of California) --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Pit River Tribe (includes XL Ranch, Big Bend, Likely, Lookout, Montgomery Creek and Roaring Creek Rancherias)</masterLabel>
+        
         <translation><!-- Pit River Tribe (includes XL Ranch, Big Bend, Likely, Lookout, Montgomery Creek and Roaring Creek Rancherias) --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Platinum Traditional Village</masterLabel>
+        
         <translation><!-- Platinum Traditional Village --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Poarch Band of Creeks</masterLabel>
+        
         <translation><!-- Poarch Band of Creeks --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Pokagon Band of Potawatomi Indians (Michigan and Indiana)</masterLabel>
+        
         <translation><!-- Pokagon Band of Potawatomi Indians (Michigan and Indiana) --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Ponca Tribe of Indians of Oklahoma</masterLabel>
+        
         <translation><!-- Ponca Tribe of Indians of Oklahoma --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Ponca Tribe of Nebraska</masterLabel>
+        
         <translation><!-- Ponca Tribe of Nebraska --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Port Gamble S&apos;Klallam Tribe </masterLabel>
+        
         <translation><!-- Port Gamble S&apos;Klallam Tribe  --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Portage Creek Village (aka Ohgsenakale)</masterLabel>
+        
         <translation><!-- Portage Creek Village (aka Ohgsenakale) --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Potter Valley Tribe (formerly the Potter Valley Rancheria of Pomo Indians of California)</masterLabel>
+        
         <translation><!-- Potter Valley Tribe (formerly the Potter Valley Rancheria of Pomo Indians of California) --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Prairie Band Potawatomi Nation</masterLabel>
+        
         <translation><!-- Prairie Band Potawatomi Nation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Prairie Island Indian Community in the State of Minnesota</masterLabel>
+        
         <translation><!-- Prairie Island Indian Community in the State of Minnesota --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Pribilof Islands Aleut Communities of St. Paul &amp; St. George Islands</masterLabel>
+        
         <translation><!-- Pribilof Islands Aleut Communities of St. Paul &amp; St. George Islands --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Pueblo of Acoma</masterLabel>
+        
         <translation><!-- Pueblo of Acoma --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Pueblo of Cochiti</masterLabel>
+        
         <translation><!-- Pueblo of Cochiti --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Pueblo of Isleta</masterLabel>
+        
         <translation><!-- Pueblo of Isleta --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Pueblo of Jemez</masterLabel>
+        
         <translation><!-- Pueblo of Jemez --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Pueblo of Laguna</masterLabel>
+        
         <translation><!-- Pueblo of Laguna --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Pueblo of Nambe</masterLabel>
+        
         <translation><!-- Pueblo of Nambe --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Pueblo of Picuris</masterLabel>
+        
         <translation><!-- Pueblo of Picuris --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Pueblo of Pojoaque</masterLabel>
+        
         <translation><!-- Pueblo of Pojoaque --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Pueblo of San Felipe</masterLabel>
+        
         <translation><!-- Pueblo of San Felipe --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Pueblo of San Ildefonso</masterLabel>
+        
         <translation><!-- Pueblo of San Ildefonso --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Pueblo of Sandia</masterLabel>
+        
         <translation><!-- Pueblo of Sandia --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Pueblo of Santa Ana</masterLabel>
+        
         <translation><!-- Pueblo of Santa Ana --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Pueblo of Santa Clara</masterLabel>
+        
         <translation><!-- Pueblo of Santa Clara --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Pueblo of Taos</masterLabel>
+        
         <translation><!-- Pueblo of Taos --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Pueblo of Tesuque</masterLabel>
+        
         <translation><!-- Pueblo of Tesuque --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Pueblo of Zia</masterLabel>
+        
         <translation><!-- Pueblo of Zia --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Puyallup Tribe of the Puyallup Reservation</masterLabel>
+        
         <translation><!-- Puyallup Tribe of the Puyallup Reservation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Pyramid Lake Paiute Tribe of the Pyramid Lake Reservation</masterLabel>
+        
         <translation><!-- Pyramid Lake Paiute Tribe of the Pyramid Lake Reservation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Qagan Tayagungin Tribe of Sand Point Village</masterLabel>
+        
         <translation><!-- Qagan Tayagungin Tribe of Sand Point Village --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Qawalangin Tribe of Unalaska</masterLabel>
+        
         <translation><!-- Qawalangin Tribe of Unalaska --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Quapaw Tribe of Indians</masterLabel>
+        
         <translation><!-- Quapaw Tribe of Indians --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Quartz Valley Indian Community of the Quartz Valley Reservation of California</masterLabel>
+        
         <translation><!-- Quartz Valley Indian Community of the Quartz Valley Reservation of California --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Quechan Tribe of the Fort Yuma Indian Reservation (Arizona and California)</masterLabel>
+        
         <translation><!-- Quechan Tribe of the Fort Yuma Indian Reservation (Arizona and California) --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Quileute Tribe of the Quileute Reservation</masterLabel>
+        
         <translation><!-- Quileute Tribe of the Quileute Reservation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Quinault Indian Nation</masterLabel>
+        
         <translation><!-- Quinault Indian Nation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Ramona Band of Cahuilla</masterLabel>
+        
         <translation><!-- Ramona Band of Cahuilla --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Rampart Village</masterLabel>
+        
         <translation><!-- Rampart Village --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Rappahannock Tribe, Inc.</masterLabel>
+        
         <translation><!-- Rappahannock Tribe, Inc. --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Red Cliff Band of Lake Superior Chippewa Indians of Wisconsin</masterLabel>
+        
         <translation><!-- Red Cliff Band of Lake Superior Chippewa Indians of Wisconsin --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Red Lake Band of Chippewa Indians</masterLabel>
+        
         <translation><!-- Red Lake Band of Chippewa Indians --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Redding Rancheria</masterLabel>
+        
         <translation><!-- Redding Rancheria --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Redwood Valley or Little River Band of Pomo Indians of the Redwood Valley Rancheria California</masterLabel>
+        
         <translation><!-- Redwood Valley or Little River Band of Pomo Indians of the Redwood Valley Rancheria California --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Reno-Sparks Indian Colony</masterLabel>
+        
         <translation><!-- Reno-Sparks Indian Colony --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Resighini Rancheria</masterLabel>
+        
         <translation><!-- Resighini Rancheria --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Rincon Band of Luiseño Mission Indians of the Rincon Reservation</masterLabel>
+        
         <translation><!-- Rincon Band of Luiseño Mission Indians of the Rincon Reservation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Robinson Rancheria</masterLabel>
+        
         <translation><!-- Robinson Rancheria --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Rosebud Sioux Tribe of the Rosebud Indian Reservation</masterLabel>
+        
         <translation><!-- Rosebud Sioux Tribe of the Rosebud Indian Reservation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Round Valley Indian Tribes, Round Valley Reservation</masterLabel>
+        
         <translation><!-- Round Valley Indian Tribes, Round Valley Reservation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Sac &amp; Fox Nation</masterLabel>
+        
         <translation><!-- Sac &amp; Fox Nation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Sac &amp; Fox Nation of Missouri (Kansas and Nebraska)</masterLabel>
+        
         <translation><!-- Sac &amp; Fox Nation of Missouri (Kansas and Nebraska) --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Sac &amp; Fox Tribe of the Mississippi in Iowa</masterLabel>
+        
         <translation><!-- Sac &amp; Fox Tribe of the Mississippi in Iowa --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Saginaw Chippewa Indian Tribe of Michigan</masterLabel>
+        
         <translation><!-- Saginaw Chippewa Indian Tribe of Michigan --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Saint George Island (See Pribilof Islands Aleut Communities of St. Paul &amp; St. George Islands)</masterLabel>
+        
         <translation><!-- Saint George Island (See Pribilof Islands Aleut Communities of St. Paul &amp; St. George Islands) --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Saint Paul Island (See Pribilof Islands Aleut Communities of St. Paul &amp; St. George Islands)</masterLabel>
+        
         <translation><!-- Saint Paul Island (See Pribilof Islands Aleut Communities of St. Paul &amp; St. George Islands) --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Saint Regis Mohawk Tribe (formerly the St. Regis Band of Mohawk Indians of New York)</masterLabel>
+        
         <translation><!-- Saint Regis Mohawk Tribe (formerly the St. Regis Band of Mohawk Indians of New York) --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Salt River Pima-Maricopa Indian Community of the Salt River Reservation</masterLabel>
+        
         <translation><!-- Salt River Pima-Maricopa Indian Community of the Salt River Reservation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Samish Indian Nation</masterLabel>
+        
         <translation><!-- Samish Indian Nation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>San Carlos Apache Tribe of the San Carlos Reservation</masterLabel>
+        
         <translation><!-- San Carlos Apache Tribe of the San Carlos Reservation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>San Juan Southern Paiute Tribe of Arizona</masterLabel>
+        
         <translation><!-- San Juan Southern Paiute Tribe of Arizona --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>San Manual Band of Serrano Mission Indians of the San Maual Reservation</masterLabel>
+        
         <translation><!-- San Manual Band of Serrano Mission Indians of the San Maual Reservation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>San Pasqual Band of Diegueño Mission Indians of California</masterLabel>
+        
         <translation><!-- San Pasqual Band of Diegueño Mission Indians of California --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Santa Rosa Band of Cahuilla Indians (formerly the Santa Rosa Band of Cahuilla Mission Indians of the Santa Rosa Reservation)</masterLabel>
+        
         <translation><!-- Santa Rosa Band of Cahuilla Indians (formerly the Santa Rosa Band of Cahuilla Mission Indians of the Santa Rosa Reservation) --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Santa Rosa Indian Community of the Santa Rosa Rancheria</masterLabel>
+        
         <translation><!-- Santa Rosa Indian Community of the Santa Rosa Rancheria --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Santa Ynez Band of Chumash Mission Indians of the Santa Ynez Reservation</masterLabel>
+        
         <translation><!-- Santa Ynez Band of Chumash Mission Indians of the Santa Ynez Reservation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Santee Sioux Nation</masterLabel>
+        
         <translation><!-- Santee Sioux Nation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Sauk-Suiattle Indian Tribe of Washington</masterLabel>
+        
         <translation><!-- Sauk-Suiattle Indian Tribe of Washington --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Sault Ste. Marie Tribe of Chippewa Indians of Michigan</masterLabel>
+        
         <translation><!-- Sault Ste. Marie Tribe of Chippewa Indians of Michigan --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Scotts Valley Band of Pomo Indians of California</masterLabel>
+        
         <translation><!-- Scotts Valley Band of Pomo Indians of California --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Seldovia Village Tribe</masterLabel>
+        
         <translation><!-- Seldovia Village Tribe --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Seminole Nation of Oklahoma</masterLabel>
+        
         <translation><!-- Seminole Nation of Oklahoma --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Seminole Tribe of Florida (Dania, Big Cypress, Brighton, Hollywood and Tampa Reservations)</masterLabel>
+        
         <translation><!-- Seminole Tribe of Florida (Dania, Big Cypress, Brighton, Hollywood and Tampa Reservations) --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Seneca Nation of Indians</masterLabel>
+        
         <translation><!-- Seneca Nation of Indians --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Seneca-Cayuga Nation</masterLabel>
+        
         <translation><!-- Seneca-Cayuga Nation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Shageluk Native Village</masterLabel>
+        
         <translation><!-- Shageluk Native Village --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Shakopee Mdewakanton Sioux Community of Minnesota</masterLabel>
+        
         <translation><!-- Shakopee Mdewakanton Sioux Community of Minnesota --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Shawnee Tribe</masterLabel>
+        
         <translation><!-- Shawnee Tribe --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Sheep Ranch Rancheria of Me-Wuk Indians</masterLabel>
+        
         <translation><!-- Sheep Ranch Rancheria of Me-Wuk Indians --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Sherwood Valley Rancheria of Pomo Indians of California</masterLabel>
+        
         <translation><!-- Sherwood Valley Rancheria of Pomo Indians of California --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Shingle Springs Band of Miwok Indians, Shingle Springs Rancheria (Verona Tract)</masterLabel>
+        
         <translation><!-- Shingle Springs Band of Miwok Indians, Shingle Springs Rancheria (Verona Tract) --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Shinnecock Indian Nation</masterLabel>
+        
         <translation><!-- Shinnecock Indian Nation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Shoalwater Bay IndianTribe of the Shoalwater Bay Indian Reservation</masterLabel>
+        
         <translation><!-- Shoalwater Bay IndianTribe of the Shoalwater Bay Indian Reservation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Shoshone Tribe of the Wind River Reservation</masterLabel>
+        
         <translation><!-- Shoshone Tribe of the Wind River Reservation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Shoshone-Bannock Tribes of the Fort Hall Reservation of Idaho</masterLabel>
+        
         <translation><!-- Shoshone-Bannock Tribes of the Fort Hall Reservation of Idaho --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Shoshone-Paiute Tribes of the Duck Valley Reservation</masterLabel>
+        
         <translation><!-- Shoshone-Paiute Tribes of the Duck Valley Reservation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Sisseton-Wahpeton Oyate of the Lake Traverse Reservation</masterLabel>
+        
         <translation><!-- Sisseton-Wahpeton Oyate of the Lake Traverse Reservation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Sitka Tribe of Alaska</masterLabel>
+        
         <translation><!-- Sitka Tribe of Alaska --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Skagway Village</masterLabel>
+        
         <translation><!-- Skagway Village --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Skokomish Indian Tribe </masterLabel>
+        
         <translation><!-- Skokomish Indian Tribe  --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Skull Valley Band of Goshute Indians of Utah</masterLabel>
+        
         <translation><!-- Skull Valley Band of Goshute Indians of Utah --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Snoqualmie Indian Tribe</masterLabel>
+        
         <translation><!-- Snoqualmie Indian Tribe --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Soboba Band of Luiseño Indians</masterLabel>
+        
         <translation><!-- Soboba Band of Luiseño Indians --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Sokaogon Chippewa Community</masterLabel>
+        
         <translation><!-- Sokaogon Chippewa Community --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>South Naknek Village</masterLabel>
+        
         <translation><!-- South Naknek Village --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Southern Ute Indian Tribe of the Southern Ute Reservation</masterLabel>
+        
         <translation><!-- Southern Ute Indian Tribe of the Southern Ute Reservation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Spirit Lake Tribe</masterLabel>
+        
         <translation><!-- Spirit Lake Tribe --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Spokane Tribe of the Spokane Reservation</masterLabel>
+        
         <translation><!-- Spokane Tribe of the Spokane Reservation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Squaxin Island Tribe of the Squaxin Island Reservation</masterLabel>
+        
         <translation><!-- Squaxin Island Tribe of the Squaxin Island Reservation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>St. Croix Chippewa Indians of Wisconsin</masterLabel>
+        
         <translation><!-- St. Croix Chippewa Indians of Wisconsin --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Standing Rock Sioux Tribe (North Dakota and South Dakota)</masterLabel>
+        
         <translation><!-- Standing Rock Sioux Tribe (North Dakota and South Dakota) --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Stebbins Community Association</masterLabel>
+        
         <translation><!-- Stebbins Community Association --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Stillaguamish Tribe of Indians of Washington</masterLabel>
+        
         <translation><!-- Stillaguamish Tribe of Indians of Washington --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Stockbridge Munsee Community</masterLabel>
+        
         <translation><!-- Stockbridge Munsee Community --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Summit Lake Paiute Tribe of Nevada</masterLabel>
+        
         <translation><!-- Summit Lake Paiute Tribe of Nevada --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Sun&apos;aq Tribe of Kodiak (formerly the Shoonaq&apos; Tribe of Kodiak)</masterLabel>
+        
         <translation><!-- Sun&apos;aq Tribe of Kodiak (formerly the Shoonaq&apos; Tribe of Kodiak) --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Suquamish Indian Tribe of the Port Madison Reservation</masterLabel>
+        
         <translation><!-- Suquamish Indian Tribe of the Port Madison Reservation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Susanville Indian Rancheria</masterLabel>
+        
         <translation><!-- Susanville Indian Rancheria --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Swinomish Indian Tribal Community</masterLabel>
+        
         <translation><!-- Swinomish Indian Tribal Community --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Sycuan Band of the Kumeyaay Nation (formerly the Sycuan Band of Diegueno Mission Indians of California)</masterLabel>
+        
         <translation><!-- Sycuan Band of the Kumeyaay Nation (formerly the Sycuan Band of Diegueno Mission Indians of California) --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Table Mountain Rancheria of California</masterLabel>
+        
         <translation><!-- Table Mountain Rancheria of California --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Takotna Village</masterLabel>
+        
         <translation><!-- Takotna Village --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Tangirnaq Native Village (formerly Lesnoi Village)</masterLabel>
+        
         <translation><!-- Tangirnaq Native Village (formerly Lesnoi Village) --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Te-Moak Tribe of Western Shoshone Indians of Nevada (Four constituent bands: Battle Mountain Band; Elko Band; South Fork Band; Wells Band)</masterLabel>
+        
         <translation><!-- Te-Moak Tribe of Western Shoshone Indians of Nevada (Four constituent bands: Battle Mountain Band; Elko Band; South Fork Band; Wells Band) --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Tejon Indian Tribe</masterLabel>
+        
         <translation><!-- Tejon Indian Tribe --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Telida Village</masterLabel>
+        
         <translation><!-- Telida Village --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>The Chickasaw Nation</masterLabel>
+        
         <translation><!-- The Chickasaw Nation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>The Choctaw Nation of Oklahoma</masterLabel>
+        
         <translation><!-- The Choctaw Nation of Oklahoma --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>The Osage Nation</masterLabel>
+        
         <translation><!-- The Osage Nation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Thlopthlocco Tribal Town</masterLabel>
+        
         <translation><!-- Thlopthlocco Tribal Town --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Three Affiliated Tribes of the Fort Berthold Reservation</masterLabel>
+        
         <translation><!-- Three Affiliated Tribes of the Fort Berthold Reservation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Tohono O’odham Nation of Arizona</masterLabel>
+        
         <translation><!-- Tohono O’odham Nation of Arizona --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Tolowa Dee-ni&apos; Nation</masterLabel>
+        
         <translation><!-- Tolowa Dee-ni&apos; Nation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Tonawanda Band of Seneca </masterLabel>
+        
         <translation><!-- Tonawanda Band of Seneca  --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Tonkawa Tribe of Indians of Oklahoma</masterLabel>
+        
         <translation><!-- Tonkawa Tribe of Indians of Oklahoma --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Tonto Apache Tribe of Arizona</masterLabel>
+        
         <translation><!-- Tonto Apache Tribe of Arizona --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Torres-Martinez Desert Cahuilla Indians </masterLabel>
+        
         <translation><!-- Torres-Martinez Desert Cahuilla Indians  --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Traditional Village of Togiak</masterLabel>
+        
         <translation><!-- Traditional Village of Togiak --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Tulalip Tribes of Washington</masterLabel>
+        
         <translation><!-- Tulalip Tribes of Washington --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Tule River Indian Tribe of the Tule River Reservation</masterLabel>
+        
         <translation><!-- Tule River Indian Tribe of the Tule River Reservation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Tuluksak Native Community</masterLabel>
+        
         <translation><!-- Tuluksak Native Community --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Tunica-Biloxi Indian Tribe of Louisiana</masterLabel>
+        
         <translation><!-- Tunica-Biloxi Indian Tribe of Louisiana --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Tuolumne Band of Me-Wuk Indians of the Tuolumne Rancheria of California</masterLabel>
+        
         <translation><!-- Tuolumne Band of Me-Wuk Indians of the Tuolumne Rancheria of California --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Turtle Mountain Band of Chippewa Indians of North Dakota</masterLabel>
+        
         <translation><!-- Turtle Mountain Band of Chippewa Indians of North Dakota --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Tuscarora Nation of New York</masterLabel>
+        
         <translation><!-- Tuscarora Nation of New York --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Twenty-Nine Palms Band of Mission Indians of California</masterLabel>
+        
         <translation><!-- Twenty-Nine Palms Band of Mission Indians of California --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Twin Hills Village</masterLabel>
+        
         <translation><!-- Twin Hills Village --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Ugashik Village</masterLabel>
+        
         <translation><!-- Ugashik Village --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Umkumiute Native Village</masterLabel>
+        
         <translation><!-- Umkumiute Native Village --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>United Auburn Indian Community of the Auburn Rancheria of California</masterLabel>
+        
         <translation><!-- United Auburn Indian Community of the Auburn Rancheria of California --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>United Keetoowah Band of Cherokee Indians in Oklahoma</masterLabel>
+        
         <translation><!-- United Keetoowah Band of Cherokee Indians in Oklahoma --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Upper Lake Band of Pomo Indians</masterLabel>
+        
         <translation><!-- Upper Lake Band of Pomo Indians --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Upper Mattaponi Tribe</masterLabel>
+        
         <translation><!-- Upper Mattaponi Tribe --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Upper Sioux Community</masterLabel>
+        
         <translation><!-- Upper Sioux Community --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Upper Skagit Indian Tribe of Washington</masterLabel>
+        
         <translation><!-- Upper Skagit Indian Tribe of Washington --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Ute Indian Tribe of the Uintah and Ouray Reservation</masterLabel>
+        
         <translation><!-- Ute Indian Tribe of the Uintah and Ouray Reservation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Ute Mountain Tribe of the Ute Mountain Reservation (Colorado, New Mexico and Utah)</masterLabel>
+        
         <translation><!-- Ute Mountain Tribe of the Ute Mountain Reservation (Colorado, New Mexico and Utah) --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Ute Mountain Ute Tribe (Colorado, New Mexico and Utah)</masterLabel>
+        
         <translation><!-- Ute Mountain Ute Tribe (Colorado, New Mexico and Utah) --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Utu Utu Gwaitu Paiute Tribe of the Benton Paiute Reservation</masterLabel>
+        
         <translation><!-- Utu Utu Gwaitu Paiute Tribe of the Benton Paiute Reservation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Village of Alakanuk</masterLabel>
+        
         <translation><!-- Village of Alakanuk --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Village of Anaktuvuk Pass</masterLabel>
+        
         <translation><!-- Village of Anaktuvuk Pass --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Village of Aniak</masterLabel>
+        
         <translation><!-- Village of Aniak --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Village of Atmautluak</masterLabel>
+        
         <translation><!-- Village of Atmautluak --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Village of Bill Moore&apos;s Slough</masterLabel>
+        
         <translation><!-- Village of Bill Moore&apos;s Slough --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Village of Chefornak</masterLabel>
+        
         <translation><!-- Village of Chefornak --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Village of Clarks Point</masterLabel>
+        
         <translation><!-- Village of Clarks Point --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Village of Crooked Creek</masterLabel>
+        
         <translation><!-- Village of Crooked Creek --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Village of Dot Lake</masterLabel>
+        
         <translation><!-- Village of Dot Lake --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Village of Iliamna</masterLabel>
+        
         <translation><!-- Village of Iliamna --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Village of Kalskag</masterLabel>
+        
         <translation><!-- Village of Kalskag --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Village of Kaltag</masterLabel>
+        
         <translation><!-- Village of Kaltag --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Village of Kotlik</masterLabel>
+        
         <translation><!-- Village of Kotlik --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Village of Lower Kalskag</masterLabel>
+        
         <translation><!-- Village of Lower Kalskag --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Village of Ohogamiut</masterLabel>
+        
         <translation><!-- Village of Ohogamiut --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Village of Old Harbor</masterLabel>
+        
         <translation><!-- Village of Old Harbor --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Village of Red Devil</masterLabel>
+        
         <translation><!-- Village of Red Devil --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Village of Salamatoff</masterLabel>
+        
         <translation><!-- Village of Salamatoff --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Village of Sleetmute</masterLabel>
+        
         <translation><!-- Village of Sleetmute --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Village of Solomon</masterLabel>
+        
         <translation><!-- Village of Solomon --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Village of Stony River</masterLabel>
+        
         <translation><!-- Village of Stony River --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Village of Wainwright</masterLabel>
+        
         <translation><!-- Village of Wainwright --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Walker River Paiute Tribe of the Walker River Reservation</masterLabel>
+        
         <translation><!-- Walker River Paiute Tribe of the Walker River Reservation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Wampanoag Tribe of Gay Head (Aquinnah) of Massachusetts</masterLabel>
+        
         <translation><!-- Wampanoag Tribe of Gay Head (Aquinnah) of Massachusetts --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Washoe Tribe (Carson Colony, Dresslerville Colony, Woodfords Community, Stewart Community and Washoe Ranches) (California and Nevada)</masterLabel>
+        
         <translation><!-- Washoe Tribe (Carson Colony, Dresslerville Colony, Woodfords Community, Stewart Community and Washoe Ranches) (California and Nevada) --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Washoe Tribe (Nevada and California) (Carson Colony, Dresslerville Colony, Woodfords Community, Stewart Community and Washoe Ranches)</masterLabel>
+        
         <translation><!-- Washoe Tribe (Nevada and California) (Carson Colony, Dresslerville Colony, Woodfords Community, Stewart Community and Washoe Ranches) --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>White Mountain Apache Tribe of the Fort Apache Reservation</masterLabel>
+        
         <translation><!-- White Mountain Apache Tribe of the Fort Apache Reservation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Wichita and Affiliated Tribes (Wichita, Keechi, Waco and Tawakonie)</masterLabel>
+        
         <translation><!-- Wichita and Affiliated Tribes (Wichita, Keechi, Waco and Tawakonie) --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Wilton Rancheria</masterLabel>
+        
         <translation><!-- Wilton Rancheria --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Winnebago Tribe of Nebraska</masterLabel>
+        
         <translation><!-- Winnebago Tribe of Nebraska --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Winnemucca Indian Colony of Nevada</masterLabel>
+        
         <translation><!-- Winnemucca Indian Colony of Nevada --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Wiyot Tribe (formerly the Table Bluff Reservation-Wiyot Tribe)</masterLabel>
+        
         <translation><!-- Wiyot Tribe (formerly the Table Bluff Reservation-Wiyot Tribe) --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Wrangell Cooperative Association</masterLabel>
+        
         <translation><!-- Wrangell Cooperative Association --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Wyandotte Nation</masterLabel>
+        
         <translation><!-- Wyandotte Nation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Yakutat Tlingit Tribe</masterLabel>
+        
         <translation><!-- Yakutat Tlingit Tribe --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Yankton Sioux Tribe of South Dakota</masterLabel>
+        
         <translation><!-- Yankton Sioux Tribe of South Dakota --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Yavapai-Apache Nation of the Camp Verde Indian Reservation</masterLabel>
+        
         <translation><!-- Yavapai-Apache Nation of the Camp Verde Indian Reservation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Yavapai-Prescott Indian Tribe </masterLabel>
+        
         <translation><!-- Yavapai-Prescott Indian Tribe  --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Yerington Paiute Tribe of the Yerington Colony &amp; Campbell Ranch</masterLabel>
+        
         <translation><!-- Yerington Paiute Tribe of the Yerington Colony &amp; Campbell Ranch --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Yocha Dehe Wintun Nation </masterLabel>
+        
         <translation><!-- Yocha Dehe Wintun Nation  --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Yomba Shoshone Tribe of the Yomba Reservation</masterLabel>
+        
         <translation><!-- Yomba Shoshone Tribe of the Yomba Reservation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Ysleta Del Sur Pueblo </masterLabel>
+        
         <translation><!-- Ysleta Del Sur Pueblo  --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Yupiit of Andreafski</masterLabel>
+        
         <translation><!-- Yupiit of Andreafski --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Yurok Tribe of the Yurok Reservation</masterLabel>
+        
         <translation><!-- Yurok Tribe of the Yurok Reservation --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Zuni Tribe of the Zuni Reservation</masterLabel>
+        
         <translation><!-- Zuni Tribe of the Zuni Reservation --></translation>
+        
     </valueTranslation>
+    
 </GlobalValueSetTranslation>

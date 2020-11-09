@@ -7,24 +7,44 @@
     <required>false</required>
     <type>Picklist</type>
     <valueSet>
-        <restricted>true</restricted>
-        <valueSetDefinition>
-            <sorted>false</sorted>
-            <value>
-                <fullName>RE Community Partner User Profile</fullName>
-                <default>false</default>
-                <label>RE Community Partner User Profile</label>
-            </value>
-            <value>
-                <fullName>RE Citizen Profile</fullName>
-                <default>false</default>
-                <label>RE Citizen Profile</label>
-            </value>
-            <value>
-                <fullName>RE Assister Profile</fullName>
-                <default>false</default>
-                <label>RE Assister Profile</label>
-            </value>
-        </valueSetDefinition>
-    </valueSet>
+        
+            <restricted>true</restricted>
+        
+            <valueSetDefinition>
+            
+                <sorted>false</sorted>
+            
+                <value>
+                
+                    <fullName>RE Community Partner User Profile</fullName>
+                
+                    <default>false</default>
+                
+                    <label>RE Community Partner User Profile</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>RE Citizen Profile</fullName>
+                
+                    <default>false</default>
+                
+                    <label>RE Citizen Profile</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>RE Assister Profile</fullName>
+                
+                    <default>false</default>
+                
+                    <label>RE Assister Profile</label>
+                
+                </value>
+            
+            </valueSetDefinition>
+        
+        </valueSet>
 </CustomField>

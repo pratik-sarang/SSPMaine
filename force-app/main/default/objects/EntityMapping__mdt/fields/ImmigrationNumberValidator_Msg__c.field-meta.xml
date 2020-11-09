@@ -7,14 +7,24 @@
     <required>false</required>
     <type>Picklist</type>
     <valueSet>
-        <restricted>true</restricted>
-        <valueSetDefinition>
-            <sorted>false</sorted>
-            <value>
-                <fullName>Please enter a valid Card Number with 13 characters.</fullName>
-                <default>true</default>
-                <label>Please enter a valid Card Number with 13 characters.</label>
-            </value>
-        </valueSetDefinition>
-    </valueSet>
+        
+            <restricted>true</restricted>
+        
+            <valueSetDefinition>
+            
+                <sorted>false</sorted>
+            
+                <value>
+                
+                    <fullName>Please enter a valid Card Number with 13 characters.</fullName>
+                
+                    <default>true</default>
+                
+                    <label>Please enter a valid Card Number with 13 characters.</label>
+                
+                </value>
+            
+            </valueSetDefinition>
+        
+        </valueSet>
 </CustomField>

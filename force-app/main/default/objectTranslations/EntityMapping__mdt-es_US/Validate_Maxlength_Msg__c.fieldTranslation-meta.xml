@@ -3,67 +3,115 @@
     <label><!-- Validate_Maxlength_Msg --></label>
     <name>Validate_Maxlength_Msg__c</name>
     <picklistValues>
-        <masterLabel>Data too long</masterLabel>
-        <translation><!-- Data too long --></translation>
-    </picklistValues>
+        
+            <masterLabel>Data too long</masterLabel>
+        
+            <translation><!-- Data too long --></translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Only a maximum of {x} characters allowed</masterLabel>
-        <translation>Ingresar solo hasta [x] caracteres.</translation>
-    </picklistValues>
+        
+            <masterLabel>Only a maximum of {x} characters allowed</masterLabel>
+        
+            <translation>Ingresar solo hasta [x] caracteres.</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Please enter a valid Card Number with 13 characters.</masterLabel>
-        <translation>Ingresar un número de tarjeta válido con 13 caracteres.</translation>
-    </picklistValues>
+        
+            <masterLabel>Please enter a valid Card Number with 13 characters.</masterLabel>
+        
+            <translation>Ingresar un número de tarjeta válido con 13 caracteres.</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Please enter a valid Number with a maximum of 12 characters.</masterLabel>
-        <translation>Ingresar un número válido con un máximo de 12 caracteres.</translation>
-    </picklistValues>
+        
+            <masterLabel>Please enter a valid Number with a maximum of 12 characters.</masterLabel>
+        
+            <translation>Ingresar un número válido con un máximo de 12 caracteres.</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Please enter less than 1 characters.</masterLabel>
-        <translation><!-- Please enter less than 1 characters. --></translation>
-    </picklistValues>
+        
+            <masterLabel>Please enter less than 1 characters.</masterLabel>
+        
+            <translation><!-- Please enter less than 1 characters. --></translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Please enter less than 2 characters.</masterLabel>
-        <translation><!-- Please enter less than 2 characters. --></translation>
-    </picklistValues>
+        
+            <masterLabel>Please enter less than 2 characters.</masterLabel>
+        
+            <translation><!-- Please enter less than 2 characters. --></translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Please enter less than 25 characters.</masterLabel>
-        <translation><!-- Please enter less than 25 characters. --></translation>
-    </picklistValues>
+        
+            <masterLabel>Please enter less than 25 characters.</masterLabel>
+        
+            <translation><!-- Please enter less than 25 characters. --></translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Please enter less than 5 characters.</masterLabel>
-        <translation><!-- Please enter less than 5 characters. --></translation>
-    </picklistValues>
+        
+            <masterLabel>Please enter less than 5 characters.</masterLabel>
+        
+            <translation><!-- Please enter less than 5 characters. --></translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Please only enter 4-17 characters</masterLabel>
-        <translation>Ingresar entre 4 y 17 caracteres.</translation>
-    </picklistValues>
+        
+            <masterLabel>Please only enter 4-17 characters</masterLabel>
+        
+            <translation>Ingresar entre 4 y 17 caracteres.</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Please only enter up to 1 characters.</masterLabel>
-        <translation>Ingresar solo hasta 1 caracteres.</translation>
-    </picklistValues>
+        
+            <masterLabel>Please only enter up to 1 characters.</masterLabel>
+        
+            <translation>Ingresar solo hasta 1 caracteres.</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Please only enter up to 10 characters.</masterLabel>
-        <translation>Ingresar solo hasta 10 caracteres.</translation>
-    </picklistValues>
+        
+            <masterLabel>Please only enter up to 10 characters.</masterLabel>
+        
+            <translation>Ingresar solo hasta 10 caracteres.</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Please only enter up to 11 characters.</masterLabel>
-        <translation>Ingresar solo hasta 11 caracteres.</translation>
-    </picklistValues>
+        
+            <masterLabel>Please only enter up to 11 characters.</masterLabel>
+        
+            <translation>Ingresar solo hasta 11 caracteres.</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Please only enter up to 4 characters.</masterLabel>
-        <translation>Ingresar solo hasta 4 caracteres.</translation>
-    </picklistValues>
+        
+            <masterLabel>Please only enter up to 4 characters.</masterLabel>
+        
+            <translation>Ingresar solo hasta 4 caracteres.</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Please only enter up to 5 characters.</masterLabel>
-        <translation>Ingresar solo hasta 5 caracteres.</translation>
-    </picklistValues>
+        
+            <masterLabel>Please only enter up to 5 characters.</masterLabel>
+        
+            <translation>Ingresar solo hasta 5 caracteres.</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Please only enter up to 9 characters.</masterLabel>
-        <translation>Ingresar solo hasta 9 caracteres.</translation>
-    </picklistValues>
+        
+            <masterLabel>Please only enter up to 9 characters.</masterLabel>
+        
+            <translation>Ingresar solo hasta 9 caracteres.</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Please only enter up to {x} characters</masterLabel>
-        <translation>Ingresar solo hasta [x] caracteres.</translation>
-    </picklistValues>
+        
+            <masterLabel>Please only enter up to {x} characters</masterLabel>
+        
+            <translation>Ingresar solo hasta [x] caracteres.</translation>
+        
+        </picklistValues>
 </CustomFieldTranslation>

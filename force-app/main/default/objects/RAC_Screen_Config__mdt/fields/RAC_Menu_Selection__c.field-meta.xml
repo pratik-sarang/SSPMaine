@@ -7,74 +7,144 @@
     <required>false</required>
     <type>Picklist</type>
     <valueSet>
-        <restricted>true</restricted>
-        <valueSetDefinition>
-            <sorted>false</sorted>
-            <value>
-                <fullName>Emergency Medical Condition and Disability</fullName>
-                <default>true</default>
-                <label>Emergency Medical Condition and Disability</label>
-            </value>
-            <value>
-                <fullName>Living Arrangement</fullName>
-                <default>false</default>
-                <label>Living Arrangement</label>
-            </value>
-            <value>
-                <fullName>Pregnancy</fullName>
-                <default>false</default>
-                <label>Pregnancy</label>
-            </value>
-            <value>
-                <fullName>Healthcare Coverage</fullName>
-                <default>false</default>
-                <label>Healthcare Coverage</label>
-            </value>
-            <value>
-                <fullName>Income</fullName>
-                <default>false</default>
-                <label>Income</label>
-            </value>
-            <value>
-                <fullName>Contact Information</fullName>
-                <default>false</default>
-                <label>Contact Information</label>
-            </value>
-            <value>
-                <fullName>Medicare Coverage</fullName>
-                <default>false</default>
-                <label>Medicare Coverage</label>
-            </value>
-            <value>
-                <fullName>Relationship and Tax filing Status</fullName>
-                <default>false</default>
-                <label>Relationship and Tax filing Status</label>
-            </value>
-            <value>
-                <fullName>Resources</fullName>
-                <default>false</default>
-                <label>Resources</label>
-            </value>
-            <value>
-                <fullName>Expense</fullName>
-                <default>false</default>
-                <label>Expense</label>
-            </value>
-            <value>
-                <fullName>Member Information</fullName>
-                <default>false</default>
-                <label>Member Information</label>
-            </value>
-            <value>
-                <fullName>Education</fullName>
-                <default>false</default>
-                <label>Education</label>
-            </value>
-            <value>
-                <fullName>Community Integration Supplementation and Caretaker Services</fullName>
-                <default>false</default>
-                <label>Community Integration Supplementation and Caretaker Services</label>
-            </value>
-        </valueSetDefinition>
-    </valueSet>
+        
+            <restricted>true</restricted>
+        
+            <valueSetDefinition>
+            
+                <sorted>false</sorted>
+            
+                <value>
+                
+                    <fullName>Emergency Medical Condition and Disability</fullName>
+                
+                    <default>true</default>
+                
+                    <label>Emergency Medical Condition and Disability</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>Living Arrangement</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Living Arrangement</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>Pregnancy</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Pregnancy</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>Healthcare Coverage</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Healthcare Coverage</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>Income</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Income</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>Contact Information</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Contact Information</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>Medicare Coverage</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Medicare Coverage</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>Relationship and Tax filing Status</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Relationship and Tax filing Status</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>Resources</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Resources</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>Expense</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Expense</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>Member Information</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Member Information</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>Education</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Education</label>
+                
+                </value>
+            
+				<value>
+                
+					<fullName>Community Integration Supplementation and Caretaker Services</fullName>
+                
+					<default>false</default>
+                
+					<label>Community Integration Supplementation and Caretaker Services</label>
+                
+				</value>
+            
+            </valueSetDefinition>
+        
+        </valueSet>
 </CustomField>

@@ -7,19 +7,34 @@
     <required>false</required>
     <type>Picklist</type>
     <valueSet>
-        <restricted>true</restricted>
-        <valueSetDefinition>
-            <sorted>false</sorted>
-            <value>
-                <fullName>Please enter SSN in correct format</fullName>
-                <default>true</default>
-                <label>Please enter SSN in correct format</label>
-            </value>
-            <value>
-                <fullName>Please enter a valid 9-digit  Social Security Number</fullName>
-                <default>false</default>
-                <label>Please enter a valid 9-digit  Social Security Number</label>
-            </value>
-        </valueSetDefinition>
-    </valueSet>
+        
+            <restricted>true</restricted>
+        
+            <valueSetDefinition>
+            
+                <sorted>false</sorted>
+            
+                <value>
+                
+                    <fullName>Please enter SSN in correct format</fullName>
+                
+                    <default>true</default>
+                
+                    <label>Please enter SSN in correct format</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>Please enter a valid 9-digit  Social Security Number</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Please enter a valid 9-digit  Social Security Number</label>
+                
+                </value>
+            
+            </valueSetDefinition>
+        
+        </valueSet>
 </CustomField>

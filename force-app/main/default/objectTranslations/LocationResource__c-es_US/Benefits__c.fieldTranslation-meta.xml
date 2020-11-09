@@ -3,47 +3,80 @@
     <label><!-- Benefiting --></label>
     <name>Benefits__c</name>
     <picklistValues>
-        <masterLabel>Adults</masterLabel>
-        <translation>Adultas</translation>
-    </picklistValues>
+        
+            <masterLabel>Adults</masterLabel>
+        
+            <translation>Adultas</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Disabilities</masterLabel>
-        <translation>Discapacidades</translation>
-    </picklistValues>
+        
+            <masterLabel>Disabilities</masterLabel>
+        
+            <translation>Discapacidades</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Education</masterLabel>
-        <translation>Educación</translation>
-    </picklistValues>
+        
+            <masterLabel>Education</masterLabel>
+        
+            <translation>Educación</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Financial</masterLabel>
-        <translation>Financiera</translation>
-    </picklistValues>
+        
+            <masterLabel>Financial</masterLabel>
+        
+            <translation>Financiera</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Health</masterLabel>
-        <translation>Salud</translation>
-    </picklistValues>
+        
+            <masterLabel>Health</masterLabel>
+        
+            <translation>Salud</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Infants</masterLabel>
-        <translation>Infantes</translation>
-    </picklistValues>
+        
+            <masterLabel>Infants</masterLabel>
+        
+            <translation>Infantes</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Legal</masterLabel>
-        <translation>Legal</translation>
-    </picklistValues>
+        
+            <masterLabel>Legal</masterLabel>
+        
+            <translation>Legal</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Mental Health and Addiction</masterLabel>
-        <translation>Salud Mental y Adicción</translation>
-    </picklistValues>
+        
+            <masterLabel>Mental Health and Addiction</masterLabel>
+        
+            <translation>Salud Mental y Adicción</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Safety</masterLabel>
-        <translation>La seguridad</translation>
-    </picklistValues>
+        
+            <masterLabel>Safety</masterLabel>
+        
+            <translation>La seguridad</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Teens</masterLabel>
-        <translation>Adolescentes</translation>
-    </picklistValues>
+        
+            <masterLabel>Teens</masterLabel>
+        
+            <translation>Adolescentes</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Transportation</masterLabel>
-        <translation>Transporte</translation>
-    </picklistValues>
+        
+            <masterLabel>Transportation</masterLabel>
+        
+            <translation>Transporte</translation>
+        
+        </picklistValues>
 </CustomFieldTranslation>

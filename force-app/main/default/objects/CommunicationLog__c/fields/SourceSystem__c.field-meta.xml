@@ -7,18 +7,32 @@
     <trackTrending>false</trackTrending>
     <type>Picklist</type>
     <valueSet>
-        <valueSetDefinition>
-            <sorted>false</sorted>
-            <value>
-                <fullName>SSP</fullName>
-                <default>true</default>
-                <label>SSP</label>
-            </value>
-            <value>
-                <fullName>RE</fullName>
-                <default>false</default>
-                <label>RE</label>
-            </value>
-        </valueSetDefinition>
-    </valueSet>
+        
+            <valueSetDefinition>
+            
+                <sorted>false</sorted>
+            
+                <value>
+                
+                    <fullName>SSP</fullName>
+                
+                    <default>true</default>
+                
+                    <label>SSP</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>RE</fullName>
+                
+                    <default>false</default>
+                
+                    <label>RE</label>
+                
+                </value>
+            
+            </valueSetDefinition>
+        
+        </valueSet>
 </CustomField>

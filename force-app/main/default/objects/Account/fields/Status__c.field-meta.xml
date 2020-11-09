@@ -8,42 +8,80 @@
     <trackFeedHistory>false</trackFeedHistory>
     <type>Picklist</type>
     <valueSet>
-        <restricted>true</restricted>
-        <valueSetDefinition>
-            <sorted>false</sorted>
-            <value>
-                <fullName>Active - Allow referrals</fullName>
-                <default>false</default>
-                <label>Active - Allow referrals</label>
-            </value>
-            <value>
-                <fullName>Inactive</fullName>
-                <default>false</default>
-                <label>Inactive</label>
-            </value>
-            <value>
-                <fullName>Active - Do not allow referrals</fullName>
-                <default>false</default>
-                <label>Active - Do not allow referrals</label>
-            </value>
-            <value>
-                <fullName>Approved</fullName>
-                <default>false</default>
-                <isActive>false</isActive>
-                <label>Approved</label>
-            </value>
-            <value>
-                <fullName>Pending Review</fullName>
-                <default>false</default>
-                <isActive>false</isActive>
-                <label>Pending Review</label>
-            </value>
-            <value>
-                <fullName>Rejected</fullName>
-                <default>false</default>
-                <isActive>false</isActive>
-                <label>Rejected</label>
-            </value>
-        </valueSetDefinition>
-    </valueSet>
+        
+            <restricted>true</restricted>
+        
+            <valueSetDefinition>
+            
+                <sorted>false</sorted>
+            
+                <value>
+                
+                    <fullName>Active - Allow referrals</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Active - Allow referrals</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>Inactive</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Inactive</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>Active - Do not allow referrals</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Active - Do not allow referrals</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>Approved</fullName>
+                
+                    <default>false</default>
+                
+                    <isActive>false</isActive>
+                
+                    <label>Approved</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>Pending Review</fullName>
+                
+                    <default>false</default>
+                
+                    <isActive>false</isActive>
+                
+                    <label>Pending Review</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>Rejected</fullName>
+                
+                    <default>false</default>
+                
+                    <isActive>false</isActive>
+                
+                    <label>Rejected</label>
+                
+                </value>
+            
+            </valueSetDefinition>
+        
+        </valueSet>
 </CustomField>

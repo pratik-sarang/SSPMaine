@@ -8,54 +8,104 @@
     <trackTrending>false</trackTrending>
     <type>Picklist</type>
     <valueSet>
-        <restricted>true</restricted>
-        <valueSetDefinition>
-            <sorted>false</sorted>
-            <value>
-                <fullName>Application Form</fullName>
-                <default>false</default>
-                <label>Application Form</label>
-            </value>
-            <value>
-                <fullName>Welcome Packet</fullName>
-                <default>false</default>
-                <label>Welcome Packet</label>
-            </value>
-            <value>
-                <fullName>Reference Guide</fullName>
-                <default>false</default>
-                <label>Reference Guide</label>
-            </value>
-            <value>
-                <fullName>FAQs</fullName>
-                <default>false</default>
-                <label>FAQs</label>
-            </value>
-            <value>
-                <fullName>Policy</fullName>
-                <default>false</default>
-                <label>Policy</label>
-            </value>
-            <value>
-                <fullName>Brochure</fullName>
-                <default>false</default>
-                <label>Brochure</label>
-            </value>
-            <value>
-                <fullName>Poster</fullName>
-                <default>false</default>
-                <label>Poster</label>
-            </value>
-            <value>
-                <fullName>Video</fullName>
-                <default>false</default>
-                <label>Video</label>
-            </value>
-            <value>
-                <fullName>Training Materials</fullName>
-                <default>false</default>
-                <label>Training Materials</label>
-            </value>
-        </valueSetDefinition>
-    </valueSet>
+        
+            <restricted>true</restricted>
+        
+            <valueSetDefinition>
+            
+                <sorted>false</sorted>
+            
+                <value>
+                
+                    <fullName>Application Form</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Application Form</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>Welcome Packet</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Welcome Packet</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>Reference Guide</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Reference Guide</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>FAQs</fullName>
+                
+                    <default>false</default>
+                
+                    <label>FAQs</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>Policy</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Policy</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>Brochure</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Brochure</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>Poster</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Poster</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>Video</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Video</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>Training Materials</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Training Materials</label>
+                
+                </value>
+            
+            </valueSetDefinition>
+        
+        </valueSet>
 </CustomField>

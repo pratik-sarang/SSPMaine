@@ -20,19 +20,34 @@ If value is &apos;Required&apos; then next button will skip page 3 and will load
     <required>false</required>
     <type>Picklist</type>
     <valueSet>
-        <restricted>true</restricted>
-        <valueSetDefinition>
-            <sorted>false</sorted>
-            <value>
-                <fullName>Required</fullName>
-                <default>true</default>
-                <label>Required</label>
-            </value>
-            <value>
-                <fullName>Completed</fullName>
-                <default>false</default>
-                <label>Completed</label>
-            </value>
-        </valueSetDefinition>
-    </valueSet>
+        
+            <restricted>true</restricted>
+        
+            <valueSetDefinition>
+            
+                <sorted>false</sorted>
+            
+                <value>
+                
+                    <fullName>Required</fullName>
+                
+                    <default>true</default>
+                
+                    <label>Required</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>Completed</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Completed</label>
+                
+                </value>
+            
+            </valueSetDefinition>
+        
+        </valueSet>
 </CustomField>

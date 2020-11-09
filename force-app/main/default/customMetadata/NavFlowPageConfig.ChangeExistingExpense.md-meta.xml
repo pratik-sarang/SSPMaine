@@ -1,53 +1,105 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    
     <label>Change Existing Expense</label>
+    
     <protected>false</protected>
+    
     <values>
+        
         <field>Internal_Flow__c</field>
+        
         <value xsi:nil="true"/>
+        
     </values>
+    
     <values>
+        
         <field>IsActive__c</field>
+        
         <value xsi:type="xsd:boolean">true</value>
+        
     </values>
+    
     <values>
+        
         <field>ListenerPageNames__c</field>
+        
         <value xsi:nil="true"/>
+        
     </values>
+    
     <values>
+        
         <field>NavFlowRule__c</field>
+        
         <value xsi:type="xsd:string">Existing_Expense_Required</value>
+        
     </values>
+    
     <values>
+        
         <field>NavigationFlowDetail__c</field>
+        
         <value xsi:type="xsd:string">Member_Flow</value>
+        
     </values>
+    
     <values>
+        
         <field>PageDisplayName__c</field>
+        
         <value xsi:nil="true"/>
+        
     </values>
+    
     <values>
+        
         <field>PageInfo__c</field>
+        
         <value xsi:type="xsd:string">ChangeExistingExpense</value>
+        
     </values>
+    
     <values>
+        
         <field>Programs__c</field>
+        
         <value xsi:nil="true"/>
+        
     </values>
+    
     <values>
+        
         <field>RAC_Trigger_Source__c</field>
+        
         <value xsi:nil="true"/>
+        
     </values>
+    
     <values>
+        
         <field>SectionGroupName__c</field>
+        
         <value xsi:nil="true"/>
+        
     </values>
+    
     <values>
+        
         <field>SequenceNumber__c</field>
+        
         <value xsi:type="xsd:double">2.0</value>
+        
     </values>
+    
     <values>
+        
         <field>Page_Config_Display_Name_View__c</field>
+        
         <value xsi:nil="true"/>
+        
     </values>
+    
 </CustomMetadata>

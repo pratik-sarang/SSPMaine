@@ -3,15 +3,24 @@
     <label><!-- Is_Date_Future_Msg --></label>
     <name>Is_Date_Future_Msg__c</name>
     <picklistValues>
-        <masterLabel>Date should be in the past. </masterLabel>
-        <translation><!-- Date should be in the past.  --></translation>
-    </picklistValues>
+        
+            <masterLabel>Date should be in the past. </masterLabel>
+        
+            <translation><!-- Date should be in the past.  --></translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Date should be today or in the past. </masterLabel>
-        <translation>La fecha debe ser hoy o en el pasado.</translation>
-    </picklistValues>
+        
+            <masterLabel>Date should be today or in the past. </masterLabel>
+        
+            <translation>La fecha debe ser hoy o en el pasado.</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Future dates are not allowed</masterLabel>
-        <translation><!-- Future dates are not allowed --></translation>
-    </picklistValues>
+        
+            <masterLabel>Future dates are not allowed</masterLabel>
+        
+            <translation><!-- Future dates are not allowed --></translation>
+        
+        </picklistValues>
 </CustomFieldTranslation>

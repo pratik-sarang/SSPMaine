@@ -9,28 +9,52 @@
     <trackTrending>false</trackTrending>
     <type>Picklist</type>
     <valueSet>
-        <valueSetDefinition>
-            <sorted>false</sorted>
-            <value>
-                <fullName>Error</fullName>
-                <default>false</default>
-                <label>Error</label>
-            </value>
-            <value>
-                <fullName>Info</fullName>
-                <default>false</default>
-                <label>Info</label>
-            </value>
-            <value>
-                <fullName>Warning</fullName>
-                <default>false</default>
-                <label>Warning</label>
-            </value>
-            <value>
-                <fullName>Debug</fullName>
-                <default>false</default>
-                <label>Debug</label>
-            </value>
-        </valueSetDefinition>
-    </valueSet>
+        
+            <valueSetDefinition>
+            
+                <sorted>false</sorted>
+            
+                <value>
+                
+                    <fullName>Error</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Error</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>Info</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Info</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>Warning</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Warning</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>Debug</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Debug</label>
+                
+                </value>
+            
+            </valueSetDefinition>
+        
+        </valueSet>
 </CustomField>

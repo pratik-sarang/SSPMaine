@@ -8,34 +8,64 @@
     <trackTrending>false</trackTrending>
     <type>Picklist</type>
     <valueSet>
-        <restricted>true</restricted>
-        <valueSetDefinition>
-            <sorted>false</sorted>
-            <value>
-                <fullName>EMPO</fullName>
-                <default>false</default>
-                <label>Employee Only</label>
-            </value>
-            <value>
-                <fullName>EMSP</fullName>
-                <default>false</default>
-                <label>Employee plus Spouse</label>
-            </value>
-            <value>
-                <fullName>EMOD</fullName>
-                <default>false</default>
-                <label>Employee plus One dependent</label>
-            </value>
-            <value>
-                <fullName>EMTD</fullName>
-                <default>false</default>
-                <label>Employee plus two or more dependents</label>
-            </value>
-            <value>
-                <fullName>FAM</fullName>
-                <default>false</default>
-                <label>Family</label>
-            </value>
-        </valueSetDefinition>
-    </valueSet>
+        
+            <restricted>true</restricted>
+        
+            <valueSetDefinition>
+            
+                <sorted>false</sorted>
+            
+                <value>
+                
+                    <fullName>EMPO</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Employee Only</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>EMSP</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Employee plus Spouse</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>EMOD</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Employee plus One dependent</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>EMTD</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Employee plus two or more dependents</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>FAM</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Family</label>
+                
+                </value>
+            
+            </valueSetDefinition>
+        
+        </valueSet>
 </CustomField>

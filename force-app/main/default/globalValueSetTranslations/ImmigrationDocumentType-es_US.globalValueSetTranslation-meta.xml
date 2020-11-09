@@ -1,107 +1,213 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <GlobalValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    
     <valueTranslation>
+        
         <masterLabel>Administrative order staying removal issued by DHS</masterLabel>
+        
         <translation>Orden administrativa de estadía antes de expulsión emitida por DHS</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Certificate of Citizenship in non-US country</masterLabel>
+        
         <translation>Certificado de ciudadanía en país diferente a EE. UU.</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Certification from HHS</masterLabel>
+        
         <translation>Certificación de HHS</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Cuban/Haitian entrant</masterLabel>
+        
         <translation>Procedente de Cuba/Haití</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>DS2019 (Certificate of Eligibility for Exchange Visitor (J-1) Status)</masterLabel>
+        
         <translation>DS2019 (Certificado de elegibilidad para estatus de visitante de intercambio (J-1))</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Document indicating withholding of removal</masterLabel>
+        
         <translation>Documento que indica la retención de la expulsión</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>I-20 (Certificate of Eligibility for Nonimmigrant (F-1) Student Status)</masterLabel>
+        
         <translation>I-20 (Certificado de elegibilidad para estatus de estudiante no inmigrante (F-1))</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>I-327 (Reentry Permit)</masterLabel>
+        
         <translation>I-327 (Permiso para nueva entrada)</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>I-551 (Permanent Resident Card)</masterLabel>
+        
         <translation>I-551 (Tarjeta de residente permanente)</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>I-571 (Refugee Travel Document)</masterLabel>
+        
         <translation>I-571 (Documento de viaje de refugiado)</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>I-766 (Employment Authorization Card)</masterLabel>
+        
         <translation>I-766 (Tarjeta de autorización para empleo)</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>I-94 (Arrival/Departure Record)</masterLabel>
+        
         <translation>I-94 (Registro de llegada/partida)</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>I-94 (Arrival/Departure Record) in Unexpired Foreign Passport</masterLabel>
+        
         <translation>I-94 (Registro de llegada/partida) en pasaporte extranjero no vencido</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Machine Readable Immigrant Visa (with Temporary I-551 Language)</masterLabel>
+        
         <translation>Visa de inmigrante legible por máquina (con texto temporal I-551)</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Member of a federally recognized Indian tribe or American Indian born in Canada</masterLabel>
+        
         <translation>Miembro de una tribu indígena reconocida federalmente o indígena estadounidense nacido en Canadá</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Naturalization Certificate</masterLabel>
+        
         <translation>Certificado de naturalización</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Not Available</masterLabel>
+        
         <translation>No disponible</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Notice of Action (I-797)</masterLabel>
+        
         <translation>Aviso de acción (I-797)</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Office of Refugee Resettlement</masterLabel>
+        
         <translation>Oficina de Reasentamiento de Refugiados</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Office of Refugee Resettlement eligibility letter (if under 18)</masterLabel>
+        
         <translation>Carta de elegibilidad de la Oficina de Reasentamiento de Refugiados (si es menor de 18 años)</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Other Immigration Document</masterLabel>
+        
         <translation>Otro documento de inmigración</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Petition under section 204(a)(1)(A) or (B) of INA</masterLabel>
+        
         <translation>Petición según sección 204(a)(1)(A) o (B) de INA</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Petition under section 244(a)(3) of INA</masterLabel>
+        
         <translation>Petición según sección 244(a)(3) de INA</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Resident of American Samoa</masterLabel>
+        
         <translation>Residente de Samoa Americana</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Temporary I-551 Stamp (on passport or I-94)</masterLabel>
+        
         <translation>Sello temporal I-551 (en pasaporte o I-94)</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Unexpired Foreign Passport</masterLabel>
+        
         <translation>Pasaporte extranjero no vencido</translation>
+        
     </valueTranslation>
+    
 </GlobalValueSetTranslation>

@@ -5,22 +5,40 @@
     <description>This record type for Log Messages is specific to saving JSON Response of prescrening tool</description>
     <label>SSPPrescreening</label>
     <picklistValues>
-        <picklist>LOG_Debug_Level__c</picklist>
-        <values>
-            <fullName>Debug</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Error</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Info</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Warning</fullName>
-            <default>false</default>
-        </values>
-    </picklistValues>
+        
+            <picklist>LOG_Debug_Level__c</picklist>
+        
+            <values>
+            
+                <fullName>Debug</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>Error</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>Info</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>Warning</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+        </picklistValues>
 </RecordType>

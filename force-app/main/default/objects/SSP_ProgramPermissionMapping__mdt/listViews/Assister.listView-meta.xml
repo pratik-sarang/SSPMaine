@@ -14,10 +14,14 @@
     <columns>Order__c</columns>
     <filterScope>Everything</filterScope>
     <filters>
-        <field>Role__c</field>
-        <operation>equals</operation>
-        <value>Assister</value>
-    </filters>
+        
+            <field>Role__c</field>
+        
+            <operation>equals</operation>
+        
+            <value>Assister</value>
+        
+        </filters>
     <label>Assister</label>
     <language>en_US</language>
 </ListView>

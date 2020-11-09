@@ -5,26 +5,48 @@
     <description>This is used to store details of Insurance Plan Tier.</description>
     <label>Health Insurance Plan Tier Detail</label>
     <picklistValues>
-        <picklist>EnrollmentTierLevel__c</picklist>
-        <values>
-            <fullName>EMOD</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>EMPO</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>EMSP</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>EMTD</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>FAM</fullName>
-            <default>false</default>
-        </values>
-    </picklistValues>
+        
+            <picklist>EnrollmentTierLevel__c</picklist>
+        
+            <values>
+            
+                <fullName>EMOD</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>EMPO</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>EMSP</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>EMTD</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>FAM</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+        </picklistValues>
 </RecordType>

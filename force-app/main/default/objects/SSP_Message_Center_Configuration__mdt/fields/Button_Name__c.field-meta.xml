@@ -7,44 +7,84 @@
     <required>false</required>
     <type>Picklist</type>
     <valueSet>
-        <restricted>true</restricted>
-        <valueSetDefinition>
-            <sorted>false</sorted>
-            <value>
-                <fullName>Call DCBS at 855-306-8959</fullName>
-                <default>true</default>
-                <label>Call DCBS at 855-306-8959</label>
-            </value>
-            <value>
-                <fullName>Upload Documents</fullName>
-                <default>false</default>
-                <label>Upload Documents</label>
-            </value>
-            <value>
-                <fullName>Renew Benefits</fullName>
-                <default>false</default>
-                <label>Renew Benefits</label>
-            </value>
-            <value>
-                <fullName>Pay Claim</fullName>
-                <default>false</default>
-                <label>Pay Claim</label>
-            </value>
-            <value>
-                <fullName>Continue Application</fullName>
-                <default>false</default>
-                <label>Continue Application</label>
-            </value>
-            <value>
-                <fullName>View Notice</fullName>
-                <default>false</default>
-                <label>View Notice</label>
-            </value>
-            <value>
-                <fullName>Review &amp; Consent</fullName>
-                <default>false</default>
-                <label>Review &amp; Consent</label>
-            </value>
-        </valueSetDefinition>
-    </valueSet>
+        
+            <restricted>true</restricted>
+        
+            <valueSetDefinition>
+            
+                <sorted>false</sorted>
+            
+                <value>
+                
+                    <fullName>Call DCBS at 855-306-8959</fullName>
+                
+                    <default>true</default>
+                
+                    <label>Call DCBS at 855-306-8959</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>Upload Documents</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Upload Documents</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>Renew Benefits</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Renew Benefits</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>Pay Claim</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Pay Claim</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>Continue Application</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Continue Application</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>View Notice</fullName>
+                
+                    <default>false</default>
+                
+                    <label>View Notice</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>Review &amp; Consent</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Review &amp; Consent</label>
+                
+                </value>
+            
+            </valueSetDefinition>
+        
+        </valueSet>
 </CustomField>

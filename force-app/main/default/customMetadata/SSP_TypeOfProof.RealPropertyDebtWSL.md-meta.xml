@@ -1,33 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    
     <label>RealPropertyDebtWSL</label>
+    
     <protected>false</protected>
+    
     <values>
+        
         <field>DocumentType__c</field>
+        
         <value xsi:type="xsd:string">WSL</value>
+        
     </values>
+    
     <values>
+        
         <field>FileName__c</field>
+        
         <value xsi:type="xsd:string">doctemplate/WrittenStatementfromLender.pdf</value>
+        
     </values>
+    
     <values>
+        
         <field>IsRecommended__c</field>
+        
         <value xsi:type="xsd:boolean">false</value>
+        
     </values>
+    
     <values>
+        
         <field>K_Hipp_Proof__c</field>
+        
         <value xsi:type="xsd:boolean">false</value>
+        
     </values>
+    
     <values>
+        
         <field>Task_Code__c</field>
+        
         <value xsi:nil="true"/>
+        
     </values>
+    
     <values>
+        
         <field>TemplateTitle__c</field>
+        
         <value xsi:type="xsd:string">Written Statement from Lender</value>
+        
     </values>
+    
     <values>
+        
         <field>TypeOfProof__c</field>
+        
         <value xsi:type="xsd:string">V646</value>
+        
     </values>
+    
 </CustomMetadata>

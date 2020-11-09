@@ -1,165 +1,286 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <label><!-- Applicable Roles --></label>
+    <label>
+                    <!-- Applicable Roles --></label>
     <name>ApplicableRoles__c</name>
     <picklistValues>
-        <masterLabel>Application Initiator</masterLabel>
-        <translation>Iniciador De Solicitud</translation>
-    </picklistValues>
+        
+            <masterLabel>Application Initiator</masterLabel>
+        
+            <translation>Iniciador De Solicitud</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>APPLICATION REVIEWER</masterLabel>
-        <translation>Revisor De Solicitud</translation>
-    </picklistValues>
+        
+            <masterLabel>APPLICATION REVIEWER</masterLabel>
+        
+            <translation>Revisor De Solicitud</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Agency Admin</masterLabel>
-        <translation>Agencia Administradora</translation>
-    </picklistValues>
+        
+            <masterLabel>Agency Admin</masterLabel>
+        
+            <translation>Agencia Administradora</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>kynector</masterLabel>
-        <translation>kynector</translation>
-    </picklistValues>
+        
+            <masterLabel>kynector</masterLabel>
+        
+            <translation>kynector</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>CAPACITY MANAGEMENT ADMINISTRATOR</masterLabel>
-        <translation>Administrador De Capacidad De Gestión</translation>
-    </picklistValues>
+        
+            <masterLabel>CAPACITY MANAGEMENT ADMINISTRATOR</masterLabel>
+        
+            <translation>Administrador De Capacidad De Gestión</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Case Management Administrator (Internal)</masterLabel>
-        <translation>Administrador De Gestión De Caso (Interno)</translation>
-    </picklistValues>
+        
+            <masterLabel>Case Management Administrator (Internal)</masterLabel>
+        
+            <translation>Administrador De Gestión De Caso (Interno)</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Case Manager</masterLabel>
-        <translation>Encargado De Caso</translation>
-    </picklistValues>
+        
+            <masterLabel>Case Manager</masterLabel>
+        
+            <translation>Encargado De Caso</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Case Supervisor</masterLabel>
-        <translation>Supervisor De Caso</translation>
-    </picklistValues>
+        
+            <masterLabel>Case Supervisor</masterLabel>
+        
+            <translation>Supervisor De Caso</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>CHFS Application Initiator</masterLabel>
-        <translation>Iniciador De Solicitud De Chfs</translation>
-    </picklistValues>
+        
+            <masterLabel>CHFS Application Initiator</masterLabel>
+        
+            <translation>Iniciador De Solicitud De Chfs</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>CHFS Internal Reviewer</masterLabel>
-        <translation>Revisor Interno de CHFS</translation>
-    </picklistValues>
+        
+            <masterLabel>CHFS Internal Reviewer</masterLabel>
+        
+            <translation>Revisor Interno de CHFS</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>CHFS Prod Support</masterLabel>
-        <translation>Apoyo a Producción de CHFS</translation>
-    </picklistValues>
+        
+            <masterLabel>CHFS Prod Support</masterLabel>
+        
+            <translation>Apoyo a Producción de CHFS</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Case Management Administrator (Read Only)</masterLabel>
-        <translation>Administrador de Gestión de caso (Solo lectura)</translation>
-    </picklistValues>
+        
+            <masterLabel>Case Management Administrator (Read Only)</masterLabel>
+        
+            <translation>Administrador de Gestión de caso (Solo lectura)</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Citizen</masterLabel>
-        <translation>Ciudadano/Individual</translation>
-    </picklistValues>
+        
+            <masterLabel>Citizen</masterLabel>
+        
+            <translation>Ciudadano/Individual</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Contact Center (View Only)</masterLabel>
-        <translation>Centro de Contactos (Sólo vista)</translation>
-    </picklistValues>
+        
+            <masterLabel>Contact Center (View Only)</masterLabel>
+        
+            <translation>Centro de Contactos (Sólo vista)</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Contact Center (View and Edit)</masterLabel>
-        <translation>Centro de Contactos (Ver y Editar)</translation>
-    </picklistValues>
+        
+            <masterLabel>Contact Center (View and Edit)</masterLabel>
+        
+            <translation>Centro de Contactos (Ver y Editar)</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>DAIL Worker</masterLabel>
-        <translation>Trabajador DAIL (Departamento para la Tercera Edad y Vida Independiente)</translation>
-    </picklistValues>
+        
+            <masterLabel>DAIL Worker</masterLabel>
+        
+            <translation>Trabajador DAIL (Departamento para la Tercera Edad y Vida Independiente)</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>DCBS - View Only</masterLabel>
-        <translation>DCBS (Sólo vista)</translation>
-    </picklistValues>
+        
+            <masterLabel>DCBS - View Only</masterLabel>
+        
+            <translation>DCBS (Sólo vista)</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>DCBS Central Office - View &amp; Edit</masterLabel>
-        <translation>Oficina Central de DCBS (Ver y Editar)</translation>
-    </picklistValues>
+        
+            <masterLabel>DCBS Central Office - View &amp; Edit</masterLabel>
+        
+            <translation>Oficina Central de DCBS (Ver y Editar)</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>DJJ Representative</masterLabel>
-        <translation>Representante de DJJ (Departamento de Justicia de Menores)</translation>
-    </picklistValues>
+        
+            <masterLabel>DJJ Representative</masterLabel>
+        
+            <translation>Representante de DJJ (Departamento de Justicia de Menores)</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>DOC Representative</masterLabel>
-        <translation>Representante de DOC (Departamento de Correccionales)</translation>
-    </picklistValues>
+        
+            <masterLabel>DOC Representative</masterLabel>
+        
+            <translation>Representante de DOC (Departamento de Correccionales)</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Department of Education Representative</masterLabel>
-        <translation>Departamento de Representante de Educación</translation>
-    </picklistValues>
+        
+            <masterLabel>Department of Education Representative</masterLabel>
+        
+            <translation>Departamento de Representante de Educación</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Eligibility &amp; Benefit Inquiry User</masterLabel>
-        <translation>Usuario para consulta de elegibilidad y beneficios</translation>
-    </picklistValues>
+        
+            <masterLabel>Eligibility &amp; Benefit Inquiry User</masterLabel>
+        
+            <translation>Usuario para consulta de elegibilidad y beneficios</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Internal LOC Assessor</masterLabel>
-        <translation>Evaluador De Nivel De Cuidados Interno</translation>
-    </picklistValues>
+        
+            <masterLabel>Internal LOC Assessor</masterLabel>
+        
+            <translation>Evaluador De Nivel De Cuidados Interno</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Individual Authorized Representative</masterLabel>
-        <translation>Representante autorizado de persona</translation>
-    </picklistValues>
+        
+            <masterLabel>Individual Authorized Representative</masterLabel>
+        
+            <translation>Representante autorizado de persona</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Agent</masterLabel>
-        <translation>Agente de seguros</translation>
-    </picklistValues>
+        
+            <masterLabel>Agent</masterLabel>
+        
+            <translation>Agente de seguros</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Jailor</masterLabel>
-        <translation>Carcelero</translation>
-    </picklistValues>
+        
+            <masterLabel>Jailor</masterLabel>
+        
+            <translation>Carcelero</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Level of Care Assessor</masterLabel>
-        <translation>Evaluador De Nivel De Cuidados</translation>
-    </picklistValues>
+        
+            <masterLabel>Level of Care Assessor</masterLabel>
+        
+            <translation>Evaluador De Nivel De Cuidados</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>LOC REVIEWER</masterLabel>
-        <translation>Revisor De Nivel De Cuidados</translation>
-    </picklistValues>
+        
+            <masterLabel>LOC REVIEWER</masterLabel>
+        
+            <translation>Revisor De Nivel De Cuidados</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Mail Center Supervisor</masterLabel>
-        <translation>Supervisor de Centro de Correo</translation>
-    </picklistValues>
+        
+            <masterLabel>Mail Center Supervisor</masterLabel>
+        
+            <translation>Supervisor de Centro de Correo</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Mail Center Worker</masterLabel>
-        <translation>Trabajador de Centro de Correo</translation>
-    </picklistValues>
+        
+            <masterLabel>Mail Center Worker</masterLabel>
+        
+            <translation>Trabajador de Centro de Correo</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Organization Authorized Representative</masterLabel>
-        <translation>Representante autorizado de organización</translation>
-    </picklistValues>
+        
+            <masterLabel>Organization Authorized Representative</masterLabel>
+        
+            <translation>Representante autorizado de organización</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>POC REVIEWER</masterLabel>
-        <translation>Revisor De Proveedor De Cuidados</translation>
-    </picklistValues>
+        
+            <masterLabel>POC REVIEWER</masterLabel>
+        
+            <translation>Revisor De Proveedor De Cuidados</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>PROD Support (Read Only)</masterLabel>
-        <translation>Apoyo a Producción (Solo lectura)</translation>
-    </picklistValues>
+        
+            <masterLabel>PROD Support (Read Only)</masterLabel>
+        
+            <translation>Apoyo a Producción (Solo lectura)</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Psychiatric Facility Representative</masterLabel>
-        <translation>Representante de centro de cuidados de enfermería</translation>
-    </picklistValues>
+        
+            <masterLabel>Psychiatric Facility Representative</masterLabel>
+        
+            <translation>Representante de centro de cuidados de enfermería</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>QEHospital</masterLabel>
-        <translation>QE (Entidad Calificada) Hospital</translation>
-    </picklistValues>
+        
+            <masterLabel>QEHospital</masterLabel>
+        
+            <translation>QE (Entidad Calificada) Hospital</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>QEPregnancy</masterLabel>
-        <translation>QE (Entidad Calificada) Embarazo</translation>
-    </picklistValues>
+        
+            <masterLabel>QEPregnancy</masterLabel>
+        
+            <translation>QE (Entidad Calificada) Embarazo</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Service Needs Assessor</masterLabel>
-        <translation>Evaluador De Necesidades De Servicios</translation>
-    </picklistValues>
+        
+            <masterLabel>Service Needs Assessor</masterLabel>
+        
+            <translation>Evaluador De Necesidades De Servicios</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Waiver Capacity Reviewer</masterLabel>
-        <translation>Revisor De Capacidad De Exención</translation>
-    </picklistValues>
+        
+            <masterLabel>Waiver Capacity Reviewer</masterLabel>
+        
+            <translation>Revisor De Capacidad De Exención</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Waiver Direct Service Provider</masterLabel>
-        <translation>Exención De Proveedor De Servicios Directos</translation>
-    </picklistValues>
+        
+            <masterLabel>Waiver Direct Service Provider</masterLabel>
+        
+            <translation>Exención De Proveedor De Servicios Directos</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Waiver Direct Service Provider Supervisor</masterLabel>
-        <translation>Supervisor De Exención De Proveedor De Servicios Directos</translation>
-    </picklistValues>
+        
+            <masterLabel>Waiver Direct Service Provider Supervisor</masterLabel>
+        
+            <translation>Supervisor De Exención De Proveedor De Servicios Directos</translation>
+        
+        </picklistValues>
 </CustomFieldTranslation>

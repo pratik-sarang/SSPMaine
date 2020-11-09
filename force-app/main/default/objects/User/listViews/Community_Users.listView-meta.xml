@@ -11,9 +11,13 @@
     <columns>MANAGER</columns>
     <filterScope>Everything</filterScope>
     <filters>
-        <field>CORE.PROFILE.NAME</field>
-        <operation>equals</operation>
-        <value>RE Community Partner User Profile</value>
-    </filters>
+        
+            <field>CORE.PROFILE.NAME</field>
+        
+            <operation>equals</operation>
+        
+            <value>RE Community Partner User Profile</value>
+        
+        </filters>
     <label>Community Users</label>
 </ListView>

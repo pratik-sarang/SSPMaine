@@ -1,34 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    
     <fieldUpdates>
+        
         <fullName>Update_one_time_activity</fullName>
+        
         <description>Used to update one time activity field on User object when a new portal user is added to the public group.</description>
+        
         <field>One_Time_Activity__c</field>
+        
         <literalValue>1</literalValue>
+        
         <name>Update one time activity</name>
+        
         <notifyAssignee>false</notifyAssignee>
+        
         <operation>Literal</operation>
+        
         <protected>false</protected>
+        
         <reevaluateOnChange>true</reevaluateOnChange>
+        
     </fieldUpdates>
+    
     <rules>
+        
         <fullName>Add user to Assister group</fullName>
+        
         <active>false</active>
+        
         <criteriaItems>
+            
             <field>User.IsActive</field>
+            
             <operation>equals</operation>
+            
             <value>True</value>
+            
         </criteriaItems>
+        
         <description>Add portal user to public group RE Community Partner Users.</description>
+        
         <triggerType>onCreateOnly</triggerType>
+        
         <workflowTimeTriggers>
+            
             <actions>
+                
                 <name>Update_one_time_activity</name>
+                
                 <type>FieldUpdate</type>
+                
             </actions>
+            
             <offsetFromField>User.CreatedDate</offsetFromField>
+            
             <timeLength>0</timeLength>
+            
             <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+            
         </workflowTimeTriggers>
+        
     </rules>
+    
 </Workflow>

@@ -10,9 +10,13 @@
     <columns>ACCOUNT.CREATED_DATE</columns>
     <filterScope>Everything</filterScope>
     <filters>
-        <field>ACCOUNT.CREATED_DATE</field>
-        <operation>equals</operation>
-        <value>THIS_WEEK</value>
-    </filters>
+        
+            <field>ACCOUNT.CREATED_DATE</field>
+        
+            <operation>equals</operation>
+        
+            <value>THIS_WEEK</value>
+        
+        </filters>
     <label>New This Week</label>
 </ListView>

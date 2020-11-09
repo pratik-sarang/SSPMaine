@@ -7,7 +7,10 @@
     <required>false</required>
     <type>Picklist</type>
     <valueSet>
-        <restricted>true</restricted>
-        <valueSetName>YesNo</valueSetName>
-    </valueSet>
+        
+            <restricted>true</restricted>
+        
+            <valueSetName>YesNo</valueSetName>
+        
+        </valueSet>
 </CustomField>

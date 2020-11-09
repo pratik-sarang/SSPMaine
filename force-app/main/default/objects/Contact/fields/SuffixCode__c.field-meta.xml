@@ -8,7 +8,10 @@
     <trackFeedHistory>false</trackFeedHistory>
     <type>Picklist</type>
     <valueSet>
-        <restricted>true</restricted>
-        <valueSetName>Suffix</valueSetName>
-    </valueSet>
+        
+            <restricted>true</restricted>
+        
+            <valueSetName>Suffix</valueSetName>
+        
+        </valueSet>
 </CustomField>

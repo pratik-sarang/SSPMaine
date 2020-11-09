@@ -1,17 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    
     <label>RE_Rate_A_Resource_Feedback</label>
+    
     <protected>false</protected>
+    
     <values>
+        
         <field>Active__c</field>
+        
         <value xsi:type="xsd:boolean">true</value>
+        
     </values>
+    
     <values>
+        
         <field>Question_1__c</field>
+        
         <value xsi:type="xsd:string">Would you recommend this resource to a friend?</value>
+        
     </values>
+    
     <values>
+        
         <field>Question_2__c</field>
+        
         <value xsi:type="xsd:string">Enter Feedback</value>
+        
     </values>
+    
 </CustomMetadata>

@@ -1,27 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <GlobalValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    
     <valueTranslation>
+        
         <masterLabel>Adoption in process</masterLabel>
+        
         <translation>Adopción en proceso</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Being assisted in decision on adoption</masterLabel>
+        
         <translation>Recibiendo asistencia en decisión sobre adopción</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Child conceived due to physical assault</masterLabel>
+        
         <translation>Niño concebido debido a agresión físico</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Emotional harm to child</masterLabel>
+        
         <translation>Daño emocional al menor</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>No specified reason</masterLabel>
+        
         <translation><!-- No specified reason --></translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Physical harm to child</masterLabel>
+        
         <translation>Daño físico al menor</translation>
+        
     </valueTranslation>
+    
 </GlobalValueSetTranslation>

@@ -3,7 +3,10 @@
     <label><!-- Validate_AreaCode_Msg --></label>
     <name>Validate_AreaCode_Msg__c</name>
     <picklistValues>
-        <masterLabel>Please enter correct area code</masterLabel>
-        <translation><!-- Please enter correct area code --></translation>
-    </picklistValues>
+        
+            <masterLabel>Please enter correct area code</masterLabel>
+        
+            <translation><!-- Please enter correct area code --></translation>
+        
+        </picklistValues>
 </CustomFieldTranslation>

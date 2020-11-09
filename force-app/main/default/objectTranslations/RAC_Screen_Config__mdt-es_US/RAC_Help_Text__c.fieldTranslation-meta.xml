@@ -3,15 +3,24 @@
     <label><!-- RAC Help Text --></label>
     <name>RAC_Help_Text__c</name>
     <picklistValues>
-        <masterLabel>Changes to Resources include a decrease or increase in value, change in ownership or the opening or closing of accounts.</masterLabel>
-        <translation>Cambios a recursos incluye un aumento o disminución en valor, cambio en propiedad o la apertura o cierre de cuentas.</translation>
-    </picklistValues>
+        
+            <masterLabel>Changes to Resources include a decrease or increase in value, change in ownership or the opening or closing of accounts.</masterLabel>
+        
+            <translation>Cambios a recursos incluye un aumento o disminución en valor, cambio en propiedad o la apertura o cierre de cuentas.</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>For previously reported Expenses, changes include a change in the amount of an expense or if the expense has ended.</masterLabel>
-        <translation>Para gastos ya informados, cambios incluye un cambio en el monto de un gasto o si el gasto ya finalizó.</translation>
-    </picklistValues>
+        
+            <masterLabel>For previously reported Expenses, changes include a change in the amount of an expense or if the expense has ended.</masterLabel>
+        
+            <translation>Para gastos ya informados, cambios incluye un cambio en el monto de un gasto o si el gasto ya finalizó.</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Living Arrangement changes include a difference in a previously reported Living Arrangement Type (e.g., In-Home to Incarcerated, Attending School to Rehab Facility, etc.)</masterLabel>
-        <translation>Cambios en dónde y con quién vive incluye una diferencia en el tipo de situación de vida que se informó antes (por ejemplo, en hogar a encarcelado, asistiendo a la escuela a centro de rehabilitación, etcétera)</translation>
-    </picklistValues>
+        
+            <masterLabel>Living Arrangement changes include a difference in a previously reported Living Arrangement Type (e.g., In-Home to Incarcerated, Attending School to Rehab Facility, etc.)</masterLabel>
+        
+            <translation>Cambios en dónde y con quién vive incluye una diferencia en el tipo de situación de vida que se informó antes (por ejemplo, en hogar a encarcelado, asistiendo a la escuela a centro de rehabilitación, etcétera)</translation>
+        
+        </picklistValues>
 </CustomFieldTranslation>

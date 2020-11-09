@@ -3,11 +3,17 @@
     <label><!-- Severity --></label>
     <name>Severity__c</name>
     <picklistValues>
-        <masterLabel>Critical</masterLabel>
-        <translation><!-- Critical --></translation>
-    </picklistValues>
+        
+            <masterLabel>Critical</masterLabel>
+        
+            <translation><!-- Critical --></translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Normal</masterLabel>
-        <translation><!-- Normal --></translation>
-    </picklistValues>
+        
+            <masterLabel>Normal</masterLabel>
+        
+            <translation><!-- Normal --></translation>
+        
+        </picklistValues>
 </CustomFieldTranslation>

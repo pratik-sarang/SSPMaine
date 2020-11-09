@@ -7,8 +7,11 @@
     <trackFeedHistory>false</trackFeedHistory>
     <type>MultiselectPicklist</type>
     <valueSet>
-        <restricted>true</restricted>
-        <valueSetName>Domain</valueSetName>
-    </valueSet>
+        
+            <restricted>true</restricted>
+        
+            <valueSetName>Domain</valueSetName>
+        
+        </valueSet>
     <visibleLines>4</visibleLines>
 </CustomField>

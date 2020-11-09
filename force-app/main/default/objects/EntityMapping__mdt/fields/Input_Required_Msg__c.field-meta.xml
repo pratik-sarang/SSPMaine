@@ -7,44 +7,84 @@
     <required>false</required>
     <type>Picklist</type>
     <valueSet>
-        <restricted>true</restricted>
-        <valueSetDefinition>
-            <sorted>false</sorted>
-            <value>
-                <fullName>Please answer all required fields.</fullName>
-                <default>true</default>
-                <label>Please answer all required fields.</label>
-            </value>
-            <value>
-                <fullName>Please select at least one Preferred Contact Method.</fullName>
-                <default>false</default>
-                <label>Please select at least one Preferred Contact Method.</label>
-            </value>
-            <value>
-                <fullName>Please select at least one member.</fullName>
-                <default>false</default>
-                <label>Please select at least one member.</label>
-            </value>
-            <value>
-                <fullName>Please enter both the end date and reason for removal if you&apos;d like to end this type of coverage.</fullName>
-                <default>false</default>
-                <label>Please enter both the end date and reason for removal if you&apos;d like to end this type of coverage.</label>
-            </value>
-            <value>
-                <fullName>Please select at least one household member.</fullName>
-                <default>false</default>
-                <label>Please select at least one household member.</label>
-            </value>
-            <value>
-                <fullName>Please select at least one Policy Holder</fullName>
-                <default>false</default>
-                <label>Please select at least one Policy Holder</label>
-            </value>
-            <value>
-                <fullName>The address you selected is not a valid address. Please select a street address with valid Address Line 1, Zip Code and City</fullName>
-                <default>false</default>
-                <label>The address you selected is not a valid address. Please select a street address with valid Address Line 1, Zip Code and City</label>
-            </value>
-        </valueSetDefinition>
-    </valueSet>
+        
+            <restricted>true</restricted>
+        
+            <valueSetDefinition>
+            
+                <sorted>false</sorted>
+            
+                <value>
+                
+                    <fullName>Please answer all required fields.</fullName>
+                
+                    <default>true</default>
+                
+                    <label>Please answer all required fields.</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>Please select at least one Preferred Contact Method.</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Please select at least one Preferred Contact Method.</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>Please select at least one member.</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Please select at least one member.</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>Please enter both the end date and reason for removal if you&apos;d like to end this type of coverage.</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Please enter both the end date and reason for removal if you&apos;d like to end this type of coverage.</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>Please select at least one household member.</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Please select at least one household member.</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>Please select at least one Policy Holder</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Please select at least one Policy Holder</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>The address you selected is not a valid address. Please select a street address with valid Address Line 1, Zip Code and City</fullName>
+                
+                    <default>false</default>
+                
+                    <label>The address you selected is not a valid address. Please select a street address with valid Address Line 1, Zip Code and City</label>
+                
+                </value>
+            
+            </valueSetDefinition>
+        
+        </valueSet>
 </CustomField>

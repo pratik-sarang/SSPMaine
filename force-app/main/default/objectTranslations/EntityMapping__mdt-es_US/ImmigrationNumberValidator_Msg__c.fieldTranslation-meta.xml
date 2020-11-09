@@ -3,7 +3,10 @@
     <label><!-- ImmigrationNumberValidator_Msg --></label>
     <name>ImmigrationNumberValidator_Msg__c</name>
     <picklistValues>
-        <masterLabel>Please enter a valid Card Number with 13 characters.</masterLabel>
-        <translation>Ingresar un número de tarjeta válido con 13 caracteres.</translation>
-    </picklistValues>
+        
+            <masterLabel>Please enter a valid Card Number with 13 characters.</masterLabel>
+        
+            <translation>Ingresar un número de tarjeta válido con 13 caracteres.</translation>
+        
+        </picklistValues>
 </CustomFieldTranslation>

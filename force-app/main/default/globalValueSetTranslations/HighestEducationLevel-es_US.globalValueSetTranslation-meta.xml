@@ -1,79 +1,157 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <GlobalValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    
     <valueTranslation>
+        
         <masterLabel>10th Grade</masterLabel>
+        
         <translation>10mo grado</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>11th Grade</masterLabel>
+        
         <translation>11mo grado</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>1st Grade</masterLabel>
+        
         <translation>1er grado</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>2nd Grade</masterLabel>
+        
         <translation>2do grado</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>3rd Grade</masterLabel>
+        
         <translation>3er grado</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>4th Grade</masterLabel>
+        
         <translation>4to grado</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>5th Grade</masterLabel>
+        
         <translation>5to grado</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>6th Grade</masterLabel>
+        
         <translation>6to grado</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>7th Grade</masterLabel>
+        
         <translation>7to grado</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>8th Grade</masterLabel>
+        
         <translation>8vo grado</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>9th Grade</masterLabel>
+        
         <translation>9no grado</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Awarded Associate&apos;s Degree</masterLabel>
+        
         <translation>Título técnico obtenido</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Awarded Bachelor&apos;s Degree</masterLabel>
+        
         <translation>Título de licenciado obtenido</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Awarded Graduate Degree (Masters or Higher)</masterLabel>
+        
         <translation>Título de posgrado obtenido (maestría o superior)</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>GED</masterLabel>
+        
         <translation>GED (Diploma General de Educación)</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>High School Diploma</masterLabel>
+        
         <translation>Diploma de escuela secundaria</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Kindergarten</masterLabel>
+        
         <translation>Kindergarten</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>No Formal Education (Below School Age, Head Start, Preschool)</masterLabel>
+        
         <translation>Educación no formal (menos que edad escolar, Head Start, preescolar)</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Other Credentials (Degree, Certificate, Non-Proprietary School Diploma)</masterLabel>
+        
         <translation>Otras credenciales (título, certificado, diploma de escuela no privada)</translation>
+        
     </valueTranslation>
+    
 </GlobalValueSetTranslation>

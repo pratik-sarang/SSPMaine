@@ -1,8 +1,0 @@
-Hello {!ClaimMySiteRequest__c.FirstName__c} {!ClaimMySiteRequest__c.LastName__c},
-<!--test-->
-Your site claim request submitted on {!ClaimMySiteRequest__c.DateOfRequest__c} has been denied for organization {!ClaimMySiteRequest__c.RequestingOrganizationName__c}. For further assistance, please contact the help desk at [#].
-
-Thank you,
-{!IF(ClaimMySiteRequest__c.OwnerFullName= "State User Queue", "Community Partner Onboarding Team", ClaimMySiteRequest__c.OwnerFullName)} 
-
-Please note: This is an automatic message and cannot receive replies.

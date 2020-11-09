@@ -8,19 +8,34 @@
     <required>false</required>
     <type>Picklist</type>
     <valueSet>
-        <restricted>true</restricted>
-        <valueSetDefinition>
-            <sorted>false</sorted>
-            <value>
-                <fullName>RE</fullName>
-                <default>true</default>
-                <label>RE</label>
-            </value>
-            <value>
-                <fullName>SSP</fullName>
-                <default>false</default>
-                <label>SSP</label>
-            </value>
-        </valueSetDefinition>
-    </valueSet>
+        
+            <restricted>true</restricted>
+        
+            <valueSetDefinition>
+            
+                <sorted>false</sorted>
+            
+                <value>
+                
+                    <fullName>RE</fullName>
+                
+                    <default>true</default>
+                
+                    <label>RE</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>SSP</fullName>
+                
+                    <default>false</default>
+                
+                    <label>SSP</label>
+                
+                </value>
+            
+            </valueSetDefinition>
+        
+        </valueSet>
 </CustomField>

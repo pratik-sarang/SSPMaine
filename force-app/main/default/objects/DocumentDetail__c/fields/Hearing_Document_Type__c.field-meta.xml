@@ -7,309 +7,614 @@
     <trackTrending>false</trackTrending>
     <type>Picklist</type>
     <valueSet>
-        <restricted>true</restricted>
-        <valueSetDefinition>
-            <sorted>false</sorted>
-            <value>
-                <fullName>DT150</fullName>
-                <default>false</default>
-                <label>Acknowledgement Letter-Medicaid Hearing Request</label>
-            </value>
-            <value>
-                <fullName>DT151</fullName>
-                <default>false</default>
-                <label>AUDIO recording PHC</label>
-            </value>
-            <value>
-                <fullName>DT152</fullName>
-                <default>false</default>
-                <label>Certification of Record</label>
-            </value>
-            <value>
-                <fullName>DT153</fullName>
-                <default>false</default>
-                <label>Exhibits-Agency</label>
-            </value>
-            <value>
-                <fullName>DT154</fullName>
-                <default>false</default>
-                <label>Exhibits-Appellants</label>
-            </value>
-            <value>
-                <fullName>DT155</fullName>
-                <default>false</default>
-                <label>HEARING AUDIO recording</label>
-            </value>
-            <value>
-                <fullName>DT156</fullName>
-                <default>false</default>
-                <label>Memo or Brief</label>
-            </value>
-            <value>
-                <fullName>DT157</fullName>
-                <default>false</default>
-                <label>Recommended Order - Dismissed</label>
-            </value>
-            <value>
-                <fullName>DT158</fullName>
-                <default>false</default>
-                <label>Recommended Order - Overturned in part</label>
-            </value>
-            <value>
-                <fullName>DT159</fullName>
-                <default>false</default>
-                <label>Recommended Order - Remand</label>
-            </value>
-            <value>
-                <fullName>DT160</fullName>
-                <default>false</default>
-                <label>Request for Certification of Record</label>
-            </value>
-            <value>
-                <fullName>DT161</fullName>
-                <default>false</default>
-                <label>Request for Hearing to be Converted to In-Person</label>
-            </value>
-            <value>
-                <fullName>DT162</fullName>
-                <default>false</default>
-                <label>Request for Subpoena</label>
-            </value>
-            <value>
-                <fullName>DT163</fullName>
-                <default>false</default>
-                <label>Request to Reschedule</label>
-            </value>
-            <value>
-                <fullName>DT164</fullName>
-                <default>false</default>
-                <label>RETURN Receipt</label>
-            </value>
-            <value>
-                <fullName>DT165</fullName>
-                <default>false</default>
-                <label>Returned 1st class mail</label>
-            </value>
-            <value>
-                <fullName>DT166</fullName>
-                <default>false</default>
-                <label>Subpoena</label>
-            </value>
-            <value>
-                <fullName>DT167</fullName>
-                <default>false</default>
-                <label>Summons</label>
-            </value>
-            <value>
-                <fullName>DT168</fullName>
-                <default>false</default>
-                <label>Recommended order - Waiver</label>
-            </value>
-            <value>
-                <fullName>DT092</fullName>
-                <default>false</default>
-                <label>PAFS-78.1 Administrative Hearing Summary</label>
-            </value>
-            <value>
-                <fullName>DT131</fullName>
-                <default>false</default>
-                <label>FS-80A Individual Waives Right to SNAP ADH and Accept Disqualition Penalty</label>
-            </value>
-            <value>
-                <fullName>DT021</fullName>
-                <default>false</default>
-                <label>Exception</label>
-            </value>
-            <value>
-                <fullName>DT137</fullName>
-                <default>false</default>
-                <label>Notice of Hearing</label>
-            </value>
-            <value>
-                <fullName>DT138</fullName>
-                <default>false</default>
-                <label>Recommended Order - Affirmed</label>
-            </value>
-            <value>
-                <fullName>DT139</fullName>
-                <default>false</default>
-                <label>Prehearing Order</label>
-            </value>
-            <value>
-                <fullName>DT142</fullName>
-                <default>false</default>
-                <label>Final Order</label>
-            </value>
-            <value>
-                <fullName>DT143</fullName>
-                <default>false</default>
-                <label>Acknowledgement Letter-Exception</label>
-            </value>
-            <value>
-                <fullName>DT003</fullName>
-                <default>false</default>
-                <label>Amended</label>
-            </value>
-            <value>
-                <fullName>DT008</fullName>
-                <default>false</default>
-                <label>Court of Appeals Decision</label>
-            </value>
-            <value>
-                <fullName>DT020</fullName>
-                <default>false</default>
-                <label>Entry of Appearance</label>
-            </value>
-            <value>
-                <fullName>DT026</fullName>
-                <default>false</default>
-                <label>Interim Order</label>
-            </value>
-            <value>
-                <fullName>DT033</fullName>
-                <default>false</default>
-                <label>Circuit Court Decision</label>
-            </value>
-            <value>
-                <fullName>DT036</fullName>
-                <default>false</default>
-                <label>Letter - Withdrawing</label>
-            </value>
-            <value>
-                <fullName>DT046</fullName>
-                <default>false</default>
-                <label>Motion for Continuance</label>
-            </value>
-            <value>
-                <fullName>DT047</fullName>
-                <default>false</default>
-                <label>Motion for Extension of Time</label>
-            </value>
-            <value>
-                <fullName>DT048</fullName>
-                <default>false</default>
-                <label>Motion for Postponement</label>
-            </value>
-            <value>
-                <fullName>DT049</fullName>
-                <default>false</default>
-                <label>Motion for Prehearing Conference</label>
-            </value>
-            <value>
-                <fullName>DT061</fullName>
-                <default>false</default>
-                <label>Motion to Withdraw</label>
-            </value>
-            <value>
-                <fullName>DT068</fullName>
-                <default>false</default>
-                <label>Notice of Reassignment</label>
-            </value>
-            <value>
-                <fullName>DT075</fullName>
-                <default>false</default>
-                <label>Open Records Request</label>
-            </value>
-            <value>
-                <fullName>DT081</fullName>
-                <default>false</default>
-                <label>Order Granting</label>
-            </value>
-            <value>
-                <fullName>DT082</fullName>
-                <default>false</default>
-                <label>Order of Abeyance</label>
-            </value>
-            <value>
-                <fullName>DT084</fullName>
-                <default>false</default>
-                <label>Order of Dismissal</label>
-            </value>
-            <value>
-                <fullName>DT085</fullName>
-                <default>false</default>
-                <label>Order Rescheduling</label>
-            </value>
-            <value>
-                <fullName>DT086</fullName>
-                <default>false</default>
-                <label>Order Scheduling Hearing</label>
-            </value>
-            <value>
-                <fullName>DT089</fullName>
-                <default>false</default>
-                <label>Order to Show Cause</label>
-            </value>
-            <value>
-                <fullName>DT090</fullName>
-                <default>false</default>
-                <label>Other</label>
-            </value>
-            <value>
-                <fullName>DT103</fullName>
-                <default>false</default>
-                <label>Prehearing Notice</label>
-            </value>
-            <value>
-                <fullName>DT114</fullName>
-                <default>false</default>
-                <label>Request for Hearing</label>
-            </value>
-            <value>
-                <fullName>DT116</fullName>
-                <default>false</default>
-                <label>Response to Show Cause Order</label>
-            </value>
-            <value>
-                <fullName>DT119</fullName>
-                <default>false</default>
-                <label>Returned Notice of Hearing Envelope</label>
-            </value>
-            <value>
-                <fullName>DT120</fullName>
-                <default>false</default>
-                <label>RETURN certified mail</label>
-            </value>
-            <value>
-                <fullName>DT123</fullName>
-                <default>false</default>
-                <label>Status Report</label>
-            </value>
-            <value>
-                <fullName>DT128</fullName>
-                <default>false</default>
-                <label>Supreme Court Decision</label>
-            </value>
-            <value>
-                <fullName>DT129</fullName>
-                <default>false</default>
-                <label>Witness and/or Exhibit List</label>
-            </value>
-            <value>
-                <fullName>DT146</fullName>
-                <default>false</default>
-                <label>Recommended Order - Reversed</label>
-            </value>
-            <value>
-                <fullName>DT147</fullName>
-                <default>false</default>
-                <label>Recommended Order- Default</label>
-            </value>
-            <value>
-                <fullName>DT148</fullName>
-                <default>false</default>
-                <label>Recommended Order - Withdrawn</label>
-            </value>
-            <value>
-                <fullName>DT149</fullName>
-                <default>false</default>
-                <label>Recommended Order- No Service</label>
-            </value>
-            <value>
-                <fullName>ROD</fullName>
-                <default>false</default>
-                <label>Recommended Order - Draft</label>
-            </value>
-        </valueSetDefinition>
-    </valueSet>
+        
+            <restricted>true</restricted>
+        
+            <valueSetDefinition>
+            
+                <sorted>false</sorted>
+            
+                <value>
+                
+                    <fullName>DT150</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Acknowledgement Letter-Medicaid Hearing Request</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DT151</fullName>
+                
+                    <default>false</default>
+                
+                    <label>AUDIO recording PHC</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DT152</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Certification of Record</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DT153</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Exhibits-Agency</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DT154</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Exhibits-Appellants</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DT155</fullName>
+                
+                    <default>false</default>
+                
+                    <label>HEARING AUDIO recording</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DT156</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Memo or Brief</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DT157</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Recommended Order - Dismissed</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DT158</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Recommended Order - Overturned in part</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DT159</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Recommended Order - Remand</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DT160</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Request for Certification of Record</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DT161</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Request for Hearing to be Converted to In-Person</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DT162</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Request for Subpoena</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DT163</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Request to Reschedule</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DT164</fullName>
+                
+                    <default>false</default>
+                
+                    <label>RETURN Receipt</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DT165</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Returned 1st class mail</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DT166</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Subpoena</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DT167</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Summons</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DT168</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Recommended order - Waiver</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DT092</fullName>
+                
+                    <default>false</default>
+                
+                    <label>PAFS-78.1 Administrative Hearing Summary</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DT131</fullName>
+                
+                    <default>false</default>
+                
+                    <label>FS-80A Individual Waives Right to SNAP ADH and Accept Disqualition Penalty</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DT021</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Exception</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DT137</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Notice of Hearing</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DT138</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Recommended Order - Affirmed</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DT139</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Prehearing Order</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DT142</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Final Order</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DT143</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Acknowledgement Letter-Exception</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DT003</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Amended</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DT008</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Court of Appeals Decision</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DT020</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Entry of Appearance</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DT026</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Interim Order</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DT033</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Circuit Court Decision</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DT036</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Letter - Withdrawing</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DT046</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Motion for Continuance</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DT047</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Motion for Extension of Time</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DT048</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Motion for Postponement</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DT049</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Motion for Prehearing Conference</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DT061</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Motion to Withdraw</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DT068</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Notice of Reassignment</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DT075</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Open Records Request</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DT081</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Order Granting</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DT082</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Order of Abeyance</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DT084</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Order of Dismissal</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DT085</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Order Rescheduling</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DT086</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Order Scheduling Hearing</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DT089</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Order to Show Cause</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DT090</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Other</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DT103</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Prehearing Notice</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DT114</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Request for Hearing</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DT116</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Response to Show Cause Order</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DT119</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Returned Notice of Hearing Envelope</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DT120</fullName>
+                
+                    <default>false</default>
+                
+                    <label>RETURN certified mail</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DT123</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Status Report</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DT128</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Supreme Court Decision</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DT129</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Witness and/or Exhibit List</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DT146</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Recommended Order - Reversed</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DT147</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Recommended Order- Default</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DT148</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Recommended Order - Withdrawn</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DT149</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Recommended Order- No Service</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>ROD</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Recommended Order - Draft</label>
+                
+                </value>
+            
+            </valueSetDefinition>
+        
+        </valueSet>
 </CustomField>

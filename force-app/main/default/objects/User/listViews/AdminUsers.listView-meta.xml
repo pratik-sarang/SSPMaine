@@ -9,9 +9,13 @@
     <columns>CORE.USERS.ACTIVE</columns>
     <filterScope>Everything</filterScope>
     <filters>
-        <field>CORE.PROFILE.NAME</field>
-        <operation>equals</operation>
-        <value>System Administrator</value>
-    </filters>
+        
+            <field>CORE.PROFILE.NAME</field>
+        
+            <operation>equals</operation>
+        
+            <value>System Administrator</value>
+        
+        </filters>
     <label>Admin Users</label>
 </ListView>

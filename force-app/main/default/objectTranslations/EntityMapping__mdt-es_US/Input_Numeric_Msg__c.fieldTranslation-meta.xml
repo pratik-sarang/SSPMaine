@@ -3,7 +3,10 @@
     <label><!-- Input_Numeric_Msg --></label>
     <name>Input_Numeric_Msg__c</name>
     <picklistValues>
-        <masterLabel>Please enter only numerical values</masterLabel>
-        <translation>Entrar sólo valores numericos</translation>
-    </picklistValues>
+        
+            <masterLabel>Please enter only numerical values</masterLabel>
+        
+            <translation>Entrar sólo valores numericos</translation>
+        
+        </picklistValues>
 </CustomFieldTranslation>

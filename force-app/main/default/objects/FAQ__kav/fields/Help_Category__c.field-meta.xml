@@ -7,7 +7,10 @@
     <required>false</required>
     <type>Picklist</type>
     <valueSet>
-        <restricted>true</restricted>
-        <valueSetName>SSP_Help_Category_Picklist_values</valueSetName>
-    </valueSet>
+        
+            <restricted>true</restricted>
+        
+            <valueSetName>SSP_Help_Category_Picklist_values</valueSetName>
+        
+        </valueSet>
 </CustomField>

@@ -5,464 +5,922 @@
     <description>This is used to store details of documents uploaded to SSP.</description>
     <label>SSP Document</label>
     <picklistValues>
-        <picklist>DocumentType__c</picklist>
-        <values>
-            <fullName>Application Form</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Brochure</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>FAQs</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Policy</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Poster</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Reference Guide</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Training Materials</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Video</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Welcome Packet</fullName>
-            <default>false</default>
-        </values>
-    </picklistValues>
+        
+            <picklist>DocumentType__c</picklist>
+        
+            <values>
+            
+                <fullName>Application Form</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>Brochure</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>FAQs</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>Policy</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>Poster</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>Reference Guide</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>Training Materials</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>Video</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>Welcome Packet</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+        </picklistValues>
     <picklistValues>
-        <picklist>Hearing_Document_Type__c</picklist>
-        <values>
-            <fullName>DT003</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DT008</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DT020</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DT021</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DT026</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DT033</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DT036</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DT046</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DT047</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DT048</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DT049</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DT061</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DT068</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DT075</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DT081</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DT082</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DT084</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DT085</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DT086</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DT089</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DT090</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DT092</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DT103</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DT114</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DT116</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DT119</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DT120</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DT123</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DT128</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DT129</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DT131</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DT137</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DT138</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DT139</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DT142</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DT143</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DT146</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DT147</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DT148</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DT149</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DT150</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DT151</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DT152</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DT153</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DT154</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DT155</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DT156</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DT157</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DT158</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DT159</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DT160</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DT161</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DT162</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DT163</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DT164</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DT165</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DT166</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DT167</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DT168</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>ROD</fullName>
-            <default>false</default>
-        </values>
-    </picklistValues>
+        
+            <picklist>Hearing_Document_Type__c</picklist>
+        
+            <values>
+            
+                <fullName>DT003</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>DT008</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>DT020</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>DT021</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>DT026</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>DT033</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>DT036</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>DT046</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>DT047</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>DT048</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>DT049</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>DT061</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>DT068</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>DT075</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>DT081</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>DT082</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>DT084</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>DT085</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>DT086</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>DT089</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>DT090</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>DT092</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>DT103</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>DT114</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>DT116</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>DT119</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>DT120</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>DT123</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>DT128</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>DT129</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>DT131</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>DT137</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>DT138</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>DT139</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>DT142</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>DT143</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>DT146</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>DT147</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>DT148</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>DT149</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>DT150</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>DT151</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>DT152</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>DT153</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>DT154</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>DT155</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>DT156</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>DT157</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>DT158</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>DT159</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>DT160</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>DT161</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>DT162</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>DT163</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>DT164</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>DT165</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>DT166</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>DT167</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>DT168</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>ROD</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+        </picklistValues>
     <picklistValues>
-        <picklist>Identity_Form_of_Proof__c</picklist>
-        <values>
-            <fullName>Adoption Record</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Affidavit from US citizen</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Affidavit from non-US citizen</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Award Letter</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Birth Certificate</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Certificate of Tribal Affiliation</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Certificate of US Citizenship %28N-560 or N-561%29</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Client statement</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Collateral statement</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Conversion</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Divorce Decree</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Drivers License</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Employee ID</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Federal Government issued ID</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>GED</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Health Insurance Card</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>High School or College Diploma</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>ID verified by other Federal or State agency</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Immigration Document %28Government Issued%29</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Local Government Issued ID</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Marriage License</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Military Dependent%27s ID</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Naturalization Certificate</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Not verified</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Passport</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Property Deed or Title</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Receipt of Medicare%2FMedicare Card</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>School Photo ID</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>School Record</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Social Security Card</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>State Government Issued ID</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>US Coast Guard Merchant Mariner card</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>US Military ID Card or Draft Record</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Verified by Child Support</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Verified by DMV</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Verified by DPP</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Verified by IRS</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Verified by KTAP or Kinship Care</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Verified by Law enforcement</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Verified by SNAP</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Verified by SSA</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Verified by correctional agency</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Verified by residential care facility administration</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Wage Stubs</fullName>
-            <default>false</default>
-        </values>
-    </picklistValues>
+        
+            <picklist>Identity_Form_of_Proof__c</picklist>
+        
+            <values>
+            
+                <fullName>Adoption Record</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>Affidavit from US citizen</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>Affidavit from non-US citizen</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>Award Letter</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>Birth Certificate</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>Certificate of Tribal Affiliation</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>Certificate of US Citizenship %28N-560 or N-561%29</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>Client statement</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>Collateral statement</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>Conversion</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>Divorce Decree</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>Drivers License</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>Employee ID</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>Federal Government issued ID</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>GED</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>Health Insurance Card</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>High School or College Diploma</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>ID verified by other Federal or State agency</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>Immigration Document %28Government Issued%29</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>Local Government Issued ID</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>Marriage License</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>Military Dependent%27s ID</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>Naturalization Certificate</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>Not verified</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>Passport</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>Property Deed or Title</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>Receipt of Medicare%2FMedicare Card</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>School Photo ID</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>School Record</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>Social Security Card</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>State Government Issued ID</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>US Coast Guard Merchant Mariner card</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>US Military ID Card or Draft Record</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>Verified by Child Support</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>Verified by DMV</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>Verified by DPP</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>Verified by IRS</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>Verified by KTAP or Kinship Care</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>Verified by Law enforcement</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>Verified by SNAP</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>Verified by SSA</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>Verified by correctional agency</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>Verified by residential care facility administration</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>Wage Stubs</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+        </picklistValues>
 </RecordType>

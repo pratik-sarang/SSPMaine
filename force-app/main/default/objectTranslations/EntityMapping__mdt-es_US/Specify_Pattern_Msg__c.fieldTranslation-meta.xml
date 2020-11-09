@@ -3,31 +3,52 @@
     <label><!-- Specify_Pattern_Msg --></label>
     <name>Specify_Pattern_Msg__c</name>
     <picklistValues>
-        <masterLabel>Only letters, numbers and the following special characters are allowed: (. , # - ‘ &amp; /)</masterLabel>
-        <translation>Solo están permitidos las letras, los números y los siguientes caracteres especiales: (. , # - ‘ &amp; /)</translation>
-    </picklistValues>
+        
+            <masterLabel>Only letters, numbers and the following special characters are allowed: (. , # - ‘ &amp; /)</masterLabel>
+        
+            <translation>Solo están permitidos las letras, los números y los siguientes caracteres especiales: (. , # - ‘ &amp; /)</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Please enter a valid EIN (Employer Identification Number).</masterLabel>
-        <translation>Ingresar un EIN (Número de identificación del empleador) válido.</translation>
-    </picklistValues>
+        
+            <masterLabel>Please enter a valid EIN (Employer Identification Number).</masterLabel>
+        
+            <translation>Ingresar un EIN (Número de identificación del empleador) válido.</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Please enter a valid year.</masterLabel>
-        <translation>Ingresar un año válido.</translation>
-    </picklistValues>
+        
+            <masterLabel>Please enter a valid year.</masterLabel>
+        
+            <translation>Ingresar un año válido.</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Please enter a value between $0 to $9999999999.99.</masterLabel>
-        <translation>Ingresar un número entre $0 - $9999999999,99</translation>
-    </picklistValues>
+        
+            <masterLabel>Please enter a value between $0 to $9999999999.99.</masterLabel>
+        
+            <translation>Ingresar un número entre $0 - $9999999999,99</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Please enter data in correct format</masterLabel>
-        <translation><!-- Please enter data in correct format --></translation>
-    </picklistValues>
+        
+            <masterLabel>Please enter data in correct format</masterLabel>
+        
+            <translation><!-- Please enter data in correct format --></translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Please enter less than 4 characters</masterLabel>
-        <translation><!-- Please enter less than 4 characters --></translation>
-    </picklistValues>
+        
+            <masterLabel>Please enter less than 4 characters</masterLabel>
+        
+            <translation><!-- Please enter less than 4 characters --></translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Please enter valid characters.</masterLabel>
-        <translation>Ingresar caracteres válidos</translation>
-    </picklistValues>
+        
+            <masterLabel>Please enter valid characters.</masterLabel>
+        
+            <translation>Ingresar caracteres válidos</translation>
+        
+        </picklistValues>
 </CustomFieldTranslation>

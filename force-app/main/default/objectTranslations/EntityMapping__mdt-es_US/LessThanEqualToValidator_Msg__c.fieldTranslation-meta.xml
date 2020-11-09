@@ -3,15 +3,24 @@
     <label><!-- LessThanEqualToValidator_Msg --></label>
     <name>LessThanEqualToValidator_Msg__c</name>
     <picklistValues>
-        <masterLabel>Please enter a value between $0 to ${val}.</masterLabel>
-        <translation>Ingresar un número entre $0 - ${val}</translation>
-    </picklistValues>
+        
+            <masterLabel>Please enter a value between $0 to ${val}.</masterLabel>
+        
+            <translation>Ingresar un número entre $0 - ${val}</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Please enter an age between 0 and 21</masterLabel>
-        <translation>Ingresar una edad entre 0 y 21.</translation>
-    </picklistValues>
+        
+            <masterLabel>Please enter an age between 0 and 21</masterLabel>
+        
+            <translation>Ingresar una edad entre 0 y 21.</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Please enter value less than or equal to {val}</masterLabel>
-        <translation>Ingresar un valor que sea menor o igual que {val}.</translation>
-    </picklistValues>
+        
+            <masterLabel>Please enter value less than or equal to {val}</masterLabel>
+        
+            <translation>Ingresar un valor que sea menor o igual que {val}.</translation>
+        
+        </picklistValues>
 </CustomFieldTranslation>

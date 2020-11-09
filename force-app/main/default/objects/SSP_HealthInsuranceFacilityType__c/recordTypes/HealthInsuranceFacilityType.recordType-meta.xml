@@ -5,77 +5,149 @@
     <description>This is used to store records of Insurance Facility type.</description>
     <label>Health Insurance Facility Type</label>
     <picklistValues>
-        <picklist>EndReason__c</picklist>
-        <values>
-            <fullName>CO</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>JL</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>NP</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>OT</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>PS</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>TE</fullName>
-            <default>false</default>
-        </values>
-    </picklistValues>
+        
+            <picklist>EndReason__c</picklist>
+        
+            <values>
+            
+                <fullName>CO</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>JL</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>NP</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>OT</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>PS</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>TE</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+        </picklistValues>
     <picklistValues>
-        <picklist>FacilityType__c</picklist>
-        <values>
-            <fullName>CA</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DR</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>DT</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>HP</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>MD</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>MS</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>NH</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>OT</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>UK</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>VA</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>VS</fullName>
-            <default>false</default>
-        </values>
-    </picklistValues>
+        
+            <picklist>FacilityType__c</picklist>
+        
+            <values>
+            
+                <fullName>CA</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>DR</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>DT</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>HP</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>MD</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>MS</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>NH</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>OT</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>UK</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>VA</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+            <values>
+            
+                <fullName>VS</fullName>
+            
+                <default>false</default>
+            
+            </values>
+        
+        </picklistValues>
 </RecordType>

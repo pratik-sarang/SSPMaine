@@ -3,1295 +3,2264 @@
     <label><!-- Document Type --></label>
     <name>DocumentType__c</name>
     <picklistValues>
-        <masterLabel>Administrative order staying removal issued by DHS</masterLabel>
-        <translation>Orden administrativa de estadía antes de expulsión emitida por DHS</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Adoption Record</masterLabel>
-        <translation>Registro de adopción</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Adoption Records</masterLabel>
-        <translation>Registros de adopción</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Advertisement</masterLabel>
-        <translation>Anuncio</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Affidavit</masterLabel>
-        <translation>Declaración jurada</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Affidavit from US citizen</masterLabel>
-        <translation>Declaración jurada de ciudadano de EE. UU.</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Affidavit from non-US citizen</masterLabel>
-        <translation>Declaración jurada de ciudadano no estadounidense</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Agency Verified</masterLabel>
-        <translation>Verificado por agencia</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>American Indian Card I-872</masterLabel>
-        <translation>Tarjeta de indígena estadounidense I-872</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Any other document showing reason for good cause circumstance</masterLabel>
-        <translation>Cualquier otro documento que muestra la razón por circunstancia de motivo suficiente</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Applied for SSN</masterLabel>
-        <translation>Solicitó SSN</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Appraisal</masterLabel>
-        <translation>Fecha de evaluación</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Award Letter</masterLabel>
-        <translation>Carta de otorgamiento</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>BOP.gov</masterLabel>
-        <translation>BOP.gov</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Bank Statement</masterLabel>
-        <translation>Estado de cuenta bancaria</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Bill</masterLabel>
-        <translation>Factura</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Bill or Receipt</masterLabel>
-        <translation>Factura o recibo</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Birth Certificate</masterLabel>
-        <translation>Certificado de nacimiento</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Blue Book or NADA trade-in value</masterLabel>
-        <translation>Valor comercial de Libro Azul o NADA</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Business/Rental income records</masterLabel>
-        <translation>Registros de ingreso de empresa/alquiler</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>CIS1</masterLabel>
-        <translation>CIS1</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>CL 700</masterLabel>
-        <translation>CL 700</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>CL 76</masterLabel>
-        <translation>CL 76</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>CL-76</masterLabel>
-        <translation>CL-76</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>COBRA Continuation Notice</masterLabel>
-        <translation>Aviso de continuación de COBRA</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Census Record</masterLabel>
-        <translation>Registro de censo</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Certificate of Birth Abroad of US Citizen (DS-1350, FS-240, or FS-545)</masterLabel>
-        <translation>Certificado de nacimiento en el extranjero de ciudadano de EE. UU. (DS-1350, FS-240 o FS-545)</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Certificate of Citizenship in non-US country</masterLabel>
-        <translation>Certificado de ciudadanía en país diferente a EE. UU.</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Certificate of Coverage</masterLabel>
-        <translation>Certificado de cobertura</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Certificate of Degree of Indian Blood</masterLabel>
-        <translation>Certificado de grado de sangre indígena</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Certificate of Tribal Affiliation</masterLabel>
-        <translation>Certificado de afiliación tribal</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Certificate of US Citizenship (N-560 or N-561)</masterLabel>
-        <translation>Certificado de ciudadanía de EE. UU. (N-560 o N-561)</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Certification from HHS</masterLabel>
-        <translation>Certificación de HHS</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Civil Service Employment Document</masterLabel>
-        <translation>Documento de Empleo del Servicio Civil</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Class Schedule</masterLabel>
-        <translation>Horario de clase</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Client Verified at Interview</masterLabel>
-        <translation>Verificado por cliente en entrevista</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Client statement</masterLabel>
-        <translation>Declaración del cliente</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Collateral Contact with Boarder</masterLabel>
-        <translation>Contacto colateral con pensionista</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Collateral Contact with Educational Institute</masterLabel>
-        <translation>Contacto colateral con instituto educativo</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Collateral Contact with PVA</masterLabel>
-        <translation>Contacto colateral con PVA</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Collateral Contact with PVA or County Clerk</masterLabel>
-        <translation>Contacto colateral con PVA o secretario del condado</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Collateral Contact with SSA</masterLabel>
-        <translation>Contacto colateral con SSA</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Collateral Contract</masterLabel>
-        <translation>Contrato colateral</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Collateral contact</masterLabel>
-        <translation>Contacto colateral</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Collateral statement</masterLabel>
-        <translation>Declaración colateral</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Contract</masterLabel>
-        <translation>Contrato</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Contract with TV or Radio</masterLabel>
-        <translation>Contrato con televisión o radio</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Copy Of Lifetime Care Agreement</masterLabel>
-        <translation>COPIA DE ACUERDO DE CUIDADOS DE POR VIDA</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Copy of Contract</masterLabel>
-        <translation>Copia de contrato</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Copy of the Flyer</masterLabel>
-        <translation>Copia del folleto</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Copy of the Notice</masterLabel>
-        <translation>Copia del aviso</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Court  Documents</masterLabel>
-        <translation>Documentos judiciales</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Court Document</masterLabel>
-        <translation>Documento judicial</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Court Documents</masterLabel>
-        <translation>Documentos judiciales</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Court Order</masterLabel>
-        <translation>Orden judicial</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Court Ordered </masterLabel>
-        <translation>Ordenado judicialmente</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Court Verified</masterLabel>
-        <translation>Verificado judicialmente</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Cuban/Haitian entrant</masterLabel>
-        <translation>Procedente de Cuba/Haití</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>DCC 90L</masterLabel>
-        <translation>DCC 90L</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>DCC-90L</masterLabel>
-        <translation>DCC-90L</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>DHS Office</masterLabel>
-        <translation>Oficina de DHS</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>DS2019 (Certificate of Eligibility for Exchange Visitor (J-1) Status)</masterLabel>
-        <translation>DS2019 (Certificado de elegibilidad para estatus de visitante de intercambio (J-1))</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Date of Death Statement from Funeral Home</masterLabel>
-        <translation>Fecha de declaración de fallecimiento de funeraria</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Dealer statement of value</masterLabel>
-        <translation>Declaración de valor del comerciante</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Death Record</masterLabel>
-        <translation>Registro de fallecimiento</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Deed</masterLabel>
-        <translation>Escritura</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Deposit Ticket</masterLabel>
-        <translation>Ticket de depósito</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Divorce Agreement</masterLabel>
-        <translation>Acuerdo de Divorcio</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Divorce Decree</masterLabel>
-        <translation>Sentencia de divorcio</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Doctor&apos;s Note</masterLabel>
-        <translation>Nota del médico</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Doctor&apos;s Statement</masterLabel>
-        <translation>DECLARACIÓN DEL MÉDICO</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Document indicating withholding of removal</masterLabel>
-        <translation>Documento que indica la retención de la expulsión</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Document on Tribal Letterhead</masterLabel>
-        <translation>Documento en papel con membrete tribal</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Document showing payment from person/agency</masterLabel>
-        <translation>Documentos que muestran pago de persona/agencia</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Documents verifying ownership other than 100%</masterLabel>
-        <translation>Documentos que verifican propiedad que no sea 100%</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Does not have an SSN and may only be issued an SSN for a valid non-work reason</masterLabel>
-        <translation>No tiene SSN y solo se le puede entregar uno por un motivo válido no relacionado con trabajo</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Drivers License</masterLabel>
-        <translation>Licencia de conducir</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Duplicate SSN</masterLabel>
-        <translation>Número de Seguro Social duplicado</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>E Sign</masterLabel>
-        <translation>Firma electrónica</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Employee ID</masterLabel>
-        <translation>ID de empleado</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Employer Statement</masterLabel>
-        <translation>Declaración del empleador</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Employer Statement </masterLabel>
-        <translation>Declaración del empleador</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Evidence of compliance with Child Citizen Act of 2000</masterLabel>
-        <translation>Comprobante de cumplimiento con la Ley de ciudadanía para menores de 2000</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Expense Changes</masterLabel>
-        <translation>Cambios en gastos</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>FS 704</masterLabel>
-        <translation>FS 704</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>FS-19</masterLabel>
-        <translation>FS-19</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Federal Government issued ID</masterLabel>
-        <translation>ID emitida por el gobierno federal</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Federal Hub</masterLabel>
-        <translation>Federal Hub (Concentrador Federal)</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Final Hearing Order</masterLabel>
-        <translation>Orden de audiencia definitiva</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Financial Institution Statement</masterLabel>
-        <translation>Declaración de institución financiera</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Financial Institution Statement </masterLabel>
-        <translation>Declaración de institución financiera</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>GED</masterLabel>
-        <translation>GED (Diploma General de Educación)</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Good Cause - Paystub Showing Insurance Premium Deduction</masterLabel>
-        <translation>Motivo suficiente - Talón de pago que muestra deducción de prima de seguro</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Hard Copy</masterLabel>
-        <translation>Copia en papel</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Health Coverage Form</masterLabel>
-        <translation>Formulario de cobertura de salud</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Health Insurance Card</masterLabel>
-        <translation>Tarjeta de seguro de salud</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Health Professional Statement</masterLabel>
-        <translation>Declaración de profesional de la salud</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>High School or College Diploma</masterLabel>
-        <translation>Diploma de escuela secundaria o centro universitario</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Home School Attendance Report</masterLabel>
-        <translation>Informe de asistencia a escuela en el hogar</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Hospital Birth Record</masterLabel>
-        <translation>Certificado de nacimiento de hospital</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Household Changes </masterLabel>
-        <translation>Cambios en el hogar</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>I-20 (Certificate of Eligibility for Nonimmigrant (F-1) Student Status)</masterLabel>
-        <translation>I-20 (Certificado de elegibilidad para estatus de estudiante no inmigrante (F-1))</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>I-327 (Reentry Permit)</masterLabel>
-        <translation>I-327 (Permiso para nueva entrada)</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>I-551 (Permanent Resident Card)</masterLabel>
-        <translation>I-551 (Tarjeta de residente permanente)</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>I-571 (Refugee Travel Document)</masterLabel>
-        <translation>I-571 (Documento de viaje de refugiado)</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>I-766 (Employment Authorization Card)</masterLabel>
-        <translation>I-766 (Tarjeta de autorización para empleo)</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>I-94 (Arrival/Departure Record)</masterLabel>
-        <translation>I-94 (Registro de llegada/partida)</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>I-94 (Arrival/Departure Record) in Unexpired Foreign Passport</masterLabel>
-        <translation>I-94 (Registro de llegada/partida) en pasaporte extranjero no vencido</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>ID verified by other Federal or State agency</masterLabel>
-        <translation>ID verificada por otra agencia federal o estatal</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>INS Records</masterLabel>
-        <translation>Registros de Servicios de Ciudadanía e Inmigración (INS)</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>IRS Income Reporting Form (1099, etc.)</masterLabel>
-        <translation>Formulario de declaración de ingreso de IRS (1099, etcétera)</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Immigration Document</masterLabel>
-        <translation>Documento de inmigración</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Immigration Document (Government Issued)</masterLabel>
-        <translation>Documento de inmigración (emitido por el gobierno)</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Incarceration Discharge Record</masterLabel>
-        <translation>Registro de liberación de encarcelamiento</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Income Changes</masterLabel>
-        <translation>Cambios en el ingreso</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Income Tax Return</masterLabel>
-        <translation>Declaración de impuesto a la renta</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Initial Enrollment - Any other document showing insurance premium payment</masterLabel>
-        <translation>Inscripción inicial - Cualquier otro documento que muestra pago de prima de seguro</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Initial Enrollment - Paystub showing Insurance Premium Deduction</masterLabel>
-        <translation>Inscripción inicial - Talón de pago que muestra deducción de prima de seguro</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Institutional Admission Papers for Citizenship</masterLabel>
-        <translation>Documentos de admisión institucional para ciudadanía</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Insurance Company Record</masterLabel>
-        <translation>Registro de empresa de seguro</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Invoice/Bill</masterLabel>
-        <translation>Factura/cuenta</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>KASES</masterLabel>
-        <translation>KASES</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>KHBE-79</masterLabel>
-        <translation>KHBE-79</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>KI-HIPP - Health Insurance Card</masterLabel>
-        <translation>KI-HIPP - Tarjeta de seguro de salud</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>KI-HIPP - Insurance Company Record</masterLabel>
-        <translation>KI-HIPP - Registro de empresa de seguro</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>KI-HIPP - OTHER</masterLabel>
-        <translation>KI-HIPP - OTRO</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>KI-HIPP 63 Direct Deposit Authorization Form</masterLabel>
-        <translation>Formulario de Autorización de depósito directo 63 de KI-HIPP</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>KOOL</masterLabel>
-        <translation>KOOL (Sistema de búsqueda de infractores en línea de Kentucky)</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>KVETS</masterLabel>
-        <translation>KVETS (Sistema de Seguimiento de Eventos Vitales de Kentucky)</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>KW-33</masterLabel>
-        <translation><!-- KW-33 --></translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Land Contact</masterLabel>
-        <translation>Contrato de compraventa</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Land Contract</masterLabel>
-        <translation>Contrato de compraventa</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Landlord Letter</masterLabel>
-        <translation>Carta del dueño de la vivienda</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Landlord Statement</masterLabel>
-        <translation>Declaración de dueño de la vivienda</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Law Enforcement Records</masterLabel>
-        <translation>Registros de agencia de orden público</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Lease</masterLabel>
-        <translation>Arrendamiento</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Lease Document</masterLabel>
-        <translation>Documento de arrendamiento</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Lease agreement</masterLabel>
-        <translation>Acuerdo de arrendamiento</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Legal Document</masterLabel>
-        <translation>Documento legal</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Letter</masterLabel>
-        <translation>Carta</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Letter from Social Security Administration</masterLabel>
-        <translation>Carta de Administración del Seguro Social</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Letter from Tribe about Income</masterLabel>
-        <translation>Carta de tribu sobre ingreso</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Letter/statement  from Department of Defense (TRICARE)</masterLabel>
-        <translation>Carta/Declaración del Departamento de Defensa (TRICARE)</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Letter/statement  from Department of Veteran Affairs (VA coverage)</masterLabel>
-        <translation>Carta/Declaración del Departamento de Asuntos para Veteranos (cobertura VA)</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Listed with Real Estate Agent</masterLabel>
-        <translation>A la venta con agente de bienes inmuebles</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Loan Contract</masterLabel>
-        <translation>Contrato de préstamo</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Loan Statement</masterLabel>
-        <translation>DECLARACIÓN DE PRÉSTAMO</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Local Government Issued ID</masterLabel>
-        <translation>ID emitida por el gobierno local</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Log</masterLabel>
-        <translation>Registro</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Lost Policy Certificate</masterLabel>
-        <translation>Certificado de pérdida de póliza</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>MAP 14</masterLabel>
-        <translation>MAP 14</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>MAP-14</masterLabel>
-        <translation>MAP-14</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>MRT Determination</masterLabel>
-        <translation>Determinación del Equipo de Determinación Médica</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Machine Readable Immigrant Visa (with Temporary I-551 Language)</masterLabel>
-        <translation>Visa de inmigrante legible por máquina (con texto temporal I-551)</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Marriage License</masterLabel>
-        <translation>Licencia de matrimonio</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Medical Record</masterLabel>
-        <translation>Registro médico</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Member of a federally recognized Indian tribe or American Indian born in Canada</masterLabel>
-        <translation>Miembro de una tribu indígena reconocida federalmente o indígena estadounidense nacido en Canadá</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Mental Health Professional Statement</masterLabel>
-        <translation>Declaración de profesional de la salud mental</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Military Dependent&apos;s ID</masterLabel>
-        <translation>ID de dependiente militar</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Military Record</masterLabel>
-        <translation>Registro militar</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Mismatch</masterLabel>
-        <translation>No coincide</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Monthly Mortgage Statement</masterLabel>
-        <translation>ESTADO DE CUENTA MENSUAL DE HIPOTECA</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Mortgage / Land Contract</masterLabel>
-        <translation>Contrato de compraventa / Hipoteca</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Mortgage Contract</masterLabel>
-        <translation>Contrato de hipoteca</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Naturalization Certificate</masterLabel>
-        <translation>Certificado de naturalización</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Needs to Obtain</masterLabel>
-        <translation>Se debe obtener</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Newborn without SSN</masterLabel>
-        <translation>Recién nacido sin SSN</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Newspaper Clipping</masterLabel>
-        <translation>Recortes de diarios</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Newspaper Clippings</masterLabel>
-        <translation>Recortes de diarios</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>No Signature provided</masterLabel>
-        <translation>No se proporcionó firma</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Northern Mariana Card I-873</masterLabel>
-        <translation>Tarjeta de Islas Marianas del Norte I-873</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Not Verified - Paris Match</masterLabel>
-        <translation>No verificado - Coincidencia con sistema Paris</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Not eligible to receive SSN based on alien status</masterLabel>
-        <translation>No elegible para recibir número de Seguro Social en base a estatus de extranjero</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Notarized Statement</masterLabel>
-        <translation>Declaración certificada por notario</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Notice of Action (I-797)</masterLabel>
-        <translation>Aviso de acción (I-797)</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>OET Interface</masterLabel>
-        <translation>Interfaz OET</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>OTHER</masterLabel>
-        <translation>OTRO</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Office of Refugee Resettlement</masterLabel>
-        <translation>Oficina de Reasentamiento de Refugiados</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Office of Refugee Resettlement eligibility letter (if under 18)</masterLabel>
-        <translation>Carta de elegibilidad de la Oficina de Reasentamiento de Refugiados (si es menor de 18 años)</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Ongoing Verification - Document showing insurance premium payment</masterLabel>
-        <translation>Verificación continua - Cualquier otro documento que muestra pago de prima de seguro</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Ongoing Verification - Paystub Showing Insurance Premium Deduction</masterLabel>
-        <translation>Verificación continua - Talón de pago que muestra deducción de prima de seguro</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Original Record</masterLabel>
-        <translation>Registro original</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Other</masterLabel>
-        <translation>Otro</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Other (Document Source)</masterLabel>
-        <translation>Otro (fuente de documento)</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Other Birth Records</masterLabel>
-        <translation>Otros registros de nacimiento</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Other Document Showing Name and Address</masterLabel>
-        <translation>Otro documento con nombre y dirección</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Other Immigration Document</masterLabel>
-        <translation>Otro documento de inmigración</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Other acceptable</masterLabel>
-        <translation>Otro aceptable</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>P&amp;P Verified</masterLabel>
-        <translation>Verificado por P y P</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>PA FS-76</masterLabel>
-        <translation>PA FS-76</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>PA-33D</masterLabel>
-        <translation>PA-33D</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>PAFS - 76</masterLabel>
-        <translation>PAFS - 76</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>PAFS 700</masterLabel>
-        <translation>PAFS 700</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>PAFS 702</masterLabel>
-        <translation>PAFS 702</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>PAFS 76</masterLabel>
-        <translation>PAFS 76</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>PARIS</masterLabel>
-        <translation>PARIS</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>PVA Printout</masterLabel>
-        <translation>Impresión de PVA</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Passport</masterLabel>
-        <translation>Pasaporte</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Paternity Records</masterLabel>
-        <translation>Registros de paternidad</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Pay Stubs</masterLabel>
-        <translation>Talones de pago</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Pension Documentation</masterLabel>
-        <translation>Documentación de pensión</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Personal Record</masterLabel>
-        <translation>Registro personal</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Personal Records Showing Deductions</masterLabel>
-        <translation>Registros personales que muestran deducciones</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Personal Records showing income</masterLabel>
-        <translation>Registros personales que muestran ingreso</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Petition under section 204(a)(1)(A) or (B) of INA</masterLabel>
-        <translation>Petición según sección 204(a)(1)(A) o (B) de INA</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Petition under section 244(a)(3) of INA</masterLabel>
-        <translation>Petición según sección 244(a)(3) de INA</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Picture</masterLabel>
-        <translation>Imagen</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Plan Description Document</masterLabel>
-        <translation>Documento de descripción del plan</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Plan Document</masterLabel>
-        <translation>Documento del plan</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Police Report</masterLabel>
-        <translation>Reporte Policial</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Policy</masterLabel>
-        <translation>Póliza</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Power of Attorney</masterLabel>
-        <translation>Poder</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Power of Attorney Document</masterLabel>
-        <translation>Documento de poder</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Premium Rate Sheet</masterLabel>
-        <translation>Hoja de tarifas de prima</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Previously Verified</masterLabel>
-        <translation>Verificado anteriormente</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Program 68</masterLabel>
-        <translation>PROGRAMA 68</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Promissory Note</masterLabel>
-        <translation>Pagaré</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Proof of Benefit Exclusion</masterLabel>
-        <translation>Comprobante de exclusión de beneficio</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Proof of Birth</masterLabel>
-        <translation>Comprobante de nacimiento</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Proof of amount owed</masterLabel>
-        <translation>Comprobante de monto que se debe</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Property Deed or Title</masterLabel>
-        <translation>Escritura o título de propiedad</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Property Tax Bill</masterLabel>
-        <translation>Factura de impuesto a la propiedad</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Protective Order</masterLabel>
-        <translation>Orden de Protección</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Public Health Record</masterLabel>
-        <translation>Registro de salud pública</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Qualifying Income Trust Document</masterLabel>
-        <translation>Documento de fideicomiso de ingreso que califica</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Quit Claim Deed</masterLabel>
-        <translation>Documento de renuncia a la propiedad</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Receipt</masterLabel>
-        <translation>Recibo</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Receipt of Donation</masterLabel>
-        <translation>Recibo de donación</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Receipt of Medicare/Medicare Card</masterLabel>
-        <translation>Recibo de Medicare/Tarjeta de Medicare</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Records (court, medical, criminal, child protective services, social services, psychological, or law enforcement)</masterLabel>
-        <translation>Registros (judiciales, médicos, penales, servicios de protección de menores, servicios sociales, psicológicos o de agencias del orden público)</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Records showing reason for not cooperating with Medical Support Enforcement</masterLabel>
-        <translation>Registros que demuestren motivo para no cooperar para exigir la manutención médica</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Refuses to obtain an SSN because of a well-established religious objective</masterLabel>
-        <translation>Se niega a obtener número de Seguro Social debido a objeción religiosa bien fundamentada</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Refuses to provide an SSN</masterLabel>
-        <translation>Se niega a proporcionar número de Seguro Social</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Religious Record</masterLabel>
-        <translation>Registro religioso</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Rent and Mortgage Statement</masterLabel>
-        <translation>Declaración de hipoteca y alquiler</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Rent or Mortgage Statement</masterLabel>
-        <translation>Declaración de alquiler o hipoteca</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Resident of American Samoa</masterLabel>
-        <translation>Residente de Samoa Americana</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Resource Changes</masterLabel>
-        <translation>Cambios en recursos</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>SAFE Form</masterLabel>
-        <translation>Formulario de SAFE</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>SF-1</masterLabel>
-        <translation>SF-1</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>SF-2</masterLabel>
-        <translation>SF-2</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>SS-5 / System Generated SSN Application</masterLabel>
-        <translation>SS-5 / Solicitud de número de Seguro Social generada por sistema</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>SWICA</masterLabel>
-        <translation>SWICA (Agencia estatal de cobro de ingreso de salarios)</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Sales Contract</masterLabel>
-        <translation>Contrato de ventas</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>School Attendance Report</masterLabel>
-        <translation>Informe de asistencia a la escuela</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>School Photo ID</masterLabel>
-        <translation>ID con foto de escuela</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>School Record</masterLabel>
-        <translation>Registro escolar</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>School Statement</masterLabel>
-        <translation>Declaración de la escuela</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>School Transcript</masterLabel>
-        <translation>Expediente escolar</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Sell by Owner</masterLabel>
-        <translation>Venta por dueño</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Separation Agreement</masterLabel>
-        <translation>Acuerdo de Separación</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Settlement Statement</masterLabel>
-        <translation>Declaración de acuerdo</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Signed Application</masterLabel>
-        <translation>Solicitud firmada</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Social Security Administration</masterLabel>
-        <translation>Administración del Seguro Social</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Social Security Card</masterLabel>
-        <translation>Tarjeta de Seguro Social</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>State Government Issued ID</masterLabel>
-        <translation>ID emitida por el gobierno estatal</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Statement From Nursing Facility</masterLabel>
-        <translation>DECLARACIÓN DE CENTRO DE CUIDADOS DE ENFERMERÍA</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Statement from Educational Institution</masterLabel>
-        <translation>Declaración de institución educativa</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Statement from Employer</masterLabel>
-        <translation>Declaración del empleador</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Statement from Institution</masterLabel>
-        <translation>Declaración de institución</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Statement from Insurance Company</masterLabel>
-        <translation>Estado de cuenta de compañía de seguros</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Statement from Life Insurance Company</masterLabel>
-        <translation>Estado de cuenta de compañía de seguro de vida</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Statement from OET</masterLabel>
-        <translation>Declaración de OET</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Statement from Resource Teacher</masterLabel>
-        <translation>Declaración de docente de recursos</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Statement from bank or financial institution</masterLabel>
-        <translation>Declaración del banco o institución financiera</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Statement from lender</masterLabel>
-        <translation>Declaración de prestamista</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Statement from person/agency/financial institution</masterLabel>
-        <translation>Declaración de persona/agencia/institución financiera</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Statement of Attending Physician or Midwife</masterLabel>
-        <translation>Declaración de médico o partera que asistió el parto</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Summary of Benefits and Coverage (SBC)</masterLabel>
-        <translation>Resumen de Beneficios y Cobertura (SBC)</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>System Applied</masterLabel>
-        <translation>Presentación de solicitud por sistema</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>System Inquiry</masterLabel>
-        <translation>Investigación en el sistema</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>System Verified</masterLabel>
-        <translation>Verificado por sistema</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Tax Record</masterLabel>
-        <translation>Registro de impuestos</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Tax Return</masterLabel>
-        <translation>Declaración de impuestos</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Temporary I-551 Stamp (on passport or I-94)</masterLabel>
-        <translation>Sello temporal I-551 (en pasaporte o I-94)</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>The Work Number</masterLabel>
-        <translation>El número de trabajo</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Tip Log</masterLabel>
-        <translation>Registro de propinas</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Title</masterLabel>
-        <translation>Título</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Transfer Deed</masterLabel>
-        <translation>Escritura de transferencia</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Tribal Census Document</masterLabel>
-        <translation>Documento de censo tribal</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Tribal Enrollment Card</masterLabel>
-        <translation>Tarjeta de inscripción tribal</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Tribal statement regarding income</masterLabel>
-        <translation>Declaración tribal sobre ingreso</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Trust</masterLabel>
-        <translation>Fideicomiso</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Trust Contract</masterLabel>
-        <translation>Contrato de fideicomiso</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>US Coast Guard Merchant Mariner card</masterLabel>
-        <translation>Tarjeta de guardacostas o marino mercante de EE. UU.</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>US Military ID Card or Draft Record</masterLabel>
-        <translation>Tarjeta de ID de ejército de EE. UU. o registro del reclutamiento</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>US citizen ID card (I-197 or I-179)</masterLabel>
-        <translation>Tarjeta de ciudadano de EE. UU. (I-197 o I-179)</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Unemployment Insurance Agency</masterLabel>
-        <translation>Agencia de seguro por desempleo</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Unexpired Foreign Passport</masterLabel>
-        <translation>Pasaporte extranjero no vencido</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Utility Bill</masterLabel>
-        <translation>Factura de servicios públicos</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Vehicle Registration</masterLabel>
-        <translation>REGISTRO DE VEHÍCULO</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>VLP</masterLabel>
-        <translation>Verificar presencia legal</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Verification Required for Renewal</masterLabel>
-        <translation>Se requiere verificación para renovación</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Verification not required - excluded income</masterLabel>
-        <translation>Verificación no requerida - excluido ingreso</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Verified by Child Support</masterLabel>
-        <translation>Verificado por Manutención Infantil</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Verified by DMV</masterLabel>
-        <translation>Verificado por DMV (Departamento de Vehículos Motorizados)</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Verified by DPP</masterLabel>
-        <translation>Verificado por DPP (Director del Ministerio Público)</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Verified by IRS</masterLabel>
-        <translation>Verificado por IRS (Servicio de Impuestos Internos)</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Verified by KTAP or Kinship Care</masterLabel>
-        <translation>Verificado por KTAP o Kinship Care</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Verified by Law enforcement</masterLabel>
-        <translation>Verificado por agencias del orden público</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Verified by Receipt of SSA Benefits</masterLabel>
-        <translation>Verificado por recibo de beneficios de Administración de Seguro Social</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Verified by SNAP</masterLabel>
-        <translation>Verificado por SNAP (Programa de Asistencia Nutricional Suplementaria)</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Verified by SSA</masterLabel>
-        <translation>Verificado por SSA (Administración de Seguro Social)</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Verified by correctional agency</masterLabel>
-        <translation>Verificado por agencia correccional</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Verified by residential care facility administration</masterLabel>
-        <translation>Verificado por administración de centro residencial para cuidados</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Voice Signature</masterLabel>
-        <translation>Firma de voz</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Voided Personalized Check</masterLabel>
-        <translation>Cheque personalizado anulado</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Wage / Income Garnishment</masterLabel>
-        <translation>Embargo de salario / ingreso</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Wage Stubs</masterLabel>
-        <translation>Talones de salario</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Website Listing</masterLabel>
-        <translation>Listado en sitio web</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Will</masterLabel>
-        <translation>Testamento</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Without SSN Card</masterLabel>
-        <translation>Sin tarjeta SSN</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Written Income Statement</masterLabel>
-        <translation>Declaración por escrito de ingreso</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Written Statement</masterLabel>
-        <translation>Declaración escrita</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Written Statement </masterLabel>
-        <translation>Declaración escrita</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Written Statement From Certified Professional</masterLabel>
-        <translation>DECLARACIÓN POR ESCRITO DE PROFESIONAL CERTIFICADO</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Written Statement From Lender</masterLabel>
-        <translation>DECLARACIÓN POR ESCRITO DEL PRESTAMISTA</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Written Statement From a Public or Licensed Private Social Agency</masterLabel>
-        <translation>Declaración por escrito de una agencia pública o privada social con licencia</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Written Statement for Income or No Income</masterLabel>
-        <translation>Declaración por escrito de ingreso o no ingreso</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Written Statement from Boarder</masterLabel>
-        <translation>Declaración por escrito del pensionista</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Written Statement from Child Care Facility</masterLabel>
-        <translation>Declaración por escrito de la instalación de Cuidados Infantiles</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Written Statement from SSA</masterLabel>
-        <translation>Declaración por escrito de SSA</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>medical record</masterLabel>
-        <translation>registro médico</translation>
-    </picklistValues>
+        
+            <masterLabel>Administrative order staying removal issued by DHS</masterLabel>
+        
+            <translation>Orden administrativa de estadía antes de expulsión emitida por DHS</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Adoption Record</masterLabel>
+        
+            <translation>Registro de adopción</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Adoption Records</masterLabel>
+        
+            <translation>Registros de adopción</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Advertisement</masterLabel>
+        
+            <translation>Anuncio</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Affidavit</masterLabel>
+        
+            <translation>Declaración jurada</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Affidavit from US citizen</masterLabel>
+        
+            <translation>Declaración jurada de ciudadano de EE. UU.</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Affidavit from non-US citizen</masterLabel>
+        
+            <translation>Declaración jurada de ciudadano no estadounidense</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Agency Verified</masterLabel>
+        
+            <translation>Verificado por agencia</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>American Indian Card I-872</masterLabel>
+        
+            <translation>Tarjeta de indígena estadounidense I-872</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Any other document showing reason for good cause circumstance</masterLabel>
+        
+            <translation>Cualquier otro documento que muestra la razón por circunstancia de motivo suficiente</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Applied for SSN</masterLabel>
+        
+            <translation>Solicitó SSN</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Appraisal</masterLabel>
+        
+            <translation>Fecha de evaluación</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Award Letter</masterLabel>
+        
+            <translation>Carta de otorgamiento</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>BOP.gov</masterLabel>
+        
+            <translation>BOP.gov</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Bank Statement</masterLabel>
+        
+            <translation>Estado de cuenta bancaria</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Bill</masterLabel>
+        
+            <translation>Factura</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Bill or Receipt</masterLabel>
+        
+            <translation>Factura o recibo</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Birth Certificate</masterLabel>
+        
+            <translation>Certificado de nacimiento</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Blue Book or NADA trade-in value</masterLabel>
+        
+            <translation>Valor comercial de Libro Azul o NADA</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Business/Rental income records</masterLabel>
+        
+            <translation>Registros de ingreso de empresa/alquiler</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>CIS1</masterLabel>
+        
+            <translation>CIS1</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>CL 700</masterLabel>
+        
+            <translation>CL 700</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>CL 76</masterLabel>
+        
+            <translation>CL 76</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>CL-76</masterLabel>
+        
+            <translation>CL-76</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>COBRA Continuation Notice</masterLabel>
+        
+            <translation>Aviso de continuación de COBRA</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Census Record</masterLabel>
+        
+            <translation>Registro de censo</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Certificate of Birth Abroad of US Citizen (DS-1350, FS-240, or FS-545)</masterLabel>
+        
+            <translation>Certificado de nacimiento en el extranjero de ciudadano de EE. UU. (DS-1350, FS-240 o FS-545)</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Certificate of Citizenship in non-US country</masterLabel>
+        
+            <translation>Certificado de ciudadanía en país diferente a EE. UU.</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Certificate of Coverage</masterLabel>
+        
+            <translation>Certificado de cobertura</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Certificate of Degree of Indian Blood</masterLabel>
+        
+            <translation>Certificado de grado de sangre indígena</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Certificate of Tribal Affiliation</masterLabel>
+        
+            <translation>Certificado de afiliación tribal</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Certificate of US Citizenship (N-560 or N-561)</masterLabel>
+        
+            <translation>Certificado de ciudadanía de EE. UU. (N-560 o N-561)</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Certification from HHS</masterLabel>
+        
+            <translation>Certificación de HHS</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Civil Service Employment Document</masterLabel>
+        
+            <translation>Documento de Empleo del Servicio Civil</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Class Schedule</masterLabel>
+        
+            <translation>Horario de clase</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Client Verified at Interview</masterLabel>
+        
+            <translation>Verificado por cliente en entrevista</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Client statement</masterLabel>
+        
+            <translation>Declaración del cliente</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Collateral Contact with Boarder</masterLabel>
+        
+            <translation>Contacto colateral con pensionista</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Collateral Contact with Educational Institute</masterLabel>
+        
+            <translation>Contacto colateral con instituto educativo</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Collateral Contact with PVA</masterLabel>
+        
+            <translation>Contacto colateral con PVA</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Collateral Contact with PVA or County Clerk</masterLabel>
+        
+            <translation>Contacto colateral con PVA o secretario del condado</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Collateral Contact with SSA</masterLabel>
+        
+            <translation>Contacto colateral con SSA</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Collateral Contract</masterLabel>
+        
+            <translation>Contrato colateral</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Collateral contact</masterLabel>
+        
+            <translation>Contacto colateral</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Collateral statement</masterLabel>
+        
+            <translation>Declaración colateral</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Contract</masterLabel>
+        
+            <translation>Contrato</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Contract with TV or Radio</masterLabel>
+        
+            <translation>Contrato con televisión o radio</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Copy Of Lifetime Care Agreement</masterLabel>
+        
+            <translation>COPIA DE ACUERDO DE CUIDADOS DE POR VIDA</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Copy of Contract</masterLabel>
+        
+            <translation>Copia de contrato</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Copy of the Flyer</masterLabel>
+        
+            <translation>Copia del folleto</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Copy of the Notice</masterLabel>
+        
+            <translation>Copia del aviso</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Court  Documents</masterLabel>
+        
+            <translation>Documentos judiciales</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Court Document</masterLabel>
+        
+            <translation>Documento judicial</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Court Documents</masterLabel>
+        
+            <translation>Documentos judiciales</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Court Order</masterLabel>
+        
+            <translation>Orden judicial</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Court Ordered </masterLabel>
+        
+            <translation>Ordenado judicialmente</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Court Verified</masterLabel>
+        
+            <translation>Verificado judicialmente</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Cuban/Haitian entrant</masterLabel>
+        
+            <translation>Procedente de Cuba/Haití</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>DCC 90L</masterLabel>
+        
+            <translation>DCC 90L</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>DCC-90L</masterLabel>
+        
+            <translation>DCC-90L</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>DHS Office</masterLabel>
+        
+            <translation>Oficina de DHS</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>DS2019 (Certificate of Eligibility for Exchange Visitor (J-1) Status)</masterLabel>
+        
+            <translation>DS2019 (Certificado de elegibilidad para estatus de visitante de intercambio (J-1))</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Date of Death Statement from Funeral Home</masterLabel>
+        
+            <translation>Fecha de declaración de fallecimiento de funeraria</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Dealer statement of value</masterLabel>
+        
+            <translation>Declaración de valor del comerciante</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Death Record</masterLabel>
+        
+            <translation>Registro de fallecimiento</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Deed</masterLabel>
+        
+            <translation>Escritura</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Deposit Ticket</masterLabel>
+        
+            <translation>Ticket de depósito</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Divorce Agreement</masterLabel>
+        
+            <translation>Acuerdo de Divorcio</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Divorce Decree</masterLabel>
+        
+            <translation>Sentencia de divorcio</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Doctor&apos;s Note</masterLabel>
+        
+            <translation>Nota del médico</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Doctor&apos;s Statement</masterLabel>
+        
+            <translation>DECLARACIÓN DEL MÉDICO</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Document indicating withholding of removal</masterLabel>
+        
+            <translation>Documento que indica la retención de la expulsión</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Document on Tribal Letterhead</masterLabel>
+        
+            <translation>Documento en papel con membrete tribal</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Document showing payment from person/agency</masterLabel>
+        
+            <translation>Documentos que muestran pago de persona/agencia</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Documents verifying ownership other than 100%</masterLabel>
+        
+            <translation>Documentos que verifican propiedad que no sea 100%</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Does not have an SSN and may only be issued an SSN for a valid non-work reason</masterLabel>
+        
+            <translation>No tiene SSN y solo se le puede entregar uno por un motivo válido no relacionado con trabajo</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Drivers License</masterLabel>
+        
+            <translation>Licencia de conducir</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Duplicate SSN</masterLabel>
+        
+            <translation>Número de Seguro Social duplicado</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>E Sign</masterLabel>
+        
+            <translation>Firma electrónica</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Employee ID</masterLabel>
+        
+            <translation>ID de empleado</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Employer Statement</masterLabel>
+        
+            <translation>Declaración del empleador</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Employer Statement </masterLabel>
+        
+            <translation>Declaración del empleador</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Evidence of compliance with Child Citizen Act of 2000</masterLabel>
+        
+            <translation>Comprobante de cumplimiento con la Ley de ciudadanía para menores de 2000</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Expense Changes</masterLabel>
+        
+            <translation>Cambios en gastos</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>FS 704</masterLabel>
+        
+            <translation>FS 704</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>FS-19</masterLabel>
+        
+            <translation>FS-19</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Federal Government issued ID</masterLabel>
+        
+            <translation>ID emitida por el gobierno federal</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Federal Hub</masterLabel>
+        
+            <translation>Federal Hub (Concentrador Federal)</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Final Hearing Order</masterLabel>
+        
+            <translation>Orden de audiencia definitiva</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Financial Institution Statement</masterLabel>
+        
+            <translation>Declaración de institución financiera</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Financial Institution Statement </masterLabel>
+        
+            <translation>Declaración de institución financiera</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>GED</masterLabel>
+        
+            <translation>GED (Diploma General de Educación)</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Good Cause - Paystub Showing Insurance Premium Deduction</masterLabel>
+        
+            <translation>Motivo suficiente - Talón de pago que muestra deducción de prima de seguro</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Hard Copy</masterLabel>
+        
+            <translation>Copia en papel</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Health Coverage Form</masterLabel>
+        
+            <translation>Formulario de cobertura de salud</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Health Insurance Card</masterLabel>
+        
+            <translation>Tarjeta de seguro de salud</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Health Professional Statement</masterLabel>
+        
+            <translation>Declaración de profesional de la salud</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>High School or College Diploma</masterLabel>
+        
+            <translation>Diploma de escuela secundaria o centro universitario</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Home School Attendance Report</masterLabel>
+        
+            <translation>Informe de asistencia a escuela en el hogar</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Hospital Birth Record</masterLabel>
+        
+            <translation>Certificado de nacimiento de hospital</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Household Changes </masterLabel>
+        
+            <translation>Cambios en el hogar</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>I-20 (Certificate of Eligibility for Nonimmigrant (F-1) Student Status)</masterLabel>
+        
+            <translation>I-20 (Certificado de elegibilidad para estatus de estudiante no inmigrante (F-1))</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>I-327 (Reentry Permit)</masterLabel>
+        
+            <translation>I-327 (Permiso para nueva entrada)</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>I-551 (Permanent Resident Card)</masterLabel>
+        
+            <translation>I-551 (Tarjeta de residente permanente)</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>I-571 (Refugee Travel Document)</masterLabel>
+        
+            <translation>I-571 (Documento de viaje de refugiado)</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>I-766 (Employment Authorization Card)</masterLabel>
+        
+            <translation>I-766 (Tarjeta de autorización para empleo)</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>I-94 (Arrival/Departure Record)</masterLabel>
+        
+            <translation>I-94 (Registro de llegada/partida)</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>I-94 (Arrival/Departure Record) in Unexpired Foreign Passport</masterLabel>
+        
+            <translation>I-94 (Registro de llegada/partida) en pasaporte extranjero no vencido</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>ID verified by other Federal or State agency</masterLabel>
+        
+            <translation>ID verificada por otra agencia federal o estatal</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>INS Records</masterLabel>
+        
+            <translation>Registros de Servicios de Ciudadanía e Inmigración (INS)</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>IRS Income Reporting Form (1099, etc.)</masterLabel>
+        
+            <translation>Formulario de declaración de ingreso de IRS (1099, etcétera)</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Immigration Document</masterLabel>
+        
+            <translation>Documento de inmigración</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Immigration Document (Government Issued)</masterLabel>
+        
+            <translation>Documento de inmigración (emitido por el gobierno)</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Incarceration Discharge Record</masterLabel>
+        
+            <translation>Registro de liberación de encarcelamiento</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Income Changes</masterLabel>
+        
+            <translation>Cambios en el ingreso</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Income Tax Return</masterLabel>
+        
+            <translation>Declaración de impuesto a la renta</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Initial Enrollment - Any other document showing insurance premium payment</masterLabel>
+        
+            <translation>Inscripción inicial - Cualquier otro documento que muestra pago de prima de seguro</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Initial Enrollment - Paystub showing Insurance Premium Deduction</masterLabel>
+        
+            <translation>Inscripción inicial - Talón de pago que muestra deducción de prima de seguro</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Institutional Admission Papers for Citizenship</masterLabel>
+        
+            <translation>Documentos de admisión institucional para ciudadanía</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Insurance Company Record</masterLabel>
+        
+            <translation>Registro de empresa de seguro</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Invoice/Bill</masterLabel>
+        
+            <translation>Factura/cuenta</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>KASES</masterLabel>
+        
+            <translation>KASES</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>KHBE-79</masterLabel>
+        
+            <translation>KHBE-79</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>KI-HIPP - Health Insurance Card</masterLabel>
+        
+            <translation>KI-HIPP - Tarjeta de seguro de salud</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>KI-HIPP - Insurance Company Record</masterLabel>
+        
+            <translation>KI-HIPP - Registro de empresa de seguro</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>KI-HIPP - OTHER</masterLabel>
+        
+            <translation>KI-HIPP - OTRO</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>KI-HIPP 63 Direct Deposit Authorization Form</masterLabel>
+        
+            <translation>Formulario de Autorización de depósito directo 63 de KI-HIPP</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>KOOL</masterLabel>
+        
+            <translation>KOOL (Sistema de búsqueda de infractores en línea de Kentucky)</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>KVETS</masterLabel>
+        
+            <translation>KVETS (Sistema de Seguimiento de Eventos Vitales de Kentucky)</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>KW-33</masterLabel>
+        
+            <translation><!-- KW-33 --></translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Land Contact</masterLabel>
+        
+            <translation>Contrato de compraventa</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Land Contract</masterLabel>
+        
+            <translation>Contrato de compraventa</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Landlord Letter</masterLabel>
+        
+            <translation>Carta del dueño de la vivienda</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Landlord Statement</masterLabel>
+        
+            <translation>Declaración de dueño de la vivienda</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Law Enforcement Records</masterLabel>
+        
+            <translation>Registros de agencia de orden público</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Lease</masterLabel>
+        
+            <translation>Arrendamiento</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Lease Document</masterLabel>
+        
+            <translation>Documento de arrendamiento</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Lease agreement</masterLabel>
+        
+            <translation>Acuerdo de arrendamiento</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Legal Document</masterLabel>
+        
+            <translation>Documento legal</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Letter</masterLabel>
+        
+            <translation>Carta</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Letter from Social Security Administration</masterLabel>
+        
+            <translation>Carta de Administración del Seguro Social</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Letter from Tribe about Income</masterLabel>
+        
+            <translation>Carta de tribu sobre ingreso</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Letter/statement  from Department of Defense (TRICARE)</masterLabel>
+        
+            <translation>Carta/Declaración del Departamento de Defensa (TRICARE)</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Letter/statement  from Department of Veteran Affairs (VA coverage)</masterLabel>
+        
+            <translation>Carta/Declaración del Departamento de Asuntos para Veteranos (cobertura VA)</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Listed with Real Estate Agent</masterLabel>
+        
+            <translation>A la venta con agente de bienes inmuebles</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Loan Contract</masterLabel>
+        
+            <translation>Contrato de préstamo</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Loan Statement</masterLabel>
+        
+            <translation>DECLARACIÓN DE PRÉSTAMO</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Local Government Issued ID</masterLabel>
+        
+            <translation>ID emitida por el gobierno local</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Log</masterLabel>
+        
+            <translation>Registro</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Lost Policy Certificate</masterLabel>
+        
+            <translation>Certificado de pérdida de póliza</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>MAP 14</masterLabel>
+        
+            <translation>MAP 14</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>MAP-14</masterLabel>
+        
+            <translation>MAP-14</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>MRT Determination</masterLabel>
+        
+            <translation>Determinación del Equipo de Determinación Médica</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Machine Readable Immigrant Visa (with Temporary I-551 Language)</masterLabel>
+        
+            <translation>Visa de inmigrante legible por máquina (con texto temporal I-551)</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Marriage License</masterLabel>
+        
+            <translation>Licencia de matrimonio</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Medical Record</masterLabel>
+        
+            <translation>Registro médico</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Member of a federally recognized Indian tribe or American Indian born in Canada</masterLabel>
+        
+            <translation>Miembro de una tribu indígena reconocida federalmente o indígena estadounidense nacido en Canadá</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Mental Health Professional Statement</masterLabel>
+        
+            <translation>Declaración de profesional de la salud mental</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Military Dependent&apos;s ID</masterLabel>
+        
+            <translation>ID de dependiente militar</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Military Record</masterLabel>
+        
+            <translation>Registro militar</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Mismatch</masterLabel>
+        
+            <translation>No coincide</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Monthly Mortgage Statement</masterLabel>
+        
+            <translation>ESTADO DE CUENTA MENSUAL DE HIPOTECA</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Mortgage / Land Contract</masterLabel>
+        
+            <translation>Contrato de compraventa / Hipoteca</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Mortgage Contract</masterLabel>
+        
+            <translation>Contrato de hipoteca</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Naturalization Certificate</masterLabel>
+        
+            <translation>Certificado de naturalización</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Needs to Obtain</masterLabel>
+        
+            <translation>Se debe obtener</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Newborn without SSN</masterLabel>
+        
+            <translation>Recién nacido sin SSN</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Newspaper Clipping</masterLabel>
+        
+            <translation>Recortes de diarios</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Newspaper Clippings</masterLabel>
+        
+            <translation>Recortes de diarios</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>No Signature provided</masterLabel>
+        
+            <translation>No se proporcionó firma</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Northern Mariana Card I-873</masterLabel>
+        
+            <translation>Tarjeta de Islas Marianas del Norte I-873</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Not Verified - Paris Match</masterLabel>
+        
+            <translation>No verificado - Coincidencia con sistema Paris</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Not eligible to receive SSN based on alien status</masterLabel>
+        
+            <translation>No elegible para recibir número de Seguro Social en base a estatus de extranjero</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Notarized Statement</masterLabel>
+        
+            <translation>Declaración certificada por notario</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Notice of Action (I-797)</masterLabel>
+        
+            <translation>Aviso de acción (I-797)</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>OET Interface</masterLabel>
+        
+            <translation>Interfaz OET</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>OTHER</masterLabel>
+        
+            <translation>OTRO</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Office of Refugee Resettlement</masterLabel>
+        
+            <translation>Oficina de Reasentamiento de Refugiados</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Office of Refugee Resettlement eligibility letter (if under 18)</masterLabel>
+        
+            <translation>Carta de elegibilidad de la Oficina de Reasentamiento de Refugiados (si es menor de 18 años)</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Ongoing Verification - Document showing insurance premium payment</masterLabel>
+        
+            <translation>Verificación continua - Cualquier otro documento que muestra pago de prima de seguro</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Ongoing Verification - Paystub Showing Insurance Premium Deduction</masterLabel>
+        
+            <translation>Verificación continua - Talón de pago que muestra deducción de prima de seguro</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Original Record</masterLabel>
+        
+            <translation>Registro original</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Other</masterLabel>
+        
+            <translation>Otro</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Other (Document Source)</masterLabel>
+        
+            <translation>Otro (fuente de documento)</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Other Birth Records</masterLabel>
+        
+            <translation>Otros registros de nacimiento</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Other Document Showing Name and Address</masterLabel>
+        
+            <translation>Otro documento con nombre y dirección</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Other Immigration Document</masterLabel>
+        
+            <translation>Otro documento de inmigración</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Other acceptable</masterLabel>
+        
+            <translation>Otro aceptable</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>P&amp;P Verified</masterLabel>
+        
+            <translation>Verificado por P y P</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>PA FS-76</masterLabel>
+        
+            <translation>PA FS-76</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>PA-33D</masterLabel>
+        
+            <translation>PA-33D</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>PAFS - 76</masterLabel>
+        
+            <translation>PAFS - 76</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>PAFS 700</masterLabel>
+        
+            <translation>PAFS 700</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>PAFS 702</masterLabel>
+        
+            <translation>PAFS 702</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>PAFS 76</masterLabel>
+        
+            <translation>PAFS 76</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>PARIS</masterLabel>
+        
+            <translation>PARIS</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>PVA Printout</masterLabel>
+        
+            <translation>Impresión de PVA</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Passport</masterLabel>
+        
+            <translation>Pasaporte</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Paternity Records</masterLabel>
+        
+            <translation>Registros de paternidad</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Pay Stubs</masterLabel>
+        
+            <translation>Talones de pago</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Pension Documentation</masterLabel>
+        
+            <translation>Documentación de pensión</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Personal Record</masterLabel>
+        
+            <translation>Registro personal</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Personal Records Showing Deductions</masterLabel>
+        
+            <translation>Registros personales que muestran deducciones</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Personal Records showing income</masterLabel>
+        
+            <translation>Registros personales que muestran ingreso</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Petition under section 204(a)(1)(A) or (B) of INA</masterLabel>
+        
+            <translation>Petición según sección 204(a)(1)(A) o (B) de INA</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Petition under section 244(a)(3) of INA</masterLabel>
+        
+            <translation>Petición según sección 244(a)(3) de INA</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Picture</masterLabel>
+        
+            <translation>Imagen</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Plan Description Document</masterLabel>
+        
+            <translation>Documento de descripción del plan</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Plan Document</masterLabel>
+        
+            <translation>Documento del plan</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Police Report</masterLabel>
+        
+            <translation>Reporte Policial</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Policy</masterLabel>
+        
+            <translation>Póliza</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Power of Attorney</masterLabel>
+        
+            <translation>Poder</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Power of Attorney Document</masterLabel>
+        
+            <translation>Documento de poder</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Premium Rate Sheet</masterLabel>
+        
+            <translation>Hoja de tarifas de prima</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Previously Verified</masterLabel>
+        
+            <translation>Verificado anteriormente</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Program 68</masterLabel>
+        
+            <translation>PROGRAMA 68</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Promissory Note</masterLabel>
+        
+            <translation>Pagaré</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Proof of Benefit Exclusion</masterLabel>
+        
+            <translation>Comprobante de exclusión de beneficio</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Proof of Birth</masterLabel>
+        
+            <translation>Comprobante de nacimiento</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Proof of amount owed</masterLabel>
+        
+            <translation>Comprobante de monto que se debe</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Property Deed or Title</masterLabel>
+        
+            <translation>Escritura o título de propiedad</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Property Tax Bill</masterLabel>
+        
+            <translation>Factura de impuesto a la propiedad</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Protective Order</masterLabel>
+        
+            <translation>Orden de Protección</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Public Health Record</masterLabel>
+        
+            <translation>Registro de salud pública</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Qualifying Income Trust Document</masterLabel>
+        
+            <translation>Documento de fideicomiso de ingreso que califica</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Quit Claim Deed</masterLabel>
+        
+            <translation>Documento de renuncia a la propiedad</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Receipt</masterLabel>
+        
+            <translation>Recibo</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Receipt of Donation</masterLabel>
+        
+            <translation>Recibo de donación</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Receipt of Medicare/Medicare Card</masterLabel>
+        
+            <translation>Recibo de Medicare/Tarjeta de Medicare</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Records (court, medical, criminal, child protective services, social services, psychological, or law enforcement)</masterLabel>
+        
+            <translation>Registros (judiciales, médicos, penales, servicios de protección de menores, servicios sociales, psicológicos o de agencias del orden público)</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Records showing reason for not cooperating with Medical Support Enforcement</masterLabel>
+        
+            <translation>Registros que demuestren motivo para no cooperar para exigir la manutención médica</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Refuses to obtain an SSN because of a well-established religious objective</masterLabel>
+        
+            <translation>Se niega a obtener número de Seguro Social debido a objeción religiosa bien fundamentada</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Refuses to provide an SSN</masterLabel>
+        
+            <translation>Se niega a proporcionar número de Seguro Social</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Religious Record</masterLabel>
+        
+            <translation>Registro religioso</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Rent and Mortgage Statement</masterLabel>
+        
+            <translation>Declaración de hipoteca y alquiler</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Rent or Mortgage Statement</masterLabel>
+        
+            <translation>Declaración de alquiler o hipoteca</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Resident of American Samoa</masterLabel>
+        
+            <translation>Residente de Samoa Americana</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Resource Changes</masterLabel>
+        
+            <translation>Cambios en recursos</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>SAFE Form</masterLabel>
+        
+            <translation>Formulario de SAFE</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>SF-1</masterLabel>
+        
+            <translation>SF-1</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>SF-2</masterLabel>
+        
+            <translation>SF-2</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>SS-5 / System Generated SSN Application</masterLabel>
+        
+            <translation>SS-5 / Solicitud de número de Seguro Social generada por sistema</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>SWICA</masterLabel>
+        
+            <translation>SWICA (Agencia estatal de cobro de ingreso de salarios)</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Sales Contract</masterLabel>
+        
+            <translation>Contrato de ventas</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>School Attendance Report</masterLabel>
+        
+            <translation>Informe de asistencia a la escuela</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>School Photo ID</masterLabel>
+        
+            <translation>ID con foto de escuela</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>School Record</masterLabel>
+        
+            <translation>Registro escolar</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>School Statement</masterLabel>
+        
+            <translation>Declaración de la escuela</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>School Transcript</masterLabel>
+        
+            <translation>Expediente escolar</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Sell by Owner</masterLabel>
+        
+            <translation>Venta por dueño</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Separation Agreement</masterLabel>
+        
+            <translation>Acuerdo de Separación</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Settlement Statement</masterLabel>
+        
+            <translation>Declaración de acuerdo</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Signed Application</masterLabel>
+        
+            <translation>Solicitud firmada</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Social Security Administration</masterLabel>
+        
+            <translation>Administración del Seguro Social</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Social Security Card</masterLabel>
+        
+            <translation>Tarjeta de Seguro Social</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>State Government Issued ID</masterLabel>
+        
+            <translation>ID emitida por el gobierno estatal</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Statement From Nursing Facility</masterLabel>
+        
+            <translation>DECLARACIÓN DE CENTRO DE CUIDADOS DE ENFERMERÍA</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Statement from Educational Institution</masterLabel>
+        
+            <translation>Declaración de institución educativa</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Statement from Employer</masterLabel>
+        
+            <translation>Declaración del empleador</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Statement from Institution</masterLabel>
+        
+            <translation>Declaración de institución</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Statement from Insurance Company</masterLabel>
+        
+            <translation>Estado de cuenta de compañía de seguros</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Statement from Life Insurance Company</masterLabel>
+        
+            <translation>Estado de cuenta de compañía de seguro de vida</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Statement from OET</masterLabel>
+        
+            <translation>Declaración de OET</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Statement from Resource Teacher</masterLabel>
+        
+            <translation>Declaración de docente de recursos</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Statement from bank or financial institution</masterLabel>
+        
+            <translation>Declaración del banco o institución financiera</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Statement from lender</masterLabel>
+        
+            <translation>Declaración de prestamista</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Statement from person/agency/financial institution</masterLabel>
+        
+            <translation>Declaración de persona/agencia/institución financiera</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Statement of Attending Physician or Midwife</masterLabel>
+        
+            <translation>Declaración de médico o partera que asistió el parto</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Summary of Benefits and Coverage (SBC)</masterLabel>
+        
+            <translation>Resumen de Beneficios y Cobertura (SBC)</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>System Applied</masterLabel>
+        
+            <translation>Presentación de solicitud por sistema</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>System Inquiry</masterLabel>
+        
+            <translation>Investigación en el sistema</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>System Verified</masterLabel>
+        
+            <translation>Verificado por sistema</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Tax Record</masterLabel>
+        
+            <translation>Registro de impuestos</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Tax Return</masterLabel>
+        
+            <translation>Declaración de impuestos</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Temporary I-551 Stamp (on passport or I-94)</masterLabel>
+        
+            <translation>Sello temporal I-551 (en pasaporte o I-94)</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>The Work Number</masterLabel>
+        
+            <translation>El número de trabajo</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Tip Log</masterLabel>
+        
+            <translation>Registro de propinas</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Title</masterLabel>
+        
+            <translation>Título</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Transfer Deed</masterLabel>
+        
+            <translation>Escritura de transferencia</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Tribal Census Document</masterLabel>
+        
+            <translation>Documento de censo tribal</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Tribal Enrollment Card</masterLabel>
+        
+            <translation>Tarjeta de inscripción tribal</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Tribal statement regarding income</masterLabel>
+        
+            <translation>Declaración tribal sobre ingreso</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Trust</masterLabel>
+        
+            <translation>Fideicomiso</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Trust Contract</masterLabel>
+        
+            <translation>Contrato de fideicomiso</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>US Coast Guard Merchant Mariner card</masterLabel>
+        
+            <translation>Tarjeta de guardacostas o marino mercante de EE. UU.</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>US Military ID Card or Draft Record</masterLabel>
+        
+            <translation>Tarjeta de ID de ejército de EE. UU. o registro del reclutamiento</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>US citizen ID card (I-197 or I-179)</masterLabel>
+        
+            <translation>Tarjeta de ciudadano de EE. UU. (I-197 o I-179)</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Unemployment Insurance Agency</masterLabel>
+        
+            <translation>Agencia de seguro por desempleo</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Unexpired Foreign Passport</masterLabel>
+        
+            <translation>Pasaporte extranjero no vencido</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Utility Bill</masterLabel>
+        
+            <translation>Factura de servicios públicos</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Vehicle Registration</masterLabel>
+        
+            <translation>REGISTRO DE VEHÍCULO</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>VLP</masterLabel>
+        
+            <translation>Verificar presencia legal</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Verification Required for Renewal</masterLabel>
+        
+            <translation>Se requiere verificación para renovación</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Verification not required - excluded income</masterLabel>
+        
+            <translation>Verificación no requerida - excluido ingreso</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Verified by Child Support</masterLabel>
+        
+            <translation>Verificado por Manutención Infantil</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Verified by DMV</masterLabel>
+        
+            <translation>Verificado por DMV (Departamento de Vehículos Motorizados)</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Verified by DPP</masterLabel>
+        
+            <translation>Verificado por DPP (Director del Ministerio Público)</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Verified by IRS</masterLabel>
+        
+            <translation>Verificado por IRS (Servicio de Impuestos Internos)</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Verified by KTAP or Kinship Care</masterLabel>
+        
+            <translation>Verificado por KTAP o Kinship Care</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Verified by Law enforcement</masterLabel>
+        
+            <translation>Verificado por agencias del orden público</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Verified by Receipt of SSA Benefits</masterLabel>
+        
+            <translation>Verificado por recibo de beneficios de Administración de Seguro Social</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Verified by SNAP</masterLabel>
+        
+            <translation>Verificado por SNAP (Programa de Asistencia Nutricional Suplementaria)</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Verified by SSA</masterLabel>
+        
+            <translation>Verificado por SSA (Administración de Seguro Social)</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Verified by correctional agency</masterLabel>
+        
+            <translation>Verificado por agencia correccional</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Verified by residential care facility administration</masterLabel>
+        
+            <translation>Verificado por administración de centro residencial para cuidados</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Voice Signature</masterLabel>
+        
+            <translation>Firma de voz</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Voided Personalized Check</masterLabel>
+        
+            <translation>Cheque personalizado anulado</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Wage / Income Garnishment</masterLabel>
+        
+            <translation>Embargo de salario / ingreso</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Wage Stubs</masterLabel>
+        
+            <translation>Talones de salario</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Website Listing</masterLabel>
+        
+            <translation>Listado en sitio web</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Will</masterLabel>
+        
+            <translation>Testamento</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Without SSN Card</masterLabel>
+        
+            <translation>Sin tarjeta SSN</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Written Income Statement</masterLabel>
+        
+            <translation>Declaración por escrito de ingreso</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Written Statement</masterLabel>
+        
+            <translation>Declaración escrita</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Written Statement </masterLabel>
+        
+            <translation>Declaración escrita</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Written Statement From Certified Professional</masterLabel>
+        
+            <translation>DECLARACIÓN POR ESCRITO DE PROFESIONAL CERTIFICADO</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Written Statement From Lender</masterLabel>
+        
+            <translation>DECLARACIÓN POR ESCRITO DEL PRESTAMISTA</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Written Statement From a Public or Licensed Private Social Agency</masterLabel>
+        
+            <translation>Declaración por escrito de una agencia pública o privada social con licencia</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Written Statement for Income or No Income</masterLabel>
+        
+            <translation>Declaración por escrito de ingreso o no ingreso</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Written Statement from Boarder</masterLabel>
+        
+            <translation>Declaración por escrito del pensionista</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Written Statement from Child Care Facility</masterLabel>
+        
+            <translation>Declaración por escrito de la instalación de Cuidados Infantiles</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Written Statement from SSA</masterLabel>
+        
+            <translation>Declaración por escrito de SSA</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>medical record</masterLabel>
+        
+            <translation>registro médico</translation>
+        
+        </picklistValues>
 </CustomFieldTranslation>

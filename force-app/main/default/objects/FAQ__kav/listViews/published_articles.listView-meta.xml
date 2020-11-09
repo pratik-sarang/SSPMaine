@@ -7,14 +7,22 @@
     <columns>LANGUAGE</columns>
     <filterScope>Everything</filterScope>
     <filters>
-        <field>PUBLISH_STATUS</field>
-        <operation>equals</operation>
-        <value>2</value>
-    </filters>
+        
+            <field>PUBLISH_STATUS</field>
+        
+            <operation>equals</operation>
+        
+            <value>2</value>
+        
+        </filters>
     <filters>
-        <field>LANGUAGE</field>
-        <operation>equals</operation>
-        <value>en_US</value>
-    </filters>
+        
+            <field>LANGUAGE</field>
+        
+            <operation>equals</operation>
+        
+            <value>en_US</value>
+        
+        </filters>
     <label>Published Articles</label>
 </ListView>

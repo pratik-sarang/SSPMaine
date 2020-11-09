@@ -1,31 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <GlobalValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    
     <valueTranslation>
+        
         <masterLabel>Apply, Report Change, Recertify and receive checks</masterLabel>
+        
         <translation>Presentar solicitud, informar cambio, recertificar y recibir cheques</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Apply, Report Change, Recertify and receive checks made out to client</masterLabel>
+        
         <translation>Presentar solicitud, informar cambio, recertificar y recibir cheques emitidos al cliente</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Apply, Report Changes , Recertify</masterLabel>
+        
         <translation>Presentar solicitud, informar cambios, recertificar</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Apply, Report Changes , Recertify and receive copy of Notices</masterLabel>
+        
         <translation>Presentar solicitud, informar cambios, recertificar y recibir copia de avisos</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Apply, Report Changes, Recertify and use EBT Card</masterLabel>
+        
         <translation>Presentar solicitud, informar cambios, recertificar y usar tarjeta EBT</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Statutory Benefit Payee</masterLabel>
+        
         <translation>Receptor reglamentario del beneficio</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Use EBT Card</masterLabel>
+        
         <translation>Usar tarjeta EBT</translation>
+        
     </valueTranslation>
+    
 </GlobalValueSetTranslation>

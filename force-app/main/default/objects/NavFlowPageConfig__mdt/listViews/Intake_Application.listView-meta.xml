@@ -16,10 +16,14 @@
     <columns>Programs__c</columns>
     <filterScope>Everything</filterScope>
     <filters>
-        <field>NavigationFlowDetail__c</field>
-        <operation>equals</operation>
-        <value>Intake_Application</value>
-    </filters>
+        
+            <field>NavigationFlowDetail__c</field>
+        
+            <operation>equals</operation>
+        
+            <value>Intake_Application</value>
+        
+        </filters>
     <label>Intake Application</label>
     <language>en_US</language>
 </ListView>

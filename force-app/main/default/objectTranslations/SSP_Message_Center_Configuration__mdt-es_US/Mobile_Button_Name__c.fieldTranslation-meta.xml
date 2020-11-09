@@ -3,31 +3,52 @@
     <label><!-- Mobile Button Name --></label>
     <name>Mobile_Button_Name__c</name>
     <picklistValues>
-        <masterLabel>Call DCBS</masterLabel>
-        <translation>Llamar a DCBS</translation>
-    </picklistValues>
+        
+            <masterLabel>Call DCBS</masterLabel>
+        
+            <translation>Llamar a DCBS</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Continue Application</masterLabel>
-        <translation>Continuar solicitud</translation>
-    </picklistValues>
+        
+            <masterLabel>Continue Application</masterLabel>
+        
+            <translation>Continuar solicitud</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Pay Claim</masterLabel>
-        <translation>Pagar reclamo</translation>
-    </picklistValues>
+        
+            <masterLabel>Pay Claim</masterLabel>
+        
+            <translation>Pagar reclamo</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Renew Benefits</masterLabel>
-        <translation>Renovar beneficios</translation>
-    </picklistValues>
+        
+            <masterLabel>Renew Benefits</masterLabel>
+        
+            <translation>Renovar beneficios</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Review &amp; Consent</masterLabel>
-        <translation>revisión y consentimiento</translation>
-    </picklistValues>
+        
+            <masterLabel>Review &amp; Consent</masterLabel>
+        
+            <translation>revisión y consentimiento</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Upload Documents</masterLabel>
-        <translation>subir documentos</translation>
-    </picklistValues>
+        
+            <masterLabel>Upload Documents</masterLabel>
+        
+            <translation>subir documentos</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>View Notice</masterLabel>
-        <translation>Ver Aviso</translation>
-    </picklistValues>
+        
+            <masterLabel>View Notice</masterLabel>
+        
+            <translation>Ver Aviso</translation>
+        
+        </picklistValues>
 </CustomFieldTranslation>

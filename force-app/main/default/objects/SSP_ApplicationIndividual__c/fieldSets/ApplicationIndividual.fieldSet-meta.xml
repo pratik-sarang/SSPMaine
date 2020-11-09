@@ -3,74 +3,130 @@
     <fullName>ApplicationIndividual</fullName>
     <description>This fieldSet is used to determine what all fields are to be considered while queuing.</description>
     <displayedFields>
-        <field>IsHeadOfHousehold__c</field>
-        <isFieldManaged>false</isFieldManaged>
-        <isRequired>false</isRequired>
-    </displayedFields>
+        
+            <field>IsHeadOfHousehold__c</field>
+        
+            <isFieldManaged>false</isFieldManaged>
+        
+            <isRequired>false</isRequired>
+        
+        </displayedFields>
     <displayedFields>
-        <field>MemberProgramsApplied__c</field>
-        <isFieldManaged>false</isFieldManaged>
-        <isRequired>false</isRequired>
-    </displayedFields>
+        
+            <field>MemberProgramsApplied__c</field>
+        
+            <isFieldManaged>false</isFieldManaged>
+        
+            <isRequired>false</isRequired>
+        
+        </displayedFields>
     <displayedFields>
-        <field>ProgramsApplied__c</field>
-        <isFieldManaged>false</isFieldManaged>
-        <isRequired>false</isRequired>
-    </displayedFields>
+        
+            <field>ProgramsApplied__c</field>
+        
+            <isFieldManaged>false</isFieldManaged>
+        
+            <isRequired>false</isRequired>
+        
+        </displayedFields>
     <displayedFields>
-        <field>SSP_Application__c</field>
-        <isFieldManaged>false</isFieldManaged>
-        <isRequired>false</isRequired>
-    </displayedFields>
+        
+            <field>SSP_Application__c</field>
+        
+            <isFieldManaged>false</isFieldManaged>
+        
+            <isRequired>false</isRequired>
+        
+        </displayedFields>
     <displayedFields>
-        <field>SSP_Member__c</field>
-        <isFieldManaged>false</isFieldManaged>
-        <isRequired>false</isRequired>
-    </displayedFields>
+        
+            <field>SSP_Member__c</field>
+        
+            <isFieldManaged>false</isFieldManaged>
+        
+            <isRequired>false</isRequired>
+        
+        </displayedFields>
     <displayedFields>
-        <field>MemberStatus__c</field>
-        <isFieldManaged>false</isFieldManaged>
-        <isRequired>false</isRequired>
-    </displayedFields>
+        
+            <field>MemberStatus__c</field>
+        
+            <isFieldManaged>false</isFieldManaged>
+        
+            <isRequired>false</isRequired>
+        
+        </displayedFields>
     <displayedFields>
-        <field>MedicaidType__c</field>
-        <isFieldManaged>false</isFieldManaged>
-        <isRequired>false</isRequired>
-    </displayedFields>
+        
+            <field>MedicaidType__c</field>
+        
+            <isFieldManaged>false</isFieldManaged>
+        
+            <isRequired>false</isRequired>
+        
+        </displayedFields>
     <displayedFields>
-        <field>IsMemberStillOwnsExpenses__c</field>
-        <isFieldManaged>false</isFieldManaged>
-        <isRequired>false</isRequired>
-    </displayedFields>
+        
+            <field>IsMemberStillOwnsExpenses__c</field>
+        
+            <isFieldManaged>false</isFieldManaged>
+        
+            <isRequired>false</isRequired>
+        
+        </displayedFields>
     <displayedFields>
-        <field>IsMemberStillOwnsIncomes__c</field>
-        <isFieldManaged>false</isFieldManaged>
-        <isRequired>false</isRequired>
-    </displayedFields>
+        
+            <field>IsMemberStillOwnsIncomes__c</field>
+        
+            <isFieldManaged>false</isFieldManaged>
+        
+            <isRequired>false</isRequired>
+        
+        </displayedFields>
     <displayedFields>
-        <field>IsMemberStillOwnsResources__c</field>
-        <isFieldManaged>false</isFieldManaged>
-        <isRequired>false</isRequired>
-    </displayedFields>
+        
+            <field>IsMemberStillOwnsResources__c</field>
+        
+            <isFieldManaged>false</isFieldManaged>
+        
+            <isRequired>false</isRequired>
+        
+        </displayedFields>
     <displayedFields>
-        <field>IsNoChangesToResources__c</field>
-        <isFieldManaged>false</isFieldManaged>
-        <isRequired>false</isRequired>
-    </displayedFields>
+        
+            <field>IsNoChangesToResources__c</field>
+        
+            <isFieldManaged>false</isFieldManaged>
+        
+            <isRequired>false</isRequired>
+        
+        </displayedFields>
     <displayedFields>
-        <field>IsNoChangesToExpenses__c</field>
-        <isFieldManaged>false</isFieldManaged>
-        <isRequired>false</isRequired>
-    </displayedFields>
+        
+            <field>IsNoChangesToExpenses__c</field>
+        
+            <isFieldManaged>false</isFieldManaged>
+        
+            <isRequired>false</isRequired>
+        
+        </displayedFields>
     <displayedFields>
-        <field>IsNoChangesToIncomes__c</field>
-        <isFieldManaged>false</isFieldManaged>
-        <isRequired>false</isRequired>
-    </displayedFields>
+        
+            <field>IsNoChangesToIncomes__c</field>
+        
+            <isFieldManaged>false</isFieldManaged>
+        
+            <isRequired>false</isRequired>
+        
+        </displayedFields>
     <displayedFields>
-        <field>IsTMember__c</field>
-        <isFieldManaged>false</isFieldManaged>
-        <isRequired>false</isRequired>
-    </displayedFields>
+        
+            <field>IsTMember__c</field>
+        
+            <isFieldManaged>false</isFieldManaged>
+        
+            <isRequired>false</isRequired>
+        
+        </displayedFields>
     <label>ApplicationIndividual</label>
 </FieldSet>

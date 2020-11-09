@@ -1,67 +1,133 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <GlobalValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    
     <valueTranslation>
+        
         <masterLabel>Account Closed</masterLabel>
+        
         <translation>Cuenta cerrada</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Collateral Contact</masterLabel>
+        
         <translation>Contacto colateral</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Financial Institution Statement</masterLabel>
+        
         <translation>Declaración de institución financiera</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Fund Exhausted</masterLabel>
+        
         <translation>Fondo agotado</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Gifted</masterLabel>
+        
         <translation>Regalado</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Liquidated</masterLabel>
+        
         <translation>Liquidado</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Lost</masterLabel>
+        
         <translation>Perdido</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Other</masterLabel>
+        
         <translation>Otro</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Paid in Full</masterLabel>
+        
         <translation>Pagado totalmente</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Repossessed</masterLabel>
+        
         <translation>Recobrado</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Sold</masterLabel>
+        
         <translation>Vendido</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Stolen</masterLabel>
+        
         <translation>Robado</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Surrendered for CSV</masterLabel>
+        
         <translation>Entregado para CSV</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Terminated</masterLabel>
+        
         <translation>Liquidado</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Transferred</masterLabel>
+        
         <translation>Transferido</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Trust Dissolved</masterLabel>
+        
         <translation>Fideicomiso disuelto</translation>
+        
     </valueTranslation>
+    
 </GlobalValueSetTranslation>

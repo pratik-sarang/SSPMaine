@@ -8,34 +8,64 @@
     <trackTrending>false</trackTrending>
     <type>Picklist</type>
     <valueSet>
-        <restricted>true</restricted>
-        <valueSetDefinition>
-            <sorted>false</sorted>
-            <value>
-                <fullName>OIL</fullName>
-                <default>false</default>
-                <label>Over the income limit</label>
-            </value>
-            <value>
-                <fullName>ORL</fullName>
-                <default>false</default>
-                <label>Over the resource limit</label>
-            </value>
-            <value>
-                <fullName>NBD</fullName>
-                <default>false</default>
-                <label>Not blind/disabled</label>
-            </value>
-            <value>
-                <fullName>O</fullName>
-                <default>false</default>
-                <label>Other</label>
-            </value>
-            <value>
-                <fullName>NA</fullName>
-                <default>false</default>
-                <label>None of the above</label>
-            </value>
-        </valueSetDefinition>
-    </valueSet>
+        
+            <restricted>true</restricted>
+        
+            <valueSetDefinition>
+            
+                <sorted>false</sorted>
+            
+                <value>
+                
+                    <fullName>OIL</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Over the income limit</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>ORL</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Over the resource limit</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>NBD</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Not blind/disabled</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>O</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Other</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>NA</fullName>
+                
+                    <default>false</default>
+                
+                    <label>None of the above</label>
+                
+                </value>
+            
+            </valueSetDefinition>
+        
+        </valueSet>
 </CustomField>

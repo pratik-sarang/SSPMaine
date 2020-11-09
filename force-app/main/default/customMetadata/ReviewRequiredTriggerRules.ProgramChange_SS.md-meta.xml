@@ -1,37 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    
     <label>ProgramChange_SS</label>
+    
     <protected>false</protected>
+    
     <values>
+        
         <field>Field__c</field>
+        
         <value xsi:nil="true"/>
+        
     </values>
+    
     <values>
+        
         <field>IsActive__c</field>
+        
         <value xsi:type="xsd:boolean">true</value>
+        
     </values>
+    
     <values>
+        
         <field>IsRuleApex__c</field>
+        
         <value xsi:type="xsd:boolean">false</value>
+        
     </values>
+    
     <values>
+        
         <field>Message__c</field>
+        
         <value xsi:nil="true"/>
+        
     </values>
+    
     <values>
+        
         <field>Object__c</field>
+        
         <value xsi:nil="true"/>
+        
     </values>
+    
     <values>
+        
         <field>ReviewRequiredScreens__c</field>
+        
         <value xsi:nil="true"/>
+        
     </values>
+    
     <values>
+        
         <field>RuleName__c</field>
+        
         <value xsi:type="xsd:string">ProgramChange_SS</value>
+        
     </values>
+    
     <values>
+        
         <field>Screen__c</field>
+        
         <value xsi:type="xsd:string">SSP_ProgramSelection</value>
+        
     </values>
+    
 </CustomMetadata>

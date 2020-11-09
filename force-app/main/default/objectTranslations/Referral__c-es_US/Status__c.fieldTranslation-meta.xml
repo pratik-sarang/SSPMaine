@@ -3,23 +3,38 @@
     <label><!-- Status --></label>
     <name>Status__c</name>
     <picklistValues>
-        <masterLabel>Closed</masterLabel>
-        <translation>Cerrado</translation>
-    </picklistValues>
+        
+            <masterLabel>Closed</masterLabel>
+        
+            <translation>Cerrado</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Draft</masterLabel>
-        <translation><!-- Draft --></translation>
-    </picklistValues>
+        
+            <masterLabel>Draft</masterLabel>
+        
+            <translation><!-- Draft --></translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>In Progress</masterLabel>
-        <translation>En progreso</translation>
-    </picklistValues>
+        
+            <masterLabel>In Progress</masterLabel>
+        
+            <translation>En progreso</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>New</masterLabel>
-        <translation>Nuevo</translation>
-    </picklistValues>
+        
+            <masterLabel>New</masterLabel>
+        
+            <translation>Nuevo</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Org Not in System</masterLabel>
-        <translation>Org. no está en el sistema</translation>
-    </picklistValues>
+        
+            <masterLabel>Org Not in System</masterLabel>
+        
+            <translation>Org. no está en el sistema</translation>
+        
+        </picklistValues>
 </CustomFieldTranslation>

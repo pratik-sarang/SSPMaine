@@ -9,9 +9,13 @@
     <columns>CORE.PROFILE.NAME</columns>
     <filterScope>Everything</filterScope>
     <filters>
-        <field>CORE.USERS.ACTIVE</field>
-        <operation>equals</operation>
-        <value>1</value>
-    </filters>
+        
+            <field>CORE.USERS.ACTIVE</field>
+        
+            <operation>equals</operation>
+        
+            <value>1</value>
+        
+        </filters>
     <label>Active Users</label>
 </ListView>

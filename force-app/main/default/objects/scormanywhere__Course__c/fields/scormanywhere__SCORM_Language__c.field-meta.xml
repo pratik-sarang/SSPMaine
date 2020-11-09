@@ -10,13 +10,22 @@
     <trackTrending>false</trackTrending>
     <type>Picklist</type>
     <valueSet>
-        <valueSetDefinition>
-            <sorted>false</sorted>
-            <value>
-                <fullName>en_US</fullName>
-                <default>false</default>
-                <label>en_US</label>
-            </value>
-        </valueSetDefinition>
-    </valueSet>
+        
+            <valueSetDefinition>
+            
+                <sorted>false</sorted>
+            
+                <value>
+                
+                    <fullName>en_US</fullName>
+                
+                    <default>false</default>
+                
+                    <label>en_US</label>
+                
+                </value>
+            
+            </valueSetDefinition>
+        
+        </valueSet>
 </CustomField>

@@ -1,182 +1,316 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Click here to see all forms of proof --></help>
-    <label><!-- Identity Form of Proof --></label>
+    <help>
+                    <!-- Click here to see all forms of proof --></help>
+    <label>
+                    <!-- Identity Form of Proof --></label>
     <name>Identity_Form_of_Proof__c</name>
     <picklistValues>
-        <masterLabel>Adoption Record</masterLabel>
-        <translation>Registro de adopción</translation>
-    </picklistValues>
+        
+            <masterLabel>Adoption Record</masterLabel>
+        
+            <translation>Registro de adopción</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Affidavit from US citizen</masterLabel>
-        <translation>Declaración jurada de ciudadano de EE. UU.</translation>
-    </picklistValues>
+        
+            <masterLabel>Affidavit from US citizen</masterLabel>
+        
+            <translation>Declaración jurada de ciudadano de EE. UU.</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Affidavit from non-US citizen</masterLabel>
-        <translation>Declaración jurada de ciudadano no estadounidense</translation>
-    </picklistValues>
+        
+            <masterLabel>Affidavit from non-US citizen</masterLabel>
+        
+            <translation>Declaración jurada de ciudadano no estadounidense</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Award Letter</masterLabel>
-        <translation>Carta de otorgamiento</translation>
-    </picklistValues>
+        
+            <masterLabel>Award Letter</masterLabel>
+        
+            <translation>Carta de otorgamiento</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Birth Certificate</masterLabel>
-        <translation>Certificado de nacimiento</translation>
-    </picklistValues>
+        
+            <masterLabel>Birth Certificate</masterLabel>
+        
+            <translation>Certificado de nacimiento</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Certificate of Tribal Affiliation</masterLabel>
-        <translation>Certificado de afiliación tribal</translation>
-    </picklistValues>
+        
+            <masterLabel>Certificate of Tribal Affiliation</masterLabel>
+        
+            <translation>Certificado de afiliación tribal</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Certificate of US Citizenship (N-560 or N-561)</masterLabel>
-        <translation>Certificado de ciudadanía de EE. UU. (N-560 o N-561)</translation>
-    </picklistValues>
+        
+            <masterLabel>Certificate of US Citizenship (N-560 or N-561)</masterLabel>
+        
+            <translation>Certificado de ciudadanía de EE. UU. (N-560 o N-561)</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Client statement</masterLabel>
-        <translation>Declaración del cliente</translation>
-    </picklistValues>
+        
+            <masterLabel>Client statement</masterLabel>
+        
+            <translation>Declaración del cliente</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Collateral statement</masterLabel>
-        <translation>Declaración colateral</translation>
-    </picklistValues>
+        
+            <masterLabel>Collateral statement</masterLabel>
+        
+            <translation>Declaración colateral</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Conversion</masterLabel>
-        <translation>Conversión</translation>
-    </picklistValues>
+        
+            <masterLabel>Conversion</masterLabel>
+        
+            <translation>Conversión</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Divorce Decree</masterLabel>
-        <translation>Sentencia de divorcio</translation>
-    </picklistValues>
+        
+            <masterLabel>Divorce Decree</masterLabel>
+        
+            <translation>Sentencia de divorcio</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Drivers License</masterLabel>
-        <translation>Licencia de conducir</translation>
-    </picklistValues>
+        
+            <masterLabel>Drivers License</masterLabel>
+        
+            <translation>Licencia de conducir</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Employee ID</masterLabel>
-        <translation>ID de empleado</translation>
-    </picklistValues>
+        
+            <masterLabel>Employee ID</masterLabel>
+        
+            <translation>ID de empleado</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Federal Government issued ID</masterLabel>
-        <translation>ID emitida por el gobierno federal</translation>
-    </picklistValues>
+        
+            <masterLabel>Federal Government issued ID</masterLabel>
+        
+            <translation>ID emitida por el gobierno federal</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>GED</masterLabel>
-        <translation>GED (Diploma General de Educación)</translation>
-    </picklistValues>
+        
+            <masterLabel>GED</masterLabel>
+        
+            <translation>GED (Diploma General de Educación)</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Health Insurance Card</masterLabel>
-        <translation>Tarjeta de seguro de salud</translation>
-    </picklistValues>
+        
+            <masterLabel>Health Insurance Card</masterLabel>
+        
+            <translation>Tarjeta de seguro de salud</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>High School or College Diploma</masterLabel>
-        <translation>Diploma de escuela secundaria o centro universitario</translation>
-    </picklistValues>
+        
+            <masterLabel>High School or College Diploma</masterLabel>
+        
+            <translation>Diploma de escuela secundaria o centro universitario</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>ID verified by other Federal or State agency</masterLabel>
-        <translation>ID verificada por otra agencia federal o estatal</translation>
-    </picklistValues>
+        
+            <masterLabel>ID verified by other Federal or State agency</masterLabel>
+        
+            <translation>ID verificada por otra agencia federal o estatal</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Immigration Document (Government Issued)</masterLabel>
-        <translation>Documento de inmigración (emitido por el gobierno)</translation>
-    </picklistValues>
+        
+            <masterLabel>Immigration Document (Government Issued)</masterLabel>
+        
+            <translation>Documento de inmigración (emitido por el gobierno)</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Local Government Issued ID</masterLabel>
-        <translation>ID emitida por el gobierno local</translation>
-    </picklistValues>
+        
+            <masterLabel>Local Government Issued ID</masterLabel>
+        
+            <translation>ID emitida por el gobierno local</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Marriage License</masterLabel>
-        <translation>Licencia de matrimonio</translation>
-    </picklistValues>
+        
+            <masterLabel>Marriage License</masterLabel>
+        
+            <translation>Licencia de matrimonio</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Military Dependent&apos;s ID</masterLabel>
-        <translation>ID de dependiente militar</translation>
-    </picklistValues>
+        
+            <masterLabel>Military Dependent&apos;s ID</masterLabel>
+        
+            <translation>ID de dependiente militar</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Naturalization Certificate</masterLabel>
-        <translation>Certificado de naturalización</translation>
-    </picklistValues>
+        
+            <masterLabel>Naturalization Certificate</masterLabel>
+        
+            <translation>Certificado de naturalización</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Not verified</masterLabel>
-        <translation>No verificado</translation>
-    </picklistValues>
+        
+            <masterLabel>Not verified</masterLabel>
+        
+            <translation>No verificado</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Passport</masterLabel>
-        <translation>Pasaporte</translation>
-    </picklistValues>
+        
+            <masterLabel>Passport</masterLabel>
+        
+            <translation>Pasaporte</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Property Deed or Title</masterLabel>
-        <translation>Escritura o título de propiedad</translation>
-    </picklistValues>
+        
+            <masterLabel>Property Deed or Title</masterLabel>
+        
+            <translation>Escritura o título de propiedad</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Receipt of Medicare/Medicare Card</masterLabel>
-        <translation>Recibo de Medicare/Tarjeta de Medicare</translation>
-    </picklistValues>
+        
+            <masterLabel>Receipt of Medicare/Medicare Card</masterLabel>
+        
+            <translation>Recibo de Medicare/Tarjeta de Medicare</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>School Photo ID</masterLabel>
-        <translation>ID con foto de escuela</translation>
-    </picklistValues>
+        
+            <masterLabel>School Photo ID</masterLabel>
+        
+            <translation>ID con foto de escuela</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>School Record</masterLabel>
-        <translation>Registro escolar</translation>
-    </picklistValues>
+        
+            <masterLabel>School Record</masterLabel>
+        
+            <translation>Registro escolar</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Social Security Card</masterLabel>
-        <translation>Tarjeta de Seguro Social</translation>
-    </picklistValues>
+        
+            <masterLabel>Social Security Card</masterLabel>
+        
+            <translation>Tarjeta de Seguro Social</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>State Government Issued ID</masterLabel>
-        <translation>ID emitida por el gobierno estatal</translation>
-    </picklistValues>
+        
+            <masterLabel>State Government Issued ID</masterLabel>
+        
+            <translation>ID emitida por el gobierno estatal</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>US Coast Guard Merchant Mariner card</masterLabel>
-        <translation>Tarjeta de guardacostas o marino mercante de EE. UU.</translation>
-    </picklistValues>
+        
+            <masterLabel>US Coast Guard Merchant Mariner card</masterLabel>
+        
+            <translation>Tarjeta de guardacostas o marino mercante de EE. UU.</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>US Military ID Card or Draft Record</masterLabel>
-        <translation>Tarjeta de ID de ejército de EE. UU. o registro del reclutamiento</translation>
-    </picklistValues>
+        
+            <masterLabel>US Military ID Card or Draft Record</masterLabel>
+        
+            <translation>Tarjeta de ID de ejército de EE. UU. o registro del reclutamiento</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Verified by Child Support</masterLabel>
-        <translation>Verificado por Manutención Infantil</translation>
-    </picklistValues>
+        
+            <masterLabel>Verified by Child Support</masterLabel>
+        
+            <translation>Verificado por Manutención Infantil</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Verified by DMV</masterLabel>
-        <translation>Verificado por DMV (Departamento de Vehículos Motorizados)</translation>
-    </picklistValues>
+        
+            <masterLabel>Verified by DMV</masterLabel>
+        
+            <translation>Verificado por DMV (Departamento de Vehículos Motorizados)</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Verified by DPP</masterLabel>
-        <translation>Verificado por DPP (Director del Ministerio Público)</translation>
-    </picklistValues>
+        
+            <masterLabel>Verified by DPP</masterLabel>
+        
+            <translation>Verificado por DPP (Director del Ministerio Público)</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Verified by IRS</masterLabel>
-        <translation>Verificado por IRS (Servicio de Impuestos Internos)</translation>
-    </picklistValues>
+        
+            <masterLabel>Verified by IRS</masterLabel>
+        
+            <translation>Verificado por IRS (Servicio de Impuestos Internos)</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Verified by KTAP or Kinship Care</masterLabel>
-        <translation>Verificado por KTAP o Kinship Care</translation>
-    </picklistValues>
+        
+            <masterLabel>Verified by KTAP or Kinship Care</masterLabel>
+        
+            <translation>Verificado por KTAP o Kinship Care</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Verified by Law enforcement</masterLabel>
-        <translation>Verificado por agencias del orden público</translation>
-    </picklistValues>
+        
+            <masterLabel>Verified by Law enforcement</masterLabel>
+        
+            <translation>Verificado por agencias del orden público</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Verified by SNAP</masterLabel>
-        <translation>Verificado por SNAP (Programa de Asistencia Nutricional Suplementaria)</translation>
-    </picklistValues>
+        
+            <masterLabel>Verified by SNAP</masterLabel>
+        
+            <translation>Verificado por SNAP (Programa de Asistencia Nutricional Suplementaria)</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Verified by SSA</masterLabel>
-        <translation>Verificado por SSA (Administración de Seguro Social)</translation>
-    </picklistValues>
+        
+            <masterLabel>Verified by SSA</masterLabel>
+        
+            <translation>Verificado por SSA (Administración de Seguro Social)</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Verified by correctional agency</masterLabel>
-        <translation>Verificado por agencia correccional</translation>
-    </picklistValues>
+        
+            <masterLabel>Verified by correctional agency</masterLabel>
+        
+            <translation>Verificado por agencia correccional</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Verified by residential care facility administration</masterLabel>
-        <translation>Verificado por administración de centro residencial para cuidados</translation>
-    </picklistValues>
+        
+            <masterLabel>Verified by residential care facility administration</masterLabel>
+        
+            <translation>Verificado por administración de centro residencial para cuidados</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Wage Stubs</masterLabel>
-        <translation>Talones de salario</translation>
-    </picklistValues>
+        
+            <masterLabel>Wage Stubs</masterLabel>
+        
+            <translation>Talones de salario</translation>
+        
+        </picklistValues>
 </CustomFieldTranslation>

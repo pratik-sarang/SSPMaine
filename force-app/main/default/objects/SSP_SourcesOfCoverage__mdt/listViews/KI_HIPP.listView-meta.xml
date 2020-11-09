@@ -7,10 +7,14 @@
     <columns>SourceOfCoverageValue__c</columns>
     <filterScope>Everything</filterScope>
     <filters>
-        <field>Programs_Applied__c</field>
-        <operation>contains</operation>
-        <value>KP</value>
-    </filters>
+        
+            <field>Programs_Applied__c</field>
+        
+            <operation>contains</operation>
+        
+            <value>KP</value>
+        
+        </filters>
     <label>KI-HIPP</label>
     <language>en_US</language>
 </ListView>

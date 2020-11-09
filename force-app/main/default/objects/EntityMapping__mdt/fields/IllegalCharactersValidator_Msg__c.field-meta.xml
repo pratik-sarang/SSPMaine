@@ -7,29 +7,54 @@
     <required>false</required>
     <type>Picklist</type>
     <valueSet>
-        <restricted>true</restricted>
-        <valueSetDefinition>
-            <sorted>false</sorted>
-            <value>
-                <fullName>Please enter data in correct format</fullName>
-                <default>true</default>
-                <label>Please enter data in correct format</label>
-            </value>
-            <value>
-                <fullName>Please enter valid characters.</fullName>
-                <default>false</default>
-                <label>Please enter valid characters.</label>
-            </value>
-            <value>
-                <fullName>Please enter either letter and numeric characters.</fullName>
-                <default>false</default>
-                <label>Please enter either letter and numeric characters.</label>
-            </value>
-            <value>
-                <fullName>Name fields must only have letters, &quot;-&quot; , &quot; &apos; &quot; or &quot; &quot;</fullName>
-                <default>false</default>
-                <label>Name fields must only have letters, &quot;-&quot; , &quot; &apos; &quot; or &quot; &quot;</label>
-            </value>
-        </valueSetDefinition>
-    </valueSet>
+        
+            <restricted>true</restricted>
+        
+            <valueSetDefinition>
+            
+                <sorted>false</sorted>
+            
+                <value>
+                
+                    <fullName>Please enter data in correct format</fullName>
+                
+                    <default>true</default>
+                
+                    <label>Please enter data in correct format</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>Please enter valid characters.</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Please enter valid characters.</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>Please enter either letter and numeric characters.</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Please enter either letter and numeric characters.</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>Name fields must only have letters, &quot;-&quot; , &quot; &apos; &quot; or &quot; &quot;</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Name fields must only have letters, &quot;-&quot; , &quot; &apos; &quot; or &quot; &quot;</label>
+                
+                </value>
+            
+            </valueSetDefinition>
+        
+        </valueSet>
 </CustomField>

@@ -3,7 +3,10 @@
     <label><!-- NextCurrentYear_Validator_Msg --></label>
     <name>NextCurrentYear_Validator_Msg__c</name>
     <picklistValues>
-        <masterLabel>Plan start date can only be next or current year.</masterLabel>
-        <translation><!-- Plan start date can only be next or current year. --></translation>
-    </picklistValues>
+        
+            <masterLabel>Plan start date can only be next or current year.</masterLabel>
+        
+            <translation><!-- Plan start date can only be next or current year. --></translation>
+        
+        </picklistValues>
 </CustomFieldTranslation>

@@ -8,48 +8,92 @@
     <trackTrending>false</trackTrending>
     <type>Picklist</type>
     <valueSet>
-        <valueSetDefinition>
-            <sorted>false</sorted>
-            <value>
-                <fullName>JR</fullName>
-                <default>false</default>
-                <label>JR.</label>
-            </value>
-            <value>
-                <fullName>SR</fullName>
-                <default>false</default>
-                <label>SR.</label>
-            </value>
-            <value>
-                <fullName>TW</fullName>
-                <default>false</default>
-                <label>II</label>
-            </value>
-            <value>
-                <fullName>TH</fullName>
-                <default>false</default>
-                <label>III</label>
-            </value>
-            <value>
-                <fullName>FO</fullName>
-                <default>false</default>
-                <label>IV</label>
-            </value>
-            <value>
-                <fullName>FV</fullName>
-                <default>false</default>
-                <label>V</label>
-            </value>
-            <value>
-                <fullName>SI</fullName>
-                <default>false</default>
-                <label>VI</label>
-            </value>
-            <value>
-                <fullName>SE</fullName>
-                <default>false</default>
-                <label>VII</label>
-            </value>
-        </valueSetDefinition>
-    </valueSet>
+        
+            <valueSetDefinition>
+            
+                <sorted>false</sorted>
+            
+                <value>
+                
+                    <fullName>JR</fullName>
+                
+                    <default>false</default>
+                
+                    <label>JR.</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>SR</fullName>
+                
+                    <default>false</default>
+                
+                    <label>SR.</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>TW</fullName>
+                
+                    <default>false</default>
+                
+                    <label>II</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>TH</fullName>
+                
+                    <default>false</default>
+                
+                    <label>III</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>FO</fullName>
+                
+                    <default>false</default>
+                
+                    <label>IV</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>FV</fullName>
+                
+                    <default>false</default>
+                
+                    <label>V</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>SI</fullName>
+                
+                    <default>false</default>
+                
+                    <label>VI</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>SE</fullName>
+                
+                    <default>false</default>
+                
+                    <label>VII</label>
+                
+                </value>
+            
+            </valueSetDefinition>
+        
+        </valueSet>
 </CustomField>

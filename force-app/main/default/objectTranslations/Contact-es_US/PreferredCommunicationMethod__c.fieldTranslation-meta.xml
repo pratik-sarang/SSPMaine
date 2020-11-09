@@ -3,11 +3,17 @@
     <label><!-- Preferred Method --></label>
     <name>PreferredCommunicationMethod__c</name>
     <picklistValues>
-        <masterLabel>Email</masterLabel>
-        <translation>Email</translation>
-    </picklistValues>
+        
+            <masterLabel>Email</masterLabel>
+        
+            <translation>Email</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Mobile Phone</masterLabel>
-        <translation>Celular</translation>
-    </picklistValues>
+        
+            <masterLabel>Mobile Phone</masterLabel>
+        
+            <translation>Celular</translation>
+        
+        </picklistValues>
 </CustomFieldTranslation>

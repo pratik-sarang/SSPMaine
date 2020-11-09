@@ -1,43 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <GlobalValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    
     <valueTranslation>
+        
         <masterLabel>1 child</masterLabel>
+        
         <translation>1 niño</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>10 children</masterLabel>
+        
         <translation>10 niños</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>2 children</masterLabel>
+        
         <translation>2 niños</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>3 children</masterLabel>
+        
         <translation>3 niños</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>4 children</masterLabel>
+        
         <translation>4 niños</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>5 children</masterLabel>
+        
         <translation>5 niños</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>6 children</masterLabel>
+        
         <translation>6 niños</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>7 children</masterLabel>
+        
         <translation>7 niños</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>8 children</masterLabel>
+        
         <translation>8 niños</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>9 children</masterLabel>
+        
         <translation>9 niños</translation>
+        
     </valueTranslation>
+    
 </GlobalValueSetTranslation>

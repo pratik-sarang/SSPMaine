@@ -9,19 +9,34 @@
     <required>false</required>
     <type>Picklist</type>
     <valueSet>
-        <restricted>true</restricted>
-        <valueSetDefinition>
-            <sorted>false</sorted>
-            <value>
-                <fullName>Auth_Rep</fullName>
-                <default>true</default>
-                <label>Auth Rep</label>
-            </value>
-            <value>
-                <fullName>Assister</fullName>
-                <default>false</default>
-                <label>Assister</label>
-            </value>
-        </valueSetDefinition>
-    </valueSet>
+        
+            <restricted>true</restricted>
+        
+            <valueSetDefinition>
+            
+                <sorted>false</sorted>
+            
+                <value>
+                
+                    <fullName>Auth_Rep</fullName>
+                
+                    <default>true</default>
+                
+                    <label>Auth Rep</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>Assister</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Assister</label>
+                
+                </value>
+            
+            </valueSetDefinition>
+        
+        </valueSet>
 </CustomField>

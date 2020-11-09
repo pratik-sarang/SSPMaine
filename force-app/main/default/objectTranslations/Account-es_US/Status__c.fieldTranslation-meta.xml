@@ -3,15 +3,24 @@
     <label><!-- Status --></label>
     <name>Status__c</name>
     <picklistValues>
-        <masterLabel>Active - Allow referrals</masterLabel>
-        <translation>Activo - Permitir referencias</translation>
-    </picklistValues>
+        
+            <masterLabel>Active - Allow referrals</masterLabel>
+        
+            <translation>Activo - Permitir referencias</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Active - Do not allow referrals</masterLabel>
-        <translation>Activo - No permitir referencias</translation>
-    </picklistValues>
+        
+            <masterLabel>Active - Do not allow referrals</masterLabel>
+        
+            <translation>Activo - No permitir referencias</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Inactive</masterLabel>
-        <translation><!-- Inactive --></translation>
-    </picklistValues>
+        
+            <masterLabel>Inactive</masterLabel>
+        
+            <translation><!-- Inactive --></translation>
+        
+        </picklistValues>
 </CustomFieldTranslation>

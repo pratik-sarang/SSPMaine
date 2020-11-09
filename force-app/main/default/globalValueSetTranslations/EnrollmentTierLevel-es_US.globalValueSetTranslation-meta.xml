@@ -1,23 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <GlobalValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    
     <valueTranslation>
+        
         <masterLabel>Employee Only</masterLabel>
+        
         <translation>Solo empleado/a</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Employee plus One dependent</masterLabel>
+        
         <translation>Empleado/a más un dependiente</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Employee plus Spouse</masterLabel>
+        
         <translation>Empleado/a más cónyuge</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Employee plus two or more dependents</masterLabel>
+        
         <translation>Empleado/a más dos o más dependientes</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Family</masterLabel>
+        
         <translation>Familia</translation>
+        
     </valueTranslation>
+    
 </GlobalValueSetTranslation>

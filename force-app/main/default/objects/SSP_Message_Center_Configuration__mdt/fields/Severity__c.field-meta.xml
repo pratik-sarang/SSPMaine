@@ -7,19 +7,34 @@
     <required>false</required>
     <type>Picklist</type>
     <valueSet>
-        <restricted>true</restricted>
-        <valueSetDefinition>
-            <sorted>false</sorted>
-            <value>
-                <fullName>Critical</fullName>
-                <default>true</default>
-                <label>Critical</label>
-            </value>
-            <value>
-                <fullName>Normal</fullName>
-                <default>false</default>
-                <label>Normal</label>
-            </value>
-        </valueSetDefinition>
-    </valueSet>
+        
+            <restricted>true</restricted>
+        
+            <valueSetDefinition>
+            
+                <sorted>false</sorted>
+            
+                <value>
+                
+                    <fullName>Critical</fullName>
+                
+                    <default>true</default>
+                
+                    <label>Critical</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>Normal</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Normal</label>
+                
+                </value>
+            
+            </valueSetDefinition>
+        
+        </valueSet>
 </CustomField>

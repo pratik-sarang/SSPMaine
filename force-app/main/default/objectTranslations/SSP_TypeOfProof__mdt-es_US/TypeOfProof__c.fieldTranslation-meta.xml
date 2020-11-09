@@ -3,1367 +3,2390 @@
     <label><!-- Type of Proof --></label>
     <name>TypeOfProof__c</name>
     <picklistValues>
-        <masterLabel>AIAN Verification</masterLabel>
-        <translation>Verificación AIAN</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>APTC income verification</masterLabel>
-        <translation>Verificación de ingreso para crédito de impuestos anticipados para la prima (APTC)</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Absent Parent - Non Custodial</masterLabel>
-        <translation>Padre/madre ausente - Sin la custodia</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Age</masterLabel>
-        <translation>Edad</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Alien - Parolee</masterLabel>
-        <translation>Extranjero - En libertad bajo palabra</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Alien -Refugee Settlement Program</masterLabel>
-        <translation>Programa de asentamiento de refugiado-extranjero</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Alien Entry Date</masterLabel>
-        <translation>Fecha de entrada de extranjero</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Alien Sponsor</masterLabel>
-        <translation>Patrocinador de extranjero</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Alien Type - Active duty member of the U.S. Armed Forces</masterLabel>
-        <translation>Tipo de extranjero - Miembro en servicio activo de las Fuerzas Armadas de EE. UU.</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Alien Type - Afghani Special Immigrant</masterLabel>
-        <translation>Tipo de extranjero - Inmigrante especial afgano</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Alien Type - Amerasian Immigrant</masterLabel>
-        <translation>Tipo de extranjero - Inmigrante de origen asiático-estadounidense</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Alien Type - American Indian&apos;s born in Canada (50%+)</masterLabel>
-        <translation>Tipo de extranjero - Indígena estadounidense nacido en Canadá (50%+)</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Alien Type - Asylee</masterLabel>
-        <translation>Tipo de extranjero - Asilado</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Alien Type - Conditional Entry</masterLabel>
-        <translation>Tipo de extranjero - Entrada condicional</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Alien Type - Cuban/Haitian Entrant</masterLabel>
-        <translation>Tipo de extranjero - Procedente de Cuba/Haití</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Alien Type - Current spouse of a veteran</masterLabel>
-        <translation>Tipo de extranjero - Cónyuge actual de un veterano</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Alien Type - Current spouse of an active duty member of U.S. Armed Forces</masterLabel>
-        <translation>Tipo de extranjero - Cónyuge actual de un miembro en servicio activo de las Fuerzas Armadas de EE. UU</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Alien Type - Deportation Withheld</masterLabel>
-        <translation>Tipo de extranjero - Deportación retenida</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Alien Type - Diplomats &amp; Diplomat&apos;s Families</masterLabel>
-        <translation>Tipo de extranjero - Diplomáticos y familias de diplomáticos</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Alien Type - Enrolled member of an Indian Tribe</masterLabel>
-        <translation>Tipo de extranjero - Miembro inscrito de una tribu indígena</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Alien Type - Iraqi Special Immigrant</masterLabel>
-        <translation>Tipo de extranjero - Inmigrante especial iraquí</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Alien Type - Legal Alien Permanent Resident</masterLabel>
-        <translation>Tipo de extranjero - Extranjero legal con residencia permanente</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Alien Type - Permanent Resident under Color of Law (PRUCOL)</masterLabel>
-        <translation>Tipo de extranjero - Residente permanente bajo Color de Ley (PRUCOL)</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Alien Type - Refugee</masterLabel>
-        <translation>Tipo de extranjero - Refugiado</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Alien Type - SSI Determined</masterLabel>
-        <translation>Tipo de extranjero - Determinado por SSI (Seguridad de Ingreso Suplementario)</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Alien Type - Students (Temp. stay)</masterLabel>
-        <translation>Tipo de extranjero - Estudiantes (Estadía temporal)</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Alien Type - Undocumented Aliens</masterLabel>
-        <translation>Tipo de extranjero - Extranjeros indocumentados</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Alien Type - Unmarried child of a veteran</masterLabel>
-        <translation>Tipo de extranjero - Hijo/a no casado/a de un veterano</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Alien Type - Unmarried child of an active duty member of USAF</masterLabel>
-        <translation>Tipo de extranjero - Hijo/a no casado/a de un miembro en servicio activo de las Fuerzas Armadas de EE. UU.</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Alien Type - Veteran</masterLabel>
-        <translation>Tipo de extranjero - Veterano</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Alien Type - Victim of Trafficking</masterLabel>
-        <translation>Tipo de extranjero - Víctima de tráfico de personas</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Alien Type - Visitors / Tourists</masterLabel>
-        <translation>Tipo de extranjero - Visitantes / Turistas</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Alien Type - Widow of a veteran (not remarried)</masterLabel>
-        <translation>Tipo de extranjero - Viuda de un veterano (no vuelta a casar)</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Alimony Expense</masterLabel>
-        <translation>Gasto de pensión para ex cónyuge</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Alimony deduction agreement verification</masterLabel>
-        <translation>Verificación de acuerdo de deducción de pensión para ex cónyuge</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Alimony income agreement verification</masterLabel>
-        <translation>Verificación de acuerdo de ingreso por pensión para ex cónyuge</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Annuity - Information</masterLabel>
-        <translation>Anualidad - Información</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Annuity - Termination/Surrender End</masterLabel>
-        <translation>Anualidad - Término/Fin por rescate</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Annuity Document</masterLabel>
-        <translation>Documento de anualidad</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Annuity Income</masterLabel>
-        <translation>Ingreso por anualidades</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Application Signature Verification</masterLabel>
-        <translation>Verificación de firma en solicitud</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Applied for SSN Verification</masterLabel>
-        <translation>Presentó solicitud para verificación de número de Seguro Social</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Authorized Representative</masterLabel>
-        <translation>Representante autorizado</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Authorized Representative  Relationship</masterLabel>
-        <translation>Representante autorizado - Relación</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Authorized Representative - Identity</masterLabel>
-        <translation>Representante autorizado - Identidad</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Authorized Representative Verification</masterLabel>
-        <translation>Verificación de representante autorizado</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>BWE Work Expense</masterLabel>
-        <translation>Gasto de trabajo relacionado con ceguera (BWE)</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Battered Alien</masterLabel>
-        <translation>Extranjero maltratado</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Benefits received from another State</masterLabel>
-        <translation>Beneficios recibidos de otro estado</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Black Lung Disability</masterLabel>
-        <translation>Discapacidad por pulmón negro</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Boarder</masterLabel>
-        <translation>Pensionista</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Burial Plots - Ownership End Details</masterLabel>
-        <translation>Terrenos para entierro - Detalles de fin de propiedad</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Burial Plots - Resource Value Details</masterLabel>
-        <translation>Terrenos para entierro - Detalles de valor de recurso</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>CCAP Job Search Documentation</masterLabel>
-        <translation>Documentación de búsqueda de empleo para CCAP (Programa de Ayuda para Cuidados Infantiles)</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Care for Individual - Child Care</masterLabel>
-        <translation>Cuidados para individuo - Cuidados Infantiles</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Care for Individual - Incapacitated</masterLabel>
-        <translation>El cuidado de la persona - Incapactitated</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Caretaker services - Caretaker statement</masterLabel>
-        <translation>Servicios de vigilancia de los estados Portero</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Caretaker services - Physician Statement</masterLabel>
-        <translation>Servicios de vigilancia de la declaración del médico</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Case Profile Annuity Questions Verification</masterLabel>
-        <translation>Verificación de preguntas de anualidad de perfil del caso</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Case Profile Blind, Disabled, Incapacitated Questions Verification</masterLabel>
-        <translation>Verificación de preguntas de persona ciega, con discapacidad, con incapacidad de perfil de caso</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Case Profile Burial Fund Questions Verification</masterLabel>
-        <translation>Verificación de preguntas de fondo de sepultura de perfil del caso</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Case Profile Burial Insurance Questions Verification</masterLabel>
-        <translation>Verificación de preguntas de seguro de sepultura de perfil del caso</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Case Profile Burial Plot Questions Verification</masterLabel>
-        <translation>Verificación de preguntas de parcela de sepultura de perfil del caso</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Case Profile Care for Incapacitated Individual Questions Verification</masterLabel>
-        <translation>Verificación de preguntas de cuidados para persona incapacitada de perfil de caso</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Case Profile Chemically Dependent Questions Verification</masterLabel>
-        <translation>Verificación de preguntas de dependiente de sustancias químicas de perfil del caso</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Case Profile Completed Chemical Treatment Questions Verification</masterLabel>
-        <translation>Verificación de preguntas de tratamiento para sustancias químicas completado de perfil de caso</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Case Profile Convicted of Drug Felony Questions Verification</masterLabel>
-        <translation>Verificación de preguntas de procesamiento por delito grave de drogas de perfil de caso</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Case Profile Dependent Care Expense Questions Verification</masterLabel>
-        <translation>Verificación de preguntas de gasto de cuidados de dependiente de perfil de caso</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Case Profile Discontinued SSI Questions Verification</masterLabel>
-        <translation>Verificación de preguntas de interrupción de seguridad de ingreso suplementario (SSI) de perfil del caso</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Case Profile Domestic Violence Victim Questions Verification</masterLabel>
-        <translation>Verificación de preguntas de víctima de violencia doméstica de perfil de caso</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Case Profile Emancipated Questions Verification</masterLabel>
-        <translation>Verificación de preguntas de emancipación de perfil del caso</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Case Profile Entitled Benefits Questions Verification</masterLabel>
-        <translation>Verificación de preguntas de beneficios a los que tiene derecho de perfil del caso</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Case Profile Ever in Foster Care Questions Verification</masterLabel>
-        <translation>Verificación de preguntas de cuidados de crianza de perfil de caso</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Case Profile Fleeing Felon or Probation Parole Violator Questions Verification</masterLabel>
-        <translation>Verificación de preguntas de fugitivo de la ley o incumplimiento de libertad para palabra o condicional de perfil de caso</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Case Profile Has Medicare Questions Verification</masterLabel>
-        <translation>Perfil de caso tiene verificación de preguntas de Medicare</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Case Profile Household Paid Alimony Questions Verification</masterLabel>
-        <translation>Verificación de preguntas de pensión para ex cónyuge pagada por el hogar de perfil de caso</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Case Profile Household Paid Child Support Questions Verification</masterLabel>
-        <translation>Verificación de preguntas de manutención infantil pagada por el hogar de perfil de caso</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Case Profile LTC Arrangement Questions Verification</masterLabel>
-        <translation>Verificación de preguntas de acuerdo de cuidados a largo plazo de perfil del caso</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Case Profile Life Estate Questions Verification</masterLabel>
-        <translation>Verificación de preguntas de derecho real de por vida de perfil del caso</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Case Profile Life Insurance Questions Verification</masterLabel>
-        <translation>Verificación de preguntas de seguro de vida de perfil del caso</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Case Profile Life Settlement Contract Questions Verification</masterLabel>
-        <translation>Verificación de preguntas de contrato de venta de seguro de vida a tercero de perfil del caso</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Case Profile Mandatory withholding Questions Verification</masterLabel>
-        <translation>Verificación de preguntas de retención obligatoria de perfil del caso</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Case Profile Medical Part D Premium Questions Verification</masterLabel>
-        <translation>Verificación de preguntas de prima de Medicare Parte D de perfil de caso</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Case Profile Other Resource Questions Verification</masterLabel>
-        <translation>Verificación de preguntas de otro recurso de perfil del caso</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Case Profile Out of State Benefits Questions Verification</masterLabel>
-        <translation>Verificación de preguntas de beneficios fuera del estado de perfil de caso</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Case Profile Partnership Qualified LTC Policy Questions Verification</masterLabel>
-        <translation>Verificación de preguntas de póliza de sociedad calificada para cuidados a largo plazo de perfil de caso</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Case Profile Pregnant Questions Verification</masterLabel>
-        <translation>Verificación de preguntas de embarazada de perfil del caso</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Case Profile Promissory Note or Land Contract Questions Verification</masterLabel>
-        <translation>Verificación de preguntas de pagaré o contrato de compraventa de perfil de caso</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Case Profile Real Property Questions Verification</masterLabel>
-        <translation>Verificación de preguntas de bienes inmuebles de perfil del caso</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Case Profile Receiving or Applied for SSI Questions Verification</masterLabel>
-        <translation>Verificación de preguntas de persona que recibe o solicitó seguridad de ingreso suplementario (SSI) de perfil del caso</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Case Profile Resource Transfer Questions Verification</masterLabel>
-        <translation>Verificación de preguntas de transferencia de recurso de perfil de caso</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Case Profile Self Employment Income Questions Verification</masterLabel>
-        <translation>Verificación de preguntas de ingreso por trabajo por cuenta propia de perfil de caso</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Case Profile Shelter Expense Questions Verification</masterLabel>
-        <translation>Verificación de preguntas de gastos de vivienda de perfil de caso</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Case Profile Someone in Household on Strike Questions Verification</masterLabel>
-        <translation>Verificación de preguntas de alguien en el hogar en huelga de perfil de caso</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Case Profile Unearned Income Questions Verification</masterLabel>
-        <translation>Verificación de preguntas de ingreso no proveniente del trabajo de perfil de caso</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Case Profile Utility Expense Allowance Questions Verification</masterLabel>
-        <translation>Verificación de preguntas de asignación para gastos de servicios públicos de perfil de caso</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Case Profile Utility Expense Questions Verification</masterLabel>
-        <translation>Verificación de preguntas de gastos de servicios públicos de perfil de caso</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Case profile deduction question verification</masterLabel>
-        <translation>Caso perfil deducción pregunta de verificación</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Case profile income question verification</masterLabel>
-        <translation>Caso perfil de ingreso pregunta de verificación</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Child Care Benefits - Delinquent Claims</masterLabel>
-        <translation>Beneficios de Cuidados Infantiles - Reclamos por mora</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Child Support</masterLabel>
-        <translation>Manutención infantil</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Child Support - Alimony</masterLabel>
-        <translation>Manutención Infantil - Pensión para ex cónyuge</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Child Support - Alimony Childsupportarrears</masterLabel>
-        <translation>Atrasos en Manutención Infantil - Pensión para ex cónyuge</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Child Support - Taxintercept</masterLabel>
-        <translation>Manutención Infantil - Interceptación de impuestos</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Child Support Assignment of Rights Signature</masterLabel>
-        <translation>Firma de cesión de derechos de manutención infantil</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Community Integration Supplementation</masterLabel>
-        <translation>Suplementación para Integración a la Comunidad</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Conditional Enrollment in Medicare Part A</masterLabel>
-        <translation>Inscripción condicional en Medicare Parte A</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Death</masterLabel>
-        <translation>Fallecimiento</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Declaration of Annuities</masterLabel>
-        <translation>Declaración de rentas</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Deduction</masterLabel>
-        <translation>Deducción</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Deduction - AI/AN Income</masterLabel>
-        <translation>Deducción - Ingreso indígena estadounidense/nativo de Alaska (AI/AN)</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Deduction - Alimony</masterLabel>
-        <translation>Deducción - Pensión para ex cónyuge</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Deduction - Certain business expenses of reservists and officials (Form 2106)</masterLabel>
-        <translation>Deducción - Ciertos gastos empresariales de reservistas y funcionarios (Formulario 2106)</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Deduction - Deductible part of self employment tax</masterLabel>
-        <translation>Deducción - Parte deducible de impuesto de trabajo por cuenta propia</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Deduction - Domestic production activities</masterLabel>
-        <translation>Deducción - Deducción de actividades de producción nacional</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Deduction - Health savings account deduction</masterLabel>
-        <translation>Deducción - Deducción de cuenta de ahorros para la salud</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Deduction - IRA deduction</masterLabel>
-        <translation>Deducción - Deducción de IRA</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Deduction - Moving expenses</masterLabel>
-        <translation>Deducción - Gastos de mudanza</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Deduction - Non-reimbursable educator expense</masterLabel>
-        <translation>Deducción - Gasto de educador no reembolsable</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Deduction - Penalty on early withdrawal of savings</masterLabel>
-        <translation>Deducción - Sanción por retiro anticipado de ahorros</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Deduction - Self-employed health insurance deduction</masterLabel>
-        <translation>Deducción - Deducción de seguro de salud para trabajo por cuenta propia</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Deduction - Self-employed qualified plans</masterLabel>
-        <translation>Deducción - Planes calificados para trabajo por cuenta propia</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Deduction - Self-employed simple plans</masterLabel>
-        <translation>Deducción - Planes simples para trabajo por cuenta propia</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Deduction - Student loan interest</masterLabel>
-        <translation>Deducción - Interés por préstamo estudiantil</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Deduction - Tuition and fees</masterLabel>
-        <translation>Deducción - Matrícula y tarifas de centros de estudio</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Deductions</masterLabel>
-        <translation>Deducciones</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Dependent Care</masterLabel>
-        <translation>Cuidado de dependiente</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Deprivation Disability</masterLabel>
-        <translation>La privación de Discapacidad</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Deprivation Non-Custodial Parent</masterLabel>
-        <translation>Padres privación sin Custodia</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Disability - MRT Disabled</masterLabel>
-        <translation>Discapacidad - Discapacitado MRT (Equipo de Revisión Médica)</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Disablity - Loss of RSDI</masterLabel>
-        <translation>Discapacidad - Pérdida de RSDI (Ingreso por Seguro para Jubilación, Supervivencia y Discapacidad)</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Domestic violence verification</masterLabel>
-        <translation>Verificación de violencia doméstica</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Drug Addiction and Alcohol Treatment Centers</masterLabel>
-        <translation>Centros de Tratamiento para Alcohol y Adicción a Drogas</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Drug Felony Assessment</masterLabel>
-        <translation>Evaluación de delito grave de drogas</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Drug Felony Completed</masterLabel>
-        <translation>Delito grave de drogas completado</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Drug Felony Participation</masterLabel>
-        <translation>Participación en delito grave de drogas</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>ETP Assessment</masterLabel>
-        <translation>Evaluación del Programa Empleo y Capacitación (ETP)</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Earned Income Credit</masterLabel>
-        <translation>Crédito por ingreso derivado del trabajo</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Earned Income Payment</masterLabel>
-        <translation>Pago de ingreso derivado del trabajo</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Earned Income Verification</masterLabel>
-        <translation>Verificación de ingreso derivado del trabajo</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Educational Expenses</masterLabel>
-        <translation>Gastos de educación</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Elective Abortion</masterLabel>
-        <translation>Aborto opcional</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Emergency Nature Condition</masterLabel>
-        <translation>Afección médica de emergencia</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Employment History</masterLabel>
-        <translation>Historial de empleo</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Employment Income</masterLabel>
-        <translation>Ingreso por empleo</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>End Stage Renal Disability</masterLabel>
-        <translation>Discapacidad renal en etapa terminal</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Energy Payment Income</masterLabel>
-        <translation>Ingreso por pago de electricidad</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Entitled Benefits Verification</masterLabel>
-        <translation>Verificación de beneficios a los que tiene derecho</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Expected Incarceration status verification</masterLabel>
-        <translation><!-- Expected Incarceration status verification --></translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>FDAK funeral trust Agreement</masterLabel>
-        <translation>Acuerdo de fideicomiso para funeral FDAK</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Field determination</masterLabel>
-        <translation>Determinación de campo</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Fourty Quarter Alien</masterLabel>
-        <translation>Extranjero de cuarenta trimestres</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Full-time Student Status for PATH Exemption</masterLabel>
-        <translation>Estatus de estudiante a tiempo completo para exención de PATH</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Gifts and Contributions Income</masterLabel>
-        <translation>Ingreso por regalos y contribuciones</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Government Housing Income</masterLabel>
-        <translation>Ingreso por vivienda del gobierno</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Group Living Arrangement</masterLabel>
-        <translation>Vida en grupo</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>High risk pregnancy verification</masterLabel>
-        <translation>Verificación de embarazo de alto riesgo</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Household</masterLabel>
-        <translation>Hogar</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>IRWE Work Expense</masterLabel>
-        <translation>Gasto de trabajo relacionado con deficiencia (IRWE)</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Identity</masterLabel>
-        <translation>Identidad</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Identity </masterLabel>
-        <translation>Identidad</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Identity  </masterLabel>
-        <translation>Identidad</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Identity   </masterLabel>
-        <translation>Identidad</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Identity - Individual Interviewed</masterLabel>
-        <translation>Identidad - Persona entrevistada</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Identity - Individual Interviewed </masterLabel>
-        <translation>Identidad - Persona entrevistada</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Identity Verification</masterLabel>
-        <translation>Verificación de identidad</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Immigration Entry Date Verification</masterLabel>
-        <translation>Verificación de fecha de entrada de inmigración</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Immigration status under review</masterLabel>
-        <translation>Estatus migratorio bajo revisión</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Incarceration status verification</masterLabel>
-        <translation>Verificación de estatus de encarcelamiento</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Income Verification</masterLabel>
-        <translation>Verificación de ingreso</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Interest Income</masterLabel>
-        <translation>Ingreso por intereses</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Job end verification</masterLabel>
-        <translation>Verificación de fin de trabajo</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Joint Custody Verification</masterLabel>
-        <translation>Verificación de custodia compartida</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>KI-HIPP Enrollment</masterLabel>
-        <translation>Inscripción de KI-HIPP</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>KI-HIPP Good Cause</masterLabel>
-        <translation>Motivo suficiente de KI-HIPP</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>KI-HIPP Monthly Verification</masterLabel>
-        <translation>Verificación mensual de KI-HIPP</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>KI-HIPP Preferred Payment Method</masterLabel>
-        <translation>Método de pago preferido de KI-HIPP</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>KTAP Extension Request</masterLabel>
-        <translation>Solicitud de extensión de KTAP</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>KWP Assessment</masterLabel>
-        <translation>Evaluación KWP</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Lawful Presence Verification</masterLabel>
-        <translation>Verificación de presencia legal</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Lawful Presence Verification </masterLabel>
-        <translation>Verificación de presencia legal</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Life Estate - Establishment of Life Estate</masterLabel>
-        <translation>Derecho real de por vida - Establecimiento de derecho real</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Life Estate - Relinquishment Details</masterLabel>
-        <translation>Derecho real de por vida - Detalles de cesión</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Life Insurance - Cash Surrender Value</masterLabel>
-        <translation>Seguro de vida - Valor de rescate en efectivo</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Life Insurance - Face Value</masterLabel>
-        <translation>Seguro de vida - Valor nominal</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Life Insurance - Loan Balance</masterLabel>
-        <translation>Seguro de vida - Saldo de préstamo</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Life Insurance - Ownership End Details</masterLabel>
-        <translation>Seguro de vida - Detalles de fin de propiedad</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Life Settlement Contract - Cash Surrender Value</masterLabel>
-        <translation>Contrato de venta de seguro de vida a tercero - Valor de rescate en efectivo</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Life Settlement Contract - Face Value</masterLabel>
-        <translation>Contrato de venta de seguro de vida a tercero - Valor nominal</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Life Settlement Contract - Loan Balance</masterLabel>
-        <translation>Contrato de venta de seguro de vida a tercero - Saldo de préstamo</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Life Time Care Agreement</masterLabel>
-        <translation>Acuerdo de cuidados de por vida</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Life Time Worker Disability</masterLabel>
-        <translation>Discapacidad laboral de por vida</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Liquid Asset - Debt</masterLabel>
-        <translation>Activo líquido - Deuda</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Liquid Asset - Excluded Amount</masterLabel>
-        <translation>Activo líquido - Monto excluido</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Liquid Asset - Inaccessibility</masterLabel>
-        <translation>Activo líquido - Inaccesibilidad</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Liquid Asset - Joint Ownership Details</masterLabel>
-        <translation>Activo líquido - Detalles de propiedad compartida</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Liquid Asset - Ownership End Details</masterLabel>
-        <translation>Activo líquido - Detalles de fin de propiedad</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Liquid Asset Not Verified</masterLabel>
-        <translation>Activo líquido - No verificado</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Living Arrangement</masterLabel>
-        <translation>Dónde y con quién vive</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Living Arrangement-Family Care Home</masterLabel>
-        <translation>Dónde y con quién vive-Hogar de cuidados familiares</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Living Arrangement-Personal Care Home</masterLabel>
-        <translation>Donde y con quién vive-Hogar de cuidados personales</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Loss of Employment</masterLabel>
-        <translation>Pérdida de empleo</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Loss of Self Employment</masterLabel>
-        <translation>Pérdida de trabajo por cuenta propia</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Loss of Unearned Income</masterLabel>
-        <translation>Pérdida de ingreso no derivado del trabajo</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>MRT Determination</masterLabel>
-        <translation>Determinación de incapacidad</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>MRT Disability</masterLabel>
-        <translation>Discapacidad MRT (Equipo de Revisión Médica)</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Mandatory Withholding - Mandatory Taxes</masterLabel>
-        <translation>Retención obligatoria - Impuestos obligatorios</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Mandatory Withholding - Other</masterLabel>
-        <translation>Retención obligatoria - Otro</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Medical Expense</masterLabel>
-        <translation>Gasto médico</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Medical Expense - Prescription Drug</masterLabel>
-        <translation>Gasto médico - Medicamento con receta médica</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Medical expense  Cancer Policy Premium</masterLabel>
-        <translation>Gasto médico - Prima de póliza de cáncer</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Medical expense  Cost sharing/spend down expenses</masterLabel>
-        <translation>Gasto médico - Costos compartidos/gastos con límite de responsabilidad económica</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Medical expense  Dentures</masterLabel>
-        <translation>Gasto médico - Dentadura postiza</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Medical expense  Hearing aids</masterLabel>
-        <translation>Gasto médico - Audífonos</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Medical expense - Attendant/home held/child care/housekeeper</masterLabel>
-        <translation>Gasto médico - Cuidador/Ayudante/Cuidados infantiles/Persona encargada de la casa</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Medical expense - Glasses/contacts</masterLabel>
-        <translation>Gasto médico - Anteojos/Lentes de contacto</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Medical expense - Lodging</masterLabel>
-        <translation>Gasto médico - Alojamiento</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Medical expense - Medical supplies</masterLabel>
-        <translation>Gasto médico - Materiales médicos</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Medical expense - Medically Necessary Items with Doctor&apos;s Note</masterLabel>
-        <translation>Gasto médico - Artículos médicamente necesarios con nota de médico</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Medical expense - Medicare Premiums</masterLabel>
-        <translation>Gasto médico - Primas de Medicare</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Medical expense - Other</masterLabel>
-        <translation>Gasto médico - Otro</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Medical expense - Prosthetics</masterLabel>
-        <translation>Gasto médico - Prótesis</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Medical expense - SMI Premium</masterLabel>
-        <translation>Gasto médico - Prima SMI (Seguro Médico Suplementario)</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Medical expense - Securing/maintaining service animals</masterLabel>
-        <translation>Gasto médico - Obtener/mantener animales de servicio</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Medical expense - Telephone charges</masterLabel>
-        <translation>Gasto médico - Cargos de teléfono</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Medical expense - Transportation</masterLabel>
-        <translation>Gasto médico - Transporte</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>NCP Good Cause</masterLabel>
-        <translation>Motivo suficiente de padre/madre sin la custodia</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>No checking/savings/CD verification</masterLabel>
-        <translation>No hay verificación de cuenta corriente/cuenta ahorros/certificado de depósito</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Non-Compliant for KWP Full Family Sanction Requirement</masterLabel>
-        <translation>Falta de cumplimiento de KWP completa familia Sanción Requisito</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Notes Income</masterLabel>
-        <translation>Ingreso por notas</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Other Earned Income</masterLabel>
-        <translation>Otro ingreso derivado del trabajo</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Other Resources - Debt</masterLabel>
-        <translation>Otros recursos - Deuda</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Other Resources - Fair Market Value</masterLabel>
-        <translation>Otros recursos - Valor justo de mercado</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Other Resources - Inaccessibility</masterLabel>
-        <translation>Otros recursos - Inaccesibilidad</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Other Resources - Joint Ownership Details</masterLabel>
-        <translation>Otros recursos - Detalles de propiedad compartida</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Other Resources - Ownership End Details</masterLabel>
-        <translation>Otros recursos - Detalles de fin de propiedad</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Other Unearned Income</masterLabel>
-        <translation>Otro ingreso no derivado del trabajo</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Pending for interview</masterLabel>
-        <translation>Pendiente de entrevista</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Pension Income</masterLabel>
-        <translation>Ingreso por pensiones</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Pension Verification</masterLabel>
-        <translation>Verificación de pensión</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Pregnancy</masterLabel>
-        <translation>Embarazo</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Prizes Income</masterLabel>
-        <translation>Ingreso por premios</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Promisory Note/Land Contract Details</masterLabel>
-        <translation>Detalles de pagaré/contrato de compraventa</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Proof of Assets Held by the Trust</masterLabel>
-        <translation>Comprobante de bienes en el fideicomiso</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Proof of custody order</masterLabel>
-        <translation>Comprobante de orden de custodia</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Proof of custody order not being followed</masterLabel>
-        <translation>Comprobante de que no se cumplió orden de custodia</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Proof of not receiving Medicare benefits</masterLabel>
-        <translation>Comprobante de que no está recibiendo beneficios Medicare</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Proof of participation in KWP activity for 15 calendar days</masterLabel>
-        <translation>Comprobante de participación en actividad de KWP durante 15 días calendario</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Proof of termination of ESI coverage (Employer Sponsored Insurance).</masterLabel>
-        <translation>Comprobante de finalización de cobertura de seguro patrocinado por el empleador (ESI).</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Proof of termination of other health care coverage (Minimum Essential Coverage)</masterLabel>
-        <translation>Comprobante de finalización de otra cobertura de salud (cobertura esencial mínima)</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Qualified Income Trust</masterLabel>
-        <translation>Fideicomiso de ingreso calificado</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>RSDI</masterLabel>
-        <translation>RSDI (Ingreso por Seguro para Jubilación, Supervivencia y Discapacidad)</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>RSDI Income</masterLabel>
-        <translation>Ingreso por Seguro para Jubilación, Supervivencia y Discapacidad (RSDI)</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>RailRoad Disability</masterLabel>
-        <translation>Discapacidad de trabajador ferroviario</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Railroad Retirement Income</masterLabel>
-        <translation>Ingreso por jubilación para trabajadores ferroviarios</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Real Property - Advertising the property in the local newspaper or on television or radio stations or the internet</masterLabel>
-        <translation>Bienes inmuebles - Anunciando la propiedad en el diario local o en estaciones de radio o televisión o internet</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Real Property - Debt</masterLabel>
-        <translation>Bienes inmuebles - Deuda</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Real Property - Distributing fliers advertising the property for sale</masterLabel>
-        <translation>Bienes inmuebles - Distribuyendo folletos anunciando la propiedad a la venta</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Real Property - Exclusion</masterLabel>
-        <translation>Bienes inmuebles - Exclusión</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Real Property - Fair Market Value</masterLabel>
-        <translation>Bienes inmuebles - Valor justo de mercado</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Real Property - Inaccessibility</masterLabel>
-        <translation>Bienes inmuebles - Inaccesibilidad</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Real Property - Is the individual listed the property with a Real Estate Agent</masterLabel>
-        <translation>Bienes inmuebles - ¿El individuo puso a la venta la propiedad con un agente de bienes inmuebles?</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Real Property - Joint Ownership</masterLabel>
-        <translation>Bienes inmuebles - Propiedad compartida</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Real Property - Ownership End Details</masterLabel>
-        <translation>Bienes inmuebles - Detalles de fin de propiedad</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Real Property - Placing a &quot;For Sale&quot; sign on the property which is clearly visible from the nearest public road</masterLabel>
-        <translation>Bienes inmuebles - Colocando un cartel “Se vende” en la propiedad que sea claramente visible desde la vía pública más cercana</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Real Property - Posting notices regarding availability of the property on community bulletin boards</masterLabel>
-        <translation>Bienes inmuebles - Colocando carteles sobre la disponibilidad de la propiedad en carteleras de la comunidad</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Real Property - Showing the property to interested parties on a continuing basis, documented on a log with dates</masterLabel>
-        <translation>Bienes inmuebles - Mostrando la propiedad a partes interesadas de forma continua, documentando las fechas en un registro</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Relationship Verification</masterLabel>
-        <translation>Verificación de relación</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Residency</masterLabel>
-        <translation>Residencia</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Resource Assessment - Assessment Information</masterLabel>
-        <translation>Evaluación de recursos - Información de evaluación</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Resource Transfer - Return Asset</masterLabel>
-        <translation>Transferencia de recursos - Devolución de activo</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Room and Board Expenses</masterLabel>
-        <translation>Gastos de casa y comida</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Royalties Income</masterLabel>
-        <translation>Ingreso por regalías</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>SAFE - Shelter Expenses</masterLabel>
-        <translation>SAFE (Ayuda Simplificada para Personas de la Tercera Edad) - Gastos de vivienda</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>SEVIS ID Number for Lawful Presence Verification</masterLabel>
-        <translation>Número de ID de SEVIS para verificación de presencia legal</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>SSI income</masterLabel>
-        <translation>Ingreso por Seguridad de Ingreso Suplementario (SSI)</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>STABLE Accounts Not Verified </masterLabel>
-        <translation>Cuentas STABLE no verificadas</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Self Employment Expense</masterLabel>
-        <translation>Gasto de trabajo por cuenta propia</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Self Employment Income</masterLabel>
-        <translation>Ingreso por trabajo por cuenta propia</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Self Employment Income </masterLabel>
-        <translation>Ingreso por trabajo por cuenta propia</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Self-Employment operated with child present In-Home </masterLabel>
-        <translation>Trabajo por cuenta propia realizado con menor presente en el hogar</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Shelter</masterLabel>
-        <translation>Vivienda</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Shelter Mortgage</masterLabel>
-        <translation>Hipoteca de vivienda</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Shelter Rent</masterLabel>
-        <translation>Alquiler de vivienda</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Shelter Tax</masterLabel>
-        <translation>Impuesto de vivienda</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Short Term Expense</masterLabel>
-        <translation>Gasto a corto plazo</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Sick Leave Disability</masterLabel>
-        <translation>Discapacidad -Licencia por enfermedad</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Social Security Number</masterLabel>
-        <translation>Número de Seguro Social</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Special Needs</masterLabel>
-        <translation>Necesidades especiales</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Special Needs for child under thirteen</masterLabel>
-        <translation>Necesidades especiales para menor de menos de trece años</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Student Attendance</masterLabel>
-        <translation>Asistencia de estudiante</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Student Education Enrollment</masterLabel>
-        <translation>Inscripción de educación de estudiante</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Surgery Illness Disability</masterLabel>
-        <translation>Cirugía Enfermedad Discapacidad</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>TANF/Foster Care/IHFS/Adoption Subsidy</masterLabel>
-        <translation>TANF/Cuidados de crianza/IHFS/Subsidio por adopción</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>TPR LTC Disability Insurance Income</masterLabel>
-        <translation>Ingreso por seguro de discapacidad para cuidados a largo plazo de tercero</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Tax Filing Information</masterLabel>
-        <translation>Información presentación de impuestos</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Temporary Leave</masterLabel>
-        <translation>Licencia temporal</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Temporary disability</masterLabel>
-        <translation>Discapacidad temporal</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Termination of Promisory Note/Land Contract End</masterLabel>
-        <translation>Fin de pagaré/contrato de compraventa</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Third Party Liability</masterLabel>
-        <translation>Responsabilidad de tercero</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Third Party Reimbursement</masterLabel>
-        <translation>Reembolso de tercero</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Third Party Resources</masterLabel>
-        <translation>Recursos de terceros</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Trust - Termination End</masterLabel>
-        <translation>Fideicomiso - Fin por término</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Trust Document</masterLabel>
-        <translation>Documento de confianza</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Trust Proceeds Income</masterLabel>
-        <translation>Ingreso por fideicomiso</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>UIB Income</masterLabel>
-        <translation>Ingreso por beneficios de seguro por desempleo (UIB)</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>US Citizenship</masterLabel>
-        <translation>Ciudadanía de EE. UU.</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Unable to care for child due to disability</masterLabel>
-        <translation>No puede cuidar a menor debido a discapacidad</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Unearned Income</masterLabel>
-        <translation>Ingreso no derivado del trabajo</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Unearned Income Payment Verification</masterLabel>
-        <translation>Verificación de pago de ingreso no derivado del trabajo</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Updated Student Information through SEVIS by Contacting School or Program Sponsor</masterLabel>
-        <translation>Información de estudiante actualizada mediante SEVIS a través de contacto con escuela o programa patrocinador</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Utility</masterLabel>
-        <translation>Servicio público</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Utility - Allowance Bua</masterLabel>
-        <translation>Servicio público - Asignación BUA (asignación básica para servicio público)</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Utility - Allowance Sua</masterLabel>
-        <translation>Servicio público - Asignación SUA (asignación estándar para servicio público)</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Utility - Allowance Telephonestandard</masterLabel>
-        <translation>Servicio público - Asignación estándar para teléfono</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Utility - Billed for Primary Heating</masterLabel>
-        <translation>Servicio público - Factura por calefacción primaria</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Utility - Electricity</masterLabel>
-        <translation>Servicio público - Electricidad</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Utility - Garbage</masterLabel>
-        <translation>Servicio público - Recolección de basura</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Utility - LIHEAP Assistance</masterLabel>
-        <translation>Servicio público - Ayuda LIHEAP</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Utility - Sewage</masterLabel>
-        <translation>Servicio público - Eliminación de aguas residuales</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Utility - Telephone</masterLabel>
-        <translation>Servicio público - Teléfono</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Utility - Water</masterLabel>
-        <translation>Servicio público - Agua</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>VA Benefit Disability</masterLabel>
-        <translation>Discapacidad de Beneficios para Veteranos (VA)</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>VA Benefit Income</masterLabel>
-        <translation>Ingreso por beneficios para veteranos</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Vehicle - Able to Ride in Vehicle</masterLabel>
-        <translation>Vehículo - Puede viajar en vehículo</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Vehicle - Debt Verification</masterLabel>
-        <translation>Vehículo - Verificación de deuda</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Vehicle - Fair Market Value</masterLabel>
-        <translation>Vehículo - Valor justo de mercado</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Vehicle - Inaccessibility</masterLabel>
-        <translation>Vehículo - Inaccesibilidad</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Vehicle - Joint Ownership Details</masterLabel>
-        <translation>Vehículo - Detalles de propiedad compartida</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Vehicle - Ownership End Details</masterLabel>
-        <translation>Vehículo - Detalles de fin de propiedad</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Vendor Payment Income</masterLabel>
-        <translation>Ingreso por pago de proveedor</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Verification of Immigration status</masterLabel>
-        <translation>Verificación de estatus de inmigración</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Verification of lawful presence.</masterLabel>
-        <translation>Verificación de presencia legal.</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>VolAg Match Grant Income</masterLabel>
-        <translation>Ingreso por programa Match Grant de agencia voluntaria</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Voluntarily Quit Good Cause</masterLabel>
-        <translation>Abandono voluntario - Motivo suficiente</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Voluntary Absent Parent - Non Custodial</masterLabel>
-        <translation>Padre/madre ausente voluntariamente - Sin la custodia</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Work Hours</masterLabel>
-        <translation>Horario de trabajo</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Work Registration</masterLabel>
-        <translation>Registro de trabajo</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Workers Compensation Income</masterLabel>
-        <translation>Ingreso por indemnización laboral</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Your legal obligation to pay Child Support</masterLabel>
-        <translation>Su obligación legal de pagar manutención infantil</translation>
-    </picklistValues>
-    <picklistValues>
-        <masterLabel>Zero Income Verification</masterLabel>
-        <translation>Verificación de ingreso cero</translation>
-    </picklistValues>
+        
+            <masterLabel>AIAN Verification</masterLabel>
+        
+            <translation>Verificación AIAN</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>APTC income verification</masterLabel>
+        
+            <translation>Verificación de ingreso para crédito de impuestos anticipados para la prima (APTC)</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Absent Parent - Non Custodial</masterLabel>
+        
+            <translation>Padre/madre ausente - Sin la custodia</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Age</masterLabel>
+        
+            <translation>Edad</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Alien - Parolee</masterLabel>
+        
+            <translation>Extranjero - En libertad bajo palabra</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Alien -Refugee Settlement Program</masterLabel>
+        
+            <translation>Programa de asentamiento de refugiado-extranjero</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Alien Entry Date</masterLabel>
+        
+            <translation>Fecha de entrada de extranjero</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Alien Sponsor</masterLabel>
+        
+            <translation>Patrocinador de extranjero</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Alien Type - Active duty member of the U.S. Armed Forces</masterLabel>
+        
+            <translation>Tipo de extranjero - Miembro en servicio activo de las Fuerzas Armadas de EE. UU.</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Alien Type - Afghani Special Immigrant</masterLabel>
+        
+            <translation>Tipo de extranjero - Inmigrante especial afgano</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Alien Type - Amerasian Immigrant</masterLabel>
+        
+            <translation>Tipo de extranjero - Inmigrante de origen asiático-estadounidense</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Alien Type - American Indian&apos;s born in Canada (50%+)</masterLabel>
+        
+            <translation>Tipo de extranjero - Indígena estadounidense nacido en Canadá (50%+)</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Alien Type - Asylee</masterLabel>
+        
+            <translation>Tipo de extranjero - Asilado</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Alien Type - Conditional Entry</masterLabel>
+        
+            <translation>Tipo de extranjero - Entrada condicional</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Alien Type - Cuban/Haitian Entrant</masterLabel>
+        
+            <translation>Tipo de extranjero - Procedente de Cuba/Haití</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Alien Type - Current spouse of a veteran</masterLabel>
+        
+            <translation>Tipo de extranjero - Cónyuge actual de un veterano</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Alien Type - Current spouse of an active duty member of U.S. Armed Forces</masterLabel>
+        
+            <translation>Tipo de extranjero - Cónyuge actual de un miembro en servicio activo de las Fuerzas Armadas de EE. UU</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Alien Type - Deportation Withheld</masterLabel>
+        
+            <translation>Tipo de extranjero - Deportación retenida</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Alien Type - Diplomats &amp; Diplomat&apos;s Families</masterLabel>
+        
+            <translation>Tipo de extranjero - Diplomáticos y familias de diplomáticos</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Alien Type - Enrolled member of an Indian Tribe</masterLabel>
+        
+            <translation>Tipo de extranjero - Miembro inscrito de una tribu indígena</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Alien Type - Iraqi Special Immigrant</masterLabel>
+        
+            <translation>Tipo de extranjero - Inmigrante especial iraquí</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Alien Type - Legal Alien Permanent Resident</masterLabel>
+        
+            <translation>Tipo de extranjero - Extranjero legal con residencia permanente</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Alien Type - Permanent Resident under Color of Law (PRUCOL)</masterLabel>
+        
+            <translation>Tipo de extranjero - Residente permanente bajo Color de Ley (PRUCOL)</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Alien Type - Refugee</masterLabel>
+        
+            <translation>Tipo de extranjero - Refugiado</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Alien Type - SSI Determined</masterLabel>
+        
+            <translation>Tipo de extranjero - Determinado por SSI (Seguridad de Ingreso Suplementario)</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Alien Type - Students (Temp. stay)</masterLabel>
+        
+            <translation>Tipo de extranjero - Estudiantes (Estadía temporal)</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Alien Type - Undocumented Aliens</masterLabel>
+        
+            <translation>Tipo de extranjero - Extranjeros indocumentados</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Alien Type - Unmarried child of a veteran</masterLabel>
+        
+            <translation>Tipo de extranjero - Hijo/a no casado/a de un veterano</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Alien Type - Unmarried child of an active duty member of USAF</masterLabel>
+        
+            <translation>Tipo de extranjero - Hijo/a no casado/a de un miembro en servicio activo de las Fuerzas Armadas de EE. UU.</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Alien Type - Veteran</masterLabel>
+        
+            <translation>Tipo de extranjero - Veterano</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Alien Type - Victim of Trafficking</masterLabel>
+        
+            <translation>Tipo de extranjero - Víctima de tráfico de personas</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Alien Type - Visitors / Tourists</masterLabel>
+        
+            <translation>Tipo de extranjero - Visitantes / Turistas</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Alien Type - Widow of a veteran (not remarried)</masterLabel>
+        
+            <translation>Tipo de extranjero - Viuda de un veterano (no vuelta a casar)</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Alimony Expense</masterLabel>
+        
+            <translation>Gasto de pensión para ex cónyuge</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Alimony deduction agreement verification</masterLabel>
+        
+            <translation>Verificación de acuerdo de deducción de pensión para ex cónyuge</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Alimony income agreement verification</masterLabel>
+        
+            <translation>Verificación de acuerdo de ingreso por pensión para ex cónyuge</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Annuity - Information</masterLabel>
+        
+            <translation>Anualidad - Información</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Annuity - Termination/Surrender End</masterLabel>
+        
+            <translation>Anualidad - Término/Fin por rescate</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Annuity Document</masterLabel>
+        
+            <translation>Documento de anualidad</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Annuity Income</masterLabel>
+        
+            <translation>Ingreso por anualidades</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Application Signature Verification</masterLabel>
+        
+            <translation>Verificación de firma en solicitud</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Applied for SSN Verification</masterLabel>
+        
+            <translation>Presentó solicitud para verificación de número de Seguro Social</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Authorized Representative</masterLabel>
+        
+            <translation>Representante autorizado</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Authorized Representative  Relationship</masterLabel>
+        
+            <translation>Representante autorizado - Relación</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Authorized Representative - Identity</masterLabel>
+        
+            <translation>Representante autorizado - Identidad</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Authorized Representative Verification</masterLabel>
+        
+            <translation>Verificación de representante autorizado</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>BWE Work Expense</masterLabel>
+        
+            <translation>Gasto de trabajo relacionado con ceguera (BWE)</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Battered Alien</masterLabel>
+        
+            <translation>Extranjero maltratado</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Benefits received from another State</masterLabel>
+        
+            <translation>Beneficios recibidos de otro estado</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Black Lung Disability</masterLabel>
+        
+            <translation>Discapacidad por pulmón negro</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Boarder</masterLabel>
+        
+            <translation>Pensionista</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Burial Plots - Ownership End Details</masterLabel>
+        
+            <translation>Terrenos para entierro - Detalles de fin de propiedad</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Burial Plots - Resource Value Details</masterLabel>
+        
+            <translation>Terrenos para entierro - Detalles de valor de recurso</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>CCAP Job Search Documentation</masterLabel>
+        
+            <translation>Documentación de búsqueda de empleo para CCAP (Programa de Ayuda para Cuidados Infantiles)</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Care for Individual - Child Care</masterLabel>
+        
+            <translation>Cuidados para individuo - Cuidados Infantiles</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Care for Individual - Incapacitated</masterLabel>
+        
+            <translation>El cuidado de la persona - Incapactitated</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Caretaker services - Caretaker statement</masterLabel>
+        
+            <translation>Servicios de vigilancia de los estados Portero</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Caretaker services - Physician Statement</masterLabel>
+        
+            <translation>Servicios de vigilancia de la declaración del médico</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Case Profile Annuity Questions Verification</masterLabel>
+        
+            <translation>Verificación de preguntas de anualidad de perfil del caso</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Case Profile Blind, Disabled, Incapacitated Questions Verification</masterLabel>
+        
+            <translation>Verificación de preguntas de persona ciega, con discapacidad, con incapacidad de perfil de caso</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Case Profile Burial Fund Questions Verification</masterLabel>
+        
+            <translation>Verificación de preguntas de fondo de sepultura de perfil del caso</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Case Profile Burial Insurance Questions Verification</masterLabel>
+        
+            <translation>Verificación de preguntas de seguro de sepultura de perfil del caso</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Case Profile Burial Plot Questions Verification</masterLabel>
+        
+            <translation>Verificación de preguntas de parcela de sepultura de perfil del caso</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Case Profile Care for Incapacitated Individual Questions Verification</masterLabel>
+        
+            <translation>Verificación de preguntas de cuidados para persona incapacitada de perfil de caso</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Case Profile Chemically Dependent Questions Verification</masterLabel>
+        
+            <translation>Verificación de preguntas de dependiente de sustancias químicas de perfil del caso</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Case Profile Completed Chemical Treatment Questions Verification</masterLabel>
+        
+            <translation>Verificación de preguntas de tratamiento para sustancias químicas completado de perfil de caso</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Case Profile Convicted of Drug Felony Questions Verification</masterLabel>
+        
+            <translation>Verificación de preguntas de procesamiento por delito grave de drogas de perfil de caso</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Case Profile Dependent Care Expense Questions Verification</masterLabel>
+        
+            <translation>Verificación de preguntas de gasto de cuidados de dependiente de perfil de caso</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Case Profile Discontinued SSI Questions Verification</masterLabel>
+        
+            <translation>Verificación de preguntas de interrupción de seguridad de ingreso suplementario (SSI) de perfil del caso</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Case Profile Domestic Violence Victim Questions Verification</masterLabel>
+        
+            <translation>Verificación de preguntas de víctima de violencia doméstica de perfil de caso</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Case Profile Emancipated Questions Verification</masterLabel>
+        
+            <translation>Verificación de preguntas de emancipación de perfil del caso</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Case Profile Entitled Benefits Questions Verification</masterLabel>
+        
+            <translation>Verificación de preguntas de beneficios a los que tiene derecho de perfil del caso</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Case Profile Ever in Foster Care Questions Verification</masterLabel>
+        
+            <translation>Verificación de preguntas de cuidados de crianza de perfil de caso</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Case Profile Fleeing Felon or Probation Parole Violator Questions Verification</masterLabel>
+        
+            <translation>Verificación de preguntas de fugitivo de la ley o incumplimiento de libertad para palabra o condicional de perfil de caso</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Case Profile Has Medicare Questions Verification</masterLabel>
+        
+            <translation>Perfil de caso tiene verificación de preguntas de Medicare</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Case Profile Household Paid Alimony Questions Verification</masterLabel>
+        
+            <translation>Verificación de preguntas de pensión para ex cónyuge pagada por el hogar de perfil de caso</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Case Profile Household Paid Child Support Questions Verification</masterLabel>
+        
+            <translation>Verificación de preguntas de manutención infantil pagada por el hogar de perfil de caso</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Case Profile LTC Arrangement Questions Verification</masterLabel>
+        
+            <translation>Verificación de preguntas de acuerdo de cuidados a largo plazo de perfil del caso</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Case Profile Life Estate Questions Verification</masterLabel>
+        
+            <translation>Verificación de preguntas de derecho real de por vida de perfil del caso</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Case Profile Life Insurance Questions Verification</masterLabel>
+        
+            <translation>Verificación de preguntas de seguro de vida de perfil del caso</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Case Profile Life Settlement Contract Questions Verification</masterLabel>
+        
+            <translation>Verificación de preguntas de contrato de venta de seguro de vida a tercero de perfil del caso</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Case Profile Mandatory withholding Questions Verification</masterLabel>
+        
+            <translation>Verificación de preguntas de retención obligatoria de perfil del caso</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Case Profile Medical Part D Premium Questions Verification</masterLabel>
+        
+            <translation>Verificación de preguntas de prima de Medicare Parte D de perfil de caso</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Case Profile Other Resource Questions Verification</masterLabel>
+        
+            <translation>Verificación de preguntas de otro recurso de perfil del caso</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Case Profile Out of State Benefits Questions Verification</masterLabel>
+        
+            <translation>Verificación de preguntas de beneficios fuera del estado de perfil de caso</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Case Profile Partnership Qualified LTC Policy Questions Verification</masterLabel>
+        
+            <translation>Verificación de preguntas de póliza de sociedad calificada para cuidados a largo plazo de perfil de caso</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Case Profile Pregnant Questions Verification</masterLabel>
+        
+            <translation>Verificación de preguntas de embarazada de perfil del caso</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Case Profile Promissory Note or Land Contract Questions Verification</masterLabel>
+        
+            <translation>Verificación de preguntas de pagaré o contrato de compraventa de perfil de caso</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Case Profile Real Property Questions Verification</masterLabel>
+        
+            <translation>Verificación de preguntas de bienes inmuebles de perfil del caso</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Case Profile Receiving or Applied for SSI Questions Verification</masterLabel>
+        
+            <translation>Verificación de preguntas de persona que recibe o solicitó seguridad de ingreso suplementario (SSI) de perfil del caso</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Case Profile Resource Transfer Questions Verification</masterLabel>
+        
+            <translation>Verificación de preguntas de transferencia de recurso de perfil de caso</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Case Profile Self Employment Income Questions Verification</masterLabel>
+        
+            <translation>Verificación de preguntas de ingreso por trabajo por cuenta propia de perfil de caso</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Case Profile Shelter Expense Questions Verification</masterLabel>
+        
+            <translation>Verificación de preguntas de gastos de vivienda de perfil de caso</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Case Profile Someone in Household on Strike Questions Verification</masterLabel>
+        
+            <translation>Verificación de preguntas de alguien en el hogar en huelga de perfil de caso</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Case Profile Unearned Income Questions Verification</masterLabel>
+        
+            <translation>Verificación de preguntas de ingreso no proveniente del trabajo de perfil de caso</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Case Profile Utility Expense Allowance Questions Verification</masterLabel>
+        
+            <translation>Verificación de preguntas de asignación para gastos de servicios públicos de perfil de caso</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Case Profile Utility Expense Questions Verification</masterLabel>
+        
+            <translation>Verificación de preguntas de gastos de servicios públicos de perfil de caso</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Case profile deduction question verification</masterLabel>
+        
+            <translation>Caso perfil deducción pregunta de verificación</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Case profile income question verification</masterLabel>
+        
+            <translation>Caso perfil de ingreso pregunta de verificación</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Child Care Benefits - Delinquent Claims</masterLabel>
+        
+            <translation>Beneficios de Cuidados Infantiles - Reclamos por mora</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Child Support</masterLabel>
+        
+            <translation>Manutención infantil</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Child Support - Alimony</masterLabel>
+        
+            <translation>Manutención Infantil - Pensión para ex cónyuge</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Child Support - Alimony Childsupportarrears</masterLabel>
+        
+            <translation>Atrasos en Manutención Infantil - Pensión para ex cónyuge</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Child Support - Taxintercept</masterLabel>
+        
+            <translation>Manutención Infantil - Interceptación de impuestos</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Child Support Assignment of Rights Signature</masterLabel>
+        
+            <translation>Firma de cesión de derechos de manutención infantil</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Community Integration Supplementation</masterLabel>
+        
+            <translation>Suplementación para Integración a la Comunidad</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Conditional Enrollment in Medicare Part A</masterLabel>
+        
+            <translation>Inscripción condicional en Medicare Parte A</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Death</masterLabel>
+        
+            <translation>Fallecimiento</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Declaration of Annuities</masterLabel>
+        
+            <translation>Declaración de rentas</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Deduction</masterLabel>
+        
+            <translation>Deducción</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Deduction - AI/AN Income</masterLabel>
+        
+            <translation>Deducción - Ingreso indígena estadounidense/nativo de Alaska (AI/AN)</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Deduction - Alimony</masterLabel>
+        
+            <translation>Deducción - Pensión para ex cónyuge</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Deduction - Certain business expenses of reservists and officials (Form 2106)</masterLabel>
+        
+            <translation>Deducción - Ciertos gastos empresariales de reservistas y funcionarios (Formulario 2106)</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Deduction - Deductible part of self employment tax</masterLabel>
+        
+            <translation>Deducción - Parte deducible de impuesto de trabajo por cuenta propia</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Deduction - Domestic production activities</masterLabel>
+        
+            <translation>Deducción - Deducción de actividades de producción nacional</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Deduction - Health savings account deduction</masterLabel>
+        
+            <translation>Deducción - Deducción de cuenta de ahorros para la salud</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Deduction - IRA deduction</masterLabel>
+        
+            <translation>Deducción - Deducción de IRA</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Deduction - Moving expenses</masterLabel>
+        
+            <translation>Deducción - Gastos de mudanza</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Deduction - Non-reimbursable educator expense</masterLabel>
+        
+            <translation>Deducción - Gasto de educador no reembolsable</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Deduction - Penalty on early withdrawal of savings</masterLabel>
+        
+            <translation>Deducción - Sanción por retiro anticipado de ahorros</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Deduction - Self-employed health insurance deduction</masterLabel>
+        
+            <translation>Deducción - Deducción de seguro de salud para trabajo por cuenta propia</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Deduction - Self-employed qualified plans</masterLabel>
+        
+            <translation>Deducción - Planes calificados para trabajo por cuenta propia</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Deduction - Self-employed simple plans</masterLabel>
+        
+            <translation>Deducción - Planes simples para trabajo por cuenta propia</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Deduction - Student loan interest</masterLabel>
+        
+            <translation>Deducción - Interés por préstamo estudiantil</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Deduction - Tuition and fees</masterLabel>
+        
+            <translation>Deducción - Matrícula y tarifas de centros de estudio</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Deductions</masterLabel>
+        
+            <translation>Deducciones</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Dependent Care</masterLabel>
+        
+            <translation>Cuidado de dependiente</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Deprivation Disability</masterLabel>
+        
+            <translation>La privación de Discapacidad</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Deprivation Non-Custodial Parent</masterLabel>
+        
+            <translation>Padres privación sin Custodia</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Disability - MRT Disabled</masterLabel>
+        
+            <translation>Discapacidad - Discapacitado MRT (Equipo de Revisión Médica)</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Disablity - Loss of RSDI</masterLabel>
+        
+            <translation>Discapacidad - Pérdida de RSDI (Ingreso por Seguro para Jubilación, Supervivencia y Discapacidad)</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Domestic violence verification</masterLabel>
+        
+            <translation>Verificación de violencia doméstica</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Drug Addiction and Alcohol Treatment Centers</masterLabel>
+        
+            <translation>Centros de Tratamiento para Alcohol y Adicción a Drogas</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Drug Felony Assessment</masterLabel>
+        
+            <translation>Evaluación de delito grave de drogas</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Drug Felony Completed</masterLabel>
+        
+            <translation>Delito grave de drogas completado</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Drug Felony Participation</masterLabel>
+        
+            <translation>Participación en delito grave de drogas</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>ETP Assessment</masterLabel>
+        
+            <translation>Evaluación del Programa Empleo y Capacitación (ETP)</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Earned Income Credit</masterLabel>
+        
+            <translation>Crédito por ingreso derivado del trabajo</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Earned Income Payment</masterLabel>
+        
+            <translation>Pago de ingreso derivado del trabajo</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Earned Income Verification</masterLabel>
+        
+            <translation>Verificación de ingreso derivado del trabajo</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Educational Expenses</masterLabel>
+        
+            <translation>Gastos de educación</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Elective Abortion</masterLabel>
+        
+            <translation>Aborto opcional</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Emergency Nature Condition</masterLabel>
+        
+            <translation>Afección médica de emergencia</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Employment History</masterLabel>
+        
+            <translation>Historial de empleo</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Employment Income</masterLabel>
+        
+            <translation>Ingreso por empleo</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>End Stage Renal Disability</masterLabel>
+        
+            <translation>Discapacidad renal en etapa terminal</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Energy Payment Income</masterLabel>
+        
+            <translation>Ingreso por pago de electricidad</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Entitled Benefits Verification</masterLabel>
+        
+            <translation>Verificación de beneficios a los que tiene derecho</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Expected Incarceration status verification</masterLabel>
+        
+            <translation><!-- Expected Incarceration status verification --></translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>FDAK funeral trust Agreement</masterLabel>
+        
+            <translation>Acuerdo de fideicomiso para funeral FDAK</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Field determination</masterLabel>
+        
+            <translation>Determinación de campo</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Fourty Quarter Alien</masterLabel>
+        
+            <translation>Extranjero de cuarenta trimestres</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Full-time Student Status for PATH Exemption</masterLabel>
+        
+            <translation>Estatus de estudiante a tiempo completo para exención de PATH</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Gifts and Contributions Income</masterLabel>
+        
+            <translation>Ingreso por regalos y contribuciones</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Government Housing Income</masterLabel>
+        
+            <translation>Ingreso por vivienda del gobierno</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Group Living Arrangement</masterLabel>
+        
+            <translation>Vida en grupo</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>High risk pregnancy verification</masterLabel>
+        
+            <translation>Verificación de embarazo de alto riesgo</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Household</masterLabel>
+        
+            <translation>Hogar</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>IRWE Work Expense</masterLabel>
+        
+            <translation>Gasto de trabajo relacionado con deficiencia (IRWE)</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Identity</masterLabel>
+        
+            <translation>Identidad</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Identity </masterLabel>
+        
+            <translation>Identidad</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Identity  </masterLabel>
+        
+            <translation>Identidad</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Identity   </masterLabel>
+        
+            <translation>Identidad</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Identity - Individual Interviewed</masterLabel>
+        
+            <translation>Identidad - Persona entrevistada</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Identity - Individual Interviewed </masterLabel>
+        
+            <translation>Identidad - Persona entrevistada</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Identity Verification</masterLabel>
+        
+            <translation>Verificación de identidad</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Immigration Entry Date Verification</masterLabel>
+        
+            <translation>Verificación de fecha de entrada de inmigración</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Immigration status under review</masterLabel>
+        
+            <translation>Estatus migratorio bajo revisión</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Incarceration status verification</masterLabel>
+        
+            <translation>Verificación de estatus de encarcelamiento</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Income Verification</masterLabel>
+        
+            <translation>Verificación de ingreso</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Interest Income</masterLabel>
+        
+            <translation>Ingreso por intereses</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Job end verification</masterLabel>
+        
+            <translation>Verificación de fin de trabajo</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Joint Custody Verification</masterLabel>
+        
+            <translation>Verificación de custodia compartida</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>KI-HIPP Enrollment</masterLabel>
+        
+            <translation>Inscripción de KI-HIPP</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>KI-HIPP Good Cause</masterLabel>
+        
+            <translation>Motivo suficiente de KI-HIPP</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>KI-HIPP Monthly Verification</masterLabel>
+        
+            <translation>Verificación mensual de KI-HIPP</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>KI-HIPP Preferred Payment Method</masterLabel>
+        
+            <translation>Método de pago preferido de KI-HIPP</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>KTAP Extension Request</masterLabel>
+        
+            <translation>Solicitud de extensión de KTAP</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>KWP Assessment</masterLabel>
+        
+            <translation>Evaluación KWP</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Lawful Presence Verification</masterLabel>
+        
+            <translation>Verificación de presencia legal</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Lawful Presence Verification </masterLabel>
+        
+            <translation>Verificación de presencia legal</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Life Estate - Establishment of Life Estate</masterLabel>
+        
+            <translation>Derecho real de por vida - Establecimiento de derecho real</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Life Estate - Relinquishment Details</masterLabel>
+        
+            <translation>Derecho real de por vida - Detalles de cesión</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Life Insurance - Cash Surrender Value</masterLabel>
+        
+            <translation>Seguro de vida - Valor de rescate en efectivo</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Life Insurance - Face Value</masterLabel>
+        
+            <translation>Seguro de vida - Valor nominal</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Life Insurance - Loan Balance</masterLabel>
+        
+            <translation>Seguro de vida - Saldo de préstamo</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Life Insurance - Ownership End Details</masterLabel>
+        
+            <translation>Seguro de vida - Detalles de fin de propiedad</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Life Settlement Contract - Cash Surrender Value</masterLabel>
+        
+            <translation>Contrato de venta de seguro de vida a tercero - Valor de rescate en efectivo</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Life Settlement Contract - Face Value</masterLabel>
+        
+            <translation>Contrato de venta de seguro de vida a tercero - Valor nominal</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Life Settlement Contract - Loan Balance</masterLabel>
+        
+            <translation>Contrato de venta de seguro de vida a tercero - Saldo de préstamo</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Life Time Care Agreement</masterLabel>
+        
+            <translation>Acuerdo de cuidados de por vida</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Life Time Worker Disability</masterLabel>
+        
+            <translation>Discapacidad laboral de por vida</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Liquid Asset - Debt</masterLabel>
+        
+            <translation>Activo líquido - Deuda</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Liquid Asset - Excluded Amount</masterLabel>
+        
+            <translation>Activo líquido - Monto excluido</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Liquid Asset - Inaccessibility</masterLabel>
+        
+            <translation>Activo líquido - Inaccesibilidad</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Liquid Asset - Joint Ownership Details</masterLabel>
+        
+            <translation>Activo líquido - Detalles de propiedad compartida</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Liquid Asset - Ownership End Details</masterLabel>
+        
+            <translation>Activo líquido - Detalles de fin de propiedad</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Liquid Asset Not Verified</masterLabel>
+        
+            <translation>Activo líquido - No verificado</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Living Arrangement</masterLabel>
+        
+            <translation>Dónde y con quién vive</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Living Arrangement-Family Care Home</masterLabel>
+        
+            <translation>Dónde y con quién vive-Hogar de cuidados familiares</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Living Arrangement-Personal Care Home</masterLabel>
+        
+            <translation>Donde y con quién vive-Hogar de cuidados personales</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Loss of Employment</masterLabel>
+        
+            <translation>Pérdida de empleo</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Loss of Self Employment</masterLabel>
+        
+            <translation>Pérdida de trabajo por cuenta propia</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Loss of Unearned Income</masterLabel>
+        
+            <translation>Pérdida de ingreso no derivado del trabajo</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>MRT Determination</masterLabel>
+        
+            <translation>Determinación de incapacidad</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>MRT Disability</masterLabel>
+        
+            <translation>Discapacidad MRT (Equipo de Revisión Médica)</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Mandatory Withholding - Mandatory Taxes</masterLabel>
+        
+            <translation>Retención obligatoria - Impuestos obligatorios</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Mandatory Withholding - Other</masterLabel>
+        
+            <translation>Retención obligatoria - Otro</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Medical Expense</masterLabel>
+        
+            <translation>Gasto médico</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Medical Expense - Prescription Drug</masterLabel>
+        
+            <translation>Gasto médico - Medicamento con receta médica</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Medical expense  Cancer Policy Premium</masterLabel>
+        
+            <translation>Gasto médico - Prima de póliza de cáncer</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Medical expense  Cost sharing/spend down expenses</masterLabel>
+        
+            <translation>Gasto médico - Costos compartidos/gastos con límite de responsabilidad económica</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Medical expense  Dentures</masterLabel>
+        
+            <translation>Gasto médico - Dentadura postiza</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Medical expense  Hearing aids</masterLabel>
+        
+            <translation>Gasto médico - Audífonos</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Medical expense - Attendant/home held/child care/housekeeper</masterLabel>
+        
+            <translation>Gasto médico - Cuidador/Ayudante/Cuidados infantiles/Persona encargada de la casa</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Medical expense - Glasses/contacts</masterLabel>
+        
+            <translation>Gasto médico - Anteojos/Lentes de contacto</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Medical expense - Lodging</masterLabel>
+        
+            <translation>Gasto médico - Alojamiento</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Medical expense - Medical supplies</masterLabel>
+        
+            <translation>Gasto médico - Materiales médicos</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Medical expense - Medically Necessary Items with Doctor&apos;s Note</masterLabel>
+        
+            <translation>Gasto médico - Artículos médicamente necesarios con nota de médico</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Medical expense - Medicare Premiums</masterLabel>
+        
+            <translation>Gasto médico - Primas de Medicare</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Medical expense - Other</masterLabel>
+        
+            <translation>Gasto médico - Otro</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Medical expense - Prosthetics</masterLabel>
+        
+            <translation>Gasto médico - Prótesis</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Medical expense - SMI Premium</masterLabel>
+        
+            <translation>Gasto médico - Prima SMI (Seguro Médico Suplementario)</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Medical expense - Securing/maintaining service animals</masterLabel>
+        
+            <translation>Gasto médico - Obtener/mantener animales de servicio</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Medical expense - Telephone charges</masterLabel>
+        
+            <translation>Gasto médico - Cargos de teléfono</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Medical expense - Transportation</masterLabel>
+        
+            <translation>Gasto médico - Transporte</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>NCP Good Cause</masterLabel>
+        
+            <translation>Motivo suficiente de padre/madre sin la custodia</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>No checking/savings/CD verification</masterLabel>
+        
+            <translation>No hay verificación de cuenta corriente/cuenta ahorros/certificado de depósito</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Non-Compliant for KWP Full Family Sanction Requirement</masterLabel>
+        
+            <translation>Falta de cumplimiento de KWP completa familia Sanción Requisito</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Notes Income</masterLabel>
+        
+            <translation>Ingreso por notas</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Other Earned Income</masterLabel>
+        
+            <translation>Otro ingreso derivado del trabajo</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Other Resources - Debt</masterLabel>
+        
+            <translation>Otros recursos - Deuda</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Other Resources - Fair Market Value</masterLabel>
+        
+            <translation>Otros recursos - Valor justo de mercado</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Other Resources - Inaccessibility</masterLabel>
+        
+            <translation>Otros recursos - Inaccesibilidad</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Other Resources - Joint Ownership Details</masterLabel>
+        
+            <translation>Otros recursos - Detalles de propiedad compartida</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Other Resources - Ownership End Details</masterLabel>
+        
+            <translation>Otros recursos - Detalles de fin de propiedad</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Other Unearned Income</masterLabel>
+        
+            <translation>Otro ingreso no derivado del trabajo</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Pending for interview</masterLabel>
+        
+            <translation>Pendiente de entrevista</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Pension Income</masterLabel>
+        
+            <translation>Ingreso por pensiones</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Pension Verification</masterLabel>
+        
+            <translation>Verificación de pensión</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Pregnancy</masterLabel>
+        
+            <translation>Embarazo</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Prizes Income</masterLabel>
+        
+            <translation>Ingreso por premios</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Promisory Note/Land Contract Details</masterLabel>
+        
+            <translation>Detalles de pagaré/contrato de compraventa</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Proof of Assets Held by the Trust</masterLabel>
+        
+            <translation>Comprobante de bienes en el fideicomiso</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Proof of custody order</masterLabel>
+        
+            <translation>Comprobante de orden de custodia</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Proof of custody order not being followed</masterLabel>
+        
+            <translation>Comprobante de que no se cumplió orden de custodia</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Proof of not receiving Medicare benefits</masterLabel>
+        
+            <translation>Comprobante de que no está recibiendo beneficios Medicare</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Proof of participation in KWP activity for 15 calendar days</masterLabel>
+        
+            <translation>Comprobante de participación en actividad de KWP durante 15 días calendario</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Proof of termination of ESI coverage (Employer Sponsored Insurance).</masterLabel>
+        
+            <translation>Comprobante de finalización de cobertura de seguro patrocinado por el empleador (ESI).</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Proof of termination of other health care coverage (Minimum Essential Coverage)</masterLabel>
+        
+            <translation>Comprobante de finalización de otra cobertura de salud (cobertura esencial mínima)</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Qualified Income Trust</masterLabel>
+        
+            <translation>Fideicomiso de ingreso calificado</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>RSDI</masterLabel>
+        
+            <translation>RSDI (Ingreso por Seguro para Jubilación, Supervivencia y Discapacidad)</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>RSDI Income</masterLabel>
+        
+            <translation>Ingreso por Seguro para Jubilación, Supervivencia y Discapacidad (RSDI)</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>RailRoad Disability</masterLabel>
+        
+            <translation>Discapacidad de trabajador ferroviario</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Railroad Retirement Income</masterLabel>
+        
+            <translation>Ingreso por jubilación para trabajadores ferroviarios</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Real Property - Advertising the property in the local newspaper or on television or radio stations or the internet</masterLabel>
+        
+            <translation>Bienes inmuebles - Anunciando la propiedad en el diario local o en estaciones de radio o televisión o internet</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Real Property - Debt</masterLabel>
+        
+            <translation>Bienes inmuebles - Deuda</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Real Property - Distributing fliers advertising the property for sale</masterLabel>
+        
+            <translation>Bienes inmuebles - Distribuyendo folletos anunciando la propiedad a la venta</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Real Property - Exclusion</masterLabel>
+        
+            <translation>Bienes inmuebles - Exclusión</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Real Property - Fair Market Value</masterLabel>
+        
+            <translation>Bienes inmuebles - Valor justo de mercado</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Real Property - Inaccessibility</masterLabel>
+        
+            <translation>Bienes inmuebles - Inaccesibilidad</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Real Property - Is the individual listed the property with a Real Estate Agent</masterLabel>
+        
+            <translation>Bienes inmuebles - ¿El individuo puso a la venta la propiedad con un agente de bienes inmuebles?</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Real Property - Joint Ownership</masterLabel>
+        
+            <translation>Bienes inmuebles - Propiedad compartida</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Real Property - Ownership End Details</masterLabel>
+        
+            <translation>Bienes inmuebles - Detalles de fin de propiedad</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Real Property - Placing a &quot;For Sale&quot; sign on the property which is clearly visible from the nearest public road</masterLabel>
+        
+            <translation>Bienes inmuebles - Colocando un cartel “Se vende” en la propiedad que sea claramente visible desde la vía pública más cercana</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Real Property - Posting notices regarding availability of the property on community bulletin boards</masterLabel>
+        
+            <translation>Bienes inmuebles - Colocando carteles sobre la disponibilidad de la propiedad en carteleras de la comunidad</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Real Property - Showing the property to interested parties on a continuing basis, documented on a log with dates</masterLabel>
+        
+            <translation>Bienes inmuebles - Mostrando la propiedad a partes interesadas de forma continua, documentando las fechas en un registro</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Relationship Verification</masterLabel>
+        
+            <translation>Verificación de relación</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Residency</masterLabel>
+        
+            <translation>Residencia</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Resource Assessment - Assessment Information</masterLabel>
+        
+            <translation>Evaluación de recursos - Información de evaluación</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Resource Transfer - Return Asset</masterLabel>
+        
+            <translation>Transferencia de recursos - Devolución de activo</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Room and Board Expenses</masterLabel>
+        
+            <translation>Gastos de casa y comida</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Royalties Income</masterLabel>
+        
+            <translation>Ingreso por regalías</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>SAFE - Shelter Expenses</masterLabel>
+        
+            <translation>SAFE (Ayuda Simplificada para Personas de la Tercera Edad) - Gastos de vivienda</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>SEVIS ID Number for Lawful Presence Verification</masterLabel>
+        
+            <translation>Número de ID de SEVIS para verificación de presencia legal</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>SSI income</masterLabel>
+        
+            <translation>Ingreso por Seguridad de Ingreso Suplementario (SSI)</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>STABLE Accounts Not Verified </masterLabel>
+        
+            <translation>Cuentas STABLE no verificadas</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Self Employment Expense</masterLabel>
+        
+            <translation>Gasto de trabajo por cuenta propia</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Self Employment Income</masterLabel>
+        
+            <translation>Ingreso por trabajo por cuenta propia</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Self Employment Income </masterLabel>
+        
+            <translation>Ingreso por trabajo por cuenta propia</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Self-Employment operated with child present In-Home </masterLabel>
+        
+            <translation>Trabajo por cuenta propia realizado con menor presente en el hogar</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Shelter</masterLabel>
+        
+            <translation>Vivienda</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Shelter Mortgage</masterLabel>
+        
+            <translation>Hipoteca de vivienda</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Shelter Rent</masterLabel>
+        
+            <translation>Alquiler de vivienda</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Shelter Tax</masterLabel>
+        
+            <translation>Impuesto de vivienda</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Short Term Expense</masterLabel>
+        
+            <translation>Gasto a corto plazo</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Sick Leave Disability</masterLabel>
+        
+            <translation>Discapacidad -Licencia por enfermedad</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Social Security Number</masterLabel>
+        
+            <translation>Número de Seguro Social</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Special Needs</masterLabel>
+        
+            <translation>Necesidades especiales</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Special Needs for child under thirteen</masterLabel>
+        
+            <translation>Necesidades especiales para menor de menos de trece años</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Student Attendance</masterLabel>
+        
+            <translation>Asistencia de estudiante</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Student Education Enrollment</masterLabel>
+        
+            <translation>Inscripción de educación de estudiante</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Surgery Illness Disability</masterLabel>
+        
+            <translation>Cirugía Enfermedad Discapacidad</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>TANF/Foster Care/IHFS/Adoption Subsidy</masterLabel>
+        
+            <translation>TANF/Cuidados de crianza/IHFS/Subsidio por adopción</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>TPR LTC Disability Insurance Income</masterLabel>
+        
+            <translation>Ingreso por seguro de discapacidad para cuidados a largo plazo de tercero</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Tax Filing Information</masterLabel>
+        
+            <translation>Información presentación de impuestos</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Temporary Leave</masterLabel>
+        
+            <translation>Licencia temporal</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Temporary disability</masterLabel>
+        
+            <translation>Discapacidad temporal</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Termination of Promisory Note/Land Contract End</masterLabel>
+        
+            <translation>Fin de pagaré/contrato de compraventa</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Third Party Liability</masterLabel>
+        
+            <translation>Responsabilidad de tercero</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Third Party Reimbursement</masterLabel>
+        
+            <translation>Reembolso de tercero</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Third Party Resources</masterLabel>
+        
+            <translation>Recursos de terceros</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Trust - Termination End</masterLabel>
+        
+            <translation>Fideicomiso - Fin por término</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Trust Document</masterLabel>
+        
+            <translation>Documento de confianza</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Trust Proceeds Income</masterLabel>
+        
+            <translation>Ingreso por fideicomiso</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>UIB Income</masterLabel>
+        
+            <translation>Ingreso por beneficios de seguro por desempleo (UIB)</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>US Citizenship</masterLabel>
+        
+            <translation>Ciudadanía de EE. UU.</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Unable to care for child due to disability</masterLabel>
+        
+            <translation>No puede cuidar a menor debido a discapacidad</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Unearned Income</masterLabel>
+        
+            <translation>Ingreso no derivado del trabajo</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Unearned Income Payment Verification</masterLabel>
+        
+            <translation>Verificación de pago de ingreso no derivado del trabajo</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Updated Student Information through SEVIS by Contacting School or Program Sponsor</masterLabel>
+        
+            <translation>Información de estudiante actualizada mediante SEVIS a través de contacto con escuela o programa patrocinador</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Utility</masterLabel>
+        
+            <translation>Servicio público</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Utility - Allowance Bua</masterLabel>
+        
+            <translation>Servicio público - Asignación BUA (asignación básica para servicio público)</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Utility - Allowance Sua</masterLabel>
+        
+            <translation>Servicio público - Asignación SUA (asignación estándar para servicio público)</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Utility - Allowance Telephonestandard</masterLabel>
+        
+            <translation>Servicio público - Asignación estándar para teléfono</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Utility - Billed for Primary Heating</masterLabel>
+        
+            <translation>Servicio público - Factura por calefacción primaria</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Utility - Electricity</masterLabel>
+        
+            <translation>Servicio público - Electricidad</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Utility - Garbage</masterLabel>
+        
+            <translation>Servicio público - Recolección de basura</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Utility - LIHEAP Assistance</masterLabel>
+        
+            <translation>Servicio público - Ayuda LIHEAP</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Utility - Sewage</masterLabel>
+        
+            <translation>Servicio público - Eliminación de aguas residuales</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Utility - Telephone</masterLabel>
+        
+            <translation>Servicio público - Teléfono</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Utility - Water</masterLabel>
+        
+            <translation>Servicio público - Agua</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>VA Benefit Disability</masterLabel>
+        
+            <translation>Discapacidad de Beneficios para Veteranos (VA)</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>VA Benefit Income</masterLabel>
+        
+            <translation>Ingreso por beneficios para veteranos</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Vehicle - Able to Ride in Vehicle</masterLabel>
+        
+            <translation>Vehículo - Puede viajar en vehículo</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Vehicle - Debt Verification</masterLabel>
+        
+            <translation>Vehículo - Verificación de deuda</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Vehicle - Fair Market Value</masterLabel>
+        
+            <translation>Vehículo - Valor justo de mercado</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Vehicle - Inaccessibility</masterLabel>
+        
+            <translation>Vehículo - Inaccesibilidad</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Vehicle - Joint Ownership Details</masterLabel>
+        
+            <translation>Vehículo - Detalles de propiedad compartida</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Vehicle - Ownership End Details</masterLabel>
+        
+            <translation>Vehículo - Detalles de fin de propiedad</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Vendor Payment Income</masterLabel>
+        
+            <translation>Ingreso por pago de proveedor</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Verification of Immigration status</masterLabel>
+        
+            <translation>Verificación de estatus de inmigración</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Verification of lawful presence.</masterLabel>
+        
+            <translation>Verificación de presencia legal.</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>VolAg Match Grant Income</masterLabel>
+        
+            <translation>Ingreso por programa Match Grant de agencia voluntaria</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Voluntarily Quit Good Cause</masterLabel>
+        
+            <translation>Abandono voluntario - Motivo suficiente</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Voluntary Absent Parent - Non Custodial</masterLabel>
+        
+            <translation>Padre/madre ausente voluntariamente - Sin la custodia</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Work Hours</masterLabel>
+        
+            <translation>Horario de trabajo</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Work Registration</masterLabel>
+        
+            <translation>Registro de trabajo</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Workers Compensation Income</masterLabel>
+        
+            <translation>Ingreso por indemnización laboral</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Your legal obligation to pay Child Support</masterLabel>
+        
+            <translation>Su obligación legal de pagar manutención infantil</translation>
+        
+        </picklistValues>
+    <picklistValues>
+        
+            <masterLabel>Zero Income Verification</masterLabel>
+        
+            <translation>Verificación de ingreso cero</translation>
+        
+        </picklistValues>
 </CustomFieldTranslation>

@@ -682,7 +682,7 @@ Returns record type instance.
     * @description  This methods is used to get favorites for the CP User
     * @return        Map<String, Favorite__c>
     **********************************************************************************************/
-    public static Map<String, Favorite__c> getFavorites(Set<Id> setResourceIds, Set<Id> setLocationIds){
+    /*public static Map<String, Favorite__c> getFavorites(Set<Id> setResourceIds, Set<Id> setLocationIds){
         String sQuery;
         List<Favorite__c> lstFavorites = new List<Favorite__c>();
         Map<String, Object> errorMap    = new Map<String, Object>();
@@ -713,7 +713,7 @@ Returns record type instance.
         } 
         
         return mapResourceLocationFavorite;
-    }
+    }*/
     
     /********************************************************************************************
     * @author       Prashant Singh

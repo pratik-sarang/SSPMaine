@@ -7,7 +7,10 @@
     <required>false</required>
     <type>Picklist</type>
     <valueSet>
-        <restricted>true</restricted>
-        <valueSetName>Permission_Level</valueSetName>
-    </valueSet>
+        
+            <restricted>true</restricted>
+        
+            <valueSetName>Permission_Level</valueSetName>
+        
+        </valueSet>
 </CustomField>

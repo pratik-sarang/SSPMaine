@@ -7,19 +7,34 @@
     <required>false</required>
     <type>Picklist</type>
     <valueSet>
-        <restricted>true</restricted>
-        <valueSetDefinition>
-            <sorted>false</sorted>
-            <value>
-                <fullName>Please enter email in correct format</fullName>
-                <default>false</default>
-                <label>Please enter email in correct format</label>
-            </value>
-            <value>
-                <fullName>Please enter a valid email address in the following format: email@domain.com</fullName>
-                <default>true</default>
-                <label>Please enter a valid email address in the following format: email@domain.com</label>
-            </value>
-        </valueSetDefinition>
-    </valueSet>
+        
+            <restricted>true</restricted>
+        
+            <valueSetDefinition>
+            
+                <sorted>false</sorted>
+            
+                <value>
+                
+                    <fullName>Please enter email in correct format</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Please enter email in correct format</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>Please enter a valid email address in the following format: email@domain.com</fullName>
+                
+                    <default>true</default>
+                
+                    <label>Please enter a valid email address in the following format: email@domain.com</label>
+                
+                </value>
+            
+            </valueSetDefinition>
+        
+        </valueSet>
 </CustomField>

@@ -7,10 +7,14 @@
     <columns>SourceOfCoverageValue__c</columns>
     <filterScope>Everything</filterScope>
     <filters>
-        <field>Programs_Applied__c</field>
-        <operation>contains</operation>
-        <value>MA</value>
-    </filters>
+        
+            <field>Programs_Applied__c</field>
+        
+            <operation>contains</operation>
+        
+            <value>MA</value>
+        
+        </filters>
     <label>Medicaid</label>
     <language>en_US</language>
 </ListView>

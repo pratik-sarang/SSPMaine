@@ -3,15 +3,24 @@
     <label><!-- Past_Date_Validation_Msg --></label>
     <name>Past_Date_Validation_Msg__c</name>
     <picklistValues>
-        <masterLabel>Date should be today or in the future.</masterLabel>
-        <translation>La fecha debe ser hoy o en el futuro.</translation>
-    </picklistValues>
+        
+            <masterLabel>Date should be today or in the future.</masterLabel>
+        
+            <translation>La fecha debe ser hoy o en el futuro.</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Date should be today or in the past.</masterLabel>
-        <translation>La fecha debe ser hoy o en el pasado.</translation>
-    </picklistValues>
+        
+            <masterLabel>Date should be today or in the past.</masterLabel>
+        
+            <translation>La fecha debe ser hoy o en el pasado.</translation>
+        
+        </picklistValues>
     <picklistValues>
-        <masterLabel>Past Dates are not allowed</masterLabel>
-        <translation><!-- Past Dates are not allowed --></translation>
-    </picklistValues>
+        
+            <masterLabel>Past Dates are not allowed</masterLabel>
+        
+            <translation><!-- Past Dates are not allowed --></translation>
+        
+        </picklistValues>
 </CustomFieldTranslation>

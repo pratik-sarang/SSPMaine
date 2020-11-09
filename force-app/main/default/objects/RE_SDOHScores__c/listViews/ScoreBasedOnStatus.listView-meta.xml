@@ -7,8 +7,11 @@
     <columns>Score__c</columns>
     <filterScope>Everything</filterScope>
     <filters>
-        <field>ScoreStatus__c</field>
-        <operation>equals</operation>
-    </filters>
+        
+            <field>ScoreStatus__c</field>
+        
+            <operation>equals</operation>
+        
+        </filters>
     <label>Score Based on Status</label>
 </ListView>

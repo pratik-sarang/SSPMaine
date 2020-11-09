@@ -8,7 +8,10 @@
     <trackTrending>false</trackTrending>
     <type>Picklist</type>
     <valueSet>
-        <restricted>true</restricted>
-        <valueSetName>TypeOfFacility</valueSetName>
-    </valueSet>
+        
+            <restricted>true</restricted>
+        
+            <valueSetName>TypeOfFacility</valueSetName>
+        
+        </valueSet>
 </CustomField>

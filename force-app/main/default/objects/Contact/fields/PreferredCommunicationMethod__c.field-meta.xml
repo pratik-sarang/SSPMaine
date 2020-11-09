@@ -9,19 +9,34 @@
     <trackHistory>true</trackHistory>
     <type>Picklist</type>
     <valueSet>
-        <restricted>true</restricted>
-        <valueSetDefinition>
-            <sorted>false</sorted>
-            <value>
-                <fullName>Email</fullName>
-                <default>false</default>
-                <label>Email</label>
-            </value>
-            <value>
-                <fullName>Mobile Phone</fullName>
-                <default>false</default>
-                <label>Mobile Phone</label>
-            </value>
-        </valueSetDefinition>
-    </valueSet>
+        
+            <restricted>true</restricted>
+        
+            <valueSetDefinition>
+            
+                <sorted>false</sorted>
+            
+                <value>
+                
+                    <fullName>Email</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Email</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>Mobile Phone</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Mobile Phone</label>
+                
+                </value>
+            
+            </valueSetDefinition>
+        
+        </valueSet>
 </CustomField>

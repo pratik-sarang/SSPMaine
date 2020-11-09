@@ -8,104 +8,204 @@
     <trackTrending>false</trackTrending>
     <type>Picklist</type>
     <valueSet>
-        <restricted>true</restricted>
-        <valueSetDefinition>
-            <sorted>false</sorted>
-            <value>
-                <fullName>CA</fullName>
-                <default>false</default>
-                <label>Cancer Only</label>
-            </value>
-            <value>
-                <fullName>CH</fullName>
-                <default>false</default>
-                <label>CHAMPVA</label>
-            </value>
-            <value>
-                <fullName>CO</fullName>
-                <default>false</default>
-                <label>COBRA</label>
-            </value>
-            <value>
-                <fullName>DE</fullName>
-                <default>false</default>
-                <label>Dental Only</label>
-            </value>
-            <value>
-                <fullName>EM</fullName>
-                <default>false</default>
-                <label>Insurance through an employer, including the parent&apos;s employer</label>
-            </value>
-            <value>
-                <fullName>IH</fullName>
-                <default>false</default>
-                <label>Indian Health Services</label>
-            </value>
-            <value>
-                <fullName>KA</fullName>
-                <default>false</default>
-                <label>Kentucky Access</label>
-            </value>
-            <value>
-                <fullName>LT</fullName>
-                <default>false</default>
-                <label>Long Term Care Insurance</label>
-            </value>
-            <value>
-                <fullName>MS</fullName>
-                <default>false</default>
-                <label>Medical Supplemental</label>
-            </value>
-            <value>
-                <fullName>RH</fullName>
-                <default>false</default>
-                <label>Retiree Health Plan</label>
-            </value>
-            <value>
-                <fullName>NC</fullName>
-                <default>false</default>
-                <label>Insurance from a Non-Custodial Parent</label>
-            </value>
-            <value>
-                <fullName>OT</fullName>
-                <default>false</default>
-                <label>Other</label>
-            </value>
-            <value>
-                <fullName>PC</fullName>
-                <default>false</default>
-                <label>Peace Corps</label>
-            </value>
-            <value>
-                <fullName>PH</fullName>
-                <default>false</default>
-                <label>Pharmacy Only</label>
-            </value>
-            <value>
-                <fullName>PM</fullName>
-                <default>false</default>
-                <label>Private Medical Insurance</label>
-            </value>
-            <value>
-                <fullName>TR</fullName>
-                <default>false</default>
-                <label>TRICARE</label>
-            </value>
-            <value>
-                <fullName>UM</fullName>
-                <default>false</default>
-                <label>United Mine Workers</label>
-            </value>
-            <value>
-                <fullName>VA</fullName>
-                <default>false</default>
-                <label>VA (Veterans Health Benefit)</label>
-            </value>
-            <value>
-                <fullName>VI</fullName>
-                <default>false</default>
-                <label>Vision Only</label>
-            </value>
-        </valueSetDefinition>
-    </valueSet>
+        
+            <restricted>true</restricted>
+        
+            <valueSetDefinition>
+            
+                <sorted>false</sorted>
+            
+                <value>
+                
+                    <fullName>CA</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Cancer Only</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>CH</fullName>
+                
+                    <default>false</default>
+                
+                    <label>CHAMPVA</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>CO</fullName>
+                
+                    <default>false</default>
+                
+                    <label>COBRA</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>DE</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Dental Only</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>EM</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Insurance through an employer, including the parent&apos;s employer</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>IH</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Indian Health Services</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>KA</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Kentucky Access</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>LT</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Long Term Care Insurance</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>MS</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Medical Supplemental</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>RH</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Retiree Health Plan</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>NC</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Insurance from a Non-Custodial Parent</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>OT</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Other</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>PC</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Peace Corps</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>PH</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Pharmacy Only</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>PM</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Private Medical Insurance</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>TR</fullName>
+                
+                    <default>false</default>
+                
+                    <label>TRICARE</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>UM</fullName>
+                
+                    <default>false</default>
+                
+                    <label>United Mine Workers</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>VA</fullName>
+                
+                    <default>false</default>
+                
+                    <label>VA (Veterans Health Benefit)</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>VI</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Vision Only</label>
+                
+                </value>
+            
+            </valueSetDefinition>
+        
+        </valueSet>
 </CustomField>

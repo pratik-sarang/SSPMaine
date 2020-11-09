@@ -1,35 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <GlobalValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    
     <valueTranslation>
+        
         <masterLabel>Alimony Expense</masterLabel>
+        
         <translation>Gasto de pensión para ex cónyuge</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Child Support Expense</masterLabel>
+        
         <translation>Gasto de manutención infantil</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Dependent Care Expense</masterLabel>
+        
         <translation>Gasto de cuidados de dependiente</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Higher Education Expense</masterLabel>
+        
         <translation>Gasto de educación superior</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Medical Expense</masterLabel>
+        
         <translation>Gasto médico</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Shelter Expense</masterLabel>
+        
         <translation>Gasto de vivienda</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Tax Deduction Expense</masterLabel>
+        
         <translation>Gasto de deducciones de impuestos</translation>
+        
     </valueTranslation>
+    
     <valueTranslation>
+        
         <masterLabel>Utility Expense</masterLabel>
+        
         <translation>Gasto de servicios públicos</translation>
+        
     </valueTranslation>
+    
 </GlobalValueSetTranslation>

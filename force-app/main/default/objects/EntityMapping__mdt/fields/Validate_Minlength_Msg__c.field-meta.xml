@@ -7,24 +7,44 @@
     <required>false</required>
     <type>Picklist</type>
     <valueSet>
-        <restricted>true</restricted>
-        <valueSetDefinition>
-            <sorted>false</sorted>
-            <value>
-                <fullName>Data too short</fullName>
-                <default>true</default>
-                <label>Data too short</label>
-            </value>
-            <value>
-                <fullName>Please enter a valid Number with a maximum of 12 characters.</fullName>
-                <default>false</default>
-                <label>Please enter a valid Number with a maximum of 12 characters.</label>
-            </value>
-            <value>
-                <fullName>Please only enter 4-17 characters.</fullName>
-                <default>false</default>
-                <label>Please only enter 4-17 characters.</label>
-            </value>
-        </valueSetDefinition>
-    </valueSet>
+        
+            <restricted>true</restricted>
+        
+            <valueSetDefinition>
+            
+                <sorted>false</sorted>
+            
+                <value>
+                
+                    <fullName>Data too short</fullName>
+                
+                    <default>true</default>
+                
+                    <label>Data too short</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>Please enter a valid Number with a maximum of 12 characters.</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Please enter a valid Number with a maximum of 12 characters.</label>
+                
+                </value>
+            
+                <value>
+                
+                    <fullName>Please only enter 4-17 characters.</fullName>
+                
+                    <default>false</default>
+                
+                    <label>Please only enter 4-17 characters.</label>
+                
+                </value>
+            
+            </valueSetDefinition>
+        
+        </valueSet>
 </CustomField>
