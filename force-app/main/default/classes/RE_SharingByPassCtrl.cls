@@ -25,7 +25,7 @@ public without sharing class RE_SharingByPassCtrl {
     * @param        sProfileName   (String)         : Profile Name
     * @return       User
     /***********************************************************************************************************/
-    public static User insertUser(User objUser, Id profileId){
+    /*public static User insertUser(User objUser, Id profileId){
         try{
             objUser.ProfileId = profileId;
             RE_DataAccessChecker.insertSetUpObject(User.getSObjectType(), objUser);
@@ -35,7 +35,7 @@ public without sharing class RE_SharingByPassCtrl {
             throw e;
         }
         return objUser;
-    }
+    }*/
     
     /*********************************************************************************************************
     * @author       Pankaj Mohanta
@@ -45,7 +45,7 @@ public without sharing class RE_SharingByPassCtrl {
     * @param        User   (sObject) : Contact Id
     * @return       Boolean
     /***********************************************************************************************************/
-    public static Boolean updateUserStatusToActive(User objUser){
+    /*public static Boolean updateUserStatusToActive(User objUser){
         Boolean bFlag = false;
         if(objUser != null){
             objUser.isActive = true;
@@ -53,7 +53,7 @@ public without sharing class RE_SharingByPassCtrl {
             bFlag = true;
         }
         return bFlag;
-    }
+    }*/
     /*********************************************************************************************************
     * @author       Pankaj Mohanta
     * @date         05/15/2019
@@ -62,7 +62,7 @@ public without sharing class RE_SharingByPassCtrl {
     * @param        lstUser     List<User>        : List of User objects to be updated
     * @return       void
     /***********************************************************************************************************/
-    public static Boolean updateUser(Map<User, String> mapUserRole, Map<String, Profile> mapProfiles){
+    /*public static Boolean updateUser(Map<User, String> mapUserRole, Map<String, Profile> mapProfiles){
         Boolean bIsSuccess = false;
         List<User> lstUserstobeUpdate = new List<User>();
         try{
@@ -91,7 +91,7 @@ public without sharing class RE_SharingByPassCtrl {
             throw e;
         }
         return bIsSuccess;
-    }
+    }*/
      /*********************************************************************************************************
     * @author       Srikanth
     * @date         05/29/2019
@@ -101,7 +101,7 @@ public without sharing class RE_SharingByPassCtrl {
     * @param        organizationCity   (String) : organization City
     * @return       List<Account> 
     /***********************************************************************************************************/
-    public static List<Account> fetchOrganizationResults(String organizationName, String organizationCity){        
+    /*public static List<Account> fetchOrganizationResults(String organizationName, String organizationCity){        
         Recordtype objRecordType = GeneralUtility.fetchRecordType(System.Label.AccountRecordType,'Account');
         Id recordTypeId = objRecordType.Id;
         String strOrgname = String.isNotBlank(organizationName)? '\'%'+String.escapeSingleQuotes(organizationName)+'%\'':null;// (organizationName!=null)
@@ -139,7 +139,7 @@ public without sharing class RE_SharingByPassCtrl {
         List<Account> accountResults = (sAccountSafeQuery!= null)? Database.query(sAccountSafeQuery):new List<Account>();
         return accountResults;
     }
-    
+*/
     
     
     /*********************************************************************************************************
@@ -150,10 +150,10 @@ public without sharing class RE_SharingByPassCtrl {
     * @param        accountId   Id : accountId
     * @return       Id Account.Id
     /***********************************************************************************************************/
-    public static Id getAccountOwnerId(Id accountId){
+    /*public static Id getAccountOwnerId(Id accountId){
         Id accOwnerId = GeneralUtility.getAccountOwnerId(accountId);
         return accOwnerId;
-    }
+    }*/
     
     /*********************************************************************************************************
     * @author       Anuj Vashistha
@@ -164,7 +164,7 @@ public without sharing class RE_SharingByPassCtrl {
     * @param        accountId   Id : accountId
     * @return       Id Account.Id
     ***********************************************************************************************************/
-    public static Id getAccountId(Id accountId){
+    /*public static Id getAccountId(Id accountId){
         Id retAccountId;
         String sFieldsToQueryOnAccount = RE_DataBaseQueryFields.sIdNameField;
         String sWhereClauseOnAccount = RE_DataBaseQueryFields.sAccountIdWhereClause;
@@ -187,7 +187,7 @@ public without sharing class RE_SharingByPassCtrl {
             }
         }
         return retAccountId;
-    }
+    }*/
     /*********************************************************************************************************
     * @author       Pankaj Mohanta
     * @date         06/14/2019
@@ -196,9 +196,9 @@ public without sharing class RE_SharingByPassCtrl {
     * @param        objectType   : sObject Type
     * @param        Sobject : sObject Name
     /***********************************************************************************************************/
-    public static Database.SaveResult[] insertContentDocument(Schema.SobjectType objectType, Sobject objContentNote){
+    /*public static Database.SaveResult[] insertContentDocument(Schema.SobjectType objectType, Sobject objContentNote){
         return RE_DataAccessChecker.insertObject(ContentNote.sObjectType,objContentNote);
-    }
+    }*/
     /*********************************************************************************************************
     * @author       Pankaj Mohanta
     * @date         06/14/2019
@@ -206,7 +206,7 @@ public without sharing class RE_SharingByPassCtrl {
     * @description  This methods is used to fetch referral details
     * @return       List<Referral__c>
     /***********************************************************************************************************/
-    public static List<Referral__c> getReferralDetails(Id contactId){
+    /*public static List<Referral__c> getReferralDetails(Id contactId){
         String sNewStatus = RE_GlobalConstants.STATUS_NEW;
         Id referralRecordTypeId = GeneralUtility.getRecrodTypeIdBySobjectAndDevName('Referral__c', 'ReferralRecord');
         String sFieldsToQueryOnReferral = RE_DataBaseQueryFields.sFieldsToQueryOnReferralObject;
@@ -230,7 +230,7 @@ public without sharing class RE_SharingByPassCtrl {
             }
         }
         return lstReferral;
-    }
+    }*/
     /**************************************************************************************
     * @author       Pankaj Mohanta
     * @date         06/14/2019
@@ -238,7 +238,7 @@ public without sharing class RE_SharingByPassCtrl {
     * @description  This methods is used to get the Location Operating hours
     * @return       Map<String, String>> 
     ******************************************************************************************/
-    public static List<Location__c>  getLocationOperatingHours(Set<Id> lstLocations){
+    /*public static List<Location__c>  getLocationOperatingHours(Set<Id> lstLocations){
         List<Location__c> lstLocation = new List<Location__c>();
         String sFieldsToQueryOnLocation = RE_DataBaseQueryFields.sFieldsToQueryOnLocationObject;
         String sWhereClauseOnLocation = RE_DataBaseQueryFields.sWhereClauseOnLocationObject;
@@ -257,7 +257,7 @@ public without sharing class RE_SharingByPassCtrl {
             }
         }
         return lstLocation;
-    }
+    }*/
 
     /**************************************************************************************
     * @author       Prashant Singh
@@ -267,7 +267,7 @@ public without sharing class RE_SharingByPassCtrl {
     * @param        String title,string description, String recid
     * @return       RE_CreateLightningServerResponse 
     ******************************************************************************************/
-    public static RE_CreateLightningServerResponse createNote(Map<String, String> mapInputs){
+    /*public static RE_CreateLightningServerResponse createNote(Map<String, String> mapInputs){
         String title=mapInputs.get('title');
         String description=mapInputs.get('description');
         String recid=mapInputs.get('recid');
@@ -305,7 +305,7 @@ public without sharing class RE_SharingByPassCtrl {
         }  
         return new RE_CreateLightningServerResponse(bSuccess, errorMap, mapResponse);
     } 
-
+*/
     /**************************************************************************************
     * @author       Karthik Gulla
     * @date         08/29/2019
@@ -314,7 +314,7 @@ public without sharing class RE_SharingByPassCtrl {
     * @param        Database.SaveResult[] lstSaveResults
     * @return       RE_CreateLightningServerResponse 
     ******************************************************************************************/
-    public static void markNotesPublicOrPrivate(Database.SaveResult[] lstSaveResults, Boolean isPublicNote){
+    /*public static void markNotesPublicOrPrivate(Database.SaveResult[] lstSaveResults, Boolean isPublicNote){
         Id contentVersionId = null;
         String sQuery;
         Map<String, String> mapQueryParameters = new Map<String, String>();
@@ -346,7 +346,7 @@ public without sharing class RE_SharingByPassCtrl {
             }
         }
     }
-
+*/
     /**************************************************************************************
     * @author       Prashant Singh
     * @date         08/05/2019
@@ -355,7 +355,7 @@ public without sharing class RE_SharingByPassCtrl {
     * @param        String searchKeyWord, String ObjectName
     * @return       void 
     ******************************************************************************************/
-    public static List < sObject > fetchLookUpValues(Map<String, String> mapInputs) {
+    /*public static List < sObject > fetchLookUpValues(Map<String, String> mapInputs) {
         String searchKeyWord=mapInputs.get('searchKeyWord');
         String objectName=mapInputs.get('objectName');
         Id rectypeID=mapInputs.get('rectypeID');
@@ -426,7 +426,7 @@ public without sharing class RE_SharingByPassCtrl {
             LOG_LogMessageUtility.logMessage(LOG_LogMessageUtility.LOG_LogLevel.Error,'RE_CustomLookupCtrl','fetchLookUpValues',e.getMessage()+' '+e.getStackTraceString(),true);
         }
         return returnList;
-    }
+    }*/
     /**************************************************************************************
     * @author       Pankaj Mohanta
     * @date         06/18/2019
@@ -435,7 +435,7 @@ public without sharing class RE_SharingByPassCtrl {
     * @param        set<Id>     setReferralIds
     * @return       List<Feedback__c> 
     ******************************************************************************************/	
-    public static List<Feedback__c> getReferralFeedback(Set<Id> setReferralIds){
+    /*public static List<Feedback__c> getReferralFeedback(Set<Id> setReferralIds){
         Id feedbackRecordTypeId = GeneralUtility.getRecrodTypeIdBySobjectAndDevName('Feedback__c', 'PartnerFeedback');
         String sFieldsToQueryOnFeedback = RE_DataBaseQueryFields.sIdReferralId;
         String sWhereClauseOnFeedback = RE_DataBaseQueryFields.sWhereClauseOnFeedback;
@@ -456,7 +456,7 @@ public without sharing class RE_SharingByPassCtrl {
         }
         return lstFeedback;
     }
-    
+    */
     /********************************************************************************************
     * @author       Akash Sharma
     * @date         14/06/2019
@@ -465,10 +465,10 @@ public without sharing class RE_SharingByPassCtrl {
     * @param        String accid, String referralId, Integer rating, String Comments
     * @return       void 
     **********************************************************************************************/
-    public static List<Feedback__c> getFeedback(String referralId, Id feedbackrecId) {  
+    /*public static List<Feedback__c> getFeedback(String referralId, Id feedbackrecId) {  
         List<Feedback__c> feedbacklst= RE_ReferralDetailsCtrl.getFeedback(referralId,feedbackrecId);
         return feedbacklst;
-    }
+    }*/
    /********************************************************************************************
     * @author       Pankaj Mohanta
     * @date         09/10/2019
@@ -477,12 +477,12 @@ public without sharing class RE_SharingByPassCtrl {
     * @param        Schema.SObjectType, sObject
     * @return       void 
     **********************************************************************************************/
-    public static Boolean updateSobject(Schema.SObjectType objType, sObject obj){
+    /*public static Boolean updateSobject(Schema.SObjectType objType, sObject obj){
         Boolean bFlag = false;
         RE_DataAccessChecker.updateSetUpObject(objType, obj);
         bFlag = true;
         return bFlag;
-    }
+    }*/
    /********************************************************************************************
     * @author       Pankaj Mohanta
     * @date         09/10/2019
@@ -506,12 +506,12 @@ public without sharing class RE_SharingByPassCtrl {
     * @param        Schema.SObjectType, sObject
     * @return       void 
     **********************************************************************************************/
-    public static Boolean insertSobjects(Schema.SobjectType objType, List<SObject> lstObj){
+    /*public static Boolean insertSobjects(Schema.SobjectType objType, List<SObject> lstObj){
         Boolean bFlag = false;
         RE_DataAccessChecker.insertSetUpObjects(objType, lstObj);
         bFlag = true;
         return bFlag;
-    }
+    }*/
     /********************************************************************************************
     * @author       Payal Dubela
     * @date         09/18/2019
@@ -520,12 +520,12 @@ public without sharing class RE_SharingByPassCtrl {
     * @param        Schema.SObjectType, sObject
     * @return       void 
     **********************************************************************************************/
-    public static Boolean updateSobjects(Schema.SobjectType objType, List<SObject> lstObj){
+    /*public static Boolean updateSobjects(Schema.SobjectType objType, List<SObject> lstObj){
         Boolean bFlag = false;
         RE_DataAccessChecker.updateSetUpObjects(objType, lstObj);
         bFlag = true;
         return bFlag;
-    }
+    }*/
     /********************************************************************************************
     * @author       Prashant Singh
     * @date         14/06/2019
@@ -534,7 +534,7 @@ public without sharing class RE_SharingByPassCtrl {
     * @param        String accountId
     * @return       RE_CreateLightningServerResponse  
     **********************************************************************************************/
-    public static RE_CreateLightningServerResponse fetchLocations(String accountId){
+    /*public static RE_CreateLightningServerResponse fetchLocations(String accountId){
         String conrecordId = GeneralUtility.getLoggedInUserContactId();
         Map<String, Object> errorMap    = new Map<String, Object>{};
             Map<String, Object> mapResponse = new Map<String, Object>{};
@@ -568,7 +568,7 @@ public without sharing class RE_SharingByPassCtrl {
             throw e;
         }
         return new RE_CreateLightningServerResponse(bSuccess, errorMap, mapResponse);
-    }
+    }*/
     /********************************************************************************************
     * @author       Prashant Singh
     * @date         14/06/2019
@@ -577,7 +577,7 @@ public without sharing class RE_SharingByPassCtrl {
     * @param        String locationId
     * @return       RE_CreateLightningServerResponse  
     **********************************************************************************************/
-    public static RE_CreateLightningServerResponse fetchLocationResources(String locationId){
+    /*public static RE_CreateLightningServerResponse fetchLocationResources(String locationId){
         List<String> lstRetVal = new List<String>();
         Map<String, Object> errorMap    = new Map<String, Object>{};
         Map<String, Object> mapResponse = new Map<String, Object>{};
@@ -611,7 +611,7 @@ public without sharing class RE_SharingByPassCtrl {
             throw e;
         }
         return new RE_CreateLightningServerResponse(bSuccess, errorMap, mapResponse);
-    }
+    }*/
     /********************************************************************************************
     * @author       Prashant Singh
     * @date         14/06/2019
@@ -620,7 +620,7 @@ public without sharing class RE_SharingByPassCtrl {
     * @param        RE_CreateReferralCtrl.RE_RefWrapper
     * @return       List<Referral__c>  
     **********************************************************************************************/    
-    public static List<Referral__c> getReferralRecords(RE_CreateReferralCtrl.RE_RefWrapper objWrapper){
+    /*public static List<Referral__c> getReferralRecords(RE_CreateReferralCtrl.RE_RefWrapper objWrapper){
         String sClosed=RE_GlobalConstants.REFERRAL_STATUS_CLOSED;
         String scontactid=objWrapper.Contact;
         String sresourceid=objWrapper.Resource;
@@ -644,7 +644,7 @@ public without sharing class RE_SharingByPassCtrl {
         }
         return referrallst;
     }
-    
+    */
     /**************************************************************************************
     * @author       Pankaj Mohanta
     * @date         06/27/2019
@@ -653,7 +653,7 @@ public without sharing class RE_SharingByPassCtrl {
     * @param        Id contactId
     * @return       Contact 
     ******************************************************************************************/
-    public static Contact getCitizenContactDetails(Id contactId, String sRole){
+    /*public static Contact getCitizenContactDetails(Id contactId, String sRole){
          //RE_Release 1.1 – Security Fixes - Payal Dubela(Added Opt out check and changed sobject to list to avoid list has no rows error)
         List<Contact> lstobjContact = new List<Contact>();
         String sFieldsToQueryOnContact = RE_DataBaseQueryFields.sGeoLocationQueryOnContact;
@@ -676,7 +676,7 @@ public without sharing class RE_SharingByPassCtrl {
                /* Map<Id, Double> mapReferralDistance = new Map<Id, Double>();
                 Map<Id, String> mapLatLong = new Map<Id, String>();
                 Set<Id> lstLocationIds = new Set<Id>();
-                Set<Id> setReferralIds = new Set<Id>();*/
+                Set<Id> setReferralIds = new Set<Id>();
                 String sContactQuery =  mapContactQueryResponse.get(true);
                 //RE_Release 1.1 – Security Fixes - Payal Dubela
                 lstobjContact = Database.query(sContactQuery); 
@@ -684,7 +684,7 @@ public without sharing class RE_SharingByPassCtrl {
         }
         //RE_Release 1.1 – Security Fixes - Payal Dubela
         return (!lstobjContact.isEmpty() ? lstobjContact[0]:new Contact());
-    }
+    }*/
     /**************************************************************************************
     * @author       Prashant
     * @date         06/27/2019
@@ -693,10 +693,10 @@ public without sharing class RE_SharingByPassCtrl {
     * @param        (String sQuery, String recordid)
     * @return       List<ContentDocumentLink> 
     ******************************************************************************************/
-    public static List<ContentDocumentLink> getContentDocumentLink(String sQuery, String recordid){
+    /*public static List<ContentDocumentLink> getContentDocumentLink(String sQuery, String recordid){
         return Database.query(sQuery);
     }
-    
+    */
     /**************************************************************************************
     * @author       Prashant Singh
     * @date         08/05/2019
@@ -705,7 +705,7 @@ public without sharing class RE_SharingByPassCtrl {
     * @param        String recID, String ObjectName
     * @return       void 
     ******************************************************************************************/
-    public static sObject getRecord(String recID, String objectName ) {
+    /*public static sObject getRecord(String recID, String objectName ) {
         List < sObject > returnList = new List < sObject > ();
         sObject sobj;
         try{
@@ -732,7 +732,7 @@ public without sharing class RE_SharingByPassCtrl {
         }
         return sobj;
     }
-    
+    */
     /********************************************************************************************
     * @author       Prashant Singh
     * @date         08/05/2019
@@ -741,9 +741,9 @@ public without sharing class RE_SharingByPassCtrl {
     * @param        recId           (String)   : record Id
     * @return       RE_CreateLightningServerResponse  
     **********************************************************************************************/
-    public static Referral__c getReferralRecords(String sQuery, String recordId){
+    /*public static Referral__c getReferralRecords(String sQuery, String recordId){
         return DataBase.query(sQuery);
-    }
+    }*/
    /********************************************************************************************
     * @author       Prashant Singh
     * @date         08/05/2019
@@ -752,7 +752,7 @@ public without sharing class RE_SharingByPassCtrl {
     * @param        Map<String, String>,            Set<Id> setContactIds
     * @return       List<Object>  
     **********************************************************************************************/
-    public static List<Object> getConsentRecords(Map<String, String> mapInputs, Set<Id> setContactIds) {
+    /*public static List<Object> getConsentRecords(Map<String, String> mapInputs, Set<Id> setContactIds) {
         String sQuery=mapInputs.get('sQuery');
         Date userInputDate=(mapInputs.get('userInputDate')!=null)?Date.valueOf(mapInputs.get('userInputDate')):null;
         Id contactId=mapInputs.get('contactId');
@@ -766,7 +766,7 @@ public without sharing class RE_SharingByPassCtrl {
         return lstConsent;
         
     }
-    
+    */
     /********************************************************************************************
     * @author       Payal dubela
     * @date         02/07/2019
@@ -776,10 +776,10 @@ public without sharing class RE_SharingByPassCtrl {
     * @param        sQuery           (String)   : referrals to query
     * @return       List of Referral 
     **********************************************************************************************/  
-    public static List<Referral__c> fetchReferralCount(String sQuery,String clientId){
+    /*public static List<Referral__c> fetchReferralCount(String sQuery,String clientId){
          return DataBase.query(sQuery);   
     }
-    
+    */
      /********************************************************************************************
     * @author       Kojashree Kakariya
     * @date         02/07/2019
@@ -789,9 +789,9 @@ public without sharing class RE_SharingByPassCtrl {
     * @param        sQuery           (String)   : Consents to query
     * @return       List of Referral 
     **********************************************************************************************/  
-    public static List<Consent__c> fetchConsentRecord(String sConsentQuery,String sConsentId){
+    /*public static List<Consent__c> fetchConsentRecord(String sConsentQuery,String sConsentId){
          return DataBase.query(sConsentQuery);   
-    }
+    }*/
    
     /********************************************************************************************
     * @author       Sai Kiran
@@ -801,9 +801,9 @@ public without sharing class RE_SharingByPassCtrl {
     * @param        Resource ID, LocationID           (String)   : contact Id
     * @return       Map<String,Integer>  
     **********************************************************************************************/  
-    public static List<LocationResource__c> fetchLocResource(String sLocationResourceQuery, String slocationID, String resourceRecId){
+    /*public static List<LocationResource__c> fetchLocResource(String sLocationResourceQuery, String slocationID, String resourceRecId){
         return Database.query(sLocationResourceQuery);
-    }    
+    }*/    
     /********************************************************************************************
     * @author       Sai Kiran
     * @date         10/07/2019
@@ -812,7 +812,7 @@ public without sharing class RE_SharingByPassCtrl {
     * @param        Resource ID, LocationID           (String)   : contact Id
     * @return       Map<String,Integer>  
     **********************************************************************************************/  
-    public static List<Resource__c> fetchResourceData(Set<String> setResourcesIds){
+    /*public static List<Resource__c> fetchResourceData(Set<String> setResourcesIds){
         Map<Boolean, String> mapResponseData = new Map<Boolean, String>();
         Map<String, String> mapQueryParameters = new Map<String, String>();
         String sResourceQuery;
@@ -868,7 +868,7 @@ public without sharing class RE_SharingByPassCtrl {
         }
         lstResources = Database.query(sResourceQuery); 
         return lstResources;
-    }
+    }*/
     /********************************************************************************************
     * @author       Sai Kiran
     * @date         10/07/2019
@@ -877,7 +877,7 @@ public without sharing class RE_SharingByPassCtrl {
     * @param        Resource ID, LocationID           (String)   : contact Id
     * @return       Map<String,Integer>  
     **********************************************************************************************/  
-    public static List<Resource__c> fetchResourceData(Map<String, Object> mapInputs){
+    /*public static List<Resource__c> fetchResourceData(Map<String, Object> mapInputs){
         Set<String> setResourcesIds = (Set<String>)mapInputs.get('setResourcesIds');
         String sClosed = (String)mapInputs.get('sClosed');
         String sResourceQuery = (String)mapInputs.get('sResourceQuery');
@@ -885,7 +885,7 @@ public without sharing class RE_SharingByPassCtrl {
         String contactId = (String)mapInputs.get('contactId');	
         List<Resource__c> resourceList = Database.query(sResourceQuery);
         return resourceList;
-    }
+    }*/
     
     /********************************************************************************************
     * @author       Sai Kiran
@@ -895,9 +895,9 @@ public without sharing class RE_SharingByPassCtrl {
     * @param        Resource ID, LocationID           (String)   : contact Id
     * @return       Map<String,Integer>  
     **********************************************************************************************/  
-    public static List<Location__c> fetchLocationsData(String sLocQuery, Set<String> setLocIds){
+    /*public static List<Location__c> fetchLocationsData(String sLocQuery, Set<String> setLocIds){
         return Database.query(sLocQuery);
-    }
+    }*/
     /********************************************************************************************
     * @author       Kojashree Kakariya
     * @date         25/02/2020
@@ -905,7 +905,7 @@ public without sharing class RE_SharingByPassCtrl {
     * @description  This methods is used to get the AssessmentResponse__c Records in RE_SDOH class
     * @return       Map<String,Integer>  
     **********************************************************************************************/  
-    public static List<AssessmentResponse__c> fetchAssesmentResp(String sAssessmentResponseQuery,String userAssessmentTempId,String clientId){
+    /*public static List<AssessmentResponse__c> fetchAssesmentResp(String sAssessmentResponseQuery,String userAssessmentTempId,String clientId){
         
         return Database.query(sAssessmentResponseQuery);
     }    
@@ -913,7 +913,7 @@ public without sharing class RE_SharingByPassCtrl {
     public static List<AssessmentResponse__c> fetchAssesmentResponseRecords(String sAssessResponseQuery,String sUserAssessId,String sRecTypeAssessUser,Id sAssessmentRespRecTypeId){
         
         return Database.query(sAssessResponseQuery); 
-    }
+    }*/
     /********************************************************************************************
     * @author      Kojashree Kakariya
     * @date         10/07/2019
@@ -921,9 +921,9 @@ public without sharing class RE_SharingByPassCtrl {
     * @description  This methods is used to get the RE_Config__c Data for Guest User
     * @return       Map<String,Integer>  
     **********************************************************************************************/  
-    public static List<RE_Config__c> fetchGoalConfigRecords(String sConfigQuery, Set<Id> setGoalId, String goalConfigRecId){
+    /*public static List<RE_Config__c> fetchGoalConfigRecords(String sConfigQuery, Set<Id> setGoalId, String goalConfigRecId){
         return Database.query(sConfigQuery);
-    }
+    }*/
     /********************************************************************************************
     * @author      Kojashree Kakariya
     * @date         10/07/2019
@@ -931,9 +931,9 @@ public without sharing class RE_SharingByPassCtrl {
     * @description  This methods is used to get the RE_Config__c Data for Guest User
     * @return       Map<String,Integer>  
     **********************************************************************************************/  
-    public static List<SDOHDescription__c> fetchSDOHDescripCustomSetting(String sQuery,String sAssessTemplateName, Set<String> setSDOHDmain){
+    /*public static List<SDOHDescription__c> fetchSDOHDescripCustomSetting(String sQuery,String sAssessTemplateName, Set<String> setSDOHDmain){
         return Database.query(sQuery);
-    }
+    }*/
     /********************************************************************************************
     * @author       Kojashree Kakariya
     * @date         25/02/2020
@@ -941,9 +941,9 @@ public without sharing class RE_SharingByPassCtrl {
     * @description  This methods is used to get the RE_Config__c Data for Guest User
     * @return       Map<String,Integer>  
     **********************************************************************************************/  
-    public static List<SDOH__c> fetchSDOHRecords(String sQuery,String sUserAssessId, Set<String> setSDOHDmain){
+    /*public static List<SDOH__c> fetchSDOHRecords(String sQuery,String sUserAssessId, Set<String> setSDOHDmain){
         return Database.query(sQuery);
-    }
+    }*/
     /********************************************************************************************
     * @author       Kojashree Kakariya
     * @date         25/02/2020
@@ -951,9 +951,9 @@ public without sharing class RE_SharingByPassCtrl {
     * @description  This methods is used to get the RE_Config__c Data for Guest User
     * @return       Map<String,Integer>  
     **********************************************************************************************/  
-    public static List<GoalAnswer__c> fetchGoalAnswerRecords(String sQuery,Set<Id> setAnswerChoiceId){
+    /*public static List<GoalAnswer__c> fetchGoalAnswerRecords(String sQuery,Set<Id> setAnswerChoiceId){
         return Database.query(sQuery);
-    }
+    }*/
     /********************************************************************************************
     * @author       Sai Kiran
     * @date         10/07/2019
@@ -962,9 +962,9 @@ public without sharing class RE_SharingByPassCtrl {
     * @param        Resource ID, LocationID           (String)   : contact Id
     * @return       Map<String,Integer>  
     **********************************************************************************************/  
-    public static List<LocationResource__c> fetchAllLocationDataOnLR(String sLocationResourceQuery, String sResourceID){
+    /*public static List<LocationResource__c> fetchAllLocationDataOnLR(String sLocationResourceQuery, String sResourceID){
     	return Database.query(sLocationResourceQuery);
-    }
+    }*/
     /********************************************************************************************
     * @author       Sai Kiran
     * @date         10/07/2019
@@ -973,9 +973,9 @@ public without sharing class RE_SharingByPassCtrl {
     * @param        
     * @return       
     **********************************************************************************************/  
-    public static List<Location__c> fetchLocationAddressFields(String sLocationQuery, Set<String> setLocIds){
+    /*public static List<Location__c> fetchLocationAddressFields(String sLocationQuery, Set<String> setLocIds){
         return Database.query(sLocationQuery);
-    }
+    }*/
     
     /********************************************************************************************
     * @author       Suyash Singhal
@@ -985,7 +985,7 @@ public without sharing class RE_SharingByPassCtrl {
     * @param       
     * @return        List<RE_Resource_Taxonomy__c>
     **********************************************************************************************/  
-    public static List<RE_Resource_Taxonomy__c> fetchResourceTaxnomies(String sResourceId){
+    /*public static List<RE_Resource_Taxonomy__c> fetchResourceTaxnomies(String sResourceId){
         String sFieldNamesJunction = RE_DataBaseQueryFields.sQueryFieldsResourceTaxonomy;
         Map<String, String> mapQueryParametersJunctionObj = new Map<String, String>();
         mapQueryParametersJunctionObj.put(RE_GlobalConstants.sWhereClauseKey, RE_DataBaseQueryFields.sWhereClauseResourceTaxonomy);
@@ -993,7 +993,7 @@ public without sharing class RE_SharingByPassCtrl {
         String sQuery = RE_DataAccessChecker.getQueryStringforSetupObjects(RE_DataBaseQueryFields.sObjectApiName, sFieldNamesJunction, mapQueryParametersJunctionObj);
         return Database.query(sQuery); 
         
-    }
+    }*/
     /********************************************************************************************
     * @author       Suyash Singhal
     * @date         23/07/2019
@@ -1002,7 +1002,7 @@ public without sharing class RE_SharingByPassCtrl {
     * @param       
     * @return       List<RE_Config__c> 
     **********************************************************************************************/  
-    public static List<RE_Config__c> fetchRelatedTaxnomiesGroup(set<String> setTaxonomyIds){
+    /*public static List<RE_Config__c> fetchRelatedTaxnomiesGroup(set<String> setTaxonomyIds){
         Id idSuggestedResourceRecType = GeneralUtility.getRecrodTypeIdBySobjectAndDevName(RE_DataBaseQueryFields.sConfigObjectApiName,'SuggestedResourceMapping');
         String sFieldNames = RE_DataBaseQueryFields.sQueryFieldsRelatedTaxGrp;
         Map<String, String> mapQueryParameters= new Map<String, String>();
@@ -1010,7 +1010,7 @@ public without sharing class RE_SharingByPassCtrl {
         mapQueryParameters.put(RE_GlobalConstants.sLimitKey, RE_DataBaseQueryFields.sLimit);
         String sQuery = RE_DataAccessChecker.getQueryStringforSetupObjects(RE_DataBaseQueryFields.sConfigObjectApiName, sFieldNames, mapQueryParameters);
         return Database.query(sQuery); 
-    }
+    }*/
     /********************************************************************************************
     * @author       Suyash Singhal
     * @date         23/07/2019
@@ -1019,7 +1019,7 @@ public without sharing class RE_SharingByPassCtrl {
     * @param       
     * @return       List<RE_Config__c>
     **********************************************************************************************/ 
-    public static List<RE_Config__c> fetchTaxnomiesGroupMembers(set<String> setTaxonomyGroupIds){
+    /*public static List<RE_Config__c> fetchTaxnomiesGroupMembers(set<String> setTaxonomyGroupIds){
         Id idTaxonomyGrpMemberRecType = GeneralUtility.getRecrodTypeIdBySobjectAndDevName(RE_DataBaseQueryFields.sConfigObjectApiName,'TaxonomyGroupMember'); 
         String sFieldNames = RE_DataBaseQueryFields.sQueryFieldsTaxGrpMembers;
         Map<String, String> mapQueryParameters= new Map<String, String>();
@@ -1027,7 +1027,7 @@ public without sharing class RE_SharingByPassCtrl {
         mapQueryParameters.put(RE_GlobalConstants.sLimitKey, RE_DataBaseQueryFields.sLimit);
         String sQuery = RE_DataAccessChecker.getQueryStringforSetupObjects(RE_DataBaseQueryFields.sConfigObjectApiName, sFieldNames, mapQueryParameters);
         return Database.query(sQuery); 
-    }
+    }*/
     /********************************************************************************************
     * @author       Suyash Singhal
     * @date         23/07/2019
@@ -1036,7 +1036,7 @@ public without sharing class RE_SharingByPassCtrl {
     * @param       
     * @return       List<RE_Resource_Taxonomy__c>
     **********************************************************************************************/ 
-    public static List<RE_Resource_Taxonomy__c> fetchFinalResourceTaxnomies(set<String> setFinalTaxonomyIds){
+    /*public static List<RE_Resource_Taxonomy__c> fetchFinalResourceTaxnomies(set<String> setFinalTaxonomyIds){
         String sFieldNames = RE_DataBaseQueryFields.sQueryFieldsFinalResourceTaxs;
         Map<String, String> mapQueryParameters= new Map<String, String>();
         mapQueryParameters.put(RE_GlobalConstants.sWhereClauseKey, RE_DataBaseQueryFields.sWhereClauseFinalResourceTaxs);
@@ -1044,7 +1044,7 @@ public without sharing class RE_SharingByPassCtrl {
         String sQuery = RE_DataAccessChecker.getQueryStringforSetupObjects(RE_DataBaseQueryFields.sObjectApiName, sFieldNames, mapQueryParameters);
         return Database.query(sQuery); 
     }
-    
+    */
     /********************************************************************************************
     * @author       Suyash Singhal
     * @date         23/07/2019
@@ -1053,7 +1053,7 @@ public without sharing class RE_SharingByPassCtrl {
     * @param       
     * @return       List<LocationResource__c>
     **********************************************************************************************/ 
-    public static List<LocationResource__c> fetchLocationResources(set<String> setResourceIds){
+    /*public static List<LocationResource__c> fetchLocationResources(set<String> setResourceIds){
         String sFieldNames = RE_DataBaseQueryFields.sQueryFieldsLocResources;
         Map<String, String> mapQueryParameters= new Map<String, String>();
         mapQueryParameters.put(RE_GlobalConstants.sWhereClauseKey, RE_DataBaseQueryFields.sWhereClauseLocResources);
@@ -1061,7 +1061,7 @@ public without sharing class RE_SharingByPassCtrl {
         String sQuery = RE_DataAccessChecker.getQueryStringforSetupObjects(RE_DataBaseQueryFields.sLocResObjectApiName, sFieldNames, mapQueryParameters);
         return Database.query(sQuery); 
         
-    }
+    }*/
     
     /********************************************************************************************
     * @author       Suyash Singhal
@@ -1070,9 +1070,9 @@ public without sharing class RE_SharingByPassCtrl {
     * @description    
     * @param       
     **********************************************************************************************/ 
-    public static void insertReferral(Referral__c objReferral){
+    /*public static void insertReferral(Referral__c objReferral){
         RE_DataAccessChecker.insertObject(Referral__c.getSObjectType(), objReferral);
-    }
+    }*/
     
     public static Boolean bIsGuestUser = false;
     public static Boolean bIsResidentUser = false;
@@ -1085,7 +1085,7 @@ public without sharing class RE_SharingByPassCtrl {
     * @description  This method is used to get the search config records
     * @param        Map<String, String> mapInputs
     **********************************************************************************************/
-    public static List<RE_Config__c> getSearchConfigResults(Map<String, String> mapInputs){
+    /*public static List<RE_Config__c> getSearchConfigResults(Map<String, String> mapInputs){
         String sDomain = mapInputs.get('sDomain');
         String sSubcategory = mapInputs.get('sSubcategory');
         String searchConfigRecId = mapInputs.get('searchConfigRecId');
@@ -1104,7 +1104,7 @@ public without sharing class RE_SharingByPassCtrl {
                 LOG_LogMessageUtility.logMessage(LOG_LogMessageUtility.LOG_LogLevel.Error,'RE_SharingByPassCtrl','getCategorySearchResults','***FLS Violation***'+mapResponseConfig.get(false),true);
             } 
         return lstSearchConfigResults;
-    }
+    }*/
     /********************************************************************************************
     * @author       Pankaj Mohanta
     * @date         07/17/2019
@@ -1112,7 +1112,7 @@ public without sharing class RE_SharingByPassCtrl {
     * @description  This methods is used to get the locaion resources
     * @return       List<LocationResource__c>
     **********************************************************************************************/
-    public static List<LocationResource__c> getLocationResources(Map<String, Object> mapInputs){
+    /*public static List<LocationResource__c> getLocationResources(Map<String, Object> mapInputs){
         Set<Id> setLocationResourceIds = (Set<Id>)mapInputs.get('setLocationResourceIds');
         Set<Id> setGlobalLocaResourceIds;
         if(mapInputs.containsKey('setGlobalLocaResourceIds')){
@@ -1128,7 +1128,7 @@ public without sharing class RE_SharingByPassCtrl {
         Integer iRadiusMiles = Integer.valueOf(System.Label.searchmilesradius); 
 
         return Database.query(sQuery);
-    }
+    }*/
     /********************************************************************************************
     * @author       Pankaj Mohanta
     * @date         07/17/2019
@@ -1136,9 +1136,9 @@ public without sharing class RE_SharingByPassCtrl {
     * @description  This methods is used to get the referral records
     * @return       List<LocationResource__c>
     **********************************************************************************************/
-    public static List<Referral__c> getRferralRecords(String sQuery, String contactId, Set<Id> setResourceIds){
+    /*public static List<Referral__c> getRferralRecords(String sQuery, String contactId, Set<Id> setResourceIds){
         return Database.query(sQuery);
-    } 
+    } */
     
     /********************************************************************************************
     * @author       Ashwin Kasture
@@ -1148,7 +1148,7 @@ public without sharing class RE_SharingByPassCtrl {
     * @param        List<LocationResource__c> lstLocationResource
     * @return       List<LocationResource__c> 
     **********************************************************************************************/
-    public static List<LocationResource__c> getLocationResource(Map<String,String> mapInputs, Set<Id> setResourceId){
+    /*public static List<LocationResource__c> getLocationResource(Map<String,String> mapInputs, Set<Id> setResourceId){
        String sLocResQuery= mapInputs.get('sLocResQuery');
        if(mapInputs.containsKey('dblLat') && mapInputs.containsKey('dblLon')){
          Double dblLat=Double.valueOf(mapInputs.get('dblLat'));
@@ -1156,7 +1156,7 @@ public without sharing class RE_SharingByPassCtrl {
        }
        Integer iRadiusMiles = Integer.valueOf(System.Label.searchmilesradius); 
         return Database.query(sLocResQuery);
-    }
+    }*/
     
     /********************************************************************************************
     * @author       Ashwin Kasture
@@ -1166,9 +1166,9 @@ public without sharing class RE_SharingByPassCtrl {
     * @param        List<Referral__c> lstReferals
     * @return       List<Referral__c> 
     **********************************************************************************************/
-    public static List<Referral__c> getReferralRecords(String sReferralQuery, Set<Id> setResourceId, Id contactId){
+    /*public static List<Referral__c> getReferralRecords(String sReferralQuery, Set<Id> setResourceId, Id contactId){
         return Database.query(sReferralQuery);
-    }
+    }*/
     
     /********************************************************************************************
     * @author       Ashwin Kasture
@@ -1178,9 +1178,9 @@ public without sharing class RE_SharingByPassCtrl {
     * @param        List<RE_Resource_Taxonomy__c> lstResourceTaxonomy
     * @return       List<RE_Resource_Taxonomy__c> 
     **********************************************************************************************/
-    public static List<RE_Resource_Taxonomy__c> getResourceTaxonomy(String sResTaxonomyQuery, Set<Id> setTaxonomyId, String sAccountStatus){
+    /*public static List<RE_Resource_Taxonomy__c> getResourceTaxonomy(String sResTaxonomyQuery, Set<Id> setTaxonomyId, String sAccountStatus){
         return Database.query(sResTaxonomyQuery);
-    }
+    }*/
 	
     
     /**************************************************************************************
@@ -1191,7 +1191,7 @@ public without sharing class RE_SharingByPassCtrl {
     * @param        String noteId String title String description
     * @return       RE_CreateLightningServerResponse 
     ******************************************************************************************/
-    public static RE_CreateLightningServerResponse updateNote(String noteId,String title,String description){
+    /*public static RE_CreateLightningServerResponse updateNote(String noteId,String title,String description){
         Boolean bSuccess = false;
         Map<String, Object> errorMap    = new Map<String, Object>();
         Map<String, Object> mapResponse = new Map<String, Object>();
@@ -1208,7 +1208,7 @@ public without sharing class RE_SharingByPassCtrl {
             LOG_LogMessageUtility.logMessage(LOG_LogMessageUtility.LOG_LogLevel.Error, 'RE_NotesCtrl', 'updateNote', e.getMessage(), true);
         }
         return new RE_CreateLightningServerResponse(bSuccess, errorMap, mapResponse);
-    }
+    }*/
     
    /* ******************************************************************************************
     * @author       Suyash Singhal
@@ -1229,14 +1229,14 @@ public without sharing class RE_SharingByPassCtrl {
     * @param        Map<String,String> mapContentVersionContentId
     * @return       List<Contentdistribution> 
     ******************************************************************************************/  
-    public static List<Contentdistribution> getContentdistribution(Map<String,String> mapContentVersionContentId){
+    /*public static List<Contentdistribution> getContentdistribution(Map<String,String> mapContentVersionContentId){
         List<Contentdistribution> lstContentDistribution = new List<Contentdistribution>();
         if(Schema.sObjectType.contentdistribution.fields.Id.isAccessible() && Schema.sObjectType.contentdistribution.fields.ContentversionId.isAccessible()
             && Schema.sObjectType.contentdistribution.fields.DistributionPublicUrl.isAccessible()){
         		lstContentDistribution = [SELECT Id,ContentversionId,DistributionPublicUrl FROM contentdistribution where ContentversionId IN: mapContentVersionContentId.keySet()];
             }
 		return lstContentDistribution;
-    }
+    }*/
    /* ******************************************************************************************
     * @author       Prashant Singh
     * @date         16/08/2019
@@ -1245,9 +1245,9 @@ public without sharing class RE_SharingByPassCtrl {
     * @param        Map<String,String> mapContentVersionContentId
     * @return       List<Contentdistribution> 
     ******************************************************************************************/ 
-    public static ReportConcern__c getReportConcerRecords(String sQuery, String recID){
+    /*public static ReportConcern__c getReportConcerRecords(String sQuery, String recID){
         return Database.query(sQuery);
-    }
+    }*/
     /* ******************************************************************************************
     * @author       Prashant Singh
     * @date         16/08/2019
@@ -1256,9 +1256,9 @@ public without sharing class RE_SharingByPassCtrl {
     * @param        String sQuery, Set<Id> setContentDocumentIds
     * @return       List<ContentNote> 
     ******************************************************************************************/ 
-    public static List<ContentNote> getContentNotes(String sQuery, Set<Id> setContentDocumentIds){
+    /*public static List<ContentNote> getContentNotes(String sQuery, Set<Id> setContentDocumentIds){
         return Database.query(sQuery);
-    }
+    }*/
     
     /****************************************************************************************************************
     * @author       Pankaj Mohanta
@@ -1267,9 +1267,9 @@ public without sharing class RE_SharingByPassCtrl {
     * @description  This methods is used to get the Location Resources.
     * @return       List<LocationResource__c>
     *****************************************************************************************************************/
-    public static List<LocationResource__c> getLocationResources(String sQuery, Set<Id> setResourceIds, Set<Id> setLocationIds){
+    /*public static List<LocationResource__c> getLocationResources(String sQuery, Set<Id> setResourceIds, Set<Id> setLocationIds){
         return Database.query(sQuery);
-    }
+    }*/
     /****************************************************************************************************************
     * @author       Pankaj Mohanta
     * @date         08/22/2019
@@ -1277,9 +1277,9 @@ public without sharing class RE_SharingByPassCtrl {
     * @description  This methods is used to create Favorites.
     * @return       RE_CreateLightningServerResponse
     *****************************************************************************************************************/
-    public static RE_CreateLightningServerResponse createFavorite(String sLocationResId){
+    /*public static RE_CreateLightningServerResponse createFavorite(String sLocationResId){
         return RE_CreateFavCtrl.createFavorite(sLocationResId);
-    }
+    }*/
     
     /****************************************************************************************************************
     * @author       Srikanth
@@ -1288,10 +1288,10 @@ public without sharing class RE_SharingByPassCtrl {
     * @description  This methods is used to create Calim Site Request.
     * @return       ClaimMySiteRequest__c
     *****************************************************************************************************************/
-    public static ClaimMySiteRequest__c createClaimSite(ClaimMySiteRequest__c claimRecord){
+    /*public static ClaimMySiteRequest__c createClaimSite(ClaimMySiteRequest__c claimRecord){
         Database.SaveResult[] sr =  RE_DataAccessChecker.insertObject(ClaimMySiteRequest__c.SObjectType, claimRecord);
         return claimRecord;
-    }
+    }*/
      /****************************************************************************************************************
     * @author       Pankaj Mohanta
     * @date         08/27/2019
@@ -1300,10 +1300,10 @@ public without sharing class RE_SharingByPassCtrl {
     * @param		Set<Id> setResourceIds, Set<Id> setLocationIds
     * @return       Map<String, Favorite__c>
     *****************************************************************************************************************/
-    public static Map<String, Favorite__c> getMyFavorite(Set<Id> setResourceIds, Set<Id> setLocationIds){
+    /*public static Map<String, Favorite__c> getMyFavorite(Set<Id> setResourceIds, Set<Id> setLocationIds){
         Map<String, Favorite__c> mapFavorites = GeneralUtility.getFavorites(setResourceIds,setLocationIds);
         return mapFavorites;
-    }
+    }*/
     /****************************************************************************************************************
     * @author       Ashwin Kasture
     * @date         08/22/2019
@@ -1311,9 +1311,9 @@ public without sharing class RE_SharingByPassCtrl {
     * @description  This methods is used to get the Favorites of Resources based on login User & Location Resource.
     * @return       List<Favorite__c>
     *****************************************************************************************************************/
-    public static List<Favorite__c> getFavoriteResources(String sQuery, Set<Id> setLocResId, String sContactId,Id sFavRecordTypeId){
+    /*public static List<Favorite__c> getFavoriteResources(String sQuery, Set<Id> setLocResId, String sContactId,Id sFavRecordTypeId){
         return Database.query(sQuery);
-    }
+    }*/
      /****************************************************************************************************************
     * @author       Nandita Bapaye	
     * @date         03/26/2020
@@ -1322,9 +1322,9 @@ public without sharing class RE_SharingByPassCtrl {
     * @return       List<Favorite__c>
     *****************************************************************************************************************/
     
-     public static List<Favorite__c> getFavoriteClients(String sQuery, String sClientId, String sContactId,Id sFavRecordTypeId){
+     /*public static List<Favorite__c> getFavoriteClients(String sQuery, String sClientId, String sContactId,Id sFavRecordTypeId){
         return Database.query(sQuery);
-    }
+    }*/
     /********************************************************************************************
     * @author       Nandita Bapaye
     * @date         02/04/2020
@@ -1332,9 +1332,9 @@ public without sharing class RE_SharingByPassCtrl {
     * @description   function to delete client favorites on optout.
     * @param       
     **********************************************************************************************/ 
-    public static void deleteFavoriteClients(List<Favorite__c> LstFav){
+    /*public static void deleteFavoriteClients(List<Favorite__c> LstFav){
         RE_DataAccessChecker.deleteObjects(Favorite__c.sObjectType,lstFav); 
-    }
+    }*/
     /*********************************************************************************************************
     * @author       Arun Garg
     * @date         08/28/2019
@@ -1342,7 +1342,7 @@ public without sharing class RE_SharingByPassCtrl {
     * @description  This methods is used to fetch referral details
     * @return       List<Referral__c>
     /***********************************************************************************************************/
-    public static List<Object> getReferralOrganizationDetails(Map<String, String> mapInputs,Set<String> statusSet,Set<Id> resIdset){
+    /*public static List<Object> getReferralOrganizationDetails(Map<String, String> mapInputs,Set<String> statusSet,Set<Id> resIdset){
         //Map<String, String> mapInputs = new Map<String, String>();
 
         String sQuery = mapInputs.get('sQuery');
@@ -1362,7 +1362,7 @@ public without sharing class RE_SharingByPassCtrl {
         List<Object> lstRecords = new List<Object>();
         lstRecords = Database.query(sQuery);
         return lstRecords;
-    }
+    }*/
     /*********************************************************************************************************
     * @author       Suyash Singhal
     * @date         08/28/2019
@@ -1370,12 +1370,12 @@ public without sharing class RE_SharingByPassCtrl {
     * @description  This methods is used to get the bull referral records
     * @return       List<Referral__c>
     /***********************************************************************************************************/
-    public static List<Referral__c> getBulkReferralRecords(Map<String, String> mapInputs, Set<String> setResourceIds){
+    /*public static List<Referral__c> getBulkReferralRecords(Map<String, String> mapInputs, Set<String> setResourceIds){
         String sQuery =  mapInputs.get('sQuery');
         String sContactId = mapInputs.get('sContactId');
         String sClosed = mapInputs.get('sClosed');
         return Database.query(sQuery);
-    }
+    }*/
     /**************************************************************************************
     * @author       Deeksha Gupta
     * @date         09/03/2019
@@ -1384,7 +1384,7 @@ public without sharing class RE_SharingByPassCtrl {
     * @param        
     * @return       List<Feedback__c> 
     ******************************************************************************************/
-    public static List<Feedback__c> getPartnerFeedbackRecords(Id accountId, Id locationId, Id resourceId){
+    /*public static List<Feedback__c> getPartnerFeedbackRecords(Id accountId, Id locationId, Id resourceId){
         Id feedbackRecordTypeId = GeneralUtility.getRecrodTypeIdBySobjectAndDevName('Feedback__c', 'PartnerFeedback');
         String sFieldsToQueryOnFeedback = RE_DataBaseQueryFields.sFieldsToQueryOnFeedbackForRating;
         String sWhereClauseOnFeedback ;
@@ -1408,7 +1408,7 @@ public without sharing class RE_SharingByPassCtrl {
             }
         }
         return lstFeedback;
-    }
+    }*/
     /**************************************************************************************
     * @author       Pankaj M
     * @date         09/03/2019
@@ -1417,10 +1417,10 @@ public without sharing class RE_SharingByPassCtrl {
     * @param        String sKeyWord
     * @return       List<List<sObject>> 
     ******************************************************************************************/
-    public static List<List<sObject>> getSearchResults(String sKeyWord){
+   /* public static List<List<sObject>> getSearchResults(String sKeyWord){
        // List<List<sObject>> searchList = 
         return [FIND :sKeyword IN ALL FIELDS RETURNING Resource__c(Id, Name,Organization__r.IsClaimed__c,Organization__r.Status__c,SdohDomain__c LIMIT 200), Account(Id,Name,CommonlyUsedName__c,Description,Email__c,Phone,Website LIMIT 200), Location__c(Id,Name,Address1__c,City__c,State__c,Email__c,Phone__c LIMIT 200), RE_Taxonomy__c(Id,Name,Description__c LIMIT 200),LocationResource__c(Id,ResourceDescription__c,Phone__c,Resource__c,Location__c  WHERE Status__c=:RE_GlobalConstants.ACTIVE LIMIT 200)];
-    }
+    }*/
     /**************************************************************************************
     * @author       Pankaj M
     * @date         09/03/2019
@@ -1429,7 +1429,7 @@ public without sharing class RE_SharingByPassCtrl {
     * @param        Set<Id> setAccountIds
     * @return       Set<Id> 
     ******************************************************************************************/
-    public static Set<Id> getResourceIdsFromAccounts(Set<Id> setAccountIds){
+    /*public static Set<Id> getResourceIdsFromAccounts(Set<Id> setAccountIds){
         Set<Id> setGlobalSearchResourceIds = new Set<Id>();
         List<Resource__c> lstResource = new List<Resource__c>();
         String sFieldsToQueryOnResource = RE_DataBaseQueryFields.sQueryFieldsOnResource;
@@ -1450,7 +1450,7 @@ public without sharing class RE_SharingByPassCtrl {
             } 
         }
         return setGlobalSearchResourceIds;
-    }
+    }*/
     
     /**************************************************************************************
     * @author       Sai Velpula
@@ -1459,7 +1459,7 @@ public without sharing class RE_SharingByPassCtrl {
     * @description  This methods is used to get Count of referrals made by the Current Org to Diff Org's
     * @return       List<AggregateResult> 
     ******************************************************************************************/
-    public static List<AggregateResult> mostReferralsReferredToOrg(){
+    /*public static List<AggregateResult> mostReferralsReferredToOrg(){
         String loggedInAccountId = GeneralUtility.getLoggedInAccountId();
         List<AggregateResult> mostReferralsReferred = new List<AggregateResult>();
         if (Schema.sObjectType.Referral__c.fields.ReferredAccountID__c.isAccessible() && Schema.sObjectType.Referral__c.fields.Name.isAccessible()
@@ -1467,7 +1467,7 @@ public without sharing class RE_SharingByPassCtrl {
         mostReferralsReferred= [SELECT ReferredAccountID__r.Name,COUNT(Name) FROM Referral__c where ReferredByAccountID__c=:loggedInAccountId and (DateOfReferral__c=LAst_N_Months:6 or DateOfReferral__c =THIS_Month) Group By ReferredAccountID__r.Name Order By Count(Name) Desc Limit 5];
         }
         return mostReferralsReferred;
-    }
+    }*/
     
     /* offset method for Search Query */
     /*public static Set<Id> getSearchResults(String sKeyword, Map<String, Integer> mapPagePrams){
@@ -1595,7 +1595,7 @@ public without sharing class RE_SharingByPassCtrl {
     * @param        set of ids  
     * @return       Map<Resource__c>  
     **********************************************************************************************/  
-    public static List<Resource__c> fetchResourceDataSearch(Set<String> setResourcesIds){
+    /*public static List<Resource__c> fetchResourceDataSearch(Set<String> setResourcesIds){
         Map<Boolean, String> mapResponseData = new Map<Boolean, String>();
         Map<String, String> mapQueryParameters = new Map<String, String>();
         String sResourceQuery;
@@ -1653,7 +1653,7 @@ public without sharing class RE_SharingByPassCtrl {
         lstResources = Database.query(sResourceQuery); 
         return lstResources;
     }
-
+*/
     /**************************************************************************************
     * @author       Payal Dubela
     * @date         10/15/2019
@@ -1662,9 +1662,9 @@ public without sharing class RE_SharingByPassCtrl {
     * @param        (String sQuery,Map<String,>)
     * @return       List<ContentDocumentLink> 
     ******************************************************************************************/
-    public static List<ContentDocumentLink> getContentDocumentLinks(String sQuery, Set<Id> setReferralIds){
+    /*public static List<ContentDocumentLink> getContentDocumentLinks(String sQuery, Set<Id> setReferralIds){
         return Database.query(sQuery);
-    }
+    }*/
     /**************************************************************************************
     * @author       Payal Dubela
     * @date         10/15/2019
@@ -1673,9 +1673,9 @@ public without sharing class RE_SharingByPassCtrl {
     * @param        (String sQuery,Set<Id>)
     * @return       List<Contentversion> 
     ******************************************************************************************/
-    public static List<ContentVersion> getContentVersions(String sQuery, Set<Id> setVersionIds){
+    /*public static List<ContentVersion> getContentVersions(String sQuery, Set<Id> setVersionIds){
         return Database.query(sQuery);
-    }
+    }*/
 	/**************************************************************************************
     * @author       Megha Mittal
     * @date         10/23/2019
@@ -1782,10 +1782,10 @@ public without sharing class RE_SharingByPassCtrl {
     * @description  This methods is used to get contact mapping recordas
     * @return       List<Referral__c>
     /***********************************************************************************************************/
-    public static List<Contact_Mapping__c> getContactMappings(Map<String, String> mapInputs,List<Contact> conList){
+    /*public static List<Contact_Mapping__c> getContactMappings(Map<String, String> mapInputs,List<Contact> conList){
         String sQuery =  mapInputs.get('sQuery');
         return Database.query(sQuery);
-    }
+    }*/
 	/**************************************************************************************
     * @author       Megha Mittal
     * @date         11/04/2019
@@ -1794,7 +1794,7 @@ public without sharing class RE_SharingByPassCtrl {
     * @param        (String)
     * @return       Contact 
     ******************************************************************************************/
-    public static map<Id,Contact> getContact(List<Id> contactIds){
+    /*public static map<Id,Contact> getContact(List<Id> contactIds){
         String sFieldsToQueryOnContact = RE_DataBaseQueryFields.sFieldsToQueryOnContactRecord ;
         String sWhereClauseOnContact= RE_DataBaseQueryFields.sWhereClauseOnContactRecord;
         Map<String,String> mapContactQueryParameters = new Map<String,String>();
@@ -1802,7 +1802,7 @@ public without sharing class RE_SharingByPassCtrl {
         String responseQuery = RE_DataAccessChecker.getQueryStringforSetupObjects('Contact', sFieldsToQueryOnContact , mapContactQueryParameters );                     
         map<Id,Contact> contactRecordMap = new map<Id,Contact>((List<Contact>)Database.query(responseQuery));        
         return contactRecordMap;
-    }  
+    } */
     /**************************************************************************************
     * @author       Pankaj Mohanta
     * @date         11/13/2019
@@ -1811,9 +1811,9 @@ public without sharing class RE_SharingByPassCtrl {
     * @param        (String)
     * @return       Contact 
     ******************************************************************************************/  
-    public static List<LocationResource__c> getResourceIdsFromResourceLocation(Set<Id> setResLocationIds, String sQuery){
+    /*public static List<LocationResource__c> getResourceIdsFromResourceLocation(Set<Id> setResLocationIds, String sQuery){
         return Database.query(sQuery);
-    }
+    }*/
     /**************************************************************************************
     * @author       Megha Mittal
     * @date         11/25/2019
@@ -1822,12 +1822,12 @@ public without sharing class RE_SharingByPassCtrl {
     * @param        (String)
     * @return       List<DocumentDetail> 
     ******************************************************************************************/  
-    public static List<DocumentDetail__c> getDocumentDetails(String sParentId, String sQuery){
+    /*public static List<DocumentDetail__c> getDocumentDetails(String sParentId, String sQuery){
         return Database.query(sQuery);
     }
     public static List<DocumentDetail__c> getDocumentDetails(String sParentId, String sQuery, String sDocumentRecordType){
         return Database.query(sQuery);
-    }
+    }*/
     /**************************************************************************************
     * @author       Megha Mittal
     * @date         11/25/2019
@@ -1836,9 +1836,9 @@ public without sharing class RE_SharingByPassCtrl {
     * @param        (String)
     * @return       List<ContentDocument> 
     ******************************************************************************************/  
-    public static List<ContentDocument> getContentDocument(set<string> lstConDocIds, String sQuery){
+    /*public static List<ContentDocument> getContentDocument(set<string> lstConDocIds, String sQuery){
         return Database.query(sQuery);
-    }
+    }*/
 	/**************************************************************************************		
     * @author       Megha Mittal		
     * @date         11/21/2019		
@@ -1846,10 +1846,10 @@ public without sharing class RE_SharingByPassCtrl {
     * @description  This methods is used to fetch LoggedinUserAccount    		
     * @return       User 		
     ******************************************************************************************/  		
-    public static user getLoggedinUserAccount(){        		
+    /*public static user getLoggedinUserAccount(){        		
         String sUserId=userinfo.getuserId();                		
         return database.query(RE_DataBaseQueryFields.sQueryforUser);		
-    }
+    }*/
     public static List<SurveyInvitation> fetchSurveyInvites(Id recordId){    
         String sFieldsonSurveyInvite = RE_DataBaseQueryFields.sFieldsonSurveyInvite ;
         String sWhereClauseonSurveyInvite= RE_DataBaseQueryFields.sWhereClauseonSurveyInvite;
@@ -1872,9 +1872,9 @@ public without sharing class RE_SharingByPassCtrl {
     * @param        (Set<String)
     * @return       List<RE_Resource_Taxonomy__c> 
     ******************************************************************************************/   
-    public static List<RE_Resource_Taxonomy__c> getResourceTaxonomies(Set<String> setTaxonomyIds, String sQuery, String sAccountStatus){
+    /*public static List<RE_Resource_Taxonomy__c> getResourceTaxonomies(Set<String> setTaxonomyIds, String sQuery, String sAccountStatus){
         return Database.query(sQuery);
-    } 
+    } */
 	/*********************************************************************************************************
     * @author       Megha Mittal
     * @date         12/10/2019
@@ -1882,7 +1882,7 @@ public without sharing class RE_SharingByPassCtrl {
     * @description  This methods is used to fetch referral details after pagination is implemented
     * @return       List<Referral__c>
     /***********************************************************************************************************/
-    public static List<Referral__c> getReferralDetails(Id contactId,String sPageType, Integer iPageSize,Integer pageNumber){
+    /*public static List<Referral__c> getReferralDetails(Id contactId,String sPageType, Integer iPageSize,Integer pageNumber){
         String sNewStatus = RE_GlobalConstants.STATUS_NEW;
         Id referralRecordTypeId = GeneralUtility.getRecrodTypeIdBySobjectAndDevName('Referral__c', 'ReferralRecord');
         String sWhereClauseOnReferral;
@@ -1917,7 +1917,7 @@ public without sharing class RE_SharingByPassCtrl {
             }
         }
         return lstReferral;
-    }
+    }*/
     /********************************************************************************************
     * @author       Payal Dubela(Bug:342978)
     * @date         01/10/2020
@@ -1925,7 +1925,7 @@ public without sharing class RE_SharingByPassCtrl {
     * @description  This methods is used to get the locaion resources
     * @return      Double
     **********************************************************************************************/
-    public static List<AggregateResult> getLocationResourcesCount(Map<String, Object> mapInputs){
+    /*public static List<AggregateResult> getLocationResourcesCount(Map<String, Object> mapInputs){
         Set<Id> setLocationResourceIds = (Set<Id>)mapInputs.get('setLocationResourceIds');
         Set<Id> setGlobalLocaResourceIds = (Set<Id>)mapInputs.get('setGlobalLocaResourceIds');
         Double dblLat = Double.valueOf(mapInputs.get('dblLat'));
@@ -1933,7 +1933,7 @@ public without sharing class RE_SharingByPassCtrl {
         String sQuery = (String)mapInputs.get('sQuery');
         Integer iRadiusMiles = Integer.valueOf(System.Label.searchmilesradius); 
         return Database.query(sQuery);
-    }
+    }*/
     
     
    /*********************************************************************************************************
@@ -1943,7 +1943,7 @@ public without sharing class RE_SharingByPassCtrl {
     * @description  This methods is used to get Group records
     * @return       List<Group>
     /***********************************************************************************************************/
-    public static List<Group> getGroup(){
+    /*public static List<Group> getGroup(){
         try{
             String claimSiteQueue = RE_GlobalConstants.CLAIM_SITE_QUEUE;
             Map<String, String> mapGroupQueryParameters = new Map<String, String>();
@@ -1956,7 +1956,7 @@ public without sharing class RE_SharingByPassCtrl {
             LOG_LogMessageUtility.logMessage(LOG_LogMessageUtility.LOG_LogLevel.Error,'RE_SharingByPassCtrl','getGroupId',e.getMessage()+' '+e.getStackTraceString(), true);
             throw e;
         }
-    }
+    }*/
     /*********************************************************************************************************
     * @author       Arun Garg
     * @date         01/17/2020
@@ -1964,7 +1964,7 @@ public without sharing class RE_SharingByPassCtrl {
     * @description  This method is used to get all te referral sent by organization.
     * @return       List<AggregateResult>
     /***********************************************************************************************************/
-    public static List<AggregateResult> getTotalReferralSent(String loggedInAccountId){
+    /*public static List<AggregateResult> getTotalReferralSent(String loggedInAccountId){
         List<AggregateResult> totalReferralSent;
         //RE_Release 1.4 – IronDome Fixes- Payal Dubela
         if (Schema.sObjectType.Referral__c.fields.ReferredAccountID__c.isAccessible() && Schema.sObjectType.Referral__c.fields.Name.isAccessible()
@@ -1990,7 +1990,7 @@ public without sharing class RE_SharingByPassCtrl {
         mostReferredByOrg = [SELECT ReferredByAccountID__r.Name,COUNT(Name) FROM Referral__c where ReferredByAccountID__c=:loggedInAccountId and ReferredByAccountID__r.Name!=null and (DateOfReferral__c=LAst_N_Months:4 or DateOfReferral__c =THIS_Month) Group By ReferredByAccountID__r.Name Order By Count(Name) Desc Limit 5];
         }
     	return mostReferredByOrg;
-    }
+    }*/
 
     /**************************************************************************************
     * @author       Payal Dubela
@@ -2000,12 +2000,12 @@ public without sharing class RE_SharingByPassCtrl {
     * @param        (String sQuery,Set<Id>)
     * @return       List<Contentversion> 
     ******************************************************************************************/
-    public static List<Contact> getClients(String sQuery,Date userInputDate,String sRecordType,Map<String, String> mapInputs){
+    /*public static List<Contact> getClients(String sQuery,Date userInputDate,String sRecordType,Map<String, String> mapInputs){
         //RE Security Changes -- Payal Dubela
         String sNonCitizenRecordType=mapInputs.get('sNonCitizenRecordType');
         String citizenRole=RE_GlobalConstants.sPercentage+RE_GlobalConstants.strCitizenAppRole+RE_GlobalConstants.sPercentage;
         return Database.query(sQuery);
-    }  
+    }*/
     /**************************************************************************************
     * @author       Payal Dubela
     * @date         10/15/2019
@@ -2014,9 +2014,9 @@ public without sharing class RE_SharingByPassCtrl {
     * @param        (String sQuery,Set<Id>)
     * @return       List<LocationResource__c> 
     ******************************************************************************************/
-    public static List<LocationResource__c> checkLocationRes(String sQuery,String locationrecId,String resourceId){
+    /*public static List<LocationResource__c> checkLocationRes(String sQuery,String locationrecId,String resourceId){
         return Database.query(sQuery);
-    }
+    }*/
 
 
 /**************************************************************************************
@@ -2027,9 +2027,9 @@ public without sharing class RE_SharingByPassCtrl {
     * @param        (String)
     * @return       Contact 
     ******************************************************************************************/  
-    public static List<SDOH__c> fetchRiskFactors(String clientId, String sQuery){
+    /*public static List<SDOH__c> fetchRiskFactors(String clientId, String sQuery){
         return Database.query(sQuery);
-    }    
+    } */   
      /*********************************************************************************************************
     * @author       Prashant Singh
     * @date         06/14/2019
@@ -2037,7 +2037,7 @@ public without sharing class RE_SharingByPassCtrl {
     * @description  This methods is used to fetch referral details
     * @return       List<Referral__c>
     /***********************************************************************************************************/
-    public static List<Referral__c> getReferralcountforPlan(Id contactId){
+    /*public static List<Referral__c> getReferralcountforPlan(Id contactId){
         String sNewStatus = RE_GlobalConstants.STATUS_NEW;
         Id referralRecordTypeId = GeneralUtility.getRecrodTypeIdBySobjectAndDevName('Referral__c', 'ReferralRecord');
         String sFieldsToQueryOnReferral = RE_DataBaseQueryFields.sFieldsToQueryreferralcount;
@@ -2065,7 +2065,7 @@ public without sharing class RE_SharingByPassCtrl {
             }
         }
         return lstReferral;
-    }
+    }*/
    /*********************************************************************************************************
     * @author       Nandita Bapaye
     * @date         04/15/2020
@@ -2105,10 +2105,10 @@ public without sharing class RE_SharingByPassCtrl {
         
         return userList;
     }
-     public static List<SDOH__c> getClientSDOH(String clientId, String sQuery,Set<String> setSDOHCats){
+     /*public static List<SDOH__c> getClientSDOH(String clientId, String sQuery,Set<String> setSDOHCats){
         //
         return Database.query(sQuery);
-    } 
+    } */
 /**************************************************************************************
 * @author       Anuj
 * @date         04/22/2020 #361790
@@ -2117,9 +2117,9 @@ public without sharing class RE_SharingByPassCtrl {
 * @param        (String sQuery, String orgId)
 * @return       List<Account> 
 ******************************************************************************************/
-    public static List<Account> getAccountRecords(String sQuery, String orgId){
+   /* public static List<Account> getAccountRecords(String sQuery, String orgId){
         return Database.query(sQuery);
-    }
+    }*/
     
     /********************************************************************************************
 * @author       Anuj
@@ -2128,13 +2128,13 @@ public without sharing class RE_SharingByPassCtrl {
 * @description  This methods is used to get the referral count on Organization
 * @return       
 **********************************************************************************************/
-    public static List<AggregateResult> getReferralCountUnclaimedOrg(Set<Id> setOrgId){
+    /*public static List<AggregateResult> getReferralCountUnclaimedOrg(Set<Id> setOrgId){
         List<AggregateResult> results = new List<AggregateResult>();
         if (Schema.sObjectType.Referral__c.fields.ReferredAccountID__c.isAccessible()){
             results = [SELECT COUNT(Id) cnt, ReferredAccountID__c rid FROM Referral__c WHERE ReferredAccountID__c IN:setOrgId GROUP BY ReferredAccountID__c];
         }
         return results;
-    } 
+    } */
     
     /**************************************************************************************
 * @author       Anuj
@@ -2144,9 +2144,9 @@ public without sharing class RE_SharingByPassCtrl {
 * @param        (String sQuery, String orgId)
 * @return       List<Account> 
 ******************************************************************************************/
-    public static List<Account> getAccountList(String sQuery, Set<Id> orgIds){
+    /*public static List<Account> getAccountList(String sQuery, Set<Id> orgIds){
         return Database.query(sQuery);
-    }
+    }*/
     
     /**************************************************************************************
 * @author       Anuj
@@ -2156,13 +2156,13 @@ public without sharing class RE_SharingByPassCtrl {
 * @param        (String sQuery, String orgId)
 * @return       List<Account> 
 ******************************************************************************************/
-    public static List<Resource__c> getResourceListUnclaimedOrg(Set<Id> orgIds){
+    /*public static List<Resource__c> getResourceListUnclaimedOrg(Set<Id> orgIds){
         List<Resource__c> resources = new List<Resource__c>();
         if (Schema.sObjectType.Resource__c.fields.Organization__c.isAccessible()){
             resources = [Select Id,Organization__c FROM Resource__c WHERE Organization__c IN:orgIds ];
         }
         return resources;
-    }
+    }*/
     
     /**************************************************************************************
 * @author       Anuj
@@ -2172,9 +2172,9 @@ public without sharing class RE_SharingByPassCtrl {
 * @param        (String sQuery, String orgId)
 * @return       List<Account> 
 ******************************************************************************************/
-    public static List<Location__c> getLocationList(String sQuery, Set<Id> orgIds){
+    /*public static List<Location__c> getLocationList(String sQuery, Set<Id> orgIds){
         return Database.query(sQuery);
-    }
+    }*/
 /**************************************************************************************
 * @author       Srikanth
 * @date         04/24/2020 
@@ -2184,7 +2184,7 @@ public without sharing class RE_SharingByPassCtrl {
 * @return       LocationResource__c
 ******************************************************************************************/    
    
-    public static LocationResource__c createReferralForSuggestedThanks( Map<String, Object> mapRsrce, String strValueHandler){
+    /*public static LocationResource__c createReferralForSuggestedThanks( Map<String, Object> mapRsrce, String strValueHandler){
          
         Id loggedinUserId = UserInfo.getUserId();
         contact con;
@@ -2246,7 +2246,7 @@ public without sharing class RE_SharingByPassCtrl {
         }
        
         return locres;
-    }
+    }*/
     
 /**************************************************************************************
 * @author       Srikanth
@@ -2256,7 +2256,7 @@ public without sharing class RE_SharingByPassCtrl {
 * @param        (List<ReferralRecommendation__c> lstRefRec)
 * @return       void
 ******************************************************************************************/    
-    public static void deleteRecommendations(List<ReferralRecommendation__c> lstRefRec){
+    /*public static void deleteRecommendations(List<ReferralRecommendation__c> lstRefRec){
         if(Schema.sObjectType.ReferralRecommendation__c.isDeletable()){
             try{
                delete lstRefRec;
@@ -2265,7 +2265,7 @@ public without sharing class RE_SharingByPassCtrl {
                 LOG_LogMessageUtility.logMessage(LOG_LogMessageUtility.LOG_LogLevel.Error, 'RE_SharingByPassCtrl', 'deleteRecommendations', e.getMessage(), true);
             }
         }
-    }
+    }*/
 
 /**************************************************************************************
 * @author       Srikanth
@@ -2275,7 +2275,7 @@ public without sharing class RE_SharingByPassCtrl {
 * @param        (set<Id> setIds)
 * @return       List<LocationResource__c>
 ******************************************************************************************/        
-    public static List<LocationResource__c> getResourcesRecommendations(set<Id> setIds){
+    /*public static List<LocationResource__c> getResourcesRecommendations(set<Id> setIds){
         List<LocationResource__c> lstLocRes = new List<LocationResource__c>();
         if (Schema.sObjectType.LocationResource__c.fields.Resource__c.isAccessible() && Schema.sObjectType.LocationResource__c.fields.Location__c.isAccessible()  ){
             lstLocRes = [Select Id,Resource__c,Location__c FROM LocationResource__c 
@@ -2283,7 +2283,7 @@ public without sharing class RE_SharingByPassCtrl {
         }
         return lstLocRes;
     
-    }   
+    }*/   
 /**************************************************************************************
 * @author       Srikanth
 * @date         04/24/2020 
@@ -2292,7 +2292,7 @@ public without sharing class RE_SharingByPassCtrl {
 * @param        (String strContactId)
 * @return       set<String>
 ******************************************************************************************/            
-    public static set<String> getLocationResourceRecmds(String strContactId){
+    /*public static set<String> getLocationResourceRecmds(String strContactId){
         
         set<Id> setResourceIdsRequest = new set<Id>();
         set<string> setStrLocResRequest = new set<string>();
@@ -2311,7 +2311,7 @@ public without sharing class RE_SharingByPassCtrl {
         
         return setStrLocResRequest;
     }
-    
+    */
 /**************************************************************************************
 * @author       Srikanth
 * @date         04/24/2020 
@@ -2321,7 +2321,7 @@ public without sharing class RE_SharingByPassCtrl {
 * @return       integer
 ******************************************************************************************/         
     
-    public static integer getCountValue(string strContactId){ 
+    /*public static integer getCountValue(string strContactId){ 
         
         String contactId;  
         String sProfileName = GeneralUtility.getLoggedInUserProfile().Name;
@@ -2396,7 +2396,7 @@ public without sharing class RE_SharingByPassCtrl {
       }else{
           return new List<ReferralRecommendation__c>();
       }
-    }
+    }*/
 
     /**************************************************************************************
     * @author       Payal Dubela
@@ -2406,9 +2406,9 @@ public without sharing class RE_SharingByPassCtrl {
     * @param        (String)
     * @return       Contact 
     ******************************************************************************************/  
-    public static List<LocationResource__c> getLocationResourceRecords(Set<String> locationResourceIds, String sQuery,String sActiveStatus,String sActiveAllowReferral){
+    /*public static List<LocationResource__c> getLocationResourceRecords(Set<String> locationResourceIds, String sQuery,String sActiveStatus,String sActiveAllowReferral){
         return Database.query(sQuery);
-    }
+    }*/
     /**************************************************************************************
     * @author       Payal Dubela
     * @date         04/23/2020 #361790
@@ -2417,7 +2417,7 @@ public without sharing class RE_SharingByPassCtrl {
     * @param        (String sQuery, String accId)
     * @return       List<ContentDocumentLink> 
     ******************************************************************************************/
-    public static List<Account> getOrganizationDetails(String sQuery, String orgId){
+    /*public static List<Account> getOrganizationDetails(String sQuery, String orgId){
         return Database.query(sQuery);
     }
 
@@ -2442,7 +2442,7 @@ public without sharing class RE_SharingByPassCtrl {
           }
         } 
         return mapEmailWithContact;
-    }
+    }*/
     /**************************************************************************************
     * @author       Payal Dubela
     * @date         08/12/2020
@@ -2451,7 +2451,7 @@ public without sharing class RE_SharingByPassCtrl {
     * @param        (String sQuery, String accId)
     * @return       List<ContentDocumentLink> 
     ******************************************************************************************/
-    public static List<Object> getContactRecords(String sQuery, Map<String,String> mapInputs){
+    /*public static List<Object> getContactRecords(String sQuery, Map<String,String> mapInputs){
         String nonCitizenRecordTypeId=mapInputs.get('nonCitizenRecordTypeId');
         String cpAdminRole=mapInputs.get('cpAdminRole');
         String cpStaffRole=mapInputs.get('cpStaffRole');
@@ -2460,7 +2460,7 @@ public without sharing class RE_SharingByPassCtrl {
         String recordId=mapInputs.get('recordId');
         String sAccountId=mapInputs.get('sAccountId');
         return Database.query(sQuery);
-    }
+    }*/
     /**************************************************************************************
     * @author       Payal Dubela
     * @date         08/12/2020
@@ -2469,11 +2469,11 @@ public without sharing class RE_SharingByPassCtrl {
     * @param        (String sQuery, String accId)
     * @return       List<ContentDocumentLink> 
     ******************************************************************************************/
-    public static Contact getContactWrapper(String sQuery, Map<String,String> mapInputs){
+    /*public static Contact getContactWrapper(String sQuery, Map<String,String> mapInputs){
         String contactRecordTypeId=mapInputs.get('contactRecordTypeId');
         String sContactId=mapInputs.get('sContactId');
         return Database.query(sQuery);
-    }
+    }*/
     /**************************************************************************************
     * @author       Venkat Korra
     * @date         08/12/2020
@@ -2482,7 +2482,7 @@ public without sharing class RE_SharingByPassCtrl {
     * @param        (Schema.SobjectType objectType, List<Sobject> lstObjects)
     * @return       List<Contact> 
     ******************************************************************************************/
-    public static Database.SaveResult[] updateObjects(Schema.SobjectType objectType, List<Sobject> lstObjects) 
+    /*public static Database.SaveResult[] updateObjects(Schema.SobjectType objectType, List<Sobject> lstObjects) 
     {
         Database.SaveResult[] lstSaveResults;
         try{
@@ -2491,7 +2491,7 @@ public without sharing class RE_SharingByPassCtrl {
             LOG_LogMessageUtility.logMessage(LOG_LogMessageUtility.LOG_LogLevel.Error, 'RE_SharingByPassCtrl', 'updateObjects', e.getMessage(), true);
         }
         return lstSaveResults;
-    }
+    }*/
     /*****************************************************************************************************
     * @author        Venkat Korra
     * @date          08/07/2020
@@ -2500,7 +2500,7 @@ public without sharing class RE_SharingByPassCtrl {
     * @return        AccountContactRelation
     * @param		 contactId, selectedRole
     *******************************************************************************************************/
-    public static AccountContactRelation getACRRecord(String contactId, String selectedRole,Boolean bActive){
+    /*public static AccountContactRelation getACRRecord(String contactId, String selectedRole,Boolean bActive){
         String sAccountRecordTypeId = Schema.SObjectType.Account.getRecordTypeInfosByName().get(RE_GlobalConstants.strReAccRecordTypeName).getRecordTypeId();
         AccountContactRelation acrRecord;
         List<AccountContactRelation> lstACR = new List<AccountContactRelation>();
@@ -2529,7 +2529,7 @@ public without sharing class RE_SharingByPassCtrl {
             LOG_LogMessageUtility.logMessage(e, 'GeneralUtility', 'getLoggedInAccountId', '****No Account Found for Logged in User****' , true);
         }
         return acrRecord;
-    }
+    }*/
     /**************************************************************************************
     * @author       Venkat Korra
     * @date         08/12/2020
@@ -2538,7 +2538,7 @@ public without sharing class RE_SharingByPassCtrl {
     * @param        (Set<Id> setOfacrIds)
     * @return       void 
     ******************************************************************************************/
-    @future
+    /*@future
     public static void deleteACRRecord(Set<Id> setOfacrIds) 
     {
         try{
@@ -2590,7 +2590,7 @@ public without sharing class RE_SharingByPassCtrl {
             acrMap.put(acr.ContactId,acr);
         }
         return acrMap;
-    }
+    }*/
      /**************************************************************************************
     * @author       Venkat Korra
     * @date         08/12/2020
@@ -2599,7 +2599,7 @@ public without sharing class RE_SharingByPassCtrl {
     * @param        (Schema.SobjectType objectType, List<Sobject> lstObjects)
     * @return       List<Contact> 
     ******************************************************************************************/
-    public static Database.SaveResult[] insertObjects(Schema.SobjectType objectType, List<Sobject> lstObjects) 
+    /*public static Database.SaveResult[] insertObjects(Schema.SobjectType objectType, List<Sobject> lstObjects) 
     {
         Database.SaveResult[] lstSaveResults;
         try{
@@ -2609,19 +2609,19 @@ public without sharing class RE_SharingByPassCtrl {
         }
         return lstSaveResults;
     }
-
+*/
      /**************************************************************************************
     * @author       Payal Dubela
     * @date         09/09/2020
     * @methodname   getDuplicateUser()
     * @description  This methods is used to get Contact record
     ******************************************************************************************/
-    public static List<AggregateResult> getDuplicateUser(String sQuery, Map<String,String> mapInputs,List<String> lstEmails){
+    /*public static List<AggregateResult> getDuplicateUser(String sQuery, Map<String,String> mapInputs,List<String> lstEmails){
         String nonCitizenRectypeId=mapInputs.get('nonCitizenRectypeId');
         String cpAdminRole=mapInputs.get('cpAdminRole');
         String cpStaffRole=mapInputs.get('cpStaffRole');
         return Database.query(sQuery);
-    }
+    }*/
 
      /*****************************************************************************************************
     * @author        Payal Dubela
@@ -2631,7 +2631,7 @@ public without sharing class RE_SharingByPassCtrl {
     * @return        AccountContactRelation
     * @param         contactId, selectedRole
     *******************************************************************************************************/
-    public static AccountContactRelation getInactiveACRRecord(String contactId, String selectedRole){
+    /*public static AccountContactRelation getInactiveACRRecord(String contactId, String selectedRole){
         String sAccountRecordTypeId = Schema.SObjectType.Account.getRecordTypeInfosByName().get(RE_GlobalConstants.strReAccRecordTypeName).getRecordTypeId();
         AccountContactRelation acrRecord;
         String cpAdminRole=RE_GlobalConstants.COMMUNITY_PARTNER_ADMIN;
@@ -2673,7 +2673,7 @@ public without sharing class RE_SharingByPassCtrl {
     //Moved to sharingbypass because consent does not have sharing in same thread were it is created
     public static List<Consent__c> getConsentsToRemove(String sQuery,List<String> lstConsentLevel,List<String> lstConsentStatus,String userContactId){
         return Database.query(sQuery);
-    }
+    }*/
     /**************************************************************************************
     * @author       Payal Dubela
     * @date         09/29/2020
@@ -2681,7 +2681,7 @@ public without sharing class RE_SharingByPassCtrl {
     * @description  This methods is used to delete record
     * @param        (Schema.SobjectType objectType, List<Sobject> lstObjects)
     ******************************************************************************************/
-    public static Database.DeleteResult[] deleteObjects(Schema.SobjectType objectType, List<Sobject> lstObjects) 
+    /*public static Database.DeleteResult[] deleteObjects(Schema.SobjectType objectType, List<Sobject> lstObjects) 
     {
         Database.DeleteResult[] lstdeleteResults;
         try{
@@ -2690,5 +2690,5 @@ public without sharing class RE_SharingByPassCtrl {
             LOG_LogMessageUtility.logMessage(LOG_LogMessageUtility.LOG_LogLevel.Error, 'RE_SharingByPassCtrl', 'deleteObjects', e.getMessage() + ' ' +e.getStackTraceString(), true);
         }
         return lstdeleteResults;
-    }
+    }*/
 }
