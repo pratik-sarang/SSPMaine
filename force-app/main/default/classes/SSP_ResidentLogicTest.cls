@@ -12,9 +12,11 @@ public class SSP_ResidentLogicTest {
     public static void createUserinSFWithIEESIds(){
         
         Test.setMock(WebServiceMock.class, new kyHbeMciDatacontractsMock());
-        RecordType objRecordType = GeneralUtility.fetchRecordType('Citizen', 'Contact');
+        //RecordType objRecordType = GeneralUtility.fetchRecordType('Citizen', 'Contact');
+        Id contactRecordTypeId = SSP_Utility.getRecrodTypeIdBySobjectAndDevName('Contact','Citizen');
+
         
-        Contact con = new Contact(RecordTypeId = objRecordType.Id, FirstName = 'FirstName', LastName = 'LastName',Email = 'test@email.com' );
+        Contact con = new Contact(RecordTypeId = contactRecordTypeId, FirstName = 'FirstName', LastName = 'LastName',Email = 'test@email.com' );
         insert con;
         
         User usr = new User(FirstName = 'FirstName',LastName = 'LastName',Email = 'test@test.com',LanguageLocaleKey = 'en_US',LocaleSidKey = 'en_US',Username = con.Email+'.idetest',ContactId=con.Id);
@@ -50,9 +52,10 @@ public class SSP_ResidentLogicTest {
     public static void createUserinSFWithIEESIds1(){
         
         Test.setMock(WebServiceMock.class, new kyHbeMciDatacontractsMock());
-        RecordType objRecordType = GeneralUtility.fetchRecordType('Citizen', 'Contact');
-        
-        Contact con = new Contact(RecordTypeId = objRecordType.Id, FirstName = 'FirstName', LastName = 'LastName',Email = 'test@email.com' );
+        //RecordType objRecordType = GeneralUtility.fetchRecordType('Citizen', 'Contact');
+        Id contactRecordTypeId = SSP_Utility.getRecrodTypeIdBySobjectAndDevName('Contact','Citizen');
+
+        Contact con = new Contact(RecordTypeId = contactRecordTypeId, FirstName = 'FirstName', LastName = 'LastName',Email = 'test@email.com' );
         
         User usr = new User(FirstName = 'FirstName',LastName = 'LastName',Email = 'test@test.com',LanguageLocaleKey = 'en_US',LocaleSidKey = 'en_US',Username = con.Email+'.idetest',ContactId=con.Id);
         WebServiceSettings__c mciConfig = new WebServiceSettings__c(Name= 'MCI Entity Search',Certificate_Name__c = 'cert',Target_URL__c='https://www.abc.com',Time_Out__c=90000, Source_System__c= 'abc');
@@ -87,12 +90,13 @@ public class SSP_ResidentLogicTest {
     public static void createUserinSFWithIEESIdsCoverException(){
         
         Test.setMock(WebServiceMock.class, new kyHbeMciDatacontractsMock());
-        RecordType objRecordType = GeneralUtility.fetchRecordType('Citizen', 'Contact');
-        
-        Contact con = new Contact(RecordTypeId = objRecordType.Id, FirstName = 'FirstName', LastName = 'LastName',Email = 'test@email.com' );
+        //RecordType objRecordType = GeneralUtility.fetchRecordType('Citizen', 'Contact');
+        Id contactRecordTypeId = SSP_Utility.getRecrodTypeIdBySobjectAndDevName('Contact','Citizen');
+
+        Contact con = new Contact(RecordTypeId = contactRecordTypeId, FirstName = 'FirstName', LastName = 'LastName',Email = 'test@email.com' );
         insert con;
         
-        Contact con1 = new Contact(RecordTypeId = objRecordType.Id, FirstName = 'FirstName12', LastName = 'LastName12',Email = 'test12@email.com' );
+        Contact con1 = new Contact(RecordTypeId = contactRecordTypeId, FirstName = 'FirstName12', LastName = 'LastName12',Email = 'test12@email.com' );
         insert con1;
         
         List <Profile> prof = [Select Id from Profile where Name = 'RE Citizen Profile'];
@@ -135,12 +139,13 @@ public class SSP_ResidentLogicTest {
     public static void createUserinSFWithoutIEESIds(){
         
         Test.setMock(WebServiceMock.class, new kyHbeMciDatacontractsMock());
-        RecordType objRecordType = GeneralUtility.fetchRecordType('Citizen', 'Contact');
-        
-        Contact con = new Contact(RecordTypeId = objRecordType.Id,FirstName = 'FirstName',LastName = 'LastName',Email = 'test@email.com');
+        //RecordType objRecordType = GeneralUtility.fetchRecordType('Citizen', 'Contact');
+        Id contactRecordTypeId = SSP_Utility.getRecrodTypeIdBySobjectAndDevName('Contact','Citizen');
+
+        Contact con = new Contact(RecordTypeId = contactRecordTypeId,FirstName = 'FirstName',LastName = 'LastName',Email = 'test@email.com');
         insert con;
         
-        Contact con1 = new Contact(RecordTypeId = objRecordType.Id,FirstName = 'James',LastName = 'Cameron',Email = 'james@test.com');
+        Contact con1 = new Contact(RecordTypeId = contactRecordTypeId,FirstName = 'James',LastName = 'Cameron',Email = 'james@test.com');
         insert con1;
         
         User usr = new User(FirstName = 'FirstName',LastName = 'LastName',Email = 'test@test.com',LanguageLocaleKey = 'en_US',LocaleSidKey = 'en_US',Username = con.Email+'.idetest');
@@ -176,9 +181,11 @@ public class SSP_ResidentLogicTest {
     public static void createUserinSFWithIEESIdsNoContactMap(){
         
         Test.setMock(WebServiceMock.class, new kyHbeMciDatacontractsMock());
-        RecordType objRecordType = GeneralUtility.fetchRecordType('Citizen', 'Contact');
-        
-        Contact con = new Contact(RecordTypeId = objRecordType.Id,FirstName = 'FirstName',LastName = 'LastName',Email = 'test@email.com');
+        //RecordType objRecordType = GeneralUtility.fetchRecordType('Citizen', 'Contact');
+        Id contactRecordTypeId = SSP_Utility.getRecrodTypeIdBySobjectAndDevName('Contact','Citizen');
+
+
+        Contact con = new Contact(RecordTypeId = contactRecordTypeId,FirstName = 'FirstName',LastName = 'LastName',Email = 'test@email.com');
         insert con;
         
         User usr = new User(FirstName = 'FirstName',LastName = 'LastName',Email = 'test@test.com',LanguageLocaleKey = 'en_US',LocaleSidKey = 'en_US',Username = con.Email+'.idetest');
@@ -211,11 +218,13 @@ public class SSP_ResidentLogicTest {
     public static void updateUser(){
         
         Test.setMock(WebServiceMock.class, new kyHbeMciDatacontractsMock());
-        RecordType objRecordType = GeneralUtility.fetchRecordType('Citizen', 'Contact');
-        
-        Contact con = new Contact(RecordTypeId = objRecordType.Id,FirstName = 'FirstName',LastName = 'LastName',Email = 'test@email.com');
+        //RecordType objRecordType = GeneralUtility.fetchRecordType('Citizen', 'Contact');
+        Id contactRecordTypeId = SSP_Utility.getRecrodTypeIdBySobjectAndDevName('Contact','Citizen');
+
+
+        Contact con = new Contact(RecordTypeId = contactRecordTypeId,FirstName = 'FirstName',LastName = 'LastName',Email = 'test@email.com');
         insert con;
-        Contact con2 = new Contact(RecordTypeId = objRecordType.Id,FirstName = 'FirstName2',LastName = 'LastName2',Email = 'test2@email.com',SSN__C = null);
+        Contact con2 = new Contact(RecordTypeId = contactRecordTypeId,FirstName = 'FirstName2',LastName = 'LastName2',Email = 'test2@email.com',SSN__C = null);
         insert con2;
         
         Map<String,String> paramMap = new Map<String,String>();
@@ -259,9 +268,10 @@ public class SSP_ResidentLogicTest {
     public static void updateUser2(){
         
         Test.setMock(WebServiceMock.class, new kyHbeMciDatacontractsMock());
-        RecordType objRecordType = GeneralUtility.fetchRecordType('Citizen', 'Contact');
-        
-        Contact con = new Contact(RecordTypeId = objRecordType.Id,FirstName = 'FirstName',LastName = 'LastName',Email = 'test@email.com');
+        //RecordType objRecordType = GeneralUtility.fetchRecordType('Citizen', 'Contact');
+        Id contactRecordTypeId = SSP_Utility.getRecrodTypeIdBySobjectAndDevName('Contact','Citizen');
+
+        Contact con = new Contact(RecordTypeId = contactRecordTypeId,FirstName = 'FirstName',LastName = 'LastName',Email = 'test@email.com');
         insert con;
         
         List <Profile> prof = [Select Id from Profile where Name = 'RE Citizen Profile'];
@@ -295,12 +305,13 @@ public class SSP_ResidentLogicTest {
     public static void updateUserWithIEESIds(){
         
         Test.setMock(WebServiceMock.class, new kyHbeMciDatacontractsMock());
-        RecordType objRecordType = GeneralUtility.fetchRecordType('Citizen', 'Contact');
-        
-        Contact con = new Contact(RecordTypeId = objRecordType.Id,FirstName = 'FirstName',LastName = 'LastName',Email = 'test@email.com');
+        //RecordType objRecordType = GeneralUtility.fetchRecordType('Citizen', 'Contact');
+        Id contactRecordTypeId = SSP_Utility.getRecrodTypeIdBySobjectAndDevName('Contact','Citizen');
+
+        Contact con = new Contact(RecordTypeId = contactRecordTypeId,FirstName = 'FirstName',LastName = 'LastName',Email = 'test@email.com');
         insert con;
         
-        Contact con1 = new Contact(RecordTypeId = objRecordType.Id,FirstName = 'testFN',LastName = 'testLN',Email = 'testFNLN@email.com');
+        Contact con1 = new Contact(RecordTypeId = contactRecordTypeId,FirstName = 'testFN',LastName = 'testLN',Email = 'testFNLN@email.com');
         insert con1;
         
         List <Profile> prof = [Select Id from Profile where Name = 'RE Citizen Profile'];
@@ -337,9 +348,10 @@ public class SSP_ResidentLogicTest {
     public static void updateUserNotinConMap(){
         
         Test.setMock(WebServiceMock.class, new kyHbeMciDatacontractsMock());
-        RecordType objRecordType = GeneralUtility.fetchRecordType('Citizen', 'Contact');
-        
-        Contact con = new Contact(RecordTypeId = objRecordType.Id,FirstName = 'FirstName',LastName = 'LastName',Email = 'test@email.com');
+        //RecordType objRecordType = GeneralUtility.fetchRecordType('Citizen', 'Contact');
+        Id contactRecordTypeId = SSP_Utility.getRecrodTypeIdBySobjectAndDevName('Contact','Citizen');
+
+        Contact con = new Contact(RecordTypeId = contactRecordTypeId,FirstName = 'FirstName',LastName = 'LastName',Email = 'test@email.com');
         insert con;
         
         List <Profile> prof = [Select Id from Profile where Name = 'RE Citizen Profile'];
@@ -370,9 +382,10 @@ public class SSP_ResidentLogicTest {
         kyHbeMciDatacontractsMock mocktest=new kyHbeMciDatacontractsMock();
         mocktest.isThrowException=true;
         Test.setMock(WebServiceMock.class, mocktest);
-        RecordType objRecordType = GeneralUtility.fetchRecordType('Citizen', 'Contact');
-        
-        Contact con = new Contact(RecordTypeId = objRecordType.Id,FirstName = 'FirstName',LastName = 'LastName',Email = 'test@email.com');
+        //RecordType objRecordType = GeneralUtility.fetchRecordType('Citizen', 'Contact');
+        Id contactRecordTypeId = SSP_Utility.getRecrodTypeIdBySobjectAndDevName('Contact','Citizen');
+
+        Contact con = new Contact(RecordTypeId = contactRecordTypeId,FirstName = 'FirstName',LastName = 'LastName',Email = 'test@email.com');
         insert con;
         
         List <Profile> prof = [Select Id from Profile where Name = 'RE Citizen Profile'];
@@ -393,9 +406,10 @@ public class SSP_ResidentLogicTest {
         kyHbeMciDatacontractsMock mockTest=new kyHbeMciDatacontractsMock();
         mockTest.isNoMatch=true;
         Test.setMock(WebServiceMock.class, mockTest);
-        RecordType objRecordType = GeneralUtility.fetchRecordType('Citizen', 'Contact');
-        
-        Contact con = new Contact(RecordTypeId = objRecordType.Id,FirstName = 'FirstName',LastName = 'LastName',Email = 'test@email.com');
+        //RecordType objRecordType = GeneralUtility.fetchRecordType('Citizen', 'Contact');
+        Id contactRecordTypeId = SSP_Utility.getRecrodTypeIdBySobjectAndDevName('Contact','Citizen');
+
+        Contact con = new Contact(RecordTypeId = contactRecordTypeId,FirstName = 'FirstName',LastName = 'LastName',Email = 'test@email.com');
         insert con;
         
         User usr = new User(FirstName = 'FirstName',LastName = 'LastName',Email = 'test@test.com',LanguageLocaleKey = 'en-US',LocaleSidKey = 'en_US',Username = con.Email+'.idetest');
@@ -423,9 +437,10 @@ public class SSP_ResidentLogicTest {
         kyHbeMciDatacontractsMock mockTest=new kyHbeMciDatacontractsMock();
         mockTest.isNoMatch=true;
         Test.setMock(WebServiceMock.class, mockTest);
-        RecordType objRecordType = GeneralUtility.fetchRecordType('Citizen', 'Contact');
-        
-        Contact con = new Contact(RecordTypeId = objRecordType.Id,FirstName = 'FirstName',LastName = 'LastName',Email = 'test@email.com');
+       // RecordType objRecordType = GeneralUtility.fetchRecordType('Citizen', 'Contact');
+       Id contactRecordTypeId = SSP_Utility.getRecrodTypeIdBySobjectAndDevName('Contact','Citizen');
+
+        Contact con = new Contact(RecordTypeId = contactRecordTypeId,FirstName = 'FirstName',LastName = 'LastName',Email = 'test@email.com');
         insert con;
         
         User usr = new User(FirstName = 'FirstName',LastName = 'LastName',Email = 'test@test.com',LanguageLocaleKey = 'es-US',LocaleSidKey = 'es_US',Username = con.Email+'.idetest');
@@ -453,11 +468,12 @@ public class SSP_ResidentLogicTest {
     public static void createUserinSFWithIEESIdsException(){
         
         Test.setMock(WebServiceMock.class, new kyHbeMciDatacontractsMock());
-        RecordType objRecordType = GeneralUtility.fetchRecordType('Citizen', 'Contact');
-        
-        Contact con = new Contact(RecordTypeId = objRecordType.Id, FirstName = 'FirstName', LastName = 'LastName',Email = 'test@email.com' );
+        //RecordType objRecordType = GeneralUtility.fetchRecordType('Citizen', 'Contact');
+        Id contactRecordTypeId = SSP_Utility.getRecrodTypeIdBySobjectAndDevName('Contact','Citizen');
+
+        Contact con = new Contact(RecordTypeId = contactRecordTypeId, FirstName = 'FirstName', LastName = 'LastName',Email = 'test@email.com' );
         insert con;
-        Contact con1 = new Contact(RecordTypeId = objRecordType.Id, FirstName = 'FirstName12', LastName = 'LastName12',Email = 'test12@email.com' );
+        Contact con1 = new Contact(RecordTypeId = contactRecordTypeId, FirstName = 'FirstName12', LastName = 'LastName12',Email = 'test12@email.com' );
         insert con1;
         List <Profile> prof = [Select Id from Profile where Name = 'RE Citizen Profile'];
         User usr = new User(FirstName = 'FirstName',LastName = 'LastName',Email = 'test@test.com',LanguageLocaleKey = 'en_US',LocaleSidKey = 'en_US',Username = con.Email+'.idetest',ContactId=con.Id,TimeZoneSidKey = 'America/New_York',EmailEncodingKey = 'UTF-8',Alias='test543',ProfileId=prof[0].Id);
@@ -487,11 +503,12 @@ public class SSP_ResidentLogicTest {
     public static void createUserinSFWithIEESIdsException1(){
         
         Test.setMock(WebServiceMock.class, new kyHbeMciDatacontractsMock());
-        RecordType objRecordType = GeneralUtility.fetchRecordType('Citizen', 'Contact');
-        
-        Contact con = new Contact(RecordTypeId = objRecordType.Id, FirstName = 'FirstName', LastName = 'LastName',Email = 'test@email.com' );
+        //RecordType objRecordType = GeneralUtility.fetchRecordType('Citizen', 'Contact');
+        Id contactRecordTypeId = SSP_Utility.getRecrodTypeIdBySobjectAndDevName('Contact','Citizen');
+
+        Contact con = new Contact(RecordTypeId = contactRecordTypeId, FirstName = 'FirstName', LastName = 'LastName',Email = 'test@email.com' );
         insert con;
-        Contact con1 = new Contact(RecordTypeId = objRecordType.Id, FirstName = 'FirstName12', LastName = 'LastName12',Email = 'test12@email.com' );
+        Contact con1 = new Contact(RecordTypeId = contactRecordTypeId, FirstName = 'FirstName12', LastName = 'LastName12',Email = 'test12@email.com' );
         insert con1;
         List <Profile> prof = [Select Id from Profile where Name = 'RE Citizen Profile'];
         User usr = new User(FirstName = 'FirstName',LastName = 'LastName',Email = 'test@test.com',LanguageLocaleKey = 'en_US',LocaleSidKey = 'en_US',Username = con1.Email+'.idetest',ContactId=con1.Id,TimeZoneSidKey = 'America/New_York',EmailEncodingKey = 'UTF-8',Alias='test543',ProfileId=prof[0].Id);
@@ -525,9 +542,10 @@ public class SSP_ResidentLogicTest {
         WebServiceSettings__c mciConfig = new WebServiceSettings__c(Name= 'MCI Entity Search',Certificate_Name__c = 'cert',Target_URL__c='https://www.abc.com',Time_Out__c=90000, Source_System__c= 'abc');
         insert mciConfig;
         
-        RecordType objRecordType = GeneralUtility.fetchRecordType('Citizen', 'Contact');
-        
-        Contact con = new Contact(RecordTypeId = objRecordType.Id, FirstName = 'FirstName', LastName = 'LastName',Email = 'test@email.com' );
+        //RecordType objRecordType = GeneralUtility.fetchRecordType('Citizen', 'Contact');
+        Id contactRecordTypeId = SSP_Utility.getRecrodTypeIdBySobjectAndDevName('Contact','Citizen');
+
+        Contact con = new Contact(RecordTypeId = contactRecordTypeId, FirstName = 'FirstName', LastName = 'LastName',Email = 'test@email.com' );
         insert con;
         
          String strApplicableRoles = 'Citizen_Individual';
@@ -543,10 +561,13 @@ public class SSP_ResidentLogicTest {
     
     @isTest
     public static void assignpermissionset(){  
-        RecordType objRecordType = GeneralUtility.fetchRecordType('Citizen', 'Contact');
-        Contact con = new Contact(FirstName = 'testforstname',LastName = 'TestLastName',PermissionsLevel__c='Admin',Status__c='Active',TrainingLevel__c='Complete',RecordTypeId = objRecordType.Id);
+        //RecordType objRecordType = GeneralUtility.fetchRecordType('Citizen', 'Contact');
+        Id contactRecordTypeId = SSP_Utility.getRecrodTypeIdBySobjectAndDevName('Contact','Citizen');
+
+
+        Contact con = new Contact(FirstName = 'testforstname',LastName = 'TestLastName',PermissionsLevel__c='Admin',Status__c='Active',TrainingLevel__c='Complete',RecordTypeId = contactRecordTypeId);
         insert con;
-        Contact con2 = new Contact(FirstName = 'testforstname',LastName = 'TestLastName',PermissionsLevel__c='Staff',Status__c='Active',TrainingLevel__c='Complete',RecordTypeId = objRecordType.Id);
+        Contact con2 = new Contact(FirstName = 'testforstname',LastName = 'TestLastName',PermissionsLevel__c='Staff',Status__c='Active',TrainingLevel__c='Complete',RecordTypeId = contactRecordTypeId);
         insert con2;
         
         user usr2 = new user();

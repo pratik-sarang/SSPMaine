@@ -14,15 +14,17 @@ public class SSP_NonCitizenUserLogicTest {
         String federationIdentifier = 'FederationIdentifier';
         String RoleName = 'Citizen'; 
         //RecordType objAccountRecordType = GeneralUtility.fetchRecordType('CitizenAccount', 'Account'); //For DEV
-        RecordType objAccountRecordType = GeneralUtility.fetchRecordType('Citizen', 'Account'); //For SIT
+        //RecordType objAccountRecordType = GeneralUtility.fetchRecordType('Citizen', 'Account'); //For SIT
+        Id accountRecordTypeId = SSP_Utility.getRecrodTypeIdBySobjectAndDevName('Account','Citizen');
         Account acc = new Account();
         acc.Name = usr.FirstName+' '+usr.LastName;
-        acc.RecordTypeId = objAccountRecordType.Id;
+        acc.RecordTypeId = accountRecordTypeId;
         insert acc;
         
-        RecordType objRecordType = GeneralUtility.fetchRecordType('Citizen', 'Contact');
+        //RecordType objRecordType = GeneralUtility.fetchRecordType('Citizen', 'Contact');
+        Id contactRecordTypeId = SSP_Utility.getRecrodTypeIdBySobjectAndDevName('Contact','Citizen');
         Contact con = new Contact();
-        con.RecordTypeId = objRecordType.Id;
+        con.RecordTypeId = contactRecordTypeId;
         con.FirstName = usr.FirstName;  
         con.LastName = usr.LastName;
         con.Email = usr.Email;
@@ -75,8 +77,8 @@ public class SSP_NonCitizenUserLogicTest {
     public static void createUserinSFWithIEESIds1(){
         
         Test.setMock(WebServiceMock.class, new kyHbeMciDatacontractsMock());
-        RecordType objRecordType = GeneralUtility.fetchRecordType('Citizen', 'Contact');
-        Contact con1 = new Contact(RecordTypeId = objRecordType.Id, FirstName = 'FirstNameOne', LastName = 'LastNameOne',Email = 'testone@email.com' );
+        //RecordType objRecordType = GeneralUtility.fetchRecordType('Citizen', 'Contact');
+        Contact con1 = new Contact(RecordTypeId = contactRecordTypeId, FirstName = 'FirstNameOne', LastName = 'LastNameOne',Email = 'testone@email.com' );
         insert con1;
         Contact con = new Contact(RecordTypeId = objRecordType.Id, FirstName = 'FirstName', LastName = 'LastName',Email = 'test@email.com' );
         //insert con;

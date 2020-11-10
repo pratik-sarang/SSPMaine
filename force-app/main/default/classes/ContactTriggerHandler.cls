@@ -25,12 +25,15 @@ public with sharing class ContactTriggerHandler extends TriggerHandler {
         }
         List<Contact> needAccounts = new List<Contact>();
         try{
-            RecordType contactRecordType = GeneralUtility.fetchRecordType('Citizen', 'Contact');
+            
+            //RecordType contactRecordType = GeneralUtility.fetchRecordType('Citizen', 'Contact');
+            Id contactRecordTypeId = SSP_Utility.getRecrodTypeIdBySobjectAndDevName('Contact','Citizen');
+
             for(Contact objectContact: (List<Contact>)trigger.new){
                 if(objectContact.FirstName == null || objectContact.FirstName == '' ){
                     objectContact.addError(SSP_GlobalConstants.FIRST_NAME_IS_MANDATORY);
                 }
-                if (objectContact.RecordTypeId == contactRecordType.Id || SSP_InterfaceConstants.ALLOW_ACCOUNT_CREATION_FROM_TRIGGER) {
+                if (objectContact.RecordTypeId == contactRecordTypeId || SSP_InterfaceConstants.ALLOW_ACCOUNT_CREATION_FROM_TRIGGER) {
                     needAccounts.add(objectContact);
                 }
             }
@@ -38,12 +41,14 @@ public with sharing class ContactTriggerHandler extends TriggerHandler {
                 List<User> userList = RE_SharingByPassCtrl.getUserList(RE_GlobalConstants.strSystemAutoProcessProfile);
                 List<Account> newAccounts = new List<Account>();
                 Map<String,Contact> contactsByNameKeys = new Map<String,Contact>();
-                RecordType objRecordType = GeneralUtility.fetchRecordType('Citizen', 'Account');
+                //RecordType objRecordType = GeneralUtility.fetchRecordType('Citizen', 'Account');
+                Id accountRecordTypeId = SSP_Utility.getRecrodTypeIdBySobjectAndDevName('Account','Citizen');
+
                 for (Contact c : needAccounts) {
                     String accountName = c.firstname + ' ' + c.lastname;
                     contactsByNameKeys.put(accountName,c);
                     // RE Security Changes -- Payal Dubela
-                    Account a = new Account(name=accountName,RecordTypeId=objRecordType.Id,HasOptedOutOfAccount__c=false,Applicable_Roles__c=RE_GlobalConstants.strCitizenAppRole);
+                    Account a = new Account(name=accountName,RecordTypeId=accountRecordTypeId,HasOptedOutOfAccount__c=false,Applicable_Roles__c=RE_GlobalConstants.strCitizenAppRole);
                     if(userList!=null && !userList.isEmpty() && a.ownerId==null){
                         a.ownerId=userList[0].Id;
                     }
@@ -66,7 +71,7 @@ public with sharing class ContactTriggerHandler extends TriggerHandler {
             LOG_LogMessageUtility.logMessage(LOG_LogMessageUtility.LOG_LogLevel.Error, SSP_GlobalConstants.CONTACT_TRIGGER_HANDLER, SSP_GlobalConstants.CREATE_CITIZEN_ACCOUNT, e.getMessage(), true);
         }  
     }
-    public void communityPartnerCallOut(){
+    /*public void communityPartnerCallOut(){
         Set<ID> contactIDs = new Set<ID>();
         if (Schema.sObjectType.Contact.fields.Phone.isAccessible() && Schema.sObjectType.Contact.fields.PermissionsLevel__c.isAccessible() && Schema.sObjectType.Contact.fields.Email.isAccessible()
             && Schema.sObjectType.Contact.fields.ID.isAccessible()){
@@ -83,9 +88,9 @@ public with sharing class ContactTriggerHandler extends TriggerHandler {
                 }
                 
             }
-    }
+    }*/
     
-    public void checkDuplicateEntry(){
+    /*public void checkDuplicateEntry(){
         List<Contact> lstContacts=(List<Contact>)trigger.new;
         List<String> lstEmails = new List<String>();
         // RE Security Changes -- Payal Dubela ---Start
@@ -108,5 +113,5 @@ public with sharing class ContactTriggerHandler extends TriggerHandler {
                 }
             }
         }
-    }
+    }*/
 }

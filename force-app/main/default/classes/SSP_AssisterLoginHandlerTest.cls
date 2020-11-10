@@ -2,11 +2,16 @@
 public class SSP_AssisterLoginHandlerTest {
     
     @testSetup static void setupTestData() {
-        RecordType objRecordType = GeneralUtility.fetchRecordType('Assister', 'Contact');
-        RecordType objAccountRecordtype = GeneralUtility.fetchRecordType('Assister', 'Account');
-        Account acc = new Account(Name = 'AssisterTest',RecordTypeId = objAccountRecordtype.Id );
+        
+        //RecordType objRecordType = GeneralUtility.fetchRecordType('Assister', 'Contact');
+        Id contactRecordTypeId = SSP_Utility.getRecrodTypeIdBySobjectAndDevName('Contact','Assister');
+
+        //RecordType objAccountRecordtype = GeneralUtility.fetchRecordType('Assister', 'Account');
+        Id accountRecordTypeId = SSP_Utility.getRecrodTypeIdBySobjectAndDevName('Account','Assister');
+
+        Account acc = new Account(Name = 'AssisterTest',RecordTypeId = accountRecordTypeId );
         Insert acc;
-        Contact con = new Contact(RecordTypeId = objRecordType.Id, FirstName = 'FirstName', LastName = 'LastName',Email = 'test@email.com',AccountId=acc.Id );
+        Contact con = new Contact(RecordTypeId = contactRecordTypeId, FirstName = 'FirstName', LastName = 'LastName',Email = 'test@email.com',AccountId=acc.Id );
         insert con;
         
         //List <Profile> prof = [Select Id from Profile where Name = 'RE Assister Profile'];

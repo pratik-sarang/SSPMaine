@@ -37,7 +37,7 @@ Public inherited sharing Class GeneralUtility {
 Returns record type instance.
 *
 */
-    Public Static RecordType fetchRecordType(String strRecordTypeDeveloperName, String strSobjectName){
+    /*Public Static RecordType fetchRecordType(String strRecordTypeDeveloperName, String strSobjectName){
 
         RecordType result = null;
         String sFieldsToQueryOnRecordType = RE_DataBaseQueryFields.sFieldsToQueryOnRecordType;
@@ -58,7 +58,7 @@ Returns record type instance.
             }
         }
         return result;         
-    }
+    }*/
     
     public static String getLoggedInUserContactId(){
         GeneralUtility.isAuthenticatedUser();
@@ -88,7 +88,7 @@ Returns record type instance.
 *Description: gets the logged in user contact account.
 *
 */
-    public static String getLoggedInUserAccountId(){
+    /*public static String getLoggedInUserAccountId(){
         List<Contact> lstContacts = new List<Contact>();
         User u;
         if(RE_DataAccessChecker.isAllowedToAccess(User.sObjectType)){ // PMD Report Check.
@@ -135,12 +135,12 @@ Returns record type instance.
         }
         return returnId;
     }
-    /*
+    /* 
 *Method Name: getLoggedInUserAccount()
 *Description: gets the logged in user contact account.
 *
 */
-    public static Account getLoggedInUserAccount(){
+  /* public static Account getLoggedInUserAccount(){
         List<Contact> lstContacts = new List<Contact>();
         User u;
         if(RE_DataAccessChecker.isAllowedToAccess(User.sObjectType)){ // PMD Report Check.
@@ -277,7 +277,7 @@ Returns record type instance.
     * method name: getCommunityUsersSetting
     * @Description : get the community user setting metadata
     * */
-    public static List<RECommunityUsersConfiguration__mdt> getCommunityUsersSetting(String sRole){
+    /*public static List<RECommunityUsersConfiguration__mdt> getCommunityUsersSetting(String sRole){
         List<RECommunityUsersConfiguration__mdt> lstUserConfig =  new List<RECommunityUsersConfiguration__mdt>();
         
         String sFieldsToQueryOncommunityConfig = 'Label, AllowIntegrationforUserCreation__c, PermissionSets__c, ProfileName__c, Role__c';
@@ -352,7 +352,7 @@ Returns record type instance.
     * @description  This methods is used to get the owner Id
     * @return       String                  :  record owner Id
     *****************************************************************************************************/
-    public static String getRecordOwner(String sObjectName, String sRecordId){
+   /* public static String getRecordOwner(String sObjectName, String sRecordId){
         String sRecordOwnerId;
         String sFieldsToQueryOnReferral = RE_DataBaseQueryFields.sFieldsToQueryOnReferral;
         String sWhereClauseOnReferral = RE_DataBaseQueryFields.sWhereClauseOnReferralRecord;
@@ -380,7 +380,7 @@ Returns record type instance.
     * @description  This methods is used to get the user id based on given contact Id
     * @return       Id                  :  User Id
     *****************************************************************************************************/
-    public static Id getUserIdBasedOnContactId(Id sContactId){
+    /*public static Id getUserIdBasedOnContactId(Id sContactId){
         String sFieldsToQueryOnUser = RE_DataBaseQueryFields.sIdNameField;
         String sWhereClauseOnUser = RE_DataBaseQueryFields.sWhereClauseOnIdContactId;
         Map<String,String> mapUserQueryParameters = new Map<String,String>();
@@ -425,7 +425,7 @@ Returns record type instance.
     return GeneralUtility.getPicklistValues(sObjectName,sFieldAPIName);
     */
     //Added by LK
-    public static RE_CreateLightningServerResponse getAllOptions(String sObjectName, String sFieldAPIName){ 
+   /* public static RE_CreateLightningServerResponse getAllOptions(String sObjectName, String sFieldAPIName){ 
         Boolean bSuccess = false;
         Map<String, Object> mapResponse = new Map<String, Object>();
         Map<String, Object> errorMap = new Map<String, Object>();
@@ -513,7 +513,7 @@ Returns record type instance.
     * @description  This methods is used to get logged in user Permission set name
     * @return       String 
     ******************************************************************************************/
-    public static List<PermissionSetAssignment> geLoggedInUserPermissionSets(){
+    /*public static List<PermissionSetAssignment> geLoggedInUserPermissionSets(){
         List<PermissionSetAssignment> lstPermissionSet =  new List<PermissionSetAssignment>();
         try{
             ID userid=UserInfo.getUserId();
@@ -568,7 +568,7 @@ Returns record type instance.
         return null;
     }
     
-    public static RE_CreateLightningServerResponse getLoggedInUserRole(){
+    /*public static RE_CreateLightningServerResponse getLoggedInUserRole(){
         Boolean bSuccess = false;
         Boolean bIsCPUserProfile = false;
         Boolean bIsResident = false;
@@ -638,7 +638,7 @@ Returns record type instance.
     * @description  This methods is used to get OptOutInfoSharing Information from Account
     * @return       Boolean
     **********************************************************************************************/
-    @AuraEnabled
+    /*@AuraEnabled
     public static Boolean getOptOutInfoSharingDetails(){
         Boolean bSuccess = false;
         Boolean bReturnVal = true;
@@ -740,7 +740,7 @@ Returns record type instance.
     * @description  This methods is used to send email notification when user is created in the system
     * @return       RE_CreateLightningServerResponse
     **********************************************************************************************/    
-    public static RE_CreateLightningServerResponse addNewUserToOrg(List<AddUserWrapper> adduserWrapperList){        
+    /*public static RE_CreateLightningServerResponse addNewUserToOrg(List<AddUserWrapper> adduserWrapperList){        
         Boolean bSuccess = false;
         Map<String, Object> errorMap = new Map<String, Object>();
         Map<String, Object> mapResponse = new Map<String, Object>();
@@ -826,7 +826,7 @@ Returns record type instance.
     * @description  This methods is used to check duplicate contact/user in the system
     * @return       Map<String, Integer>
     **********************************************************************************************/   
-    public static Map<String, Integer> checkDuplicateUser(List<String> lstEmails){
+  /*public static Map<String, Integer> checkDuplicateUser(List<String> lstEmails){
         Map<String, Integer> mapContactDuplicateEmail = new Map<String, Integer>();
         Map<String,String> mapInputs= new Map<String,String>();
         // RE Security Changes -- Payal Dubela --- Start
@@ -872,7 +872,7 @@ Returns record type instance.
     * @description   Function to return operation timings for single location Resource
     **********************************************************************************************/
    
-    public static Map<String, List<String>> getLocationOperationHours(Location__c sObjLoc,LocationResource__c sObjLocRes)
+    /*public static Map<String, List<String>> getLocationOperationHours(Location__c sObjLoc,LocationResource__c sObjLocRes)
     {
         Map<String, List<String>> mapdata = new Map<String, List<String>>();
         try{
@@ -1014,7 +1014,7 @@ Returns record type instance.
     * @date         31/01/2020      
     * @description  Function to return operation timings for List of LocationResource
     **********************************************************************************************/
-   public static Map<Id,map<String, List<String>>> getLocationOperationHoursList(Set<Id> sLocationIds,List<LocationResource__c> sLocationResourceList){
+   /*public static Map<Id,map<String, List<String>>> getLocationOperationHoursList(Set<Id> sLocationIds,List<LocationResource__c> sLocationResourceList){
         map <Id,map<String,List<String>>> finalResponseMap = new map <Id,map<String,List<String>>>();
        
         try{
@@ -1052,7 +1052,7 @@ Returns record type instance.
     * @description  This methods is used to get favorites for the CP User
     * @return        Set<Id>
     **********************************************************************************************/
-    public static Set<Id> getFavoriteClientIds(){
+    /*public static Set<Id> getFavoriteClientIds(){
         String sQuery;
         List<Favorite__c> lstFavorites = new List<Favorite__c>();
         Map<String, Object> errorMap    = new Map<String, Object>();
@@ -1091,7 +1091,7 @@ Returns record type instance.
     * @description  This method is used to check Partner has consent to see Client Data
     * @return        List<Consent>
     **********************************************************************************************/
-    public static List<Consent__c> checkConsentForClient(String clientId){
+    /*public static List<Consent__c> checkConsentForClient(String clientId){
         List<Consent__c> consentList=new List<Consent__c>();
 		// Added By Kojashree -- SSP Merge
         //  String loggedInUserAccountId=GeneralUtility.getLoggedInUserAccountId();
@@ -1232,7 +1232,7 @@ Returns record type instance.
     * @description   This method is used for creating dummy accounts for partners
     * @return        Account
     *******************************************************************************************************/
-    public static String getLoggedInAccountId(){
+    /*public static String getLoggedInAccountId(){
         User u;
         String sAccountRecordTypeId = Schema.SObjectType.Account.getRecordTypeInfosByDeveloperName().get('Resource_Engine').getRecordTypeId();
         List<AccountContactRelation> lstACR = new List<AccountContactRelation>();
@@ -1289,7 +1289,7 @@ Returns record type instance.
     * @description   This method is used for fetching selected  role for logged in user
     * @return        Account
     *******************************************************************************************************/
-    public static String getLoggedInUserSelectedRole(){
+   /* public static String getLoggedInUserSelectedRole(){
         User u;
         String returnRole=''; 
         //Error Log Fixes - Payal Dubela - 08/29
@@ -1321,7 +1321,7 @@ Returns record type instance.
     * @description   This method is used for fetching available role for logged in user
     * @return        Account
     *******************************************************************************************************/
-    public static String getLoggedInUserAvailableRole(){
+    /*public static String getLoggedInUserAvailableRole(){
         User u;
         String availableRole=''; 
         //Error Log Fixes - Payal Dubela - 08/29
@@ -1354,7 +1354,7 @@ Returns record type instance.
     * @return        User
     * @param         userId
     *******************************************************************************************************/    
-    public static User getUserRecord(Id userId){
+    /*public static User getUserRecord(Id userId){
         User u;
         if(RE_DataAccessChecker.isAllowedToAccess(User.sObjectType)){ // PMD Report Check.
             String sFieldsToQueryOnUser = RE_DataBaseQueryFields.sFieldsToQueryOnUserNew;
@@ -1382,7 +1382,7 @@ Returns record type instance.
     * @return        List<String>
     * 
     *******************************************************************************************************/ 
-    public static List<String> getUserRolesforHeaderCmp(){
+    /*public static List<String> getUserRolesforHeaderCmp(){
         List<PublicGroupAssignments__c> publicGrpAssignment = PublicGroupAssignments__c.getAll().values();
         Set<String> rolesToCheck = new Set<String>();
         List<String> headerApplicableRoles=new List<String>();
@@ -1412,7 +1412,7 @@ Returns record type instance.
     * @return        Map<String,String>
     * @param         List<String>
     *******************************************************************************************************/ 
-    public static Map<String,String> getPermssionNamesForRole(List<String> assignedRole){
+    /*public static Map<String,String> getPermssionNamesForRole(List<String> assignedRole){
         Map<String,String> roleToPS=new Map<String,String>();
         List<String> roles= new List<String>();
         try{
@@ -1472,7 +1472,7 @@ Returns record type instance.
     * @description   This method is used for retriving logged in account
     * @return        Account
     *******************************************************************************************************/
-    public static Account getLoggedInAccount(){
+    /*public static Account getLoggedInAccount(){
         User u;
         String sAccountRecordTypeId = Schema.SObjectType.Account.getRecordTypeInfosByDeveloperName().get('Resource_Engine').getRecordTypeId();
         List<AccountContactRelation> lstACR = new List<AccountContactRelation>();
@@ -1529,7 +1529,7 @@ Returns record type instance.
     * @return        String
     * @param         String conId
     *******************************************************************************************************/    
-    public static String getUserApplicableRoles(String sContactId){
+   /* public static String getUserApplicableRoles(String sContactId){
         List<User> uList;
         String sApplicableRoles;
         if(RE_DataAccessChecker.isAllowedToAccess(User.sObjectType)){ // PMD Report Check.
@@ -1550,5 +1550,5 @@ Returns record type instance.
             } 
         }
         return sApplicableRoles;
-    }
+    }*/
 }

@@ -24,7 +24,7 @@ public class TestDataFactory {
         @return       : 
     */
     // code added by Pankaj
-    public static void testDataSetup(){
+    /*public static void testDataSetup(){
         createCrudAndAccessibilitySettings(); // Do not remove as this enforces CRUD and field accessibility settings
         createLogMsgSettings();
         createMapLatLogSettings();
@@ -88,7 +88,7 @@ public class TestDataFactory {
         insert new PublicGroupAssignments__c(name = 'State User Assignment', ProfileName__c = 'RE State User', PublicGroupName__c='RE_StateUsers',Executeforallchanges__c=true);
         insert new PublicGroupAssignments__c(name = 'UW Staff User', ProfileName__c = 'RE United Way Staff', PublicGroupName__c='RE_StateUsers',QueueName__c='ClaimSiteQueue',Executeforallchanges__c=true);
         insert new PublicGroupAssignments__c(name = 'Agency User Assignment', ProfileName__c = 'RE Agency User Profile', PublicGroupName__c='RE_Agency_Users',Executeforallchanges__c=true);
-    }
+    }*/
     
     public static void assignPermissionId(Set<Id> setIds){
         //RE_UserCreationHelper.assignPermissionSetOnCreate(setIds);
@@ -319,7 +319,7 @@ public class TestDataFactory {
     @return       : list of Location records
     */  
     
-    public static List<Location__c> createLocations(Integer intCount, 
+   /* public static List<Location__c> createLocations(Integer intCount, 
                                                 Boolean doInsert, 
                                                 Id recordTypeId, 
                                                 List<Id> lstParentAccountIds
@@ -387,7 +387,7 @@ public class TestDataFactory {
     @return       : list of Resource records
     */  
     
-    public static List<Resource__c> createResources(Integer intCount, 
+    /*public static List<Resource__c> createResources(Integer intCount, 
                                                     Boolean doInsert, 
                                                     Id recordTypeId, 
                                                     List<Id> lstParentAccountIds
@@ -424,7 +424,7 @@ public class TestDataFactory {
     @return       : list of Location Resource records
     */  
     
-    public static List<LocationResource__c> createLocationResource(Integer intCount, 
+   /* public static List<LocationResource__c> createLocationResource(Integer intCount, 
                                                 Boolean doInsert, 
                                                 Id recordTypeId, 
                                                 List<Location__c> lstLocations,
@@ -627,7 +627,7 @@ public class TestDataFactory {
     @return       : list of Referral  records
     */  
     
-    public static List<Referral__c> createReferral(Integer intCount, 
+    /*public static List<Referral__c> createReferral(Integer intCount, 
                                                 Boolean doInsert, 
                                                 Id recordTypeId, 
                                                 Id contactId,
@@ -664,7 +664,7 @@ public class TestDataFactory {
     @return       : list of Consent  records
     */  
     
-    public static List<Consent__c> createConsent(Integer intCount, 
+    /*public static List<Consent__c> createConsent(Integer intCount, 
                                                 Boolean doInsert, 
                                                 List<Contact> lstClients,
                                                 List<Account> lstOrganization){
@@ -697,7 +697,7 @@ public class TestDataFactory {
     @params       : doInsert (Boolean) - To perform DML for the record or not
     @return       : List<Feedback__c>
     */
-    public static List<Feedback__c> createFeedback(Integer intCount,Boolean doInsert, Id recordTypeId,
+    /*public static List<Feedback__c> createFeedback(Integer intCount,Boolean doInsert, Id recordTypeId,
                                           List<Account> lstOrganization, List<Referral__c> lstReferral){
         List<Feedback__c> lstFeedback = new List<Feedback__c>();
         for(integer i=0 ; i<intCount; i++ ){
@@ -720,7 +720,7 @@ public class TestDataFactory {
     @params       : doInsert (Boolean) - To perform DML for the record or not
     @return       : List<ClaimMySiteRequest__c>
     */
-    public static List<ClaimMySiteRequest__c> createClaimRequest(Integer intCount,Boolean doInsert, Id recordTypeId ){
+    /*public static List<ClaimMySiteRequest__c> createClaimRequest(Integer intCount,Boolean doInsert, Id recordTypeId ){
         List<ClaimMySiteRequest__c> lstClaimRecords = new List<ClaimMySiteRequest__c>();    
         for(integer i=0 ; i<intCount; i++ ){
             ClaimMySiteRequest__c claimReq=new ClaimMySiteRequest__c();
@@ -743,7 +743,7 @@ public class TestDataFactory {
     @params       : doInsert (Boolean) - To perform DML for the record or not
     @return       : List<RE_Archetype__c>
     */
-    public static List<RE_Archetype__c> createArchetypeRecords(Integer intCount,Boolean doInsert, Id recordTypeId ){
+    /*public static List<RE_Archetype__c> createArchetypeRecords(Integer intCount,Boolean doInsert, Id recordTypeId ){
         Id parentArcRecTypeId = Schema.SObjectType.RE_Archetype__c.getRecordTypeInfosByName().get('Archetype').getRecordTypeId();
         List<RE_Archetype__c> lstArchetypeRec = new List<RE_Archetype__c>();
         RE_Archetype__c parentArchRec = new RE_Archetype__c(RecordTypeId = parentArcRecTypeId,Title__c='Parent Archetype',Status__c='Active');
@@ -769,7 +769,7 @@ public class TestDataFactory {
     @params       : doInsert (Boolean) - To perform DML for the record or not
     @return       : List<RE_Goal__c>
     */
-    public static List<RE_Goal__c> createGoalRecords(Integer intCount,Boolean doInsert, List<RE_Archetype__c> lsAtArch ){
+    /*public static List<RE_Goal__c> createGoalRecords(Integer intCount,Boolean doInsert, List<RE_Archetype__c> lsAtArch ){
         List<RE_Goal__c> lstGoalRec = new List<RE_Goal__c>();
         for(integer j=0 ; j<intCount; j++ ){
             RE_Goal__c objGoal =new RE_Goal__c();
@@ -791,7 +791,7 @@ public class TestDataFactory {
     @params       : doInsert (Boolean) - To perform DML for the record or not
     @return       : List<RE_Config__c>
     */
-    public static List<RE_Config__c> createDomainConfigRecords(Integer intCount, Boolean doInsert, List<RE_Goal__c> lstGoals, List<RE_Taxonomy__c> lstTaxonomyRecords,String recTypeDevName){
+    /*public static List<RE_Config__c> createDomainConfigRecords(Integer intCount, Boolean doInsert, List<RE_Goal__c> lstGoals, List<RE_Taxonomy__c> lstTaxonomyRecords,String recTypeDevName){
             Id domConfigRecTypeId = Schema.SObjectType.RE_Config__c.getRecordTypeInfosByDeveloperName().get(recTypeDevName).getRecordTypeId();
         List<RE_Config__c> lstDomConfigtypeRec = new List<RE_Config__c>();
         RE_Config__c domConfigRec = new RE_Config__c(RecordTypeId = domConfigRecTypeId,IsMaster__c = true, DomainOrder__c = 10,Category__c='Emergencies & Disasters',Domain__c='Food',DomainCategory__c='Basic Resources',Subcategory__c='Fertility');
@@ -824,7 +824,7 @@ public class TestDataFactory {
     @params       : doInsert (Boolean) - To perform DML for the record or not
     @return       : List<RE_Taxonomy__c>
     */
-    public static List<RE_Taxonomy__c> createTaxonomyRecords(Integer intCount, Boolean doInsert){
+    /*public static List<RE_Taxonomy__c> createTaxonomyRecords(Integer intCount, Boolean doInsert){
         List<RE_Taxonomy__c> lstTaxonomyRecords = new List<RE_Taxonomy__c>();
         for(integer j=0 ; j<intCount; j++ ){
             RE_Taxonomy__c reTaxonomy =new RE_Taxonomy__c();
@@ -847,7 +847,7 @@ public class TestDataFactory {
     @params       : doInsert (Boolean) - To perform DML for the record or not
     @return       : List<RE_Resource_Taxonomy__c>
     */
-    public static List<RE_Resource_Taxonomy__c> createResourceTaxonomyRecords(Integer intCount, Boolean doInsert, List<Resource__c> lstResources, List<RE_Taxonomy__c> lstTaxRecords){
+   /* public static List<RE_Resource_Taxonomy__c> createResourceTaxonomyRecords(Integer intCount, Boolean doInsert, List<Resource__c> lstResources, List<RE_Taxonomy__c> lstTaxRecords){
         List<RE_Resource_Taxonomy__c> lstResTaxonomyRecords = new List<RE_Resource_Taxonomy__c>();
         for(integer j=0 ; j<intCount; j++ ){
             RE_Resource_Taxonomy__c reTaxonomy =new RE_Resource_Taxonomy__c();
@@ -868,7 +868,7 @@ public class TestDataFactory {
     @params       : doInsert (Boolean) - To perform DML for the record or not
     @return       : List<RE_Config__c>
     */
-    public static List<RE_Config__c> createRelResourcesConfigRecords(Integer intCount, Boolean doInsert, List<RE_Taxonomy__c> lstTaxonomyRecords,String recTypeDevName){
+    /*public static List<RE_Config__c> createRelResourcesConfigRecords(Integer intCount, Boolean doInsert, List<RE_Taxonomy__c> lstTaxonomyRecords,String recTypeDevName){
         
         Id recTypeId = Schema.SObjectType.RE_Config__c.getRecordTypeInfosByDeveloperName().get(recTypeDevName).getRecordTypeId();
         List<RE_Config__c> lstConfigRecs = new List<RE_Config__c>();
@@ -927,7 +927,7 @@ public class TestDataFactory {
     @params       : doInsert (Boolean) - To perform DML for the record or not
     @return       : List<RE_Resource_Taxonomy__c>
     */
-    public static List<Favorite__c> createFavoritesRecords(Integer intCount, Boolean doInsert, List<LocationResource__c> lstLocResources){
+   /* public static List<Favorite__c> createFavoritesRecords(Integer intCount, Boolean doInsert, List<LocationResource__c> lstLocResources){
         List<Favorite__c> lstFavs = new List<Favorite__c>();
         Id sFavRecordTypeId=Schema.SObjectType.Favorite__c.getRecordTypeInfosByName().get('Resource Favorite').getRecordTypeId();
         for(integer j=0 ; j<intCount; j++ ){
@@ -964,7 +964,7 @@ public class TestDataFactory {
     @params       : doInsert (Boolean) - To perform DML for the record or not
     @return       : List<Assessment__c>
     */
-    public static List<Assessment__c> createAssessmentTemplateRecords(Integer intCount,Boolean doInsert, Id recordTypeId ){
+    /*public static List<Assessment__c> createAssessmentTemplateRecords(Integer intCount,Boolean doInsert, Id recordTypeId ){
     	List<Assessment__c> lstAssessmentRec = new List<Assessment__c>();
         for(integer j=0 ; j<intCount; j++ ){
             Assessment__c objAssessment =new Assessment__c();
@@ -984,7 +984,7 @@ public class TestDataFactory {
     @params       : doInsert (Boolean) - To perform DML for the record or not
     @return       : List<Question__c>
     */
-    public static List<Question__c> createQuestionsRecords(Integer intCount,Boolean doInsert, List<Assessment__c> lstAssessment ){
+    /*public static List<Question__c> createQuestionsRecords(Integer intCount,Boolean doInsert, List<Assessment__c> lstAssessment ){
         List<Question__c> lstQuestionsRec = new List<Question__c>();
         Id sQuesRecordTypeId = Schema.SObjectType.Question__c.getRecordTypeInfosByName().get('Resource Engine Assessment Question').getRecordTypeId();
         for(integer j=0 ; j<intCount; j++ ){
@@ -1009,7 +1009,7 @@ public class TestDataFactory {
     @params       : doInsert (Boolean) - To perform DML for the record or not
     @return       : List<Question__c>
     */
-     public static List<Question__c> createQuestionsFreeTextRecords(Integer intCount,Boolean doInsert, List<Assessment__c> lstAssessment ){
+    /* public static List<Question__c> createQuestionsFreeTextRecords(Integer intCount,Boolean doInsert, List<Assessment__c> lstAssessment ){
         List<Question__c> lstQuestionsRec = new List<Question__c>();
         Id sQuesRecordTypeId = Schema.SObjectType.Question__c.getRecordTypeInfosByName().get('Resource Engine Assessment Question').getRecordTypeId();
         for(integer j=0 ; j<intCount; j++ ){
@@ -1034,7 +1034,7 @@ public class TestDataFactory {
     @params       : doInsert (Boolean) - To perform DML for the record or not
     @return       : List<AnswerChoice__c>
     */
-    public static List<AnswerChoice__c> createAnswerChoiceRecords(Integer intCount,Boolean doInsert, List<Question__c> lstQuestions ){
+    /*public static List<AnswerChoice__c> createAnswerChoiceRecords(Integer intCount,Boolean doInsert, List<Question__c> lstQuestions ){
     	List<AnswerChoice__c> lstAnsChoiceRec = new List<AnswerChoice__c>();
         for(integer j=0 ; j<intCount; j++ ){
             AnswerChoice__c objAnswerChoice =new AnswerChoice__c();
@@ -1055,7 +1055,7 @@ public class TestDataFactory {
     @params       : doInsert (Boolean) - To perform DML for the record or not
     @return       : List<GoalAnswer__c>
     */
-    public static List<GoalAnswer__c> createGoalAnsRecords(Integer intCount,Boolean doInsert, List<AnswerChoice__c> lstAnsChoice, List<RE_Goal__c> lstGoal ){
+   /* public static List<GoalAnswer__c> createGoalAnsRecords(Integer intCount,Boolean doInsert, List<AnswerChoice__c> lstAnsChoice, List<RE_Goal__c> lstGoal ){
     	List<GoalAnswer__c> lstGoalAnsRec = new List<GoalAnswer__c>();
         for(integer j=0 ; j<intCount; j++ ){
             GoalAnswer__c objGoalAns =new GoalAnswer__c();
@@ -1076,7 +1076,7 @@ public class TestDataFactory {
     @return       : none
     */  
     
-    public static void createSDOHcustomSettings(){
+   /* public static void createSDOHcustomSettings(){
         List<RE_SDOHScores__c> listSDOH=new List<RE_SDOHScores__c>();
         RE_SDOHScores__c sdoh1=new RE_SDOHScores__c();
         sdoh1.name='1';
@@ -1156,7 +1156,7 @@ public class TestDataFactory {
     @params       : 
     @return       : Assessment__c
     */
-    public static List<Assessment__c> createUserAssessmentTemplateRecords(Integer intCount,Boolean doInsert, Id recordTypeId,Id partnerId,Id residentId,Id assTempId ){
+    /*public static List<Assessment__c> createUserAssessmentTemplateRecords(Integer intCount,Boolean doInsert, Id recordTypeId,Id partnerId,Id residentId,Id assTempId ){
     	List<Assessment__c> listUserAsess=new List<Assessment__c>();
         for(integer j=0 ; j<intCount; j++ ){
             Assessment__c objAssessment =new Assessment__c();
@@ -1179,7 +1179,7 @@ public class TestDataFactory {
     @params       : 
     @return       : List<AssessmentResponse__c>
     */
-    public static List<AssessmentResponse__c> createAssessmentResponse(Integer intCount,Boolean doInsert, List<AnswerChoice__c> listAnsChoice,List<Assessment__c> lstAssessment,List<Question__c> lstQuestions,Id residentId ){
+    /*public static List<AssessmentResponse__c> createAssessmentResponse(Integer intCount,Boolean doInsert, List<AnswerChoice__c> listAnsChoice,List<Assessment__c> lstAssessment,List<Question__c> lstQuestions,Id residentId ){
         List<AssessmentResponse__c> listAssRes=new List<AssessmentResponse__c>();
         Id sAssessmentRespRecTypeId = Schema.SObjectType.AssessmentResponse__c.getRecordTypeInfosByName().get('Resource Engine Assessment Response').getRecordTypeId();//Nandita: Added cod eto get Assessment Response Record Type Id
         for(integer j=0 ; j<intCount; j++ ){
@@ -1204,7 +1204,7 @@ public class TestDataFactory {
     @params       : 
     @return       : List<SDOH__c>
     */
-    public static List<SDOH__c> createSDOH(Integer intCount,Boolean doInsert,Id residentId,List<Question__c> listQuestion){
+    /*public static List<SDOH__c> createSDOH(Integer intCount,Boolean doInsert,Id residentId,List<Question__c> listQuestion){
         List<SDOH__c > listSDOH=new List<SDOH__c>();
         for(integer j=0 ; j<intCount; j++ ){
             SDOH__c objSDOH =new SDOH__c();

@@ -122,10 +122,10 @@ global with sharing class SSP_CommunityPartnerLogin {
             }
         }
         if(lstUser.size() > 0){
-            GeneralUtility.addNewUserToOrg(lstUser);
+           // GeneralUtility.addNewUserToOrg(lstUser);
         }
         if(lstDeniedUser.size() > 0){
-            GeneralUtility.addNewUserToOrg(lstUser);
+           // GeneralUtility.addNewUserToOrg(lstUser);
         }
     }
     

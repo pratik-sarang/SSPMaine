@@ -14,12 +14,14 @@ public class SSP_SignaturePageCtrlTest {
         SSP_TestDataFactory.setupTestData();
         SSP_TestDataFactory.setUpNonCitizenUser();
         
-        RecordType objRecordTypeForAccount = GeneralUtility.fetchRecordType('Citizen', 'Account');
-        RecordType objRecordTypeForContact = GeneralUtility.fetchRecordType('Citizen', 'Contact');
-        
+        //RecordType objRecordTypeForAccount = GeneralUtility.fetchRecordType('Citizen', 'Account');
+        Id accountRecordTypeId = SSP_Utility.getRecrodTypeIdBySobjectAndDevName('Account','Citizen');
+        //RecordType objRecordTypeForContact = GeneralUtility.fetchRecordType('Citizen', 'Contact');
+        Id contactRecordTypeId = SSP_Utility.getRecrodTypeIdBySobjectAndDevName('Contact','Citizen');
+
         List<Account> lstAcc = SSP_TestDataFactory.createAccounts(1, false);
         lstAcc[0].Name = 'EnrollmentDetail';
-        lstAcc[0].RecordTypeId = objRecordTypeForAccount.id;
+        lstAcc[0].RecordTypeId = accountRecordTypeId;
         lstAcc = ESAPI.accessController().insertAsUser(lstAcc, SSP_Utility.getFieldsNamesList (lstAcc)).getInsertedObjects();
         
         List<Contact> lstCon = (List<Contact>)SSP_Utility.fetchRecords(new Map<String, String>{'objectName'=>'Contact','operator'=>'AND'}, new Set<String>{'Id', 'FirstName', 'LastName'}, new Map<String, String>{'FirstName'=>'Citizen','LastName'=>'User'});
@@ -27,7 +29,7 @@ public class SSP_SignaturePageCtrlTest {
         lstCon[0].FirstName='Test Contact';
         lstCon[0].LastName=' Contact';
         lstCon[0].Email='Test@gmail.com';
-        lstCon[0].RecordTypeId = objRecordTypeForContact.Id;
+        lstCon[0].RecordTypeId = contactRecordTypeId;
         lstCon = ESAPI.accessController().insertAsUser(lstCon, SSP_Utility.getFieldsNamesList (lstCon)).getInsertedObjects();*/
         
         AccountContactRelation acr = new AccountContactRelation(); 

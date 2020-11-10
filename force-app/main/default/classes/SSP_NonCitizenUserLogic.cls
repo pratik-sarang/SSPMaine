@@ -158,17 +158,19 @@ public class SSP_NonCitizenUserLogic{
     	
     	RecordType objAccountRecordType = GeneralUtility.fetchRecordType('Citizen', 'Account');
         //RecordType objAccountRecordType = GeneralUtility.fetchRecordType('Non_Citizen_Account', 'Account');
+        Id accountRecordTypeId = SSP_Utility.getRecrodTypeIdBySobjectAndDevName('Account','Citizen');
         Account acc = new Account();
         acc.Name = usr.FirstName+' '+usr.LastName;
-        acc.RecordTypeId = objAccountRecordType.Id;
+        acc.RecordTypeId = accountRecordTypeId;
     
         if (Schema.sObjectType.Account.isCreateable()) {
             insert acc;
         }
         
-        RecordType objRecordType = GeneralUtility.fetchRecordType('Non_Citizen', 'Contact');
+        //RecordType objRecordType = GeneralUtility.fetchRecordType('Non_Citizen', 'Contact');
+        Id contactRecordTypeId = SSP_Utility.getRecrodTypeIdBySobjectAndDevName('Contact','Non_Citizen');
         Contact con = new Contact();
-        con.RecordTypeId = objRecordType.Id;
+        con.RecordTypeId = contactRecordTypeId;
         con.FirstName = usr.FirstName;  
         con.LastName = usr.LastName;
         con.Email = usr.Email;

@@ -27,8 +27,11 @@ global with sharing class LOG_DeleteLogMessagesScheduler implements Schedulable
     {
         
         Decimal dPurgeDays = lms.LOG_Log_Purge__c; 
-        String sFieldsToQuery = RE_DataBaseQueryFields.sFieldsToQueryOnLogMsg;
-        String sWhereClause = RE_DataBaseQueryFields.sWhereClauseOnLogMsg;
+        public static final String sFieldsToQueryOnLogMsg='id, LOG_Age__c';
+        public static final String sWhereClauseOnLogMsg='LOG_Age__c > :dPurgeDays';
+    
+        String sFieldsToQuery = sFieldsToQueryOnLogMsg;
+        String sWhereClause = sWhereClauseOnLogMsg;
         String sQuery;
         //String queryString = 'SELECT  id, LOG_Age__c from LOG_LogMessage__c WHERE LOG_Age__c > :dPurgeDays';
         Map<String,String> mapQueryParameters = new Map<String,String>();
