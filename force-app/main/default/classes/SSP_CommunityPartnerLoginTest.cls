@@ -9,8 +9,10 @@ public class SSP_CommunityPartnerLoginTest {
     * @return       none
     ********************************************************************************************/
     @testSetup static void testDataSetup(){
-        TestDataFactory.testDataSetup();
-         
+       /* TestDataFactory.testDataSetup();
+        */
+        SSP_TestDataFactory.setupTestData();
+ 
     }
     //RE_Release 1.1 –ForceReviewer Changes- Payal Dubela
     @isTest public static void testAsyncKog(){ 
