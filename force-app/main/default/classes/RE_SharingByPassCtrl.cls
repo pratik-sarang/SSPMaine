@@ -16,6 +16,13 @@
 **/ 
 public without sharing class RE_SharingByPassCtrl {
     
+    public static final String sOrderByUser= 'CreatedDate asc';
+    // profile
+    public static final String sFieldsToQueryOnProfile = 'Id, Name';
+    public static final String sWhereClauseOnProfile = 'Name =: sProfileName';
+     public static final String sFieldsToQueryOnUserForSystemAutoProcess= 'Id,Name' ;
+    public static final String sWhereClauseForUserForSystemAutoProcess= 'Profile.Name=:sProfileName and IsActive=true' ;
+
     /*********************************************************************************************************
     * @author       Pankaj Mohanta
     * @date         05/15/2019
@@ -2083,23 +2090,24 @@ public without sharing class RE_SharingByPassCtrl {
 * @return       List<User> 
 ******************************************************************************************/
     public static List<User> getUserList(String sProfileName){
-        String sFieldsToQueryOnProfile = RE_DataBaseQueryFields.sFieldsToQueryOnProfile;
-        String sWhereClauseOnProfile = RE_DataBaseQueryFields.sWhereClauseOnProfile;
+        String sFieldsToQueryOnProfile = sFieldsToQueryOnProfile;
+        String sWhereClauseOnProfile = sWhereClauseOnProfile;
         String sProfileQuery;
         String sUserQuery;
         Map<String,String> mapProfileQueryParameters = new Map<String,String>();
         mapProfileQueryParameters.put(RE_GlobalConstants.sWhereClauseKey, sWhereClauseOnProfile);
         mapProfileQueryParameters.put(RE_GlobalConstants.sLimitKey, '1');
-        mapProfileQueryParameters.put(RE_GlobalConstants.sOrderByKey,RE_DataBaseQueryFields.sOrderByUser);
+        mapProfileQueryParameters.put(RE_GlobalConstants.sOrderByKey,sOrderByUser);
         sProfileQuery = RE_DataAccessChecker.getQueryStringforSetupObjects('Profile', sFieldsToQueryOnProfile, mapProfileQueryParameters);            
         Profile objProfile = Database.query(sProfileQuery);
         String profileId=objProfile.Id;
-        String sFieldsToQueryOnUser = RE_DataBaseQueryFields.sFieldsToQueryOnUserForSystemAutoProcess;
-        String sWhereClauseOnUser = RE_DataBaseQueryFields.sWhereClauseForUserForSystemAutoProcess;
+        String sFieldsToQueryOnUser = sFieldsToQueryOnUserForSystemAutoProcess;
+        String sWhereClauseOnUser = sWhereClauseForUserForSystemAutoProcess;
         Map<String,String> mapQueryParameters = new Map<String,String>();
         mapQueryParameters.put(RE_GlobalConstants.sWhereClauseKey, sWhereClauseOnUser);
         mapQueryParameters.put(RE_GlobalConstants.sLimitKey, '1');
-        mapQueryParameters.put(RE_GlobalConstants.sOrderByKey,RE_DataBaseQueryFields.sOrderByUser);
+        mapQueryParameters.put(RE_GlobalConstants.sOrderByKey,sOrderByUser);
+        //mapQueryParameters.put(RE_GlobalConstants.sOrderByKey,RE_DataBaseQueryFields.sOrderByUser);
         sUserQuery = RE_DataAccessChecker.getQueryStringforSetupObjects(RE_GlobalConstants.userobjectName, sFieldsToQueryOnUser, mapQueryParameters);
         List<User> userList= Database.query(sUserQuery);
         

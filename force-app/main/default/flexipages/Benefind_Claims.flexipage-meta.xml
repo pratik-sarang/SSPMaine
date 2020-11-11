@@ -6,7 +6,8 @@
         
         <appendable>enabled</appendable>
         
-        <componentInstances>
+        <itemInstances>
+        <componentInstance>
             
             <componentInstanceProperties>
                 
@@ -26,7 +27,8 @@
             
             <componentName>flexipage:tab</componentName>
             
-        </componentInstances>
+        </componentInstance>
+        </itemInstances>
         
         <name>facet-indirection-e5e2b742-75ee-4f16-a19d-1fdd9f1e96de</name>
         
@@ -42,11 +44,13 @@
         
         <appendable>enabled</appendable>
         
-        <componentInstances>
+        <itemInstances>
+        <componentInstance>
             
             <componentName>sspClaimsAndPayments</componentName>
             
-        </componentInstances>
+        </componentInstance>
+        </itemInstances>
         
         <name>1be55f34-1186-43d1-9f1d-9cfc667b03ef</name>
         
@@ -62,7 +66,8 @@
         
         <appendable>enabled</appendable>
         
-        <componentInstances>
+        <itemInstances>
+        <componentInstance>
             
             <componentInstanceProperties>
                 
@@ -114,7 +119,8 @@
             
             <componentName>forceCommunity:section</componentName>
             
-        </componentInstances>
+        </componentInstance>
+        </itemInstances>
         
         <name>content</name>
         
@@ -130,7 +136,8 @@
         
         <appendable>enabled</appendable>
         
-        <componentInstances>
+        <itemInstances>
+        <componentInstance>
             
             <componentInstanceProperties>
                 
@@ -154,7 +161,8 @@
             
             <componentName>forceCommunity:seoAssistant</componentName>
             
-        </componentInstances>
+        </componentInstance>
+        </itemInstances>
         
         <name>sfdcHiddenRegion</name>
         

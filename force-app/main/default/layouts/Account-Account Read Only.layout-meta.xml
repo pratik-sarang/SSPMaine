@@ -536,13 +536,7 @@
         
     </relatedLists>
     
-    <relatedLists>
-        
-        <fields>NAME</fields>
-        
-        <relatedList>Referral__c.ReferredAccountID__c</relatedList>
-        
-    </relatedLists>
+    
     
     <relatedLists>
         

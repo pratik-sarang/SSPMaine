@@ -20,11 +20,14 @@
         
         <appendable>enabled</appendable>
         
-        <componentInstances>
+        <itemInstances>
+        <componentInstance>
             
             <componentName>sspClientCaseNotes</componentName>
             
-        </componentInstances>
+        </componentInstance>
+        </itemInstances>
+
         
         <name>content</name>
         
@@ -53,8 +56,8 @@
     <flexiPageRegions>
         
         <appendable>enabled</appendable>
-        
-        <componentInstances>
+        <itemInstances>
+        <componentInstance>
             
             <componentInstanceProperties>
                 
@@ -78,8 +81,8 @@
             
             <componentName>forceCommunity:seoAssistant</componentName>
             
-        </componentInstances>
-        
+        </componentInstance>
+        </itemInstances>
         <name>sfdcHiddenRegion</name>
         
         <prependable>enabled</prependable>

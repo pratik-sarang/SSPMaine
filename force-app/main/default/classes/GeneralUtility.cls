@@ -13,10 +13,15 @@ Megha Mittal               12/10/2019         Added the changes to fetch logged 
 -------------------------------------------------------------------
 */
 
+  
 Public inherited sharing Class GeneralUtility {
     
     Public Static Profile loggedInUserProfile;
     Public Static String SelectedRole;
+
+    public static final String sFieldsToQueryOnRecordType = 'DeveloperName,Id,IsActive,Name,SobjectType';
+    public static final String sWhereClauseOnRecordTypeRecord = 'DeveloperName=: strRecordTypeDeveloperName and SobjectType=: strSobjectName';
+
     /*
 *  @method: GeneralUtility.getLoggedInUserProfile()
 *  @description: method returns Profile Of logged In user. 
@@ -37,11 +42,11 @@ Public inherited sharing Class GeneralUtility {
 Returns record type instance.
 *
 */
-    /*Public Static RecordType fetchRecordType(String strRecordTypeDeveloperName, String strSobjectName){
+    Public Static RecordType fetchRecordType(String strRecordTypeDeveloperName, String strSobjectName){
 
         RecordType result = null;
-        String sFieldsToQueryOnRecordType = RE_DataBaseQueryFields.sFieldsToQueryOnRecordType;
-        String sWhereClauseOnRecordType = RE_DataBaseQueryFields.sWhereClauseOnRecordTypeRecord;
+        String sFieldsToQueryOnRecordType = sFieldsToQueryOnRecordType;
+        String sWhereClauseOnRecordType = sWhereClauseOnRecordTypeRecord;
         Map<String,String> mapRecordTypeQueryParameters = new Map<String,String>();
         mapRecordTypeQueryParameters.put(RE_GlobalConstants.sWhereClauseKey, sWhereClauseOnRecordType);
         Map<Boolean,String> mapRecordTypeQueryResponse = RE_DataAccessChecker.getFieldsAccessibility('RecordType', sFieldsToQueryOnRecordType, mapRecordTypeQueryParameters);
@@ -58,7 +63,7 @@ Returns record type instance.
             }
         }
         return result;         
-    }*/
+    }
     
     public static String getLoggedInUserContactId(){
         GeneralUtility.isAuthenticatedUser();
@@ -1193,11 +1198,13 @@ Returns record type instance.
     * @return        Account
     *******************************************************************************************************/
     public static Account createDummyAccount(String firstName,String lastName,String applicableRole){
-        RecordType objAccountRecordType = GeneralUtility.fetchRecordType('Citizen', 'Account');
+        //RecordType objAccountRecordType = GeneralUtility.fetchRecordType('Citizen', 'Account');
+        Id accountRecordTypeId = SSP_Utility.getRecrodTypeIdBySobjectAndDevName('Account','Citizen');
+
         List<User> userList = RE_SharingByPassCtrl.getUserList(RE_GlobalConstants.strSystemAutoProcessProfile);
         Account acc = new Account();
         acc.Name = firstName+' '+lastName;
-        acc.RecordTypeId = objAccountRecordType.Id;
+        acc.RecordTypeId = accountRecordTypeId;
         acc.Applicable_Roles__c=applicableRole;
         if(userList!=null && !userList.isEmpty()){
            acc.ownerId=userList[0].Id;
@@ -1453,7 +1460,7 @@ Returns record type instance.
         }
     }
     //This method is to get the list of PS to be activated and deactivated.
-    public static void assignPS(List<String> availableRoles){
+    /*public static void assignPS(List<String> availableRoles){
         List<String> activatePs=new List<String>();
         List<String> deactivatePS=new List<String>();
         Map<String,String> perm= getPermssionNamesForRole(availableRoles);
@@ -1464,7 +1471,7 @@ Returns record type instance.
                 deactivatePS.add(perm.get(role));        
         }
         callFlowForPS(activatePs,deactivatePS);
-    }
+    }*/
      /*****************************************************************************************************
     * @author        Payal Dubela
     * @date          07/27/2020

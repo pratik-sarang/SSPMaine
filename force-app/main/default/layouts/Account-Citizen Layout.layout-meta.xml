@@ -561,13 +561,7 @@
         
     </relatedLists>
     
-    <relatedLists>
-        
-        <fields>NAME</fields>
-        
-        <relatedList>Location__c.Account__c</relatedList>
-        
-    </relatedLists>
+    
     
     <relatedLists>
         
@@ -603,13 +597,7 @@
         
     </relatedLists>
     
-    <relatedLists>
-        
-        <fields>NAME</fields>
-        
-        <relatedList>Resource__c.Organization__c</relatedList>
-        
-    </relatedLists>
+    
     
     <relatedLists>
         

@@ -745,7 +745,7 @@ public class SSP_TestDataFactory {
 	* @author 		: ChangeMeIn@UserSettingsUnder.SFDoc
 	* @return 		:  List<Favorite__c>
 	* */
-     public static List<Favorite__c> createFavoriteRecord(String contactId, Integer intCount, Boolean doInsert) {
+     /*public static List<Favorite__c> createFavoriteRecord(String contactId, Integer intCount, Boolean doInsert) {
         List<Favorite__c> lstMem = new List<Favorite__c>();
         for(integer i=1 ; i<=intCount; i++ ){
             Favorite__c objMem = new Favorite__c();            
@@ -757,6 +757,6 @@ public class SSP_TestDataFactory {
             insert lstMem;
         }
         return lstMem;
-    }
+    }*/
         
 }

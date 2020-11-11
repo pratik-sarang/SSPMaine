@@ -27,9 +27,10 @@ global with sharing class LOG_DeleteLogMessagesScheduler implements Schedulable
     {
         
         Decimal dPurgeDays = lms.LOG_Log_Purge__c; 
-        public static final String sFieldsToQueryOnLogMsg='id, LOG_Age__c';
-        public static final String sWhereClauseOnLogMsg='LOG_Age__c > :dPurgeDays';
-    
+        //public static final String sFieldsToQueryOnLogMsg='id, LOG_Age__c';
+        String sFieldsToQueryOnLogMsg='id, LOG_Age__c';
+        //public static final String sWhereClauseOnLogMsg='LOG_Age__c > :dPurgeDays';
+        String sWhereClauseOnLogMsg='LOG_Age__c > :dPurgeDays';
         String sFieldsToQuery = sFieldsToQueryOnLogMsg;
         String sWhereClause = sWhereClauseOnLogMsg;
         String sQuery;

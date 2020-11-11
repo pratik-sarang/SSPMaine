@@ -5,8 +5,8 @@
     <flexiPageRegions>
         
         <appendable>enabled</appendable>
-        
-        <componentInstances>
+        <itemInstances>
+        <componentInstance>
             
             <componentInstanceProperties>
                 
@@ -26,8 +26,8 @@
             
             <componentName>flexipage:tab</componentName>
             
-        </componentInstances>
-        
+        </componentInstance>
+        </itemInstances>
         <name>facet-indirection-8b4b61ee-a88c-4912-9773-2c2f2b13f43e</name>
         
         <prependable>enabled</prependable>
@@ -41,8 +41,8 @@
     <flexiPageRegions>
         
         <appendable>enabled</appendable>
-        
-        <componentInstances>
+        <itemInstances>
+        <componentInstance>
             
             <componentInstanceProperties>
                 
@@ -70,8 +70,8 @@
             
             <componentName>forceCommunity:flowCommunity</componentName>
             
-        </componentInstances>
-        
+        </componentInstance>
+        </itemInstances>
         <name>ac7595be-734e-45b9-a85f-5d946bba0ae1</name>
         
         <prependable>enabled</prependable>
@@ -85,8 +85,8 @@
     <flexiPageRegions>
         
         <appendable>enabled</appendable>
-        
-        <componentInstances>
+        <itemInstances>
+        <componentInstance>
             
             <componentInstanceProperties>
                 
@@ -138,8 +138,8 @@
             
             <componentName>forceCommunity:section</componentName>
             
-        </componentInstances>
-        
+        </componentInstance>
+        </itemInstances>
         <name>content</name>
         
         <prependable>enabled</prependable>
@@ -153,8 +153,8 @@
     <flexiPageRegions>
         
         <appendable>enabled</appendable>
-        
-        <componentInstances>
+        <itemInstances>
+        <componentInstance>
             
             <componentInstanceProperties>
                 
@@ -178,8 +178,8 @@
             
             <componentName>forceCommunity:seoAssistant</componentName>
             
-        </componentInstances>
-        
+        </componentInstance>
+        </itemInstances>
         <name>sfdcHiddenRegion</name>
         
         <prependable>enabled</prependable>

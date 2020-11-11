@@ -3,8 +3,8 @@
 <FlexiPage xmlns="http://soap.sforce.com/2006/04/metadata">
     
     <flexiPageRegions>
-        
-        <componentInstances>
+        <itemInstances>
+        <componentInstance>
             
             <componentInstanceProperties>
                 
@@ -32,8 +32,8 @@
             
             <componentName>force:highlightsPanel</componentName>
             
-        </componentInstances>
-        
+        </componentInstance>
+        </itemInstances>
         <mode>Replace</mode>
         
         <name>header</name>
@@ -43,8 +43,8 @@
     </flexiPageRegions>
     
     <flexiPageRegions>
-        
-        <componentInstances>
+        <itemInstances>
+        <componentInstance>
             
             <componentInstanceProperties>
                 
@@ -72,8 +72,8 @@
             
             <componentName>force:relatedListContainer</componentName>
             
-        </componentInstances>
-        
+        </componentInstance>
+        </itemInstances>
         <mode>Replace</mode>
         
         <name>relatedTabContent</name>
@@ -83,13 +83,13 @@
     </flexiPageRegions>
     
     <flexiPageRegions>
-        
-        <componentInstances>
+        <itemInstances>
+        <componentInstance>
             
             <componentName>force:detailPanel</componentName>
             
-        </componentInstances>
-        
+        </componentInstance>
+        </itemInstances>
         <mode>Replace</mode>
         
         <name>detailTabContent</name>
@@ -99,8 +99,8 @@
     </flexiPageRegions>
     
     <flexiPageRegions>
-        
-        <componentInstances>
+        <itemInstances>
+        <componentInstance>
             
             <componentInstanceProperties>
                 
@@ -116,8 +116,8 @@
             
             <componentName>ltui:ILTEventClassListCmp</componentName>
             
-        </componentInstances>
-        
+        </componentInstance>
+        </itemInstances>
         <name>Facet-b32ab1cf-b26e-44da-a523-fd66b856e281</name>
         
         <type>Facet</type>
@@ -125,8 +125,8 @@
     </flexiPageRegions>
     
     <flexiPageRegions>
-        
-        <componentInstances>
+        <itemInstances>
+        <componentInstance>
             
             <componentInstanceProperties>
                 
@@ -146,9 +146,10 @@
             
             <componentName>flexipage:tab</componentName>
             
-        </componentInstances>
-        
-        <componentInstances>
+        </componentInstance>
+        </itemInstances>
+        <itemInstances>
+        <componentInstance>
             
             <componentInstanceProperties>
                 
@@ -176,9 +177,10 @@
             
             <componentName>flexipage:tab</componentName>
             
-        </componentInstances>
-        
-        <componentInstances>
+        </componentInstance>
+        </itemInstances>
+        <itemInstances>
+        <componentInstance>
             
             <componentInstanceProperties>
                 
@@ -198,8 +200,8 @@
             
             <componentName>flexipage:tab</componentName>
             
-        </componentInstances>
-        
+        </componentInstance>
+        </itemInstances>
         <mode>Replace</mode>
         
         <name>maintabs</name>
@@ -209,8 +211,8 @@
     </flexiPageRegions>
     
     <flexiPageRegions>
-        
-        <componentInstances>
+        <itemInstances>
+        <componentInstance>
             
             <componentInstanceProperties>
                 
@@ -222,8 +224,8 @@
             
             <componentName>flexipage:tabset</componentName>
             
-        </componentInstances>
-        
+        </componentInstance>
+        </itemInstances>
         <mode>Replace</mode>
         
         <name>main</name>
@@ -233,8 +235,8 @@
     </flexiPageRegions>
     
     <flexiPageRegions>
-        
-        <componentInstances>
+        <itemInstances>
+        <componentInstance>
             
             <componentInstanceProperties>
                 
@@ -246,9 +248,10 @@
             
             <componentName>ltui:LearningItemRelatedListCmp</componentName>
             
-        </componentInstances>
-        
-        <componentInstances>
+        </componentInstance>
+        </itemInstances>
+        <itemInstances>
+        <componentInstance>
             
             <componentInstanceProperties>
                 
@@ -260,9 +263,10 @@
             
             <componentName>ltui:LearningItemRelatedListCmp</componentName>
             
-        </componentInstances>
-        
-        <componentInstances>
+        </componentInstance>
+        </itemInstances>
+        <itemInstances>
+        <componentInstance>
             
             <componentInstanceProperties>
                 
@@ -274,9 +278,10 @@
             
             <componentName>ltui:LearningItemRelatedListCmp</componentName>
             
-        </componentInstances>
-        
-        <componentInstances>
+        </componentInstance>
+        </itemInstances>
+        <itemInstances>
+        <componentInstance>
             
             <componentInstanceProperties>
                 
@@ -288,9 +293,10 @@
             
             <componentName>ltui:LearningItemRelatedListCmp</componentName>
             
-        </componentInstances>
-        
-        <componentInstances>
+        </componentInstance>
+        </itemInstances>
+        <itemInstances>
+        <componentInstance>
             
             <componentInstanceProperties>
                 
@@ -302,9 +308,10 @@
             
             <componentName>ltui:LearningItemRelatedListCmp</componentName>
             
-        </componentInstances>
-        
-        <componentInstances>
+        </componentInstance>
+        </itemInstances>
+        <itemInstances>
+        <componentInstance>
             
             <componentInstanceProperties>
                 
@@ -316,9 +323,10 @@
             
             <componentName>ltui:LearningItemRelatedListCmp</componentName>
             
-        </componentInstances>
-        
-        <componentInstances>
+        </componentInstance>
+        </itemInstances>
+        <itemInstances>
+        <componentInstance>
             
             <componentInstanceProperties>
                 
@@ -330,8 +338,8 @@
             
             <componentName>ltui:LearningItemRelatedListCmp</componentName>
             
-        </componentInstances>
-        
+        </componentInstance>
+        </itemInstances>
         <mode>Replace</mode>
         
         <name>sidebar</name>

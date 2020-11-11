@@ -78,13 +78,7 @@
                 
             </layoutItems>
             
-            <layoutItems>
-                
-                <behavior>Edit</behavior>
-                
-                <field>Consent__c</field>
-                
-            </layoutItems>
+            
             
             <layoutItems>
                 

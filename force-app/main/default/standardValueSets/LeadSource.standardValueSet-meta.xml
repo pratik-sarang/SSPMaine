@@ -2,34 +2,29 @@
 <StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
     <sorted>false</sorted>
     <standardValue>
-        <fullName>Prospect</fullName>
+        <fullName>Web</fullName>
         <default>false</default>
-        <label>Prospect</label>
+        <label>Web</label>
     </standardValue>
     <standardValue>
-        <fullName>Customer - Direct</fullName>
+        <fullName>Phone Inquiry</fullName>
         <default>false</default>
-        <label>Customer - Direct</label>
+        <label>Phone Inquiry</label>
     </standardValue>
     <standardValue>
-        <fullName>Customer - Channel</fullName>
+        <fullName>Partner Referral</fullName>
         <default>false</default>
-        <label>Customer - Channel</label>
+        <label>Partner Referral</label>
     </standardValue>
     <standardValue>
-        <fullName>Channel Partner / Reseller</fullName>
+        <fullName>Purchased List</fullName>
         <default>false</default>
-        <label>Channel Partner / Reseller</label>
+        <label>Purchased List</label>
     </standardValue>
     <standardValue>
-        <fullName>Installation Partner</fullName>
+        <fullName>Advertisement</fullName>
         <default>false</default>
-        <label>Installation Partner</label>
-    </standardValue>
-    <standardValue>
-        <fullName>Technology Partner</fullName>
-        <default>false</default>
-        <label>Technology Partner</label>
+        <label>Advertisement</label>
     </standardValue>
     <standardValue>
         <fullName>Other</fullName>

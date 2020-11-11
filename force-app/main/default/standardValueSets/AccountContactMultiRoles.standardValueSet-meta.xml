@@ -1,477 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
-    
     <sorted>false</sorted>
-    
     <standardValue>
-        
-        <fullName>Assister</fullName>
-        
+        <fullName>Business User</fullName>
         <default>false</default>
-        
-        <label>Assister</label>
-        
+        <label>Business User</label>
     </standardValue>
-    
     <standardValue>
-        
-        <fullName>Authorized Representative</fullName>
-        
+        <fullName>Decision Maker</fullName>
         <default>false</default>
-        
-        <label>Authorized Representative</label>
-        
+        <label>Decision Maker</label>
     </standardValue>
-    
     <standardValue>
-        
-        <fullName>Insurance_Agent</fullName>
-        
+        <fullName>Economic Buyer</fullName>
         <default>false</default>
-        
-        <label>Insurance Agent</label>
-        
+        <label>Economic Buyer</label>
     </standardValue>
-    
     <standardValue>
-        
-        <fullName>Organization_Auth_Rep</fullName>
-        
+        <fullName>Economic Decision Maker</fullName>
         <default>false</default>
-        
-        <label>Organization Authorized Representative</label>
-        
+        <label>Economic Decision Maker</label>
     </standardValue>
-    
     <standardValue>
-        
-        <fullName>Individual_Auth_Rep</fullName>
-        
+        <fullName>Evaluator</fullName>
         <default>false</default>
-        
-        <label>Individual Authorized Representative</label>
-        
+        <label>Evaluator</label>
     </standardValue>
-    
     <standardValue>
-        
-        <fullName>Agency_Admin</fullName>
-        
+        <fullName>Executive Sponsor</fullName>
         <default>false</default>
-        
-        <label>Agency Admin</label>
-        
+        <label>Executive Sponsor</label>
     </standardValue>
-    
     <standardValue>
-        
-        <fullName>Citizen_Individual</fullName>
-        
+        <fullName>Influencer</fullName>
         <default>false</default>
-        
-        <label>Citizen</label>
-        
+        <label>Influencer</label>
     </standardValue>
-    
     <standardValue>
-        
-        <fullName>CHFS_Prod_Support</fullName>
-        
+        <fullName>Technical Buyer</fullName>
         <default>false</default>
-        
-        <label>CHFS Prod Support</label>
-        
+        <label>Technical Buyer</label>
     </standardValue>
-    
     <standardValue>
-        
-        <fullName>Contact_Center_View_and_Edit</fullName>
-        
+        <fullName>Other</fullName>
         <default>false</default>
-        
-        <label>Contact Center (View and Edit)</label>
-        
+        <label>Other</label>
     </standardValue>
-    
-    <standardValue>
-        
-        <fullName>Contact_Center_View_Only</fullName>
-        
-        <default>false</default>
-        
-        <label>Contact Center (View Only)</label>
-        
-    </standardValue>
-    
-    <standardValue>
-        
-        <fullName>DAIL_Worker</fullName>
-        
-        <default>false</default>
-        
-        <label>DAIL Worker</label>
-        
-    </standardValue>
-    
-    <standardValue>
-        
-        <fullName>DCBS_View_Only</fullName>
-        
-        <default>false</default>
-        
-        <label>DCBS - View Only</label>
-        
-    </standardValue>
-    
-    <standardValue>
-        
-        <fullName>DCBS_Central_Office_View_and_Edit</fullName>
-        
-        <default>false</default>
-        
-        <label>DCBS Central Office - View &amp; Edit</label>
-        
-    </standardValue>
-    
-    <standardValue>
-        
-        <fullName>Department_Of_Education_Representative</fullName>
-        
-        <default>false</default>
-        
-        <label>Department of Education Representative</label>
-        
-    </standardValue>
-    
-    <standardValue>
-        
-        <fullName>DJJ_Representative</fullName>
-        
-        <default>false</default>
-        
-        <label>DJJ Representative</label>
-        
-    </standardValue>
-    
-    <standardValue>
-        
-        <fullName>DOC_Representative</fullName>
-        
-        <default>false</default>
-        
-        <label>DOC Representative</label>
-        
-    </standardValue>
-    
-    <standardValue>
-        
-        <fullName>Eligibility_&amp;_Benefit_Inquiry_User</fullName>
-        
-        <default>false</default>
-        
-        <label>Eligibility &amp; Benefit Inquiry User</label>
-        
-    </standardValue>
-    
-    <standardValue>
-        
-        <fullName>Jailor</fullName>
-        
-        <default>false</default>
-        
-        <label>Jailor</label>
-        
-    </standardValue>
-    
-    <standardValue>
-        
-        <fullName>Mail_Center_Supervisor</fullName>
-        
-        <default>false</default>
-        
-        <label>Mail Center Supervisor</label>
-        
-    </standardValue>
-    
-    <standardValue>
-        
-        <fullName>Mail_Center_Worker</fullName>
-        
-        <default>false</default>
-        
-        <label>Mail Center Worker</label>
-        
-    </standardValue>
-    
-    <standardValue>
-        
-        <fullName>Psychiatric_Facility_Representative</fullName>
-        
-        <default>false</default>
-        
-        <label>Psychiatric Facility Representative</label>
-        
-    </standardValue>
-    
-    <standardValue>
-        
-        <fullName>QE_Hospital</fullName>
-        
-        <default>false</default>
-        
-        <label>QEHospital</label>
-        
-    </standardValue>
-    
-    <standardValue>
-        
-        <fullName>QE_Pregnancy</fullName>
-        
-        <default>false</default>
-        
-        <label>QEPregnancy</label>
-        
-    </standardValue>
-    
-    <standardValue>
-        
-        <fullName>APPLICATION_INITIATOR</fullName>
-        
-        <default>false</default>
-        
-        <label>Application Initiator</label>
-        
-    </standardValue>
-    
-    <standardValue>
-        
-        <fullName>APPLICATION_REVIEWER</fullName>
-        
-        <default>false</default>
-        
-        <label>APPLICATION REVIEWER</label>
-        
-    </standardValue>
-    
-    <standardValue>
-        
-        <fullName>CASE_MANAGEMENT_ADMINISTRATOR_INTERNAL</fullName>
-        
-        <default>false</default>
-        
-        <label>Case Management Administrator (Internal)</label>
-        
-    </standardValue>
-    
-    <standardValue>
-        
-        <fullName>WAIVER_CAPACITY_REVIEWER</fullName>
-        
-        <default>false</default>
-        
-        <label>Waiver Capacity Reviewer</label>
-        
-    </standardValue>
-    
-    <standardValue>
-        
-        <fullName>CASE_MANAGER</fullName>
-        
-        <default>false</default>
-        
-        <label>Case Manager</label>
-        
-    </standardValue>
-    
-    <standardValue>
-        
-        <fullName>CASE_SUPERVISOR</fullName>
-        
-        <default>false</default>
-        
-        <label>Case Supervisor</label>
-        
-    </standardValue>
-    
-    <standardValue>
-        
-        <fullName>CHFS_APPLICATION_INITIATOR</fullName>
-        
-        <default>false</default>
-        
-        <label>CHFS Application Initiator</label>
-        
-    </standardValue>
-    
-    <standardValue>
-        
-        <fullName>LEVEL_OF_CARE_ASSESSOR</fullName>
-        
-        <default>false</default>
-        
-        <label>Level of Care Assessor</label>
-        
-    </standardValue>
-    
-    <standardValue>
-        
-        <fullName>LOC_REVIEWER</fullName>
-        
-        <default>false</default>
-        
-        <label>LOC REVIEWER</label>
-        
-    </standardValue>
-    
-    <standardValue>
-        
-        <fullName>POC_REVIEWER</fullName>
-        
-        <default>false</default>
-        
-        <label>POC REVIEWER</label>
-        
-    </standardValue>
-    
-    <standardValue>
-        
-        <fullName>SERVICE_NEEDS_ASSESSOR</fullName>
-        
-        <default>false</default>
-        
-        <label>Service Needs Assessor</label>
-        
-    </standardValue>
-    
-    <standardValue>
-        
-        <fullName>INTERNAL_LOC_ASSESSOR</fullName>
-        
-        <default>false</default>
-        
-        <label>Internal LOC Assessor</label>
-        
-    </standardValue>
-    
-    <standardValue>
-        
-        <fullName>WAIVER_DIRECT_SERVICE_PROVIDER</fullName>
-        
-        <default>false</default>
-        
-        <label>Waiver Direct Service Provider</label>
-        
-    </standardValue>
-    
-    <standardValue>
-        
-        <fullName>WAIVER_DIRECT_SERVICE_PROVIDER_SUPERVISOR</fullName>
-        
-        <default>false</default>
-        
-        <label>Waiver Direct Service Provider Supervisor</label>
-        
-    </standardValue>
-    
-    <standardValue>
-        
-        <fullName>CAPACITY_MANAGEMENT_ADMINISTRATOR</fullName>
-        
-        <default>false</default>
-        
-        <label>CAPACITY MANAGEMENT ADMINISTRATOR</label>
-        
-    </standardValue>
-    
-    <standardValue>
-        
-        <fullName>Case_Management_Administrator_Read_Only</fullName>
-        
-        <default>false</default>
-        
-        <label>Case Management Administrator (Read Only)</label>
-        
-    </standardValue>
-    
-    <standardValue>
-        
-        <fullName>PROD_Support_Read_Only</fullName>
-        
-        <default>false</default>
-        
-        <label>PROD Support (Read Only)</label>
-        
-    </standardValue>
-    
-    <standardValue>
-        
-        <fullName>CHFS_Internal_Reviewer</fullName>
-        
-        <default>false</default>
-        
-        <label>CHFS Incident Reviewer</label>
-        
-    </standardValue>
-    
-    <standardValue>
-        
-        <fullName>Community Partner Admin</fullName>
-        
-        <default>false</default>
-        
-        <label>Community Partner Admin</label>
-        
-    </standardValue>
-    
-    <standardValue>
-        
-        <fullName>Community Partner Staff</fullName>
-        
-        <default>false</default>
-        
-        <label>Community Partner Staff</label>
-        
-    </standardValue>
-    
-    <standardValue>
-        
-        <fullName>Case Worker Supervisor</fullName>
-        
-        <default>false</default>
-        
-        <label>Case Worker Supervisor</label>
-        
-    </standardValue>
-    
-    <standardValue>
-        
-        <fullName>Case Worker</fullName>
-        
-        <default>false</default>
-        
-        <label>Case Worker</label>
-        
-    </standardValue>
-    
-    <standardValue>
-        
-        <fullName>RE United Way Staff</fullName>
-        
-        <default>false</default>
-        
-        <label>RE United Way Staff</label>
-        
-    </standardValue>
-    
-    <standardValue>
-        
-        <fullName>State User</fullName>
-        
-        <default>false</default>
-        
-        <label>State User</label>
-        
-    </standardValue>
-    
 </StandardValueSet>

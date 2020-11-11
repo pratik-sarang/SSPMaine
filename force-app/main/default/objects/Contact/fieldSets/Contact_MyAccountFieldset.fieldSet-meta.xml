@@ -65,14 +65,6 @@
             <isRequired>false</isRequired>
         
         </displayedFields>
-    <displayedFields>
-        
-            <field>PrimaryLocation__c</field>
-        
-            <isFieldManaged>false</isFieldManaged>
-        
-            <isRequired>false</isRequired>
-        
-        </displayedFields>
+    
     <label>Contact_MyAccountFieldset</label>
 </FieldSet>
