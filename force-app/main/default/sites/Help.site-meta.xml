@@ -46,8 +46,6 @@
     
     <requireHttps>true</requireHttps>
     
-    <requireInsecurePortalAccess>false</requireInsecurePortalAccess>
-    
     <siteAdmin>systemautoprocess_ressp@ky.gov</siteAdmin>
     
     <siteTemplate>SiteTemplate</siteTemplate>

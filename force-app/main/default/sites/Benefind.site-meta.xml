@@ -44,8 +44,6 @@
     
     <requireHttps>true</requireHttps>
     
-    <requireInsecurePortalAccess>false</requireInsecurePortalAccess>
-    
     <robotsTxtPage>Robots_Deny</robotsTxtPage>
     
     <selfRegPage>CommunitiesSelfReg</selfRegPage>

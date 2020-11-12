@@ -619,13 +619,7 @@
     
     
     
-    <relatedLists>
-        
-        <fields>NAME</fields>
-        
-        <relatedList>Consent__c.Organization__c</relatedList>
-        
-    </relatedLists>
+   
     
     <relatedLists>
         

@@ -540,13 +540,7 @@
     
     
     
-    <relatedLists>
-        
-        <fields>NAME</fields>
-        
-        <relatedList>Resource__c.Organization__c</relatedList>
-        
-    </relatedLists>
+    
     
     <relatedLists>
         

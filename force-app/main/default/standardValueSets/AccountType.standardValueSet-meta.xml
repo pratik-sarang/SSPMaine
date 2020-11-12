@@ -32,6 +32,16 @@
         <label>Technology Partner</label>
     </standardValue>
     <standardValue>
+        <fullName>AssisterOrg</fullName>
+        <default>false</default>
+        <label>AssisterOrg</label>
+    </standardValue>
+    <standardValue>
+        <fullName>PartnerOrg</fullName>
+        <default>false</default>
+        <label>PartnerOrg</label>
+    </standardValue>
+    <standardValue>
         <fullName>Other</fullName>
         <default>false</default>
         <label>Other</label>

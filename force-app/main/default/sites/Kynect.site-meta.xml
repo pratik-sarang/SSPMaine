@@ -46,8 +46,6 @@
     
     <requireHttps>true</requireHttps>
     
-    <requireInsecurePortalAccess>false</requireInsecurePortalAccess>
-    
     <selfRegPage>CommunitiesSelfReg</selfRegPage>
     
     <siteAdmin>rgurivelli@deloitte.com</siteAdmin>
