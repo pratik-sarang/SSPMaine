@@ -18,7 +18,7 @@ public class SSP_KOGServiceCreateACRServiceTest {
         Id accountRecordTypeId = SSP_Utility.getRecrodTypeIdBySobjectAndDevName('Account','Application');
 
         Account acc = new Account(Name = 'testAcc');
-        acc.RecordTypeId = objAccountRecordType.Id;
+        acc.RecordTypeId = accountRecordTypeId;
         insert acc;
         Account acc1 = new Account(Name = 'testAcc');
         acc1.RecordTypeId = accountRecordTypeId;
@@ -42,21 +42,21 @@ public class SSP_KOGServiceCreateACRServiceTest {
         Test.setMock(WebServiceMock.class, new SSP_KOGServiceCreateACRServiceMockTest());
 		SSP_KOGServiceCreateACRService.SSP_KOGServiceCreateACRRequest request = new SSP_KOGServiceCreateACRService.SSP_KOGServiceCreateACRRequest();
         //RecordType objAccountRecordType = GeneralUtility.fetchRecordType('Application', 'Account');
-        
-
+        Id accountRecordTypeId = SSP_Utility.getRecrodTypeIdBySobjectAndDevName('Account','Application');
+        Id contactRecordTypeId1 = SSP_Utility.getRecrodTypeIdBySobjectAndDevName('Contact','Non_Citizen');
         Account acc = new Account(Name = 'testAcc');
         acc.RecordTypeId = accountRecordTypeId;
         insert acc;
         Account acc1 = new Account(Name = 'testAcc1');
-        acc1.RecordTypeId = objAccountRecordType.Id;
+        acc1.RecordTypeId = accountRecordTypeId;
         acc1.DCDataId__c = 123456;
         acc1.OrganizationUniqueId__c = '123456';
         Account acc2 = new Account(Name = 'testAcc2');
-        acc2.RecordTypeId = objAccountRecordType.Id;
+        acc2.RecordTypeId = accountRecordTypeId;
         acc2.DCDataId__c = 1234567;
 		insert acc2;
         Account acc3 = new Account(Name = 'testAcc3');
-        acc3.RecordTypeId = objAccountRecordType.Id;
+        acc3.RecordTypeId = accountRecordTypeId;
         acc3.DCDataId__c = 1234567;
 		insert acc3;
         

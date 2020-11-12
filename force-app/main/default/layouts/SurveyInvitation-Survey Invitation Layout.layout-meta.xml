@@ -80,13 +80,7 @@
             
             
             
-            <layoutItems>
-                
-                <behavior>Edit</behavior>
-                
-                <field>Referral__c</field>
-                
-            </layoutItems>
+           
             
         </layoutColumns>
         

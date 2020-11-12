@@ -78,9 +78,10 @@ public class SSP_NonCitizenUserLogicTest {
         
         Test.setMock(WebServiceMock.class, new kyHbeMciDatacontractsMock());
         //RecordType objRecordType = GeneralUtility.fetchRecordType('Citizen', 'Contact');
+        Id contactRecordTypeId = SSP_Utility.getRecrodTypeIdBySobjectAndDevName('Contact','Citizen');
         Contact con1 = new Contact(RecordTypeId = contactRecordTypeId, FirstName = 'FirstNameOne', LastName = 'LastNameOne',Email = 'testone@email.com' );
         insert con1;
-        Contact con = new Contact(RecordTypeId = objRecordType.Id, FirstName = 'FirstName', LastName = 'LastName',Email = 'test@email.com' );
+        Contact con = new Contact(RecordTypeId = contactRecordTypeId, FirstName = 'FirstName', LastName = 'LastName',Email = 'test@email.com' );
         //insert con;
         
         User usr = new User(FirstName = 'FirstName',LastName = 'LastName',Email = 'test@test.com',LanguageLocaleKey = 'en_US',LocaleSidKey = 'en_US',Username = con.Email+'.idetest',ContactId=con.Id);

@@ -617,13 +617,7 @@
         
     </relatedLists>
     
-    <relatedLists>
-        
-        <fields>NAME</fields>
-        
-        <relatedList>Feedback__c.AccountID__c</relatedList>
-        
-    </relatedLists>
+    
     
     <relatedLists>
         

@@ -3,7 +3,7 @@
     <fullName>All</fullName>
     <columns>NAME</columns>
     <columns>Contact__c</columns>
-    <columns>LocationResource__c</columns>
+    
     <filterScope>Everything</filterScope>
     <label>All</label>
 </ListView>

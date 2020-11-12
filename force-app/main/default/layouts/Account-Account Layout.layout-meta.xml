@@ -728,13 +728,7 @@
     
     
     
-    <relatedLists>
-        
-        <fields>NAME</fields>
-        
-        <relatedList>Location__c.Account__c</relatedList>
-        
-    </relatedLists>
+   
     
     <relatedLists>
         

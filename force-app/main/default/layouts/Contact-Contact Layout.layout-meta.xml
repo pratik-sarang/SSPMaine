@@ -374,14 +374,7 @@
         <fields>CM.LAST_UPDATE</fields>
         <relatedList>RelatedCampaignList</relatedList>
     </relatedLists>
-    <relatedLists>
-        <fields>NAME</fields>
-        <fields>Category__c</fields>
-        <fields>IsLatest__c</fields>
-        <fields>Score__c</fields>
-        <fields>AssessmentDate__c</fields>
-        <relatedList>SDOH__c.Resident__c</relatedList>
-    </relatedLists>
+    
     <relatedLists>
         <fields>NAME</fields>
         <relatedList>SystemAlert__c.ParentId__c</relatedList>
