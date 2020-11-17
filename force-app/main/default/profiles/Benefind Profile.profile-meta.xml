@@ -2472,16 +2472,6 @@
         
         <editable>true</editable>
         
-        <field>SurveyInvitation.Consent__c</field>
-        
-        <readable>true</readable>
-        
-    </fieldPermissions>
-    
-	<fieldPermissions>
-        
-        <editable>true</editable>
-        
         <field>SurveyInvitation.Flow_Expiration_Date__c</field>
         
         <readable>true</readable>
