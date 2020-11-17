@@ -863,26 +863,9 @@
     
     
     
-    <fieldPermissions>
-        
-        <editable>false</editable>
-        
-        <field>Opportunity.Loss_Reason__c</field>
-        
-        <readable>false</readable>
-        
-    </fieldPermissions>
     
-    <fieldPermissions>
-        
-        <editable>false</editable>
-        
-        <field>Opportunity.ROI_Analysis_Completed__c</field>
-        
-        <readable>false</readable>
-        
-    </fieldPermissions>
     
+   
     
     
     
@@ -897,15 +880,7 @@
     
     
     
-    <fieldPermissions>
-        
-        <editable>false</editable>
-        
-        <field>User.One_Time_Activity__c</field>
-        
-        <readable>false</readable>
-        
-    </fieldPermissions>
+    
     
     <hasActivationRequired>false</hasActivationRequired>
     

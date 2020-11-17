@@ -1712,216 +1712,6 @@
     
     <fieldPermissions>
         
-        <editable>false</editable>
-        
-        <field>ClaimMySiteRequest__c.Assignee__c</field>
-        
-        <readable>true</readable>
-        
-    </fieldPermissions>
-    
-    <fieldPermissions>
-        
-        <editable>true</editable>
-        
-        <field>ClaimMySiteRequest__c.SourceSystem__c</field>
-        
-        <readable>true</readable>
-        
-    </fieldPermissions>
-    
-    <fieldPermissions>
-        
-        <editable>true</editable>
-        
-        <field>ClaimMySiteRequest__c.ExternalId__c</field>
-        
-        <readable>true</readable>
-        
-    </fieldPermissions>
-     
-    <fieldPermissions>
-        
-        <editable>false</editable>
-        
-        <field>ClaimMySiteRequest__c.Closed_Date__c</field>
-        
-        <readable>true</readable>
-        
-    </fieldPermissions>
-    
-    <fieldPermissions>
-        
-        <editable>true</editable>
-        
-        <field>ClaimMySiteRequest__c.DateOfRequest__c</field>
-        
-        <readable>true</readable>
-        
-    </fieldPermissions>
-    
-    <fieldPermissions>
-        
-        <editable>true</editable>
-        
-        <field>ClaimMySiteRequest__c.Email__c</field>
-        
-        <readable>true</readable>
-        
-    </fieldPermissions>
-    
-    <fieldPermissions>
-        
-        <editable>true</editable>
-        
-        <field>ClaimMySiteRequest__c.FirstName__c</field>
-        
-        <readable>true</readable>
-        
-    </fieldPermissions>
-    
-    <fieldPermissions>
-        
-        <editable>true</editable>
-        
-        <field>ClaimMySiteRequest__c.HearAboutRE__c</field>
-        
-        <readable>true</readable>
-        
-    </fieldPermissions>
-    
-    <fieldPermissions>
-        
-        <editable>true</editable>
-        
-        <field>ClaimMySiteRequest__c.LastName__c</field>
-        
-        <readable>true</readable>
-        
-    </fieldPermissions>
-    
-    <fieldPermissions>
-        
-        <editable>true</editable>
-        
-        <field>ClaimMySiteRequest__c.OrganizationRole__c</field>
-        
-        <readable>true</readable>
-        
-    </fieldPermissions>
-    
-    <fieldPermissions>
-        
-        <editable>true</editable>
-        
-        <field>ClaimMySiteRequest__c.Organization__c</field>
-        
-        <readable>true</readable>
-        
-    </fieldPermissions>
-    
-    <fieldPermissions>
-        
-        <editable>true</editable>
-        
-        <field>ClaimMySiteRequest__c.OtherRole__c</field>
-        
-        <readable>true</readable>
-        
-    </fieldPermissions>
-    
-    <fieldPermissions>
-        
-        <editable>true</editable>
-        
-        <field>ClaimMySiteRequest__c.PhoneNumber__c</field>
-        
-        <readable>true</readable>
-        
-    </fieldPermissions>
-    
-    <fieldPermissions>
-        
-        <editable>true</editable>
-        
-        <field>ClaimMySiteRequest__c.ReasonForDenial__c</field>
-        
-        <readable>true</readable>
-        
-    </fieldPermissions>
-    
-    <fieldPermissions>
-        
-        <editable>true</editable>
-        
-        <field>ClaimMySiteRequest__c.ReasonforJoining__c</field>
-        
-        <readable>true</readable>
-        
-    </fieldPermissions>
-    
-    <fieldPermissions>
-        
-        <editable>false</editable>
-        
-        <field>ClaimMySiteRequest__c.RequesterEmail__c</field>
-        
-        <readable>false</readable>
-        
-    </fieldPermissions>
-    
-    <fieldPermissions>
-        
-        <editable>true</editable>
-        
-        <field>ClaimMySiteRequest__c.RequestingOrganizationName__c</field>
-        
-        <readable>true</readable>
-        
-    </fieldPermissions>
-    
-    <fieldPermissions>
-        
-        <editable>true</editable>
-        
-        <field>ClaimMySiteRequest__c.Status__c</field>
-        
-        <readable>true</readable>
-        
-    </fieldPermissions>
-    
-    <fieldPermissions>
-        
-        <editable>true</editable>
-        
-        <field>ClaimMySiteRequest__c.TermsAndConditionsCheck__c</field>
-        
-        <readable>true</readable>
-        
-    </fieldPermissions>
-    
-    <fieldPermissions>
-        
-        <editable>true</editable>
-        
-        <field>ClaimMySiteRequest__c.UniqueIdentificationNo__c</field>
-        
-        <readable>true</readable>
-        
-    </fieldPermissions>
-    
-    <fieldPermissions>
-        
-        <editable>true</editable>
-        
-        <field>ClaimMySiteRequest__c.VolunteerOps__c</field>
-        
-        <readable>true</readable>
-        
-    </fieldPermissions>
-    
-    <fieldPermissions>
-        
         <editable>true</editable>
         
         <field>CommunicationLog__c.EmailSubject__c</field>
@@ -2879,20 +2669,7 @@
         <layout>CaseInteraction-Case Feed Layout</layout>
         
     </layoutAssignments>
-    
-    <layoutAssignments>
-        
-        <layout>ClaimMySiteRequest__c-Claim My Site Request Layout</layout>
-        
-    </layoutAssignments>
-    
-    <layoutAssignments>
-        
-        <layout>ClaimMySiteRequest__c-Claim My Site Request Layout</layout>
-        
-        <recordType>ClaimMySiteRequest__c.State_User_View</recordType>
-        
-    </layoutAssignments>
+
     
     <layoutAssignments>
         
@@ -3233,24 +3010,6 @@
         
         <modifyAllRecords>true</modifyAllRecords>
         
-        <object>ClaimMySiteRequest__c</object>
-        
-        <viewAllRecords>true</viewAllRecords>
-        
-    </objectPermissions>
-    
-    <objectPermissions>
-        
-        <allowCreate>true</allowCreate>
-        
-        <allowDelete>true</allowDelete>
-        
-        <allowEdit>true</allowEdit>
-        
-        <allowRead>true</allowRead>
-        
-        <modifyAllRecords>true</modifyAllRecords>
-        
         <object>CommunicationLog__c</object>
         
         <viewAllRecords>true</viewAllRecords>
@@ -3572,16 +3331,6 @@
     
     <recordTypeVisibilities>
         
-        <default>true</default>
-        
-        <recordType>ClaimMySiteRequest__c.State_User_View</recordType>
-        
-        <visible>true</visible>
-        
-    </recordTypeVisibilities>
-    
-    <recordTypeVisibilities>
-        
         <default>false</default>
         
         <recordType>Contact.Assister</recordType>
@@ -3629,15 +3378,7 @@
         <visible>false</visible>
         
     </recordTypeVisibilities>
-    
-    <tabVisibilities>
-        
-        <tab>ClaimMySiteRequest__c</tab>
-        
-        <visibility>DefaultOn</visibility>
-        
-    </tabVisibilities>
-    
+
     <tabVisibilities>
         
         <tab>Getting_Started</tab>

@@ -21807,13 +21807,7 @@
         
     </userPermissions>
     
-    <userPermissions>
-        
-        <enabled>true</enabled>
-        
-        <name>SocialInsightsLogoAdmin</name>
-        
-    </userPermissions>
+    
     
     <userPermissions>
         
@@ -21959,13 +21953,7 @@
         
     </userPermissions>
     
-    <userPermissions>
-        
-        <enabled>true</enabled>
-        
-        <name>ViewAllForecasts</name>
-        
-    </userPermissions>
+   
     
     <userPermissions>
         
