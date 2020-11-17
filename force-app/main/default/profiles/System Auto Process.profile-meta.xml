@@ -23832,14 +23832,7 @@
         <name>ApiEnabled</name>
         
     </userPermissions>
-    
-    <userPermissions>
-        
-        <enabled>true</enabled>
-        
-        <name>ApproveContract</name>
-        
-    </userPermissions>
+
     
     <userPermissions>
         
@@ -23910,14 +23903,6 @@
         <enabled>true</enabled>
         
         <name>ChangeDashboardColors</name>
-        
-    </userPermissions>
-    
-    <userPermissions>
-        
-        <enabled>true</enabled>
-        
-        <name>ChatterEditOwnPost</name>
         
     </userPermissions>
     
@@ -24038,14 +24023,6 @@
         <enabled>true</enabled>
         
         <name>CreateTopics</name>
-        
-    </userPermissions>
-    
-    <userPermissions>
-        
-        <enabled>true</enabled>
-        
-        <name>CreateWorkBadgeDefinition</name>
         
     </userPermissions>
     
@@ -24766,14 +24743,6 @@
         <enabled>true</enabled>
         
         <name>OutboundMigrationToolsUser</name>
-        
-    </userPermissions>
-    
-    <userPermissions>
-        
-        <enabled>true</enabled>
-        
-        <name>OverrideForecasts</name>
         
     </userPermissions>
     

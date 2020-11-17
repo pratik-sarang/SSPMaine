@@ -541,16 +541,6 @@
         
         <editable>false</editable>
         
-        <field>Contact.PrimaryLocation__c</field>
-        
-        <readable>false</readable>
-        
-    </fieldPermissions>
-    
-    <fieldPermissions>
-        
-        <editable>false</editable>
-        
         <field>Contact.State__c</field>
         
         <readable>false</readable>

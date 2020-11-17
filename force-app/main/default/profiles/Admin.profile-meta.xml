@@ -24837,22 +24837,7 @@
         <name>ChangeDashboardColors</name>
         
     </userPermissions>
-    
-    <userPermissions>
-        
-        <enabled>true</enabled>
-        
-        <name>ChatterEditOwnPost</name>
-        
-    </userPermissions>
-    
-    <userPermissions>
-        
-        <enabled>true</enabled>
-        
-        <name>ChatterEditOwnRecordPost</name>
-        
-    </userPermissions>
+
     
     <userPermissions>
         
@@ -24987,14 +24972,6 @@
         <enabled>true</enabled>
         
         <name>CreateTopics</name>
-        
-    </userPermissions>
-    
-    <userPermissions>
-        
-        <enabled>true</enabled>
-        
-        <name>CreateWorkBadgeDefinition</name>
         
     </userPermissions>
     
@@ -25739,14 +25716,6 @@
         <enabled>true</enabled>
         
         <name>OutboundMigrationToolsUser</name>
-        
-    </userPermissions>
-    
-    <userPermissions>
-        
-        <enabled>true</enabled>
-        
-        <name>OverrideForecasts</name>
         
     </userPermissions>
     

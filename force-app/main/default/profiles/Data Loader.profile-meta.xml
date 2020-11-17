@@ -7150,14 +7150,7 @@
         <name>AssignTopics</name>
         
     </userPermissions>
-    
-    <userPermissions>
-        
-        <enabled>true</enabled>
-        
-        <name>ChatterEditOwnPost</name>
-        
-    </userPermissions>
+
     
     <userPermissions>
         
@@ -7356,14 +7349,6 @@
         <enabled>true</enabled>
         
         <name>MassInlineEdit</name>
-        
-    </userPermissions>
-    
-    <userPermissions>
-        
-        <enabled>true</enabled>
-        
-        <name>OverrideForecasts</name>
         
     </userPermissions>
     
