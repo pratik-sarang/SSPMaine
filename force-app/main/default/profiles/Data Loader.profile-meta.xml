@@ -5325,55 +5325,19 @@
         
     </layoutAssignments>
     
-    <layoutAssignments>
-        
-        <layout>AnswerChoice__c-AnswerChoice Layout</layout>
-        
-    </layoutAssignments>
     
-    <layoutAssignments>
-        
-        <layout>AnswerChoice__c-AnswerChoice Layout</layout>
-        
-        <recordType>AnswerChoice__c.Answer_choice</recordType>
-        
-    </layoutAssignments>
     
-    <layoutAssignments>
-        
-        <layout>AssessmentResponse__c-Assessment Response Layout</layout>
-        
-    </layoutAssignments>
     
-    <layoutAssignments>
-        
-        <layout>AssessmentResponse__c-Assessment Response Layout</layout>
-        
-	<recordType>AssessmentResponse__c.RE_Assessment_Response</recordType>
-        
-    </layoutAssignments>
     
-    <layoutAssignments>
-        
-        <layout>Assessment__c-Assessment Layout</layout>
-        
-    </layoutAssignments>
     
-    <layoutAssignments>
-        
-        <layout>Assessment__c-Assessment Layout</layout>
-        
-        <recordType>Assessment__c.Assessment_Template</recordType>
-        
-    </layoutAssignments>
     
-    <layoutAssignments>
-        
-        <layout>Assessment__c-Assessment Layout</layout>
-        
-        <recordType>Assessment__c.User_Assessment</recordType>
-        
-    </layoutAssignments>
+    
+    
+    
+    
+    
+    
+    
     
     <layoutAssignments>
         
@@ -7376,13 +7340,7 @@
         
     </userPermissions>
     
-    <userPermissions>
-        
-        <enabled>true</enabled>
-        
-        <name>SendExternalEmailAvailable</name>
-        
-    </userPermissions>
+   
     
     <userPermissions>
         

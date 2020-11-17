@@ -25212,13 +25212,7 @@
         
     </userPermissions>
     
-    <userPermissions>
-        
-        <enabled>true</enabled>
-        
-        <name>InboundMigrationToolsUser</name>
-        
-    </userPermissions>
+   
     
     <userPermissions>
         
@@ -25540,13 +25534,7 @@
         
     </userPermissions>
     
-    <userPermissions>
-        
-        <enabled>true</enabled>
-        
-        <name>ManageQuotas</name>
-        
-    </userPermissions>
+   
     
     <userPermissions>
         

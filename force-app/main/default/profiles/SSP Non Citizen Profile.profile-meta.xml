@@ -23571,25 +23571,9 @@
         
     </recordTypeVisibilities>
     
-    <recordTypeVisibilities>
-        
-        <default>false</default>
-        
-        <recordType>AnswerChoice__c.Answer_choice</recordType>
-        
-        <visible>false</visible>
-        
-    </recordTypeVisibilities>
+   
     
-    <recordTypeVisibilities>
-        
-        <default>false</default>
-        
-        <recordType>AssessmentResponse__c.RE_Assessment_Response</recordType>
-        
-        <visible>false</visible>
-        
-    </recordTypeVisibilities>
+   
     
     <recordTypeVisibilities>
         

@@ -7022,95 +7022,26 @@
         
     </fieldPermissions>
     
-    <fieldPermissions>
-        
-        <editable>false</editable>
-        
-        <field>AssessmentResponse__c.AnswerChoice__c</field>
-        
-        <readable>true</readable>
-        
-    </fieldPermissions>
     
-    <fieldPermissions>
-        
-        <editable>false</editable>
-        
-        <field>AssessmentResponse__c.AssessmentGeolocation__c</field>
-        
-        <readable>true</readable>
-        
-    </fieldPermissions>
     
-    <fieldPermissions>
-        
-        <editable>false</editable>
-        
-        <field>AssessmentResponse__c.Assessment__c</field>
-        
-        <readable>true</readable>
-        
-    </fieldPermissions>
     
-    <fieldPermissions>
-        
-        <editable>false</editable>
-        
-        <field>AssessmentResponse__c.Email__c</field>
-        
-        <readable>true</readable>
-        
-    </fieldPermissions>
     
-    <fieldPermissions>
-        
-        <editable>false</editable>
-        
-        <field>AssessmentResponse__c.ExternalId__c</field>
-        
-        <readable>true</readable>
-        
-    </fieldPermissions>
     
-    <fieldPermissions>
-        
-        <editable>false</editable>
-        
-        <field>AssessmentResponse__c.Question__c</field>
-        
-        <readable>true</readable>
-        
-    </fieldPermissions>
     
-    <fieldPermissions>
-        
-        <editable>true</editable>
-        
-        <field>AssessmentResponse__c.Resident__c</field>
-        
-        <readable>true</readable>
-        
-    </fieldPermissions>
     
-    <fieldPermissions>
-        
-        <editable>false</editable>
-        
-        <field>AssessmentResponse__c.SourceSystem__c</field>
-        
-        <readable>true</readable>
-        
-    </fieldPermissions>
     
-    <fieldPermissions>
-        
-        <editable>false</editable>
-        
-        <field>AssessmentResponse__c.TextAnswer__c</field>
-        
-        <readable>true</readable>
-        
-    </fieldPermissions>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     <fieldPermissions>
         
@@ -21722,11 +21653,7 @@
         
     </layoutAssignments>
     
-    <layoutAssignments>
-        
-        <layout>AssessmentResponse__c-Assessment Response Layout</layout>
-        
-    </layoutAssignments>
+   
     
     <layoutAssignments>
         
@@ -22052,24 +21979,7 @@
         
     </objectPermissions>
     
-    <objectPermissions>
-        
-        <allowCreate>false</allowCreate>
-        
-        <allowDelete>false</allowDelete>
-        
-        <allowEdit>false</allowEdit>
-        
-        <allowRead>true</allowRead>
-        
-        <modifyAllRecords>false</modifyAllRecords>
-        
-        <object>AssessmentResponse__c</object>
-        
-        <viewAllRecords>true</viewAllRecords>
-        
-    </objectPermissions>
-    
+   
     <objectPermissions>
         
         <allowCreate>false</allowCreate>
@@ -23190,25 +23100,9 @@
         
     </recordTypeVisibilities>
     
-    <recordTypeVisibilities>
-        
-        <default>false</default>
-        
-        <recordType>AnswerChoice__c.Answer_choice</recordType>
-        
-        <visible>false</visible>
-        
-    </recordTypeVisibilities>
+   
     
-    <recordTypeVisibilities>
-        
-        <default>false</default>
-        
-        <recordType>AssessmentResponse__c.RE_Assessment_Response</recordType>
-        
-        <visible>false</visible>
-        
-    </recordTypeVisibilities>
+   
     
     <recordTypeVisibilities>
         
