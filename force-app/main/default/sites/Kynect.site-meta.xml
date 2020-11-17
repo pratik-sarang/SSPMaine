@@ -48,9 +48,9 @@
     
     <selfRegPage>CommunitiesSelfReg</selfRegPage>
     
-    <siteAdmin>rgurivelli@deloitte.com</siteAdmin>
+    <siteAdmin>apodixit@deloitte.com.maineselfservice</siteAdmin>
     
-    <siteGuestRecordDefaultOwner>systemautoprocess_ressp@ky.gov</siteGuestRecordDefaultOwner>
+    <siteGuestRecordDefaultOwner>apodixit@deloitte.com.maineselfservice</siteGuestRecordDefaultOwner>
     
     <siteType>ChatterNetwork</siteType>
     

@@ -12,13 +12,13 @@
         
         <recipients>
             
-            <recipient>rgurivelli@ky.gov</recipient>
+            <recipient>psarang@deloitte.com.maineselfservice</recipient>
             
             <type>user</type>
             
         </recipients>
         
-        <senderAddress>benefind_donotreply@ky.gov</senderAddress>
+        <senderAddress>apodixit@deloitte.com</senderAddress>
         
         <senderType>OrgWideEmailAddress</senderType>
         

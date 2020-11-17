@@ -784,62 +784,6 @@
         
     </relatedLists>
     
-    <relatedLists>
-        
-        <fields>NAME</fields>
-        
-        <fields>Rating__c</fields>
-        
-        <fields>RatingDescription__c</fields>
-        
-        <fields>CREATEDBY_USER</fields>
-        
-        <fields>CREATED_DATE</fields>
-        
-        <relatedList>Feedback__c.AccountID__c</relatedList>
-        
-    </relatedLists>
-    
-     <relatedLists>
-        
-        <fields>NAME</fields>
-        
-        <relatedList>Consent__c.Organization__c</relatedList>
-        
-    </relatedLists>
-    
-    <relatedLists>
-        
-        <fields>NAME</fields>
-        
-        <relatedList>Referral__c.ReferredByAccountID__c</relatedList>
-        
-    </relatedLists>
-    
-    <relatedLists>
-        
-        <fields>NAME</fields>
-        
-        <relatedList>ReportConcern__c.Organization__c</relatedList>
-        
-    </relatedLists>
-    
-    <relatedLists>
-        
-        <fields>DateOfRequest__c</fields>
-        
-        <fields>Status__c</fields>
-        
-        <fields>RequesterEmail__c</fields>
-        
-        <fields>FirstName__c</fields>
-        
-        <fields>LastName__c</fields>
-        
-        <relatedList>ClaimMySiteRequest__c.Organization__c</relatedList>
-        
-    </relatedLists>
-    
     <relatedObjects>ParentId</relatedObjects>
     
     <showEmailCheckbox>false</showEmailCheckbox>
