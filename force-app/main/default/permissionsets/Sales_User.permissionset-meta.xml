@@ -232,275 +232,60 @@
         
     </fieldPermissions>
     
-    <fieldPermissions>
-        
-        <editable>false</editable>
-        
-        <field>AnswerChoice__c.AnswerOrder__c</field>
-        
-        <readable>false</readable>
-        
-    </fieldPermissions>
     
-    <fieldPermissions>
-        
-        <editable>false</editable>
-        
-        <field>AnswerChoice__c.Answer__c</field>
-        
-        <readable>false</readable>
-        
-    </fieldPermissions>
     
-    <fieldPermissions>
-        
-        <editable>false</editable>
-        
-        <field>AnswerChoice__c.Score__c</field>
-        
-        <readable>false</readable>
-        
-    </fieldPermissions>
     
-    <fieldPermissions>
-        
-        <editable>false</editable>
-        
-        <field>AssessmentResponse__c.AnswerChoice__c</field>
-        
-        <readable>false</readable>
-        
-    </fieldPermissions>
     
-    <fieldPermissions>
-        
-        <editable>false</editable>
-        
-        <field>AssessmentResponse__c.Assessment__c</field>
-        
-        <readable>false</readable>
-        
-    </fieldPermissions>
     
-    <fieldPermissions>
-        
-        <editable>false</editable>
-        
-        <field>AssessmentResponse__c.Question__c</field>
-        
-        <readable>false</readable>
-        
-    </fieldPermissions>
     
-    <fieldPermissions>
-        
-        <editable>false</editable>
-        
-        <field>AssessmentResponse__c.TextAnswer__c</field>
-        
-        <readable>false</readable>
-        
-    </fieldPermissions>
     
-    <fieldPermissions>
-        
-        <editable>false</editable>
-        
-        <field>Assessment__c.AssessmentTemplate__c</field>
-        
-        <readable>false</readable>
-        
-    </fieldPermissions>
     
-    <fieldPermissions>
-        
-        <editable>false</editable>
-        
-        <field>Assessment__c.AssessmentTitle__c</field>
-        
-        <readable>false</readable>
-        
-    </fieldPermissions>
     
-    <fieldPermissions>
-        
-        <editable>false</editable>
-        
-        <field>Assessment__c.Partner__c</field>
-        
-        <readable>false</readable>
-        
-    </fieldPermissions>
     
-    <fieldPermissions>
-        
-        <editable>false</editable>
-        
-        <field>Assessment__c.Resident__c</field>
-        
-        <readable>false</readable>
-        
-    </fieldPermissions>
     
-    <fieldPermissions>
-        
-        <editable>false</editable>
-        
-        <field>ClaimMySiteRequest__c.Assignee__c</field>
-        
-        <readable>false</readable>
-        
-    </fieldPermissions>
     
-    <fieldPermissions>
-        
-        <editable>false</editable>
-        
-        <field>ClaimMySiteRequest__c.DateOfRequest__c</field>
-        
-        <readable>false</readable>
-        
-    </fieldPermissions>
     
-    <fieldPermissions>
-        
-        <editable>false</editable>
-        
-        <field>ClaimMySiteRequest__c.Email__c</field>
-        
-        <readable>false</readable>
-        
-    </fieldPermissions>
     
-    <fieldPermissions>
-        
-        <editable>false</editable>
-        
-        <field>ClaimMySiteRequest__c.FirstName__c</field>
-        
-        <readable>false</readable>
-        
-    </fieldPermissions>
     
-    <fieldPermissions>
-        
-        <editable>false</editable>
-        
-        <field>ClaimMySiteRequest__c.HearAboutRE__c</field>
-        
-        <readable>false</readable>
-        
-    </fieldPermissions>
     
-    <fieldPermissions>
-        
-        <editable>false</editable>
-        
-        <field>ClaimMySiteRequest__c.LastName__c</field>
-        
-        <readable>false</readable>
-        
-    </fieldPermissions>
     
-    <fieldPermissions>
-        
-        <editable>false</editable>
-        
-        <field>ClaimMySiteRequest__c.OrganizationRole__c</field>
-        
-        <readable>false</readable>
-        
-    </fieldPermissions>
     
-    <fieldPermissions>
-        
-        <editable>false</editable>
-        
-        <field>ClaimMySiteRequest__c.Organization__c</field>
-        
-        <readable>false</readable>
-        
-    </fieldPermissions>
     
-    <fieldPermissions>
-        
-        <editable>false</editable>
-        
-        <field>ClaimMySiteRequest__c.PhoneNumber__c</field>
-        
-        <readable>false</readable>
-        
-    </fieldPermissions>
     
-    <fieldPermissions>
-        
-        <editable>false</editable>
-        
-        <field>ClaimMySiteRequest__c.ReasonforJoining__c</field>
-        
-        <readable>false</readable>
-        
-    </fieldPermissions>
     
-    <fieldPermissions>
-        
-        <editable>false</editable>
-        
-        <field>ClaimMySiteRequest__c.RequesterEmail__c</field>
-        
-        <readable>false</readable>
-        
-    </fieldPermissions>
     
-    <fieldPermissions>
-        
-        <editable>false</editable>
-        
-        <field>ClaimMySiteRequest__c.RequestingOrganizationName__c</field>
-        
-        <readable>false</readable>
-        
-    </fieldPermissions>
     
-    <fieldPermissions>
-        
-        <editable>false</editable>
-        
-        <field>ClaimMySiteRequest__c.Status__c</field>
-        
-        <readable>false</readable>
-        
-    </fieldPermissions>
     
-    <fieldPermissions>
-        
-        <editable>false</editable>
-        
-        <field>ClaimMySiteRequest__c.TermsAndConditionsCheck__c</field>
-        
-        <readable>false</readable>
-        
-    </fieldPermissions>
     
-    <fieldPermissions>
-        
-        <editable>false</editable>
-        
-        <field>ClaimMySiteRequest__c.UniqueIdentificationNo__c</field>
-        
-        <readable>false</readable>
-        
-    </fieldPermissions>
     
-    <fieldPermissions>
-        
-        <editable>false</editable>
-        
-        <field>ClaimMySiteRequest__c.VolunteerOps__c</field>
-        
-        <readable>false</readable>
-        
-    </fieldPermissions>
+    
+    
+    
+    
+    
+    
+   
+    
+   
+    
+    
+    
+    
+    
+    
+    
+   
+    
+    
+    
+   
+    
+    
+    
+    
+    
+    
+   
     
     <fieldPermissions>
         

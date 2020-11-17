@@ -2226,15 +2226,7 @@
         
     </fieldPermissions>
     
-    <fieldPermissions>
-        
-        <editable>false</editable>
-        
-        <field>Contact.PrimaryLocation__c</field>
-        
-        <readable>true</readable>
-        
-    </fieldPermissions>
+   
     
     <fieldPermissions>
         
