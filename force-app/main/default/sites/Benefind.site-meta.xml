@@ -54,6 +54,6 @@
     
     <subdomain>benefind-reci</subdomain>
     
-    <urlPathPrefix>benefind</urlPathPrefix>
+    <urlPathPrefix>benefits</urlPathPrefix>
     
 </CustomSite>
