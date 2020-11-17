@@ -1816,15 +1816,6 @@
         
     </fieldPermissions>
     
-    <fieldPermissions>
-        
-        <editable>false</editable>
-        
-        <field>Contact.Archetype__c</field>
-        
-        <readable>true</readable>
-        
-    </fieldPermissions>
     
     <fieldPermissions>
         
@@ -3638,15 +3629,7 @@
         
     </fieldPermissions>
     
-    <fieldPermissions>
-        
-        <editable>false</editable>
-        
-        <field>SSP_Asset__c.Location__c</field>
-        
-        <readable>false</readable>
-        
-    </fieldPermissions>
+   
     
     <fieldPermissions>
         
