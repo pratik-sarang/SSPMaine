@@ -1912,16 +1912,6 @@
     
     <fieldPermissions>
         
-        <editable>false</editable>
-        
-        <field>Contact.Archetype__c</field>
-        
-        <readable>false</readable>
-        
-    </fieldPermissions>
-    
-    <fieldPermissions>
-        
         <editable>true</editable>
         
         <field>Contact.Birthdate</field>
@@ -2152,41 +2142,11 @@
     
     <fieldPermissions>
         
-        <editable>true</editable>
-        
-        <field>DocumentDetail__c.Location__c</field>
-        
-        <readable>true</readable>
-        
-    </fieldPermissions>
-    
-    <fieldPermissions>
-        
-        <editable>true</editable>
-        
-        <field>FAQ__kav.Answer__c</field>
-        
-        <readable>true</readable>
-        
-    </fieldPermissions>
-    
-    <fieldPermissions>
-        
         <editable>false</editable>
         
         <field>FAQ__kav.Content_Folder__c</field>
         
         <readable>false</readable>
-        
-    </fieldPermissions>
-    
-    <fieldPermissions>
-        
-        <editable>true</editable>
-        
-        <field>FAQ__kav.Question__c</field>
-        
-        <readable>true</readable>
         
     </fieldPermissions>
     
@@ -2465,26 +2425,6 @@
         <editable>false</editable>
         
         <field>RECommunityUsersConfiguration__mdt.PermissionSets__c</field>
-        
-        <readable>false</readable>
-        
-    </fieldPermissions>
-    
-    <fieldPermissions>
-        
-        <editable>false</editable>
-        
-        <field>SurveyInvitation.Consent__c</field>
-        
-        <readable>false</readable>
-        
-    </fieldPermissions>
-    
-    <fieldPermissions>
-        
-        <editable>false</editable>
-        
-        <field>SurveyInvitation.Referral__c</field>
         
         <readable>false</readable>
         
@@ -2887,13 +2827,7 @@
         <layout>RECommunityUsersConfiguration__mdt-Community Users Setting Layout</layout>
         
     </layoutAssignments>
-    
-    <layoutAssignments>
-        
-        <layout>RE_Taxonomy__c-Taxonomy Layout</layout>
-        
-    </layoutAssignments>
-    
+
     <layoutAssignments>
         
         <layout>ResourceEngineConfiguration__mdt-ResourceEngineConfiguration Layout</layout>
@@ -3066,42 +3000,6 @@
         <modifyAllRecords>true</modifyAllRecords>
         
         <object>LOG_LogMessage__c</object>
-        
-        <viewAllRecords>true</viewAllRecords>
-        
-    </objectPermissions>
-
-    <objectPermissions>
-        
-        <allowCreate>true</allowCreate>
-        
-        <allowDelete>true</allowDelete>
-        
-        <allowEdit>true</allowEdit>
-        
-        <allowRead>true</allowRead>
-        
-        <modifyAllRecords>true</modifyAllRecords>
-        
-        <object>RE_Taxonomy__c</object>
-        
-        <viewAllRecords>true</viewAllRecords>
-        
-    </objectPermissions>
-    
-    <objectPermissions>
-        
-        <allowCreate>true</allowCreate>
-        
-        <allowDelete>true</allowDelete>
-        
-        <allowEdit>true</allowEdit>
-        
-        <allowRead>true</allowRead>
-        
-        <modifyAllRecords>true</modifyAllRecords>
-        
-        <object>ReportConcern__c</object>
         
         <viewAllRecords>true</viewAllRecords>
         
@@ -3358,26 +3256,6 @@
         <visible>true</visible>
         
     </recordTypeVisibilities>
-    
-    <recordTypeVisibilities>
-        
-        <default>false</default>
-        
-        <recordType>ReportConcern__c.Change</recordType>
-        
-        <visible>false</visible>
-        
-    </recordTypeVisibilities>
-    
-    <recordTypeVisibilities>
-        
-        <default>false</default>
-        
-        <recordType>ReportConcern__c.Concern</recordType>
-        
-        <visible>false</visible>
-        
-    </recordTypeVisibilities>
 
     <tabVisibilities>
         
@@ -3398,22 +3276,6 @@
     <tabVisibilities>
         
         <tab>LOG_LogMessage__c</tab>
-        
-        <visibility>DefaultOn</visibility>
-        
-    </tabVisibilities>
-    
-    <tabVisibilities>
-        
-        <tab>RE_Taxonomy__c</tab>
-        
-        <visibility>DefaultOn</visibility>
-        
-    </tabVisibilities>
-    
-    <tabVisibilities>
-        
-        <tab>ReportConcern__c</tab>
         
         <visibility>DefaultOn</visibility>
         

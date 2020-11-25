@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?> 
 
 <Profile xmlns="http://soap.sforce.com/2006/04/metadata">
-    
+    <!-- 
     <applicationVisibilities>
         
         <application>Lead_Generation</application>
@@ -21,7 +21,7 @@
         <visible>true</visible>
         
     </applicationVisibilities>
-    
+
     <applicationVisibilities>
         
         <application>Resource_Engine_Internal_App</application>
@@ -31,7 +31,7 @@
         <visible>false</visible>
         
     </applicationVisibilities>
-     
+
     <applicationVisibilities>
         
         <application>Resource_Engine_Internal_Application</application>
@@ -41,7 +41,7 @@
         <visible>false</visible>
         
     </applicationVisibilities>
-    
+    -->
     <customMetadataTypeAccesses>
         
         <enabled>true</enabled>
@@ -89,7 +89,7 @@
         <name>SSO_Redirection__mdt</name>
         
     </customMetadataTypeAccesses>
-    
+    <!-- 
     <categoryGroupVisibilities>
         
         <dataCategoryGroup>BacKYard_Knowledge</dataCategoryGroup>
@@ -97,7 +97,7 @@
         <visibility>ALL</visibility>
         
     </categoryGroupVisibilities>
-    
+    -->
     <classAccesses>
         
         <apexClass>SSP_HearingSummaryController</apexClass>
@@ -514,7 +514,7 @@
         <enabled>true</enabled>
         
     </classAccesses>
-    
+    <!-- 
     <classAccesses>
         
         <apexClass>CPUserCreationBatch</apexClass>
@@ -530,7 +530,7 @@
         <enabled>true</enabled>
         
     </classAccesses>
-    
+    -->
     <classAccesses>
         
         <apexClass>CommonUtil</apexClass>
@@ -715,13 +715,13 @@
         
     </classAccesses>
     
-    <classAccesses>
+    <!--<classAccesses>
         
         <apexClass>LocationTriggerHandler</apexClass>
         
         <enabled>true</enabled>
         
-    </classAccesses>
+    </classAccesses>-->
     
     <classAccesses>
         
@@ -835,7 +835,7 @@
         
     </classAccesses>
     
-    <classAccesses>
+    <!--<classAccesses>
         
         <apexClass>REAgencyLogin</apexClass>
         
@@ -858,7 +858,7 @@
         <enabled>true</enabled>
         
     </classAccesses>
-    
+
     <classAccesses>
         
         <apexClass>RECommunityPartnerLoginTest</apexClass>
@@ -882,7 +882,7 @@
         <enabled>true</enabled>
         
     </classAccesses>
-    
+
     <classAccesses>
         
         <apexClass>RE_ArchetypeDetailCtrl</apexClass>
@@ -906,7 +906,7 @@
         <enabled>true</enabled>
         
     </classAccesses>
-    
+
     <classAccesses>
         
         <apexClass>RE_AssessmentQuestionsCtrl</apexClass>
@@ -970,7 +970,7 @@
         <enabled>true</enabled>
         
     </classAccesses>
-    
+
     <classAccesses>
         
         <apexClass>RE_AssisterLoginHandler</apexClass>
@@ -1010,7 +1010,7 @@
         <enabled>true</enabled>
         
     </classAccesses>
-    
+-->  
     <classAccesses>
         
         <apexClass>RE_CPMFAController</apexClass>
@@ -1026,7 +1026,7 @@
         <enabled>true</enabled>
         
     </classAccesses>
-    
+    <!--
     <classAccesses>
         
         <apexClass>RE_CalculateRatingCountSum</apexClass>
@@ -1066,7 +1066,7 @@
         <enabled>true</enabled>
         
     </classAccesses>
-    
+
     <classAccesses>
         
         <apexClass>RE_CartRequestService</apexClass>
@@ -1098,7 +1098,7 @@
         <enabled>true</enabled>
         
     </classAccesses>
-    
+
     <classAccesses>
         
         <apexClass>RE_ClientDetailsCtrl</apexClass>
@@ -1106,7 +1106,7 @@
         <enabled>true</enabled>
         
     </classAccesses>
-    
+
     <classAccesses>
         
         <apexClass>RE_ClientDetailsCtrlTest</apexClass>
@@ -1114,7 +1114,7 @@
         <enabled>true</enabled>
         
     </classAccesses>
-    
+
     <classAccesses>
         
         <apexClass>RE_ClientDetailsMockResponse</apexClass>
@@ -1274,7 +1274,7 @@
         <enabled>true</enabled>
         
     </classAccesses>
-    
+-->
     <classAccesses>
         
         <apexClass>RE_DataAccessChecker</apexClass>
@@ -1282,7 +1282,7 @@
         <enabled>true</enabled>
         
     </classAccesses>
-    
+    <!-- 
     <classAccesses>
         
         <apexClass>RE_DataAccessCheckerTest</apexClass>
@@ -1290,7 +1290,7 @@
         <enabled>true</enabled>
         
     </classAccesses>
-    
+    -->
     <classAccesses>
         
         <apexClass>RE_DataBaseQueryFields</apexClass>
@@ -1298,7 +1298,7 @@
         <enabled>true</enabled>
         
     </classAccesses>
-    
+    <!-- 
     <classAccesses>
         
         <apexClass>RE_DataTableCtrl</apexClass>
@@ -1370,7 +1370,7 @@
         <enabled>true</enabled>
         
     </classAccesses>
-    
+    -->
     <classAccesses>
         
         <apexClass>RE_GlobalConstants</apexClass>
@@ -1378,7 +1378,7 @@
         <enabled>true</enabled>
         
     </classAccesses>
-    
+    <!-- 
     <classAccesses>
         
         <apexClass>RE_GlobalThemeCtrl</apexClass>
@@ -1394,7 +1394,7 @@
         <enabled>true</enabled>
         
     </classAccesses>
-    
+-->
     <classAccesses>
         
         <apexClass>RE_GoogleMapAPIMockResponse</apexClass>
@@ -1402,7 +1402,7 @@
         <enabled>true</enabled>
         
     </classAccesses>
-    
+    <!-- 
     <classAccesses>
         
         <apexClass>RE_GoogleMapGeoLocationResponseWrapTest</apexClass>
@@ -1410,7 +1410,7 @@
         <enabled>true</enabled>
         
     </classAccesses>
-    
+    -->
     <classAccesses>
         
         <apexClass>RE_GoogleMapGeoLocationResponseWrapper</apexClass>
@@ -1418,7 +1418,7 @@
         <enabled>true</enabled>
         
     </classAccesses>
-    
+    <!-- 
     <classAccesses>
         
         <apexClass>RE_GoogleMapsController</apexClass>
@@ -2082,7 +2082,7 @@
         <enabled>true</enabled>
         
     </classAccesses>
-    
+-->
     <classAccesses>
         
         <apexClass>RE_SharingByPassCtrl</apexClass>
@@ -2090,7 +2090,7 @@
         <enabled>true</enabled>
         
     </classAccesses>
-    
+    <!-- 
     <classAccesses>
         
         <apexClass>RE_SharingByPassCtrlTest</apexClass>
@@ -2130,7 +2130,7 @@
         <enabled>true</enabled>
         
     </classAccesses>
-    
+-->
     <classAccesses>
         
         <apexClass>RE_URLShortener</apexClass>
@@ -2138,7 +2138,7 @@
         <enabled>true</enabled>
         
     </classAccesses>
-    
+    <!-- 
     <classAccesses>
         
         <apexClass>RE_URLShortenerTest</apexClass>
@@ -2290,7 +2290,7 @@
         <enabled>true</enabled>
         
     </classAccesses>
-    
+    -->
     <classAccesses>
         
         <apexClass>RestIntegrationService</apexClass>
@@ -8386,15 +8386,6 @@
         
     </fieldPermissions>
     
-    <fieldPermissions>
-        
-        <editable>true</editable>
-        
-        <field>Contact.PrimaryLocation__c</field>
-        
-        <readable>true</readable>
-        
-    </fieldPermissions>
     
     <fieldPermissions>
         
@@ -8771,16 +8762,6 @@
         <editable>true</editable>
         
         <field>DocumentDetail__c.IndividualId__c</field>
-        
-        <readable>true</readable>
-        
-    </fieldPermissions>
-    
-    <fieldPermissions>
-        
-        <editable>true</editable>
-        
-        <field>DocumentDetail__c.Location__c</field>
         
         <readable>true</readable>
         
@@ -10426,56 +10407,7 @@
         <readable>false</readable>
         
     </fieldPermissions>
-    
-    <fieldPermissions>
-        
-        <editable>false</editable>
-        
-        <field>RECommunityUsersConfiguration__mdt.AllowIntegrationforUserCreation__c</field>
-        
-        <readable>false</readable>
-        
-    </fieldPermissions>
-    
-    <fieldPermissions>
-        
-        <editable>false</editable>
-        
-        <field>RECommunityUsersConfiguration__mdt.PermissionSets__c</field>
-        
-        <readable>false</readable>
-        
-    </fieldPermissions>
-    
-    <fieldPermissions>
-        
-        <editable>false</editable>
-        
-        <field>RE_User_Agreement__mdt.Header__c</field>
-        
-        <readable>false</readable>
-        
-    </fieldPermissions>
-    
-    <fieldPermissions>
-        
-        <editable>false</editable>
-        
-        <field>RE_User_Agreement__mdt.Text__c</field>
-        
-        <readable>false</readable>
-        
-    </fieldPermissions>
-    
-    <fieldPermissions>
-        
-        <editable>false</editable>
-        
-        <field>RE_User_Agreement__mdt.userType__c</field>
-        
-        <readable>false</readable>
-        
-    </fieldPermissions>
+
     
     <fieldPermissions>
         
@@ -18511,22 +18443,12 @@
         
         <editable>true</editable>
         
-        <field>SurveyInvitation.Consent__c</field>
-        
-        <readable>true</readable>
-        
-    </fieldPermissions>
-    
-    <fieldPermissions>
-        
-        <editable>true</editable>
-        
         <field>SurveyInvitation.Flow_Expiration_Date__c</field>
         
         <readable>true</readable>
         
     </fieldPermissions>
-    
+    <!--  
     <fieldPermissions>
         
         <editable>true</editable>
@@ -18536,7 +18458,7 @@
         <readable>true</readable>
         
     </fieldPermissions>
-    
+    -->
 	<fieldPermissions>
         
         <editable>true</editable>
@@ -18876,7 +18798,7 @@
         <readable>false</readable>
         
     </fieldPermissions>
-    
+    <!-- 
     <fieldPermissions>
         
         <editable>true</editable>
@@ -19306,7 +19228,7 @@
         <readable>true</readable>
         
     </fieldPermissions>
-    
+    -->
     <layoutAssignments>
         
         <layout>SSP_Notifications__c-Announcements</layout>
@@ -19374,13 +19296,13 @@
         <layout>Campaign-Campaign Layout</layout>
         
     </layoutAssignments>
-    
+    <!-- 
     <layoutAssignments>
         
         <layout>CampaignInfluenceModel-Campaign Influence Model Layout</layout>
         
     </layoutAssignments>
-    
+    -->
     <layoutAssignments>
         
         <layout>CampaignMember-Campaign Member Page Layout</layout>
@@ -19455,18 +19377,6 @@
         
     </layoutAssignments>
 
-    <layoutAssignments>
-        
-        <layout>RECommunityUsersConfiguration__mdt-Community Users Setting Layout</layout>
-        
-    </layoutAssignments>
-    
-    <layoutAssignments>
-        
-        <layout>RE_User_Agreement__mdt-RE Partner User Agreement Layout</layout>
-        
-    </layoutAssignments>
-    
     <layoutAssignments>
         
         <layout>RSSP_DC_JSON_Object_Mapping__mdt-RSSP DC JSON Object Mapping Layout</layout>
@@ -20223,13 +20133,7 @@
         
     </objectPermissions>
     
-    <pageAccesses>
-        
-        <apexPage>PrintPlan</apexPage>
-        
-        <enabled>true</enabled>
-        
-    </pageAccesses>
+  
     
     <pageAccesses>
         
@@ -20247,21 +20151,7 @@
         
     </pageAccesses>
     
-    <pageAccesses>
-        
-        <apexPage>RE_CaptchaV2</apexPage>
-        
-        <enabled>true</enabled>
-        
-    </pageAccesses>
-    
-    <pageAccesses>
-        
-        <apexPage>RE_GoogleMap</apexPage>
-        
-        <enabled>true</enabled>
-        
-    </pageAccesses>
+ 
     
     <pageAccesses>
         
@@ -21986,8 +21876,6 @@
         
     </userPermissions>
     
-    
-    
     <userPermissions>
         
         <enabled>true</enabled>
@@ -22025,14 +21913,6 @@
         <enabled>true</enabled>
         
         <name>ShowCompanyNameAsUserBadge</name>
-        
-    </userPermissions>
-    
-    <userPermissions>
-        
-        <enabled>true</enabled>
-        
-        <name>SocialInsightsLogoAdmin</name>
         
     </userPermissions>
     
@@ -22177,14 +22057,6 @@
         <enabled>true</enabled>
         
         <name>ViewAllData</name>
-        
-    </userPermissions>
-    
-    <userPermissions>
-        
-        <enabled>true</enabled>
-        
-        <name>ViewAllForecasts</name>
         
     </userPermissions>
     
