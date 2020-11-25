@@ -106,7 +106,7 @@ import sspCancelEnteringDetailsAuthorizedRepresentative from "@salesforce/label/
 import searchClientMCIService from "@salesforce/apex/SSP_AssisterRequestAccessCtrl.searchClientMCIService";
 //import loadAuthRepDetails from "@salesforce/apex/SSP_AuthRepAccessRequestCtrl.loadAuthRepDetails";
 import sspIndividualHasAssister from "@salesforce/label/c.SSP_IndividualHasAssister";
-import sspAssert from "@salesforce/resourceUrl/SSP_Assert2";
+import sspAssert from "@salesforce/resourceUrl/SSP_Assert";
 
 const PA_FIELD_MAP = {
     addressLine1: {

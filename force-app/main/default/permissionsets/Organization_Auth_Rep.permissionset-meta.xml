@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customPermissions>
+        <enabled>true</enabled>
+        <name>CC</name>
+    </customPermissions>
+    <customPermissions>
+        <enabled>true</enabled>
+        <name>KP</name>
+    </customPermissions>
+    <customPermissions>
+        <enabled>true</enabled>
+        <name>KT</name>
+    </customPermissions>
+ 
+    <description>Based on program/permissions defined through individual association along organization level access provided to user(associated programs). Medicaid, SNAP, KTAP, CCAP, and KI-HIPP.</description>
+    <hasActivationRequired>true</hasActivationRequired>
+    <label>Organization Auth Rep</label>
+</PermissionSet>
