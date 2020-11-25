@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customPermissions>
+        <enabled>true</enabled>
+        <name>CC</name>
+    </customPermissions>
+    <customPermissions>
+        <enabled>true</enabled>
+        <name>KP</name>
+    </customPermissions>
+    <customPermissions>
+        <enabled>true</enabled>
+        <name>KT</name>
+    </customPermissions>
+   
+    <description>Medicaid, KTAP, SNAP, CCAP, KI-HIPP, State Supplementation</description>
+    <hasActivationRequired>true</hasActivationRequired>
+    <label>CHFS Prod Support</label>
+</PermissionSet>

@@ -133,8 +133,13 @@ public with sharing class SSP_RSSPDC_IntegrationService extends RestIntegrationS
         objWrapper.log.type = objRequest.getMethod();
         objWrapper.log.payload = JSON.serializePretty(objWrapper.objRequest);
         objWrapper.log.startTime = SSP_IntegrationUtility.getTimeInMilliseconds();
+        //added by Apoorva start
+        SSP_DC_ReverseMockImpl mockImpl = new SSP_DC_ReverseMockImpl();
+        objRequest.setBody((String) mapParams.get(SSP_InterfaceConstants.JSON_BODY));
+        objResponse = mockImpl.respond(objRequest);
+        //end
         // Invoke service
-        objResponse = objHttp.send(objRequest);
+        //objResponse = objHttp.send(objRequest);
         objWrapper.log.timeTaken = SSP_IntegrationUtility.getTimeInMilliseconds() - objWrapper.log.startTime;
         objWrapper.log.responseCode = (objResponse.getStatusCode() == null)? null :String.valueOf(objResponse.getStatusCode());
         try {

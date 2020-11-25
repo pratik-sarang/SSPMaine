@@ -468,6 +468,7 @@ public without sharing class SSP_HouseHoldSummaryService {
         String applicationRecordId = Schema.getGlobalDescribe().get('SSP_Application__c').getDescribe().getRecordTypeInfosByName().get('Case').getRecordTypeId();
         SSP_HouseholdMembersSummaryCtrl.MemberDetailsWrapper objWrap = new SSP_HouseholdMembersSummaryCtrl.MemberDetailsWrapper();
         try { 
+            system.debug('------------------------1-------------------');
             //get the data entered from the user and store in the wrapper 
             if(sJSON!=null){
                 objWrap = (SSP_HouseholdMembersSummaryCtrl.MemberDetailsWrapper)System.JSON.deserialize(sJSON, SSP_HouseholdMembersSummaryCtrl.MemberDetailsWrapper.class);
@@ -489,6 +490,7 @@ public without sharing class SSP_HouseHoldSummaryService {
                 }
                 
             }
+            system.debug('------------------------2-------------------');
             
             // Check if Duplicate Member is getting added - Logic Starts  (New Member will have objWrap.sRecordId = null).
             // First Name , Last Name, Gender and DOB mendatory for New Member added from the screen : So no Null check needed - Will be checked on UI
@@ -506,7 +508,7 @@ public without sharing class SSP_HouseHoldSummaryService {
                 }
                 objWrap.mciCallCount = 0;
             }
-            
+            system.debug('------------------------3-------------------');
             Boolean isChangedDemographicalInfo = true;
             list<String> hohProgramsRequested= new List<String>();
             Map<String,list<String>> mapIndividualVsProgram= new  Map<String,list<String>>();
@@ -565,6 +567,7 @@ public without sharing class SSP_HouseHoldSummaryService {
                         }
                     }
                 }
+                system.debug('------------------------4-------------------');
                 SSP_MCIMergedServiceRequestWrapper objRequestWrapper = createServiceCallWrapper(objWrap, lstApps,sMode,bSSNRetryFlag);
                 objRequestWrapper.isMemberFileCleared = sspMember.IsFileCleared__c;
                 if(null==objRequestWrapper){
@@ -575,15 +578,15 @@ public without sharing class SSP_HouseHoldSummaryService {
                 
                 Map<String,object> obj = new Map<string,object>();
                 obj.put('jsonbody',JSON.serialize(objRequestWrapper));
-                if(callMCIService)
+                /*if(callMCIService)
                 {
                     callMCIService=  (objWrap.bisHOH != null && objWrap.bisHOH) ? checkMCIApplicable(objWrap.sRecordId) : true; //#377690
-                }
+                }*/
                 if(String.isNotBlank(objRequestWrapper.program)){
                     hohProgramsRequested=objRequestWrapper.program.split(';');
                 }
                 
-                if(callMCIService  || callSSNVerification ){
+                /*if(callMCIService  || callSSNVerification ){
                     slist = IntegrationFactory.invokeCallout(SSP_GlobalConstants.MCI_SERVICE,obj); 
                     if(null!=slist && slist.size()>0 ){
                        resp = (SSP_MCIMergedServiceResponeWrapper) slist[0]; 
@@ -633,7 +636,8 @@ public without sharing class SSP_HouseHoldSummaryService {
                         return mapResult;
                     }
                 }                
-                else if(!callMCIService){  // We will call MCI only when there is any change in demographical information or not isFileCleared
+                else*/ if(!callMCIService){  // We will call MCI only when there is any change in demographical information or not isFileCleared
+                    system.debug('-----------inside if(!callMCIService)-------');
                     if(sspMember.IsFileCleared__c && isChangedDemographicalInfo){
                         objMember.IsMCICreateUpdateRequired__c = SSP_GlobalConstants.YES;
                     }
@@ -688,7 +692,7 @@ public without sharing class SSP_HouseHoldSummaryService {
                     }
                     return mapResult;
                 }                          
-                
+                system.debug('------------------------5-------------------');
                 if(null!=slist && slist.size()>0 ){
                     resp = (SSP_MCIMergedServiceResponeWrapper) slist[0]; 
                 }
@@ -815,10 +819,12 @@ public without sharing class SSP_HouseHoldSummaryService {
             }
             if(null!=resp.lstofLogMessages && resp.lstofLogMessages.size()>0){
                 LOG_LogMessageUtility.logMessage(resp.lstofLogMessages);
-            }            
+            }   
+            system.debug('------------------------end-------------------');         
         }
         
         catch (Exception ex){ 
+            system.debug('------------------------inside catch-------------------');
             if(null!=resp.lstofLogMessages && resp.lstofLogMessages.size()>0){
                 LOG_LogMessageUtility.logMessage(resp.lstofLogMessages);
             }
@@ -827,7 +833,7 @@ public without sharing class SSP_HouseHoldSummaryService {
             objResponse.put('error', ex.getLineNumber() + ex.getMessage());  
         }
         
-        
+        system.debug('------------------------before return-------------------'+objResponse);
         return objResponse;
         
         
