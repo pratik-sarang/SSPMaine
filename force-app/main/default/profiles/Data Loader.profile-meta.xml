@@ -1872,19 +1872,27 @@
     
     <fieldPermissions>
         
-        <editable>true</editable>
+        <editable>false</editable>
         
+<<<<<<< HEAD
         <field>Contact.Birthdate</field>
+=======
+        <field>Contact.Archetype__c</field>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
-        <readable>true</readable>
+        <readable>false</readable>
         
     </fieldPermissions>
     
     <fieldPermissions>
         
-        <editable>false</editable>
+        <editable>true</editable>
         
+<<<<<<< HEAD
         <field>Contact.CPUser__c</field>
+=======
+        <field>Contact.Birthdate</field>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
         <readable>false</readable>
         
@@ -1894,7 +1902,11 @@
         
         <editable>false</editable>
         
+<<<<<<< HEAD
         <field>Contact.ClientDetails_MockReponse__c</field>
+=======
+        <field>Contact.CPUser__c</field>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
         <readable>false</readable>
         
@@ -1902,11 +1914,15 @@
     
     <fieldPermissions>
         
-        <editable>true</editable>
+        <editable>false</editable>
         
+<<<<<<< HEAD
         <field>Contact.CompletedFirstTime__c</field>
+=======
+        <field>Contact.ClientDetails_MockReponse__c</field>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
-        <readable>true</readable>
+        <readable>false</readable>
         
     </fieldPermissions>
     
@@ -1914,7 +1930,11 @@
         
         <editable>true</editable>
         
+<<<<<<< HEAD
         <field>Contact.ContactGeoLocation__c</field>
+=======
+        <field>Contact.CompletedFirstTime__c</field>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
         <readable>true</readable>
         
@@ -1924,7 +1944,11 @@
         
         <editable>false</editable>
         
+<<<<<<< HEAD
         <field>Contact.Needs__c</field>
+=======
+        <field>Contact.ContactGeoLocation__c</field>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
         <readable>false</readable>
         
@@ -1932,11 +1956,15 @@
     
     <fieldPermissions>
         
-        <editable>true</editable>
+        <editable>false</editable>
         
+<<<<<<< HEAD
         <field>Contact.OptOutComm__c</field>
+=======
+        <field>Contact.Needs__c</field>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
-        <readable>true</readable>
+        <readable>false</readable>
         
     </fieldPermissions>
     
@@ -1944,7 +1972,11 @@
         
         <editable>true</editable>
         
+<<<<<<< HEAD
         <field>Contact.ConsentToTexts__c</field>
+=======
+        <field>Contact.OptOutComm__c</field>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
         <readable>true</readable>
         
@@ -1954,7 +1986,11 @@
         
         <editable>false</editable>
         
+<<<<<<< HEAD
         <field>Contact.OptOutInfoSharing__c</field>
+=======
+        <field>Contact.ConsentToTexts__c</field>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
         <readable>true</readable>
         
@@ -1962,9 +1998,13 @@
     
     <fieldPermissions>
         
-        <editable>true</editable>
+        <editable>false</editable>
         
+<<<<<<< HEAD
         <field>Contact.PermissionsLevel__c</field>
+=======
+        <field>Contact.OptOutInfoSharing__c</field>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
         <readable>true</readable>
         
@@ -1974,7 +2014,11 @@
         
         <editable>true</editable>
         
+<<<<<<< HEAD
         <field>Contact.PreferredCommunicationMethod__c</field>
+=======
+        <field>Contact.PermissionsLevel__c</field>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
         <readable>true</readable>
         
@@ -1984,7 +2028,11 @@
         
         <editable>false</editable>
         
+<<<<<<< HEAD
         <field>Contact.State__c</field>
+=======
+        <field>Contact.PreferredCommunicationMethod__c</field>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
         <readable>false</readable>
         
@@ -1994,7 +2042,11 @@
         
         <editable>true</editable>
         
+<<<<<<< HEAD
         <field>Contact.Status__c</field>
+=======
+        <field>Contact.PrimaryLocation__c</field>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
         <readable>true</readable>
         
@@ -2004,7 +2056,11 @@
         
         <editable>true</editable>
         
+<<<<<<< HEAD
         <field>Contact.TrainingLevel__c</field>
+=======
+        <field>Contact.State__c</field>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
         <readable>true</readable>
         
@@ -2014,7 +2070,11 @@
         
         <editable>true</editable>
         
+<<<<<<< HEAD
         <field>Contact.UWContactId__c</field>
+=======
+        <field>Contact.Status__c</field>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
         <readable>true</readable>
         
@@ -2024,7 +2084,11 @@
         
         <editable>true</editable>
         
+<<<<<<< HEAD
         <field>Contact.ZipCode__c</field>
+=======
+        <field>Contact.TrainingLevel__c</field>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
         <readable>true</readable>
         
@@ -2034,7 +2098,11 @@
         
         <editable>false</editable>
         
+<<<<<<< HEAD
         <field>ContentVersion.isPublic__c</field>
+=======
+        <field>Contact.UWContactId__c</field>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
         <readable>false</readable>
         
@@ -2044,7 +2112,11 @@
         
         <editable>true</editable>
         
+<<<<<<< HEAD
         <field>DocumentDetail__c.Account__c</field>
+=======
+        <field>Contact.ZipCode__c</field>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
         <readable>true</readable>
         
@@ -2052,11 +2124,15 @@
     
     <fieldPermissions>
         
-        <editable>true</editable>
+        <editable>false</editable>
         
+<<<<<<< HEAD
         <field>DocumentDetail__c.ExternalId__c</field>
+=======
+        <field>ContentVersion.isPublic__c</field>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
-        <readable>true</readable>
+        <readable>false</readable>
         
     </fieldPermissions>
     
@@ -2064,7 +2140,11 @@
         
         <editable>true</editable>
         
+<<<<<<< HEAD
         <field>DocumentDetail__c.SourceSystem__c</field>
+=======
+        <field>DocumentDetail__c.Account__c</field>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
         <readable>true</readable>
         
@@ -2074,6 +2154,7 @@
         
         <editable>true</editable>
         
+<<<<<<< HEAD
         <field>DocumentDetail__c.DocumentType__c</field>
         
         <readable>true</readable>
@@ -2085,6 +2166,9 @@
         <editable>true</editable>
         
         <field>DocumentDetail__c.FileId__c</field>
+=======
+        <field>DocumentDetail__c.ExternalId__c</field>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
         <readable>true</readable>
         
@@ -2094,7 +2178,11 @@
         
         <editable>false</editable>
         
+<<<<<<< HEAD
         <field>FAQ__kav.Content_Folder__c</field>
+=======
+        <field>DocumentDetail__c.SourceSystem__c</field>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
         <readable>false</readable>
         
@@ -2104,7 +2192,11 @@
         
         <editable>true</editable>
         
+<<<<<<< HEAD
         <field>FAQ__kav.Related_File__c</field>
+=======
+        <field>DocumentDetail__c.DocumentType__c</field>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
         <readable>true</readable>
         
@@ -2114,7 +2206,11 @@
         
         <editable>true</editable>
         
+<<<<<<< HEAD
         <field>FAQ__kav.Video__c</field>
+=======
+        <field>DocumentDetail__c.FileId__c</field>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
         <readable>true</readable>
         
@@ -2124,7 +2220,11 @@
         
         <editable>true</editable>
         
+<<<<<<< HEAD
         <field>LOG_LogMessage__c.CalloutType__c</field>
+=======
+        <field>DocumentDetail__c.Location__c</field>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
         <readable>true</readable>
         
@@ -2134,17 +2234,11 @@
         
         <editable>true</editable>
         
+<<<<<<< HEAD
         <field>LOG_LogMessage__c.EndPoint__c</field>
-        
-        <readable>true</readable>
-        
-    </fieldPermissions>
-    
-    <fieldPermissions>
-        
-        <editable>true</editable>
-        
-        <field>LOG_LogMessage__c.InterfaceName__c</field>
+=======
+        <field>FAQ__kav.Answer__c</field>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
         <readable>true</readable>
         
@@ -2154,7 +2248,25 @@
         
         <editable>false</editable>
         
+<<<<<<< HEAD
+        <field>LOG_LogMessage__c.InterfaceName__c</field>
+=======
+        <field>FAQ__kav.Content_Folder__c</field>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
+        
+        <readable>false</readable>
+        
+    </fieldPermissions>
+    
+    <fieldPermissions>
+        
+        <editable>false</editable>
+        
+<<<<<<< HEAD
         <field>LOG_LogMessage__c.LOG_Age__c</field>
+=======
+        <field>FAQ__kav.Question__c</field>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
         <readable>false</readable>
         
@@ -2164,7 +2276,11 @@
         
         <editable>true</editable>
         
+<<<<<<< HEAD
         <field>LOG_LogMessage__c.LOG_Debug_Level__c</field>
+=======
+        <field>FAQ__kav.Related_File__c</field>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
         <readable>true</readable>
         
@@ -2174,7 +2290,11 @@
         
         <editable>true</editable>
         
+<<<<<<< HEAD
         <field>LOG_LogMessage__c.LOG_Integration_Payload__c</field>
+=======
+        <field>FAQ__kav.Video__c</field>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
         <readable>true</readable>
         
@@ -2184,7 +2304,11 @@
         
         <editable>true</editable>
         
+<<<<<<< HEAD
         <field>LOG_LogMessage__c.LOG_Log_Code__c</field>
+=======
+        <field>LOG_LogMessage__c.CalloutType__c</field>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
         <readable>true</readable>
         
@@ -2194,6 +2318,93 @@
         
         <editable>false</editable>
         
+<<<<<<< HEAD
+        <field>LOG_LogMessage__c.LOG_Log_Date_Time__c</field>
+=======
+        <field>LOG_LogMessage__c.EndPoint__c</field>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
+        
+        <readable>false</readable>
+        
+    </fieldPermissions>
+    
+    <fieldPermissions>
+        
+        <editable>true</editable>
+        
+<<<<<<< HEAD
+        <field>LOG_LogMessage__c.LOG_Message__c</field>
+=======
+        <field>LOG_LogMessage__c.InterfaceName__c</field>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
+        
+        <readable>true</readable>
+        
+    </fieldPermissions>
+    
+    <fieldPermissions>
+        
+        <editable>false</editable>
+        
+<<<<<<< HEAD
+        <field>LOG_LogMessage__c.LOG_Reference_Id__c</field>
+=======
+        <field>LOG_LogMessage__c.LOG_Age__c</field>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
+        
+        <readable>false</readable>
+        
+    </fieldPermissions>
+    
+    <fieldPermissions>
+        
+        <editable>true</editable>
+        
+<<<<<<< HEAD
+        <field>LOG_LogMessage__c.LOG_Reference_Info__c</field>
+=======
+        <field>LOG_LogMessage__c.LOG_Debug_Level__c</field>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
+        
+        <readable>true</readable>
+        
+    </fieldPermissions>
+    
+    <fieldPermissions>
+        
+        <editable>true</editable>
+        
+<<<<<<< HEAD
+        <field>LOG_LogMessage__c.LOG_Source_Function__c</field>
+=======
+        <field>LOG_LogMessage__c.LOG_Integration_Payload__c</field>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
+        
+        <readable>true</readable>
+        
+    </fieldPermissions>
+    
+    <fieldPermissions>
+        
+        <editable>true</editable>
+        
+<<<<<<< HEAD
+        <field>LOG_LogMessage__c.LOG_Stack_Trace__c</field>
+=======
+        <field>LOG_LogMessage__c.LOG_Log_Code__c</field>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
+        
+        <readable>true</readable>
+        
+    </fieldPermissions>
+    
+    <fieldPermissions>
+        
+        <editable>true</editable>
+        
+<<<<<<< HEAD
+        <field>LOG_LogMessage__c.LOG_Timer__c</field>
+=======
         <field>LOG_LogMessage__c.LOG_Log_Date_Time__c</field>
         
         <readable>false</readable>
@@ -2205,6 +2416,7 @@
         <editable>true</editable>
         
         <field>LOG_LogMessage__c.LOG_Message__c</field>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
         <readable>true</readable>
         
@@ -2214,57 +2426,11 @@
         
         <editable>true</editable>
         
-        <field>LOG_LogMessage__c.LOG_Reference_Id__c</field>
-        
-        <readable>true</readable>
-        
-    </fieldPermissions>
-    
-    <fieldPermissions>
-        
-        <editable>true</editable>
-        
-        <field>LOG_LogMessage__c.LOG_Reference_Info__c</field>
-        
-        <readable>true</readable>
-        
-    </fieldPermissions>
-    
-    <fieldPermissions>
-        
-        <editable>true</editable>
-        
-        <field>LOG_LogMessage__c.LOG_Source_Function__c</field>
-        
-        <readable>true</readable>
-        
-    </fieldPermissions>
-    
-    <fieldPermissions>
-        
-        <editable>true</editable>
-        
-        <field>LOG_LogMessage__c.LOG_Stack_Trace__c</field>
-        
-        <readable>true</readable>
-        
-    </fieldPermissions>
-    
-    <fieldPermissions>
-        
-        <editable>true</editable>
-        
-        <field>LOG_LogMessage__c.LOG_Timer__c</field>
-        
-        <readable>true</readable>
-        
-    </fieldPermissions>
-    
-    <fieldPermissions>
-        
-        <editable>true</editable>
-        
+<<<<<<< HEAD
         <field>LOG_LogMessage__c.ResponseData__c</field>
+=======
+        <field>LOG_LogMessage__c.LOG_Reference_Id__c</field>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
         <readable>true</readable>
         
@@ -2274,7 +2440,11 @@
         
         <editable>false</editable>
         
+<<<<<<< HEAD
         <field>ListViewSettings__mdt.Filter__c</field>
+=======
+        <field>LOG_LogMessage__c.LOG_Reference_Info__c</field>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
         <readable>false</readable>
         
@@ -2282,9 +2452,13 @@
     
     <fieldPermissions>
         
-        <editable>false</editable>
+        <editable>true</editable>
         
+<<<<<<< HEAD
         <field>ListViewSettings__mdt.ListOfLabels__c</field>
+=======
+        <field>LOG_LogMessage__c.LOG_Source_Function__c</field>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
         <readable>false</readable>
         
@@ -2292,21 +2466,29 @@
     
     <fieldPermissions>
         
-        <editable>false</editable>
+        <editable>true</editable>
         
+<<<<<<< HEAD
         <field>ListViewSettings__mdt.List_of_Fields__c</field>
+=======
+        <field>LOG_LogMessage__c.LOG_Stack_Trace__c</field>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
-        <readable>false</readable>
+        <readable>true</readable>
         
     </fieldPermissions>
     
     <fieldPermissions>
         
-        <editable>false</editable>
+        <editable>true</editable>
         
+<<<<<<< HEAD
         <field>ListViewSettings__mdt.Object_Name__c</field>
+=======
+        <field>LOG_LogMessage__c.LOG_Timer__c</field>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
-        <readable>false</readable>
+        <readable>true</readable>
         
     </fieldPermissions>
     
@@ -2314,7 +2496,11 @@
         
         <editable>false</editable>
         
+<<<<<<< HEAD
         <field>ListViewSettings__mdt.sWhere__c</field>
+=======
+        <field>LOG_LogMessage__c.ResponseData__c</field>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
         <readable>false</readable>
         
@@ -2324,7 +2510,11 @@
         
         <editable>false</editable>
         
+<<<<<<< HEAD
         <field>Survey_Setting__mdt.Active__c</field>
+=======
+        <field>ListViewSettings__mdt.Filter__c</field>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
         <readable>false</readable>
         
@@ -2334,7 +2524,11 @@
         
         <editable>false</editable>
         
+<<<<<<< HEAD
         <field>Survey_Setting__mdt.Question_1__c</field>
+=======
+        <field>ListViewSettings__mdt.ListOfLabels__c</field>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
         <readable>false</readable>
         
@@ -2344,7 +2538,11 @@
         
         <editable>false</editable>
         
+<<<<<<< HEAD
         <field>Survey_Setting__mdt.Question_2__c</field>
+=======
+        <field>ListViewSettings__mdt.List_of_Fields__c</field>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
         <readable>false</readable>
         
@@ -2354,7 +2552,11 @@
         
         <editable>false</editable>
         
+<<<<<<< HEAD
         <field>User.One_Time_Activity__c</field>
+=======
+        <field>ListViewSettings__mdt.Object_Name__c</field>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
         <readable>false</readable>
         
@@ -2364,9 +2566,13 @@
         
         <editable>false</editable>
         
+<<<<<<< HEAD
         <field>User.AccountId__c</field>
+=======
+        <field>ListViewSettings__mdt.sWhere__c</field>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
-        <readable>true</readable>
+        <readable>false</readable>
         
     </fieldPermissions>
     
@@ -2374,7 +2580,11 @@
         
         <editable>true</editable>
         
+<<<<<<< HEAD
         <field>User.SourceSystem__c</field>
+=======
+        <field>Opportunity.Budget_Confirmed__c</field>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
         <readable>true</readable>
         
@@ -2384,7 +2594,11 @@
         
         <editable>true</editable>
         
+<<<<<<< HEAD
         <field>User.ExternalId__c</field>
+=======
+        <field>Opportunity.Discovery_Completed__c</field>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
         <readable>true</readable>
         
@@ -2394,7 +2608,11 @@
         
         <editable>true</editable>
         
+<<<<<<< HEAD
         <field>User.UserAgreementConsentDate__c</field>
+=======
+        <field>Opportunity.Loss_Reason__c</field>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
         <readable>true</readable>
         
@@ -2404,7 +2622,11 @@
         
         <editable>true</editable>
         
+<<<<<<< HEAD
         <field>User.UserAgreementVersion__c</field>
+=======
+        <field>Opportunity.ROI_Analysis_Completed__c</field>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
         <readable>true</readable>
         
@@ -2414,9 +2636,13 @@
         
         <layout>Account-Account Layout</layout>
         
+<<<<<<< HEAD
     </layoutAssignments>
     
     <layoutAssignments>
+=======
+        <field>RECommunityUsersConfiguration__mdt.AllowIntegrationforUserCreation__c</field>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
         <layout>Account-Account Layout</layout>
         
@@ -2426,22 +2652,37 @@
     
     <layoutAssignments>
         
+<<<<<<< HEAD
         <layout>Account-Account Layout</layout>
+=======
+        <field>RECommunityUsersConfiguration__mdt.PermissionSets__c</field>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
         <recordType>Account.Citizen</recordType>
         
     </layoutAssignments>
     
+<<<<<<< HEAD
     <layoutAssignments>
         
         <layout>Account-Account Layout</layout>
         
         <recordType>Account.Resource_Engine</recordType>
+=======
+    <fieldPermissions>
+        
+        <editable>false</editable>
+        
+        <field>SurveyInvitation.Consent__c</field>
+        
+        <readable>false</readable>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
     </layoutAssignments>
     
     <layoutAssignments>
         
+<<<<<<< HEAD
         <layout>AccountBrand-Account Brand Layout</layout>
         
     </layoutAssignments>
@@ -2449,6 +2690,13 @@
     <layoutAssignments>
         
         <layout>AccountContactRelation-Account Contact Relationship Layout</layout>
+=======
+        <editable>false</editable>
+        
+        <field>SurveyInvitation.Referral__c</field>
+        
+        <readable>false</readable>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
     </layoutAssignments>
     
@@ -2456,9 +2704,13 @@
         
         <layout>Asset-Asset Layout</layout>
         
+<<<<<<< HEAD
     </layoutAssignments>
     
     <layoutAssignments>
+=======
+        <field>Survey_Setting__mdt.Active__c</field>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
         <layout>AssetRelationship-Asset Relationship Layout</layout>
         
@@ -2466,6 +2718,7 @@
     
     <layoutAssignments>
         
+<<<<<<< HEAD
         <layout>Campaign-Campaign Layout</layout>
         
     </layoutAssignments>
@@ -2473,11 +2726,19 @@
     <layoutAssignments>
         
         <layout>CampaignMember-Campaign Member Page Layout</layout>
+=======
+        <editable>false</editable>
+        
+        <field>Survey_Setting__mdt.Question_1__c</field>
+        
+        <readable>false</readable>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
     </layoutAssignments>
     
     <layoutAssignments>
         
+<<<<<<< HEAD
         <layout>Case-Case Layout</layout>
         
     </layoutAssignments>
@@ -2485,6 +2746,13 @@
     <layoutAssignments>
         
         <layout>CaseClose-Close Case Layout</layout>
+=======
+        <editable>false</editable>
+        
+        <field>Survey_Setting__mdt.Question_2__c</field>
+        
+        <readable>false</readable>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
     </layoutAssignments>
     
@@ -2492,22 +2760,34 @@
         
         <layout>CaseInteraction-Case Feed Layout</layout>
         
+<<<<<<< HEAD
     </layoutAssignments>
 
     <!--
     <layoutAssignments>
         
         <layout>CollaborationGroup-Group Layout</layout>
+=======
+        <field>User.One_Time_Activity__c</field>
+        
+        <readable>false</readable>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
     </layoutAssignments>
     -->
     <layoutAssignments>
         
+<<<<<<< HEAD
         <layout>CommunicationLog__c-Communication Nub Layout</layout>
         
     </layoutAssignments>
 
     <layoutAssignments>
+=======
+        <editable>false</editable>
+        
+        <field>User.AccountId__c</field>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
         <layout>Contact-Contact Layout</layout>
         
@@ -2515,7 +2795,11 @@
     
     <layoutAssignments>
         
+<<<<<<< HEAD
         <layout>Contact-Contact Layout</layout>
+=======
+        <field>User.SourceSystem__c</field>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
         <recordType>Contact.Assister</recordType>
         
@@ -2523,12 +2807,17 @@
     
     <layoutAssignments>
         
+<<<<<<< HEAD
         <layout>Contact-Contact Layout</layout>
+=======
+        <field>User.ExternalId__c</field>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
         <recordType>Contact.CPUserContact</recordType>
         
     </layoutAssignments>
     
+<<<<<<< HEAD
     <layoutAssignments>
         
         <layout>Contact-Contact Layout</layout>
@@ -2545,6 +2834,13 @@
     </layoutAssignments>
     -->
     <layoutAssignments>
+=======
+    <fieldPermissions>
+        
+        <editable>true</editable>
+        
+        <field>User.UserAgreementConsentDate__c</field>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
         <layout>Contract-Contract Layout</layout>
         
@@ -2554,9 +2850,13 @@
         
         <layout>DocumentDetail__c-Document Detail Layout</layout>
         
+<<<<<<< HEAD
     </layoutAssignments>
     
     <layoutAssignments>
+=======
+        <field>User.UserAgreementVersion__c</field>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
         <layout>DuplicateRecordSet-Duplicate Record Set Layout</layout>
         
@@ -2564,12 +2864,17 @@
     
     <layoutAssignments>
         
+<<<<<<< HEAD
         <layout>EmailMessage-Email Message Layout</layout>
+=======
+        <layout>Account-Account Layout</layout>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
     </layoutAssignments>
     
     <layoutAssignments>
         
+<<<<<<< HEAD
         <layout>Event-Event Layout</layout>
         
     </layoutAssignments>
@@ -2597,58 +2902,119 @@
         
         <layout>Idea-Idea Layout</layout>
         
+=======
+        <layout>Account-Account Layout</layout>
+        
+        <recordType>Account.Assister</recordType>
+        
     </layoutAssignments>
     
     <layoutAssignments>
         
+        <layout>Account-Account Layout</layout>
+        
+        <recordType>Account.Citizen</recordType>
+        
+    </layoutAssignments>
+    
+    <layoutAssignments>
+        
+        <layout>Account-Account Layout</layout>
+        
+        <recordType>Account.Resource_Engine</recordType>
+        
+    </layoutAssignments>
+    
+    <layoutAssignments>
+        
+        <layout>AccountBrand-Account Brand Layout</layout>
+        
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
+    </layoutAssignments>
+    
+    <layoutAssignments>
+        
+<<<<<<< HEAD
         <layout>Individual-Individual Layout</layout>
+=======
+        <layout>AccountContactRelation-Account Contact Relationship Layout</layout>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
     </layoutAssignments>
     
     <layoutAssignments>
         
+<<<<<<< HEAD
         <layout>LOG_LogMessage__c-LOG_LogMessage_Layout</layout>
+=======
+        <layout>Asset-Asset Layout</layout>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
     </layoutAssignments>
     
     <layoutAssignments>
         
+<<<<<<< HEAD
         <layout>Lead-Lead Layout</layout>
+=======
+        <layout>AssetRelationship-Asset Relationship Layout</layout>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
     </layoutAssignments>
     
     <layoutAssignments>
         
+<<<<<<< HEAD
         <layout>ListViewSettings__mdt-ListViewSetting Layout</layout>
+=======
+        <layout>Campaign-Campaign Layout</layout>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
     </layoutAssignments>
     
     <layoutAssignments>
         
+<<<<<<< HEAD
         <layout>Macro-Macro Layout</layout>
+=======
+        <layout>CampaignInfluenceModel-Campaign Influence Model Layout</layout>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
     </layoutAssignments>
     
     <layoutAssignments>
         
+<<<<<<< HEAD
         <layout>Opportunity-Opportunity Layout</layout>
+=======
+        <layout>CampaignMember-Campaign Member Page Layout</layout>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
     </layoutAssignments>
     
     <layoutAssignments>
         
+<<<<<<< HEAD
         <layout>OpportunityLineItem-Opportunity Product Layout</layout>
+=======
+        <layout>Case-Case Layout</layout>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
     </layoutAssignments>
     
     <layoutAssignments>
         
+<<<<<<< HEAD
         <layout>Order-Order Layout</layout>
+=======
+        <layout>CaseClose-Close Case Layout</layout>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
     </layoutAssignments>
     
     <layoutAssignments>
         
+<<<<<<< HEAD
         <layout>OrderItem-Order Product Layout</layout>
         
     </layoutAssignments>
@@ -2656,11 +3022,22 @@
     <layoutAssignments>
         
         <layout>Pricebook2-Price Book Layout</layout>
+=======
+        <layout>CaseInteraction-Case Feed Layout</layout>
+        
+    </layoutAssignments>
+
+    
+    <layoutAssignments>
+        
+        <layout>CollaborationGroup-Group Layout</layout>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
     </layoutAssignments>
     
     <layoutAssignments>
         
+<<<<<<< HEAD
         <layout>PricebookEntry-Price Book Entry Layout</layout>
         
     </layoutAssignments>
@@ -2681,10 +3058,28 @@
     <layoutAssignments>
         
         <layout>ProfileSkillEndorsement-Endorsement Layout</layout>
+=======
+        <layout>CommunicationLog__c-Communication Nub Layout</layout>
+        
+    </layoutAssignments>
+
+    <layoutAssignments>
+        
+        <layout>Contact-Contact Layout</layout>
         
     </layoutAssignments>
     
     <layoutAssignments>
+        
+        <layout>Contact-Contact Layout</layout>
+        
+        <recordType>Contact.Assister</recordType>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
+        
+    </layoutAssignments>
+    
+    <layoutAssignments>
+<<<<<<< HEAD
         
         <layout>ProfileSkillUser-Skill User Layout</layout>
         
@@ -2711,29 +3106,56 @@
     <layoutAssignments>
         
         <layout>ResourceEngineConfiguration__mdt-ResourceEngineConfiguration Layout</layout>
+=======
+        
+        <layout>Contact-Contact Layout</layout>
+        
+        <recordType>Contact.CPUserContact</recordType>
         
     </layoutAssignments>
     
     <layoutAssignments>
         
+        <layout>Contact-Contact Layout</layout>
+        
+        <recordType>Contact.Citizen</recordType>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
+        
+    </layoutAssignments>
+    
+    <layoutAssignments>
+        
+<<<<<<< HEAD
         <layout>Scorecard-Scorecard Layout</layout>
+=======
+        <layout>ContentVersion-Content Version</layout>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
     </layoutAssignments>
     
     <layoutAssignments>
         
+<<<<<<< HEAD
         <layout>ScorecardAssociation-Scorecard Association Layout</layout>
+=======
+        <layout>Contract-Contract Layout</layout>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
     </layoutAssignments>
     
     <layoutAssignments>
         
+<<<<<<< HEAD
         <layout>ScorecardMetric-Scorecard Metric Layout</layout>
+=======
+        <layout>DocumentDetail__c-Document Detail Layout</layout>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
     </layoutAssignments>
     
     <layoutAssignments>
         
+<<<<<<< HEAD
         <layout>SocialPersona-Social Persona Layout</layout>
         
     </layoutAssignments>
@@ -2747,17 +3169,37 @@
     <layoutAssignments>
         
         <layout>Solution-Solution Layout</layout>
+=======
+        <layout>DuplicateRecordSet-Duplicate Record Set Layout</layout>
         
     </layoutAssignments>
     
     <layoutAssignments>
         
+        <layout>EmailMessage-Email Message Layout</layout>
+        
+    </layoutAssignments>
+    
+    <layoutAssignments>
+        
+        <layout>Event-Event Layout</layout>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
+        
+    </layoutAssignments>
+    
+    <layoutAssignments>
+        
+<<<<<<< HEAD
         <layout>Survey_Setting__mdt-Survey Setting Layout</layout>
+=======
+        <layout>FAQ__kav-Help Page Layout</layout>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
     </layoutAssignments>
     
     <layoutAssignments>
         
+<<<<<<< HEAD
         <layout>Task-Task Layout</layout>
         
     </layoutAssignments>
@@ -2795,10 +3237,39 @@
     <layoutAssignments>
         
         <layout>WorkBadgeDefinition-Badge Layout 192</layout>
+=======
+        <layout>FeedItem-Feed Item Layout</layout>
+        
+    </layoutAssignments>
+
+    
+    <layoutAssignments>
+        
+        <layout>Global-Global Layout</layout>
         
     </layoutAssignments>
     
     <layoutAssignments>
+        
+        <layout>Idea-Idea Layout</layout>
+        
+    </layoutAssignments>
+    
+    <layoutAssignments>
+        
+        <layout>Individual-Individual Layout</layout>
+        
+    </layoutAssignments>
+    
+    <layoutAssignments>
+        
+        <layout>LOG_LogMessage__c-LOG_LogMessage_Layout</layout>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
+        
+    </layoutAssignments>
+    
+    <layoutAssignments>
+<<<<<<< HEAD
         
         <layout>WorkThanks-Thanks Layout</layout>
         
@@ -2873,6 +3344,280 @@
         
         <allowDelete>true</allowDelete>
         
+=======
+        
+        <layout>Lead-Lead Layout</layout>
+        
+    </layoutAssignments>
+    
+    <layoutAssignments>
+        
+        <layout>ListViewSettings__mdt-ListViewSetting Layout</layout>
+        
+    </layoutAssignments>
+    
+    <layoutAssignments>
+        
+        <layout>Macro-Macro Layout</layout>
+        
+    </layoutAssignments>
+    
+    <layoutAssignments>
+        
+        <layout>Opportunity-Opportunity Layout</layout>
+        
+    </layoutAssignments>
+    
+    <layoutAssignments>
+        
+        <layout>OpportunityLineItem-Opportunity Product Layout</layout>
+        
+    </layoutAssignments>
+    
+    <layoutAssignments>
+        
+        <layout>Order-Order Layout</layout>
+        
+    </layoutAssignments>
+    
+    <layoutAssignments>
+        
+        <layout>OrderItem-Order Product Layout</layout>
+        
+    </layoutAssignments>
+    
+    <layoutAssignments>
+        
+        <layout>Pricebook2-Price Book Layout</layout>
+        
+    </layoutAssignments>
+    
+    <layoutAssignments>
+        
+        <layout>PricebookEntry-Price Book Entry Layout</layout>
+        
+    </layoutAssignments>
+    
+    <layoutAssignments>
+        
+        <layout>Product2-Product Layout</layout>
+        
+    </layoutAssignments>
+    
+    <layoutAssignments>
+        
+        <layout>ProfileSkill-Skill Layout</layout>
+        
+    </layoutAssignments>
+    
+    <layoutAssignments>
+        
+        <layout>ProfileSkillEndorsement-Endorsement Layout</layout>
+        
+    </layoutAssignments>
+    
+    <layoutAssignments>
+        
+        <layout>ProfileSkillUser-Skill User Layout</layout>
+        
+    </layoutAssignments>
+    
+    <layoutAssignments>
+        
+        <layout>QuickText-Quick Text Layout</layout>
+        
+    </layoutAssignments>
+    
+    <layoutAssignments>
+        
+        <layout>Quote-Quote Layout</layout>
+        
+    </layoutAssignments>
+    
+    <layoutAssignments>
+        
+        <layout>QuoteLineItem-Quote Line Item Layout</layout>
+        
+    </layoutAssignments>
+    
+    <layoutAssignments>
+        
+        <layout>RECommunityUsersConfiguration__mdt-Community Users Setting Layout</layout>
+        
+    </layoutAssignments>
+    
+    <layoutAssignments>
+        
+        <layout>RE_Taxonomy__c-Taxonomy Layout</layout>
+        
+    </layoutAssignments>
+    
+    <layoutAssignments>
+        
+        <layout>ResourceEngineConfiguration__mdt-ResourceEngineConfiguration Layout</layout>
+        
+    </layoutAssignments>
+    
+    <layoutAssignments>
+        
+        <layout>Scorecard-Scorecard Layout</layout>
+        
+    </layoutAssignments>
+    
+    <layoutAssignments>
+        
+        <layout>ScorecardAssociation-Scorecard Association Layout</layout>
+        
+    </layoutAssignments>
+    
+    <layoutAssignments>
+        
+        <layout>ScorecardMetric-Scorecard Metric Layout</layout>
+        
+    </layoutAssignments>
+    
+    <layoutAssignments>
+        
+        <layout>SocialPersona-Social Persona Layout</layout>
+        
+    </layoutAssignments>
+    
+    <layoutAssignments>
+        
+        <layout>SocialPost-Social Post Layout</layout>
+        
+    </layoutAssignments>
+    
+    <layoutAssignments>
+        
+        <layout>Solution-Solution Layout</layout>
+        
+    </layoutAssignments>
+    
+    <layoutAssignments>
+        
+        <layout>Survey_Setting__mdt-Survey Setting Layout</layout>
+        
+    </layoutAssignments>
+    
+    <layoutAssignments>
+        
+        <layout>Task-Task Layout</layout>
+        
+    </layoutAssignments>
+    
+    <layoutAssignments>
+        
+        <layout>User-User Layout</layout>
+        
+    </layoutAssignments>
+    
+    <layoutAssignments>
+        
+        <layout>UserAlt-User Profile Layout</layout>
+        
+    </layoutAssignments>
+    
+    <layoutAssignments>
+        
+        <layout>UserAppMenuItem-Application Layout</layout>
+        
+    </layoutAssignments>
+    
+    <layoutAssignments>
+        
+        <layout>WorkAccess-Access Layout</layout>
+        
+    </layoutAssignments>
+    
+    <layoutAssignments>
+        
+        <layout>WorkBadge-Badge Received Layout 192</layout>
+        
+    </layoutAssignments>
+    
+    <layoutAssignments>
+        
+        <layout>WorkBadgeDefinition-Badge Layout 192</layout>
+        
+    </layoutAssignments>
+    
+    <layoutAssignments>
+        
+        <layout>WorkThanks-Thanks Layout</layout>
+        
+    </layoutAssignments>
+    
+    <loginIpRanges>
+        
+        <endAddress>255.255.255.255</endAddress>
+        
+        <startAddress>0.0.0.0</startAddress>
+        
+    </loginIpRanges>
+    
+    <objectPermissions>
+        
+        <allowCreate>true</allowCreate>
+        
+        <allowDelete>true</allowDelete>
+        
+        <allowEdit>true</allowEdit>
+        
+        <allowRead>true</allowRead>
+        
+        <modifyAllRecords>true</modifyAllRecords>
+        
+        <object>CommunicationLog__c</object>
+        
+        <viewAllRecords>true</viewAllRecords>
+        
+    </objectPermissions>
+    
+    <objectPermissions>
+        
+        <allowCreate>true</allowCreate>
+        
+        <allowDelete>true</allowDelete>
+        
+        <allowEdit>true</allowEdit>
+        
+        <allowRead>true</allowRead>
+        
+        <modifyAllRecords>true</modifyAllRecords>
+        
+        <object>DocumentDetail__c</object>
+        
+        <viewAllRecords>true</viewAllRecords>
+        
+    </objectPermissions>
+    
+    <objectPermissions>
+        
+        <allowCreate>true</allowCreate>
+        
+        <allowDelete>true</allowDelete>
+        
+        <allowEdit>true</allowEdit>
+        
+        <allowRead>true</allowRead>
+        
+        <modifyAllRecords>true</modifyAllRecords>
+        
+        <object>FAQ__kav</object>
+        
+        <viewAllRecords>true</viewAllRecords>
+        
+    </objectPermissions>
+
+    
+    <objectPermissions>
+        
+        <allowCreate>true</allowCreate>
+        
+        <allowDelete>true</allowDelete>
+        
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         <allowEdit>true</allowEdit>
         
         <allowRead>true</allowRead>
@@ -2884,6 +3629,45 @@
         <viewAllRecords>true</viewAllRecords>
         
     </objectPermissions>
+<<<<<<< HEAD
+=======
+
+    <objectPermissions>
+        
+        <allowCreate>true</allowCreate>
+        
+        <allowDelete>true</allowDelete>
+        
+        <allowEdit>true</allowEdit>
+        
+        <allowRead>true</allowRead>
+        
+        <modifyAllRecords>true</modifyAllRecords>
+        
+        <object>RE_Taxonomy__c</object>
+        
+        <viewAllRecords>true</viewAllRecords>
+        
+    </objectPermissions>
+    
+    <objectPermissions>
+        
+        <allowCreate>true</allowCreate>
+        
+        <allowDelete>true</allowDelete>
+        
+        <allowEdit>true</allowEdit>
+        
+        <allowRead>true</allowRead>
+        
+        <modifyAllRecords>true</modifyAllRecords>
+        
+        <object>ReportConcern__c</object>
+        
+        <viewAllRecords>true</viewAllRecords>
+        
+    </objectPermissions>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
     
     <pageAccesses>
         
@@ -2896,6 +3680,8 @@
     <pageAccesses>
         
         <apexPage>BandwidthExceeded</apexPage>
+<<<<<<< HEAD
+=======
         
         <enabled>true</enabled>
         
@@ -3005,6 +3791,204 @@
         
     </pageAccesses>
     
+    <pageAccesses>
+        
+        <apexPage>RE_CaptchaV2</apexPage>
+        
+        <enabled>true</enabled>
+        
+    </pageAccesses>
+    
+    <pageAccesses>
+        
+        <apexPage>RE_GoogleMap</apexPage>
+        
+        <enabled>true</enabled>
+        
+    </pageAccesses>
+    
+    <pageAccesses>
+        
+        <apexPage>SiteLogin</apexPage>
+        
+        <enabled>true</enabled>
+        
+    </pageAccesses>
+    
+    <pageAccesses>
+        
+        <apexPage>SiteRegister</apexPage>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
+        
+        <enabled>true</enabled>
+        
+    </pageAccesses>
+    
+    <pageAccesses>
+        
+<<<<<<< HEAD
+        <apexPage>ChangePassword</apexPage>
+=======
+        <apexPage>SiteRegisterConfirm</apexPage>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
+        
+        <enabled>true</enabled>
+        
+    </pageAccesses>
+    
+    <pageAccesses>
+        
+<<<<<<< HEAD
+        <apexPage>CommunitiesLanding</apexPage>
+=======
+        <apexPage>SiteTemplate</apexPage>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
+        
+        <enabled>true</enabled>
+        
+    </pageAccesses>
+    
+    <pageAccesses>
+        
+<<<<<<< HEAD
+        <apexPage>CommunitiesLogin</apexPage>
+=======
+        <apexPage>StdExceptionTemplate</apexPage>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
+        
+        <enabled>true</enabled>
+        
+    </pageAccesses>
+    
+    <pageAccesses>
+        
+<<<<<<< HEAD
+        <apexPage>CommunitiesSelfReg</apexPage>
+=======
+        <apexPage>Unauthorized</apexPage>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
+        
+        <enabled>true</enabled>
+        
+    </pageAccesses>
+    
+    <pageAccesses>
+        
+<<<<<<< HEAD
+        <apexPage>CommunitiesSelfRegConfirm</apexPage>
+=======
+        <apexPage>UnderConstruction</apexPage>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
+        
+        <enabled>true</enabled>
+        
+    </pageAccesses>
+    
+    <pageAccesses>
+        
+<<<<<<< HEAD
+        <apexPage>CommunitiesTemplate</apexPage>
+=======
+        <recordType>Account.Assister</recordType>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
+        
+        <enabled>true</enabled>
+        
+    </pageAccesses>
+    
+    <pageAccesses>
+        
+<<<<<<< HEAD
+        <apexPage>Exception</apexPage>
+=======
+        <recordType>Account.Citizen</recordType>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
+        
+        <enabled>true</enabled>
+        
+    </pageAccesses>
+    
+    <pageAccesses>
+        
+<<<<<<< HEAD
+        <apexPage>FileNotFound</apexPage>
+=======
+        <recordType>Account.Resource_Engine</recordType>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
+        
+        <enabled>true</enabled>
+        
+    </pageAccesses>
+    
+    <pageAccesses>
+        
+<<<<<<< HEAD
+        <apexPage>ForgotPassword</apexPage>
+        
+        <enabled>true</enabled>
+=======
+        <recordType>Contact.Assister</recordType>
+        
+        <visible>true</visible>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
+        
+    </pageAccesses>
+    
+<<<<<<< HEAD
+    <pageAccesses>
+        
+        <apexPage>ForgotPasswordConfirm</apexPage>
+        
+        <enabled>true</enabled>
+=======
+    <recordTypeVisibilities>
+        
+        <default>true</default>
+        
+        <recordType>Contact.CPUserContact</recordType>
+        
+        <visible>true</visible>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
+        
+    </pageAccesses>
+    
+<<<<<<< HEAD
+    <pageAccesses>
+        
+        <apexPage>IdeasHome</apexPage>
+=======
+    <recordTypeVisibilities>
+        
+        <default>false</default>
+        
+        <recordType>Contact.Citizen</recordType>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
+        
+        <enabled>true</enabled>
+        
+    </pageAccesses>
+    
+    <pageAccesses>
+        
+<<<<<<< HEAD
+        <apexPage>InMaintenance</apexPage>
+=======
+        <recordType>ReportConcern__c.Change</recordType>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
+        
+        <enabled>true</enabled>
+        
+    </pageAccesses>
+    
+    <pageAccesses>
+        
+<<<<<<< HEAD
+        <apexPage>MyProfilePage</apexPage>
+        
+        <enabled>true</enabled>
+        
+    </pageAccesses>
+    
 
     
     <pageAccesses>
@@ -3032,6 +4016,15 @@
     </pageAccesses>
     
     <pageAccesses>
+=======
+        <recordType>ReportConcern__c.Concern</recordType>
+        
+        <visible>false</visible>
+        
+    </recordTypeVisibilities>
+
+    <tabVisibilities>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
         <apexPage>SiteTemplate</apexPage>
         
@@ -3057,6 +4050,7 @@
     
     <pageAccesses>
         
+<<<<<<< HEAD
         <apexPage>UnderConstruction</apexPage>
         
         <enabled>true</enabled>
@@ -3116,6 +4110,9 @@
     <recordTypeVisibilities>
         
         <default>false</default>
+=======
+        <tab>RE_Taxonomy__c</tab>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
         <recordType>Contact.Citizen</recordType>
         
@@ -3125,6 +4122,7 @@
 
     <tabVisibilities>
         
+<<<<<<< HEAD
         <tab>Getting_Started</tab>
         
         <visibility>DefaultOn</visibility>
@@ -3134,11 +4132,15 @@
     <tabVisibilities>
         
         <tab>Getting_Started</tab>
+=======
+        <tab>ReportConcern__c</tab>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
         <visibility>DefaultOn</visibility>
         
     </tabVisibilities>
     
+<<<<<<< HEAD
     <tabVisibilities>
         
         <tab>LOG_LogMessage__c</tab>
@@ -3147,6 +4149,8 @@
         
     </tabVisibilities>
     
+=======
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
     <userLicense>Salesforce</userLicense>
     
     <userPermissions>

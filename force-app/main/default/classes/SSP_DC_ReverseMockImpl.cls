@@ -348,31 +348,7 @@ public  with sharing class SSP_DC_ReverseMockImpl implements HttpCalloutMock {
   '         "HasDividendsRoyaltiesToggle__c" : null,  '  + 
   '         "HasSelfEmploymentIncomeToggle__c" : null,  '  + 
   '         "HasEarnedIncomeFromEmploymentToggle__c" : null,  '  + 
-  '         "IndividualId__c" : "101227474"  '  + 
-  '       }, {  '  + 
-  '         "HasIncomefromGamblingorLotteryToggle__c" : null,  '  + 
-  '         "HasReceivedBenefitsFromOtherStateToggle__c" : null,  '  + 
-  '         "HasUnpaidEmploymentToggle__c" : null,  '  + 
-  '         "HasUnearnedIncomeToggle__c" : null,  '  + 
-  '         "HasMaintenanceIncomeToggle__c" : "Y",  '  + 
-  '         "HasInsuranceSettlementBenefitToggle__c" : null,  '  + 
-  '         "HasServicesorPaymentsToggle__c" : null,  '  + 
-  '         "HasDividendsRoyaltiesToggle__c" : null,  '  + 
-  '         "HasSelfEmploymentIncomeToggle__c" : null,  '  + 
-  '         "HasEarnedIncomeFromEmploymentToggle__c" : null,  '  + 
-  '         "IndividualId__c" : "101227475"  '  + 
-  '       }, {  '  + 
-  '         "HasIncomefromGamblingorLotteryToggle__c" : null,  '  + 
-  '         "HasReceivedBenefitsFromOtherStateToggle__c" : null,  '  + 
-  '         "HasUnpaidEmploymentToggle__c" : null,  '  + 
-  '         "HasUnearnedIncomeToggle__c" : null,  '  + 
-  '         "HasMaintenanceIncomeToggle__c" : null,  '  + 
-  '         "HasInsuranceSettlementBenefitToggle__c" : null,  '  + 
-  '         "HasServicesorPaymentsToggle__c" : null,  '  + 
-  '         "HasDividendsRoyaltiesToggle__c" : null,  '  + 
-  '         "HasSelfEmploymentIncomeToggle__c" : null,  '  + 
-  '         "HasEarnedIncomeFromEmploymentToggle__c" : "Y",  '  + 
-  '         "IndividualId__c" : "101272217"  '  + 
+  '         "IndividualId__c" : "999034247"  '  + 
   '       } ]  '  + 
   '     },  '  + 
   '     "role" : "Citizen_Individual",  '  + 
@@ -420,21 +396,6 @@ public  with sharing class SSP_DC_ReverseMockImpl implements HttpCalloutMock {
   '         "HasShelterExpenseToggle__c" : null,  '  + 
   '         "HasMedicalBillsToggle__c" : null,  '  + 
   '         "IndividualId__c" : "999034247"  '  + 
-  '       }, {  '  + 
-  '         "IsCoverageMonth3__c" : 0,  '  + 
-  '         "IsCoverageMonth2__c" : 0,  '  + 
-  '         "IsCoverageMonth1__c" : 0,  '  + 
-  '         "HasDependentCareExpenseToggle__c" : null,  '  + 
-  '         "HasHouseholdPaidChildSupportToggle__c" : null,  '  + 
-  '         "HasDisabledExpensesToggle__c" : null,  '  + 
-  '         "HasMedicalExpensePartDToggle__c" : null,  '  + 
-  '         "HasAlimonyExpenseToggle__c" : null,  '  + 
-  '         "HasTaxDeductionsExpenseToggle__c" : null,  '  + 
-  '         "HaveHigherEducationExpenseToggle__c" : null,  '  + 
-  '         "HasUtilityExpenseToggle__c" : null,  '  + 
-  '         "HasShelterExpenseToggle__c" : "Y",  '  + 
-  '         "HasMedicalBillsToggle__c" : "Y",  '  + 
-  '         "IndividualId__c" : "101272217"  '  + 
   '       } ],  '  + 
   '       "SSP_Asset__c" : [ {  '  + 
   '         "DCAssetId__c" : "Expense,1291052",  '  + 
@@ -536,52 +497,12 @@ public  with sharing class SSP_DC_ReverseMockImpl implements HttpCalloutMock {
   '       } ],  '  + 
   '       "SSP_HealthInsuranceFacilityType__c" : [ {  '  + 
   '         "SSP_InsuranceCoveredIndiv__r" : {  '  + 
-  '           "DCInsuranceCoveredIndivId__c" : "1041796,101227475,0"  '  + 
+  '           "DCInsuranceCoveredIndivId__c" : "999034247"  '  + 
   '         },  '  + 
   '         "CoverageEndDate__c" : "2299-12-31",  '  + 
   '         "CoverageStartDate__c" : "2014-12-01",  '  + 
   '         "FacilityType__c" : "HP",  '  + 
   '         "DCId__c" : "793736"  '  + 
-  '       }, {  '  + 
-  '         "SSP_InsuranceCoveredIndiv__r" : {  '  + 
-  '           "DCInsuranceCoveredIndivId__c" : "1041796,101227475,0"  '  + 
-  '         },  '  + 
-  '         "CoverageEndDate__c" : "2299-12-31",  '  + 
-  '         "CoverageStartDate__c" : "2014-12-01",  '  + 
-  '         "FacilityType__c" : "HP",  '  + 
-  '         "DCId__c" : "793737"  '  + 
-  '       }, {  '  + 
-  '         "SSP_InsuranceCoveredIndiv__r" : {  '  + 
-  '           "DCInsuranceCoveredIndivId__c" : "2209393,101272217,0"  '  + 
-  '         },  '  + 
-  '         "CoverageEndDate__c" : null,  '  + 
-  '         "CoverageStartDate__c" : "2019-01-01",  '  + 
-  '         "FacilityType__c" : "MD",  '  + 
-  '         "DCId__c" : "1975771"  '  + 
-  '       }, {  '  + 
-  '         "SSP_InsuranceCoveredIndiv__r" : {  '  + 
-  '           "DCInsuranceCoveredIndivId__c" : "2261606,101272217,0"  '  + 
-  '         },  '  + 
-  '         "CoverageEndDate__c" : null,  '  + 
-  '         "CoverageStartDate__c" : "2019-06-01",  '  + 
-  '         "FacilityType__c" : "MD",  '  + 
-  '         "DCId__c" : "2036873"  '  + 
-  '       }, {  '  + 
-  '         "SSP_InsuranceCoveredIndiv__r" : {  '  + 
-  '           "DCInsuranceCoveredIndivId__c" : "2209393,101227475,0"  '  + 
-  '         },  '  + 
-  '         "CoverageEndDate__c" : null,  '  + 
-  '         "CoverageStartDate__c" : "2019-01-01",  '  + 
-  '         "FacilityType__c" : "MD",  '  + 
-  '         "DCId__c" : "2038483"  '  + 
-  '       }, {  '  + 
-  '         "SSP_InsuranceCoveredIndiv__r" : {  '  + 
-  '           "DCInsuranceCoveredIndivId__c" : "2209393,101227474,0"  '  + 
-  '         },  '  + 
-  '         "CoverageEndDate__c" : null,  '  + 
-  '         "CoverageStartDate__c" : "2019-01-01",  '  + 
-  '         "FacilityType__c" : "MD",  '  + 
-  '         "DCId__c" : "2038484"  '  + 
   '       } ],  '  + 
   '       "SSP_Member__c" : [ {  '  + 
   '         "PreferredIssuanceMethod__c" : "CH",  '  + 
@@ -602,7 +523,7 @@ public  with sharing class SSP_DC_ReverseMockImpl implements HttpCalloutMock {
   '         "ExtCity__c" : "QVK UPBZRVID",  '  + 
   '         "ExtAddressLine2__c" : "",  '  + 
   '         "ExtAddressLine1__c" : "QVK UPBZRVID",  '  + 
-  '         "DCInsuranceCoveredIndivId__c" : "1041796,248382,0",  '  + 
+  '         "DCInsuranceCoveredIndivId__c" : "999034247",  '  + 
   '         "RecordType" : {  '  + 
   '           "Name" : "Insurance External Policy Holder"  '  + 
   '         },  '  + 
@@ -624,204 +545,6 @@ public  with sharing class SSP_DC_ReverseMockImpl implements HttpCalloutMock {
   '           "DCId__c" : "1041796"  '  + 
   '         },  '  + 
   '         "InsuranceInternalPolicyHolder__c" : null,  '  + 
-  '         "SSN__c" : null  '  + 
-  '       }, {  '  + 
-  '         "ExtCountyCode__c" : null,  '  + 
-  '         "ExtZipCode5__c" : null,  '  + 
-  '         "ExtZipCode4__c" : null,  '  + 
-  '         "ExtStateCode__c" : null,  '  + 
-  '         "ExtCity__c" : null,  '  + 
-  '         "ExtAddressLine2__c" : null,  '  + 
-  '         "ExtAddressLine1__c" : null,  '  + 
-  '         "DCInsuranceCoveredIndivId__c" : "1041796,101227475,0",  '  + 
-  '         "RecordType" : {  '  + 
-  '           "Name" : "Insurance Covered Individual"  '  + 
-  '         },  '  + 
-  '         "RelationshipCode__c" : null,  '  + 
-  '         "MedicaidId__c" : "0113514066",  '  + 
-  '         "LastName__c" : null,  '  + 
-  '         "FirstName__c" : null,  '  + 
-  '         "DateOfBirth__c" : null,  '  + 
-  '         "Gender__c" : null,  '  + 
-  '         "IsTobbacoConsumerToggle__c" : null,  '  + 
-  '         "DCId__c" : null,  '  + 
-  '         "ExtPolicyHolderSSN__c" : null,  '  + 
-  '         "SuffixCode__c" : null,  '  + 
-  '         "ExtPolicyHolderLastName__c" : null,  '  + 
-  '         "ExtPolicyHolderMiddleInitial__c" : null,  '  + 
-  '         "ExtPolicyHolderFirstName__c" : null,  '  + 
-  '         "SSP_Member__r" : {  '  + 
-  '           "IndividualId__c" : "999034247"  '  + 
-  '         },  '  + 
-  '         "SSP_InsurancePolicy__r" : {  '  + 
-  '           "DCId__c" : "1041796"  '  + 
-  '         },  '  + 
-  '         "InsuranceInternalPolicyHolder__c" : null,  '  + 
-  '         "SSN__c" : null  '  + 
-  '       }, {  '  + 
-  '         "ExtCountyCode__c" : null,  '  + 
-  '         "ExtZipCode5__c" : null,  '  + 
-  '         "ExtZipCode4__c" : null,  '  + 
-  '         "ExtStateCode__c" : null,  '  + 
-  '         "ExtCity__c" : null,  '  + 
-  '         "ExtAddressLine2__c" : null,  '  + 
-  '         "ExtAddressLine1__c" : null,  '  + 
-  '         "DCInsuranceCoveredIndivId__c" : "1041796,101227475,0",  '  + 
-  '         "RecordType" : {  '  + 
-  '           "Name" : "Insurance Covered Individual"  '  + 
-  '         },  '  + 
-  '         "RelationshipCode__c" : "3",  '  + 
-  '         "MedicaidId__c" : "0113514066",  '  + 
-  '         "LastName__c" : null,  '  + 
-  '         "FirstName__c" : null,  '  + 
-  '         "DateOfBirth__c" : null,  '  + 
-  '         "Gender__c" : null,  '  + 
-  '         "IsTobbacoConsumerToggle__c" : null,  '  + 
-  '         "DCId__c" : null,  '  + 
-  '         "ExtPolicyHolderSSN__c" : null,  '  + 
-  '         "SuffixCode__c" : null,  '  + 
-  '         "ExtPolicyHolderLastName__c" : null,  '  + 
-  '         "ExtPolicyHolderMiddleInitial__c" : null,  '  + 
-  '         "ExtPolicyHolderFirstName__c" : null,  '  + 
-  '         "SSP_Member__r" : {  '  + 
-  '           "IndividualId__c" : "999034247"  '  + 
-  '         },  '  + 
-  '         "SSP_InsurancePolicy__r" : {  '  + 
-  '           "DCId__c" : "1041796"  '  + 
-  '         },  '  + 
-  '         "InsuranceInternalPolicyHolder__c" : null,  '  + 
-  '         "SSN__c" : null  '  + 
-  '       }, {  '  + 
-  '         "ExtCountyCode__c" : null,  '  + 
-  '         "ExtZipCode5__c" : null,  '  + 
-  '         "ExtZipCode4__c" : null,  '  + 
-  '         "ExtStateCode__c" : null,  '  + 
-  '         "ExtCity__c" : null,  '  + 
-  '         "ExtAddressLine2__c" : null,  '  + 
-  '         "ExtAddressLine1__c" : null,  '  + 
-  '         "DCInsuranceCoveredIndivId__c" : "2209393,101227474,0",  '  + 
-  '         "RecordType" : {  '  + 
-  '           "Name" : "Insurance Covered Individual"  '  + 
-  '         },  '  + 
-  '         "RelationshipCode__c" : "3",  '  + 
-  '         "MedicaidId__c" : "0114680035",  '  + 
-  '         "LastName__c" : null,  '  + 
-  '         "FirstName__c" : null,  '  + 
-  '         "DateOfBirth__c" : null,  '  + 
-  '         "Gender__c" : null,  '  + 
-  '         "IsTobbacoConsumerToggle__c" : "Y",  '  + 
-  '         "DCId__c" : null,  '  + 
-  '         "ExtPolicyHolderSSN__c" : null,  '  + 
-  '         "SuffixCode__c" : null,  '  + 
-  '         "ExtPolicyHolderLastName__c" : null,  '  + 
-  '         "ExtPolicyHolderMiddleInitial__c" : null,  '  + 
-  '         "ExtPolicyHolderFirstName__c" : null,  '  + 
-  '         "SSP_Member__r" : {  '  + 
-  '           "IndividualId__c" : "999034247"  '  + 
-  '         },  '  + 
-  '         "SSP_InsurancePolicy__r" : {  '  + 
-  '           "DCId__c" : "2209393"  '  + 
-  '         },  '  + 
-  '         "InsuranceInternalPolicyHolder__c" : "101272217",  '  + 
-  '         "SSN__c" : null  '  + 
-  '       }, {  '  + 
-  '         "ExtCountyCode__c" : null,  '  + 
-  '         "ExtZipCode5__c" : null,  '  + 
-  '         "ExtZipCode4__c" : null,  '  + 
-  '         "ExtStateCode__c" : null,  '  + 
-  '         "ExtCity__c" : null,  '  + 
-  '         "ExtAddressLine2__c" : null,  '  + 
-  '         "ExtAddressLine1__c" : null,  '  + 
-  '         "DCInsuranceCoveredIndivId__c" : "2209393,101227475,0",  '  + 
-  '         "RecordType" : {  '  + 
-  '           "Name" : "Insurance Covered Individual"  '  + 
-  '         },  '  + 
-  '         "RelationshipCode__c" : "3",  '  + 
-  '         "MedicaidId__c" : "0113514066",  '  + 
-  '         "LastName__c" : null,  '  + 
-  '         "FirstName__c" : null,  '  + 
-  '         "DateOfBirth__c" : null,  '  + 
-  '         "Gender__c" : null,  '  + 
-  '         "IsTobbacoConsumerToggle__c" : "Y",  '  + 
-  '         "DCId__c" : null,  '  + 
-  '         "ExtPolicyHolderSSN__c" : null,  '  + 
-  '         "SuffixCode__c" : null,  '  + 
-  '         "ExtPolicyHolderLastName__c" : null,  '  + 
-  '         "ExtPolicyHolderMiddleInitial__c" : null,  '  + 
-  '         "ExtPolicyHolderFirstName__c" : null,  '  + 
-  '         "SSP_Member__r" : {  '  + 
-  '           "IndividualId__c" : "999034247"  '  + 
-  '         },  '  + 
-  '         "SSP_InsurancePolicy__r" : {  '  + 
-  '           "DCId__c" : "2209393"  '  + 
-  '         },  '  + 
-  '         "InsuranceInternalPolicyHolder__c" : "101272217",  '  + 
-  '         "SSN__c" : null  '  + 
-  '       }, {  '  + 
-  '         "ExtCountyCode__c" : null,  '  + 
-  '         "ExtZipCode5__c" : null,  '  + 
-  '         "ExtZipCode4__c" : null,  '  + 
-  '         "ExtStateCode__c" : null,  '  + 
-  '         "ExtCity__c" : null,  '  + 
-  '         "ExtAddressLine2__c" : null,  '  + 
-  '         "ExtAddressLine1__c" : null,  '  + 
-  '         "DCInsuranceCoveredIndivId__c" : "2209393,101272217,0",  '  + 
-  '         "RecordType" : {  '  + 
-  '           "Name" : "Insurance Covered Individual"  '  + 
-  '         },  '  + 
-  '         "RelationshipCode__c" : "1",  '  + 
-  '         "MedicaidId__c" : "0115605590",  '  + 
-  '         "LastName__c" : null,  '  + 
-  '         "FirstName__c" : null,  '  + 
-  '         "DateOfBirth__c" : null,  '  + 
-  '         "Gender__c" : null,  '  + 
-  '         "IsTobbacoConsumerToggle__c" : "Y",  '  + 
-  '         "DCId__c" : null,  '  + 
-  '         "ExtPolicyHolderSSN__c" : null,  '  + 
-  '         "SuffixCode__c" : null,  '  + 
-  '         "ExtPolicyHolderLastName__c" : null,  '  + 
-  '         "ExtPolicyHolderMiddleInitial__c" : null,  '  + 
-  '         "ExtPolicyHolderFirstName__c" : null,  '  + 
-  '         "SSP_Member__r" : {  '  + 
-  '           "IndividualId__c" : "999034247"  '  + 
-  '         },  '  + 
-  '         "SSP_InsurancePolicy__r" : {  '  + 
-  '           "DCId__c" : "2209393"  '  + 
-  '         },  '  + 
-  '         "InsuranceInternalPolicyHolder__c" : "101272217",  '  + 
-  '         "SSN__c" : null  '  + 
-  '       }, {  '  + 
-  '         "ExtCountyCode__c" : null,  '  + 
-  '         "ExtZipCode5__c" : null,  '  + 
-  '         "ExtZipCode4__c" : null,  '  + 
-  '         "ExtStateCode__c" : null,  '  + 
-  '         "ExtCity__c" : null,  '  + 
-  '         "ExtAddressLine2__c" : null,  '  + 
-  '         "ExtAddressLine1__c" : null,  '  + 
-  '         "DCInsuranceCoveredIndivId__c" : "2261606,101272217,0",  '  + 
-  '         "RecordType" : {  '  + 
-  '           "Name" : "Insurance Covered Individual"  '  + 
-  '         },  '  + 
-  '         "RelationshipCode__c" : "1",  '  + 
-  '         "MedicaidId__c" : "0115605590",  '  + 
-  '         "LastName__c" : null,  '  + 
-  '         "FirstName__c" : null,  '  + 
-  '         "DateOfBirth__c" : null,  '  + 
-  '         "Gender__c" : null,  '  + 
-  '         "IsTobbacoConsumerToggle__c" : "Y",  '  + 
-  '         "DCId__c" : null,  '  + 
-  '         "ExtPolicyHolderSSN__c" : null,  '  + 
-  '         "SuffixCode__c" : null,  '  + 
-  '         "ExtPolicyHolderLastName__c" : null,  '  + 
-  '         "ExtPolicyHolderMiddleInitial__c" : null,  '  + 
-  '         "ExtPolicyHolderFirstName__c" : null,  '  + 
-  '         "SSP_Member__r" : {  '  + 
-  '           "IndividualId__c" : "999034247"  '  + 
-  '         },  '  + 
-  '         "SSP_InsurancePolicy__r" : {  '  + 
-  '           "DCId__c" : "2261606"  '  + 
-  '         },  '  + 
-  '         "InsuranceInternalPolicyHolder__c" : "101272217",  '  + 
   '         "SSN__c" : null  '  + 
   '       } ],  '  + 
   '       "SSP_InsurancePolicy__c" : [ {  '  + 
@@ -845,48 +568,6 @@ public  with sharing class SSP_DC_ReverseMockImpl implements HttpCalloutMock {
   '         "TypeOfCoverageCode__c" : "OT",  '  + 
   '         "IsEnrolledInInsurance__c" : 1,  '  + 
   '         "DCId__c" : "1041796"  '  + 
-  '       }, {  '  + 
-  '         "EmployerName__c" : "SQLN",  '  + 
-  '         "DCEmploymentDetailId__c" : "2141870",  '  + 
-  '         "IsHealthCareCoverageApproved__c" : 0,  '  + 
-  '         "IsHealthCareCovPolicyHolderOutSideCase__c" : 0,  '  + 
-  '         "EnrollmentTierLevel__c" : "EMTD",  '  + 
-  '         "InsuranceGroupNumber__c" : "1206839",  '  + 
-  '         "InsurancePolicyNumber__c" : "Zfxdkrk",  '  + 
-  '         "PlanName__c" : "PPO Plan (CDHP)",  '  + 
-  '         "PhysicalAddressLine2__c" : null,  '  + 
-  '         "PhysicalZipCode5__c" : "72709",  '  + 
-  '         "PhysicalZipCode4__c" : null,  '  + 
-  '         "PhysicalStateCode__c" : "KY",  '  + 
-  '         "PhysicalCountyCode__c" : null,  '  + 
-  '         "PhysicalCountryCode__c" : "",  '  + 
-  '         "PhysicalCity__c" : "Zfxdkrk",  '  + 
-  '         "PhysicalAddressLine1__c" : "Zfxdkrk",  '  + 
-  '         "InsuranceCompanyName__c" : "VympCdiup LqjhQgikol",  '  + 
-  '         "TypeOfCoverageCode__c" : "EM",  '  + 
-  '         "IsEnrolledInInsurance__c" : 1,  '  + 
-  '         "DCId__c" : "2209393"  '  + 
-  '       }, {  '  + 
-  '         "EmployerName__c" : "SQLN",  '  + 
-  '         "DCEmploymentDetailId__c" : "3029049",  '  + 
-  '         "IsHealthCareCoverageApproved__c" : 0,  '  + 
-  '         "IsHealthCareCovPolicyHolderOutSideCase__c" : 0,  '  + 
-  '         "EnrollmentTierLevel__c" : null,  '  + 
-  '         "InsuranceGroupNumber__c" : "1206878",  '  + 
-  '         "InsurancePolicyNumber__c" : null,  '  + 
-  '         "PlanName__c" : "BCBS-CDHP",  '  + 
-  '         "PhysicalAddressLine2__c" : null,  '  + 
-  '         "PhysicalZipCode5__c" : null,  '  + 
-  '         "PhysicalZipCode4__c" : null,  '  + 
-  '         "PhysicalStateCode__c" : null,  '  + 
-  '         "PhysicalCountyCode__c" : null,  '  + 
-  '         "PhysicalCountryCode__c" : "",  '  + 
-  '         "PhysicalCity__c" : null,  '  + 
-  '         "PhysicalAddressLine1__c" : null,  '  + 
-  '         "InsuranceCompanyName__c" : "Vymp Cdiup Lqjh Qgikol",  '  + 
-  '         "TypeOfCoverageCode__c" : "OT",  '  + 
-  '         "IsEnrolledInInsurance__c" : 1,  '  + 
-  '         "DCId__c" : "2261606"  '  + 
   '       } ]  '  + 
   '     },  '  + 
   '     "role" : "Citizen_Individual",  '  + 
@@ -900,136 +581,62 @@ public  with sharing class SSP_DC_ReverseMockImpl implements HttpCalloutMock {
   '     "viewName" : "HealthCoverageInformation"  '  + 
   '  }  ' ; 
     
-  public static final String sHealthInformation =         
-  
-  '   {  '  + 
-  '     "AckResponse" : null,  '  + 
-  '     "Payload" : {  '  + 
-  '       "SSP_ApplicationIndividual__c" : null,  '  + 
-  '       "SSP_Application__c" : [ {  '  + 
-  '         "HasPendingAccidentSettlementToggle__c" : "N"  '  + 
-  '       } ],  '  + 
-  '       "SSP_Benefits__c" : null,  '  + 
-  '       "SSP_Member__c" : [ {  '  + 
-  '         "DCRecoveryIllnessId__c" : null,  '  + 
-  '         "DCEMCId__c" : null,  '  + 
-  '         "IsReceivingCaretakerServicesToggle__c" : null,  '  + 
-  '         "IsRequestingOrReceivingCISToggle__c" : null,  '  + 
-  '         "BlindnessVerificationCode__c" : 0,  '  + 
-  '         "UnableToBuyCookForSelfToggle__c" : null,  '  + 
-  '         "DisabilityVerificationCode__c" : 0,  '  + 
-  '         "TBQIndividualVerificationCode__c" : 0,  '  + 
-  '         "DCMemberWorkReqExemptionId__c" : null,  '  + 
-  '         "ReturnToWorkDate__c" : null,  '  + 
-  '         "IsOnSickLeaveToggle__c" : null,  '  + 
-  '         "RecoveryDate__c" : null,  '  + 
-  '         "EmergencyEndDate__c" : null,  '  + 
-  '         "EmergencyBeginDate__c" : null,  '  + 
-  '         "BlindnessStatus__c" : null,  '  + 
-  '         "BlindnessBenefitTypeCode__c" : null,  '  + 
-  '         "BlindnessParentUnableToCareForChild__c" : null,  '  + 
-  '         "BlindnessHasEndStageRenalDisease__c" : null,  '  + 
-  '         "DisabilityStatus__c" : null,  '  + 
-  '         "ParentUnableToCareForChildToggle__c" : null,  '  + 
-  '         "HasEndStageRenalDiseaseToggle__c" : null,  '  + 
-  '         "BenefitTypeCode__c" : null,  '  + 
-  '         "IsToBeReferredToWicToggle__c" : null,  '  + 
-  '         "PregnancyTerminationDate__c" : null,  '  + 
-  '         "PregnancyDueDate__c" : null,  '  + 
-  '         "NumberOfBirthsExpected__c" : null,  '  + 
-  '         "IsPregnantToggle__c" : null,  '  + 
-  '         "DCPregnancyId__c" : null,  '  + 
-  '         "IsPregnantInLastThreeMonthsToggle__c" : null,  '  + 
-  '         "IsReceivingMedicareBenefitToggle__c" : null,  '  + 
-  '         "IsRecoveryFromIllnessOrInjuryToggle__c" : null,  '  + 
-  '         "IsBlindToggle__c" : null,  '  + 
-  '         "IsDisabledToggle__c" : null,  '  + 
-  '         "HasEmergencyMedicalConditionToggle__c" : null,  '  + 
-  '         "IndividualId__c" : "999034247"  '  + 
-  '       }, {  '  + 
-  '         "DCRecoveryIllnessId__c" : null,  '  + 
-  '         "DCEMCId__c" : null,  '  + 
-  '         "IsReceivingCaretakerServicesToggle__c" : null,  '  + 
-  '         "IsRequestingOrReceivingCISToggle__c" : null,  '  + 
-  '         "BlindnessVerificationCode__c" : 0,  '  + 
-  '         "UnableToBuyCookForSelfToggle__c" : null,  '  + 
-  '         "DisabilityVerificationCode__c" : 0,  '  + 
-  '         "TBQIndividualVerificationCode__c" : 0,  '  + 
-  '         "DCMemberWorkReqExemptionId__c" : null,  '  + 
-  '         "ReturnToWorkDate__c" : null,  '  + 
-  '         "IsOnSickLeaveToggle__c" : null,  '  + 
-  '         "RecoveryDate__c" : null,  '  + 
-  '         "EmergencyEndDate__c" : null,  '  + 
-  '         "EmergencyBeginDate__c" : null,  '  + 
-  '         "BlindnessStatus__c" : null,  '  + 
-  '         "BlindnessBenefitTypeCode__c" : null,  '  + 
-  '         "BlindnessParentUnableToCareForChild__c" : null,  '  + 
-  '         "BlindnessHasEndStageRenalDisease__c" : null,  '  + 
-  '         "DisabilityStatus__c" : null,  '  + 
-  '         "ParentUnableToCareForChildToggle__c" : null,  '  + 
-  '         "HasEndStageRenalDiseaseToggle__c" : null,  '  + 
-  '         "BenefitTypeCode__c" : null,  '  + 
-  '         "IsToBeReferredToWicToggle__c" : null,  '  + 
-  '         "PregnancyTerminationDate__c" : null,  '  + 
-  '         "PregnancyDueDate__c" : null,  '  + 
-  '         "NumberOfBirthsExpected__c" : null,  '  + 
-  '         "IsPregnantToggle__c" : null,  '  + 
-  '         "DCPregnancyId__c" : null,  '  + 
-  '         "IsPregnantInLastThreeMonthsToggle__c" : null,  '  + 
-  '         "IsReceivingMedicareBenefitToggle__c" : null,  '  + 
-  '         "IsRecoveryFromIllnessOrInjuryToggle__c" : null,  '  + 
-  '         "IsBlindToggle__c" : null,  '  + 
-  '         "IsDisabledToggle__c" : null,  '  + 
-  '         "HasEmergencyMedicalConditionToggle__c" : null,  '  + 
-  '         "IndividualId__c" : "999034247"  '  + 
-  '       }, {  '  + 
-  '         "DCRecoveryIllnessId__c" : null,  '  + 
-  '         "DCEMCId__c" : null,  '  + 
-  '         "IsReceivingCaretakerServicesToggle__c" : null,  '  + 
-  '         "IsRequestingOrReceivingCISToggle__c" : null,  '  + 
-  '         "BlindnessVerificationCode__c" : 0,  '  + 
-  '         "UnableToBuyCookForSelfToggle__c" : null,  '  + 
-  '         "DisabilityVerificationCode__c" : 0,  '  + 
-  '         "TBQIndividualVerificationCode__c" : 0,  '  + 
-  '         "DCMemberWorkReqExemptionId__c" : null,  '  + 
-  '         "ReturnToWorkDate__c" : null,  '  + 
-  '         "IsOnSickLeaveToggle__c" : null,  '  + 
-  '         "RecoveryDate__c" : null,  '  + 
-  '         "EmergencyEndDate__c" : null,  '  + 
-  '         "EmergencyBeginDate__c" : null,  '  + 
-  '         "BlindnessStatus__c" : null,  '  + 
-  '         "BlindnessBenefitTypeCode__c" : null,  '  + 
-  '         "BlindnessParentUnableToCareForChild__c" : null,  '  + 
-  '         "BlindnessHasEndStageRenalDisease__c" : null,  '  + 
-  '         "DisabilityStatus__c" : null,  '  + 
-  '         "ParentUnableToCareForChildToggle__c" : null,  '  + 
-  '         "HasEndStageRenalDiseaseToggle__c" : null,  '  + 
-  '         "BenefitTypeCode__c" : null,  '  + 
-  '         "IsToBeReferredToWicToggle__c" : null,  '  + 
-  '         "PregnancyTerminationDate__c" : null,  '  + 
-  '         "PregnancyDueDate__c" : null,  '  + 
-  '         "NumberOfBirthsExpected__c" : null,  '  + 
-  '         "IsPregnantToggle__c" : null,  '  + 
-  '         "DCPregnancyId__c" : null,  '  + 
-  '         "IsPregnantInLastThreeMonthsToggle__c" : null,  '  + 
-  '         "IsReceivingMedicareBenefitToggle__c" : null,  '  + 
-  '         "IsRecoveryFromIllnessOrInjuryToggle__c" : null,  '  + 
-  '         "IsBlindToggle__c" : null,  '  + 
-  '         "IsDisabledToggle__c" : null,  '  + 
-  '         "HasEmergencyMedicalConditionToggle__c" : null,  '  + 
-  '         "IndividualId__c" : "999034247"  '  + 
-  '       } ]  '  + 
-  '     },  '  + 
-  '     "role" : "Citizen_Individual",  '  + 
-  '     "miscelleanousParameter" : "",  '  + 
-  '     "applicationID" : "a2Rr00000007SYqEAM",  '  + 
-  '     "mode" : "Intake",  '  + 
-  '     "programCode" : "MA",  '  + 
-  '     "individualIds" : "999034247;101227474;101227475",  '  + 
-  '     "primaryApplicantIndividualId" : "999034247",  '  + 
-  '     "caseNumber" : "0",  '  + 
-  '     "viewName" : "HealthInformation"  '  + 
-  '  }  ' ; 
+  public static final String sHealthInformation =         '   {  '  + 
+                        '     "AckResponse" : null,  '  + 
+                        '     "Payload" : {  '  + 
+                        '       "SSP_ApplicationIndividual__c" : null,  '  + 
+                        '       "SSP_Application__c" : [ {  '  + 
+                        '         "HasPendingAccidentSettlementToggle__c" : "N"  '  + 
+                        '       } ],  '  + 
+                        '       "SSP_Benefits__c" : null,  '  + 
+                        '       "SSP_Member__c" : [ {  '  + 
+                        '         "DCRecoveryIllnessId__c" : null,  '  + 
+                        '         "DCEMCId__c" : null,  '  + 
+                        '         "IsReceivingCaretakerServicesToggle__c" : null,  '  + 
+                        '         "IsRequestingOrReceivingCISToggle__c" : null,  '  + 
+                        '         "BlindnessVerificationCode__c" : 0,  '  + 
+                        '         "UnableToBuyCookForSelfToggle__c" : null,  '  + 
+                        '         "DisabilityVerificationCode__c" : 0,  '  + 
+                        '         "TBQIndividualVerificationCode__c" : 0,  '  + 
+                        '         "DCMemberWorkReqExemptionId__c" : null,  '  + 
+                        '         "ReturnToWorkDate__c" : null,  '  + 
+                        '         "IsOnSickLeaveToggle__c" : null,  '  + 
+                        '         "RecoveryDate__c" : null,  '  + 
+                        '         "EmergencyEndDate__c" : null,  '  + 
+                        '         "EmergencyBeginDate__c" : null,  '  + 
+                        '         "BlindnessStatus__c" : null,  '  + 
+                        '         "BlindnessBenefitTypeCode__c" : null,  '  + 
+                        '         "BlindnessParentUnableToCareForChild__c" : null,  '  + 
+                        '         "BlindnessHasEndStageRenalDisease__c" : null,  '  + 
+                        '         "DisabilityStatus__c" : null,  '  + 
+                        '         "ParentUnableToCareForChildToggle__c" : null,  '  + 
+                        '         "HasEndStageRenalDiseaseToggle__c" : null,  '  + 
+                        '         "BenefitTypeCode__c" : null,  '  + 
+                        '         "IsToBeReferredToWicToggle__c" : null,  '  + 
+                        '         "PregnancyTerminationDate__c" : null,  '  + 
+                        '         "PregnancyDueDate__c" : null,  '  + 
+                        '         "NumberOfBirthsExpected__c" : null,  '  + 
+                        '         "IsPregnantToggle__c" : null,  '  + 
+                        '         "DCPregnancyId__c" : null,  '  + 
+                        '         "IsPregnantInLastThreeMonthsToggle__c" : null,  '  + 
+                        '         "IsReceivingMedicareBenefitToggle__c" : null,  '  + 
+                        '         "IsRecoveryFromIllnessOrInjuryToggle__c" : null,  '  + 
+                        '         "IsBlindToggle__c" : null,  '  + 
+                        '         "IsDisabledToggle__c" : null,  '  + 
+                        '         "HasEmergencyMedicalConditionToggle__c" : null,  '  + 
+                        '         "IndividualId__c" : "999034247"  '  + 
+                        '       }]  '  + 
+                        '     },  '  + 
+                        '     "role" : "Citizen_Individual",  '  + 
+                        '     "miscelleanousParameter" : "",  '  + 
+                        '     "applicationID" : "a2Rr00000007SYqEAM",  '  + 
+                        '     "mode" : "Intake",  '  + 
+                        '     "programCode" : "MA",  '  + 
+                        '     "individualIds" : "999034247;101227474;101227475",  '  + 
+                        '     "primaryApplicantIndividualId" : "999034247",  '  + 
+                        '     "caseNumber" : "0",  '  + 
+                        '     "viewName" : "HealthInformation"  '  + 
+                        '  }  ' ; 
   
 
   public static final String sHouseHoldOtherInformation =    '   {  '  + 
@@ -1115,58 +722,6 @@ public  with sharing class SSP_DC_ReverseMockImpl implements HttpCalloutMock {
   '         "LaTypeCode__c" : "IH",  '  + 
   '         "DCMemberLivingArrangementId__c" : 992094,  '  + 
   '         "IndividualId__c" : "999034247"  '  + 
-  '       }, {  '  + 
-  '         "DCLAHospitalizationId__c" : null,  '  + 
-  '         "HospitalizationEndDate__c" : null,  '  + 
-  '         "HospitalizationStartDate__c" : null,  '  + 
-  '         "IsFosterCareToggle__c" : null,  '  + 
-  '         "AgeAtFosterCare__c" : null,  '  + 
-  '         "IsStateMedicaidprogramCode__c" : "N",  '  + 
-  '         "FosterStateCode__c" : null,  '  + 
-  '         "ReceivesEntitledIncomeToggle__c" : "Y",  '  + 
-  '         "ReceivesSSIBenefitsToggle__c" : null,  '  + 
-  '         "IsMigrantOrSeasonalFarmWorkerToggle__c" : "N",  '  + 
-  '         "IsCurrentlyEnrolledInSchoolToggle__c" : "Y",  '  + 
-  '         "TemporarilyLivesElsewhereToggle__c" : null,  '  + 
-  '         "HasHouseholdHomeless__c" : null,  '  + 
-  '         "ReceiveInHouseAssistanceToggle__c" : "Y",  '  + 
-  '         "InHomeCareType__c" : "NA",  '  + 
-  '         "ProviderName__c" : null,  '  + 
-  '         "ProviderId__c" : null,  '  + 
-  '         "OrganizationName__r" : null,  '  + 
-  '         "ExpectedReturnDate__c" : null,  '  + 
-  '         "IsWaitingForDecisionToggle__c" : null,  '  + 
-  '         "IncarcerationBeginDate__c" : "2014-04-01",  '  + 
-  '         "HasRecievedHalfMealsFrmInstToggle__c" : null,  '  + 
-  '         "LaTypeCode__c" : "IH",  '  + 
-  '         "DCMemberLivingArrangementId__c" : 996357,  '  + 
-  '         "IndividualId__c" : "999034247"  '  + 
-  '       }, {  '  + 
-  '         "DCLAHospitalizationId__c" : null,  '  + 
-  '         "HospitalizationEndDate__c" : null,  '  + 
-  '         "HospitalizationStartDate__c" : null,  '  + 
-  '         "IsFosterCareToggle__c" : null,  '  + 
-  '         "AgeAtFosterCare__c" : null,  '  + 
-  '         "IsStateMedicaidprogramCode__c" : "N",  '  + 
-  '         "FosterStateCode__c" : null,  '  + 
-  '         "ReceivesEntitledIncomeToggle__c" : "Y",  '  + 
-  '         "ReceivesSSIBenefitsToggle__c" : null,  '  + 
-  '         "IsMigrantOrSeasonalFarmWorkerToggle__c" : "N",  '  + 
-  '         "IsCurrentlyEnrolledInSchoolToggle__c" : "N",  '  + 
-  '         "TemporarilyLivesElsewhereToggle__c" : null,  '  + 
-  '         "HasHouseholdHomeless__c" : null,  '  + 
-  '         "ReceiveInHouseAssistanceToggle__c" : "Y",  '  + 
-  '         "InHomeCareType__c" : "NA",  '  + 
-  '         "ProviderName__c" : null,  '  + 
-  '         "ProviderId__c" : null,  '  + 
-  '         "OrganizationName__r" : null,  '  + 
-  '         "ExpectedReturnDate__c" : null,  '  + 
-  '         "IsWaitingForDecisionToggle__c" : null,  '  + 
-  '         "IncarcerationBeginDate__c" : "2014-04-01",  '  + 
-  '         "HasRecievedHalfMealsFrmInstToggle__c" : null,  '  + 
-  '         "LaTypeCode__c" : "IH",  '  + 
-  '         "DCMemberLivingArrangementId__c" : 724981,  '  + 
-  '         "IndividualId__c" : "999034247"  '  + 
   '       } ]  '  + 
   '     },  '  + 
   '     "role" : "Citizen_Individual",  '  + 
@@ -1240,154 +795,6 @@ public  with sharing class SSP_DC_ReverseMockImpl implements HttpCalloutMock {
   '         "HighestEducationGraduatedDate__c" : null,  '  + 
   '         "HighestEducationLevelCode__c" : "8G",  '  + 
   '         "DCMemberHighestEducationLevelDetailsId__c" : 976133,  '  + 
-  '         "ImmigrationDateOfBirth__c" : null,  '  + 
-  '         "ImmigrationSuffix__c" : null,  '  + 
-  '         "ImmigrationLastName__c" : null,  '  + 
-  '         "ImmigrationMiddleName__c" : null,  '  + 
-  '         "ImmigrationFirstName__c" : null,  '  + 
-  '         "IsImmigrationDetailsMatch__c" : 0,  '  + 
-  '         "PassportNumber__c" : null,  '  + 
-  '         "NaturalizationNumber__c" : null,  '  + 
-  '         "I94Number__c" : null,  '  + 
-  '         "DocumentOtherDescription__c" : null,  '  + 
-  '         "DocumentExpiryDate__c" : null,  '  + 
-  '         "CountryOfIssuanceCode__c" : null,  '  + 
-  '         "CitizenshipNumber__c" : null,  '  + 
-  '         "AlienNumber__c" : null,  '  + 
-  '         "ReceiptNumber__c" : null,  '  + 
-  '         "SevisId__c" : null,  '  + 
-  '         "ImmigrationDocumentTypeCode__c" : null,  '  + 
-  '         "AlienTypeCode__c" : null,  '  + 
-  '         "HasLivedInUsToggle__c" : null,  '  + 
-  '         "IsMilitaryMemberToggle__c" : "N",  '  + 
-  '         "HasLegalImmigrationStatusToggle__c" : null,  '  + 
-  '         "HasAlienSponsorToggle__c" : null,  '  + 
-  '         "IndividualId__c" : "999034247"  '  + 
-  '       }, {  '  + 
-  '         "HasParentOrSiblingNextOutHousehold__c" : null,  '  + 
-  '         "HasParentOrSiblingCurrentOutHousehold__c" : null,  '  + 
-  '         "CanBuyCookWithHOH__c" : 0,  '  + 
-  '         "ExternalAlienSponsor__r" : null,  '  + 
-  '         "InternalAlienSponsor__r" : null,  '  + 
-  '         "DCInternalAlienSponsorId__c" : null,  '  + 
-  '         "SponsoredByOrganization__c" : null,  '  + 
-  '         "DCAlienSponsorRelationship__c" : null,  '  + 
-  '         "TaxFilerMemberNext__r" : null,  '  + 
-  '         "TaxFilerStatusNextYear__c" : null,  '  + 
-  '         "TaxFilerMemberCurrent__r" : {  '  + 
-  '           "IndividualId__c" : "999034247"  '  + 
-  '         },  '  + 
-  '         "TaxFilerStatusCurrentYear__c" : "DM",  '  + 
-  '         "MailingAddressLine2__c" : null,  '  + 
-  '         "MailingZipCode5__c" : "83705",  '  + 
-  '         "MailingZipCode4__c" : "9256",  '  + 
-  '         "MailingStateCode__c" : "KY",  '  + 
-  '         "MailingCountyCode__c" : "011",  '  + 
-  '         "MailingCity__c" : "ELFBJSUXVP",  '  + 
-  '         "MailingAddressLine1__c" : "527 J 9QG UT",  '  + 
-  '         "DCMailingAddressId__c" : 13717683,  '  + 
-  '         "HasDifferentMailingAddressToggle__c" : "N",  '  + 
-  '         "PhysicalAddressLine2__c" : null,  '  + 
-  '         "PhysicalZipCode5__c" : "83705",  '  + 
-  '         "PhysicalZipCode4__c" : "9256",  '  + 
-  '         "PhysicalStateCode__c" : "KY",  '  + 
-  '         "PhysicalCountyCode__c" : "011",  '  + 
-  '         "PhysicalCity__c" : "ELFBJSUXVP",  '  + 
-  '         "PhysicalAddressLine1__c" : "527 J 9QG UT",  '  + 
-  '         "IsFixedAddressToggle__c" : "Y",  '  + 
-  '         "DCPhysicalAddressId__c" : "29553500",  '  + 
-  '         "PreferredWrittenLanguageCode__c" : "1",  '  + 
-  '         "PreferredSpokenLanguageCode__c" : "1",  '  + 
-  '         "PreferredNotificationMethodCode__c" : "P",  '  + 
-  '         "SecondaryPhoneExtension__c" : "1234",  '  + 
-  '         "SecondaryPhoneNumber__c" : "1234567890",  '  + 
-  '         "IsPrimaryTextPreferred__c" : "N",  '  + 
-  '         "PrimaryPhoneTypeCode__c" : "CE",  '  + 
-  '         "PrimaryPhoneExtension__c" : "1234",  '  + 
-  '         "PrimaryPhoneNumber__c" : "8134567890",  '  + 
-  '         "Email__c" : "Optim@Script.com",  '  + 
-  '         "DCId__c" : 1463025,  '  + 
-  '         "IsEligibleForIndianHealthServicesToggle__c" : null,  '  + 
-  '         "IsEligibleForIHFlagToggle__c" : null,  '  + 
-  '         "IndianTribeState__c" : null,  '  + 
-  '         "IndianTribeCode__c" : null,  '  + 
-  '         "IsFederalRecognizedIndianTribeToggle__c" : null,  '  + 
-  '         "HighestEducationGraduatedDate__c" : null,  '  + 
-  '         "HighestEducationLevelCode__c" : "6G",  '  + 
-  '         "DCMemberHighestEducationLevelDetailsId__c" : 976132,  '  + 
-  '         "ImmigrationDateOfBirth__c" : null,  '  + 
-  '         "ImmigrationSuffix__c" : null,  '  + 
-  '         "ImmigrationLastName__c" : null,  '  + 
-  '         "ImmigrationMiddleName__c" : null,  '  + 
-  '         "ImmigrationFirstName__c" : null,  '  + 
-  '         "IsImmigrationDetailsMatch__c" : 0,  '  + 
-  '         "PassportNumber__c" : null,  '  + 
-  '         "NaturalizationNumber__c" : null,  '  + 
-  '         "I94Number__c" : null,  '  + 
-  '         "DocumentOtherDescription__c" : null,  '  + 
-  '         "DocumentExpiryDate__c" : null,  '  + 
-  '         "CountryOfIssuanceCode__c" : null,  '  + 
-  '         "CitizenshipNumber__c" : null,  '  + 
-  '         "AlienNumber__c" : null,  '  + 
-  '         "ReceiptNumber__c" : null,  '  + 
-  '         "SevisId__c" : null,  '  + 
-  '         "ImmigrationDocumentTypeCode__c" : null,  '  + 
-  '         "AlienTypeCode__c" : null,  '  + 
-  '         "HasLivedInUsToggle__c" : null,  '  + 
-  '         "IsMilitaryMemberToggle__c" : "N",  '  + 
-  '         "HasLegalImmigrationStatusToggle__c" : null,  '  + 
-  '         "HasAlienSponsorToggle__c" : null,  '  + 
-  '         "IndividualId__c" : "999034247"  '  + 
-  '       }, {  '  + 
-  '         "HasParentOrSiblingNextOutHousehold__c" : null,  '  + 
-  '         "HasParentOrSiblingCurrentOutHousehold__c" : null,  '  + 
-  '         "CanBuyCookWithHOH__c" : 0,  '  + 
-  '         "ExternalAlienSponsor__r" : null,  '  + 
-  '         "InternalAlienSponsor__r" : null,  '  + 
-  '         "DCInternalAlienSponsorId__c" : null,  '  + 
-  '         "SponsoredByOrganization__c" : null,  '  + 
-  '         "DCAlienSponsorRelationship__c" : null,  '  + 
-  '         "TaxFilerMemberNext__r" : null,  '  + 
-  '         "TaxFilerStatusNextYear__c" : null,  '  + 
-  '         "TaxFilerMemberCurrent__r" : null,  '  + 
-  '         "TaxFilerStatusCurrentYear__c" : "HH",  '  + 
-  '         "MailingAddressLine2__c" : null,  '  + 
-  '         "MailingZipCode5__c" : "83705",  '  + 
-  '         "MailingZipCode4__c" : "9256",  '  + 
-  '         "MailingStateCode__c" : "KY",  '  + 
-  '         "MailingCountyCode__c" : "011",  '  + 
-  '         "MailingCity__c" : "ELFBJSUXVP",  '  + 
-  '         "MailingAddressLine1__c" : "527 J 9QG UT",  '  + 
-  '         "DCMailingAddressId__c" : 4842144,  '  + 
-  '         "HasDifferentMailingAddressToggle__c" : null,  '  + 
-  '         "PhysicalAddressLine2__c" : null,  '  + 
-  '         "PhysicalZipCode5__c" : "83705",  '  + 
-  '         "PhysicalZipCode4__c" : "9256",  '  + 
-  '         "PhysicalStateCode__c" : "KY",  '  + 
-  '         "PhysicalCountyCode__c" : "011",  '  + 
-  '         "PhysicalCity__c" : "ELFBJSUXVP",  '  + 
-  '         "PhysicalAddressLine1__c" : "527 J 9QG UT",  '  + 
-  '         "IsFixedAddressToggle__c" : "Y",  '  + 
-  '         "DCPhysicalAddressId__c" : "13717679",  '  + 
-  '         "PreferredWrittenLanguageCode__c" : "1",  '  + 
-  '         "PreferredSpokenLanguageCode__c" : "1",  '  + 
-  '         "PreferredNotificationMethodCode__c" : "P",  '  + 
-  '         "SecondaryPhoneExtension__c" : "1234",  '  + 
-  '         "SecondaryPhoneNumber__c" : "1234567890",  '  + 
-  '         "IsPrimaryTextPreferred__c" : "N",  '  + 
-  '         "PrimaryPhoneTypeCode__c" : "CE",  '  + 
-  '         "PrimaryPhoneExtension__c" : "1234",  '  + 
-  '         "PrimaryPhoneNumber__c" : "8134567890",  '  + 
-  '         "Email__c" : "Optim@Script.com",  '  + 
-  '         "DCId__c" : 1394196,  '  + 
-  '         "IsEligibleForIndianHealthServicesToggle__c" : null,  '  + 
-  '         "IsEligibleForIHFlagToggle__c" : null,  '  + 
-  '         "IndianTribeState__c" : null,  '  + 
-  '         "IndianTribeCode__c" : null,  '  + 
-  '         "IsFederalRecognizedIndianTribeToggle__c" : null,  '  + 
-  '         "HighestEducationGraduatedDate__c" : null,  '  + 
-  '         "HighestEducationLevelCode__c" : "BG",  '  + 
-  '         "DCMemberHighestEducationLevelDetailsId__c" : 976134,  '  + 
   '         "ImmigrationDateOfBirth__c" : null,  '  + 
   '         "ImmigrationSuffix__c" : null,  '  + 
   '         "ImmigrationLastName__c" : null,  '  + 
@@ -1525,24 +932,6 @@ public  with sharing class SSP_DC_ReverseMockImpl implements HttpCalloutMock {
    '       "SSP_ResourceOwnership__c" : null,  '  + 
    '       "SSP_Asset__c" : null,  '  + 
    '       "SSP_Member__c" : [ {  '  + 
-   '         "HasPreArrangedFuneralContractToggle__c" : null,  '  + 
-   '         "HasLifeInsuranceToggle__c" : null,  '  + 
-   '         "HasRealEstatePropertyToggle__c" : null,  '  + 
-   '         "HasVehicleToggle__c" : null,  '  + 
-   '         "HasCashReloadableMoneyCardToggle__c" : null,  '  + 
-   '         "HasInvestmentsToggle__c" : null,  '  + 
-   '         "HasOwnBankAccountToggle__c" : null,  '  + 
-   '         "IndividualId__c" : "999034247"  '  + 
-   '       }, {  '  + 
-   '         "HasPreArrangedFuneralContractToggle__c" : null,  '  + 
-   '         "HasLifeInsuranceToggle__c" : null,  '  + 
-   '         "HasRealEstatePropertyToggle__c" : null,  '  + 
-   '         "HasVehicleToggle__c" : null,  '  + 
-   '         "HasCashReloadableMoneyCardToggle__c" : null,  '  + 
-   '         "HasInvestmentsToggle__c" : null,  '  + 
-   '         "HasOwnBankAccountToggle__c" : null,  '  + 
-   '         "IndividualId__c" : "999034247"  '  + 
-   '       }, {  '  + 
    '         "HasPreArrangedFuneralContractToggle__c" : null,  '  + 
    '         "HasLifeInsuranceToggle__c" : null,  '  + 
    '         "HasRealEstatePropertyToggle__c" : null,  '  + 
