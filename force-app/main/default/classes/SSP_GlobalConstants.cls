@@ -11,6 +11,7 @@
 * 1.0       12/04/2019             Sanchita Tibrewala           Initial Version
 **/
 public class SSP_GlobalConstants {
+    //checking git Dec07
     public static final String PHONE_TYPE_CODE = 'LND';
     public static final String CHILD_CARE_CODE = 'CC';
     public static final String OTHER_RELATIONSHIP = 'Other Relationship';
