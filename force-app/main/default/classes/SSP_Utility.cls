@@ -866,6 +866,26 @@ public Static RecordType fetchRecordType(String strRecordTypeDeveloperName, Stri
         return (individualId != null && !String.isBlank(individualId)) ? individualId : null;
     }
 
+
+    /* Nov 30
+    * @author       
+    * @date         
+    * @methodname   
+    * @description  
+    * @return       String - applicationId
+    **/
+    @AuraEnabled
+    public static String getApplicationId(){
+        //added by nupoor
+        String applicationId;
+        if(UserInfo.getSessionId() != null){
+        Cache.SessionPartition sessionPart = Cache.Session.getPartition(SSP_GlobalConstants.CACHE_PARTITION_NAME);  
+        applicationId = sessionPart != null ? ((sessionPart.get(SSP_GlobalConstants.APPLICATIONID) != null && String.isNotBlank(String.valueOf(sessionPart.get(SSP_GlobalConstants.APPLICATIONID)))) ? String.valueOf(sessionPart.get(SSP_GlobalConstants.APPLICATIONID)) : String.valueOf(sessionPart.get(SSP_CacheBuilderImplementation.class, SSP_GlobalConstants.APPLICATIONID))) : null;            
+        
+        }
+        return (applicationId != null && !String.isBlank(applicationId)) ? applicationId : null;
+    }
+
             /*
     * @author       Shrikant Raut 
     * @date         05/18/2020 

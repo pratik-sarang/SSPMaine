@@ -44,6 +44,12 @@ public with sharing class SSP_RSSPDC_IntegrationService extends RestIntegrationS
                     if(objWrapper.lstAccounts != null && !objWrapper.lstAccounts.isEmpty() && objWrapper.objRequest.viewName == SSP_InterfaceConstants.AUTHREPS_ASSISTERS) {
                         (new SSP_RSSPDC_IntegrationDMLUtility()).upsertAccounts(objWrapper.lstAccounts);
                     }
+                    // Nov-30     
+                    //if(objWrapper.lstAccounts != null && !objWrapper.lstAccounts.isEmpty() && objWrapper.objRequest.viewName == SSP_InterfaceConstants.ELIGIBILITY_SUMMARY) {
+                    if(objWrapper.objRequest.viewName == SSP_InterfaceConstants.ELIGIBILITY_SUMMARY) {
+                        (new SSP_RSSPDC_IntegrationDMLUtility()).upsertApplication();
+                    }
+
                     if(lstResponse != null && !lstResponse.isEmpty()) { 
                         // Perform DML Operations on Response
                         objResWRapper = (new SSP_RSSPDC_IntegrationHandler()).performOperationsOnResposne(objWrapper, lstResponse);
@@ -124,7 +130,7 @@ public with sharing class SSP_RSSPDC_IntegrationService extends RestIntegrationS
         Map<String, Object> mapParams = new Map<String, Object>();
         mapParams.put(SSP_InterfaceConstants.JSON_BODY,JSON.serialize(objWrapper.objRequest));
         Http objHttp = new Http();
-        HttpRequest objRequest = new HttpRequest();
+        HttpRequest objRequest = new HttpRequest();SSP_IntegrationUtility
         httpResponse objResponse; 
         // Prepare the Request parameter
         objRequest = generateRequest(objWrapper.sInterfaceName, mapParams);
@@ -134,6 +140,7 @@ public with sharing class SSP_RSSPDC_IntegrationService extends RestIntegrationS
         objWrapper.log.payload = JSON.serializePretty(objWrapper.objRequest);
         objWrapper.log.startTime = SSP_IntegrationUtility.getTimeInMilliseconds();
         //added by Apoorva start
+        
         SSP_DC_ReverseMockImpl mockImpl = new SSP_DC_ReverseMockImpl();
         objRequest.setBody((String) mapParams.get(SSP_InterfaceConstants.JSON_BODY));
         objResponse = mockImpl.respond(objRequest);

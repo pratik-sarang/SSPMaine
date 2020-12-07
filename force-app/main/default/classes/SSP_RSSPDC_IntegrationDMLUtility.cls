@@ -811,6 +811,29 @@ public without sharing class SSP_RSSPDC_IntegrationDMLUtility {
         return null;
     }
 
+
+    /** Nov 30
+     * method                                               : upsertApplication
+     * @description                                         : 
+     * @author                                              : 
+     * @param lstAccount                                    : 
+     */
+    public List<Account> upsertApplication() {
+        String sIndivdiualId = SSP_Utility.getApplicationId();
+        /*Contact objCon = new Contact();
+        if(!String.isBlank(sIndivdiualId)) {
+            List<Contact> lstContact = [SELECT Id from Contact WHERE IndividualId__c =: sIndivdiualId];
+            if(!lstContact.isEmpty()) {
+                objCon.Id = lstContact.get(0).Id;
+            }
+        }*/
+        List<SSP_Application__c> lstSSPapplication = SSP_ProgramSelectionService.getApplicationData(String sApplicationId);
+        SSP_Application__c appl = lstSSPapplication[0].SSPDCMessage__c = 'P';
+        update appl;
+        //Map<String,Object> result = SSP_ProgramSelectionService.invokeAccountCreationService(lstAccount, null, objCon.Id);
+        return null;
+    }
+
    /**
      * Method                                               : resetMembers
      * @description                                         : Reset member and Application

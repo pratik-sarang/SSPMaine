@@ -248,6 +248,10 @@ export default class SspAuthRepsAssistAndAgents extends NavigationMixin(
      * @author Ajay Saini
      */
     connectedCallback () {
+
+        alert('inside connected callback');
+
+
         const url = new URL(window.location.href);
         this.applicationId = url.searchParams.get("applicationId");
         this.mode = url.searchParams.get("mode");

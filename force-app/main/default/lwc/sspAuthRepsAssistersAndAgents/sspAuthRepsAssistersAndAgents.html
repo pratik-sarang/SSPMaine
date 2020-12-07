@@ -825,15 +825,25 @@
                                         class="ssp-button_brand ssp-remove-btn"
                                         variant="brand"
                                         data-type="Agent"
-                                        label={customLabel.sspFindInsuranceAgent}
-                                        title={customLabel.sspFindInsuranceAgentAlt}
+                                        label= {customLabel.sspFindInsuranceAgent}
+                                        title="Find an Insurance Agent1"
                                         onclick={findAssisterOrAgent}
                                     ></lightning-button>
                                 </p>
                                 <!--</template>-->
                             </div>
+                            <div class="slds-col ssp-secondGroupBtn" >
+                                <lightning-button
+                                    label={customLabel.sspSaveAndExit}
+                                    onclick={handleExitButton}
+                                    variant="brand"
+                                    class="dd-slds-nav_btn-next ssp-button_base"
+                                ></lightning-button>
+                            </div>
                         </template>
+                        
                         <template if:true={isApplicationSummary}>
+                            <div>inside the button div--------------------------------------------- </div>
                             <div
                                 class="slds-grid slds-wrap slds-grid_align-center slds-m-bottom_xx-large ssp-action-btn-section"
                             >
@@ -1102,20 +1112,31 @@
                                 label={customLabel.sspFindInsuranceAgent}
                                 onclick={findAssisterOrAgent}
                             ></lightning-button>
+                            <lightning-button label="test"></lightning-button>
+                            <lightning-button
+                                        label={customLabel.sspNext}
+                                        onclick={handleNextNavigateSummary}
+                                        variant="netural"
+                                        class="dd-slds-nav_btn-next ssp-button_neutral"
+                                        disabled={disableNext}
+                                    ></lightning-button>
                         </p>
                     </div>
                 </div>
             </main>
         </div>
     </template>
+
+    
+
     <template if:true={showAuthRepModification}>
         <c-ssp-add-auth-rep
-            ssp-contact-id={sspContactId}
-            ssp-application-id={sspApplicationId}
-            onsave={handleClose}
-            oncancel={handleCancel}
-            flow-name={flowName}
-            auth-rep-request={isAuthRepAccessRequest}
+                                ssp-contact-id={sspContactId}
+                                ssp-application-id={sspApplicationId}
+                                onsave={handleClose}
+                                oncancel={handleCancel}
+                                flow-name={flowName}
+                                auth-rep-request={isAuthRepAccessRequest}
         >
         </c-ssp-add-auth-rep>
     </template>

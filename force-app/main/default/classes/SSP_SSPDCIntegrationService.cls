@@ -7,6 +7,7 @@
 * DEVELOPER                     DATE                               DESCRIPTION
 * ---------------------------------------------------------------------------------------------
 * DeveloperName	      MM/DD/YYYY	      A Brief Description 
+* Mahesh              12/02/2020           Mocking response
 **/
 public with sharing class SSP_SSPDCIntegrationService extends RestIntegrationService{
     public static String sErrorMSg = null;
@@ -56,6 +57,10 @@ public with sharing class SSP_SSPDCIntegrationService extends RestIntegrationSer
         HttpRequest request= new HttpRequest();
         Long timeTaken;
         Datetime startTime;
+
+        //Mahesh              12/02/2020           Mocking response
+        String applid1;
+
         try{
             startTime = Datetime.now();
             if(mapInputParams.get(SSP_InterfaceConstants.SUBMIT_TYPE)==null){
@@ -90,6 +95,10 @@ public with sharing class SSP_SSPDCIntegrationService extends RestIntegrationSer
                     }
                 }
                 lstRACScreens.addAll(lstDependant);
+
+                //Mahesh              12/02/2020           Mocking response
+                 applid1 = (String)mapInputParams.get(SSP_InterfaceConstants.APPLICATION_ID);
+
                 String body = createBody(lstRACScreens, (String)mapInputParams.get(SSP_InterfaceConstants.APPLICATION_ID), 
                     (String)mapInputParams.get(SSP_InterfaceConstants.SUBMIT_TYPE),(DateTime)mapInputParams.get(SSP_InterfaceConstants.APPLICATIONRECEIVEDDATETIME),
                     (String)mapInputParams.get(SSPFLOWKEYNAME),objUser);
@@ -98,7 +107,25 @@ public with sharing class SSP_SSPDCIntegrationService extends RestIntegrationSer
                 throw new CustomException(CustomException.EXCEPTION_TYP.SYS, SSP_InterfaceConstants.INCORRECT_PARAMETERS_FOR_INTERFACE);
             }
             request= generateRequest(developerName, mapInputParams);
-            response = sendRequest(request);
+
+            ////Mahesh              12/02/2020           Mocking response
+            //response = sendRequest(request);
+            response.setStatusCode(200);
+            response.setBody( '{' +
+                                    '	"SubmitApplicationResponse":{	'+
+                                    '	"AckResponse":{			'+
+                                    '	"AckResponseCode":"HBE0000",	'+
+                                    '	"AckResponseDescription":"Success"	'+
+                                        '	}	'+
+                                        '	}	'+
+                                    '	}'  );
+                    SSP_Application__c appl = new SSP_Application__c();
+                    appl.id = applid1;
+                    appl.SSPDCMessage__c = 'P';
+                    update appl;
+
+
+
             DateTime endTime = Datetime.now();
             timeTaken = endTime.getTime() - startTime.getTime();
             if(!mapInputParams.get(SSP_InterfaceConstants.SUBMIT_TYPE).equals(SSP_GlobalConstants.SNAP_FULL)) {
@@ -110,7 +137,7 @@ public with sharing class SSP_SSPDCIntegrationService extends RestIntegrationSer
                 } else {
                     sErrorMSg = SSPXMLRES;
                     wrapperResponse = (ServiceResponse) JSON.deserialize(response.getbody(),ServiceResponse.class);
-                    sErrorMSg = null;
+                    sErrorMSg = null; 
                 }
             }
             if(mapInputParams.containsKey(SSP_InterfaceConstants.IS_DEBUG) && (Boolean) mapInputParams.get(SSP_InterfaceConstants.IS_DEBUG) &&

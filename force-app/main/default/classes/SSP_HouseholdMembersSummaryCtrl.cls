@@ -42,6 +42,8 @@ public with sharing class SSP_HouseholdMembersSummaryCtrl {
             }
             objResponse.bIsSuccess = Boolean.valueOf(mapResponse.get('bIsSuccess'));
             objResponse.mapResponse = MapResponse;
+            system.debug('objResponse.mapResponse='+objResponse.mapResponse);
+            system.debug('objResponse='+objResponse);
         }catch(Exception ex) {
             objResponse.put('bIsSuccess', false);  
             objResponse.put('error', ex);  

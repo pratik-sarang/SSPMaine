@@ -51,10 +51,15 @@ public without sharing class SSP_HouseHoldSummaryService {
         
         
         String sHOHId;
+        system.debug('----mapMemberVsAppIndiv='+mapMemberVsAppIndiv);
         for (SSP_Member__c objMember : lstMembers){
+            system.debug('-----objMember='+objMember);
+            system.debug('-----mapMemberVsAppIndiv.get(objMember.Id)='+mapMemberVsAppIndiv.get(objMember.Id));
             if(null!=lstApps && lstApps.size()>0){
-                SSP_HouseholdMembersSummaryCtrl.MemberDetailsWrapper objWrapper = buildWrapperObject(objMember,mapMemberVsAppIndiv.get(objMember.Id),lstApps, sMode);                        
+                SSP_HouseholdMembersSummaryCtrl.MemberDetailsWrapper objWrapper = buildWrapperObject(objMember,mapMemberVsAppIndiv.get(objMember.Id),lstApps, sMode);  
+                system.debug('-----------------------------------objWrapper = '+objWrapper);             
                 if (mapMemberVsAppIndiv.get(objMember.Id).IsHeadOfHousehold__c){
+
                     sHOHId = objMember.IndividualId__c; 
                     objWrapper.sHOHMCIId =sHOHId;
                     objResponse.put('headOfHousehold',JSON.serialize(objWrapper));
@@ -121,7 +126,7 @@ public without sharing class SSP_HouseHoldSummaryService {
             List<SSP_ApplicationIndividual__c> lstAppIndividuals = SSP_ApplicationIndividualSelector.queryApplicationIndividualData(new Map<String, String>{SSP_GlobalConstants.OBJECT_NAME => SSP_GlobalConstants.HH_SUMM_OBJECTS_APINAMES[1]}, 
                                                                                                                                     SSP_GlobalConstants.SSP_APPLICATION_INDIV_FIELDS_HH_SUMMARY, 
                                                                                                                                     new Map<String, String>{SSP_GlobalConstants.HH_SUMM_OBJECTS_APINAMES[0]=> sApplicationId});
-            
+            system.debug('-----------------------lstAppIndividuals='+lstAppIndividuals);
             
             if (!lstAppIndividuals.isEmpty()){
                 for (SSP_ApplicationIndividual__c objAppIndiv : lstAppIndividuals){                    

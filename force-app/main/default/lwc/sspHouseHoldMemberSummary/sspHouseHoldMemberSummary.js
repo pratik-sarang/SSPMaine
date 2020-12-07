@@ -700,19 +700,24 @@ export default class SspHouseHoldMemberSummary extends NavigationMixin(
 
   getDetails () {
     try {
+      //alert('inside getDetais');
       this.showSpinner = true;
       this.applicationReady().then(resp => {
+        //alert('inside this.applicationReady callout');
         const data = resp;
         const error = resp.error;
         this.showSpinner = false;
-
+        //alert('data = '+JSON.stringify(data));
         if (data) {
           this.houseHoldResult = data;
           this.householdDataLoaded = true;
 
+          alert('before json parse of this.houseHoldResult.mapResponse '+JSON.stringify(this.houseHoldResult.mapResponse) );
+          alert('before json parse of this.houseHoldResult.mapResponse.headOfHousehold '+this.houseHoldResult.mapResponse.headOfHousehold );
           this.headOfHouseholdData = JSON.parse(
             this.houseHoldResult.mapResponse.headOfHousehold
-          );        
+          );      
+          alert('after');  
           const url = new URL(window.location.href);
           if (this.mode === apConstants.applicationMode.RENEWAL) {
             this.headOfHouseholdData.isHOHDetailsCompleted = true;
@@ -831,12 +836,18 @@ export default class SspHouseHoldMemberSummary extends NavigationMixin(
         }
       });
     } catch (error) {
+      alert('inside catch block');
       console.error("Error in getDetails", error);
     }
   }
 
   applicationReady = () => new Promise(this.pollApplication);
   pollApplication = (resolve, reject) => {
+    alert('inside pollApplication ');
+    alert('this.sAppId = '+ this.sAppId);
+    alert('this.addRemoveMember='+this.addRemoveMember);
+    alert('this.reportChangeMode='+this.reportChangeMode);
+    alert('this.mode='+this.mode);
     getHouseHoldDetails({
       sApplicationId: this.sAppId,
       sMode: this.addRemoveMember || this.reportChangeMode,
