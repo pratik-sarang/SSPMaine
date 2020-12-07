@@ -1872,6 +1872,7 @@
     
     <fieldPermissions>
         
+<<<<<<< HEAD
         <editable>false</editable>
         
 <<<<<<< HEAD
@@ -1886,6 +1887,8 @@
     
     <fieldPermissions>
         
+=======
+>>>>>>> 9c2d804492efba3b7d3b63bb4dad7908b7a26301
         <editable>true</editable>
         
 <<<<<<< HEAD
@@ -2218,6 +2221,7 @@
     
     <fieldPermissions>
         
+<<<<<<< HEAD
         <editable>true</editable>
         
 <<<<<<< HEAD
@@ -2246,6 +2250,8 @@
     
     <fieldPermissions>
         
+=======
+>>>>>>> 9c2d804492efba3b7d3b63bb4dad7908b7a26301
         <editable>false</editable>
         
 <<<<<<< HEAD
@@ -2263,6 +2269,10 @@
         <editable>false</editable>
         
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 0c4c53295e1f0d0922b27a53715ede1d1386527d
         <field>LOG_LogMessage__c.LOG_Age__c</field>
 =======
         <field>FAQ__kav.Question__c</field>
@@ -2279,6 +2289,11 @@
 <<<<<<< HEAD
         <field>LOG_LogMessage__c.LOG_Debug_Level__c</field>
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 9c2d804492efba3b7d3b63bb4dad7908b7a26301
+>>>>>>> 0c4c53295e1f0d0922b27a53715ede1d1386527d
         <field>FAQ__kav.Related_File__c</field>
 >>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
@@ -2673,6 +2688,7 @@
         
         <editable>false</editable>
         
+<<<<<<< HEAD
         <field>SurveyInvitation.Consent__c</field>
         
         <readable>false</readable>
@@ -2709,6 +2725,11 @@
     
     <layoutAssignments>
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 9c2d804492efba3b7d3b63bb4dad7908b7a26301
+>>>>>>> 0c4c53295e1f0d0922b27a53715ede1d1386527d
         <field>Survey_Setting__mdt.Active__c</field>
 >>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
@@ -2869,6 +2890,7 @@
 =======
         <layout>Account-Account Layout</layout>
 >>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
+<<<<<<< HEAD
         
     </layoutAssignments>
     
@@ -2876,11 +2898,23 @@
         
 <<<<<<< HEAD
         <layout>Event-Event Layout</layout>
+=======
+>>>>>>> 0c4c53295e1f0d0922b27a53715ede1d1386527d
         
     </layoutAssignments>
     
     <layoutAssignments>
         
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        <layout>Event-Event Layout</layout>
+        
+    </layoutAssignments>
+    
+    <layoutAssignments>
+        
+>>>>>>> 0c4c53295e1f0d0922b27a53715ede1d1386527d
         <layout>FAQ__kav-Help Page Layout</layout>
         
     </layoutAssignments>
@@ -3009,6 +3043,7 @@
 =======
         <layout>CaseClose-Close Case Layout</layout>
 >>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
+<<<<<<< HEAD
         
     </layoutAssignments>
     
@@ -3016,11 +3051,23 @@
         
 <<<<<<< HEAD
         <layout>OrderItem-Order Product Layout</layout>
+=======
+>>>>>>> 0c4c53295e1f0d0922b27a53715ede1d1386527d
         
     </layoutAssignments>
     
     <layoutAssignments>
         
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        <layout>OrderItem-Order Product Layout</layout>
+        
+    </layoutAssignments>
+    
+    <layoutAssignments>
+        
+>>>>>>> 0c4c53295e1f0d0922b27a53715ede1d1386527d
         <layout>Pricebook2-Price Book Layout</layout>
 =======
         <layout>CaseInteraction-Case Feed Layout</layout>
@@ -3032,6 +3079,7 @@
         
         <layout>CollaborationGroup-Group Layout</layout>
 >>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
+<<<<<<< HEAD
         
     </layoutAssignments>
     
@@ -3052,11 +3100,36 @@
     <layoutAssignments>
         
         <layout>ProfileSkill-Skill Layout</layout>
+=======
+>>>>>>> 0c4c53295e1f0d0922b27a53715ede1d1386527d
         
     </layoutAssignments>
     
     <layoutAssignments>
         
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        <layout>PricebookEntry-Price Book Entry Layout</layout>
+        
+    </layoutAssignments>
+    
+    <layoutAssignments>
+        
+        <layout>Product2-Product Layout</layout>
+        
+    </layoutAssignments>
+    
+    <!--
+    <layoutAssignments>
+        
+        <layout>ProfileSkill-Skill Layout</layout>
+        
+    </layoutAssignments>
+    
+    <layoutAssignments>
+        
+>>>>>>> 0c4c53295e1f0d0922b27a53715ede1d1386527d
         <layout>ProfileSkillEndorsement-Endorsement Layout</layout>
 =======
         <layout>CommunicationLog__c-Communication Nub Layout</layout>
@@ -3194,6 +3267,8 @@
 =======
         <layout>FAQ__kav-Help Page Layout</layout>
 >>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
+<<<<<<< HEAD
+=======
         
     </layoutAssignments>
     
@@ -3201,11 +3276,22 @@
         
 <<<<<<< HEAD
         <layout>Task-Task Layout</layout>
+>>>>>>> 0c4c53295e1f0d0922b27a53715ede1d1386527d
         
     </layoutAssignments>
     
     <layoutAssignments>
         
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <layout>Task-Task Layout</layout>
+        
+    </layoutAssignments>
+    
+    <layoutAssignments>
+        
+=======
+>>>>>>> 0c4c53295e1f0d0922b27a53715ede1d1386527d
         <layout>User-User Layout</layout>
         
     </layoutAssignments>
@@ -3445,13 +3531,7 @@
         <layout>RECommunityUsersConfiguration__mdt-Community Users Setting Layout</layout>
         
     </layoutAssignments>
-    
-    <layoutAssignments>
-        
-        <layout>RE_Taxonomy__c-Taxonomy Layout</layout>
-        
-    </layoutAssignments>
-    
+
     <layoutAssignments>
         
         <layout>ResourceEngineConfiguration__mdt-ResourceEngineConfiguration Layout</layout>
@@ -3630,6 +3710,10 @@
         
     </objectPermissions>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 0c4c53295e1f0d0922b27a53715ede1d1386527d
 =======
 
     <objectPermissions>
@@ -3668,6 +3752,11 @@
         
     </objectPermissions>
 >>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 9c2d804492efba3b7d3b63bb4dad7908b7a26301
+>>>>>>> 0c4c53295e1f0d0922b27a53715ede1d1386527d
     
     <pageAccesses>
         
@@ -3879,6 +3968,8 @@
 =======
         <apexPage>UnderConstruction</apexPage>
 >>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
+<<<<<<< HEAD
+=======
         
         <enabled>true</enabled>
         
@@ -3886,6 +3977,20 @@
     
     <pageAccesses>
         
+<<<<<<< HEAD
+        <apexPage>CommunitiesTemplate</apexPage>
+=======
+        <recordType>Account.Assister</recordType>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
+>>>>>>> 0c4c53295e1f0d0922b27a53715ede1d1386527d
+        
+        <enabled>true</enabled>
+        
+    </pageAccesses>
+    
+    <pageAccesses>
+        
+<<<<<<< HEAD
 <<<<<<< HEAD
         <apexPage>CommunitiesTemplate</apexPage>
 =======
@@ -3899,6 +4004,8 @@
     <pageAccesses>
         
 <<<<<<< HEAD
+=======
+>>>>>>> 0c4c53295e1f0d0922b27a53715ede1d1386527d
         <apexPage>Exception</apexPage>
 =======
         <recordType>Account.Citizen</recordType>
@@ -4096,6 +4203,7 @@
         <visible>true</visible>
         
     </recordTypeVisibilities>
+<<<<<<< HEAD
     
     <recordTypeVisibilities>
         
@@ -4119,6 +4227,8 @@
         <visible>true</visible>
         
     </recordTypeVisibilities>
+=======
+>>>>>>> 9c2d804492efba3b7d3b63bb4dad7908b7a26301
 
     <tabVisibilities>
         
@@ -4149,8 +4259,16 @@
         
     </tabVisibilities>
     
+<<<<<<< HEAD
 =======
 >>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
+=======
+>>>>>>> 9c2d804492efba3b7d3b63bb4dad7908b7a26301
+>>>>>>> 0c4c53295e1f0d0922b27a53715ede1d1386527d
     <userLicense>Salesforce</userLicense>
     
     <userPermissions>

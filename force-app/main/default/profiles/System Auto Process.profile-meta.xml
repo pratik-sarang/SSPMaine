@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <Profile xmlns="http://soap.sforce.com/2006/04/metadata">
+<<<<<<< HEAD
     
     <applicationVisibilities>
         
@@ -5586,9 +5586,11 @@
         
     </customMetadataTypeAccesses>
     
+=======
+>>>>>>> 9c2d804492efba3b7d3b63bb4dad7908b7a26301
     <custom>true</custom>
-    
     <description>Profile for data  conversion load</description>
+<<<<<<< HEAD
     
     <fieldPermissions>
         
@@ -20179,6 +20181,8 @@
         <layout>Opportunity-Opportunity Layout</layout>
 =======
         <layout>FAQ__kav-How To Layout</layout>
+<<<<<<< HEAD
+=======
         
     </layoutAssignments>
     
@@ -20204,11 +20208,40 @@
         
         <layout>Idea-Idea Layout</layout>
 >>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
+>>>>>>> 0c4c53295e1f0d0922b27a53715ede1d1386527d
+        
+    </layoutAssignments>
+    
+  
+    
+    <layoutAssignments>
+        
+<<<<<<< HEAD
+        <layout>FeedItem-Feed Item Layout</layout>
+        
+    </layoutAssignments>
+    
+   
+    
+    <layoutAssignments>
+        
+        <layout>Global-Global Layout</layout>
+        
+    </layoutAssignments>
+    
+   
+    
+    <layoutAssignments>
+        
+        <layout>Idea-Idea Layout</layout>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
     </layoutAssignments>
     
     <layoutAssignments>
         
+=======
+>>>>>>> 0c4c53295e1f0d0922b27a53715ede1d1386527d
 <<<<<<< HEAD
         <layout>OpportunityLineItem-Opportunity Product Layout</layout>
 =======
@@ -20250,6 +20283,7 @@
     </layoutAssignments>
     
 
+<<<<<<< HEAD
     
    
     
@@ -20383,6 +20417,199 @@
         
     </layoutAssignments>
     
+=======
+>>>>>>> 0c4c53295e1f0d0922b27a53715ede1d1386527d
+    
+   
+    
+    <layoutAssignments>
+        
+        <layout>RSSP_DC_JSON_Object_Mapping__mdt-RSSP DC JSON Object Mapping Layout</layout>
+        
+    </layoutAssignments>
+    
+   
+    
+    <layoutAssignments>
+        
+        <layout>ReverseSSPViewMapping__mdt-RSSP DC View Mapping Layout</layout>
+<<<<<<< HEAD
+=======
+=======
+        <layout>Lead-Lead Layout</layout>
+>>>>>>> 0c4c53295e1f0d0922b27a53715ede1d1386527d
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
+        
+    </layoutAssignments>
+    
+    <layoutAssignments>
+        
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <layout>SurveyQuestionChoice-Survey Question Choice Layout</layout>
+=======
+        <layout>SDOH__c-SDOH Layout</layout>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
+=======
+        <layout>SSPDCFilterMapping__mdt-SSPDC Filter Mapping Layout</layout>
+>>>>>>> 0c4c53295e1f0d0922b27a53715ede1d1386527d
+        
+    </layoutAssignments>
+    
+    <layoutAssignments>
+        
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <layout>SurveyResponse-Survey Response Layout</layout>
+=======
+        <layout>SSPDCFilterMapping__mdt-SSPDC Filter Mapping Layout</layout>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
+=======
+        <layout>SSP_Application__c-SSP_Application Layout</layout>
+=======
+        <layout>ListViewSettings__mdt-ListViewSetting Layout</layout>
+>>>>>>> 0c4c53295e1f0d0922b27a53715ede1d1386527d
+        
+    </layoutAssignments>
+    
+    
+    <layoutAssignments>
+        
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <layout>SurveyVersion-Survey Version Layout</layout>
+=======
+        <layout>SSP_Application__c-SSP_Application Layout</layout>
+=======
+        <layout>Macro-Macro Layout</layout>
+>>>>>>> 0c4c53295e1f0d0922b27a53715ede1d1386527d
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
+        
+    </layoutAssignments>
+    
+    <layoutAssignments>
+        
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <layout>Survey_Setting__mdt-Survey Setting Layout</layout>
+=======
+        <layout>SSP_Asset__c-SSP Asset - Resource Layout</layout>
+=======
+        <layout>SSP_Asset__c-SSP Asset - Resource Layout</layout>
+=======
+        <layout>Opportunity-Opportunity Layout</layout>
+>>>>>>> 0c4c53295e1f0d0922b27a53715ede1d1386527d
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
+        
+    </layoutAssignments>
+    
+    <layoutAssignments>
+        
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <layout>SystemAlert__c-System Alert Layout</layout>
+=======
+        <layout>SSP_Benefits__c-SSI_Benefits</layout>
+=======
+        <layout>SSP_Benefits__c-SSI_Benefits</layout>
+=======
+        <layout>OpportunityLineItem-Opportunity Product Layout</layout>
+>>>>>>> 0c4c53295e1f0d0922b27a53715ede1d1386527d
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
+        
+    </layoutAssignments>
+    
+    <layoutAssignments>
+<<<<<<< HEAD
+        
+        <layout>User-User Layout</layout>
+        
+    </layoutAssignments>
+    
+    <layoutAssignments>
+        
+        <layout>VerbalConsentSettings__mdt-VerbalConsent Setting Layout</layout>
+        
+    </layoutAssignments>
+    
+    <loginIpRanges>
+        
+        <endAddress>255.255.255.255</endAddress>
+        
+        <startAddress>0.0.0.0</startAddress>
+        
+    </loginIpRanges>
+=======
+        
+<<<<<<< HEAD
+        <layout>SSP_InterfaceDetail__mdt-SSP_InterfaceDetail Layout</layout>
+=======
+        <layout>Order-Order Layout</layout>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
+        
+    </layoutAssignments>
+    
+    <layoutAssignments>
+        
+<<<<<<< HEAD
+        <layout>SSP_ResourceMappings__mdt-Resource Mapping Layout</layout>
+        
+    </layoutAssignments>
+    
+    <layoutAssignments>
+        
+        <layout>SSP_ResourceOwnership__c-SSP_ResourceOwnership Layout</layout>
+=======
+        <layout>OrderItem-Order Product Layout</layout>
+        
+    </layoutAssignments>
+    
+    <!--<layoutAssignments>
+        <layout>Package_Member__c-Package Member Layout</layout>
+    </layoutAssignments> -->
+    <layoutAssignments>
+        
+        <layout>Pricebook2-Price Book Layout</layout>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
+        
+    </layoutAssignments>
+    
+    <layoutAssignments>
+        
+<<<<<<< HEAD
+        <layout>Survey-Survey Layout</layout>
+        
+    </layoutAssignments>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
+    
+    <layoutAssignments>
+        
+        <layout>SurveyInvitation-Survey Invitation Layout</layout>
+        
+    </layoutAssignments>
+    
+    <layoutAssignments>
+        
+        <layout>SurveyPage-Survey Page Layout</layout>
+        
+    </layoutAssignments>
+    
+    <layoutAssignments>
+        
+        <layout>SurveyQuestion-Survey Question Layout</layout>
+=======
+        <layout>NavFlowPageConfig__mdt-Navigation Flow Page Configuration Layout</layout>
+        
+    </layoutAssignments>
+    
+   
+    
+    <layoutAssignments>
+        
+        <layout>RECommunityUsersConfiguration__mdt-Community Users Setting Layout</layout>
+        
+    </layoutAssignments>
+    
     
    
     
@@ -20399,9 +20626,13 @@
         <layout>ReverseSSPViewMapping__mdt-RSSP DC View Mapping Layout</layout>
 >>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
+<<<<<<< HEAD
+        <object>Account</object>
+=======
     </layoutAssignments>
     
     <layoutAssignments>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
 <<<<<<< HEAD
         <layout>SurveyQuestionChoice-Survey Question Choice Layout</layout>
@@ -20411,6 +20642,16 @@
         
     </layoutAssignments>
     
+<<<<<<< HEAD
+   
+    
+    
+    
+   
+    <objectPermissions>
+        
+        <allowCreate>true</allowCreate>
+=======
     <layoutAssignments>
         
 <<<<<<< HEAD
@@ -20453,6 +20694,10 @@
     
     <layoutAssignments>
 <<<<<<< HEAD
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
+=======
+<<<<<<< HEAD
+>>>>>>> 0c4c53295e1f0d0922b27a53715ede1d1386527d
         
         <layout>User-User Layout</layout>
         
@@ -20466,7 +20711,11 @@
     
     <loginIpRanges>
         
+<<<<<<< HEAD
+        <object>AuditLog__c</object>
+=======
         <endAddress>255.255.255.255</endAddress>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
         <startAddress>0.0.0.0</startAddress>
         
@@ -20477,9 +20726,26 @@
         
     </layoutAssignments>
     
+<<<<<<< HEAD
+	<!--<objectPermissions>
+        <allowCreate>true</allowCreate>
+<<<<<<< HEAD
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>true</modifyAllRecords>
+        <object>Build_Detail__c</object>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions> -->
+	
+    
+	<objectPermissions>
+=======
+=======
     <layoutAssignments>
         
         <layout>SSP_ResourceMappings__mdt-Resource Mapping Layout</layout>
+>>>>>>> 0c4c53295e1f0d0922b27a53715ede1d1386527d
         
     </layoutAssignments>
     
@@ -20531,6 +20797,7 @@
     
    
     <objectPermissions>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
         <allowCreate>true</allowCreate>
 =======
@@ -20548,7 +20815,15 @@
     
     <layoutAssignments>
         
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <object>CommunicationLog__c</object>
+=======
+        <object>AuditLog__c</object>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
+=======
         <layout>Survey_Setting__mdt-Survey Setting Layout</layout>
+>>>>>>> 0c4c53295e1f0d0922b27a53715ede1d1386527d
         
     </layoutAssignments>
     
@@ -20579,10 +20854,35 @@
         <endAddress>255.255.255.255</endAddress>
 >>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
+=======
+    <loginIpRanges>
+        <endAddress>255.255.255.255</endAddress>
+>>>>>>> 9c2d804492efba3b7d3b63bb4dad7908b7a26301
         <startAddress>0.0.0.0</startAddress>
-        
     </loginIpRanges>
+<<<<<<< HEAD
     
+<<<<<<< HEAD
+   
+    
+    <objectPermissions>
+        
+        <allowCreate>true</allowCreate>
+        
+        <allowDelete>false</allowDelete>
+        
+        <allowEdit>false</allowEdit>
+        
+        <allowRead>true</allowRead>
+        
+        <modifyAllRecords>false</modifyAllRecords>
+        
+        <object>Contact</object>
+        
+        <viewAllRecords>false</viewAllRecords>
+        
+    </objectPermissions>
+=======
 	<!--<objectPermissions>
         <allowCreate>true</allowCreate>
 <<<<<<< HEAD
@@ -20594,6 +20894,7 @@
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions> -->
 	
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
     
 	<objectPermissions>
 =======
@@ -20631,9 +20932,15 @@
         <modifyAllRecords>true</modifyAllRecords>
         
 <<<<<<< HEAD
+<<<<<<< HEAD
+        <object>Contact_Mapping__c</object>
+=======
+        <object>CommunicationLog__c</object>
+=======
         <object>CommunicationLog__c</object>
 =======
         <object>AuditLog__c</object>
+>>>>>>> 0c4c53295e1f0d0922b27a53715ede1d1386527d
 >>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
         <viewAllRecords>true</viewAllRecords>
@@ -20647,15 +20954,19 @@
         
         <allowCreate>true</allowCreate>
         
-        <allowDelete>false</allowDelete>
+        <allowDelete>true</allowDelete>
         
         <allowEdit>false</allowEdit>
         
         <allowRead>true</allowRead>
         
-        <modifyAllRecords>false</modifyAllRecords>
+        <modifyAllRecords>true</modifyAllRecords>
         
+<<<<<<< HEAD
+        <object>DocumentDetail__c</object>
+=======
         <object>Contact</object>
+>>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
         <viewAllRecords>false</viewAllRecords>
         
@@ -20686,9 +20997,15 @@
         <modifyAllRecords>true</modifyAllRecords>
         
 <<<<<<< HEAD
+<<<<<<< HEAD
+        <object>ErrorLog__e</object>
+=======
+        <object>Contact_Mapping__c</object>
+=======
         <object>Contact_Mapping__c</object>
 =======
         <object>CommunicationLog__c</object>
+>>>>>>> 0c4c53295e1f0d0922b27a53715ede1d1386527d
 >>>>>>> e010bb7d6568c5242383c02d6749721935da65e0
         
         <viewAllRecords>true</viewAllRecords>
@@ -20721,17 +21038,19 @@
     
     <objectPermissions>
         
-        <allowCreate>true</allowCreate>
+        <allowCreate>false</allowCreate>
         
         <allowDelete>true</allowDelete>
         
-        <allowEdit>true</allowEdit>
+        <allowEdit>false</allowEdit>
         
         <allowRead>true</allowRead>
         
         <modifyAllRecords>true</modifyAllRecords>
         
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
         <object>ErrorLog__e</object>
 =======
         <object>Contact_Mapping__c</object>
@@ -20754,6 +21073,7 @@
         <modifyAllRecords>true</modifyAllRecords>
         
 <<<<<<< HEAD
+>>>>>>> 0c4c53295e1f0d0922b27a53715ede1d1386527d
         <object>FAQ__kav</object>
 =======
         <object>DocumentDetail__c</object>
@@ -21920,1193 +22240,605 @@
         
     </tabVisibilities>
     
+=======
+>>>>>>> 9c2d804492efba3b7d3b63bb4dad7908b7a26301
     <userLicense>Salesforce</userLicense>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ActivateContract</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ActivateOrder</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ActivitiesAccess</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>AddDirectMessageMembers</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>AllowUniversalSearch</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>AllowViewKnowledge</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ApexRestServices</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ApiEnabled</name>
-        
     </userPermissions>
-
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ArchiveArticles</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>AssignPermissionSets</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>AssignTopics</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>AuthorApex</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>BulkMacrosAllowed</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>CanInsertFeedSystemFields</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>CanUseNewDashboardBuilder</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>CanVerifyComment</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ChangeDashboardColors</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
+        <name>ChatterEditOwnPost</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
         <name>ChatterFileLink</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ChatterInternalUser</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ChatterInviteExternalUsers</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ChatterOwnGroups</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ConnectOrgToEnvironmentHub</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ContentAdministrator</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ContentWorkspaces</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ConvertLeads</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>CreateCustomizeDashboards</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>CreateCustomizeFilters</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>CreateCustomizeReports</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>CreateDashboardFolders</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>CreatePackaging</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>CreateReportFolders</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>CreateTopics</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>CreateWorkspaces</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>CustomizeApplication</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>DataExport</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>DelegatedTwoFactor</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>DeleteActivatedContract</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>DeleteTopics</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>DistributeFromPersWksp</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>EditActivatedOrders</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>EditBrandTemplates</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>EditCaseComments</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>EditEvent</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>EditHtmlTemplates</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>EditKnowledge</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>EditMyDashboards</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>EditMyReports</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>EditOppLineItemUnitPrice</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>EditPublicDocuments</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>EditPublicFilters</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>EditPublicTemplates</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>EditReadonlyFields</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>EditTask</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>EditTopics</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>EditTranslation</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>EmailMass</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>EmailSingle</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
+        <name>EnableCommunityAppLauncher</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
         <name>EnableNotifications</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ExportReport</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ForceTwoFactor</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ImportCustomObjects</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ImportLeads</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ImportPersonal</name>
-        
     </userPermissions>
-    
-   
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>InstallPackaging</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>LightningConsoleAllowedForUser</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>LightningExperienceUser</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ListEmailSend</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ManageAnalyticSnapshots</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ManageAuthProviders</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ManageBusinessHourHolidays</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ManageCallCenters</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ManageCases</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ManageCategories</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ManageCertificates</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ManageContentPermissions</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ManageContentProperties</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ManageContentTypes</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ManageCssUsers</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ManageCustomPermissions</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ManageCustomReportTypes</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ManageDashbdsInPubFolders</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ManageDataCategories</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ManageDataIntegrations</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ManageDynamicDashboards</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ManageEmailClientConfig</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ManageExchangeConfig</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ManageHealthCheck</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ManageInteraction</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ManageInternalUsers</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ManageIpAddresses</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ManageKnowledge</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ManageKnowledgeImportExport</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ManageLeads</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ManageLoginAccessPolicies</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ManageMobile</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ManageNetworks</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ManagePackageLicenses</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ManagePartners</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ManagePasswordPolicies</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ManageProfilesPermissionsets</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ManagePropositions</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ManagePvtRptsAndDashbds</name>
-        
     </userPermissions>
-    
-    
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ManageRecommendationStrategies</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ManageRemoteAccess</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ManageReportsInPubFolders</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ManageRoles</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ManageSearchPromotionRules</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ManageSharing</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ManageSolutions</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ManageSynonyms</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ManageTranslation</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ManageUnlistedGroups</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ManageUsers</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>MassInlineEdit</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>MergeTopics</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ModerateChatter</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ModifyAllData</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ModifyMetadata</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>NewReportBuilder</name>
-        
     </userPermissions>
-    
-   
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>Packaging2</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>PublishArticles</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>PublishPackaging</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>PublishTranslation</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>RemoveDirectMessageMembers</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ResetPasswords</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>RetainFieldHistory</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>RunReports</name>
-        
     </userPermissions>
-    
-    
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ScheduleReports</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>SelectFilesFromSalesforce</name>
-        
     </userPermissions>
-    
-    
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>SendSitRequests</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ShareInternalArticles</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ShowCompanyNameAsUserBadge</name>
-        
     </userPermissions>
-    
-    
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>SolutionImport</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>SubmitForTranslation</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>SubmitMacrosAllowed</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>SubscribeDashboardToOtherUsers</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>SubscribeReportToOtherUsers</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>SubscribeReportsRunAsUser</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>SubscribeToLightningDashboards</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>SubscribeToLightningReports</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>TransactionalEmailSend</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>TransferAnyCase</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>TransferAnyEntity</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>TransferAnyLead</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>UseTeamReassignWizards</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>UseWebLink</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ViewAllData</name>
+<<<<<<< HEAD
         
     </userPermissions>
     
@@ -23114,120 +22846,74 @@
         
         <enabled>true</enabled>
         
+<<<<<<< HEAD
+=======
+=======
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+>>>>>>> 9c2d804492efba3b7d3b63bb4dad7908b7a26301
+>>>>>>> 0c4c53295e1f0d0922b27a53715ede1d1386527d
         <name>ViewAllUsers</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ViewArchivedArticles</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ViewDataAssessment</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ViewDataCategories</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ViewDataLeakageEvents</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ViewDraftArticles</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ViewEventLogFiles</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ViewGlobalHeader</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ViewHealthCheck</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ViewHelpLink</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ViewMyTeamsDashboards</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
+        <name>ViewPlatformEvents</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
         <name>ViewPublicDashboards</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ViewPublicReports</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ViewRoles</name>
-        
     </userPermissions>
-    
     <userPermissions>
-        
         <enabled>true</enabled>
-        
         <name>ViewSetup</name>
-        
     </userPermissions>
-    
 </Profile>

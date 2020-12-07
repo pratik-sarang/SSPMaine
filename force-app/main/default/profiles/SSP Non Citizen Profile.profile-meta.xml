@@ -1,5 +1,5979 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <Profile xmlns="http://soap.sforce.com/2006/04/metadata">
+=======
+<<<<<<< HEAD
+<?xml version="1.0" encoding="UTF-8"?>
+<Profile xmlns="http://soap.sforce.com/2006/04/metadata">
+=======
+<?xml version="1.0" encoding="UTF-8"?> 
+
+<Profile xmlns="http://soap.sforce.com/2006/04/metadata">
+    <!-- 
+    <applicationVisibilities>
+        
+        <application>Lead_Generation</application>
+        
+        <default>false</default>
+        
+        <visible>false</visible>
+        
+    </applicationVisibilities>
+    
+    <applicationVisibilities>
+        
+        <application>Relationship_Management</application>
+        
+        <default>false</default>
+        
+        <visible>false</visible>
+        
+    </applicationVisibilities>
+    
+    <applicationVisibilities>
+        
+        <application>Resource_Engine_Internal_App</application>
+        
+        <default>false</default>
+        
+        <visible>false</visible>
+        
+    </applicationVisibilities>
+    
+    <applicationVisibilities>
+        
+        <application>Resource_Engine_Internal_Application</application>
+        
+        <default>false</default>
+        
+        <visible>false</visible>
+        
+    </applicationVisibilities>
+    -->
+    <customMetadataTypeAccesses>
+        
+        <enabled>true</enabled>
+        
+        <name>ListViewSettings__mdt</name>
+        
+    </customMetadataTypeAccesses>
+    
+    <customMetadataTypeAccesses>
+        
+        <enabled>true</enabled>
+        
+        <name>ReverseSSPViewMapping__mdt</name>
+        
+    </customMetadataTypeAccesses>
+    
+    <customMetadataTypeAccesses>
+        
+        <enabled>true</enabled>
+        
+        <name>RAC_Screen_Config__mdt</name>
+        
+    </customMetadataTypeAccesses>
+    
+    
+    <customMetadataTypeAccesses>
+        
+        <enabled>true</enabled>
+        
+        <name>SSP_ResourceMappings__mdt</name>
+        
+    </customMetadataTypeAccesses>
+    
+    <customMetadataTypeAccesses>
+        
+        <enabled>true</enabled>
+        
+        <name>SSP_PicklistConversion_Configurations__mdt</name>
+        
+    </customMetadataTypeAccesses>
+    
+    <customMetadataTypeAccesses>
+        
+        <enabled>true</enabled>
+        
+        <name>SSP_PortalConfigurations__mdt</name>
+        
+    </customMetadataTypeAccesses>
+    
+    <customMetadataTypeAccesses>
+        
+        <enabled>true</enabled>
+        
+        <name>RSSP_DC_JSON_Object_Mapping__mdt</name>
+        
+    </customMetadataTypeAccesses>
+    
+    <customMetadataTypeAccesses>
+        
+        <enabled>true</enabled>
+        
+        <name>RSSP_DC_ResetFilter__mdt</name>
+        
+    </customMetadataTypeAccesses>
+    
+    <customMetadataTypeAccesses>
+        
+        <enabled>true</enabled>
+        
+        <name>SSO_Redirection__mdt</name>
+        
+    </customMetadataTypeAccesses>
+    
+	<classAccesses>
+        
+        <apexClass>SSP_surveyResponseEval</apexClass>
+        
+        <enabled>true</enabled>
+        
+	</classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_HearingSummaryController</apexClass>
+        
+        <enabled>true</enabled>
+        
+	</classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_HearingSummaryControllerTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+	</classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_AgencyManagementController</apexClass>
+        
+        <enabled>true</enabled>
+        
+	</classAccesses>
+        
+    <classAccesses>
+        
+        <apexClass>SSP_ReportFraudService</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+     <classAccesses>
+        
+        <apexClass>SSP_ReportFraudRequestWrapper</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_FraudSubmission_ResponseWrapper</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+	<classAccesses>
+        
+        <apexClass>SSP_KIHIPPPayment</apexClass>
+        
+        <enabled>true</enabled>
+        
+	</classAccesses>
+    
+	<classAccesses>
+        
+        <apexClass>SSP_KIHIPPPaymentTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+	</classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_ClaimsAndPayments</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>JsonFlowController</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_MsgCenterApplnNotifyExpireHandler</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_ChildCareProviderSearchController</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_ChildcareEnrollSummaryCtrl</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_ChildcareEnrollSummaryCtrlTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_RequestAMedicaidCard</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_RequestAMedicaidCardTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_IdentityVerificationUploadController</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+	<classAccesses>
+        
+        <apexClass>SSP_RIDPServices</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+	<classAccesses>
+        
+        <apexClass>SSP_IdentityDocumentUploadControllerTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+	<classAccesses>
+        
+        <apexClass>SSP_RIDPServicesTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+	<classAccesses>
+        
+        <apexClass>SSP_CheckRIDPStatusRule</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+	<classAccesses>
+        
+        <apexClass>SSP_CheckRIDPStatusRuleTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+	<classAccesses>
+        
+        <apexClass>SSP_IdentityDocumentUploadRule</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+	<classAccesses>
+        
+        <apexClass>SSP_IdentityDocumentUploadRuleTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_MessageCenterService</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_MessageCenterWithoutSharingService</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_MessageCenterCtrl</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_ClientCaseNoteCtrl</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_ClientCaseNoteCtrlTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_BenefitsPageController</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+	<classAccesses>
+        
+        <apexClass>AsyncKyHbeMci</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_NonCitizenDashboardController</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_NonCitizenDashboardService</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>AsyncSSP_AddressVerificationWSDLService</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>AsyncSSP_DDtempuriOrg</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>AsyncSSP_DocumentDownlaodResponse</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>AsyncTempuriOrg</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>AsyncTempuriOrgGateWayRedirect</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>AsyncTempuriOrgGateWayRedirectTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>AsyncTempuriOrgRoleMgmt</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>AsyncTempuriOrg_RoleMgmnt</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>AsyncTempuriOrg_RoleMgmntTest</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>BasicNavFlowRule</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>Button</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>CPJITHandler</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>CPJITHandlerTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+
+    
+    <classAccesses>
+        
+        <apexClass>CommonUtil</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>ContactTriggerHandler</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>Context</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>ContextData</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>CustomException</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>DocumentDetailSelector</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>ESAPI</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>ESAPI_SFDCAccessUtil</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>GeneralUtility</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>GenericValidationController</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>HBE016CorrespondenceRequestWrapper</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>IIntegrationService</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>IntegrationFactory</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>JitHelper</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+	<apexClass>SSP_NonCitizenUserLogic</apexClass>
+        
+	<enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_CPMFAController</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>LOG_DeleteLogMessagesBatch</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>LOG_DeleteLogMessagesScheduler</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>LOG_DeleteLogMessagesSchedulerTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>LOG_LogMessageUtility</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>LOG_LogMessageUtilityTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>LOG_TestDataUtility</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>LightningForgotPasswordController</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>LightningLoginFormController</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>LightningSelfRegisterController</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <!--<classAccesses>
+        
+        <apexClass>LocationTriggerHandler</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>-->
+    
+    <classAccesses>
+        
+        <apexClass>Logger</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>MCIHandlerTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>MciServiceHandler</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>NavFlowController</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>NavFlowHelper</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>NavFlowManager</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>NavFlowResume</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>NavFlowRule</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>NavFlowRulesEngine</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>NavFlowStatJSON</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>NavFlowStatJSONCLone</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>PageGroupInfo</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>PageToLoad</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>PlatformEventTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <!--<classAccesses>
+        
+        <apexClass>REAgencyLogin</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>REAgencyLoginTest</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RECommunityPartnerLogin</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+
+    <classAccesses>
+        
+        <apexClass>RECommunityPartnerLoginTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_ArchetypeCtrl</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_ArchetypeCtrlTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_ArchetypeDetailCtrl</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_ArchetypeDetailCtrlTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_ArchetypeDetailWrapper</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_AssessmentQuestionsCtrl</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_AssessmentQuestionsCtrlTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_AssessmentQuestionsWrapper</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_AssessmentResultsCtrl</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_AssessmentResultsCtrlTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_AssessmentResultsHelper</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_AssessmentResultsWrapper</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_AssessmentResultsWrapperTest</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_AssisterLoginHandler</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_AssisterLoginHandlerTest</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_BasicSearchCtrl</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_BasicSearchCtrlTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_BasicSearchHelper</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+-->
+    <classAccesses>
+        
+        <apexClass>RE_CPMFAController</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_CPMFAControllerTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    <!--
+    <classAccesses>
+        
+        <apexClass>RE_CalculateRatingCountSum</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_CalculateRatingCountSumTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_CalloutUtility</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_CartLoginModelCtrl</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+
+    <classAccesses>
+        
+        <apexClass>RE_CartLoginModelCtrlTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+
+    <classAccesses>
+        
+        <apexClass>RE_CartRequestService</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+
+    <classAccesses>
+        
+        <apexClass>RE_CartResponseWrapper</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_ClaimSiteRequestCtrl</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_ClaimSiteRequestCtrlTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_ClientDetailsCtrl</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_ClientDetailsCtrlTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_ClientDetailsMockResponse</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_ClientDetailsRequest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_ClientSearchMockResponse</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_ClientSearchReqWrapper</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_ClientSearchReqWrapperTest</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_ClientSearchRequest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_ClientSearchResponse</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_ClientsHelper</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_ContactWrapper</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_CreateBulkReferralCtrl</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_CreateBulkReferralCtrlTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_CreateCitizenHelper</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_CreateFavCtrl</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_CreateLightningServerResponse</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_CreateReferralCtrl</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_CreateReferralCtrlTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_CustomLookUpCtrl</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_CustomLookUpCtrlTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_DashboardCtrl</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_DashboardCtrlTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_DataAccessChecker</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+
+    <classAccesses>
+        
+        <apexClass>RE_DataAccessCheckerTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    -->
+    <classAccesses>
+        
+        <apexClass>RE_DataBaseQueryFields</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    <!-- 
+    <classAccesses>
+        
+        <apexClass>RE_DataTableCtrl</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_DataTableCtrlTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_FeedbackDetailsCtrl</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_FeedbackDetailsCtrlTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_FileUploadCtrl</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_FileUploadCtrlTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_GeneralUtilityTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_GetReportsCtrl</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_GetReportsCtrlTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+   --> 
+    <classAccesses>
+        
+        <apexClass>RE_GlobalConstants</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    <!-- 
+    <classAccesses>
+        
+        <apexClass>RE_GlobalThemeCtrl</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_GlobalThemeCtrlTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+-->
+    <classAccesses>
+        
+        <apexClass>RE_GoogleMapAPIMockResponse</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    <!--
+    <classAccesses>
+        
+        <apexClass>RE_GoogleMapGeoLocationResponseWrapTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    -->
+    <classAccesses>
+        
+        <apexClass>RE_GoogleMapGeoLocationResponseWrapper</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    <!-- 
+    <classAccesses>
+        
+        <apexClass>RE_GoogleMapsController</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_GoogleMapsControllerTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_InboundSMSHelper</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_InboundSMSHelperTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_InsertSurveyInvitationCtrl</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_InsertSurveyInvitationCtrlTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_KOGRegistration</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_LMSUtility</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_LMSUtilityTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_LandingPageCtrl</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_LandingPageCtrlTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_LanguagePillSelectorCtrl</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_LanguagePillSelectorCtrlTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_LineChartCtrl</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_LineChartCtrlTest</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_LocationCtrl</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_LocationCtrlTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_MessageUtility</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_MyCartServiceMock</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_MyFavoritesCtrl</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_MyFavoritesCtrlTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_MyPlanCtrl</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_MyPlanCtrlTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_MyPlanHelper</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_MyPlanHelperTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_MyPlanWrapper</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_NotesCtrl</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_NotesCtrlTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_NotesHelper</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_OAuthCalloutUtility</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_OAuthCalloutUtilityTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_OrganizationDetailsCtrl</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_OrganizationDetailsCtrlTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_OrganizationSearchCtrl</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_OrganizationSearchCtrlTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_OurClientsCtrl</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_OurClientsCtrlTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_PopulateGeoLocationAsync</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_PopulateLatAndLong</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_PopulateLatAndLongTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_PopulateLatLongRequest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_PrivacySettingCtrl</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_PrivacySettingCtrlTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_ProfileCtrl</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_ProfileCtrlTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_RDResidentViewCtrl</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_RDResidentViewCtrlTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_ReferralDashboardCtrl</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_ReferralDashboardCtrlTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_ReferralDetailsCtrl</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_ReferralDetailsCtrlTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_ReferralWrapper</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_RelatedResourceMock</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_RelatedResourcesCtrl</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_RelatedResourcesCtrlTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_RelatedResourcesRequest</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_RequestConsentModalCtrl</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_RequestConsentModalCtrlTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_ResidentLogic</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_ResidentLogicTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_ResourceCategoryCtrl</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_ResourceCategoryCtrlTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_ResourceCtrl</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_ResourceCtrlTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_ResourceDetailWrapper</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_ResourceLocationCtrl</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_ResourceLocationCtrlTest</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_ResourcePackagesCtrl</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_ResourcePackagesCtrlTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_ResourceResponseWrapper</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_ResourceWrapper</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_ResourceWrapperSearch</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_SDOHScore</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_SDOHScoreTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_SelectAssessmentCtrl</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_SelectAssessmentCtrlTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_SendSMSClass</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_SendSMSInterface</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_ServiceHandler</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_ServiceInterface</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_ServiceUtility</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_ShareEmailCtrl</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_ShareEmailCtrlTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+-->
+    <classAccesses>
+        
+        <apexClass>RE_SharingByPassCtrl</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    <!--
+    <classAccesses>
+        
+        <apexClass>RE_SharingByPassCtrlTest</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_SuggestEditCtrl</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_SuggestEditCtrlTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_ThemeCtrl</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_ThemeCtrlTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+-->
+    <classAccesses>
+        
+        <apexClass>RE_URLShortener</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    <!--
+    <classAccesses>
+        
+        <apexClass>RE_URLShortenerTest</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_URLShortnerResponseWrapper</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_URLShortnerService</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_URLShortnerServiceTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_UpdateConsentFromFlow</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_UpdateConsentFromFlowTest</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_UserAgreementCtrl</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_UserAgreementCtrlTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_UserCreationHelper</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_UserCreationHelperTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_UserCtrl</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_UserCtrlTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_UserTriggerHandler</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_UserTriggerHandlerTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RE_UserWrapper</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RSSP_DC_Wrapper</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+
+    <classAccesses>
+        
+        <apexClass>Re_ClientViewWrapper</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    -->
+    <classAccesses>
+        
+        <apexClass>ReferenceDataService</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    <!-- 
+    <classAccesses>
+        
+        <apexClass>ReferralTriggerHandler</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>ReferralTriggerHandlerTest</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    -->
+    <classAccesses>
+        
+        <apexClass>RestIntegrationService</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RulesEngine</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>RulesEngineController</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    <!-- 
+    <classAccesses>
+        
+        <apexClass>SFDCAccessControlException</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SFDCAccessControlResults</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SFDCAccessController</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SFDCBaseValidationRule</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SFDCCharacter</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SFDCEncoder</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SFDCEncoderConstants</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SFDCIntegerValidationRule</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SFDCNumberValidationRule</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SFDCPatterns</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SFDCPlugins</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SFDCStringUtils</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SFDCStringValidationRule</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SFDCValidator</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SOAPIntegrationService</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP001CorrespondenceRequestWrapper</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSPAddressAutocompleteController</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSPAddressAutocompleteControllerTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSPCitizenJITHandler</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_AgreementAndSignatureController</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_AHIIntegrationService</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_AHIIntegrationServiceTest</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_AHIMockClass</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_AHIRequestWrapper</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_AVSIntegrationService</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_AVSIntegrationTest</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_AVSMicrosoftComMessage</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_AVSMockClass</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_AVSSchemasPostAvstr</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_AVSTempuriOrg</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_AVSTempuriOrgImports</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_AbsentParentController</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_AbsentParentQueueingRule</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_AccountContactRelationSelector</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_AccountCreationService</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_AccountSelector</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_AckResponseWRapper</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_AddAuthRepController</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_AddAuthRepControllerTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_AddressResponseWrapper</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_AddressService</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_AddressVerificationMock</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_AddressVerificationWSDLService</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_AddressVerification_IntUtility</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_AddressVerification_IntUtilityTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_AgentAssistorController</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_AgentAssistorController_test</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_AlienSponsorCtrl</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_AlienSponsorInformationRule</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_AlienSponsorService</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_AmericanIndianInfoControllerTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_AmericanIndianInformationController</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_AmericanIndianInformationRule</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_AmericanIndianInformationRuleTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_AnotherStateBenefitsCtrl</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_AnotherStateBenefitsCtrlTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_AnotherStateBenefitsQueueRule</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_AnotherStateBenefitsService</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_AnotherStateBenefitsWrapper</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_ApplicantAddressController</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_ApplicantAddressControllerTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_ApplicantAddressRule</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_ApplicantAddressRuleTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_ApplicationController</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_ApplicationController_test</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_ApplicationIndividualSelector</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_ApplicationIndividual_TriggerHandler</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_ApplicationSelector</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_ApplicationSummaryController</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_AssetSelector</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_AssetTrigger_Handler</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_AssisterLoginHandler</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_AttendaceSelector</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_AuthRepAccessRequestCtrl</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_AuthRepAccessRequestService</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_AssisterRequestAccessCtrl</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_AssisterRequestAccessService</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_AssisAuthRepConsentNotSignedService</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_AssisterAccessRequestCtrl</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_BenefitInformationPayloadWrapper</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_BenefitInformationWrapper</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_BenefitsSelector</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_CISCareTakerController</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_CISCareTakerControllerTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_CISQueueRule</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_CISQueueRuleTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_CacheBuilderImplementation</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_CacheBuilderImplementationDabhboard</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_CareTakerServicesQueueRule</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_CareTakerServicesQueueRuleTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_ChildMedicalEnforcementRule</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_CommunityPartnerLogin</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_ContactInfoIntegrationService</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_ContactInfoIntegrationServiceTest</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_ContactInfoMockClass</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_ContactInfoUpdateRequestWrapper</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_ContactInfoUpdateResponseWrapper</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_ContactInformationController</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_ContactInformationControllerTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_ContactSelector</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_ConvictionQueueingRule</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_ConvictionQueueingRuleTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_CorrespondenceRequestWrapper</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_CorrespondenceResponseWrapper</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_CorrespondenceUtilityService</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_CorrespondenceUtilityServiceMock</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_CorrespondenceUtilityServiceTest</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_CustomMetadataAccessor</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_DC_CreateTransaction</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_DC_ReverseMockImpl</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_DDtempuriOrg</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_DashBoardInformationWrapper</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_DashboardCaseInformation</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_DashboardController</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_DataContractOrg</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_DeleteApplicationController</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_DeleteApplicationController_Test</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_DiscontinueBenefitsController</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_DisqualificationDetailsController</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_DisqualificationPayloadWrapper</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_DocumentCenterCtrl</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_DocumentCenterCtrlTest</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_DocumentDownlaodRequest</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_DocumentDownlaodResponse</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_DocumentDownloadMessage</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_DocumentDownloadService</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_DocumentDownloadServiceTest</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_DocumentHelperService</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_DownloadSNAPCopyController</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_DownloadSNAPCopyControllerTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_EBTCardReqIntegrationService</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_EducationController</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_EducationControllerTest</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_EducationSummaryQueueingRule</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_EducationSummaryQueueingRuleTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_EligibilityResultsCtrl</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_EligibilityResultsCtrlTest</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_EligibilitySummaryPayloadWrapper</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_EligibilitySummaryWrapper</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_EnrollmentDetailsCtrl</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_EnrollmentDetailsCtrlTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_EnrollmentDetailsWrapper</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_EnrollmentScreenQueueRule</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_EntitledBenefitsController</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_EntitledBenefitsControllerTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_EntitledBenefitsQueueRule</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_EntitledBenefitsQueueRuleTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_ExistResourcesController</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_ExpeditedSnapBenefitCtrl</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_ExpeditedSnapBenefitCtrlTest</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_ExpeditedSnapBenefitQueueRule</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_ExpeditedSnapBenefitService</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_ExpeditedSnapBenefitWrapper</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_ExpenseController</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_ExpenseControllerTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_ExpenseDetailsQueueRule</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_ExpenseScreenQueueRule</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_ExpenseScreenQueueRuleTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_ExpenseService</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_ExpensesSelectionQueueRule</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_ExpensesSelectionQueueRule_test</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_FindDCBSOfficeController</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_FormerFosterCareInformationRule</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_FormerFosterCareInformationRuleTest</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_GetInterpreterModalCtrl</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_GetInterpreterModalCtrlTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_GlobalConstants</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_HeaderCtrl</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_HealthConditionController</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_HealthConditionControllerTest</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_HealthConditionQueueRule</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_HealthConditionQueueRuleTest</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_HealthCoverageSelectionCtrl</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_HealthCoverageSelectionCtrlTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_MemberHandlerTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_HealthCoverageSelectionService</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_HealthEnrollmentSummaryCtrl</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_HealthEnrollmentSummaryCtrlTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_HealthEnrollmentSummaryService</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_HealthEnrollmentWrapper</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_HealthInformationService</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_HealthInformationWrapper</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_HealthInsuranceFacilityTypeSelector</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_HealthSelectionCtrl</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_HealthSelectionCtrlTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_HealthcareScreenQueueRule</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_HomePageController</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_HomePageControllerTest</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_HouseHoldMealRule</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_HouseHoldMealRuleTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_HouseHoldMeals</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_HouseHoldMealsService</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_HouseHoldMealsTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_HouseHoldSummaryService</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_HouseholdCircumstancesController</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_HouseholdMembersSummaryCtrl</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_HouseholdMembersSummaryCtrlTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_ITriggerHandler</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_IncomeAndSubsidiesSelController</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_IncomeAndSubsidiesSelControllerTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_IncomeController</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_IncomeControllerTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_IncomeDetailsQueueRule</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_IncomeScreenQueueRule</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_IncomeScreenQueueRuleTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_IncomeSelectionScreenQueueRule</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_IncomeSelectionScreenQueueRuleTest</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_IncomeService</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_IndividualEnrollmentDetails</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_IndividualEnrollmentDetailsTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_IndividualInfoWrapper</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_InstitutionSelector</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_InsuranceCoveredIndivSelector</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_InsurancePolicySelector</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_IntegrationServiceMock</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_IntegrationUtility</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_InterfaceConstants</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_KIHIPPPaymentSummaryController</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_KHIPPPaymentSummaryWrapper</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_KHIPPPreferredPaymentMethod</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_KHIPPPreferredPaymentMethodQueueRule</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_KHIPPPreferredPaymentMethodService</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_KHIPPPreferredPaymentMethodTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_KOGRegistration</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_KnowledgeArticleCtrlr</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_LabelService</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_LightningResponse</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_LivingArrangementController</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_LivingArrangementControllerTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_LivingArrangementQueueingRule</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_LivingArrangementQueueingRuleTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_MCIMergedServiceMock</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_MCIMergedServiceRequestWrapper</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_MCIMergedServiceResponeWrapper</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_MCIMergedServiceUtility</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_MCIMergedServiceUtiltiyTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_MedicaidCardReqIntServiceTest</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_MedicaidCardReqIntegrationService</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_MedicaidMCOInformationWrapper</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_MedicaidMCOWrapper</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_MedicalBillsFor3MonthsController</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_MedicalBillsFor3MonthsControllerTest</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_MedicalBillsFor3MonthsQueueRule</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_MedicalBillsFor3MonthsQueueRuleTest</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_MedicalEnforcementController</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_MedicalEnforcementControllerTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_MedicalEnforcementCtrlQueueRule</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_MedicalEnforcementCtrlQueueRuleTest</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_MedicalEnforcementRule</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_MedicareCoverageDetails</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_MedicareCoverageDetailsTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_MedicareCoverageService</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_MedicareCoverageSummary</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_MedicareCoverageSummaryQueueRule</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_MedicareCoverageSummaryQueueRuleTest</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_MedicareCoverageSummaryTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_MemberBlindInformationRule</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_MemberBlindInformationRuleTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_MemberConvictionController</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_MemberConvictionControllerTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_MemberDisabilityController</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_MemberDisabilityControllerTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_MemberDisabilityInformationRule</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_MemberDisabilityInformationRuleTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_MemberDisabilityWrapper</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_MemberHandler</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_MemberSelector</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_MemberService</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_MoreHelpInfoController</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_MoreHelpInfoControllerTest</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_MyInformationController</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_MyInformationControllerTest</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_MyInformationWrapper</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_NONESIMECIntegrationService</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_NONESIMECIntegrationServiceTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_NONESIMECRequestWrapper</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_NONESIMECResponseWrapper</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_NONESIMECServiceMock</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_NavFlowStatusSelector</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_NextStepsController</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_NextStepsControllerTest</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_NonCitizenClientInfoPayloadWrapper</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_NonCitizenRAC</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_NonCustodialParentSelector</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_NonPrimaryContactInformationRule</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_NonPrimaryContactInformationRuleTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_NotUSCitizenController</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_NotUSCitizenControllerTest</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_NotUSCitizenQueueingRule</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_NotUSCitizenQueueingRuleTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_NotUSCitizenService</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_OtherResSelectionScreenQueueRule</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_OverlapIntegrationService</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_OverlapIntegrationServiceTest</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_OverlapRequestWrapper</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_OverlapResponseWrapper</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_PastApplicationsController</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_PastApplicationsPayloadWrapper</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_PregnancyQueueingRule</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_PregnancyQueueingRuleTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_PregnancyScreenController</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_PregnancyScreenControllerTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_PreScreeningData</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+	<classAccesses>
+        
+        <apexClass>SSP_PrescreeningService</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_PrimaryContactInformationRule</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_PrimaryContactInformationRuleTest</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_ProgramSelectionCtrl</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_ProgramSelectionService</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_ProviderSearchIntegrationService</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_ProviderSearchIntegrationServiceTest</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_ProviderSearchResponse</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_ProviderSearchResponseWrapper</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_RACSelectionDetailsWrapper</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_RFIInformationPayloadWrapper</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_RSSPDCWrapper</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_RSSPDC_CalloutHelper</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_RSSPDC_IntegrationDMLUtility</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_RSSPDC_IntegrationDMLUtilityTest</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_RSSPDC_IntegrationHandler</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_RSSPDC_IntegrationHandlerTest</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_RSSPDC_IntegrationService</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_RSSPDC_IntegrationServiceTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_RSSPDC_IntegrationUtility</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_RSSPDC_IntegrationUtilityTest</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_RSSPDC_RequestWrapper</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_RSSPDC_TransactionUpdateController</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_RelationshipInformationController</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_RelationshipInformationRule</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_RelationshipInformationRuleTest</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_RelationshipSelector</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_RelationshipWrapper</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_ReportChangeSelectionCtrl</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_RepsAssistersAgentsController</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_RepsAssistersAgentsControllerTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_ResidentLogic</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_ResourceDetailsController</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_ResourceOwnershipSelector</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_ResourceSummaryQueueRule</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_ResourcesController</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_ResourcesScreenQueueRule</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_ResourcesSelectionController</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_ResourcesSelectionScreenQueueRule</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_ResourcesService</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_ResourcesTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_ResourcesWrapper</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_RetryWrapper</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_ReviewRequiredRuleService</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+		<apexClass>SSP_RoleSelectionTest</apexClass>
+        
+		<enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+		<apexClass>SSP_DashboardService</apexClass>
+        
+		<enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_RoleSelection</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_RulesEngine</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_RulesEngineController</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_SendComToMC_GenerateTokenService</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_SendComToMC_GenerateTokenTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_SendComToMC_EmailSMSService</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_SendComToMC_EmailSMSServiceTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_SendComToMC_RequestWrapper</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_SendComToMC_ResponseWrapper</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_TransactionalAPI</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_TransactionalAPITest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_SSIBenefitCtrl</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_SSIBenefitCtrlTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_SSIBenefitQueueRule</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_SSIBenefitService</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_SSIBenefitWrapper</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_SSPDCIntegrationService</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_SSPDCIntegrationServiceBatch</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_SSPDCIntegrationServiceBatchTest</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_SSPDCIntegrationServiceTest</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_SampleCopado</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_SampleCopadoTest</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_SaveWaiverScreeningResultsIntService</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_SaveWaiverScreeningResultsMockClass</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_SaveWaiverScreeningResultsTest</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_SerializationArray</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_SharingBypassFetcher</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_PreferredMCOSelectionController</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_MCOSelectionRule</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_ShoppingIntegration</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_ShortSnapWrapper</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_SignaturePageCtrl</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_SignaturePageService</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_SignaturePageWrapper</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_SubmitApplicationController</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_SubmitShortSNAPApplication</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_SubmitShortSNAPApplicationTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_TMemberCalloutClass</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_TMemberDataContract</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_TMemberIntegrationService</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_TMemberMockClass</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_TMemberStubClass</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_TMemberTest</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_TaxFilingDetailsController</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_TaxFilingDetailsService</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_TaxFilingScreenQueueRule</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_TempuriOrg</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_TestDataFactory</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_TriggerDispatcher</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_UpdateAgencyRequestWrapper</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_UpdateAgencyResponseWrapper</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_UpdateAgentAssisterRequestWrapper</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_UpdateAgentAssisterResWrapper</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_UpdateAgentAssisterService</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_UpdateDCRepIntegrationService</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_UpdateDCRepIntegrationServiceTest</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_UpdateDCRepIntegrationUtility</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_UpdateDCRepResponseWrapper</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_UserSelector</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_Utility</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_VCIIntegrationService</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_VCIIntegrationServiceTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_VCIMockClass</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_VCIRequestWrapper</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_VLPIntegrationService</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_VLPIntegrationServiceTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_VLPMockClass</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_VLPRequestWrapper</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_VLPResponseWrapper</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_WaiverController</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_WaiverDetailsPayloadWrapper</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_RequestTaxFormController</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>StaffHandler</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>StaffHandlerTest</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>StaffJitHandler</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>StaffJitHandlerTest</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>TestDataFactory</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>Test_BitlyMockResponse</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>TriggerHandler</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>TriggerHandlerTest</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>ValidationMessage</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>kyHbeMci</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>kyHbeMciDatacontracts</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>kyHbeMciDatacontractsMock</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>logMessageWrapper</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+-->
+    <classAccesses>
+        
+        <apexClass>schemasDatacontractOrg200407KeupsB</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>schemasDatacontractOrg200407KeupsBTest</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>schemasDatacontractOrg200407KyHbe</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+-->
+    <classAccesses>
+        
+        <apexClass>schemasDatacontractOrg200407_Role</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+
+    <classAccesses>
+        
+        <apexClass>schemasDatacontractOrg2004_Role</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>schemasDatacontractOrg2004_RoleTest</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>schemasDatacontractOrgRoleMgmt</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>schemasMicrosoftCom200310Serializat</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>schemasMicrosoftCom200310SerializatTest</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>schemasMicrosoftCom200310_Role</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>schemasMicrosoftComGateWayRedirect</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>schemasMicrosoftComMessage</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>schemasMicrosoftComMessageTest</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>schemasMicrosoftComRoleMgmt</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>tempuriOrg</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>tempuriOrgGateWayRedirect</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>tempuriOrgGateWayRedirectMock</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>tempuriOrgImports</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>tempuriOrgMock</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>tempuriOrgRoleMgmt</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>tempuriOrg_RoleMgmnt</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>tempuriOrg_RoleMgmnt2Mock</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>tempuriOrg_RoleMgmntMock</apexClass>
+        
+        <enabled>false</enabled>
+        
+    </classAccesses>
+    
+    <classAccesses>
+        
+        <apexClass>SSP_CollateralContact</apexClass>
+        
+        <enabled>true</enabled>
+        
+    </classAccesses>
+    
+>>>>>>> 9c2d804492efba3b7d3b63bb4dad7908b7a26301
+>>>>>>> 0c4c53295e1f0d0922b27a53715ede1d1386527d
     <custom>true</custom>
 <<<<<<< HEAD
 =======
@@ -2384,8 +8358,6 @@
         
     </fieldPermissions>
     
-    
-    
     <fieldPermissions>
         
         <editable>true</editable>
@@ -2751,16 +8723,6 @@
         <editable>true</editable>
         
         <field>DocumentDetail__c.IndividualId__c</field>
-        
-        <readable>true</readable>
-        
-    </fieldPermissions>
-    
-    <fieldPermissions>
-        
-        <editable>false</editable>
-        
-        <field>DocumentDetail__c.Location__c</field>
         
         <readable>true</readable>
         
@@ -4416,67 +10378,7 @@
         <readable>false</readable>
         
     </fieldPermissions>
-    
-    <fieldPermissions>
-        
-        <editable>false</editable>
-        
-        <field>RECommunityUsersConfiguration__mdt.AllowIntegrationforUserCreation__c</field>
-        
-        <readable>false</readable>
-        
-    </fieldPermissions>
-    
-    <fieldPermissions>
-        
-        <editable>false</editable>
-        
-        <field>RECommunityUsersConfiguration__mdt.PermissionSets__c</field>
-        
-        <readable>false</readable>
-        
-    </fieldPermissions>
-        
-    <fieldPermissions>
-        
-        <editable>false</editable>
-        
-        <field>RE_User_Agreement__mdt.Header__c</field>
-        
-        <readable>false</readable>
-        
-    </fieldPermissions>
-    
-    <fieldPermissions>
-        
-        <editable>false</editable>
-        
-        <field>RE_User_Agreement__mdt.Text__c</field>
-        
-        <readable>false</readable>
-        
-    </fieldPermissions>
-    
-    <fieldPermissions>
-        
-        <editable>false</editable>
-        
-        <field>RE_User_Agreement__mdt.userType__c</field>
-        
-        <readable>false</readable>
-        
-    </fieldPermissions>
-    
-    <fieldPermissions>
-        
-        <editable>false</editable>
-        
-        <field>RE_User_Agreement__mdt.Community_Name__c</field>
-        
-        <readable>false</readable>
-        
-    </fieldPermissions>
-    
+
     <fieldPermissions>
         
         <editable>false</editable>
@@ -12449,16 +18351,6 @@
     
     <fieldPermissions>
         
-        <editable>true</editable>
-        
-        <field>SurveyInvitation.Consent__c</field>
-        
-        <readable>true</readable>
-        
-    </fieldPermissions>
-    
-    <fieldPermissions>
-        
         <editable>false</editable>
         
         <field>SurveyInvitation.Flow_Expiration_Date__c</field>
@@ -12466,7 +18358,7 @@
         <readable>false</readable>
         
     </fieldPermissions>
-    
+    <!-- 
     <fieldPermissions>
         
         <editable>true</editable>
@@ -12476,7 +18368,7 @@
         <readable>true</readable>
         
     </fieldPermissions>
-    
+    -->
 	<fieldPermissions>
         
         <editable>true</editable>
@@ -12806,7 +18698,7 @@
         <readable>false</readable>
         
     </fieldPermissions>
-    
+    <!--
     <fieldPermissions>
         
         <editable>true</editable>
@@ -13236,7 +19128,7 @@
         <readable>false</readable>
         
     </fieldPermissions>
-    
+-->
     <layoutAssignments>
         
         <layout>SSP_Notifications__c-SSP Notifications Layout</layout>
@@ -13323,18 +19215,7 @@
         <layout>NavFlowPageConfig__mdt-Navigation Flow Page Configuration Layout</layout>
         
     </layoutAssignments>
-    
-    <layoutAssignments>
-        
-        <layout>RECommunityUsersConfiguration__mdt-Community Users Setting Layout</layout>
-        
-    </layoutAssignments>
-    
-    <layoutAssignments>
-        
-        <layout>RE_User_Agreement__mdt-RE Partner User Agreement Layout</layout>
-        
-    </layoutAssignments>
+
     
     <layoutAssignments>
         
@@ -13996,13 +19877,6 @@
         
     </objectPermissions>
     
-    <pageAccesses>
-        
-        <apexPage>PrintPlan</apexPage>
-        
-        <enabled>true</enabled>
-        
-    </pageAccesses>
     
     <pageAccesses>
         
@@ -14020,21 +19894,7 @@
         
     </pageAccesses>
     
-    <pageAccesses>
-        
-        <apexPage>RE_CaptchaV2</apexPage>
-        
-        <enabled>true</enabled>
-        
-    </pageAccesses>
-    
-    <pageAccesses>
-        
-        <apexPage>RE_GoogleMap</apexPage>
-        
-        <enabled>true</enabled>
-        
-    </pageAccesses>
+
     
     <pageAccesses>
         
