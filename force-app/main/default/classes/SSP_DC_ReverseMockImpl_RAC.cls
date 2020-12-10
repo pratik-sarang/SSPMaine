@@ -1,152 +1,91 @@
-
+/*
+ * Classname                        :  SSP_ContactInfoUpdateRequestWrapper
+ * @description                     :  Mock Response method for Reverse SSPDC and test class
+ * @author                          :  Rajeev Kumar
+ * @date                            :  12/09/2019
+ * MODIFICATION LOG                 :
+ * DEVELOPER                     DATE                               DESCRIPTION
+ * ---------------------------------------------------------------------------------------------
+ * DeveloperName       MM/DD/YYYY          A Brief Description about the Change
+ **/
 public  with sharing class SSP_DC_ReverseMockImpl_RAC  {
+ 
+ 
+    // Default Constructor
+  
   // SObject Structure
-  public static final String sQualifiedIndividual =         '   {  '  + 
-                                      '     "viewName": "QualifiedIndividual",  '  + 
-                                      '     "caseNumber": "0",  '  + 
-                                      '     "primaryApplicantIndividualId": 999031234,  '  + 
-                                      '     "individualIds": "",  '  + 
-                                      '     "programCode": "MA;KT;SN",  '  + 
-                                      '     "mode": "Intake",  '  + 
-                                      '     "applicationID": "a0Xr00000010rli",  '  + 
-                                      '     "miscelleanousParameter": "",  '  + 
-                                      '     "Payload": {  '  + 
-                                      '       "SSP_Application__c": null,  '  + 
-                                      '       "SSP_ApplicationIndividual__c": [  '  + 
-                                      '         {  '  + 
-                                      '           "IsActiveIEESCasePresent__c": 1,  '  + 
-                                      '           "SSP_Member__r": {  '  + 
-                                      '             "IndividualId__c": "999031234"  '  + 
-                                      '           },  '  + 
-                                      '           "BlockedCaseNumber__c": "100061299",  '  + 
-                                      '           "isApplicationBlocked__c": 0,  '  + 
-                                      '           "IsHeadOfHousehold__c": 1  '  + 
-                                      '         },  '  + 
-                                      '         {  '  + 
-                                      '           "IsActiveIEESCasePresent__c": 1,  '  + 
-                                      '           "SSP_Member__r": {  '  + 
-                                      '             "IndividualId__c": "999034248"  '  + 
-                                      '           },  '  + 
-                                      '           "BlockedCaseNumber__c": "100061299",  '  + 
-                                      '           "isApplicationBlocked__c": 0,  '  + 
-                                      '           "IsHeadOfHousehold__c": 0  '  + 
-                                      '         },  '  + 
-                                      '         {  '  + 
-                                      '           "IsActiveIEESCasePresent__c": 1,  '  + 
-                                      '           "SSP_Member__r": {  '  + 
-                                      '             "IndividualId__c": "999034249"  '  + 
-                                      '           },  '  + 
-                                      '           "BlockedCaseNumber__c": "100061299",  '  + 
-                                      '           "isApplicationBlocked__c": 0,  '  + 
-                                      '           "IsHeadOfHousehold__c": 0  '  + 
-                                      '         },  '  + 
-                                      '         {  '  + 
-                                      '           "IsActiveIEESCasePresent__c": 1,  '  + 
-                                      '           "SSP_Member__r": {  '  + 
-                                      '             "IndividualId__c": "999034250"  '  + 
-                                      '           },  '  + 
-                                      '           "BlockedCaseNumber__c": "100061299",  '  + 
-                                      '           "isApplicationBlocked__c": 0,  '  + 
-                                      '           "IsHeadOfHousehold__c": 0  '  + 
-                                      '         }  '  + 
-                                      '       ],  '  + 
-                                      '       "SSP_Member__c": [  '  + 
-                                      '         {  '  + 
-                                      '           "FirstName__c": "CHILDLKDFJ",  '  + 
-                                      '           "LastName__c": "LKDFK",  '  + 
-                                      '           "BirthDate__c": "2019-01-10",  '  + 
-                                      '           "MiddleInitial__c": null,  '  + 
-                                      '           "SuffixCode__c": null,  '  + 
-                                      '           "EthnicityCode__c": null,  '  + 
-                                      '           "SSN__c": null,  '  + 
-                                      '           "DeathDate__c": null,  '  + 
-                                      '           "GenderCode__c": "F",  '  + 
-                                      '           "NoReasonSSNCode__c": "AP",  '  + 
-                                      '           "IndividualId__c": "999034250",  '  + 
-                                      '           "MCIId__c": "9831606",  '  + 
-                                      '           "SSNVerified__c": 0,  '  + 
-                                      '           "NationalityCode__c": null,  '  + 
-                                      '           "IsDateOfBirthValidated__c": 0,  '  + 
-                                      '           "IsDateOfDeathValidated__c": 0,  '  + 
-                                      '           "PseudoSSN__c": "908883978",  '  + 
-                                      '           "IsUSCitizenValidated__c": 0,  '  + 
-                                      '           "RaceCode__c": null,  '  + 
-                                      '           "IsUSCitizenToggle__c": "N",  '  + 
-                                      '           "IsFileCleared__c": 1  '  + 
-                                      '         },  '  + 
-                                      '         {  '  + 
-                                      '           "FirstName__c": "SDONELDKJ",  '  + 
-                                      '           "LastName__c": "ISECODLKFJK",  '  + 
-                                      '           "BirthDate__c": "1987-01-17",  '  + 
-                                      '           "MiddleInitial__c": null,  '  + 
-                                      '           "SuffixCode__c": null,  '  + 
-                                      '           "EthnicityCode__c": null,  '  + 
-                                      '           "SSN__c": null,  '  + 
-                                      '           "DeathDate__c": null,  '  + 
-                                      '           "GenderCode__c": "M",  '  + 
-                                      '           "NoReasonSSNCode__c": "AL",  '  + 
-                                      '           "IndividualId__c": "999034248",  '  + 
-                                      '           "MCIId__c": "9831596",  '  + 
-                                      '           "SSNVerified__c": 0,  '  + 
-                                      '           "NationalityCode__c": "AI",  '  + 
-                                      '           "IsDateOfBirthValidated__c": 0,  '  + 
-                                      '           "IsDateOfDeathValidated__c": 0,  '  + 
-                                      '           "PseudoSSN__c": "908813352",  '  + 
-                                      '           "IsUSCitizenValidated__c": 0,  '  + 
-                                      '           "RaceCode__c": "AS",  '  + 
-                                      '           "IsUSCitizenToggle__c": "N",  '  + 
-                                      '           "IsFileCleared__c": 1  '  + 
-                                      '         },  '  + 
-                                      '         {  '  + 
-                                      '           "FirstName__c": "SAM1",  '  + 
-                                      '           "LastName__c": "ANDERSON",  '  + 
-                                      '           "BirthDate__c": "1984-12-09",  '  + 
-                                      '           "MiddleInitial__c": null,  '  + 
-                                      '           "SuffixCode__c": null,  '  + 
-                                      '           "EthnicityCode__c": null,  '  + 
-                                      '           "SSN__c": null,  '  + 
-                                      '           "DeathDate__c": null,  '  + 
-                                      '           "GenderCode__c": "M",  '  + 
-                                      '           "NoReasonSSNCode__c": "AP",  '  + 
-                                      '           "IndividualId__c": "999031234",  '  + 
-                                      '           "MCIId__c": "98315941",  '  + 
-                                      '           "SSNVerified__c": 0,  '  + 
-                                      '           "NationalityCode__c": null,  '  + 
-                                      '           "IsDateOfBirthValidated__c": 0,  '  + 
-                                      '           "IsDateOfDeathValidated__c": 0,  '  + 
-                                      '           "PseudoSSN__c": "908475128",  '  + 
-                                      '           "IsUSCitizenValidated__c": 0,  '  + 
-                                      '           "RaceCode__c": "IN",  '  + 
-                                      '           "IsUSCitizenToggle__c": "N",  '  + 
-                                      '           "IsFileCleared__c": 1  '  + 
-                                      '         },  '  + 
-                                      '         {  '  + 
-                                      '           "FirstName__c": "TLIYDFKJ",  '  + 
-                                      '           "LastName__c": "LKDHFNVGTR",  '  + 
-                                      '           "BirthDate__c": "1987-12-02",  '  + 
-                                      '           "MiddleInitial__c": null,  '  + 
-                                      '           "SuffixCode__c": null,  '  + 
-                                      '           "EthnicityCode__c": "CU",  '  + 
-                                      '           "SSN__c": null,  '  + 
-                                      '           "DeathDate__c": null,  '  + 
-                                      '           "GenderCode__c": "F",  '  + 
-                                      '           "NoReasonSSNCode__c": "AP",  '  + 
-                                      '           "IndividualId__c": "999034249",  '  + 
-                                      '           "MCIId__c": "9831598",  '  + 
-                                      '           "SSNVerified__c": 0,  '  + 
-                                      '           "NationalityCode__c": "GU",  '  + 
-                                      '           "IsDateOfBirthValidated__c": 0,  '  + 
-                                      '           "IsDateOfDeathValidated__c": 0,  '  + 
-                                      '           "PseudoSSN__c": "908308845",  '  + 
-                                      '           "IsUSCitizenValidated__c": 0,  '  + 
-                                      '           "RaceCode__c": "HPI",  '  + 
-                                      '           "IsUSCitizenToggle__c": "Y",  '  + 
-                                      '           "IsFileCleared__c": 1  '  + 
-                                      '         }  '  + 
-                                      '       ]  '  + 
-                                      '     },  '  + 
-                                      '     "AckResponse": null  '  + 
-                                      '  }  ' ; 
+  public static final String sQualifiedIndividual =         
+  '   {  '  + 
+  '   "AckResponse" : null,  '  + 
+  '   "Payload" : {  '  + 
+  '   "SSP_Member__c" : [ {  '  + 
+  '   "DeathDateVerificationCode__c" : null,  '  + 
+  '   "IsNonUSCitizenMilitaryMemberToggle__c" : "N",  '  + 
+  '   "IsFileCleared__c" : 1,  '  + 
+  '   "IsUSCitizenToggle__c" : "Y",  '  + 
+  '   "RaceCode__c" : "W",  '  + 
+  '   "IsUSCitizenValidated__c" : 1,  '  + 
+  '   "PseudoSSN__c" : null,  '  + 
+  '   "IsDateOfDeathValidated__c" : 1,  '  + 
+  '   "IsDateOfBirthValidated__c" : 1,  '  + 
+  '   "NationalityCode__c" : null,  '  + 
+  '   "SSNVerified__c" : 1,  '  + 
+  '   "MCIId__c" : "486587",  '  + 
+  '   "IndividualId__c" : "999031236",  '  + 
+  '   "NoReasonSSNCode__c" : null,  '  + 
+  '   "GenderCode__c" : "F",  '  + 
+  '   "DeathDate__c" : null,  '  + 
+  '   "SSN__c" : "118655392",  '  + 
+  '   "IsMilitaryMemberToggle__c" : "N",  '  + 
+  '   "IsIntendToResideToggle__c" : "Y",  '  + 
+  '   "IsHispanicLatinoSpanishToggle__c" : "N",  '  + 
+  '   "EthnicityCode__c" : null,  '  + 
+  '   "SuffixCode__c" : null,  '  + 
+  '   "MiddleInitial__c" : null,  '  + 
+  '   "BirthDate__c" : "1959-06-02",  '  + 
+  '   "Alias_Last_Name__c" : "Dave",  '  + 
+  '   "Alias_First_Name__c" : "David",  '  + 
+  '   "LastName__c" : "Dave",  '  + 
+  '   "FirstName__c" : "David"  '  + 
+  '   } ],  '  + 
+  '   "SSP_ApplicationIndividual__c" : [ {  '  + 
+  '   "DCPrograms__c" : null,  '  + 
+  '   "MemberProgramsApplied__c" : "MA",  '  + 
+  '   "IsHeadOfHousehold__c" : 1,  '  + 
+  '   "isApplicationBlocked__c" : 0,  '  + 
+  '   "BlockedCaseNumber__c" : "110945932",  '  + 
+  '   "SSP_Member__r" : {  '  + 
+  '   "IndividualId__c" : "999031236"  '  + 
+  '   },  '  + 
+  '   "IsActiveIEESCasePresent__c" : 1  '  + 
+  '   }, {  '  + 
+  '   "DCPrograms__c" : null,  '  + 
+  '   "MemberProgramsApplied__c" : "MA",  '  + 
+  '   "IsHeadOfHousehold__c" : 0,  '  + 
+  '   "isApplicationBlocked__c" : 0,  '  + 
+  '   "BlockedCaseNumber__c" : "110945932",  '  + 
+  '   "SSP_Member__r" : {  '  + 
+  '   "IndividualId__c" : "999031236"  '  + 
+  '   },  '  + 
+  '   "IsActiveIEESCasePresent__c" : 1  '  + 
+  '   } ],  '  + 
+  '   "SSP_Application__c" : [ {  '  + 
+  '   "Relationship_To_You__c" : null,  '  + 
+  '   "Contact_Phone_Number__c" : null,  '  + 
+  '   "Contact_Name__c" : null,  '  + 
+  '   "ProgramsApplied__c" : "MA"  '  + 
+  '   } ]  '  + 
+  '   },  '  + 
+  '   "role" : "Citizen_Individual",  '  + 
+  '   "miscelleanousParameter" : "",  '  + 
+  '   "applicationID" : "a014W000013OmCNQA0",  '  + 
+  '   "mode" : "Renewal",  '  + 
+  '   "programCode" : "MA",  '  + 
+  '   "individualIds" : "999031236;102437355",  '  + 
+  '   "primaryApplicantIndividualId" : "999031236",  '  + 
+  '   "caseNumber" : "110945932",  '  + 
+  '   "viewName" : "QualifiedIndividual"  '  + 
+  '  }  ' ;  
   public static final String sIncomeInformation =           
   '   {  '  + 
   '     "AckResponse" : null,  '  + 
@@ -155,7 +94,7 @@ public  with sharing class SSP_DC_ReverseMockImpl_RAC  {
   '       "SSP_Benefits__c" : null,  '  + 
   '       "SSP_Asset__c" : [ {  '  + 
   '         "Is_Interface_Inserted__c" : false,  '  + 
-  '         "DCAssetId__c" : "Income,179119851,2464156",  '  + 
+  '         "DCAssetId__c" : "Income,23338835,2464156",  '  + 
   '         "EndDate__c" : null,  '  + 
   '         "ExpenseAmount__c" : null,  '  + 
   '         "IncomePayDetailHoursPerWeek__c" : null,  '  + 
@@ -181,19 +120,19 @@ public  with sharing class SSP_DC_ReverseMockImpl_RAC  {
   '         "EmployerName__c" : null,  '  + 
   '         "IncomeSubtypeCode__c" : "UI",  '  + 
   '         "IncomeTypeCode__c" : "IS",  '  + 
-  '         "DCUnearnedIncomeDetailId__c" : 1533265,  '  + 
+  '         "DCUnearnedIncomeDetailId__c" : 2464156,  '  + 
   '         "DCSelfEmploymentIncomeDetailId__c" : null,  '  + 
-  '         "DCId__c" : 179119851,  '  + 
+  '         "DCId__c" : 23338835,  '  + 
   '         "DCEmploymentDetailId__c" : null,  '  + 
   '         "SSP_Member__r" : {  '  + 
-  '           "IndividualId__c" : "999031234"  '  + 
+  '           "IndividualId__c" : "999031236"  '  + 
   '         },  '  + 
   '         "RecordType" : {  '  + 
   '           "Name" : "Income"  '  + 
   '         }  '  + 
   '       }, {  '  + 
   '         "Is_Interface_Inserted__c" : false,  '  + 
-  '         "DCAssetId__c" : "Income,179120041,1600227",  '  + 
+  '         "DCAssetId__c" : "Income,20957074,1600227",  '  + 
   '         "EndDate__c" : null,  '  + 
   '         "ExpenseAmount__c" : null,  '  + 
   '         "IncomePayDetailHoursPerWeek__c" : null,  '  + 
@@ -221,48 +160,10 @@ public  with sharing class SSP_DC_ReverseMockImpl_RAC  {
   '         "IncomeTypeCode__c" : "EA",  '  + 
   '         "DCUnearnedIncomeDetailId__c" : null,  '  + 
   '         "DCSelfEmploymentIncomeDetailId__c" : null,  '  + 
-  '         "DCId__c" : 179120041,  '  + 
+  '         "DCId__c" : 20957074,  '  + 
   '         "DCEmploymentDetailId__c" : "1600227",  '  + 
   '         "SSP_Member__r" : {  '  + 
-  '           "IndividualId__c" : "999031234"  '  + 
-  '         },  '  + 
-  '         "RecordType" : {  '  + 
-  '           "Name" : "Income"  '  + 
-  '         }  '  + 
-  '       }, {  '  + 
-  '         "Is_Interface_Inserted__c" : false,  '  + 
-  '         "DCAssetId__c" : "Income,21184383,2297381",  '  + 
-  '         "EndDate__c" : null,  '  + 
-  '         "ExpenseAmount__c" : null,  '  + 
-  '         "IncomePayDetailHoursPerWeek__c" : null,  '  + 
-  '         "Tips__c" : null,  '  + 
-  '         "TotalGrossAmount__c" : "0.00",  '  + 
-  '         "IncomePayFrequency__c" : "MO",  '  + 
-  '         "IsUnempBenefitsRequiredToggle__c" : null,  '  + 
-  '         "IsSchoolDegreeRequiredToggle__c" : null,  '  + 
-  '         "ActivityStartDate__c" : null,  '  + 
-  '         "ActivityType__c" : null,  '  + 
-  '         "BusinessTitle__c" : null,  '  + 
-  '         "BusinessTypeCode__c" : null,  '  + 
-  '         "PrimaryPhoneExtension__c" : null,  '  + 
-  '         "PrimaryPhoneNumber__c" : null,  '  + 
-  '         "CountyCode__c" : null,  '  + 
-  '         "ZipCode5__c" : null,  '  + 
-  '         "ZipCode4__c" : null,  '  + 
-  '         "StateCode__c" : null,  '  + 
-  '         "City__c" : null,  '  + 
-  '         "AddressLine2__c" : null,  '  + 
-  '         "AddressLine1__c" : null,  '  + 
-  '         "EIN__c" : null,  '  + 
-  '         "EmployerName__c" : null,  '  + 
-  '         "IncomeSubtypeCode__c" : "CS",  '  + 
-  '         "IncomeTypeCode__c" : "SM",  '  + 
-  '         "DCUnearnedIncomeDetailId__c" : 2297381,  '  + 
-  '         "DCSelfEmploymentIncomeDetailId__c" : null,  '  + 
-  '         "DCId__c" : 21184383,  '  + 
-  '         "DCEmploymentDetailId__c" : null,  '  + 
-  '         "SSP_Member__r" : {  '  + 
-  '           "IndividualId__c" : "999031234"  '  + 
+  '           "IndividualId__c" : "999031236"  '  + 
   '         },  '  + 
   '         "RecordType" : {  '  + 
   '           "Name" : "Income"  '  + 
@@ -279,593 +180,456 @@ public  with sharing class SSP_DC_ReverseMockImpl_RAC  {
   '         "HasDividendsRoyaltiesToggle__c" : "N",  '  + 
   '         "HasSelfEmploymentIncomeToggle__c" : "N",  '  + 
   '         "HasEarnedIncomeFromEmploymentToggle__c" : "Y",  '  + 
-  '         "IndividualId__c" : "999031234"  '  + 
-  '       } ]  '  + 
+  '         "IndividualId__c" : "999031236"  '  + 
+  '       }]  '  + 
   '     },  '  + 
   '     "role" : "Citizen_Individual",  '  + 
   '     "miscelleanousParameter" : "",  '  + 
-  '     "applicationID" : "a2Rr00000007UPlEAM",  '  + 
+  '     "applicationID" : "a014W000013OmCNQA0",  '  + 
   '     "mode" : "Renewal",  '  + 
   '     "programCode" : "MA",  '  + 
-  '     "individualIds" : "999031234,100572986;102437355",  '  + 
-  '     "primaryApplicantIndividualId" : "999031234",  '  + 
-  '     "caseNumber" : "110945931",  '  + 
+  '     "individualIds" : "999031236;102437355",  '  + 
+  '     "primaryApplicantIndividualId" : "999031236",  '  + 
+  '     "caseNumber" : "110945932",  '  + 
   '     "viewName" : "IncomeInformation"  '  + 
-  '  }  ' ;
-  
-  
+  '  }  ' ;   
   public static final String sExpenseInformation =         
   '   {  '  + 
-  '     "AckResponse" : null,  '  + 
-  '     "Payload" : {  '  + 
-  '       "SSP_Member__c" : [ {  '  + 
-  '         "IsCoverageMonth3__c" : 0,  '  + 
-  '         "IsCoverageMonth2__c" : 0,  '  + 
-  '         "IsCoverageMonth1__c" : 0,  '  + 
-  '         "HasDependentCareExpenseToggle__c" : null,  '  + 
-  '         "HasHouseholdPaidChildSupportToggle__c" : null,  '  + 
-  '         "HasDisabledExpensesToggle__c" : null,  '  + 
-  '         "HasMedicalExpensePartDToggle__c" : null,  '  + 
-  '         "HasAlimonyExpenseToggle__c" : null,  '  + 
-  '         "HasTaxDeductionsExpenseToggle__c" : null,  '  + 
-  '         "HaveHigherEducationExpenseToggle__c" : null,  '  + 
-  '         "HasUtilityExpenseToggle__c" : null,  '  + 
-  '         "HasShelterExpenseToggle__c" : null,  '  + 
-  '         "HasMedicalBillsToggle__c" : null,  '  + 
-  '         "IndividualId__c" : "999031234"  '  + 
-  '       } ],  '  + 
-  '       "SSP_Asset__c" : [ {  '  + 
-  '         "DCAssetId__c" : "Expense,1291052",  '  + 
-  '         "DependentIndividual__r" : null,  '  + 
-  '         "DependentCareProvider__r" : null,  '  + 
-  '         "ChildName__c" : null,  '  + 
-  '         "MiscellaneousAmount__c" : null,  '  + 
-  '         "FeesAmount__c" : null,  '  + 
-  '         "BooksAmount__c" : null,  '  + 
-  '         "TuitionAmount__c" : null,  '  + 
-  '         "EndDate__c" : null,  '  + 
-  '         "StartDate__c" : null,  '  + 
-  '         "IsPaidToVendorToggle__c" : null,  '  + 
-  '         "IsNonHouseHoldMemberPayingExpenseToggle__c" : null,  '  + 
-  '         "ExpenseAmount__c" : 550.00,  '  + 
-  '         "ExpenseFrequencyCode__c" : "MO",  '  + 
-  '         "ExpenseSubType__c" : "RNT",  '  + 
-  '         "ExpenseTypeCode__c" : "SE",  '  + 
-  '         "DCId__c" : "12910521",  '  + 
-  '         "SSP_Member__r" : {  '  + 
-  '           "IndividualId__c" : "999031234"  '  + 
-  '         },  '  + 
-  '         "RecordType" : {  '  + 
-  '           "Name" : "Expense"  '  + 
-  '         }  '  + 
-  '       } ]  '  + 
-  '     },  '  + 
-  '     "role" : "Citizen_Individual",  '  + 
-  '     "miscelleanousParameter" : "",  '  + 
-  '     "applicationID" : "a2Rr00000007SYqEAM",  '  + 
-  '     "mode" : "Intake",  '  + 
-  '     "programCode" : "MA",  '  + 
-  '     "individualIds" : "999031234;101227474;101227475",  '  + 
-  '     "primaryApplicantIndividualId" : "999031234",  '  + 
-  '     "caseNumber" : "0",  '  + 
-  '     "viewName" : "ExpenseInformation"  '  + 
-  '  }  ' ;  
-  public static final String sAbsentParentInformation = 
-  '   {  '  + 
-  '     "AckResponse" : null,  '  + 
-  '     "Payload" : {  '  + 
-  '       "SSP_NonCustodialParent__c" : [ {  '  + 
-  '         "AbsentParentVerificationCode__c" : 0,  '  + 
-  '         "DCNonCustodialParentId__c" : "1101078",  '  + 
-  '         "IsParentUnknown__c" : 0,  '  + 
-  '         "SSN__c" : "987070126",  '  + 
-  '         "GenderCode__c" : "M",  '  + 
-  '         "DateOfBirth__c" : null,  '  + 
-  '         "SuffixCode__c" : null,  '  + 
-  '         "LastName__c" : "HLMJXTAY",  '  + 
-  '         "MiddleInitial__c" : "",  '  + 
-  '         "FirstName__c" : "CBENY",  '  + 
-  '         "SSP_Member__r" : null  '  + 
-  '       } ],  '  + 
-  '       "SSP_NoncustodialRelationship__c" : [ {  '  + 
-  '         "MedicalSupportComments__c" : null,  '  + 
-  '         "HasChildSupportToggle__c" : "Y",  '  + 
-  '         "GoodCauseCode__c" : null,  '  + 
-  '         "DCNonCustodialRelationshipId__c" : "1194472",  '  + 
-  '         "SSP_NonCustodialParent__r" : {  '  + 
-  '           "DCNonCustodialParentId__c" : "1101078"  '  + 
-  '         },  '  + 
-  '         "SSP_Member__r" : {  '  + 
-  '           "IndividualId__c" : "999031234"  '  + 
-  '         }  '  + 
-  '       }, {  '  + 
-  '         "MedicalSupportComments__c" : null,  '  + 
-  '         "HasChildSupportToggle__c" : "Y",  '  + 
-  '         "GoodCauseCode__c" : null,  '  + 
-  '         "DCNonCustodialRelationshipId__c" : "1194481",  '  + 
-  '         "SSP_NonCustodialParent__r" : {  '  + 
-  '           "DCNonCustodialParentId__c" : "1101078"  '  + 
-  '         },  '  + 
-  '         "SSP_Member__r" : {  '  + 
-  '           "IndividualId__c" : "999031234"  '  + 
-  '         }  '  + 
-  '       } ]  '  + 
-  '     },  '  + 
-  '     "role" : "Citizen_Individual",  '  + 
-  '     "miscelleanousParameter" : "",  '  + 
-  '     "applicationID" : "a2Rr00000007SYqEAM",  '  + 
-  '     "mode" : "Intake",  '  + 
-  '     "programCode" : "MA",  '  + 
-  '     "individualIds" : "999031234;101227474;101227475",  '  + 
-  '     "primaryApplicantIndividualId" : "999031234",  '  + 
-  '     "caseNumber" : "0",  '  + 
-  '     "viewName" : "AbsentParentInformation"  '  + 
-  '  }  ' ;  
-  
-  public static final String sHealthCoverageInformation =   
-  
-  '   {  '  + 
-  '     "viewName": "HealthCoverageInformation",  '  + 
-  '     "caseNumber": "0",  '  + 
-  '     "primaryApplicantIndividualId": "999031234",  '  + 
-  '     "individualIds": "999031234;101227474;101227475",  '  + 
-  '     "programCode": "MA",  '  + 
-  '     "mode": "Intake",  '  + 
-  '     "applicationID": "a2Rr00000007SYqEAM",  '  + 
-  '     "miscelleanousParameter": "",  '  + 
-  '     "role": "Citizen_Individual",  '  + 
-  '     "Payload": {  '  + 
-  '       "SSP_InsurancePolicy__c": [  '  + 
-  '         {  '  + 
-  '           "DCId__c": "10417961",  '  + 
-  '           "IsEnrolledInInsurance__c": 1,  '  + 
-  '           "TypeOfCoverageCode__c": "OT",  '  + 
-  '           "InsuranceCompanyName__c": "VYMP CDIUP LQJH QGIK",  '  + 
-  '           "PhysicalAddressLine1__c": "QVK UPBZRVID",  '  + 
-  '           "PhysicalCity__c": "QVK UPBZRVID",  '  + 
-  '           "PhysicalCountryCode__c": "",  '  + 
-  '           "PhysicalCountyCode__c": null,  '  + 
-  '           "PhysicalStateCode__c": null,  '  + 
-  '           "PhysicalZipCode4__c": "",  '  + 
-  '           "PhysicalZipCode5__c": "12791",  '  + 
-  '           "PhysicalAddressLine2__c": "",  '  + 
-  '           "PlanName__c": null,  '  + 
-  '           "InsurancePolicyNumber__c": "RKP172X58567",  '  + 
-  '           "InsuranceGroupNumber__c": "",  '  + 
-  '           "EnrollmentTierLevel__c": null,  '  + 
-  '           "IsHealthCareCovPolicyHolderOutSideCase__c": 0,  '  + 
-  '           "IsHealthCareCoverageApproved__c": 0,  '  + 
-  '           "DCEmploymentDetailId__c": null,  '  + 
-  '           "EmployerName__c": null  '  + 
-  '         }  '  + 
-  '       ],  '  + 
-  '       "SSP_InsuranceCoveredIndiv__c": [  '  + 
-  '         {  '  + 
-  '           "SSN__c": null,  '  + 
-  '           "InsuranceInternalPolicyHolder__c": null,  '  + 
-  '           "SSP_InsurancePolicy__r": {  '  + 
-  '             "DCId__c": "10417961"  '  + 
-  '           },  '  + 
-  '           "SSP_Member__r": null,  '  + 
-  '           "ExtPolicyHolderFirstName__c": "CBENY",  '  + 
-  '           "ExtPolicyHolderMiddleInitial__c": "",  '  + 
-  '           "ExtPolicyHolderLastName__c": "HLMJXTAY",  '  + 
-  '           "SuffixCode__c": null,  '  + 
-  '           "ExtPolicyHolderSSN__c": "637009697",  '  + 
-  '           "DCId__c": 2483821,  '  + 
-  '           "IsTobbacoConsumerToggle__c": null,  '  + 
-  '           "Gender__c": null,  '  + 
-  '           "DateOfBirth__c": null,  '  + 
-  '           "FirstName__c": null,  '  + 
-  '           "LastName__c": null,  '  + 
-  '           "MedicaidId__c": null,  '  + 
-  '           "RelationshipCode__c": null,  '  + 
-  '           "RecordType": {  '  + 
-  '             "Name": "Insurance External Policy Holder"  '  + 
-  '           },  '  + 
-  '           "DCInsuranceCoveredIndivId__c": "1041796,101227475,0",  '  + 
-  '           "ExtAddressLine1__c": "QVK UPBZRVID",  '  + 
-  '           "ExtAddressLine2__c": "",  '  + 
-  '           "ExtCity__c": "QVK UPBZRVID",  '  + 
-  '           "ExtStateCode__c": null,  '  + 
-  '           "ExtZipCode4__c": "",  '  + 
-  '           "ExtZipCode5__c": "12791",  '  + 
-  '           "ExtCountyCode__c": null  '  + 
-  '         }  '  + 
-  '       ],  '  + 
-  '       "SSP_HealthInsuranceFacilityType__c": [  '  + 
-  '         {  '  + 
-  '           "DCId__c": "7937361",  '  + 
-  '           "FacilityType__c": "HP",  '  + 
-  '           "CoverageStartDate__c": "2014-12-01",  '  + 
-  '           "CoverageEndDate__c": "2299-12-31",  '  + 
-  '           "SSP_InsuranceCoveredIndiv__r": {  '  + 
-  '             "DCInsuranceCoveredIndivId__c": "1041796,101227475,0"  '  + 
-  '           }  '  + 
-  '         }  '  + 
-  '       ],  '  + 
-  '       "SSP_Application__c": [  '  + 
-  '         {  '  + 
-  '           "EnrolledInHealthCareCoverageToggle__c": null,  '  + 
-  '           "NotEnrolledInHealthCareCoverageToggle__c": null  '  + 
-  '         }  '  + 
-  '       ]  '  + 
-  '     },  '  + 
-  '     "AckResponse": null  '  + 
+  '   "AckResponse" : null,  '  + 
+  '   "Payload" : {  '  + 
+  '   "SSP_Member__c" : [ {  '  + 
+  '   "IsCoverageMonth3__c" : 0,  '  + 
+  '   "IsCoverageMonth2__c" : 0,  '  + 
+  '   "IsCoverageMonth1__c" : 0,  '  + 
+  '   "HasDependentCareExpenseToggle__c" : "N",  '  + 
+  '   "HasHouseholdPaidChildSupportToggle__c" : "N",  '  + 
+  '   "HasDisabledExpensesToggle__c" : "N",  '  + 
+  '   "HasMedicalExpensePartDToggle__c" : "N",  '  + 
+  '   "HasAlimonyExpenseToggle__c" : "N",  '  + 
+  '   "HasTaxDeductionsExpenseToggle__c" : null,  '  + 
+  '   "HaveHigherEducationExpenseToggle__c" : "N",  '  + 
+  '   "HasUtilityExpenseToggle__c" : "N",  '  + 
+  '   "HasShelterExpenseToggle__c" : "Y",  '  + 
+  '   "HasMedicalBillsToggle__c" : null,  '  + 
+  '   "IndividualId__c" : "999031236"  '  + 
+  '   } ],  '  + 
+  '   "SSP_Asset__c" : [ {  '  + 
+  '   "DCAssetId__c" : "Expense,962281",  '  + 
+  '   "DependentIndividual__r" : null,  '  + 
+  '   "DependentCareProvider__r" : null,  '  + 
+  '   "ChildName__c" : null,  '  + 
+  '   "MiscellaneousAmount__c" : null,  '  + 
+  '   "FeesAmount__c" : null,  '  + 
+  '   "BooksAmount__c" : null,  '  + 
+  '   "TuitionAmount__c" : null,  '  + 
+  '   "EndDate__c" : null,  '  + 
+  '   "StartDate__c" : null,  '  + 
+  '   "IsPaidToVendorToggle__c" : null,  '  + 
+  '   "IsNonHouseHoldMemberPayingExpenseToggle__c" : null,  '  + 
+  '   "ExpenseAmount__c" : 500.00,  '  + 
+  '   "ExpenseFrequencyCode__c" : "MO",  '  + 
+  '   "ExpenseSubType__c" : "RNT",  '  + 
+  '   "ExpenseTypeCode__c" : "SE",  '  + 
+  '   "DCId__c" : "9622814",  '  + 
+  '   "SSP_Member__r" : {  '  + 
+  '   "IndividualId__c" : "999031236"  '  + 
+  '   },  '  + 
+  '   "RecordType" : {  '  + 
+  '   "Name" : "Expense"  '  + 
+  '   }  '  + 
+  '   } ]  '  + 
+  '   },  '  + 
+  '   "role" : "Citizen_Individual",  '  + 
+  '   "miscelleanousParameter" : "",  '  + 
+  '   "applicationID" : "a014W000013OmCNQA0",  '  + 
+  '   "mode" : "Renewal",  '  + 
+  '   "programCode" : "MA",  '  + 
+  '   "individualIds" : "999031236;102437355",  '  + 
+  '   "primaryApplicantIndividualId" : "999031236",  '  + 
+  '   "caseNumber" : "110945932",  '  + 
+  '   "viewName" : "ExpenseInformation"  '  + 
   '  }  ' ; 
-    
-  public static final String sHealthInformation =         '   {  '  + 
-                        '     "AckResponse" : null,  '  + 
-                        '     "Payload" : {  '  + 
-                        '       "SSP_ApplicationIndividual__c" : null,  '  + 
-                        '       "SSP_Application__c" : [ {  '  + 
-                        '         "HasPendingAccidentSettlementToggle__c" : "N"  '  + 
-                        '       } ],  '  + 
-                        '       "SSP_Benefits__c" : null,  '  + 
-                        '       "SSP_Member__c" : [ {  '  + 
-                        '         "DCRecoveryIllnessId__c" : null,  '  + 
-                        '         "DCEMCId__c" : null,  '  + 
-                        '         "IsReceivingCaretakerServicesToggle__c" : null,  '  + 
-                        '         "IsRequestingOrReceivingCISToggle__c" : null,  '  + 
-                        '         "BlindnessVerificationCode__c" : 0,  '  + 
-                        '         "UnableToBuyCookForSelfToggle__c" : null,  '  + 
-                        '         "DisabilityVerificationCode__c" : 0,  '  + 
-                        '         "TBQIndividualVerificationCode__c" : 0,  '  + 
-                        '         "DCMemberWorkReqExemptionId__c" : null,  '  + 
-                        '         "ReturnToWorkDate__c" : null,  '  + 
-                        '         "IsOnSickLeaveToggle__c" : null,  '  + 
-                        '         "RecoveryDate__c" : null,  '  + 
-                        '         "EmergencyEndDate__c" : null,  '  + 
-                        '         "EmergencyBeginDate__c" : null,  '  + 
-                        '         "BlindnessStatus__c" : null,  '  + 
-                        '         "BlindnessBenefitTypeCode__c" : null,  '  + 
-                        '         "BlindnessParentUnableToCareForChild__c" : null,  '  + 
-                        '         "BlindnessHasEndStageRenalDisease__c" : null,  '  + 
-                        '         "DisabilityStatus__c" : null,  '  + 
-                        '         "ParentUnableToCareForChildToggle__c" : null,  '  + 
-                        '         "HasEndStageRenalDiseaseToggle__c" : null,  '  + 
-                        '         "BenefitTypeCode__c" : null,  '  + 
-                        '         "IsToBeReferredToWicToggle__c" : null,  '  + 
-                        '         "PregnancyTerminationDate__c" : null,  '  + 
-                        '         "PregnancyDueDate__c" : null,  '  + 
-                        '         "NumberOfBirthsExpected__c" : null,  '  + 
-                        '         "IsPregnantToggle__c" : null,  '  + 
-                        '         "DCPregnancyId__c" : null,  '  + 
-                        '         "IsPregnantInLastThreeMonthsToggle__c" : null,  '  + 
-                        '         "IsReceivingMedicareBenefitToggle__c" : null,  '  + 
-                        '         "IsRecoveryFromIllnessOrInjuryToggle__c" : null,  '  + 
-                        '         "IsBlindToggle__c" : null,  '  + 
-                        '         "IsDisabledToggle__c" : null,  '  + 
-                        '         "HasEmergencyMedicalConditionToggle__c" : null,  '  + 
-                        '         "IndividualId__c" : "999031234"  '  + 
-                        '       }]  '  + 
-                        '     },  '  + 
-                        '     "role" : "Citizen_Individual",  '  + 
-                        '     "miscelleanousParameter" : "",  '  + 
-                        '     "applicationID" : "a2Rr00000007SYqEAM",  '  + 
-                        '     "mode" : "Intake",  '  + 
-                        '     "programCode" : "MA",  '  + 
-                        '     "individualIds" : "999031234;101227474;101227475",  '  + 
-                        '     "primaryApplicantIndividualId" : "999031234",  '  + 
-                        '     "caseNumber" : "0",  '  + 
-                        '     "viewName" : "HealthInformation"  '  + 
-                        '  }  ' ; 
   
 
-  public static final String sHouseHoldOtherInformation =    '   {  '  + 
-  '     "AckResponse" : null,  '  + 
-  '     "Payload" : {  '  + 
-  '       "SSP_Application__c" : [ {  '  + 
-  '         "ConvictionVerification__c" : 0,  '  + 
-  '         "HasConvictedCrimeToggle__c" : null,  '  + 
-  '         "HasConvictedOfTradingDrugsToggle__c" : null,  '  + 
-  '         "HasConvictedOfTradingFirearm__c" : null,  '  + 
-  '         "HasConvictedOfBuyingSellingToggle__c" : null,  '  + 
-  '         "HasGivenWrongInformationToggle__c" : null,  '  + 
-  '         "IsParticipatingCompltdTreatmentToggle__c" : null,  '  + 
-  '         "IsConvictedChemicallyDependentToggle__c" : null,  '  + 
-  '         "IsConvictedOfDrugFelonyToggle__c" : null,  '  + 
-  '         "IsFleeingFelonToggle__c" : null  '  + 
-  '       } ],  '  + 
-  '       "SSP_Attendance__c" : [ {  '  + 
-  '         "School_Name__c" : null,  '  + 
-  '         "PlacedThroughProgramCode__c" : null,  '  + 
-  '         "IsAssignedToInstitutionProgramToggle__c" : "N",  '  + 
-  '         "IsParticipatingInWorkStudyProgramToggle__c" : "N",  '  + 
-  '         "EnrollmentTypeCode__c" : "FT",  '  + 
-  '         "InstitutionSchoolName__r" : null,  '  + 
-  '         "ExpectedGraduationDate__c" : null,  '  + 
-  '         "InstitutionSchoolTypeCode__c" : "MS",  '  + 
-  '         "DCId__c" : 2440971,  '  + 
-  '         "SSP_Member__r" : {  '  + 
-  '           "IndividualId__c" : "999031234"  '  + 
-  '         }  '  + 
-  '       }, {  '  + 
-  '         "School_Name__c" : null,  '  + 
-  '         "PlacedThroughProgramCode__c" : null,  '  + 
-  '         "IsAssignedToInstitutionProgramToggle__c" : "N",  '  + 
-  '         "IsParticipatingInWorkStudyProgramToggle__c" : "N",  '  + 
-  '         "EnrollmentTypeCode__c" : "FT",  '  + 
-  '         "InstitutionSchoolName__r" : null,  '  + 
-  '         "ExpectedGraduationDate__c" : null,  '  + 
-  '         "InstitutionSchoolTypeCode__c" : "MS",  '  + 
-  '         "DCId__c" : 2440961,  '  + 
-  '         "SSP_Member__r" : {  '  + 
-  '           "IndividualId__c" : "999031234"  '  + 
-  '         }  '  + 
-  '       } ],  '  + 
-  '       "SSP_Benefits__c" : [ {  '  + 
-  '         "DCBenefitsId__c" : "EntitledBenefit,327491",  '  + 
-  '         "BenefitTypeCode__c" : "UI",  '  + 
-  '         "BenefitDenialDate__c" : null,  '  + 
-  '         "BenefitDenialReason__c" : null,  '  + 
-  '         "StatusofApplication__c" : "A",  '  + 
-  '         "BenefitApplicationDate__c" : "2019-04-01",  '  + 
-  '         "DCId__c" : 327491,  '  + 
-  '         "SSP_Member__r" : {  '  + 
-  '           "IndividualId__c" : "999031234"  '  + 
-  '         },  '  + 
-  '         "RecordType" : {  '  + 
-  '           "Name" : "EntitledBenefit"  '  + 
-  '         }  '  + 
-  '       } ],  '  + 
-  '       "SSP_Member__c" : [ {  '  + 
-  '         "DCLAHospitalizationId__c" : null,  '  + 
-  '         "HospitalizationEndDate__c" : null,  '  + 
-  '         "HospitalizationStartDate__c" : null,  '  + 
-  '         "IsFosterCareToggle__c" : null,  '  + 
-  '         "AgeAtFosterCare__c" : null,  '  + 
-  '         "IsStateMedicaidprogramCode__c" : "N",  '  + 
-  '         "FosterStateCode__c" : null,  '  + 
-  '         "ReceivesEntitledIncomeToggle__c" : "Y",  '  + 
-  '         "ReceivesSSIBenefitsToggle__c" : null,  '  + 
-  '         "IsMigrantOrSeasonalFarmWorkerToggle__c" : "N",  '  + 
-  '         "IsCurrentlyEnrolledInSchoolToggle__c" : "Y",  '  + 
-  '         "TemporarilyLivesElsewhereToggle__c" : null,  '  + 
-  '         "HasHouseholdHomeless__c" : null,  '  + 
-  '         "ReceiveInHouseAssistanceToggle__c" : "Y",  '  + 
-  '         "InHomeCareType__c" : "NA",  '  + 
-  '         "ProviderName__c" : null,  '  + 
-  '         "ProviderId__c" : null,  '  + 
-  '         "OrganizationName__r" : null,  '  + 
-  '         "ExpectedReturnDate__c" : null,  '  + 
-  '         "IsWaitingForDecisionToggle__c" : null,  '  + 
-  '         "IncarcerationBeginDate__c" : "2014-04-01",  '  + 
-  '         "HasRecievedHalfMealsFrmInstToggle__c" : null,  '  + 
-  '         "LaTypeCode__c" : "IH",  '  + 
-  '         "DCMemberLivingArrangementId__c" : 992094,  '  + 
-  '         "IndividualId__c" : "999031234"  '  + 
-  '       } ]  '  + 
-  '     },  '  + 
-  '     "role" : "Citizen_Individual",  '  + 
-  '     "miscelleanousParameter" : "",  '  + 
-  '     "applicationID" : "a2Rr00000007SYqEAM",  '  + 
-  '     "mode" : "Intake",  '  + 
-  '     "programCode" : "MA",  '  + 
-  '     "individualIds" : "999031234;101227474;101227475",  '  + 
-  '     "primaryApplicantIndividualId" : "999031234",  '  + 
-  '     "caseNumber" : "0",  '  + 
-  '     "viewName" : "HouseHoldOtherInformation"  '  + 
-  '  }  ' ; 
+  public static final String sAbsentParentInformation = 
+  '   {  '  + 
+  '   "AckResponse" : null,  '  + 
+  '   "Payload" : {  '  + 
+  '   "SSP_NonCustodialParent__c" : null,  '  + 
+  '   "SSP_NoncustodialRelationship__c" : null  '  + 
+  '   },  '  + 
+  '   "role" : "Citizen_Individual",  '  + 
+  '   "miscelleanousParameter" : "",  '  + 
+  '   "applicationID" : "a014W000013OmCNQA0",  '  + 
+  '   "mode" : "Renewal",  '  + 
+  '   "programCode" : "MA",  '  + 
+  '   "individualIds" : "999031236;102437355",  '  + 
+  '   "primaryApplicantIndividualId" : "999031236",  '  + 
+  '   "caseNumber" : "110945932",  '  + 
+  '   "viewName" : "AbsentParentInformation"  '  + 
+  '  }  ' ;   
+  
+  public static final String sHealthCoverageInformation =   
+  '   {  '  + 
+  '   "AckResponse" : null,  '  + 
+  '   "Payload" : {  '  + 
+  '   "SSP_Application__c" : [ {  '  + 
+  '   "NotEnrolledInHealthCareCoverageToggle__c" : "N",  '  + 
+  '   "EnrolledInHealthCareCoverageToggle__c" : "N"  '  + 
+  '   } ],  '  + 
+  '   "SSP_HealthInsuranceFacilityType__c" : null,  '  + 
+  '   "SSP_Member__c" : null,  '  + 
+  '   "SSP_InsuranceCoveredIndiv__c" : null,  '  + 
+  '   "SSP_InsurancePolicy__c" : null  '  + 
+  '   },  '  + 
+  '   "role" : "Citizen_Individual",  '  + 
+  '   "miscelleanousParameter" : "",  '  + 
+  '   "applicationID" : "a014W000013OmCNQA0",  '  + 
+  '   "mode" : "Renewal",  '  + 
+  '   "programCode" : "MA",  '  + 
+  '   "individualIds" : "999031236;102437355",  '  + 
+  '   "primaryApplicantIndividualId" : "999031236",  '  + 
+  '   "caseNumber" : "110945932",  '  + 
+  '   "viewName" : "HealthCoverageInformation"  '  + 
+  '   }  '  + 
+  '    ' ;
+    
+  public static final String sHealthInformation =         
+  '   {  '  + 
+ '   "AckResponse" : null,  '  + 
+ '   "Payload" : {  '  + 
+ '   "SSP_ApplicationIndividual__c" : null,  '  + 
+ '   "SSP_Application__c" : [ {  '  + 
+ '   "HasPendingAccidentSettlementToggle__c" : null  '  + 
+ '   } ],  '  + 
+ '   "SSP_Benefits__c" : null,  '  + 
+ '   "SSP_Member__c" : [ {  '  + 
+ '   "DCRecoveryIllnessId__c" : null,  '  + 
+ '   "DCEMCId__c" : null,  '  + 
+ '   "IsReceivingCaretakerServicesToggle__c" : null,  '  + 
+ '   "IsRequestingOrReceivingCISToggle__c" : null,  '  + 
+ '   "BlindnessVerificationCode__c" : 0,  '  + 
+ '   "UnableToBuyCookForSelfToggle__c" : "N",  '  + 
+ '   "DisabilityVerificationCode__c" : 0,  '  + 
+ '   "TBQIndividualVerificationCode__c" : 0,  '  + 
+ '   "DCMemberWorkReqExemptionId__c" : null,  '  + 
+ '   "ReturnToWorkDate__c" : null,  '  + 
+ '   "IsOnSickLeaveToggle__c" : null,  '  + 
+ '   "RecoveryDate__c" : null,  '  + 
+ '   "EmergencyEndDate__c" : null,  '  + 
+ '   "EmergencyBeginDate__c" : null,  '  + 
+ '   "BlindnessStatus__c" : null,  '  + 
+ '   "BlindnessBenefitTypeCode__c" : null,  '  + 
+ '   "BlindnessParentUnableToCareForChild__c" : null,  '  + 
+ '   "BlindnessHasEndStageRenalDisease__c" : null,  '  + 
+ '   "DisabilityStatus__c" : null,  '  + 
+ '   "ParentUnableToCareForChildToggle__c" : null,  '  + 
+ '   "HasEndStageRenalDiseaseToggle__c" : null,  '  + 
+ '   "BenefitTypeCode__c" : null,  '  + 
+ '   "IsToBeReferredToWicToggle__c" : null,  '  + 
+ '   "PregnancyTerminationDate__c" : null,  '  + 
+ '   "PregnancyDueDate__c" : null,  '  + 
+ '   "NumberOfBirthsExpected__c" : null,  '  + 
+ '   "IsPregnantToggle__c" : null,  '  + 
+ '   "DCPregnancyId__c" : null,  '  + 
+ '   "IsPregnantInLastThreeMonthsToggle__c" : "N",  '  + 
+ '   "IsReceivingMedicareBenefitToggle__c" : "N",  '  + 
+ '   "IsRecoveryFromIllnessOrInjuryToggle__c" : null,  '  + 
+ '   "IsBlindToggle__c" : null,  '  + 
+ '   "IsDisabledToggle__c" : null,  '  + 
+ '   "HasEmergencyMedicalConditionToggle__c" : null,  '  + 
+ '   "IndividualId__c" : "999031236"  '  + 
+ '   } ]  '  + 
+ '   },  '  + 
+ '   "role" : "Citizen_Individual",  '  + 
+ '   "miscelleanousParameter" : "",  '  + 
+ '   "applicationID" : "a014W000013OmCNQA0",  '  + 
+ '   "mode" : "Renewal",  '  + 
+ '   "programCode" : "MA",  '  + 
+ '   "individualIds" : "999031236;102437355",  '  + 
+ '   "primaryApplicantIndividualId" : "999031236",  '  + 
+ '   "caseNumber" : "110945932",  '  + 
+ '   "viewName" : "HealthInformation"  '  + 
+ '   }  '  + 
+ '    ' ;   
+  
+
+  public static final String sHouseHoldOtherInformation =    
+  '   {  '  + 
+  '   "AckResponse" : null,  '  + 
+  '   "Payload" : {  '  + 
+  '   "SSP_Application__c" : [ {  '  + 
+  '   "ConvictionVerification__c" : 0,  '  + 
+  '   "HasConvictedCrimeToggle__c" : "N",  '  + 
+  '   "HasConvictedOfTradingDrugsToggle__c" : null,  '  + 
+  '   "HasConvictedOfTradingFirearm__c" : null,  '  + 
+  '   "HasConvictedOfBuyingSellingToggle__c" : null,  '  + 
+  '   "HasGivenWrongInformationToggle__c" : null,  '  + 
+  '   "IsParticipatingCompltdTreatmentToggle__c" : null,  '  + 
+  '   "IsConvictedChemicallyDependentToggle__c" : null,  '  + 
+  '   "IsConvictedOfDrugFelonyToggle__c" : null,  '  + 
+  '   "IsFleeingFelonToggle__c" : null  '  + 
+  '   } ],  '  + 
+  '   "SSP_Attendance__c" : null,  '  + 
+  '   "SSP_Benefits__c" : [ {  '  + 
+  '   "DCBenefitsId__c" : "EntitledBenefit,93176",  '  + 
+  '   "BenefitTypeCode__c" : "BL",  '  + 
+  '   "BenefitDenialDate__c" : null,  '  + 
+  '   "BenefitDenialReason__c" : null,  '  + 
+  '   "StatusofApplication__c" : "A",  '  + 
+  '   "BenefitApplicationDate__c" : "2020-11-01",  '  + 
+  '   "DCId__c" : 931764,  '  + 
+  '   "SSP_Member__r" : {  '  + 
+  '   "IndividualId__c" : "999031236"  '  + 
+  '   },  '  + 
+  '   "RecordType" : {  '  + 
+  '   "Name" : "EntitledBenefit"  '  + 
+  '   }  '  + 
+  '   } ],  '  + 
+  '   "SSP_Member__c" : [ {  '  + 
+  '   "DCLAHospitalizationId__c" : null,  '  + 
+  '   "HospitalizationEndDate__c" : null,  '  + 
+  '   "HospitalizationStartDate__c" : null,  '  + 
+  '   "IsFosterCareToggle__c" : "N",  '  + 
+  '   "AgeAtFosterCare__c" : null,  '  + 
+  '   "IsStateMedicaidprogramCode__c" : "N",  '  + 
+  '   "FosterStateCode__c" : null,  '  + 
+  '   "ReceivesEntitledIncomeToggle__c" : "Y",  '  + 
+  '   "ReceivesSSIBenefitsToggle__c" : "N",  '  + 
+  '   "IsMigrantOrSeasonalFarmWorkerToggle__c" : "N",  '  + 
+  '   "IsCurrentlyEnrolledInSchoolToggle__c" : "N",  '  + 
+  '   "TemporarilyLivesElsewhereToggle__c" : null,  '  + 
+  '   "HasHouseholdHomeless__c" : null,  '  + 
+  '   "ReceiveInHouseAssistanceToggle__c" : "Y",  '  + 
+  '   "InHomeCareType__c" : "NA",  '  + 
+  '   "ProviderName__c" : null,  '  + 
+  '   "ProviderId__c" : null,  '  + 
+  '   "OrganizationName__r" : null,  '  + 
+  '   "ExpectedReturnDate__c" : null,  '  + 
+  '   "IsWaitingForDecisionToggle__c" : null,  '  + 
+  '   "IncarcerationBeginDate__c" : "2016-02-01",  '  + 
+  '   "HasRecievedHalfMealsFrmInstToggle__c" : null,  '  + 
+  '   "LaTypeCode__c" : "IH",  '  + 
+  '   "DCMemberLivingArrangementId__c" : 2309828,  '  + 
+  '   "IndividualId__c" : "999031236"  '  + 
+  '   }]  '  + 
+  '   },  '  + 
+  '   "role" : "Citizen_Individual",  '  + 
+  '   "miscelleanousParameter" : "",  '  + 
+  '   "applicationID" : "a014W000013OmCNQA0",  '  + 
+  '   "mode" : "Renewal",  '  + 
+  '   "programCode" : "MA",  '  + 
+  '   "individualIds" : "999031236;102437355",  '  + 
+  '   "primaryApplicantIndividualId" : "999031236",  '  + 
+  '   "caseNumber" : "110945932",  '  + 
+  '   "viewName" : "HouseHoldOtherInformation"  '  + 
+  '  }  ' ;  
   
    
   public static final String sMemberInformation =   
-  
   '   {  '  + 
-  '     "AckResponse" : null,  '  + 
-  '     "Payload" : {  '  + 
-  '       "SSP_AlienSponsor__c" : null,  '  + 
-  '       "SSP_Application__c" : null,  '  + 
-  '       "SSP_Member__c" : [ {  '  + 
-  '         "HasParentOrSiblingNextOutHousehold__c" : null,  '  + 
-  '         "HasParentOrSiblingCurrentOutHousehold__c" : null,  '  + 
-  '         "CanBuyCookWithHOH__c" : 0,  '  + 
-  '         "ExternalAlienSponsor__r" : null,  '  + 
-  '         "InternalAlienSponsor__r" : null,  '  + 
-  '         "DCInternalAlienSponsorId__c" : null,  '  + 
-  '         "SponsoredByOrganization__c" : null,  '  + 
-  '         "DCAlienSponsorRelationship__c" : null,  '  + 
-  '         "TaxFilerMemberNext__r" : null,  '  + 
-  '         "TaxFilerStatusNextYear__c" : null,  '  + 
-  '         "TaxFilerMemberCurrent__c" : null,  '  + 
-  '         "TaxFilerStatusCurrentYear__c" : "DM",  '  + 
-  '         "MailingAddressLine2__c" : null,  '  + 
-  '         "MailingZipCode5__c" : "83705",  '  + 
-  '         "MailingZipCode4__c" : "9256",  '  + 
-  '         "MailingStateCode__c" : "KY",  '  + 
-  '         "MailingCountyCode__c" : "011",  '  + 
-  '         "MailingCity__c" : "ELFBJSUXVP",  '  + 
-  '         "MailingAddressLine1__c" : "527 J 9QG UT",  '  + 
-  '         "DCMailingAddressId__c" : 13717682,  '  + 
-  '         "HasDifferentMailingAddressToggle__c" : null,  '  + 
-  '         "PhysicalAddressLine2__c" : null,  '  + 
-  '         "PhysicalZipCode5__c" : "83705",  '  + 
-  '         "PhysicalZipCode4__c" : "9256",  '  + 
-  '         "PhysicalStateCode__c" : "KY",  '  + 
-  '         "PhysicalCountyCode__c" : "011",  '  + 
-  '         "PhysicalCity__c" : "ELFBJSUXVP",  '  + 
-  '         "PhysicalAddressLine1__c" : "527 J 9QG UT",  '  + 
-  '         "IsFixedAddressToggle__c" : "Y",  '  + 
-  '         "DCPhysicalAddressId__c" : "29553502",  '  + 
-  '         "PreferredWrittenLanguageCode__c" : "1",  '  + 
-  '         "PreferredSpokenLanguageCode__c" : "1",  '  + 
-  '         "PreferredNotificationMethodCode__c" : "P",  '  + 
-  '         "SecondaryPhoneExtension__c" : "1234",  '  + 
-  '         "SecondaryPhoneNumber__c" : "1234567890",  '  + 
-  '         "IsPrimaryTextPreferred__c" : "N",  '  + 
-  '         "PrimaryPhoneTypeCode__c" : "CE",  '  + 
-  '         "PrimaryPhoneExtension__c" : "1234",  '  + 
-  '         "PrimaryPhoneNumber__c" : "8134567890",  '  + 
-  '         "Email__c" : "Optim@Script.com",  '  + 
-  '         "DCId__c" : 14609921,  '  + 
-  '         "IsEligibleForIndianHealthServicesToggle__c" : null,  '  + 
-  '         "IsEligibleForIHFlagToggle__c" : null,  '  + 
-  '         "IndianTribeState__c" : null,  '  + 
-  '         "IndianTribeCode__c" : null,  '  + 
-  '         "IsFederalRecognizedIndianTribeToggle__c" : null,  '  + 
-  '         "HighestEducationGraduatedDate__c" : null,  '  + 
-  '         "HighestEducationLevelCode__c" : "8G",  '  + 
-  '         "DCMemberHighestEducationLevelDetailsId__c" : 976133,  '  + 
-  '         "ImmigrationDateOfBirth__c" : null,  '  + 
-  '         "ImmigrationSuffix__c" : null,  '  + 
-  '         "ImmigrationLastName__c" : null,  '  + 
-  '         "ImmigrationMiddleName__c" : null,  '  + 
-  '         "ImmigrationFirstName__c" : null,  '  + 
-  '         "IsImmigrationDetailsMatch__c" : 0,  '  + 
-  '         "PassportNumber__c" : null,  '  + 
-  '         "NaturalizationNumber__c" : null,  '  + 
-  '         "I94Number__c" : null,  '  + 
-  '         "DocumentOtherDescription__c" : null,  '  + 
-  '         "DocumentExpiryDate__c" : null,  '  + 
-  '         "CountryOfIssuanceCode__c" : null,  '  + 
-  '         "CitizenshipNumber__c" : null,  '  + 
-  '         "AlienNumber__c" : null,  '  + 
-  '         "ReceiptNumber__c" : null,  '  + 
-  '         "SevisId__c" : null,  '  + 
-  '         "ImmigrationDocumentTypeCode__c" : null,  '  + 
-  '         "AlienTypeCode__c" : null,  '  + 
-  '         "HasLivedInUsToggle__c" : null,  '  + 
-  '         "IsMilitaryMemberToggle__c" : "N",  '  + 
-  '         "HasLegalImmigrationStatusToggle__c" : null,  '  + 
-  '         "HasAlienSponsorToggle__c" : null,  '  + 
-  '         "IndividualId__c" : "999031234"  '  + 
-  '       } ]  '  + 
-  '     },  '  + 
-  '     "role" : "Citizen_Individual",  '  + 
-  '     "miscelleanousParameter" : "",  '  + 
-  '     "applicationID" : "a2Rr00000007SYqEAM",  '  + 
-  '     "mode" : "Intake",  '  + 
-  '     "programCode" : "MA",  '  + 
-  '     "individualIds" : "999031234;101227474;101227475",  '  + 
-  '     "primaryApplicantIndividualId" : "101272217",  '  + 
-  '     "caseNumber" : "0",  '  + 
-  '     "viewName" : "MemberInformation"  '  + 
-  '  }  ' ;  
+  '   "AckResponse" : null,  '  + 
+  '   "Payload" : {  '  + 
+  '   "SSP_AlienSponsor__c" : null,  '  + 
+  '   "SSP_Application__c" : [ {  '  + 
+  '   "HasShelterExpExceedIncomeResourcesToggle__c" : "N",  '  + 
+  '   "IsDestituteFarmOrMigrantHouseholdToggle__c" : "N",  '  + 
+  '   "HouseholdTotalMonthlyGrossIncAmount__c" : 0.00,  '  + 
+  '   "HouseholdTotalMonthlyCashSavingAmount__c" : 0.00,  '  + 
+  '   "DCCaseNumber__c" : 110945932,  '  + 
+  '   "RecordType" : {  '  + 
+  '   "Name" : "Case"  '  + 
+  '   }  '  + 
+  '   } ],  '  + 
+  '   "SSP_Member__c" : [ {  '  + 
+  '   "HasParentOrSiblingNextOutHousehold__c" : null,  '  + 
+  '   "HasParentOrSiblingCurrentOutHousehold__c" : null,  '  + 
+  '   "CanBuyCookWithHOH__c" : 1,  '  + 
+  '   "ExternalAlienSponsor__r" : null,  '  + 
+  '   "InternalAlienSponsor__r" : null,  '  + 
+  '   "DCInternalAlienSponsorId__c" : null,  '  + 
+  '   "SponsoredByOrganization__c" : null,  '  + 
+  '   "DCAlienSponsorRelationship__c" : null,  '  + 
+  '   "TaxFilerMemberNext__r" : null,  '  + 
+  '   "TaxFilerStatusNextYear__c" : "HH",  '  + 
+  '   "TaxFilerMemberCurrent__r" : null,  '  + 
+  '   "TaxFilerStatusCurrentYear__c" : "HH",  '  + 
+  '   "MailingAddressLine2__c" : "QTI 3",  '  + 
+  '   "MailingZipCode5__c" : "02700",  '  + 
+  '   "MailingZipCode4__c" : "2998",  '  + 
+  '   "MailingStateCode__c" : "KY",  '  + 
+  '   "MailingCountyCode__c" : "034",  '  + 
+  '   "MailingCity__c" : "SNFCWYJGH",  '  + 
+  '   "MailingAddressLine1__c" : "2576 V FDFPLZWFD",  '  + 
+  '   "DCMailingAddressId__c" : 35584617,  '  + 
+  '   "HasDifferentMailingAddressToggle__c" : null,  '  + 
+  '   "PhysicalAddressLine2__c" : "QTI 3",  '  + 
+  '   "PhysicalZipCode5__c" : "02700",  '  + 
+  '   "PhysicalZipCode4__c" : "2998",  '  + 
+  '   "PhysicalStateCode__c" : "KY",  '  + 
+  '   "PhysicalCountyCode__c" : "034",  '  + 
+  '   "PhysicalCity__c" : "SNFCWYJGH",  '  + 
+  '   "PhysicalAddressLine1__c" : "2576 V FDFPLZWFD",  '  + 
+  '   "IsFixedAddressToggle__c" : "Y",  '  + 
+  '   "DCPhysicalAddressId__c" : "35584616",  '  + 
+  '   "PreferredWrittenLanguageCode__c" : "1",  '  + 
+  '   "PreferredSpokenLanguageCode__c" : "1",  '  + 
+  '   "PreferredNotificationMethodCode__c" : "P",  '  + 
+  '   "SecondaryPhoneExtension__c" : "1234",  '  + 
+  '   "SecondaryPhoneNumber__c" : "9937299408",  '  + 
+  '   "IsPrimaryTextPreferred__c" : "Y",  '  + 
+  '   "PrimaryPhoneTypeCode__c" : "CE",  '  + 
+  '   "PrimaryPhoneExtension__c" : "",  '  + 
+  '   "PrimaryPhoneNumber__c" : "8134567890",  '  + 
+  '   "Email__c" : "optim@script.com",  '  + 
+  '   "DCId__c" : 32804054,  '  + 
+  '   "IsEligibleForIndianHealthServicesToggle__c" : null,  '  + 
+  '   "IsEligibleForIHFlagToggle__c" : null,  '  + 
+  '   "IndianTribeState__c" : null,  '  + 
+  '   "IndianTribeCode__c" : null,  '  + 
+  '   "IsFederalRecognizedIndianTribeToggle__c" : null,  '  + 
+  '   "HighestEducationGraduatedDate__c" : null,  '  + 
+  '   "HighestEducationLevelCode__c" : "11G",  '  + 
+  '   "DCMemberHighestEducationLevelDetailsId__c" : 115123,  '  + 
+  '   "ImmigrationDateOfBirth__c" : null,  '  + 
+  '   "ImmigrationSuffix__c" : null,  '  + 
+  '   "ImmigrationLastName__c" : null,  '  + 
+  '   "ImmigrationMiddleName__c" : null,  '  + 
+  '   "ImmigrationFirstName__c" : null,  '  + 
+  '   "IsImmigrationDetailsMatch__c" : 0,  '  + 
+  '   "PassportNumber__c" : null,  '  + 
+  '   "NaturalizationNumber__c" : null,  '  + 
+  '   "I94Number__c" : null,  '  + 
+  '   "DocumentOtherDescription__c" : null,  '  + 
+  '   "DocumentExpiryDate__c" : null,  '  + 
+  '   "CountryOfIssuanceCode__c" : null,  '  + 
+  '   "CitizenshipNumber__c" : null,  '  + 
+  '   "AlienNumber__c" : null,  '  + 
+  '   "ReceiptNumber__c" : null,  '  + 
+  '   "SevisId__c" : null,  '  + 
+  '   "ImmigrationDocumentTypeCode__c" : null,  '  + 
+  '   "AlienTypeCode__c" : null,  '  + 
+  '   "HasLivedInUsToggle__c" : null,  '  + 
+  '   "IsMilitaryMemberToggle__c" : "N",  '  + 
+  '   "HasLegalImmigrationStatusToggle__c" : null,  '  + 
+  '   "HasAlienSponsorToggle__c" : null,  '  + 
+  '   "IndividualId__c" : "999031236"  '  + 
+  '   } ]  '  + 
+  '   },  '  + 
+  '   "role" : "Citizen_Individual",  '  + 
+  '   "miscelleanousParameter" : "",  '  + 
+  '   "applicationID" : "a014W000013OmCNQA0",  '  + 
+  '   "mode" : "Renewal",  '  + 
+  '   "programCode" : "MA",  '  + 
+  '   "individualIds" : "999031236;102437355",  '  + 
+  '   "primaryApplicantIndividualId" : "999031236",  '  + 
+  '   "caseNumber" : "110945932",  '  + 
+  '   "viewName" : "MemberInformation"  '  + 
+  '   }  '  + 
+  '    ' ;   
+  
 
   
   
-  public static final String sRelationshipInformation =      '   {  '  + 
-  '     "AckResponse" : null,  '  + 
-  '     "Payload" : {  '  + 
-  '       "SSP_Relationship__c" : [ {  '  + 
-  '         "IntendToPursueLegalCustodyToggle__c" : "N",  '  + 
-  '         "IsActingParentToggle__c" : "N",  '  + 
-  '         "IsCareTakerToggle__c" : "N",  '  + 
-  '         "RelationshipType__c" : "MO",  '  + 
-  '         "DCId__c" : "23273801",  '  + 
-  '         "SSP_MemberRelatedTo__r" : {  '  + 
-  '           "IndividualId__c" : "999031234"  '  + 
-  '         },  '  + 
-  '         "SSP_Member__r" : {  '  + 
-  '           "IndividualId__c" : "999031234"  '  + 
-  '         }  '  + 
-  '       }, {  '  + 
-  '         "IntendToPursueLegalCustodyToggle__c" : "N",  '  + 
-  '         "IsActingParentToggle__c" : "N",  '  + 
-  '         "IsCareTakerToggle__c" : "N",  '  + 
-  '         "RelationshipType__c" : "MO",  '  + 
-  '         "DCId__c" : "2327381",  '  + 
-  '         "SSP_MemberRelatedTo__r" : {  '  + 
-  '           "IndividualId__c" : "999031234"  '  + 
-  '         },  '  + 
-  '         "SSP_Member__r" : {  '  + 
-  '           "IndividualId__c" : "999031234"  '  + 
-  '         }  '  + 
-  '       }, {  '  + 
-  '         "IntendToPursueLegalCustodyToggle__c" : "N",  '  + 
-  '         "IsActingParentToggle__c" : "N",  '  + 
-  '         "IsCareTakerToggle__c" : "N",  '  + 
-  '         "RelationshipType__c" : "SO",  '  + 
-  '         "DCId__c" : "23273831",  '  + 
-  '         "SSP_MemberRelatedTo__r" : {  '  + 
-  '           "IndividualId__c" : "999031234"  '  + 
-  '         },  '  + 
-  '         "SSP_Member__r" : {  '  + 
-  '           "IndividualId__c" : "999031234"  '  + 
-  '         }  '  + 
-  '       }, {  '  + 
-  '         "IntendToPursueLegalCustodyToggle__c" : "N",  '  + 
-  '         "IsActingParentToggle__c" : "N",  '  + 
-  '         "IsCareTakerToggle__c" : "N",  '  + 
-  '         "RelationshipType__c" : "DA",  '  + 
-  '         "DCId__c" : "23273851",  '  + 
-  '         "SSP_MemberRelatedTo__r" : {  '  + 
-  '           "IndividualId__c" : "999031234"  '  + 
-  '         },  '  + 
-  '         "SSP_Member__r" : {  '  + 
-  '           "IndividualId__c" : "999031234"  '  + 
-  '         }  '  + 
-  '       }, {  '  + 
-  '         "IntendToPursueLegalCustodyToggle__c" : "N",  '  + 
-  '         "IsActingParentToggle__c" : "N",  '  + 
-  '         "IsCareTakerToggle__c" : "N",  '  + 
-  '         "RelationshipType__c" : "SI",  '  + 
-  '         "DCId__c" : "25959201",  '  + 
-  '         "SSP_MemberRelatedTo__r" : {  '  + 
-  '           "IndividualId__c" : "999031234"  '  + 
-  '         },  '  + 
-  '         "SSP_Member__r" : {  '  + 
-  '           "IndividualId__c" : "999031234"  '  + 
-  '         }  '  + 
-  '       }, {  '  + 
-  '         "IntendToPursueLegalCustodyToggle__c" : "N",  '  + 
-  '         "IsActingParentToggle__c" : "N",  '  + 
-  '         "IsCareTakerToggle__c" : "N",  '  + 
-  '         "RelationshipType__c" : "BR",  '  + 
-  '         "DCId__c" : "2595921",  '  + 
-  '         "SSP_MemberRelatedTo__r" : {  '  + 
-  '           "IndividualId__c" : "999031234"  '  + 
-  '         },  '  + 
-  '         "SSP_Member__r" : {  '  + 
-  '           "IndividualId__c" : "999031234"  '  + 
-  '         }  '  + 
-  '       } ]  '  + 
-  '     },  '  + 
-  '     "role" : "Citizen_Individual",  '  + 
-  '     "miscelleanousParameter" : "",  '  + 
-  '     "applicationID" : "a2Rr00000007SYqEAM",  '  + 
-  '     "mode" : "Intake",  '  + 
-  '     "programCode" : "MA",  '  + 
-  '     "individualIds" : "999031234;101227474;101227475",  '  + 
-  '     "primaryApplicantIndividualId" : "999031234",  '  + 
-  '     "caseNumber" : "0",  '  + 
-  '     "viewName" : "RelationshipInformation"  '  + 
-  '   }  '  + 
-  '    ' ; 
+  public static final String sRelationshipInformation =      
+  '   {  '  + 
+ '   "AckResponse" : null,  '  + 
+ '   "Payload" : {  '  + 
+ '   "SSP_Relationship__c" : [ {  '  + 
+ '   "IntendToPursueLegalCustodyToggle__c" : "N",  '  + 
+ '   "IsActingParentToggle__c" : "N",  '  + 
+ '   "IsCareTakerToggle__c" : "N",  '  + 
+ '   "RelationshipType__c" : "GS",  '  + 
+ '   "DCId__c" : "79579804",  '  + 
+ '   "SSP_MemberRelatedTo__r" : {  '  + 
+ '   "IndividualId__c" : "999031236"  '  + 
+ '   },  '  + 
+ '   "SSP_Member__r" : {  '  + 
+ '   "IndividualId__c" : "999031236"  '  + 
+ '   }  '  + 
+ '   }, {  '  + 
+ '   "IntendToPursueLegalCustodyToggle__c" : "N",  '  + 
+ '   "IsActingParentToggle__c" : "N",  '  + 
+ '   "IsCareTakerToggle__c" : "N",  '  + 
+ '   "RelationshipType__c" : "GM",  '  + 
+ '   "DCId__c" : "79579814",  '  + 
+ '   "SSP_MemberRelatedTo__r" : {  '  + 
+ '   "IndividualId__c" : "999031236"  '  + 
+ '   },  '  + 
+ '   "SSP_Member__r" : {  '  + 
+ '   "IndividualId__c" : "999031236"  '  + 
+ '   }  '  + 
+ '   } ]  '  + 
+ '   },  '  + 
+ '   "role" : "Citizen_Individual",  '  + 
+ '   "miscelleanousParameter" : "",  '  + 
+ '   "applicationID" : "a014W000013OmCNQA0",  '  + 
+ '   "mode" : "Renewal",  '  + 
+ '   "programCode" : "MA",  '  + 
+ '   "individualIds" : "999031236;102437355",  '  + 
+ '   "primaryApplicantIndividualId" : "999031236",  '  + 
+ '   "caseNumber" : "110945932",  '  + 
+ '   "viewName" : "RelationshipInformation"  '  + 
+ '  }  ' ;  
 
 
    
    public static final String sResourceInformation =         
    '   {  '  + 
-   '     "AckResponse" : null,  '  + 
-   '     "Payload" : {  '  + 
-   '       "SSP_Application__c" : null,  '  + 
-   '       "SSP_ResourceOwnership__c" : null,  '  + 
-   '       "SSP_Asset__c" : null,  '  + 
-   '       "SSP_Member__c" : [ {  '  + 
-   '         "HasPreArrangedFuneralContractToggle__c" : null,  '  + 
-   '         "HasLifeInsuranceToggle__c" : null,  '  + 
-   '         "HasRealEstatePropertyToggle__c" : null,  '  + 
-   '         "HasVehicleToggle__c" : null,  '  + 
-   '         "HasCashReloadableMoneyCardToggle__c" : null,  '  + 
-   '         "HasInvestmentsToggle__c" : null,  '  + 
-   '         "HasOwnBankAccountToggle__c" : null,  '  + 
-   '         "IndividualId__c" : "999031234"  '  + 
-   '       } ]  '  + 
-   '     },  '  + 
-   '     "role" : "Citizen_Individual",  '  + 
-   '     "miscelleanousParameter" : "",  '  + 
-   '     "applicationID" : "a2Rr00000007SYqEAM",  '  + 
-   '     "mode" : "Intake",  '  + 
-   '     "programCode" : "MA",  '  + 
-   '     "individualIds" : "999031234;101227474;101227475",  '  + 
-   '     "primaryApplicantIndividualId" : "999031234",  '  + 
-   '     "caseNumber" : "0",  '  + 
-   '     "viewName" : "ResourceInformation"  '  + 
+   '   "AckResponse" : null,  '  + 
+   '   "Payload" : {  '  + 
+   '   "SSP_Application__c" : [ {  '  + 
+   '   "HasOtherResourceToggle__c" : "N",  '  + 
+   '   "HasLTCAgreementToggle__c" : "N",  '  + 
+   '   "HasBurialPlotsToggle__c" : "N",  '  + 
+   '   "HasBurialFundToggle__c" : "N",  '  + 
+   '   "HasLifeSettlementContractToggle__c" : "N",  '  + 
+   '   "HasPartnershipQualifiedLTCPolicyToggle__c" : "N",  '  + 
+   '   "HasPromissoryNoteOrLandContractToggle__c" : "N",  '  + 
+   '   "HasLifeEstateToggle__c" : "N",  '  + 
+   '   "HasAnnuityToggle__c" : "N",  '  + 
+   '   "HasSpecialNeedTrustToggle__c" : "N",  '  + 
+   '   "IsAssetsInExcess1MToggle__c" : null,  '  + 
+   '   "DCCaseNumber__c" : "110945932",  '  + 
+   '   "RecordType" : {  '  + 
+   '   "Name" : "Case"  '  + 
+   '   }  '  + 
+   '   } ],  '  + 
+   '   "SSP_ResourceOwnership__c" : null,  '  + 
+   '   "SSP_Asset__c" : null,  '  + 
+   '   "SSP_Member__c" : [ {  '  + 
+   '   "HasPreArrangedFuneralContractToggle__c" : "N",  '  + 
+   '   "HasLifeInsuranceToggle__c" : "N",  '  + 
+   '   "HasRealEstatePropertyToggle__c" : "N",  '  + 
+   '   "HasVehicleToggle__c" : "N",  '  + 
+   '   "HasCashReloadableMoneyCardToggle__c" : "N",  '  + 
+   '   "HasInvestmentsToggle__c" : "N",  '  + 
+   '   "HasOwnBankAccountToggle__c" : "N",  '  + 
+   '   "IndividualId__c" : "999031236"  '  + 
+   '   }, {  '  + 
+   '   "HasPreArrangedFuneralContractToggle__c" : "N",  '  + 
+   '   "HasLifeInsuranceToggle__c" : "N",  '  + 
+   '   "HasRealEstatePropertyToggle__c" : "N",  '  + 
+   '   "HasVehicleToggle__c" : "N",  '  + 
+   '   "HasCashReloadableMoneyCardToggle__c" : "N",  '  + 
+   '   "HasInvestmentsToggle__c" : "N",  '  + 
+   '   "HasOwnBankAccountToggle__c" : "N",  '  + 
+   '   "IndividualId__c" : "102437355"  '  + 
+   '   } ]  '  + 
+   '   },  '  + 
+   '   "role" : "Citizen_Individual",  '  + 
+   '   "miscelleanousParameter" : "",  '  + 
+   '   "applicationID" : "a014W000013OmCNQA0",  '  + 
+   '   "mode" : "Renewal",  '  + 
+   '   "programCode" : "MA",  '  + 
+   '   "individualIds" : "999031236;102437355",  '  + 
+   '   "primaryApplicantIndividualId" : "999031236",  '  + 
+   '   "caseNumber" : "110945932",  '  + 
+   '   "viewName" : "ResourceInformation"  '  + 
    '  }  ' ; 
                                       // Wrapper Structure
   
-                                      public static final String sOnboardIndvAuthRep =          '   {  '  + 
+  public static final String sOnboardIndvAuthRep =          '   {  '  + 
                                                             '     "viewName": "OnboardIndivAuthRep",  '  + 
                                                             '     "caseNumber": 0,  '  + 
                                                             '     "primaryApplicantIndividualId": "",  '  + 
@@ -953,7 +717,7 @@ public  with sharing class SSP_DC_ReverseMockImpl_RAC  {
                                                           '     "Payload": {  '  + 
                                                           '       "SSP_Member__c": [  '  + 
                                                           '         {  '  + 
-                                                          '           "DCId__c": 887741,  '  + 
+                                                          '           "DCId__c": 887744,  '  + 
                                                           '           "PreferredDCBSOffice__c": "AAAA Test 2 Office",  '  + 
                                                           '           "PreferredWrittenLanguageCode__c": "1",  '  + 
                                                           '           "PreferredSpokenLanguageCode__c": "1",  '  + 
@@ -1037,9 +801,9 @@ public  with sharing class SSP_DC_ReverseMockImpl_RAC  {
                                       '   }   ';
   public static final String sBenfitInformation =           '   {  '  + 
                                              '         "viewName": "BenefitInformation",  '+
-                                             '         "caseNumber": "100059325", '+
-                                             '         "primaryApplicantIndividualId": "999031234",   '+
-                                             '         "individualIds": "999031234;999034363",    '+
+                                             '         "caseNumber": "110945932", '+
+                                             '         "primaryApplicantIndividualId": "999031236",   '+
+                                             '         "individualIds": "999031236;999034363",    '+
                                              '         "programCode": "MA;KT;SN", '+
                                              '         "mode": "Intake",  '+
                                              '         "applicationID": "a0Xr0000000sp8T",    '+
@@ -1047,8 +811,8 @@ public  with sharing class SSP_DC_ReverseMockImpl_RAC  {
                                              '         "Payload": {   '+
                                              '           "Benefit": [ '+
                                              '            {   '+
-                                             '              "CaseNumber": "100059325",    '+
-                                             '              "IndividualId": "999031234",  '+
+                                             '              "CaseNumber": "110945932",    '+
+                                             '              "IndividualId": "999031236",  '+
                                              '              "IndividualName": "WEWRT GFG",    '+
                                              '              "ProgramCode": "KT",  '+
                                              '              "ProgramStatusCode": "PI",    '+
@@ -1099,9 +863,9 @@ public  with sharing class SSP_DC_ReverseMockImpl_RAC  {
                                                  '   }    ';  
   public static final String sMedicaidMCOInformation =      '   {  '  + 
                                                   '   "viewName" : "MedicaidMCOInformation",      '+
-                                                  '     "caseNumber" : "100059325",      '+
-                                                  '     "primaryApplicantIndividualId" : "999031234",      '+
-                                                  '     "individualIds" : "999031234",      '+
+                                                  '     "caseNumber" : "110945932",      '+
+                                                  '     "primaryApplicantIndividualId" : "999031236",      '+
+                                                  '     "individualIds" : "999031236",      '+
                                                   '     "programCode" : "MA;KT;SN",      '+
                                                   '     "mode" : "Intake",      '+
                                                   '     "applicationID" : "a0Xr0000000sp8T",      '+
@@ -1109,8 +873,8 @@ public  with sharing class SSP_DC_ReverseMockImpl_RAC  {
                                                   '     "Payload"     : {      '+
                                                     '     "Individual"  : [      '+
                                                   '    {  '+
-                                                        '     "CaseNumber" : "100059325",      '+
-                                                        '     "IndividualId" : "999031234",      '+
+                                                        '     "CaseNumber" : "110945932",      '+
+                                                        '     "IndividualId" : "999031236",      '+
                                                         '     "IndividualName" : "WEWRT GFG",      '+
                                                         '     "IsEnrolledInPlan" : "Y",      '+
                                                         '     "IsEligibleToEnroll" : "Y",      '+
@@ -1631,29 +1395,29 @@ public  with sharing class SSP_DC_ReverseMockImpl_RAC  {
                                                           '   "Renewal" : null,  '  + 
                                                           '   "DemographicDetails" : [ {  '  + 
                                                           '   "PreferredIndividual" : "Y",  '  + 
-                                                          '   "IndividualId" : "999031234",  '  + 
+                                                          '   "IndividualId" : "999031236",  '  + 
                                                           '   "BirthDate" : "1998-06-01",  '  + 
                                                           '   "GenderCode" : "M",  '  + 
                                                           '   "SuffixCode" : null,  '  + 
                                                           '   "MiddleInitial" : null,  '  + 
-                                                          '   "LastName" : "DAVE",  '  + 
-                                                          '   "FirstName" : "DAVID"  '  + 
+                                                          '   "LastName" : "JZBRPL",  '  + 
+                                                          '   "FirstName" : "JKJHJJSNHDUD"  '  + 
                                                           '   } ],  '  + 
                                                           '   "CaseInfo" : [ {  '  + 
                                                           '   "LastEligibilityTransactionDate" : "2020-11-11T09:56:28.903",  '  + 
                                                           '   "MedicaidApplicationType" : null,  '  + 
                                                           '   "ApplicationSourceType" : null,  '  + 
-                                                          '   "IndividualId" : "999031234",  '  + 
+                                                          '   "IndividualId" : "999031236",  '  + 
                                                           '   "IsCaseInChangeMode" : "N",  '  + 
                                                           '   "CaseOwnership" : null,  '  + 
                                                           '   "IsTmember" : null,  '  + 
                                                           '   "SNAPClaimAmount" : null,  '  + 
                                                           '   "IsRACEnabled" : "Y",  '  + 
-                                                          '   "IsInRenewalPeriod" : "N",  '  + 
+                                                          '   "IsInRenewalPeriod" : "Y",  '  + 
                                                           '   "RFICount" : 0,  '  + 
                                                           '   "IsHeadOfHousehold" : "Y",  '  + 
                                                           '   "CaseStatusCode" : "AP",  '  + 
-                                                          '   "CaseNumber" : "100059325"  '  + 
+                                                          '   "CaseNumber" : "110945932"  '  + 
                                                           '   } ],  '  + 
                                                           '   "TimeStampDetails" : [ {  '  + 
                                                           '   "TimeStamp" : "2020-12-05T05:00:00Z"  '  + 
@@ -1662,10 +1426,10 @@ public  with sharing class SSP_DC_ReverseMockImpl_RAC  {
                                                           '   "role" : "Citizen_Individual",  '  + 
                                                           '   "miscelleanousParameter" : "",  '  + 
                                                           '   "applicationID" : "",  '  + 
-                                                          '   "mode" : "",  '  + 
+                                                          '   "mode" : "Renewal",  '  + 
                                                           '   "programCode" : "",  '  + 
                                                           '   "individualIds" : "",  '  + 
-                                                          '   "primaryApplicantIndividualId" : "999031234",  '  + 
+                                                          '   "primaryApplicantIndividualId" : "999031236",  '  + 
                                                           '   "caseNumber" : "0",  '  + 
                                                           '   "viewName" : "DashboardCaseInformation"  '  + 
                                                           '   }  '  + 
